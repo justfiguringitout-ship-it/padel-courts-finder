@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Padel FAQ - Frequently Asked Questions | Find Padel Near Me",
+  title: "Padel FAQ - Frequently Asked Questions | Padel Courts Finder",
   description: "Answers to the most common questions about padel tennis including rules, equipment, court locations, pricing, and how to get started.",
   keywords: [
     "padel FAQ",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Padel FAQ - Frequently Asked Questions",
     description: "Answers to the most common questions about padel tennis including rules, equipment, court locations, pricing, and how to get started.",
-    url: "https://findpadelnearme.com/faq",
-    siteName: "Find Padel Near Me",
+    url: "https://padelcourtsfinder.com/faq",
+    siteName: "Padel Courts Finder",
     type: "website",
   },
   twitter: {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Answers to the most common questions about padel tennis including rules, equipment, court locations, pricing, and how to get started.",
   },
   alternates: {
-    canonical: "https://findpadelnearme.com/faq",
+    canonical: "https://padelcourtsfinder.com/faq",
   },
 };
 
@@ -46,8 +46,51 @@ export default function FAQPage() {
   const filePath = path.join(process.cwd(), 'content', 'faq.md');
   const content = fs.readFileSync(filePath, 'utf8');
 
+  // Common FAQs for schema markup
+  const faqs = [
+    {
+      question: "What is padel tennis?",
+      answer: "Padel is a racquet sport that combines elements of tennis and squash. It's played on an enclosed court about one-third the size of a tennis court, with walls that players can use during play."
+    },
+    {
+      question: "How do I find padel courts near me?",
+      answer: "Use our search feature to find padel courts by city, state, or zip code. We have listings for over 135 clubs across 23 states in the USA."
+    },
+    {
+      question: "How much does it cost to play padel?",
+      answer: "Court rental typically costs between $45-$75 per hour depending on the facility and time of day. Off-peak hours are usually less expensive than prime time slots."
+    },
+    {
+      question: "Do I need my own equipment to play padel?",
+      answer: "Most facilities offer equipment rental including padel rackets and balls. However, if you play regularly, investing in your own equipment is recommended."
+    },
+    {
+      question: "Can beginners play padel?",
+      answer: "Absolutely! Padel is very beginner-friendly. Most clubs offer lessons and coaching for players of all skill levels, from complete beginners to advanced players."
+    }
+  ];
+
   return (
     <div className="min-h-screen">
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          }),
+        }}
+      />
+
       {/* Breadcrumbs */}
       <div className="border-b bg-muted/20">
         <div className="container mx-auto px-4 py-4">

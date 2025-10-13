@@ -13,6 +13,15 @@ import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { Progress } from "@/components/ui/progress"
 import { Slider } from "@/components/ui/slider"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Dashboard | Component Showcase",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function DashboardPage() {
   return (

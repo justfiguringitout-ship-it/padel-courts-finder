@@ -8,8 +8,42 @@ export const metadata: Metadata = {
 };
 
 export default function SanAntonioBestClubsPage() {
+  const articleData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Best Padel Clubs in san antonio (2025) | Complete Guide & Rankings",
+    "description": "Discover the best padel clubs in san antonio. Complete guide with rankings, pricing, programs, and insider tips.",
+    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "datePublished": "2025-10-13T00:00:00Z",
+    "dateModified": "2025-10-13T00:00:00Z",
+    "author": {
+      "@type": "Organization",
+      "name": "Padel Courts Finder",
+      "url": "https://padelcourtsfinder.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Padel Courts Finder",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://padelcourtsfinder.com/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-san-antonio"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* Article Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+      />
+
+
       <section className="bg-gradient-to-r from-blue-700 to-red-700 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">

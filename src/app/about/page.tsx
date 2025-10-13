@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "About Us - America's Complete Padel Directory | Find Padel Near Me",
+  title: "About Us - America's Complete Padel Directory | Padel Courts Finder",
   description: "Learn about the most comprehensive padel court directory in the United States with 120+ verified clubs and 525+ courts mapped nationwide.",
   keywords: [
     "about padel directory",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us - America's Complete Padel Directory",
     description: "Learn about the most comprehensive padel court directory in the United States with 120+ verified clubs and 525+ courts mapped nationwide.",
-    url: "https://findpadelnearme.com/about",
-    siteName: "Find Padel Near Me",
+    url: "https://padelcourtsfinder.com/about",
+    siteName: "Padel Courts Finder",
     type: "website",
   },
   twitter: {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "Learn about the most comprehensive padel court directory in the United States with 120+ verified clubs and 525+ courts mapped nationwide.",
   },
   alternates: {
-    canonical: "https://findpadelnearme.com/about",
+    canonical: "https://padelcourtsfinder.com/about",
   },
 };
 
@@ -70,7 +70,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              About Find Padel Near Me
+              About Padel Courts Finder
             </h1>
             <p className="text-xl text-muted-foreground">
               America&apos;s most comprehensive padel court directory - 120+ clubs, 525+ courts verified

@@ -185,8 +185,41 @@ const clubs: Club[] = [
 ];
 
 export default function MiamiBestClubsPage() {
+  const articleData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Best Padel Clubs in Miami (2025) | Complete Guide & Rankings",
+    "description": "Discover Miami's 10 best padel clubs ranked and reviewed. From Reserve Padel's elite luxury to Urban Padel's community vibe. Complete with pricing, programs, and insider tips.",
+    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "datePublished": "2025-10-13T00:00:00Z",
+    "dateModified": "2025-10-13T00:00:00Z",
+    "author": {
+      "@type": "Organization",
+      "name": "Padel Courts Finder",
+      "url": "https://padelcourtsfinder.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Padel Courts Finder",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://padelcourtsfinder.com/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-miami"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* Article Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

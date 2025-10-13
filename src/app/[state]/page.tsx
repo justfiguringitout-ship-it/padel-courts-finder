@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
 
   const title = `${state.courtCount} Best Padel Courts in ${state.name} | Find Padel Near Me`;
   const description = `Discover ${state.courtCount} padel courts across ${state.cities.length} cities in ${state.name}. Compare prices, read reviews, and book online. Find the perfect padel court near you.`;
-  const canonicalUrl = `https://findpadelnearme.com/${state.slug}`;
+  const canonicalUrl = `https://padelcourtsfinder.com/${state.slug}`;
 
   return {
     title,
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
       title,
       description,
       url: canonicalUrl,
-      siteName: "Find Padel Near Me",
+      siteName: "Padel Courts Finder",
       type: "website",
       images: [
         {
@@ -114,7 +114,7 @@ export default async function StatePage({ params }: StatePageProps) {
             "@type": "CollectionPage",
             name: `Padel Courts in ${state.name}`,
             description: `Directory of ${state.courtCount} padel courts across ${state.cities.length} cities in ${state.name}`,
-            url: `https://findpadelnearme.com/${state.slug}`,
+            url: `https://padelcourtsfinder.com/${state.slug}`,
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
@@ -122,13 +122,13 @@ export default async function StatePage({ params }: StatePageProps) {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://findpadelnearme.com",
+                  item: "https://padelcourtsfinder.com",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: state.name,
-                  item: `https://findpadelnearme.com/${state.slug}`,
+                  item: `https://padelcourtsfinder.com/${state.slug}`,
                 },
               ],
             },

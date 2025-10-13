@@ -1,0 +1,16 @@
+# robots.txt for padelcourtsfinder.com
+User-agent: *
+Allow: /
+
+# Block admin and application pages
+Disallow: /dashboard
+Disallow: /application
+Disallow: /api/
+
+# Allow important content
+Allow: /blog
+Allow: /courts
+Allow: /search
+
+# Sitemap location
+Sitemap: https://padelcourtsfinder.com/sitemap.xml

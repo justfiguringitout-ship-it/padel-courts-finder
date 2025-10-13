@@ -45,13 +45,13 @@ export async function generateMetadata({ params }: CourtPageProps): Promise<Meta
     openGraph: {
       title: court.name,
       description: court.description,
-      url: `https://findpadelnearme.com/courts/${court.slug}`,
-      siteName: "Find Padel Near Me",
+      url: `https://padelcourtsfinder.com/courts/${court.slug}`,
+      siteName: "Padel Courts Finder",
       type: "website",
       images: court.heroImage ? [{ url: court.heroImage }] : [],
     },
     alternates: {
-      canonical: `https://findpadelnearme.com/courts/${court.slug}`,
+      canonical: `https://padelcourtsfinder.com/courts/${court.slug}`,
     },
   };
 }
@@ -94,7 +94,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
             },
             telephone: court.phone,
             email: court.email,
-            url: court.website || `https://findpadelnearme.com/courts/${court.slug}`,
+            url: court.website || `https://padelcourtsfinder.com/courts/${court.slug}`,
             image: court.images.map((img) => img.url),
             aggregateRating: {
               "@type": "AggregateRating",
@@ -113,6 +113,27 @@ export default async function CourtPage({ params }: CourtPageProps) {
           }),
         }}
       />
+
+      {/* FAQ Schema */}
+      {court.faqs && court.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": court.faqs.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            }),
+          }}
+        />
+      )}
 
       {/* Breadcrumbs */}
       <div className="border-b bg-muted/20">

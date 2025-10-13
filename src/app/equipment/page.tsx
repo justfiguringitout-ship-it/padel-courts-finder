@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Padel Equipment Guide - Rackets, Balls & Gear | Find Padel Near Me",
+  title: "Padel Equipment Guide - Rackets, Balls & Gear | Padel Courts Finder",
   description: "Everything you need to know about padel equipment including racket selection, balls, shoes, bags, and accessories for players of all levels.",
   keywords: [
     "padel equipment",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Padel Equipment Guide - Rackets, Balls & Gear",
     description: "Everything you need to know about padel equipment including racket selection, balls, shoes, bags, and accessories for players of all levels.",
-    url: "https://findpadelnearme.com/equipment",
-    siteName: "Find Padel Near Me",
+    url: "https://padelcourtsfinder.com/equipment",
+    siteName: "Padel Courts Finder",
     type: "article",
   },
   twitter: {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description: "Everything you need to know about padel equipment including racket selection, balls, shoes, bags, and accessories for players of all levels.",
   },
   alternates: {
-    canonical: "https://findpadelnearme.com/equipment",
+    canonical: "https://padelcourtsfinder.com/equipment",
   },
 };
 

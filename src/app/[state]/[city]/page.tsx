@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 
   const title = `${city.courtCount} Best Padel Courts in ${city.name}, ${state.code} | Find Padel Near Me`;
   const description = `Find and book padel courts in ${city.name}, ${state.name}. Compare ${city.courtCount} facilities, read reviews, check prices and availability. Book your padel court online today.`;
-  const canonicalUrl = `https://findpadelnearme.com/${state.slug}/${city.slug}`;
+  const canonicalUrl = `https://padelcourtsfinder.com/${state.slug}/${city.slug}`;
 
   return {
     title,
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       title,
       description,
       url: canonicalUrl,
-      siteName: "Find Padel Near Me",
+      siteName: "Padel Courts Finder",
       type: "website",
       images: [
         {
@@ -133,7 +133,7 @@ export default async function CityPage({ params }: CityPageProps) {
             "@type": "CollectionPage",
             name: `Padel Courts in ${city.name}, ${state.name}`,
             description: `Directory of ${city.courtCount} padel courts in ${city.name}, ${state.name}`,
-            url: `https://findpadelnearme.com/${state.slug}/${city.slug}`,
+            url: `https://padelcourtsfinder.com/${state.slug}/${city.slug}`,
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
@@ -141,19 +141,19 @@ export default async function CityPage({ params }: CityPageProps) {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://findpadelnearme.com",
+                  item: "https://padelcourtsfinder.com",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: state.name,
-                  item: `https://findpadelnearme.com/${state.slug}`,
+                  item: `https://padelcourtsfinder.com/${state.slug}`,
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: city.name,
-                  item: `https://findpadelnearme.com/${state.slug}/${city.slug}`,
+                  item: `https://padelcourtsfinder.com/${state.slug}/${city.slug}`,
                 },
               ],
             },

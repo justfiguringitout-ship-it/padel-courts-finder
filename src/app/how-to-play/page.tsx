@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "How to Play Padel - Complete Beginner's Guide | Find Padel Near Me",
+  title: "How to Play Padel - Complete Beginner's Guide | Padel Courts Finder",
   description: "Learn the basics of padel tennis with our comprehensive guide covering rules, techniques, scoring, and everything you need to start playing.",
   keywords: [
     "how to play padel",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How to Play Padel - Complete Beginner's Guide",
     description: "Learn the basics of padel tennis with our comprehensive guide covering rules, techniques, scoring, and everything you need to start playing.",
-    url: "https://findpadelnearme.com/how-to-play",
-    siteName: "Find Padel Near Me",
+    url: "https://padelcourtsfinder.com/how-to-play",
+    siteName: "Padel Courts Finder",
     type: "article",
   },
   twitter: {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Learn the basics of padel tennis with our comprehensive guide covering rules, techniques, scoring, and everything you need to start playing.",
   },
   alternates: {
-    canonical: "https://findpadelnearme.com/how-to-play",
+    canonical: "https://padelcourtsfinder.com/how-to-play",
   },
 };
 

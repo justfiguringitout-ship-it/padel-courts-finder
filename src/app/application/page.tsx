@@ -10,6 +10,15 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Application | Padel Directory Demo",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 // Demo data for padel courts
 const demoCourts = [

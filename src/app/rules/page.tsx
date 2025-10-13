@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Padel Rules and Regulations - Official Guide | Find Padel Near Me",
+  title: "Padel Rules and Regulations - Official Guide | Padel Courts Finder",
   description: "Complete guide to padel rules and regulations including court dimensions, scoring, serves, and official gameplay guidelines.",
   keywords: [
     "padel rules",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Padel Rules and Regulations - Official Guide",
     description: "Complete guide to padel rules and regulations including court dimensions, scoring, serves, and official gameplay guidelines.",
-    url: "https://findpadelnearme.com/rules",
-    siteName: "Find Padel Near Me",
+    url: "https://padelcourtsfinder.com/rules",
+    siteName: "Padel Courts Finder",
     type: "article",
   },
   twitter: {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Complete guide to padel rules and regulations including court dimensions, scoring, serves, and official gameplay guidelines.",
   },
   alternates: {
-    canonical: "https://findpadelnearme.com/rules",
+    canonical: "https://padelcourtsfinder.com/rules",
   },
 };
 
