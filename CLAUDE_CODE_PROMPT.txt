@@ -1,0 +1,202 @@
+Generate a complete, production-ready, SEO-optimized single-page template for a padel court listing using Next.js 15 with TypeScript, Tailwind CSS v4, and shadcn/ui components. This template must achieve top rankings for local searches like "[city] padel courts" and "book padel court near me."
+
+TECHNICAL REQUIREMENTS:
+
+1. Framework & Styling:
+- Next.js 15 App Router (Server Component with async data fetching)
+- TypeScript with strict typing
+- Tailwind CSS v4 with utility-first approach
+- shadcn/ui components (Card, Button, Badge, Separator, Tabs, Avatar, etc.)
+- Lucide React icons for visual elements
+- Fully responsive (mobile-first design)
+- Optimized for Core Web Vitals (LCP < 2.5s, FID < 100ms, CLS < 0.1)
+
+2. File Structure:
+Create /app/courts/[slug]/page.tsx (Dynamic route)
+
+3. SEO ELEMENTS (CRITICAL):
+
+A. Dynamic Meta Tags:
+Generate metadata function with:
+- Title: [Court Name] - Book Padel Courts in [City, State] | Find Padel Near Me (55-60 chars)
+- Description: Book padel courts at [Court Name] in [City]. [Number] [indoor/outdoor] courts with [key amenity]. Check availability and reserve online today! (150-160 chars)
+- Open Graph tags with images
+- Twitter Card tags
+- Canonical URL: https://findpadelnearme.com/courts/[slug]
+- Keywords array for reference
+
+B. Schema.org JSON-LD (Include in page component):
+Implement THREE schema types in @graph array:
+1. SportsActivityLocation with:
+   - name, description, image array
+   - PostalAddress (streetAddress, addressLocality, addressRegion, postalCode, addressCountry)
+   - GeoCoordinates (latitude, longitude)
+   - telephone, url, openingHoursSpecification array
+   - amenityFeature array with LocationFeatureSpecification
+   - aggregateRating (ratingValue, reviewCount, bestRating, worstRating)
+2. LocalBusiness with name, image, priceRange, telephone, address
+3. BreadcrumbList with 4 levels (Home > State > City > Court Name)
+
+4. CONTENT STRUCTURE & COMPONENTS:
+
+A. Hero Section:
+- Breadcrumb navigation above H1
+- H1: [Court Name] - Premier Padel Courts in [City, State]
+- Location with MapPin icon
+- Star rating display + review count
+- Quick badges (Indoor/Outdoor, # of Courts, Surface Type)
+- Primary CTA: "Book Now" button (large, prominent)
+- Secondary CTA: "Check Availability" button
+- Hero image with Next.js Image optimization
+
+B. Quick Info Grid (Cards with icons):
+- Location: Full address (link to Google Maps)
+- Phone: Click-to-call link (tel:)
+- Hours: Today's hours + "Open Now" status
+- Pricing: Starting from $XX/hour
+- Courts: X Indoor + X Outdoor
+- Surface: Glass walls, artificial turf
+
+C. Image Gallery Section:
+- Grid layout with 8-12 images
+- Lightbox functionality
+- Lazy loading with Next.js Image
+- Alt text: [Court Name] - [description] in [City]
+
+D. About Section (H2: "About [Court Name]"):
+- 300-500 word unique description
+- Natural keyword integration: padel court, city, state, indoor/outdoor
+- Highlight unique selling points
+- Professional, engaging tone
+
+E. Court Facilities Section (H2: "Court Facilities & Specifications"):
+- Number of courts (indoor/outdoor breakdown)
+- Court surface details
+- Lighting specs
+- Court dimensions
+- Equipment quality
+
+F. Amenities Section (H2: "Amenities & Services"):
+Grid with icons and checkmarks:
+- Free Parking
+- Pro Shop
+- Equipment Rental
+- Locker Rooms & Showers
+- Café/Vending
+- Professional Coaching
+- Tournament Hosting
+- Viewing Area
+- WiFi
+- Wheelchair Accessible
+
+G. Pricing Section (H2: "Pricing & Membership Options"):
+Table or cards showing:
+- Peak hours pricing
+- Off-peak pricing
+- Membership tiers
+- Drop-in rates
+- Package deals
+- Group rates
+
+H. Booking Section (H2: "Check Availability & Book"):
+- Calendar widget placeholder
+- Real-time availability indicator
+- Large "Book This Court" CTA button
+- Cancellation policy
+- Payment methods
+
+I. Location Section (H2: "Location & Directions"):
+- Full address with schema markup
+- Embedded Google Maps iframe (responsive)
+- Directions link
+- Parking instructions
+
+J. Reviews Section (H2: "Customer Reviews & Ratings"):
+- Large overall rating display
+- Rating breakdown (5-4-3-2-1 stars)
+- 3-5 review cards with:
+  - Reviewer name
+  - Star rating
+  - Date
+  - Review text
+  - Verified badge
+- "Write a Review" CTA
+
+K. FAQ Section (H2: "Frequently Asked Questions"):
+Use shadcn/ui Accordion with FAQ schema markup for:
+- What equipment do I need?
+- How do I book?
+- Cancellation policy?
+- Coaching available?
+- Parking info?
+- Tournament hosting?
+- Peak hours?
+- Equipment rental?
+
+L. Related Courts Section (H2: "Other Padel Courts in [City]"):
+- 3-4 court cards
+- Each: image, name, location, rating, distance, "View Details" link
+
+M. CTA Footer:
+- Large CTA: "Ready to Play? Book Your Court Now"
+- Secondary: "Questions? Contact Us"
+- Social sharing buttons
+
+5. TYPESCRIPT INTERFACE:
+
+Create interface PadelCourt with:
+- id, slug, name, description
+- address, city, state, zipCode, phone, email, website
+- latitude, longitude
+- totalCourts, indoorCourts, outdoorCourts, courtSurface, lighting
+- amenities array
+- peakHourlyRate, offPeakHourlyRate, membershipOptions array
+- hours array with dayOfWeek, opens, closes
+- images array with url, alt, caption
+- rating, totalReviews, reviews array
+- features array
+- bookingUrl, instantBooking, cancellationPolicy
+
+6. EXAMPLE DATA:
+Use "Miami Padel Club" in Miami, FL:
+- 6 courts (4 indoor, 2 outdoor)
+- Glass walls, artificial turf
+- Full amenities
+- 4.8-star rating, 127 reviews
+- $45-65/hour
+- Hours: 6am-10pm weekdays, 7am-11pm weekends
+
+7. ACCESSIBILITY:
+- Semantic HTML5
+- ARIA landmarks
+- Alt text for all images
+- Focus indicators
+- Skip links
+- Descriptive link text
+- Form labels
+- Color contrast 4.5:1 minimum
+- Keyboard navigable
+
+8. MOBILE OPTIMIZATION:
+- Touch-friendly buttons (44x44px minimum)
+- 16px minimum font size
+- Tap-friendly phone/email links
+- Collapsible sections
+- Mobile-optimized images
+- Sticky CTA on mobile
+
+9. PERFORMANCE:
+- Next.js Image component for all images
+- Lazy loading below fold
+- WebP format images
+- Code splitting
+- Minimize bundle size
+
+OUTPUT:
+Provide complete code for:
+1. /app/courts/[slug]/page.tsx - Full page component with all sections
+2. /types/court.ts - TypeScript interfaces
+3. /lib/court-data.ts - Sample data
+
+Include all imports, proper TypeScript typing, shadcn/ui component usage, and comments explaining SEO optimizations. Make the code production-ready and copy-paste ready into my Next.js project that already has shadcn/ui and Tailwind v4 configured.
+

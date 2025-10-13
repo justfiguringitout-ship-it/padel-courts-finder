@@ -1,0 +1,370 @@
+{
+  "coordinates": [
+    {
+      "id": 1,
+      "name": "Ultra Padel Club",
+      "latitude": 25.8357,
+      "longitude": -80.1885,
+      "confidence": "high",
+      "address": "400 NE 67th St, Miami, FL 33138"
+    },
+    {
+      "id": 2,
+      "name": "New Rochelle Indoor Sports",
+      "latitude": 40.9176,
+      "longitude": -73.7849,
+      "confidence": "medium",
+      "address": "235 Fifth Ave, New Rochelle, NY 10801"
+    },
+    {
+      "id": 3,
+      "name": "Open Padel Club by Lasaigues",
+      "latitude": 26.0065,
+      "longitude": -80.2225,
+      "confidence": "medium",
+      "address": "7377 Riviera Blvd, Pembroke Pines, FL 33023"
+    },
+    {
+      "id": 4,
+      "name": "The Padel Club",
+      "latitude": 26.2704,
+      "longitude": -80.1742,
+      "confidence": "medium",
+      "address": "4095 NW 40th St Suite 1, Coconut Creek, FL 33073"
+    },
+    {
+      "id": 5,
+      "name": "Wynwood Padel Club",
+      "latitude": 25.7970,
+      "longitude": -80.1990,
+      "confidence": "medium",
+      "address": "1932 NW Miami Ct, Miami, FL 33136"
+    },
+    {
+      "id": 6,
+      "name": "PlayPadel Coral Gables",
+      "latitude": 25.7447,
+      "longitude": -80.2384,
+      "confidence": "medium",
+      "address": "2450 SW 27th Ave, Miami, FL 33133"
+    },
+    {
+      "id": 7,
+      "name": "Real Padel Miami",
+      "latitude": 25.7937,
+      "longitude": -80.1920,
+      "confidence": "medium",
+      "address": "1739 NE 2nd Ave, Miami, FL 33132"
+    },
+    {
+      "id": 8,
+      "name": "TEMPO Padel & Pickleball Club",
+      "latitude": 29.8084,
+      "longitude": -95.5728,
+      "confidence": "high",
+      "address": "1729 Brittmoore Rd Ste A, Houston, TX 77043"
+    },
+    {
+      "id": 9,
+      "name": "Replay",
+      "latitude": 26.5584,
+      "longitude": -80.0745,
+      "confidence": "high",
+      "address": "6600 High Ridge Rd, Boynton Beach, FL 33426"
+    },
+    {
+      "id": 10,
+      "name": "Canas Racket Padel",
+      "latitude": 25.9706,
+      "longitude": -80.1688,
+      "confidence": "high",
+      "address": "1475 NE 205th St, Miami, FL 33179"
+    },
+    {
+      "id": 11,
+      "name": "SouthPadel",
+      "latitude": 25.6364,
+      "longitude": -80.4990,
+      "confidence": "medium",
+      "address": "14550 SW 136th St, Miami, FL 33196"
+    },
+    {
+      "id": 12,
+      "name": "Padel Up - Century City",
+      "latitude": 34.059,
+      "longitude": -118.420,
+      "confidence": "high",
+      "address": "10250 Santa Monica Blvd, Los Angeles, CA 90067"
+    },
+    {
+      "id": 13,
+      "name": "Society Las Olas Padel",
+      "latitude": 26.1196,
+      "longitude": -80.1437,
+      "confidence": "medium",
+      "address": "333 Sunset Dr, Fort Lauderdale, FL 33301"
+    },
+    {
+      "id": 14,
+      "name": "Sunset Padel",
+      "latitude": 25.7917,
+      "longitude": -80.1400,
+      "confidence": "medium",
+      "address": "1880 West Ave, Miami Beach, FL 33139"
+    },
+    {
+      "id": 15,
+      "name": "SMART PADEL HOUSE",
+      "latitude": 25.7856,
+      "longitude": -80.3213,
+      "confidence": "medium",
+      "address": "8440 NW 64th St unit 1, Doral, FL 33166"
+    },
+    {
+      "id": 16,
+      "name": "i95 Padel Club Miami",
+      "latitude": 25.8706,
+      "longitude": -80.2092,
+      "confidence": "high",
+      "address": "650 NW 105th St, Miami, FL 33150"
+    },
+    {
+      "id": 17,
+      "name": "Cube Padel Houston",
+      "latitude": 29.9424,
+      "longitude": -95.5567,
+      "confidence": "medium",
+      "address": "7918 Breen Rd, Houston, TX 77064"
+    },
+    {
+      "id": 18,
+      "name": "Padel Haus - Dumbo",
+      "latitude": 40.7032,
+      "longitude": -73.9838,
+      "confidence": "high",
+      "address": "257 Water St, Brooklyn, NY 11201"
+    },
+    {
+      "id": 19,
+      "name": "10by20 Padel Fort Lauderdale",
+      "latitude": 26.1862,
+      "longitude": -80.1560,
+      "confidence": "medium",
+      "address": "5300 Powerline Rd, Fort Lauderdale, FL 33309"
+    },
+    {
+      "id": 20,
+      "name": "Woodlands Padel",
+      "latitude": 30.1657,
+      "longitude": -95.4613,
+      "confidence": "medium",
+      "address": "29600 I-45 N, The Woodlands, TX 77381"
+    },
+    {
+      "id": 21,
+      "name": "Champions Padel Club",
+      "latitude": 25.7858508,
+      "longitude": -80.3418635,
+      "confidence": "high",
+      "address": "1360 NW 88th Ave, Doral, FL 33172"
+    },
+    {
+      "id": 22,
+      "name": "Orlando Padel Club Indoor",
+      "latitude": 28.4527277,
+      "longitude": -81.4608156,
+      "confidence": "high",
+      "address": "5950 Lakehurst Dr Unit 101, Orlando, FL 32819"
+    },
+    {
+      "id": 23,
+      "name": "Charlotte Padel Club - South Charlotte",
+      "latitude": 35.119693,
+      "longitude": -80.868499,
+      "confidence": "high",
+      "address": "8401 Sharon Lakes Rd, Charlotte, NC 28210"
+    },
+    {
+      "id": 24,
+      "name": "Padel Country Club",
+      "latitude": 25.8335,
+      "longitude": -80.3312,
+      "confidence": "medium",
+      "address": "7750 NW 68th St, Miami, FL 33166"
+    },
+    {
+      "id": 25,
+      "name": "PATL",
+      "latitude": 26.0832,
+      "longitude": -80.2213,
+      "confidence": "medium",
+      "address": "2699 Stirling Rd, Fort Lauderdale, FL 33312"
+    },
+    {
+      "id": 26,
+      "name": "Padel Haus Nashville",
+      "latitude": 36.0934,
+      "longitude": -86.7548,
+      "confidence": "high",
+      "address": "2807 Grandview Ave, Nashville, TN 37211"
+    },
+    {
+      "id": 27,
+      "name": "Casas Padel Club Aventura",
+      "latitude": 25.957389,
+      "longitude": -80.142646,
+      "confidence": "high",
+      "address": "19503 Biscayne Blvd, North Miami Beach, FL 33180"
+    },
+    {
+      "id": 28,
+      "name": "One Indoor Club",
+      "latitude": 25.949,
+      "longitude": -80.1944,
+      "confidence": "medium",
+      "address": "300 NE 183rd St, North Miami Beach, FL 33179"
+    },
+    {
+      "id": 29,
+      "name": "Padel Point Miami",
+      "latitude": 25.851915,
+      "longitude": -80.14131,
+      "confidence": "high",
+      "address": "1960 Normandy Dr, Miami Beach, FL 33141"
+    },
+    {
+      "id": 34,
+      "name": "Padel Point Miami",
+      "latitude": 25.851915,
+      "longitude": -80.14131,
+      "confidence": "high",
+      "address": "1960 Normandy Dr, Miami Beach, FL 33141"
+    },
+    {
+      "id": 35,
+      "name": "Brisas East Hampton",
+      "latitude": 40.9602901,
+      "longitude": -72.2442364,
+      "confidence": "high",
+      "address": "174 Daniels Hole Rd, East Hampton, NY 11937"
+    },
+    {
+      "id": 36,
+      "name": "Pura Padel",
+      "latitude": 34.1571414,
+      "longitude": -118.4373027,
+      "confidence": "high",
+      "address": "ROOFTOP PARKING LOT, 14006 Riverside Dr, Sherman Oaks, CA 91423"
+    },
+    {
+      "id": 37,
+      "name": "Platinum Padel Club",
+      "latitude": 25.8907,
+      "longitude": -80.1767,
+      "confidence": "medium",
+      "address": "1195 NE 125th St, North Miami, FL 33161"
+    },
+    {
+      "id": 38,
+      "name": "La Casa del Padel",
+      "latitude": 38.9583,
+      "longitude": -94.6694,
+      "confidence": "medium",
+      "address": "6800 W 91st St, Grandview, MO 66212"
+    },
+    {
+      "id": 40,
+      "name": "Padel California",
+      "latitude": 33.1943,
+      "longitude": -117.3776,
+      "confidence": "high",
+      "address": "222 S Coast Hwy, Oceanside, CA 92054"
+    },
+    {
+      "id": 41,
+      "name": "RxPADEL",
+      "latitude": 26.492691,
+      "longitude": -80.086586,
+      "confidence": "high",
+      "address": "1210 SW 35th Ave, Boynton Beach, FL 33426"
+    },
+    {
+      "id": 42,
+      "name": "Sensa Padel",
+      "latitude": 36.1799461,
+      "longitude": -86.7832455,
+      "confidence": "high",
+      "address": "1320 Adams St, Nashville, TN 37208"
+    },
+    {
+      "id": 43,
+      "name": "Padel Alley",
+      "latitude": 32.2367,
+      "longitude": -110.8726,
+      "confidence": "medium",
+      "address": "5943 E Speedway Blvd, Tucson, AZ 85712"
+    },
+    {
+      "id": 44,
+      "name": "Cube Padel Chicago",
+      "latitude": 41.823027,
+      "longitude": -87.665744,
+      "confidence": "high",
+      "address": "3900 S Ashland Ave, Chicago, IL 60609"
+    },
+    {
+      "id": 45,
+      "name": "Urban Padel",
+      "latitude": 25.8753,
+      "longitude": -80.3685,
+      "confidence": "medium",
+      "address": "11601 NW 107th St, Doral, FL 33178"
+    },
+    {
+      "id": 46,
+      "name": "PADEL LIFE & SOCCER",
+      "latitude": 25.9872,
+      "longitude": -80.1532,
+      "confidence": "medium",
+      "address": "1000 W Pembroke Rd, Hollywood, FL 33009"
+    },
+    {
+      "id": 47,
+      "name": "SB Padel Houston",
+      "latitude": 29.8134,
+      "longitude": -95.4770,
+      "confidence": "medium",
+      "address": "1927 Harland Dr, Houston, TX 77055"
+    },
+    {
+      "id": 48,
+      "name": "North Park Paddle Courts",
+      "latitude": 40.6135,
+      "longitude": -79.9603,
+      "confidence": "medium",
+      "address": "991 Tennis Ct Rd, Allison Park, PA 15101"
+    },
+    {
+      "id": 50,
+      "name": "Nicol NJ",
+      "latitude": 40.3192615,
+      "longitude": -74.0359834,
+      "confidence": "high",
+      "address": "850 Oceanport Avenue, Oceanport, NJ 07757"
+    },
+    {
+      "id": 51,
+      "name": "Conquer Padel Club",
+      "latitude": 33.3477235,
+      "longitude": -111.965268,
+      "confidence": "high",
+      "address": "7760 S Priest Dr Suite 108, Tempe, AZ 85284"
+    }
+  ],
+  "summary": {
+    "total_clubs": 45,
+    "high_confidence": 21,
+    "medium_confidence": 24,
+    "notes": "High confidence = exact coordinates from Google Maps. Medium confidence = estimated from address area. Recommend verifying medium confidence locations."
+  }
+}
