@@ -11,7 +11,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { MapPin, Star, Clock, Phone, Globe, Navigation } from "lucide-react";
+import { MapPin, Star, Clock, Phone, Globe, Navigation, TrendingUp } from "lucide-react";
 import { getStates, getStateBySlug, getCityBySlug } from "@/lib/site-structure";
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
 import { ClubsMapClient } from "@/components/clubs-map-client";
@@ -377,6 +377,47 @@ export default async function CityPage({ params }: CityPageProps) {
           )}
         </div>
       </section>
+
+      {/* Related Content - Blog Post Link */}
+      {(city.slug === 'miami' || city.slug === 'austin' || city.slug === 'los-angeles' || 
+        city.slug === 'san-francisco' || city.slug === 'san-diego' || city.slug === 'brooklyn' ||
+        city.slug === 'phoenix' || city.slug === 'chicago' || city.slug === 'denver' ||
+        city.slug === 'dallas' || city.slug === 'atlanta' || city.slug === 'houston' ||
+        city.slug === 'charlotte' || city.slug === 'san-antonio' || city.slug === 'orlando') && (
+        <section className="container mx-auto px-4 py-12 bg-gradient-to-r from-primary/10 to-purple/10">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-primary/20">
+              <CardHeader>
+                <div className="flex items-center gap-2 mb-2">
+                  <TrendingUp className="w-5 h-5 text-primary" />
+                  <Badge variant="secondary">Expert Guide</Badge>
+                </div>
+                <CardTitle className="text-2xl">
+                  Want the Complete {city.name} Padel Guide?
+                </CardTitle>
+                <CardDescription className="text-base">
+                  Read our in-depth expert review of the best padel clubs in {city.name} with ratings, 
+                  insider tips, and detailed comparisons.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button asChild size="lg" className="w-full sm:w-auto">
+                  <Link href={`/blog/best-padel-clubs-${
+                    city.slug === 'brooklyn' ? 'nyc' : 
+                    city.slug === 'los-angeles' ? 'los-angeles' :
+                    city.slug === 'san-francisco' ? 'san-francisco' :
+                    city.slug === 'san-diego' ? 'san-diego' :
+                    city.slug === 'san-antonio' ? 'san-antonio' :
+                    city.slug
+                  }`}>
+                    Read the Complete {city.name} Guide →
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground py-12">

@@ -11,7 +11,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { MapPin, Star, Clock, ChevronRight, Building2 } from "lucide-react";
+import { MapPin, Star, Clock, ChevronRight, Building2, BookOpen } from "lucide-react";
 import { getStates, getStateBySlug } from "@/lib/site-structure";
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
 import { ClubsMapClient } from "@/components/clubs-map-client";
@@ -309,6 +309,55 @@ export default async function StatePage({ params }: StatePageProps) {
             and book your court online. Each listing includes detailed information about court surfaces,
             amenities, pricing, and opening hours to help you make the best choice for your game.
           </p>
+        </div>
+      </section>
+
+      {/* Related Blog Posts */}
+      <section className="container mx-auto px-4 py-12 bg-muted/20">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center gap-2 mb-4">
+            <BookOpen className="w-6 h-6 text-primary" />
+            <h2 className="text-2xl font-bold">Expert City Guides</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4">
+            {state.cities.slice(0, 3).map((city) => {
+              const blogSlug = city.slug === 'brooklyn' ? 'nyc' : 
+                              city.slug === 'los-angeles' ? 'los-angeles' :
+                              city.slug === 'san-francisco' ? 'san-francisco' :
+                              city.slug === 'san-diego' ? 'san-diego' :
+                              city.slug === 'san-antonio' ? 'san-antonio' :
+                              city.slug;
+              const hasBlogPost = ['miami', 'austin', 'los-angeles', 'san-francisco', 'san-diego', 
+                                   'brooklyn', 'phoenix', 'chicago', 'denver', 'dallas', 'atlanta', 
+                                   'houston', 'charlotte', 'san-antonio', 'orlando'].includes(city.slug);
+              
+              if (!hasBlogPost) return null;
+              
+              return (
+                <Link
+                  key={city.slug}
+                  href={`/blog/best-padel-clubs-${blogSlug}`}
+                  className="group"
+                >
+                  <Card className="h-full hover:border-primary transition-all">
+                    <CardHeader>
+                      <CardTitle className="text-base group-hover:text-primary transition-colors">
+                        Best Clubs in {city.name}
+                      </CardTitle>
+                      <CardDescription className="text-sm">
+                        Expert review & rankings →
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </Link>
+              );
+            })}
+          </div>
+          <div className="mt-6 text-center">
+            <Button asChild variant="outline">
+              <Link href="/blog">View All City Guides</Link>
+            </Button>
+          </div>
         </div>
       </section>
 

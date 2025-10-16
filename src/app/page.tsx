@@ -288,6 +288,72 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Featured Blog Posts */}
+      <section className="container mx-auto px-4 py-16 bg-muted/20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">Expert Club Guides & Reviews</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            In-depth city guides, insider tips, and everything you need to find the perfect padel club in your area
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <Link href="/blog/best-padel-clubs-miami" className="group">
+            <Card className="h-full hover:border-primary transition-all overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-blue-500 to-blue-600 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <MapPin className="w-16 h-16 text-white/30" />
+                </div>
+                <Badge className="absolute top-3 right-3 bg-white text-blue-600">Popular</Badge>
+              </div>
+              <CardHeader>
+                <CardTitle className="group-hover:text-primary transition-colors">Best Clubs in Miami</CardTitle>
+                <CardDescription>
+                  14+ clubs reviewed - Reserve Padel, Ultra Padel, and more
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </Link>
+          
+          <Link href="/blog/best-padel-clubs-austin" className="group">
+            <Card className="h-full hover:border-primary transition-all overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-purple-500 to-purple-600 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <MapPin className="w-16 h-16 text-white/30" />
+                </div>
+                <Badge className="absolute top-3 right-3 bg-white text-purple-600">Top Rated</Badge>
+              </div>
+              <CardHeader>
+                <CardTitle className="group-hover:text-primary transition-colors">Best Clubs in Austin</CardTitle>
+                <CardDescription>
+                  America's padel capital - Padel39, Padel Club Austin & more
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </Link>
+          
+          <Link href="/blog/best-padel-clubs-los-angeles" className="group">
+            <Card className="h-full hover:border-primary transition-all overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-pink-500 to-pink-600 relative">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <MapPin className="w-16 h-16 text-white/30" />
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="group-hover:text-primary transition-colors">Best Clubs in Los Angeles</CardTitle>
+                <CardDescription>
+                  8+ LA clubs from Santa Monica to Pasadena
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </Link>
+        </div>
+        <div className="text-center mt-8">
+          <Button asChild variant="outline" size="lg">
+            <Link href="/blog">View All City Guides →</Link>
+          </Button>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
@@ -316,9 +382,20 @@ export default function HomePage() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="font-bold text-lg mb-4">Padel Courts Finder</h3>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground mb-4">
               The premier directory for finding and booking padel courts across the United States.
             </p>
+            <div className="space-y-2 text-sm">
+              <Link href="/search" className="block text-muted-foreground hover:text-primary transition-colors">
+                🔍 Search Courts
+              </Link>
+              <Link href="/get-started" className="block text-muted-foreground hover:text-primary transition-colors">
+                🎯 Get Started Guide
+              </Link>
+              <Link href="/get-started/glossary" className="block text-muted-foreground hover:text-primary transition-colors">
+                📖 Padel Glossary
+              </Link>
+            </div>
           </div>
 
           <div>
@@ -335,26 +412,36 @@ export default function HomePage() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">City Guides</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About Us
+                <Link href="/blog/best-padel-clubs-miami" className="text-muted-foreground hover:text-primary transition-colors">
+                  Miami Clubs
                 </Link>
               </li>
               <li>
-                <Link href="/list-your-court" className="text-muted-foreground hover:text-primary transition-colors">
-                  List Your Court
+                <Link href="/blog/best-padel-clubs-austin" className="text-muted-foreground hover:text-primary transition-colors">
+                  Austin Clubs
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact
+                <Link href="/blog/best-padel-clubs-los-angeles" className="text-muted-foreground hover:text-primary transition-colors">
+                  Los Angeles Clubs
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                  Blog
+                <Link href="/blog/best-padel-clubs-nyc" className="text-muted-foreground hover:text-primary transition-colors">
+                  NYC Clubs
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/best-padel-clubs-san-diego" className="text-muted-foreground hover:text-primary transition-colors">
+                  San Diego Clubs
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-primary hover:underline font-medium">
+                  All City Guides →
                 </Link>
               </li>
             </ul>
@@ -381,6 +468,16 @@ export default function HomePage() {
               <li>
                 <Link href="/faq" className="text-muted-foreground hover:text-primary transition-colors">
                   FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/list-your-court" className="text-muted-foreground hover:text-primary transition-colors">
+                  List Your Court
                 </Link>
               </li>
             </ul>

@@ -297,6 +297,25 @@ export default function CharlotteBestClubsPage() {
             </Link>
           </div>
         </div>
+
+        {/* Related Guides */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">More Best Club Guides</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/blog/best-padel-clubs-atlanta" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Atlanta</h4>
+              <p className="text-sm text-gray-600">Georgia&apos;s padel scene</p>
+            </Link>
+            <Link href="/blog/best-padel-clubs-miami" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Miami</h4>
+              <p className="text-sm text-gray-600">Florida&apos;s padel capital</p>
+            </Link>
+            <Link href="/blog/best-padel-clubs-dallas" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Dallas</h4>
+              <p className="text-sm text-gray-600">DFW metroplex clubs</p>
+            </Link>
+          </div>
+        </div>
       </article>
     </div>
   );

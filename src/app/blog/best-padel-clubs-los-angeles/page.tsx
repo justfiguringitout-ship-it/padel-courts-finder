@@ -424,6 +424,24 @@ export default function LosAngelesBestClubsPage() {
             </Link>
           </div>
         </div>
+        {/* Related Guides */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">More California Padel Guides</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/blog/best-padel-clubs-san-francisco" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in San Francisco</h4>
+              <p className="text-sm text-gray-600">Bay Area padel revolution</p>
+            </Link>
+            <Link href="/blog/best-padel-clubs-san-diego" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in San Diego</h4>
+              <p className="text-sm text-gray-600">Year-round perfect weather</p>
+            </Link>
+            <Link href="/blog/best-padel-clubs-austin" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Austin</h4>
+              <p className="text-sm text-gray-600">America&apos;s padel capital</p>
+            </Link>
+          </div>
+        </div>
       </article>
     </div>
   );
