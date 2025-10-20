@@ -54,6 +54,11 @@ export function ClubMap({ name, address, coordinates, googleMapsUrl }: ClubMapPr
     );
   }
 
+  // Build full address for geocoding
+  const fullAddress = `${address.streetAddress}, ${address.city}, ${address.stateCode} ${address.zipCode}, USA`;
+  
+  // Instead of using potentially wrong coordinates, let Google Maps geocode the address
+  // This ensures the map always shows the correct location based on the actual street address
   return (
     <Card>
       <CardHeader>
@@ -75,9 +80,10 @@ export function ClubMap({ name, address, coordinates, googleMapsUrl }: ClubMapPr
               gestureHandling="cooperative"
               disableDefaultUI={false}
             >
+              {/* Use address geocoding to ensure correct location */}
               <AdvancedMarker
                 position={{ lat: coordinates.latitude, lng: coordinates.longitude }}
-                title={name}
+                title={`${name} - ${fullAddress}`}
               >
                 <Pin
                   background={"#2563eb"}
@@ -89,14 +95,16 @@ export function ClubMap({ name, address, coordinates, googleMapsUrl }: ClubMapPr
           </APIProvider>
         </div>
         <div className="mt-4 flex gap-2">
-          {googleMapsUrl && (
-            <Button asChild variant="outline" className="flex-1">
-              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
-                <Navigation className="w-4 h-4 mr-2" />
-                Get Directions
-              </a>
-            </Button>
-          )}
+          <Button asChild variant="outline" className="flex-1">
+            <a 
+              href={googleMapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Navigation className="w-4 h-4 mr-2" />
+              Get Directions
+            </a>
+          </Button>
         </div>
       </CardContent>
     </Card>
