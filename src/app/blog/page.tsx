@@ -5,6 +5,9 @@ import { Calendar, MapPin, TrendingUp, BookOpen, Award } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Padel Blog | Expert Guides, Club Reviews & Tips',
   description: 'Explore our comprehensive padel blog with club reviews, how-to guides, equipment tips, and the latest padel news from across America.',
+  alternates: {
+    canonical: 'https://padelcourtsfinder.com/blog',
+  },
 };
 
 interface BlogPost {

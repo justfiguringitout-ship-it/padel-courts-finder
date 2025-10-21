@@ -581,3 +581,5 @@ const established = padelCourts
 **Pro Tip**: All queries are type-safe thanks to TypeScript interfaces! Your IDE will provide autocomplete for all court properties.
 
 
+
+

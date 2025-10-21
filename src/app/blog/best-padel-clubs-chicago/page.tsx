@@ -5,6 +5,9 @@ import { MapPin, Star, Users, Globe, Clock } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Chicago (2025) | Complete Windy City Guide',
   description: 'Chicago padel scene emerging strong. Cube Padel leads the charge with indoor facilities. Complete guide to Chicago padel with rankings, pricing & programs.',
+  alternates: {
+    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-chicago',
+  },
 };
 
 interface Club {

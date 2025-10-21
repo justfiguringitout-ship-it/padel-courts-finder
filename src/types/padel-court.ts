@@ -8,7 +8,7 @@ export interface PadelCourt {
   phone?: string;
   email?: string;
   website?: string;
-  rating: number;
+  rating?: number;
   reviewCount: number;
   openingHours: OpeningHours;
   description?: string;

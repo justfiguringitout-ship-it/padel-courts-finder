@@ -175,3 +175,5 @@ interface PadelCourt {
 **Conclusion**: Cross-referencing revealed significant gaps and errors. The US has approximately **76+ padel facilities** with **150-200+ individual courts**, not just 48 as initially thought. Official websites provide the most accurate data - neither directory is 100% accurate alone.
 
 
+
+

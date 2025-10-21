@@ -46,6 +46,19 @@ export function getStates(): StateInfo[] {
       AZ: "Arizona",
       MO: "Missouri",
       NC: "North Carolina",
+      MA: "Massachusetts",
+      WI: "Wisconsin",
+      CO: "Colorado",
+      MI: "Michigan",
+      PR: "Puerto Rico",
+      GA: "Georgia",
+      MD: "Maryland",
+      NM: "New Mexico",
+      UT: "Utah",
+      VA: "Virginia",
+      CT: "Connecticut",
+      NV: "Nevada",
+      KS: "Kansas",
     };
 
     const stateName = stateNames[stateCode] || stateCode;
@@ -160,6 +173,19 @@ function getStateCodeFromSlug(slug: string): string | undefined {
     arizona: "AZ",
     missouri: "MO",
     "north-carolina": "NC",
+    massachusetts: "MA",
+    wisconsin: "WI",
+    colorado: "CO",
+    michigan: "MI",
+    "puerto-rico": "PR",
+    georgia: "GA",
+    maryland: "MD",
+    "new-mexico": "NM",
+    utah: "UT",
+    virginia: "VA",
+    connecticut: "CT",
+    nevada: "NV",
+    kansas: "KS",
   };
 
   return slugToCode[slug];

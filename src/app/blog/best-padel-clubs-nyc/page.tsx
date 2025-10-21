@@ -5,6 +5,9 @@ import { MapPin, Star, Users, Globe, Phone, Mail, Clock } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in NYC (2025) | Brooklyn, Manhattan & Beyond',
   description: 'NYC&apos;s padel scene heats up with Padel Haus Dumbo leading the charge. Complete guide to New York padel clubs with rankings, pricing & programs.',
+  alternates: {
+    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-nyc',
+  },
 };
 
 interface Club {

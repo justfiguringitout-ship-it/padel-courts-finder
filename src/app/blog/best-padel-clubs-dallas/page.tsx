@@ -5,6 +5,9 @@ import { MapPin, Star, Users, Clock } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Dallas (2025) | Complete DFW Padel Guide',
   description: 'Dallas padel scene growing across DFW metroplex. Complete guide to Dallas-Fort Worth padel with rankings, pricing & programs.',
+  alternates: {
+    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-dallas',
+  },
 };
 
 export default function DallasBestClubsPage() {

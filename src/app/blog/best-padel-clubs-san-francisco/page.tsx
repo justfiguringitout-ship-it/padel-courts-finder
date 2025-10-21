@@ -5,6 +5,9 @@ import { MapPin, Star, Users, Clock } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in San Francisco Bay Area (2025) | Complete Guide',
   description: 'Discover the Bay Area&apos;s emerging padel scene. From Peninsula clubs to East Bay facilities. Complete guide to SF padel with rankings, pricing & programs.',
+  alternates: {
+    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-san-francisco',
+  },
 };
 
 export default function SanFranciscoBestClubsPage() {

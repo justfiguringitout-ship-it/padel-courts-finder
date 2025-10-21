@@ -5,6 +5,9 @@ import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Austin, Texas (2025) | 6 Clubs Ranked & Reviewed',
   description: 'Austin is America&apos;s padel capital! Compare all 6 clubs from Padel Club Austin to Padel39. Complete guide with pricing, programs, and insider tips.',
+  alternates: {
+    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-austin',
+  },
 };
 
 export default function AustinBestClubsPage() {
