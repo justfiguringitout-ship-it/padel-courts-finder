@@ -495,27 +495,6 @@ export const padelCourts: PadelCourt[] = [
     verificationDate: "2025-10-10"
   },
   {
-    id: 22,
-    name: "Orlando Padel Club Indoor",
-    address: "5950 Lakehurst Dr Unit 101",
-    city: "Orlando",
-    state: "FL",
-    zipCode: "32819",
-    phone: "+1407-745-9030",
-    rating: 5.0,
-    reviewCount: 67,
-    openingHours: {
-      monday: "6h-23h",
-      tuesday: "6h-23h",
-      wednesday: "6h-23h",
-      thursday: "6h-23h",
-      friday: "6h-23h",
-      saturday: "7h-22h",
-      sunday: "7h-22h"
-    },
-    description: "Orlando Padel Club features indoor courts with climate control year-round.",
-  },
-  {
     id: 23,
     name: "Charlotte Padel Club - South Charlotte",
     address: "8401 Sharon Lakes Rd",
@@ -583,27 +562,6 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-21h"
     },
     description: "PATL provides quality padel courts in Fort Lauderdale.",
-  },
-  {
-    id: 26,
-    name: "Alma Padel",
-    address: "1234 Main Street",
-    city: "Miami",
-    state: "FL",
-    zipCode: "33130",
-    phone: "+1305-555-0100",
-    rating: 4.7,
-    reviewCount: 22,
-    openingHours: {
-      monday: "7h-22h",
-      tuesday: "7h-22h",
-      wednesday: "7h-22h",
-      thursday: "7h-22h",
-      friday: "7h-22h",
-      saturday: "8h-21h",
-      sunday: "8h-21h"
-    },
-    description: "Alma Padel offers welcoming facilities for players of all levels.",
   },
   {
     id: 27,
@@ -805,6 +763,10 @@ export const padelCourts: PadelCourt[] = [
       saturday: "7:30-22h",
       sunday: "7:30-22h"
     },
+    website: "https://padelcalifornia.us",
+    numberOfCourts: 2,
+    chainName: "Padel California",
+    locationName: "Oceanside",
     description: "Experience the thrill of outdoor Padel at Padel California – the first club in California dedicated to this amazing sport! Beachside location with great community.",
   },
   {
@@ -2120,34 +2082,6 @@ export const padelCourts: PadelCourt[] = [
     verificationDate: "2025-10-13"
   },
   {
-    id: 97,
-    name: "Padel California",
-    address: "222 South Coast Highway",
-    city: "Oceanside",
-    state: "CA",
-    zipCode: "92054",
-    phone: "+17608258365",
-    website: "https://padelcalifornia.us",
-    rating: 4.5,
-    reviewCount: 11,
-    numberOfCourts: 2,
-    courtType: "outdoor",
-    amenities: ["Near Beach", "Women's Clinics", "Kids Lessons", "Pro Shop"],
-    openingHours: {
-      monday: "7:30-22h",
-      tuesday: "7:30-22h",
-      wednesday: "7:30-22h",
-      thursday: "7:30-22h",
-      friday: "7:30-22h",
-      saturday: "7:30-22h",
-      sunday: "7:30-22h"
-    },
-    chainName: "Padel California",
-    locationName: "Oceanside",
-    verified: true,
-    verificationDate: "2025-10-13"
-  },
-  {
     id: 98,
     name: "Padel N9NE",
     address: "9955 Barnes Canyon Road",
@@ -2581,52 +2515,6 @@ export const padelCourts: PadelCourt[] = [
     verificationDate: "2025-10-13"
   },
   {
-    id: 116,
-    name: "Dripping Springs Racquet Club",
-    address: "Dripping Springs",
-    city: "Dripping Springs",
-    state: "TX",
-    zipCode: "78620",
-    rating: 4.5,
-    reviewCount: 8,
-    courtType: "outdoor",
-    amenities: ["Hill Country Location"],
-    openingHours: {
-      monday: "7h-22h",
-      tuesday: "7h-22h",
-      wednesday: "7h-22h",
-      thursday: "7h-22h",
-      friday: "7h-22h",
-      saturday: "8h-21h",
-      sunday: "8h-21h"
-    },
-    verified: true,
-    verificationDate: "2025-10-13"
-  },
-  {
-    id: 117,
-    name: "Dallas Padel Club",
-    address: "Dallas",
-    city: "Dallas",
-    state: "TX",
-    zipCode: "75201",
-    rating: 4.7,
-    reviewCount: 15,
-    courtType: "indoor",
-    amenities: ["Premium Facility"],
-    openingHours: {
-      monday: "7h-23h",
-      tuesday: "7h-23h",
-      wednesday: "7h-23h",
-      thursday: "7h-23h",
-      friday: "7h-23h",
-      saturday: "8h-22h",
-      sunday: "8h-22h"
-    },
-    verified: true,
-    verificationDate: "2025-10-13"
-  },
-  {
     id: 118,
     name: "Banner House at T Bar M",
     address: "New Braunfels",
@@ -2886,79 +2774,6 @@ export const padelCourts: PadelCourt[] = [
     verificationDate: "2025-10-13"
   },
   {
-    id: 130,
-    name: "RxPADEL",
-    address: "1210 SW 35th Ave",
-    city: "Boynton Beach",
-    state: "FL",
-    zipCode: "33426",
-    phone: "+15613763871",
-    website: "http://rxpadel.com",
-    rating: 5.0,
-    reviewCount: 8,
-    courtType: "outdoor",
-    amenities: ["RSPA Certified Coaching", "Private and Group Lessons"],
-    openingHours: {
-      monday: "7h-19h",
-      tuesday: "7h-19h",
-      wednesday: "7h-19h",
-      thursday: "7h-19h",
-      friday: "7h-19h",
-      saturday: "7h-19h",
-      sunday: "7h-19h"
-    },
-    verified: true,
-    verificationDate: "2025-10-13"
-  },
-  {
-    id: 131,
-    name: "Padel Point Miami",
-    address: "1960 Normandy Dr",
-    city: "Miami Beach",
-    state: "FL",
-    zipCode: "33141",
-    phone: "+13059065896",
-    rating: 4.9,
-    reviewCount: 12,
-    courtType: "outdoor",
-    amenities: ["First Miami Beach Padel Club", "Beachside Location"],
-    openingHours: {
-      monday: "8h-21:30",
-      tuesday: "8h-21:30",
-      wednesday: "8h-21:30",
-      thursday: "8h-21:30",
-      friday: "8h-21:30",
-      saturday: "8h-21:30",
-      sunday: "10h-21:30"
-    },
-    verified: true,
-    verificationDate: "2025-10-13"
-  },
-  {
-    id: 133,
-    name: "Platinum Padel Club",
-    address: "1195 NE 125th St",
-    city: "North Miami",
-    state: "FL",
-    zipCode: "33161",
-    phone: "+13058482489",
-    rating: 5.0,
-    reviewCount: 6,
-    courtType: "outdoor",
-    amenities: ["Family Friendly", "Unlimited Play Packages"],
-    openingHours: {
-      monday: "7h-23h",
-      tuesday: "7h-23h",
-      wednesday: "7h-23h",
-      thursday: "7h-23h",
-      friday: "7h-23h",
-      saturday: "7h-23h",
-      sunday: "7h-23h"
-    },
-    verified: true,
-    verificationDate: "2025-10-13"
-  },
-  {
     id: 135,
     name: "Padel Haus Atlanta",
     address: "Atlanta",
@@ -3168,10 +2983,10 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 143,
     name: "Dallas Padel Club",
-    address: "13550 Josey Ln",
-    city: "Farmers Branch",
+    address: "3000 Belmeade Dr",
+    city: "Carrollton",
     state: "TX",
-    zipCode: "75234",
+    zipCode: "75006",
     rating: 4.7,
     reviewCount: 42,
     numberOfCourts: 6,
@@ -3399,13 +3214,13 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 153,
     name: "Orlando Padel Club Indoor",
-    address: "5401 S Kirkman Rd",
+    address: "608 E Landstreet Rd B",
     city: "Orlando",
     state: "FL",
-    zipCode: "32819",
+    zipCode: "32824",
     rating: 5.0,
     reviewCount: 88,
-    numberOfCourts: 6,
+    numberOfCourts: 3,
     courtType: "indoor",
     amenities: ["All Indoor Courts", "Climate Controlled", "Year-Round Play", "Coaching", "Leagues"],
     openingHours: {
@@ -3418,31 +3233,6 @@ export const padelCourts: PadelCourt[] = [
       sunday: "7h-22h"
     },
     description: "Orlando Padel Club Indoor offers 6 climate-controlled courts perfect for year-round play. Premier indoor facility with professional coaching and active league play.",
-    verified: true,
-    verificationDate: "2025-10-15"
-  },
-  {
-    id: 154,
-    name: "Sodo Padel",
-    address: "1890 S Orange Ave",
-    city: "Orlando",
-    state: "FL",
-    zipCode: "32806",
-    rating: 4.0,
-    reviewCount: 72,
-    numberOfCourts: 5,
-    courtType: "outdoor",
-    amenities: ["SoDo District", "Outdoor Courts", "Social Atmosphere", "Bar Nearby", "Events"],
-    openingHours: {
-      monday: "7h-22h",
-      tuesday: "7h-22h",
-      wednesday: "7h-22h",
-      thursday: "7h-22h",
-      friday: "7h-23h",
-      saturday: "8h-23h",
-      sunday: "8h-21h"
-    },
-    description: "Sodo Padel brings vibrant padel culture to Orlando's trendy SoDo district. 5 outdoor courts with excellent social atmosphere and nearby dining options.",
     verified: true,
     verificationDate: "2025-10-15"
   },
@@ -3550,31 +3340,6 @@ export const padelCourts: PadelCourt[] = [
     verificationDate: "2025-10-15"
   },
   {
-    id: 159,
-    name: "Alma Padel",
-    address: "1550 Milwaukee Ave",
-    city: "Glenview",
-    state: "IL",
-    zipCode: "60025",
-    rating: 5.0,
-    reviewCount: 73,
-    numberOfCourts: 4,
-    courtType: "indoor",
-    amenities: ["North Shore Location", "Indoor Courts", "Family Friendly", "Coaching", "Equipment Rental"],
-    openingHours: {
-      monday: "7h-22h",
-      tuesday: "7h-22h",
-      wednesday: "7h-22h",
-      thursday: "7h-22h",
-      friday: "7h-23h",
-      saturday: "8h-23h",
-      sunday: "8h-21h"
-    },
-    description: "Alma Padel serves Chicago's North Shore with 4 quality indoor courts in Glenview. Family-friendly atmosphere with coaching programs for all ages and skill levels.",
-    verified: true,
-    verificationDate: "2025-10-15"
-  },
-  {
     id: 160,
     name: "Club Pickle & Padel",
     address: "777 Central Ave",
@@ -3596,31 +3361,6 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-21h"
     },
     description: "Club Pickle & Padel combines both racquet sports in Highland Park's North Shore. 3 padel courts plus pickleball, creating a vibrant multi-sport community.",
-    verified: true,
-    verificationDate: "2025-10-15"
-  },
-  {
-    id: 161,
-    name: "Padel Clube",
-    address: "1500 Townline Rd",
-    city: "Mundelein",
-    state: "IL",
-    zipCode: "60060",
-    rating: 4.9,
-    reviewCount: 58,
-    numberOfCourts: 4,
-    courtType: "indoor",
-    amenities: ["Indoor Courts", "Brazilian Style", "Social Atmosphere", "Bar", "Events"],
-    openingHours: {
-      monday: "7h-22h",
-      tuesday: "7h-22h",
-      wednesday: "7h-22h",
-      thursday: "7h-22h",
-      friday: "7h-midnight",
-      saturday: "8h-midnight",
-      sunday: "8h-22h"
-    },
-    description: "Padel Clube brings Brazilian padel culture to Mundelein with 4 indoor courts, vibrant social scene, and authentic club atmosphere. Great community vibe northwest of Chicago.",
     verified: true,
     verificationDate: "2025-10-15"
   },
@@ -3733,29 +3473,31 @@ export const padelCourts: PadelCourt[] = [
     verificationDate: "2025-10-15"
   },
   {
-    id: 166,
-    name: "Padel Boston",
-    address: "300 Providence Hwy",
-    city: "Dedham",
-    state: "MA",
-    zipCode: "02026",
-    rating: 5.0,
-    reviewCount: 71,
-    numberOfCourts: 4,
-    courtType: "indoor",
-    amenities: ["Indoor Courts", "Suburban Boston", "Equipment Rental", "Coaching", "Pro Shop"],
+    id: 167,
+    name: "Padel California",
+    address: "Whittier",
+    city: "Whittier",
+    state: "CA",
+    zipCode: "90601",
+    website: "https://padelcalifornia.us",
+    rating: 4.5,
+    reviewCount: 0,
+    numberOfCourts: 5,
+    courtType: "outdoor",
+    amenities: ["Clubhouse", "Coaching", "Tournaments"],
     openingHours: {
-      monday: "7h-22h",
-      tuesday: "7h-22h",
-      wednesday: "7h-22h",
-      thursday: "7h-22h",
-      friday: "7h-23h",
-      saturday: "8h-23h",
-      sunday: "8h-21h"
+      monday: "7:30-22h",
+      tuesday: "7:30-22h",
+      wednesday: "7:30-22h",
+      thursday: "7:30-22h",
+      friday: "7:30-22h",
+      saturday: "7:30-22h",
+      sunday: "7:30-22h"
     },
-    description: "Padel Boston in Dedham offers 4 indoor courts serving the greater Boston area. Quality facility with equipment rental, coaching, and welcoming atmosphere for beginners and advanced players.",
-    verified: true,
-    verificationDate: "2025-10-15"
+    chainName: "Padel California",
+    locationName: "Whittier",
+    description: "Padel California's Whittier location in Los Angeles features 5 outdoor padel courts and a clubhouse. Part of the first padel-only club chain in California.",
+    verified: false
   },
 ];
 
@@ -3785,4 +3527,3 @@ export const stats = {
     percentage: (courts.length / padelCourts.length * 100).toFixed(1) + '%'
   })).sort((a, b) => b.count - a.count)
 };
-
