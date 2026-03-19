@@ -482,8 +482,6 @@ export interface AdaptedCourt {
     outdoorCourts: number;
     courtSurface: string;
     lighting: string;
-    courtDimensions?: string;
-    equipmentQuality?: string;
   };
   amenities: string[];
   features: string[];
@@ -569,6 +567,19 @@ export interface AdaptedCourt {
   isFeatured?: boolean;
   lastUpdated?: string;
 
+  // New fields from master data
+  instagram?: string;
+  facebook?: string;
+  membersOnly?: boolean;
+  lessonsAvailable?: boolean;
+  rentalAvailable?: boolean;
+  socialArea?: boolean;
+  foodAndDrink?: boolean;
+  positiveReviewThemes?: string[];
+  negativeReviewThemes?: string[];
+  pricingText?: string;
+  status?: string;
+
   // Original data reference
   _original?: ExistingCourt;
 }
@@ -584,17 +595,17 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
   // Determine court breakdown
   let indoorCourts = 0;
   let outdoorCourts = 0;
-  const totalCourts = court.numberOfCourts || 4; // Default to 4 if not specified
+  const totalCourts = court.numberOfCourts || 0;
 
   if (court.courtType === "indoor") {
     indoorCourts = totalCourts;
   } else if (court.courtType === "outdoor") {
     outdoorCourts = totalCourts;
-  } else {
-    // Both or unknown - split evenly
+  } else if (court.courtType === "both") {
     indoorCourts = Math.floor(totalCourts / 2);
     outdoorCourts = totalCourts - indoorCourts;
   }
+  // else: unknown courtType — leave both at 0
 
   // Generate features array
   const features: string[] = [];
@@ -636,14 +647,45 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
     },
   ];
 
-  // Estimated pricing (can be updated with real data later)
-  const basePrice = court.rating >= 4.8 ? 65 : court.rating >= 4.5 ? 55 : 45;
+  // Build dynamic FAQs from real data only (max 4)
+  const dynamicFaqs: Array<{ question: string; answer: string }> = [];
+  if (court.pricingText) {
+    dynamicFaqs.push({
+      question: `How much does it cost to play at ${court.name}?`,
+      answer: court.pricingText,
+    });
+  }
+  if (court.lessonsAvailable) {
+    dynamicFaqs.push({
+      question: `Does ${court.name} offer padel lessons?`,
+      answer: `Yes, ${court.name} offers padel lessons. Contact them directly for scheduling and rates.`,
+    });
+  }
+  if (court.membersOnly) {
+    dynamicFaqs.push({
+      question: `Is ${court.name} members only?`,
+      answer: `Yes, ${court.name} is a members-only facility. Contact them for membership information and guest policies.`,
+    });
+  }
+  if (court.amenities && court.amenities.length > 0) {
+    dynamicFaqs.push({
+      question: `What amenities does ${court.name} have?`,
+      answer: `${court.name} offers: ${court.amenities.join(", ")}.`,
+    });
+  }
+  if (court.rentalAvailable) {
+    dynamicFaqs.push({
+      question: `Can I rent equipment at ${court.name}?`,
+      answer: `Yes, ${court.name} offers equipment rental. Contact them for availability and pricing.`,
+    });
+  }
+  const faqs = dynamicFaqs.slice(0, 4);
 
   return {
     id: court.id.toString(),
     slug,
     name: court.name,
-    description: court.description || `${court.name} offers premier padel facilities in ${court.city}, ${stateName}. Experience world-class courts with professional amenities and a welcoming community for players of all skill levels.`,
+    description: court.description || "",
 
     address: {
       streetAddress: court.address,
@@ -668,27 +710,17 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
       totalCourts,
       indoorCourts,
       outdoorCourts,
-      courtSurface: court.courtSurface || "Professional-grade artificial turf with panoramic glass walls",
-      lighting: "LED floodlights for evening play",
-      courtDimensions: "10m x 20m (official USPA standards)",
-      equipmentQuality: "Tournament-grade equipment",
+      courtSurface: court.courtSurface || "",
+      lighting: "",
     },
 
-    amenities: court.amenities || [
-      "Professional Coaching",
-      "Equipment Rental",
-      "Pro Shop",
-      "Locker Rooms",
-      "Free WiFi",
-      "Parking",
-    ],
+    amenities: court.amenities || [],
 
     features,
 
     pricing: {
-      peakHourlyRate: basePrice + 10,
-      offPeakHourlyRate: basePrice,
-      priceRange: `$${basePrice}-$${basePrice + 10}`,
+      peakHourlyRate: 0,
+      offPeakHourlyRate: 0,
     },
 
     hours: convertOpeningHours(court.openingHours),
@@ -716,32 +748,36 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
       `book padel ${court.city}`,
     ],
 
-    metaDescription: `Book padel courts at ${court.name} in ${court.city}, ${stateCode}. ${totalCourts} ${court.courtType || "professional"} courts. Rated ${court.rating} stars. Reserve online today!`,
+    metaDescription: totalCourts > 0
+      ? `Book padel courts at ${court.name} in ${court.city}, ${stateCode}. ${totalCourts} ${court.courtType || ""} courts. Rated ${court.rating} stars.`
+      : `Book padel courts at ${court.name} in ${court.city}, ${stateCode}. Rated ${court.rating} stars.`,
 
-    faqs: [
-      {
-        question: "What equipment do I need to bring?",
-        answer: "We provide padel rackets and balls for rental. You just need athletic shoes with non-marking soles and comfortable sportswear. If you have your own equipment, you're welcome to bring it!",
-      },
-      {
-        question: "How do I book a court?",
-        answer: court.website
-          ? `You can book online through our website at ${court.website}, call us at ${court.phone}, or visit us in person. We recommend booking in advance, especially during peak hours.`
-          : `Call us at ${court.phone} to book your court. We recommend calling in advance, especially during peak hours.`,
-      },
-      {
-        question: "Do you offer coaching and lessons?",
-        answer: "Yes! We have certified padel coaches available for private lessons, group clinics, and training programs for all skill levels.",
-      },
-      {
-        question: "What are your peak hours?",
-        answer: "Peak hours are typically weekday evenings (5pm-9pm) and weekend mornings (8am-12pm). Off-peak hours offer better rates and availability.",
-      },
-    ],
+    faqs: faqs.length > 0 ? faqs : undefined,
 
     isActive: true,
     isFeatured: court.verified || court.rating >= 4.8,
     lastUpdated: court.verificationDate || new Date().toISOString().split("T")[0],
+
+    // Passthrough new fields (no fabrication)
+    instagram: court.instagram,
+    facebook: court.facebook,
+    membersOnly: court.membersOnly,
+    lessonsAvailable: court.lessonsAvailable,
+    rentalAvailable: court.rentalAvailable,
+    socialArea: court.socialArea,
+    foodAndDrink: court.foodAndDrink,
+    positiveReviewThemes: Array.isArray(court.positiveReviewThemes)
+      ? court.positiveReviewThemes
+      : court.positiveReviewThemes
+        ? court.positiveReviewThemes.split(",").map((s: string) => s.trim()).filter(Boolean)
+        : undefined,
+    negativeReviewThemes: Array.isArray(court.negativeReviewThemes)
+      ? court.negativeReviewThemes
+      : court.negativeReviewThemes && !/^none\b/i.test(court.negativeReviewThemes)
+        ? court.negativeReviewThemes.split(",").map((s: string) => s.trim()).filter(Boolean)
+        : undefined,
+    pricingText: court.pricingText,
+    status: court.status,
 
     _original: court,
   };

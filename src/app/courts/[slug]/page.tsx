@@ -12,8 +12,8 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import {
-  MapPin, Star, Clock, Phone, Globe, Mail, DollarSign, Users,
-  Calendar, CheckCircle
+  MapPin, Star, Clock, Phone, Globe, Mail, Users,
+  Calendar, CheckCircle, UtensilsCrossed, Dumbbell, Armchair, GraduationCap
 } from "lucide-react";
 import { getAllAdaptedCourtSlugs, getAdaptedCourtBySlug, getAdaptedRelatedCourts, getTodayHours, isCurrentlyOpen } from "@/lib/court-adapter";
 import { ClubMapClient } from "@/components/club-map-client";
@@ -103,7 +103,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
               bestRating: court.rating.bestRating,
               worstRating: court.rating.worstRating,
             },
-            priceRange: court.pricing.priceRange,
+            ...(court.pricingText ? { priceRange: court.pricingText } : {}),
             openingHoursSpecification: court.hours.map((h) => ({
               "@type": "OpeningHoursSpecification",
               dayOfWeek: h.dayOfWeek,
@@ -114,8 +114,8 @@ export default async function CourtPage({ params }: CourtPageProps) {
         }}
       />
 
-      {/* FAQ Schema */}
-      {court.faqs && court.faqs.length > 0 && (
+      {/* FAQ Schema — only if 2+ FAQs */}
+      {court.faqs && court.faqs.length >= 2 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -162,15 +162,24 @@ export default async function CourtPage({ params }: CourtPageProps) {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Left: Club Info */}
             <div>
-              <div className="flex items-start gap-3 mb-4">
+              <div className="flex items-start gap-3 mb-4 flex-wrap">
                 {court.isFeatured && (
-                  <Badge variant="default" className="mb-2">Featured</Badge>
+                  <Badge variant="default">Featured</Badge>
                 )}
                 {court.isActive && isOpen && (
                   <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
                     <CheckCircle className="w-3 h-3 mr-1" />
                     Open Now
                   </Badge>
+                )}
+                {court.status === "coming_soon" && (
+                  <Badge variant="outline" className="bg-amber-50 text-amber-700 border-amber-200">Coming Soon</Badge>
+                )}
+                {court.status === "temporarily_closed" && (
+                  <Badge variant="outline" className="bg-red-50 text-red-700 border-red-200">Temporarily Closed</Badge>
+                )}
+                {court.membersOnly && (
+                  <Badge variant="outline" className="bg-purple-50 text-purple-700 border-purple-200">Private Club</Badge>
                 )}
               </div>
 
@@ -191,15 +200,29 @@ export default async function CourtPage({ params }: CourtPageProps) {
                 </div>
               </div>
 
-              <p className="text-lg text-muted-foreground mb-6">{court.description}</p>
+              {court.description && (
+                <p className="text-lg text-muted-foreground mb-6">{court.description}</p>
+              )}
 
               <div className="flex flex-wrap gap-2 mb-6">
                 {court.features.map((feature) => (
                   <Badge key={feature} variant="secondary">{feature}</Badge>
                 ))}
+                {court.lessonsAvailable && (
+                  <Badge variant="outline" className="gap-1"><GraduationCap className="w-3 h-3" />Lessons</Badge>
+                )}
+                {court.rentalAvailable && (
+                  <Badge variant="outline" className="gap-1"><Dumbbell className="w-3 h-3" />Equipment Rental</Badge>
+                )}
+                {court.foodAndDrink && (
+                  <Badge variant="outline" className="gap-1"><UtensilsCrossed className="w-3 h-3" />Food &amp; Drink</Badge>
+                )}
+                {court.socialArea && (
+                  <Badge variant="outline" className="gap-1"><Armchair className="w-3 h-3" />Social Lounge</Badge>
+                )}
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              {court.facility.totalCourts > 0 && (
                 <div className="flex items-center gap-2">
                   <Users className="w-5 h-5 text-primary" />
                   <div>
@@ -207,14 +230,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
                     <div className="font-semibold">{court.facility.totalCourts} courts</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <DollarSign className="w-5 h-5 text-primary" />
-                  <div>
-                    <div className="text-sm text-muted-foreground">From</div>
-                    <div className="font-semibold">${court.pricing.offPeakHourlyRate}/hour</div>
-                  </div>
-                </div>
-              </div>
+              )}
             </div>
 
             {/* Right: Hero Image */}
@@ -268,6 +284,28 @@ export default async function CourtPage({ params }: CourtPageProps) {
                     </div>
                   </div>
                 )}
+                {court.instagram && (
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    <div>
+                      <div className="text-sm text-muted-foreground">Instagram</div>
+                      <a href={court.instagram} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary">
+                        Follow on Instagram
+                      </a>
+                    </div>
+                  </div>
+                )}
+                {court.facebook && (
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <div>
+                      <div className="text-sm text-muted-foreground">Facebook</div>
+                      <a href={court.facebook} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary">
+                        Follow on Facebook
+                      </a>
+                    </div>
+                  </div>
+                )}
                 <div className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-primary" />
                   <div>
@@ -286,57 +324,98 @@ export default async function CourtPage({ params }: CourtPageProps) {
               googleMapsUrl={court.googleMapsUrl}
             />
 
-            {/* Facility Details */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Facility Details</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <div className="text-sm text-muted-foreground mb-1">Total Courts</div>
-                    <div className="font-medium">{court.facility.totalCourts}</div>
+            {/* Facility Details — only when real data exists */}
+            {(court.facility.totalCourts > 0 || court.facility.courtSurface || court.facility.lighting) && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>Facility Details</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {court.facility.totalCourts > 0 && (
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Total Courts</div>
+                        <div className="font-medium">{court.facility.totalCourts}</div>
+                      </div>
+                    )}
+                    {court.facility.indoorCourts > 0 && (
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Indoor Courts</div>
+                        <div className="font-medium">{court.facility.indoorCourts}</div>
+                      </div>
+                    )}
+                    {court.facility.outdoorCourts > 0 && (
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Outdoor Courts</div>
+                        <div className="font-medium">{court.facility.outdoorCourts}</div>
+                      </div>
+                    )}
+                    {court.facility.courtSurface && (
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Court Surface</div>
+                        <div className="font-medium">{court.facility.courtSurface}</div>
+                      </div>
+                    )}
+                    {court.facility.lighting && (
+                      <div>
+                        <div className="text-sm text-muted-foreground mb-1">Lighting</div>
+                        <div className="font-medium">{court.facility.lighting}</div>
+                      </div>
+                    )}
                   </div>
-                  {court.facility.indoorCourts > 0 && (
-                    <div>
-                      <div className="text-sm text-muted-foreground mb-1">Indoor Courts</div>
-                      <div className="font-medium">{court.facility.indoorCourts}</div>
-                    </div>
-                  )}
-                  {court.facility.outdoorCourts > 0 && (
-                    <div>
-                      <div className="text-sm text-muted-foreground mb-1">Outdoor Courts</div>
-                      <div className="font-medium">{court.facility.outdoorCourts}</div>
-                    </div>
-                  )}
-                  <div>
-                    <div className="text-sm text-muted-foreground mb-1">Court Surface</div>
-                    <div className="font-medium">{court.facility.courtSurface}</div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-muted-foreground mb-1">Lighting</div>
-                    <div className="font-medium">{court.facility.lighting}</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            )}
 
-            {/* Amenities */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Amenities</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-2 gap-3">
-                  {court.amenities.map((amenity) => (
-                    <div key={amenity} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-primary" />
-                      <span>{amenity}</span>
+            {/* Amenities — only when data exists */}
+            {court.amenities.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>Amenities</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {court.amenities.map((amenity) => (
+                      <div key={amenity} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-primary" />
+                        <span>{amenity}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* What Players Say — review themes */}
+            {((court.positiveReviewThemes && court.positiveReviewThemes.length > 0) || (court.negativeReviewThemes && court.negativeReviewThemes.length > 0)) && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>What Players Say</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {court.positiveReviewThemes && court.positiveReviewThemes.length > 0 && (
+                    <div>
+                      <div className="text-sm text-muted-foreground mb-2">Players love</div>
+                      <div className="flex flex-wrap gap-2">
+                        {court.positiveReviewThemes.map((theme) => (
+                          <Badge key={theme} variant="outline" className="bg-green-50 text-green-700 border-green-200">{theme}</Badge>
+                        ))}
+                      </div>
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                  )}
+                  {court.negativeReviewThemes && court.negativeReviewThemes.length > 0 && (
+                    <div>
+                      <div className="text-sm text-muted-foreground mb-2">Could improve</div>
+                      <div className="flex flex-wrap gap-2">
+                        {court.negativeReviewThemes.map((theme) => (
+                          <Badge key={theme} variant="outline" className="bg-amber-50 text-amber-700 border-amber-200">{theme}</Badge>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            )}
 
             {/* FAQs */}
             {court.faqs && court.faqs.length > 0 && (
@@ -358,39 +437,62 @@ export default async function CourtPage({ params }: CourtPageProps) {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            {/* Pricing Card */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Pricing</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <div className="text-sm text-muted-foreground mb-1">Off-Peak Rate</div>
-                  <div className="text-3xl font-bold text-primary">${court.pricing.offPeakHourlyRate}</div>
-                  <div className="text-sm text-muted-foreground">per hour</div>
-                </div>
-                <div>
-                  <div className="text-sm text-muted-foreground mb-1">Peak Rate</div>
-                  <div className="text-2xl font-bold">${court.pricing.peakHourlyRate}</div>
-                  <div className="text-sm text-muted-foreground">per hour</div>
-                </div>
-                {court.bookingUrl ? (
-                  <Button className="w-full" asChild>
-                    <a href={court.bookingUrl} target="_blank" rel="noopener noreferrer">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      Book Now
-                    </a>
-                  </Button>
-                ) : court.phone ? (
-                  <Button className="w-full" asChild>
-                    <a href={`tel:${court.phone}`}>
-                      <Phone className="w-4 h-4 mr-2" />
-                      Call to Book
-                    </a>
-                  </Button>
-                ) : null}
-              </CardContent>
-            </Card>
+            {/* Pricing Card — only when pricingText exists */}
+            {court.pricingText && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>Pricing</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <ul className="space-y-2">
+                    {court.pricingText.split(";").map((item) => item.trim()).filter(Boolean).map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm">
+                        <span className="text-primary mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {court.bookingUrl ? (
+                    <Button className="w-full" asChild>
+                      <a href={court.bookingUrl} target="_blank" rel="noopener noreferrer">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        Book Now
+                      </a>
+                    </Button>
+                  ) : court.phone ? (
+                    <Button className="w-full" asChild>
+                      <a href={`tel:${court.phone}`}>
+                        <Phone className="w-4 h-4 mr-2" />
+                        Call to Book
+                      </a>
+                    </Button>
+                  ) : null}
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Book button when no pricing but has contact */}
+            {!court.pricingText && (court.bookingUrl || court.phone) && (
+              <Card>
+                <CardContent className="pt-6">
+                  {court.bookingUrl ? (
+                    <Button className="w-full" asChild>
+                      <a href={court.bookingUrl} target="_blank" rel="noopener noreferrer">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        Book Now
+                      </a>
+                    </Button>
+                  ) : court.phone ? (
+                    <Button className="w-full" asChild>
+                      <a href={`tel:${court.phone}`}>
+                        <Phone className="w-4 h-4 mr-2" />
+                        Call to Book
+                      </a>
+                    </Button>
+                  ) : null}
+                </CardContent>
+              </Card>
+            )}
 
             {/* Hours Card */}
             <Card>
@@ -453,12 +555,13 @@ export default async function CourtPage({ params }: CourtPageProps) {
                         </div>
                       </CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <div className="text-2xl font-bold text-primary">
-                        ${relatedCourt.pricing.offPeakHourlyRate}
-                      </div>
-                      <div className="text-xs text-muted-foreground">per hour</div>
-                    </CardContent>
+                    {relatedCourt.facility.totalCourts > 0 && (
+                      <CardContent>
+                        <div className="text-sm font-medium text-primary">
+                          {relatedCourt.facility.totalCourts} courts
+                        </div>
+                      </CardContent>
+                    )}
                   </Card>
                 </Link>
               ))}

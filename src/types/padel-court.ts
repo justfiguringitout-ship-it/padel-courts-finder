@@ -28,6 +28,18 @@ export interface PadelCourt {
   locationName?: string;                        // Specific location name for chains (e.g., "Nashville")
   verified?: boolean;                           // Cross-referenced and verified
   verificationDate?: string;                    // Date of last verification
+  // New fields from master data research
+  instagram?: string;                            // Instagram URL
+  facebook?: string;                             // Facebook URL
+  membersOnly?: boolean;                         // Members-only / private club
+  lessonsAvailable?: boolean;                    // Offers padel lessons
+  rentalAvailable?: boolean;                     // Equipment rental available
+  socialArea?: boolean;                          // Has social/lounge area
+  foodAndDrink?: boolean;                        // Has food & drink on-site
+  positiveReviewThemes?: string[];               // Common positive review themes
+  negativeReviewThemes?: string[];               // Common negative review themes
+  pricingText?: string;                          // Pricing info as free text
+  status?: "open" | "coming_soon" | "temporarily_closed"; // Facility status
 }
 
 export interface OpeningHours {
