@@ -544,24 +544,21 @@ export default async function CourtPage({ params }: CourtPageProps) {
                           {relatedCourt.address.city}, {relatedCourt.address.stateCode}
                         </div>
                         <div className="flex items-center gap-4 text-sm">
-                          <div className="flex items-center gap-1">
-                            <Star className="w-4 h-4 fill-primary text-primary" />
-                            <span className="font-medium">{relatedCourt.rating.ratingValue}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            {relatedCourt.facility.totalCourts} courts
-                          </div>
+                          {relatedCourt.rating.ratingValue > 0 && (
+                            <div className="flex items-center gap-1">
+                              <Star className="w-4 h-4 fill-primary text-primary" />
+                              <span className="font-medium">{relatedCourt.rating.ratingValue}</span>
+                            </div>
+                          )}
+                          {relatedCourt.facility.totalCourts > 0 && (
+                            <div className="flex items-center gap-1">
+                              <Clock className="w-4 h-4" />
+                              {relatedCourt.facility.totalCourts} {relatedCourt.facility.totalCourts === 1 ? 'court' : 'courts'}
+                            </div>
+                          )}
                         </div>
                       </CardDescription>
                     </CardHeader>
-                    {relatedCourt.facility.totalCourts > 0 && (
-                      <CardContent>
-                        <div className="text-sm font-medium text-primary">
-                          {relatedCourt.facility.totalCourts} courts
-                        </div>
-                      </CardContent>
-                    )}
                   </Card>
                 </Link>
               ))}

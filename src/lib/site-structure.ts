@@ -59,6 +59,16 @@ export function getStates(): StateInfo[] {
       CT: "Connecticut",
       NV: "Nevada",
       KS: "Kansas",
+      OH: "Ohio",
+      DC: "District of Columbia",
+      IN: "Indiana",
+      KY: "Kentucky",
+      ME: "Maine",
+      MN: "Minnesota",
+      OK: "Oklahoma",
+      OR: "Oregon",
+      SC: "South Carolina",
+      VT: "Vermont",
     };
 
     const stateName = stateNames[stateCode] || stateCode;
@@ -186,6 +196,16 @@ function getStateCodeFromSlug(slug: string): string | undefined {
     connecticut: "CT",
     nevada: "NV",
     kansas: "KS",
+    ohio: "OH",
+    "district-of-columbia": "DC",
+    indiana: "IN",
+    kentucky: "KY",
+    maine: "ME",
+    minnesota: "MN",
+    oklahoma: "OK",
+    oregon: "OR",
+    "south-carolina": "SC",
+    vermont: "VT",
   };
 
   return slugToCode[slug];

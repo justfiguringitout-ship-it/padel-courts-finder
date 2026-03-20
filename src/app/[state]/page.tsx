@@ -247,28 +247,38 @@ export default async function StatePage({ params }: StatePageProps) {
                       {court.address.city}, {court.address.stateCode}
                     </div>
                     <div className="flex items-center gap-4 text-sm">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-primary text-primary" />
-                        <span className="font-medium">{court.rating.ratingValue}</span>
-                        <span className="text-muted-foreground">
-                          ({court.rating.reviewCount})
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {court.facility.totalCourts} courts
-                      </div>
+                      {(court.rating.ratingValue > 0 || court.rating.reviewCount > 0) && (
+                        <div className="flex items-center gap-1">
+                          <Star className="w-4 h-4 fill-primary text-primary" />
+                          <span className="font-medium">{court.rating.ratingValue}</span>
+                          {court.rating.reviewCount > 0 && (
+                            <span className="text-muted-foreground">
+                              ({court.rating.reviewCount})
+                            </span>
+                          )}
+                        </div>
+                      )}
+                      {court.facility.totalCourts > 0 && (
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {court.facility.totalCourts} {court.facility.totalCourts === 1 ? 'court' : 'courts'}
+                        </div>
+                      )}
                     </div>
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-2xl font-bold text-primary">
-                        ${court.pricing.offPeakHourlyRate}
+                    {court.pricing.offPeakHourlyRate > 0 ? (
+                      <div>
+                        <div className="text-2xl font-bold text-primary">
+                          ${court.pricing.offPeakHourlyRate}
+                        </div>
+                        <div className="text-xs text-muted-foreground">per hour</div>
                       </div>
-                      <div className="text-xs text-muted-foreground">per hour</div>
-                    </div>
+                    ) : (
+                      <div />
+                    )}
                     <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
                       View Details
                     </Button>
