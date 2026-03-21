@@ -1,23 +1,33 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { MapPin, Star, Users, Globe, Clock } from 'lucide-react';
+import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Best Padel Clubs in Chicago (2025) | Complete Windy City Guide',
-  description: 'Chicago padel scene emerging strong. Cube Padel leads the charge with indoor facilities. Complete guide to Chicago padel with rankings, pricing & programs.',
+  title: 'Best Padel Clubs in Chicago (2026) | Complete Windy City Guide',
+  description: 'Discover Chicago\'s 3 best padel clubs in 2026. Cube Padel, Union Padel Club & Proximo Padel ranked. Pricing, programs & indoor guide.',
   alternates: {
     canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-chicago',
+  },
+  openGraph: {
+    title: 'Best Padel Clubs in Chicago (2026) | Complete Windy City Guide',
+    description: 'Discover Chicago\'s 3 best padel clubs in 2026. Cube Padel, Union Padel Club & Proximo Padel ranked. Pricing, programs & indoor guide.',
+    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-chicago',
+    type: 'article',
   },
 };
 
 interface Club {
   rank: number;
   name: string;
+  slug: string;
   score: number;
   location: string;
   courts: string;
   price: string;
+  phone?: string;
+  email?: string;
   website?: string;
+  hours?: string;
   description: string;
   highlights: string[];
   programs: string[];
@@ -28,33 +38,98 @@ const clubs: Club[] = [
   {
     rank: 1,
     name: 'Cube Padel Chicago',
-    score: 92,
-    location: '3900 S Ashland Ave, Chicago, IL 60609',
-    courts: '4 indoor courts',
+    slug: 'cube-padel-chicago',
+    score: 95,
+    location: 'South Chicago, IL',
+    courts: '6 indoor courts',
     price: '$$-$$$',
     website: 'cubepadel.com',
-    description: 'Chicago&apos;s premier padel destination. Cube Padel brings world-class indoor facilities to the Windy City. Climate-controlled courts perfect for Chicago winters, strong coaching, and vibrant community of players.',
+    description: 'Chicago\'s flagship padel destination. Cube Padel brings European-style indoor padel to the Windy City with 6 climate-controlled courts, a vibrant bar and lounge scene, and premium amenities. Part of a national chain, Cube Padel combines professional-grade facilities with strong community and coaching programs.',
     highlights: [
-      '4 climate-controlled indoor courts',
-      'Play year-round (Chicago winters!)',
-      'Professional coaching staff',
-      'Modern amenities',
-      'League play & tournaments',
-      'Pro shop with equipment'
+      '6 climate-controlled indoor courts',
+      'Bar & lounge on-site',
+      'National chain quality standards',
+      'Pro shop & equipment store',
+      'Free parking',
+      'Google rating: 5.0 stars'
     ],
     programs: [
-      'Beginner workshops',
-      'Private lessons',
-      'Youth development',
-      'Adult leagues',
-      'Open play sessions',
-      'Corporate events'
+      'Peak: $180/1.5hr (non-member)',
+      'Premium member: $99/1.5hr',
+      'Membership: $140/mo',
+      'Racket rental: $5',
+      'Professional coaching',
+      'League play & tournaments'
     ],
     bestFor: [
+      'Serious competitive players',
       'South Side residents',
-      'All skill levels',
-      'Winter play',
-      'Serious players'
+      'Year-round indoor play',
+      'Social players (bar & lounge)'
+    ]
+  },
+  {
+    rank: 2,
+    name: 'Union Padel Club',
+    slug: 'union-padel-club',
+    score: 93,
+    location: 'West Loop / Near West Side, Chicago, IL',
+    courts: '5 indoor courts',
+    price: '$$$',
+    description: 'Chicago\'s first dedicated indoor padel club in the trendy West Loop. Union Padel Club features 5 world-class courts alongside upscale lifestyle amenities including sauna, cold plunge, VIP lounge, coworking space, and a bar. The early-bird Core membership at $110/month makes it an attractive option for regular players.',
+    highlights: [
+      '5 world-class indoor courts',
+      'Sauna & cold plunge',
+      'VIP lounge & bar',
+      'Coworking space on-site',
+      'Pro shop with gear',
+      'Google rating: 5.0 stars'
+    ],
+    programs: [
+      'Core membership $110/mo (early bird)',
+      'Elite membership $250/mo',
+      '10-pack 90min sessions $470',
+      'Professional coaching',
+      'League play',
+      'Social events'
+    ],
+    bestFor: [
+      'West Loop residents',
+      'Wellness & lifestyle focused',
+      'Remote workers (coworking)',
+      'Premium experience seekers'
+    ]
+  },
+  {
+    rank: 3,
+    name: 'Proximo Padel',
+    slug: 'proximo-padel',
+    score: 90,
+    location: 'Logan Square, Chicago, IL',
+    courts: '4 indoor courts',
+    price: '$$-$$$',
+    description: 'A premium indoor padel facility in Chicago\'s Logan Square neighborhood featuring 4 panoramic courts with impressive 40-foot ceilings and competition-grade lighting. Proximo Padel offers a modern, accessible experience with wheelchair access, warmup areas, and pickleball courts coming soon.',
+    highlights: [
+      '4 panoramic indoor courts',
+      '40-foot ceilings',
+      'Competition-grade lighting',
+      'Warmup area',
+      'Wheelchair accessible',
+      'Pickleball courts coming soon'
+    ],
+    programs: [
+      'Court bookings',
+      'Professional coaching',
+      'Events & tournaments',
+      'Equipment at pro shop',
+      'Open play sessions',
+      'Beginner programs'
+    ],
+    bestFor: [
+      'Logan Square & North Side residents',
+      'Players wanting tall ceilings',
+      'Accessible facility seekers',
+      'All skill levels'
     ]
   }
 ];
@@ -63,11 +138,11 @@ export default function ChicagoBestClubsPage() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Best Padel Clubs in chicago (2025) | Complete Guide & Rankings",
-    "description": "Discover the best padel clubs in chicago. Complete guide with rankings, pricing, programs, and insider tips.",
+    "headline": "Best Padel Clubs in Chicago (2026) | Complete Windy City Guide",
+    "description": "Discover Chicago's 3 best padel clubs in 2026. Cube Padel, Union Padel Club & Proximo Padel ranked. Pricing, programs & indoor guide.",
     "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
-    "datePublished": "2025-10-13T00:00:00Z",
-    "dateModified": "2025-10-13T00:00:00Z",
+    "datePublished": "2026-03-21T00:00:00Z",
+    "dateModified": "2026-03-21T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -89,35 +164,33 @@ export default function ChicagoBestClubsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Article Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
+      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-blue-200 hover:text-white">
+            <Link href="/blog" className="text-green-200 hover:text-white">
               ← Back to Blog
             </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Best Padel Clubs in Chicago (2025)
+            Best Padel Clubs in Chicago (2026)
           </h1>
-          <div className="flex flex-wrap gap-4 text-blue-100 text-lg">
+          <div className="flex flex-wrap gap-4 text-green-100 text-lg">
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>Chicago, IL</span>
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5" />
-              <span>Emerging Scene</span>
+              <span>3 Clubs Ranked</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
-              <span>Year-Round Indoor</span>
+              <span>Updated March 2026</span>
             </div>
           </div>
         </div>
@@ -125,18 +198,22 @@ export default function ChicagoBestClubsPage() {
 
       <section className="bg-white border-b">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-blue-800">1+</div>
-              <div className="text-sm text-gray-600">Active Clubs</div>
+              <div className="text-3xl font-bold text-blue-600">3</div>
+              <div className="text-sm text-gray-600">Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-800">4+</div>
+              <div className="text-3xl font-bold text-blue-600">15</div>
               <div className="text-sm text-gray-600">Indoor Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-800">$30-45</div>
-              <div className="text-sm text-gray-600">Per Person</div>
+              <div className="text-3xl font-bold text-blue-600">$47-120</div>
+              <div className="text-sm text-gray-600">Per Hour Range</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">100%</div>
+              <div className="text-sm text-gray-600">Indoor Facilities</div>
             </div>
           </div>
         </div>
@@ -145,41 +222,41 @@ export default function ChicagoBestClubsPage() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            The Windy City Discovers Padel
+            Chicago&apos;s Padel Boom: From 1 Club to 3 in 2026
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
-            Chicago&apos;s padel scene is in its early stages but growing fast. With brutal winters and a massive sports-loving population, the city is perfect for indoor padel. Cube Padel Chicago leads the way with professional facilities.
+            Chicago&apos;s padel scene has tripled in size. What started with <Link href="/courts/cube-padel-chicago" className="text-blue-600 hover:underline">Cube Padel</Link> as the city&apos;s sole option has expanded to 3 dedicated indoor clubs with 15 courts, all designed to keep Chicagoans playing year-round regardless of the brutal Midwest winters. Every facility is fully indoor and climate-controlled.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            The newest additions are impressive. <Link href="/courts/union-padel-club" className="text-blue-600 hover:underline">Union Padel Club</Link> in the West Loop pairs 5 world-class courts with lifestyle amenities like sauna, cold plunge, and coworking space. <Link href="/courts/proximo-padel" className="text-blue-600 hover:underline">Proximo Padel</Link> in Logan Square features 4 panoramic courts under 40-foot ceilings with competition lighting.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">
-            Expect significant expansion over 2025-2026 as Chicago&apos;s entrepreneurial spirit and dense population create demand for more facilities across the metro area.
+            With all three clubs earning 5.0 Google ratings and offering distinct neighborhoods, Chicago players now have real choice. Browse all courts on our <Link href="/illinois/chicago" className="text-blue-600 hover:underline">Chicago courts page</Link> or explore the full <Link href="/illinois" className="text-blue-600 hover:underline">Illinois state directory</Link>.
           </p>
         </div>
 
         <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Guide</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>🏆 Best Overall:</strong> Cube Padel Chicago (Only major facility)</p>
-            <p><strong>❄️ Best Winter Play:</strong> Cube Padel (Climate-controlled)</p>
-            <p><strong>🎯 Best for Beginners:</strong> Cube Padel workshops</p>
-            <p><strong>💼 Best for Corporate:</strong> Cube Padel events</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/cube-padel-chicago" className="text-blue-600 hover:underline">Cube Padel Chicago</Link> (6 courts, bar & lounge)</p>
+            <p><strong>Best Lifestyle:</strong> <Link href="/courts/union-padel-club" className="text-blue-600 hover:underline">Union Padel Club</Link> (sauna, cold plunge, coworking)</p>
+            <p><strong>Best Ceilings:</strong> <Link href="/courts/proximo-padel" className="text-blue-600 hover:underline">Proximo Padel</Link> (40-ft ceilings, panoramic courts)</p>
+            <p><strong>Best Value:</strong> <Link href="/courts/union-padel-club" className="text-blue-600 hover:underline">Union Padel Club</Link> ($110/mo early-bird membership)</p>
           </div>
-        </div>
-
-        <div className="bg-blue-50 border-l-4 border-blue-800 p-6 mb-12">
-          <h3 className="text-xl font-bold mb-3">❄️ Chicago Padel = Indoor Padel</h3>
-          <p className="text-gray-700">
-            <strong>Winter necessitates indoor facilities.</strong> With Chicago temps regularly below freezing November-March, indoor climate-controlled courts are essential. Cube Padel offers comfortable year-round play regardless of weather.
-          </p>
         </div>
 
         <div className="space-y-12">
           {clubs.map(club => (
-            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-blue-800 bg-white shadow-lg rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-800 to-blue-900 text-white p-6">
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-blue-600 bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
-                    <h3 className="text-3xl font-bold mb-2">{club.name}</h3>
+                    <h3 className="text-3xl font-bold mb-2">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-green-200 transition-colors">
+                        {club.name}
+                      </Link>
+                    </h3>
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
@@ -191,7 +268,7 @@ export default function ChicagoBestClubsPage() {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">{club.price}</div>
-                    <div className="text-sm text-blue-100">Price Range</div>
+                    <div className="text-sm text-green-100">Price Range</div>
                   </div>
                 </div>
               </div>
@@ -199,19 +276,37 @@ export default function ChicagoBestClubsPage() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2 text-gray-700">
-                    <MapPin className="w-5 h-5 text-blue-800 flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-700">
-                    <Users className="w-5 h-5 text-blue-800 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
+                  {club.phone && (
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <a href={`tel:${club.phone}`} className="hover:text-blue-600">{club.phone}</a>
+                    </div>
+                  )}
                   {club.website && (
                     <div className="flex items-center gap-2 text-gray-700">
-                      <Globe className="w-5 h-5 text-blue-800 flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-800">
+                      <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
                         {club.website}
                       </a>
+                    </div>
+                  )}
+                  {club.email && (
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <a href={`mailto:${club.email}`} className="hover:text-blue-600">{club.email}</a>
+                    </div>
+                  )}
+                  {club.hours && (
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <Clock className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <span>{club.hours}</span>
                     </div>
                   )}
                 </div>
@@ -225,7 +320,7 @@ export default function ChicagoBestClubsPage() {
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-2 text-gray-700">
-                        <span className="text-blue-800 font-bold">✓</span>
+                        <span className="text-blue-600 font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -236,7 +331,7 @@ export default function ChicagoBestClubsPage() {
                   <h4 className="font-bold text-gray-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
-                      <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                      <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
                         {program}
                       </span>
                     ))}
@@ -258,17 +353,17 @@ export default function ChicagoBestClubsPage() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 text-center mt-12">
+        <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in Chicago?</h2>
           <p className="text-xl text-green-100 mb-6">
-            Find all Chicago padel courts on our interactive map
+            Find all Chicago padel courts in one place
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/search?city=Chicago"
+              href="/illinois/chicago"
               className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
             >
-              View Chicago Courts Map
+              View Chicago Courts
             </Link>
             <Link
               href="/illinois"
@@ -280,19 +375,19 @@ export default function ChicagoBestClubsPage() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">More Best Club Guides</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">More Padel Guides</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/best-padel-clubs-miami" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Miami</h4>
-              <p className="text-sm text-gray-600">10+ clubs, America&apos;s padel capital</p>
-            </Link>
-            <Link href="/blog/best-padel-clubs-houston" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Houston</h4>
-              <p className="text-sm text-gray-600">Texas padel stronghold</p>
-            </Link>
             <Link href="/blog/best-padel-clubs-denver" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Denver</h4>
-              <p className="text-sm text-gray-600">Rocky Mountain padel</p>
+              <p className="text-sm text-gray-600">Rocky Mountain padel scene</p>
+            </Link>
+            <Link href="/blog/best-padel-clubs-nyc" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in NYC</h4>
+              <p className="text-sm text-gray-600">7 clubs across Brooklyn & Manhattan</p>
+            </Link>
+            <Link href="/blog/best-padel-clubs-dallas" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Dallas</h4>
+              <p className="text-sm text-gray-600">Texas padel with premium facilities</p>
             </Link>
           </div>
         </div>

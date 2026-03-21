@@ -25,141 +25,177 @@ const blogPosts: BlogPost[] = [
   // Best Clubs Listicles
   {
     slug: 'best-padel-clubs-miami',
-    title: 'Best Padel Clubs in Miami (2025)',
+    title: 'Best Padel Clubs in Miami (2026)',
     category: 'best-clubs',
-    excerpt: 'Miami leads America\'s padel revolution with 10+ world-class clubs. From Reserve Padel\'s elite luxury to Urban Padel\'s community vibe, discover the Magic City\'s finest courts.',
-    date: '2025-10-13',
-    readTime: '8 min read',
+    excerpt: 'Miami leads America\'s padel revolution with 29+ clubs and 170+ courts. Ultra Padel Club\'s 29-court flagship, Urban Padel\'s indoor paradise, and the full South Florida scene.',
+    date: '2026-03-21',
+    readTime: '10 min read',
     imageAlt: 'Miami padel courts with ocean views',
     featured: true
   },
   {
-    slug: 'best-padel-clubs-austin',
-    title: 'Best Padel Clubs in Austin (2025)',
+    slug: 'best-padel-clubs-nyc',
+    title: 'Best Padel Clubs in New York City (2026)',
     category: 'best-clubs',
-    excerpt: 'Austin\'s padel scene is booming with 6+ clubs spanning from downtown to Hill Country. Dripping Springs\' aluminum courts, Padel39\'s outdoor paradise, and more.',
-    date: '2025-10-13',
-    readTime: '7 min read',
-    imageAlt: 'Austin padel facilities',
+    excerpt: 'From Dumbo waterfront to Harlem courtyards, NYC\'s 7 padel clubs offer 25 courts. Padel Haus, Padel& Greenpoint, Reserve Hudson Yards, and more.',
+    date: '2026-03-21',
+    readTime: '8 min read',
+    imageAlt: 'NYC padel facilities',
     featured: true
+  },
+  {
+    slug: 'best-padel-clubs-houston',
+    title: 'Best Padel Clubs in Houston (2026)',
+    category: 'best-clubs',
+    excerpt: 'Houston\'s padel scene explodes with 9 clubs and 30+ courts. TEMPO\'s indoor luxury, Punto Azul\'s 8-court academy, and Texas\'s largest padel city.',
+    date: '2026-03-21',
+    readTime: '9 min read',
+    imageAlt: 'Houston padel courts',
+    featured: true
+  },
+  {
+    slug: 'best-padel-clubs-austin',
+    title: 'Best Padel Clubs in Austin (2026)',
+    category: 'best-clubs',
+    excerpt: 'Austin\'s padel scene features 4 open clubs plus 3 coming soon. Padel 39\'s outdoor paradise, Padel Club Austin\'s 9 courts, and Hill Country vibes.',
+    date: '2026-03-21',
+    readTime: '8 min read',
+    imageAlt: 'Austin padel facilities'
   },
   {
     slug: 'best-padel-clubs-los-angeles',
-    title: 'Best Padel Clubs in Los Angeles (2025)',
+    title: 'Best Padel Clubs in Los Angeles (2026)',
     category: 'best-clubs',
-    excerpt: 'LA\'s padel landscape spans from Santa Monica beaches to Pasadena hills. 8+ clubs including rooftop courts at Heimat LA and Mediterranean vibes at Padel Los Feliz.',
-    date: '2025-10-13',
+    excerpt: 'LA\'s 5 padel clubs span from Sunset Blvd to Century City rooftops. Los Angeles Padel Club\'s 7 courts, Padel Up\'s indoor gems, and year-round outdoor play.',
+    date: '2026-03-21',
     readTime: '8 min read',
-    imageAlt: 'LA padel club with city views',
-    featured: true
+    imageAlt: 'LA padel club with city views'
   },
   {
     slug: 'best-padel-clubs-san-francisco',
-    title: 'Best Padel Clubs in San Francisco (2025)',
+    title: 'Best Padel Clubs in San Francisco (2026)',
     category: 'best-clubs',
-    excerpt: 'Bay Area\'s padel revolution led by Bay Padel and Park Padel chains. Treasure Island courts with bridge views, Embarcadero waterfront play, and 6+ locations.',
-    date: '2025-10-13',
+    excerpt: 'Bay Area padel led by Bay Padel and Park Padel. Treasure Island\'s historic hangar courts, Embarcadero waterfront play, and 11 courts across 3 locations.',
+    date: '2026-03-21',
     readTime: '7 min read',
     imageAlt: 'San Francisco Bay Padel courts'
   },
   {
     slug: 'best-padel-clubs-san-diego',
-    title: 'Best Padel Clubs in San Diego (2025)',
+    title: 'Best Padel Clubs in San Diego (2026)',
     category: 'best-clubs',
-    excerpt: 'Perfect weather meets perfect padel in San Diego. Padel N9NE\'s 100K sq ft mega-facility, Kingdom\'s social scene, Taktika\'s elite coaching, and year-round outdoor play.',
-    date: '2025-10-13',
+    excerpt: 'San Diego\'s 4 padel clubs offer 22 courts with year-round sunshine. Padel N9NE\'s 8-court campus, Kingdom\'s crystal courts, and Taktika\'s coaching programs.',
+    date: '2026-03-21',
     readTime: '8 min read',
     imageAlt: 'San Diego padel courts'
   },
   {
-    slug: 'best-padel-clubs-nyc',
-    title: 'Best Padel Clubs in New York City (2025)',
-    category: 'best-clubs',
-    excerpt: 'From Brooklyn waterfront to Harlem rooftops, NYC\'s padel scene is as diverse as the city itself. Padel Haus Dumbo, Reserve NYC elite training, Padel& Greenpoint, and more.',
-    date: '2025-10-13',
-    readTime: '7 min read',
-    imageAlt: 'NYC padel facilities'
-  },
-  {
     slug: 'best-padel-clubs-phoenix',
-    title: 'Best Padel Clubs in Phoenix (2025)',
+    title: 'Best Padel Clubs in Phoenix (2026)',
     category: 'best-clubs',
-    excerpt: 'Desert padel paradise with 7+ clubs across Phoenix and Scottsdale. Mesa Padel Club\'s 5 Padel Galis courts, PadelTime Scottsdale luxury, and year-round sunshine.',
-    date: '2025-10-13',
+    excerpt: 'Desert padel with 3 open clubs and 2 coming soon. Conquer Padel\'s indoor oasis, Padel Pals\' 7-court mega facility, and PURE\'s 1,200-seat arena on the way.',
+    date: '2026-03-21',
     readTime: '7 min read',
     imageAlt: 'Phoenix padel in the desert'
   },
   {
     slug: 'best-padel-clubs-chicago',
-    title: 'Best Padel Clubs in Chicago (2025)',
+    title: 'Best Padel Clubs in Chicago (2026)',
     category: 'best-clubs',
-    excerpt: 'Windy City embraces padel with 4+ indoor clubs. Padel Chicago (Lincoln Park), The Padel Club (suburbs), and growing metropolitan presence.',
-    date: '2025-10-13',
-    readTime: '6 min read',
+    excerpt: 'Windy City padel goes 100% indoor with 3 clubs and 15 courts. Cube Padel\'s bar & lounge, Union Padel\'s West Loop wellness, and Proximo\'s 40-ft ceilings.',
+    date: '2026-03-21',
+    readTime: '7 min read',
     imageAlt: 'Chicago indoor padel courts'
   },
   {
-    slug: 'best-padel-clubs-denver',
-    title: 'Best Padel Clubs in Denver (2025)',
+    slug: 'best-padel-clubs-fort-lauderdale',
+    title: 'Best Padel Clubs in Fort Lauderdale (2026)',
     category: 'best-clubs',
-    excerpt: 'Mile High padel with 3+ clubs including Denver Padel Club and Padel Haus coming soon. Indoor facilities combat Colorado weather while maintaining mountain views.',
-    date: '2025-10-13',
-    readTime: '6 min read',
-    imageAlt: 'Denver padel facilities'
+    excerpt: 'Broward County\'s padel scene features 6 clubs with 27+ courts. 10by20\'s dual locations, Replay Club\'s luxury wellness experience, and Society Las Olas downtown.',
+    date: '2026-03-21',
+    readTime: '8 min read',
+    imageAlt: 'Fort Lauderdale padel courts'
+  },
+  {
+    slug: 'best-padel-clubs-new-jersey',
+    title: 'Best Padel Clubs in New Jersey (2026)',
+    category: 'best-clubs',
+    excerpt: 'New Jersey\'s 8 padel clubs pack 32 courts across 9 cities. Centercourt Morristown, Padel United, Rax NJ, and the Garden State\'s booming scene.',
+    date: '2026-03-21',
+    readTime: '8 min read',
+    imageAlt: 'New Jersey padel facilities'
+  },
+  {
+    slug: 'best-padel-clubs-philadelphia',
+    title: 'Best Padel Clubs in Philadelphia & Pennsylvania (2026)',
+    category: 'best-clubs',
+    excerpt: 'Pennsylvania\'s 5 open padel clubs span from Philly to Pittsburgh. Ballers, PADELphia, VIVA Padel, plus OH! Padel opening soon in Malvern.',
+    date: '2026-03-21',
+    readTime: '7 min read',
+    imageAlt: 'Philadelphia padel facilities'
+  },
+  {
+    slug: 'best-padel-clubs-ohio',
+    title: 'Best Padel Clubs in Ohio (2026)',
+    category: 'best-clubs',
+    excerpt: 'Ohio\'s 5 padel clubs span Cleveland, Cincinnati, and Columbus. Padel Square\'s 6 courts lead the Buckeye State, plus Club Padel opening in Newtown.',
+    date: '2026-03-21',
+    readTime: '7 min read',
+    imageAlt: 'Ohio padel facilities'
+  },
+  {
+    slug: 'best-padel-clubs-orlando',
+    title: 'Best Padel Clubs in Orlando (2026)',
+    category: 'best-clubs',
+    excerpt: 'Orlando\'s 5 padel clubs offer 15 courts from USTA National Campus to resort-based play. Plus BullDog Padel Club coming to Lake Nona.',
+    date: '2026-03-21',
+    readTime: '7 min read',
+    imageAlt: 'Orlando padel facilities'
+  },
+  {
+    slug: 'best-padel-clubs-san-antonio',
+    title: 'Best Padel Clubs in San Antonio (2026)',
+    category: 'best-clubs',
+    excerpt: 'San Antonio\'s 4 padel clubs feature 16 courts. The King of Padel\'s entertainment complex, Slice Padel Co\'s rooftop bar, and year-round Texas play.',
+    date: '2026-03-21',
+    readTime: '7 min read',
+    imageAlt: 'San Antonio padel courts'
+  },
+  {
+    slug: 'best-padel-clubs-atlanta',
+    title: 'Best Padel Clubs in Atlanta (2026)',
+    category: 'best-clubs',
+    excerpt: 'Atlanta\'s 3 padel clubs bring 11 courts to Georgia. Padel Haus Atlanta\'s stunning Westside Paper venue, ITP Training Academy, and year-round play.',
+    date: '2026-03-21',
+    readTime: '7 min read',
+    imageAlt: 'Atlanta padel facilities'
   },
   {
     slug: 'best-padel-clubs-dallas',
-    title: 'Best Padel Clubs in Dallas (2025)',
+    title: 'Best Padel Clubs in Dallas (2026)',
     category: 'best-clubs',
-    excerpt: 'Dallas-Fort Worth padel boom with 3+ clubs and Padel Haus expansion coming. Rally Padel leads the charge with multiple courts and comprehensive programming.',
-    date: '2025-10-13',
+    excerpt: 'Dallas-Fort Worth padel with 2 facilities. Banner House at T Bar M\'s private club courts and SMU\'s Styslinger complex. DFW\'s scene is early but growing.',
+    date: '2026-03-21',
     readTime: '6 min read',
     imageAlt: 'Dallas padel courts'
   },
   {
-    slug: 'best-padel-clubs-atlanta',
-    title: 'Best Padel Clubs in Atlanta (2025)',
+    slug: 'best-padel-clubs-denver',
+    title: 'Best Padel Clubs in Denver (2026)',
     category: 'best-clubs',
-    excerpt: 'Hotlanta\'s padel scene with 3+ clubs including PATL\'s WPT courts. Georgia embraces the fastest-growing sport with year-round play.',
-    date: '2025-10-13',
+    excerpt: 'Mile High padel arrives with Cloud 9 Park Padel offering free daytime play. Denver\'s outdoor scene at 5,280 ft elevation is just getting started.',
+    date: '2026-03-21',
     readTime: '6 min read',
-    imageAlt: 'Atlanta padel facilities'
-  },
-  {
-    slug: 'best-padel-clubs-houston',
-    title: 'Best Padel Clubs in Houston (2025)',
-    category: 'best-clubs',
-    excerpt: 'Space City launches padel with 3+ clubs. Padel Social Houston and Padel 10 bring the sport to Texas\'s largest city.',
-    date: '2025-10-13',
-    readTime: '6 min read',
-    imageAlt: 'Houston padel courts'
+    imageAlt: 'Denver padel facilities'
   },
   {
     slug: 'best-padel-clubs-charlotte',
-    title: 'Best Padel Clubs in Charlotte (2025)',
+    title: 'Best Padel Clubs in Charlotte (2026)',
     category: 'best-clubs',
-    excerpt: 'Queen City\'s padel presence with 2+ clubs. The Padel Club Charlotte and growing Carolina interest in the sport.',
-    date: '2025-10-13',
-    readTime: '5 min read',
+    excerpt: 'Queen City padel with 2 clubs and 7 courts. Charlotte Padel Club\'s indoor facility and Epic Padel\'s 5 outdoor courts at Prosperity Athletic Club.',
+    date: '2026-03-21',
+    readTime: '6 min read',
     imageAlt: 'Charlotte padel facilities'
-  },
-  {
-    slug: 'best-padel-clubs-san-antonio',
-    title: 'Best Padel Clubs in San Antonio (2025)',
-    category: 'best-clubs',
-    excerpt: 'San Antonio padel with The King of Padel and 2+ locations. Texas tradition meets modern racket sport.',
-    date: '2025-10-13',
-    readTime: '5 min read',
-    imageAlt: 'San Antonio padel courts'
-  },
-  {
-    slug: 'best-padel-clubs-orlando',
-    title: 'Best Padel Clubs in Orlando (2025)',
-    category: 'best-clubs',
-    excerpt: 'Orlando\'s padel scene growing with 2+ clubs. Florida\'s theme park capital adds padel to its entertainment options.',
-    date: '2025-10-13',
-    readTime: '5 min read',
-    imageAlt: 'Orlando padel facilities'
   }
 ];
 
@@ -320,7 +356,7 @@ export default function BlogPage() {
               Find Courts
             </h3>
             <p className="text-gray-600 text-sm">
-              Search 525+ padel courts across America
+              Search 348+ padel courts across America
             </p>
           </Link>
           <Link

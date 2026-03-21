@@ -1,20 +1,33 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { MapPin, Star, Users, Globe, Clock } from 'lucide-react';
+import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Best Padel Clubs in Los Angeles (2025) | 8+ Clubs Ranked',
-  description: 'LA&apos;s padel scene spans from Santa Monica beaches to Pasadena hills. 8+ clubs including rooftop courts and Mediterranean vibes. Complete guide.',
+  title: 'Best Padel Clubs in Los Angeles (2026) | 5 Clubs Ranked',
+  description: 'Discover LA\'s 5 best padel clubs in 2026. Rooftop courts, Sunset Blvd originals & indoor gems. Rankings, pricing & Los Angeles guide.',
+  alternates: {
+    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-los-angeles',
+  },
+  openGraph: {
+    title: 'Best Padel Clubs in Los Angeles (2026) | 5 Clubs Ranked',
+    description: 'Discover LA\'s 5 best padel clubs in 2026. Rooftop courts, Sunset Blvd originals & indoor gems. Rankings, pricing & Los Angeles guide.',
+    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-los-angeles',
+    type: 'article',
+  },
 };
 
 interface Club {
   rank: number;
   name: string;
+  slug: string;
   score: number;
   location: string;
   courts: string;
   price: string;
+  phone?: string;
+  email?: string;
   website?: string;
+  hours?: string;
   description: string;
   highlights: string[];
   programs: string[];
@@ -24,157 +37,164 @@ interface Club {
 const clubs: Club[] = [
   {
     rank: 1,
-    name: 'Padel Up - Century City',
+    name: 'Los Angeles Padel Club',
+    slug: 'los-angeles-padel-club',
     score: 95,
-    location: '10250 Santa Monica Blvd, Los Angeles, CA 90067',
-    courts: '4 courts',
-    price: '$$$$',
-    website: 'padelup.com',
-    description: 'LA&apos;s premier padel destination in the heart of Century City. Sleek, modern facility serving West LA&apos;s affluent community. Minutes from Beverly Hills and Santa Monica, Padel Up offers top-tier courts and exclusive atmosphere.',
+    location: 'Los Angeles, CA',
+    courts: '7 outdoor courts',
+    price: '$$$',
+    description: 'LA\'s premier padel destination. Los Angeles Padel Club (LAPC) boasts 7 state-of-the-art outdoor courts in a historic clubhouse setting, making it the largest dedicated padel facility in the city. With locker rooms, co-working space, a pro shop, gym and wellness center, and an outdoor terrace, LAPC is the complete package.',
     highlights: [
-      'Century City premium location',
-      'Modern, upscale facility',
-      'Close to Beverly Hills & Santa Monica',
-      'High-end clientele',
-      'Professional coaching',
-      'Corporate memberships available'
+      '7 state-of-the-art outdoor courts',
+      'Historic clubhouse setting',
+      'Co-working space on-site',
+      'Pro shop with premium gear',
+      'Gym & wellness center',
+      'Outdoor terrace & social areas'
     ],
     programs: [
-      'Private lessons',
-      'Group clinics',
-      'Corporate events',
+      'Court bookings',
+      'Professional coaching',
       'League play',
-      'Open play sessions',
-      'Beginner workshops'
+      'Social events',
+      'Corporate events',
+      'Beginner programs'
     ],
     bestFor: [
-      'West LA professionals',
-      'Luxury seekers',
-      'Century City workers',
-      'Serious players'
+      'Serious competitive players',
+      'Players wanting most courts',
+      'Social padel enthusiasts',
+      'Fitness-focused players'
     ]
   },
   {
     rank: 2,
-    name: 'Pura Padel',
+    name: 'Padel Up - Culver City',
+    slug: 'padel-up-culver-city',
     score: 93,
-    location: '14006 Riverside Dr, Sherman Oaks, CA 91423',
-    courts: '3 rooftop courts',
+    location: 'Culver City, Los Angeles, CA',
+    courts: '3 indoor courts',
     price: '$$$',
-    website: 'purapadel.com',
-    description: 'Valley&apos;s unique rooftop padel experience in Sherman Oaks. Play with stunning views of the San Fernando Valley. Community-focused club with vibrant social atmosphere and excellent coaching.',
+    website: 'padelup.com',
+    description: 'Los Angeles\' first indoor padel club features 3 courts with high ceilings, professional coaching, and premium wellness amenities. Padel Up Culver City combines quality indoor play with sauna, cold plunge, and comfortable locker rooms for a complete experience.',
     highlights: [
-      'Rooftop parking lot courts',
-      'Valley views',
-      'Sherman Oaks location',
-      'Social atmosphere',
-      'Community-focused',
-      'Valley&apos;s padel hub'
+      '3 indoor courts with high ceilings',
+      'Sauna & cold plunge',
+      'Locker rooms with showers',
+      'Pro shop on-site',
+      'Free parking & WiFi',
+      'Google rating: 4.1 stars'
     ],
     programs: [
-      'Beginner-friendly clinics',
-      'Open play',
-      'Social tournaments',
-      'Private coaching',
-      'Youth programs',
-      'League play'
+      'Off-peak $45/hr',
+      'Peak $55/hr',
+      'Memberships from $220/mo',
+      'Professional coaching',
+      'Group clinics',
+      'Beginner workshops'
     ],
     bestFor: [
-      'Valley residents',
-      'Social players',
-      'Rooftop experience lovers',
-      'Community seekers'
+      'Indoor play seekers',
+      'Culver City & Westside residents',
+      'Wellness-focused players',
+      'Year-round consistent play'
     ]
   },
   {
     rank: 3,
-    name: 'Heimat LA',
+    name: 'The Padel Courts',
+    slug: 'the-padel-courts',
     score: 91,
-    location: 'Downtown Los Angeles',
-    courts: '3 rooftop courts',
-    price: '$$$-$$$$',
-    description: 'Downtown LA&apos;s iconic rooftop padel venue. Part of Heimat&apos;s hospitality complex, offering padel with skyline views, restaurant, and bar. Where LA&apos;s creative class comes to play.',
+    location: 'Sunset Blvd, Los Angeles, CA',
+    courts: '3 outdoor courts (2 full, 1 mini)',
+    price: '$$-$$$',
+    description: 'Los Angeles\' original outdoor padel club on iconic Sunset Boulevard. The Padel Courts offers 3 courts including 2 full-size and 1 mini court, professional lessons, clinics, and community events in an inclusive, welcoming atmosphere with military discounts and LGBTQ+ friendly policies.',
     highlights: [
-      'Downtown rooftop location',
-      'LA skyline views',
-      'Restaurant & bar on-site',
-      'Creative community',
-      'Events & nightlife',
-      'Unique LA experience'
+      '3 courts on Sunset Blvd (2 full, 1 mini)',
+      'LA\'s original padel club',
+      'LGBTQ+ friendly & inclusive',
+      'Military discounts available',
+      'Dedicated parking',
+      'Google rating: 5.0 stars'
     ],
     programs: [
-      'Open play',
-      'Social events',
-      'Private lessons',
-      'Corporate events',
-      'League play',
-      'Beginner clinics'
+      'Courts ~$25-60/hr',
+      'Clinics $35-45',
+      'Private lessons $60-120/hr',
+      'Racket stringing service',
+      'Community events',
+      'Beginner programs'
     ],
     bestFor: [
-      'Downtown residents',
-      'Social scene lovers',
-      'Creative professionals',
-      'After-work players'
+      'Community-focused players',
+      'Beginners & newcomers',
+      'Sunset Blvd & Hollywood area',
+      'Inclusive environment seekers'
     ]
   },
   {
     rank: 4,
-    name: 'Padel Los Feliz',
-    score: 89,
-    location: 'Los Feliz',
-    courts: '3 courts',
+    name: 'Padel Up - Century City',
+    slug: 'padel-up-century-city',
+    score: 90,
+    location: 'Westfield Century City, Los Angeles, CA',
+    courts: 'Outdoor courts',
     price: '$$-$$$',
-    description: 'Los Feliz neighborhood gem with Mediterranean design vibes. Intimate facility serving East LA&apos;s artistic community. Beautiful courts with European aesthetic.',
+    website: 'padelup.com',
+    description: 'Premium outdoor padel atop the Westfield Century City mall. Padel Up Century City offers rooftop courts with quality turf, LED lighting for night play, lessons, equipment rentals, and a pro shop. The stunning rooftop views and convenient mall location make it a unique LA padel experience.',
     highlights: [
-      'Mediterranean design',
-      'Los Feliz charm',
-      'Artistic community',
-      'Beautiful aesthetic',
-      'Neighborhood atmosphere',
-      'Close to Griffith Park'
+      'Rooftop courts with views',
+      'LED lighting for night play',
+      'Quality artificial turf surface',
+      'Pro shop on-site',
+      'Wheelchair accessible',
+      'Google rating: 4.6 stars'
     ],
     programs: [
-      'Open play',
-      'Beginner workshops',
-      'Private lessons',
-      'Social mixers',
-      'Community events'
+      'Court rates $30-60/hr',
+      'Equipment rental available',
+      'Professional coaching',
+      'Event hosting',
+      'Social leagues',
+      'Beginner sessions'
     ],
     bestFor: [
-      'Los Feliz residents',
-      'East LA community',
-      'Design lovers',
-      'Casual players'
+      'West LA professionals',
+      'Rooftop experience seekers',
+      'Century City workers',
+      'Evening players (LED courts)'
     ]
   },
   {
     rank: 5,
-    name: 'Santa Monica Padel',
-    score: 87,
-    location: 'Santa Monica',
-    courts: '2 outdoor courts',
-    price: '$$-$$$',
-    description: 'Beach city padel with that quintessential SoCal vibe. Perfect post-beach activity. Welcoming atmosphere for tourists and locals.',
+    name: 'Padel Up Club',
+    slug: 'padel-up-club',
+    score: 88,
+    location: 'Los Angeles, CA',
+    courts: '4 indoor courts',
+    price: '$$$',
+    description: 'Padel Up Club is an indoor padel facility dedicated to growing the padel community in Los Angeles. With 4 courts across locations including a flagship with 3 courts, high ceilings, and a bar and lounge area, it combines quality play with social atmosphere. Members enjoy sauna, cold plunge, and weights.',
     highlights: [
-      'Santa Monica location',
-      'Beach city vibes',
-      'Outdoor courts',
-      'Tourist-friendly',
-      'Ocean breeze',
-      'Westside access'
+      '4 indoor courts across locations',
+      'High ceilings at flagship',
+      'Bar & lounge area',
+      'Sauna & cold plunge (members)',
+      'Weights & fitness area',
+      'Showers & locker rooms'
     ],
     programs: [
-      'Drop-in play',
-      'Beginner sessions',
-      'Private coaching',
-      'Tourist programs',
-      'Weekend clinics'
+      'Court bookings',
+      'Membership packages',
+      'Professional coaching',
+      'League play',
+      'Community events',
+      'Beginner programs'
     ],
     bestFor: [
-      'Beach lovers',
-      'Tourists & visitors',
-      'Santa Monica residents',
-      'Casual players'
+      'Indoor play enthusiasts',
+      'Social players',
+      'Community-focused members',
+      'Players wanting bar & lounge'
     ]
   }
 ];
@@ -183,11 +203,11 @@ export default function LosAngelesBestClubsPage() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Best Padel Clubs in los angeles (2025) | Complete Guide & Rankings",
-    "description": "Discover the best padel clubs in los angeles. Complete guide with rankings, pricing, programs, and insider tips.",
+    "headline": "Best Padel Clubs in Los Angeles (2026) | 5 Clubs Ranked",
+    "description": "Discover LA's 5 best padel clubs in 2026. Rooftop courts, Sunset Blvd originals & indoor gems. Rankings, pricing & Los Angeles guide.",
     "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
-    "datePublished": "2025-10-13T00:00:00Z",
-    "dateModified": "2025-10-13T00:00:00Z",
+    "datePublished": "2026-03-21T00:00:00Z",
+    "dateModified": "2026-03-21T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -209,20 +229,20 @@ export default function LosAngelesBestClubsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Article Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-
       <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-green-200 hover:text-white">← Back to Blog</Link>
+            <Link href="/blog" className="text-green-200 hover:text-white">
+              ← Back to Blog
+            </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Best Padel Clubs in Los Angeles (2025)
+            Best Padel Clubs in Los Angeles (2026)
           </h1>
           <div className="flex flex-wrap gap-4 text-green-100 text-lg">
             <div className="flex items-center gap-2">
@@ -231,11 +251,11 @@ export default function LosAngelesBestClubsPage() {
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5" />
-              <span>8+ Clubs</span>
+              <span>5 Clubs Ranked</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
-              <span>Year-Round Perfect Weather</span>
+              <span>Updated March 2026</span>
             </div>
           </div>
         </div>
@@ -245,16 +265,16 @@ export default function LosAngelesBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-green-600">8+</div>
+              <div className="text-3xl font-bold text-green-600">5</div>
               <div className="text-sm text-gray-600">Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-600">30+</div>
+              <div className="text-3xl font-bold text-green-600">17+</div>
               <div className="text-sm text-gray-600">Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-600">$35-60</div>
-              <div className="text-sm text-gray-600">Per Person</div>
+              <div className="text-3xl font-bold text-green-600">$25-60</div>
+              <div className="text-sm text-gray-600">Per Hour Range</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-green-600">300+</div>
@@ -267,24 +287,27 @@ export default function LosAngelesBestClubsPage() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            LA&apos;s Diverse Padel Landscape
+            LA&apos;s Padel Scene in 2026: From Rooftops to Historic Clubhouses
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
-            Los Angeles is California&apos;s padel capital. From Century City&apos;s luxury Padel Up to Sherman Oaks&apos; rooftop Pura Padel, from Downtown&apos;s Heimat LA to beachy Santa Monica, LA offers the most diverse padel scene on the West Coast.
+            Los Angeles has cemented its position as the West Coast&apos;s padel capital in 2026. With 5 clubs and over 17 courts, the city offers everything from rooftop courts atop Century City to LA&apos;s original outdoor club on Sunset Boulevard. The biggest addition is <Link href="/courts/los-angeles-padel-club" className="text-green-600 hover:underline">Los Angeles Padel Club</Link>, which leads the pack with 7 outdoor courts in a historic clubhouse setting.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            The <Link href="/courts/padel-up-culver-city" className="text-green-600 hover:underline">Padel Up</Link> brand has two LA locations covering both indoor (Culver City) and outdoor (Century City) play, while <Link href="/courts/the-padel-courts" className="text-green-600 hover:underline">The Padel Courts</Link> on Sunset Blvd continues to build community with its inclusive, welcoming atmosphere and a perfect 5.0 Google rating.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">
-            With perfect year-round weather, a massive international population, and wealth to fund world-class facilities, LA&apos;s padel explosion mirrors the sport&apos;s European growth. Expect 20+ clubs across the metro by 2026.
+            With 300+ days of sunshine and a massive international population, LA is primed for continued padel growth. Browse all courts on our <Link href="/california/los-angeles" className="text-green-600 hover:underline">Los Angeles courts page</Link> or explore the full <Link href="/california" className="text-green-600 hover:underline">California state directory</Link>.
           </p>
         </div>
 
         <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>🏆 Best Overall:</strong> Padel Up Century City (Premium West LA)</p>
-            <p><strong>🏙️ Best Rooftop:</strong> Pura Padel (Valley views) & Heimat LA (Downtown skyline)</p>
-            <p><strong>🎨 Best Atmosphere:</strong> Padel Los Feliz (Mediterranean vibes)</p>
-            <p><strong>🏖️ Best Beach Access:</strong> Santa Monica Padel (SoCal perfection)</p>
-            <p><strong>💼 Best for Professionals:</strong> Padel Up (Century City location)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/los-angeles-padel-club" className="text-green-600 hover:underline">LA Padel Club</Link> (7 courts, historic clubhouse)</p>
+            <p><strong>Best Indoor:</strong> <Link href="/courts/padel-up-culver-city" className="text-green-600 hover:underline">Padel Up Culver City</Link> (3 courts, sauna & cold plunge)</p>
+            <p><strong>Best Community:</strong> <Link href="/courts/the-padel-courts" className="text-green-600 hover:underline">The Padel Courts</Link> (Sunset Blvd, 5.0 stars)</p>
+            <p><strong>Best Rooftop:</strong> <Link href="/courts/padel-up-century-city" className="text-green-600 hover:underline">Padel Up Century City</Link> (mall-top views)</p>
+            <p><strong>Best Social:</strong> <Link href="/courts/padel-up-club" className="text-green-600 hover:underline">Padel Up Club</Link> (bar & lounge, 4 courts)</p>
           </div>
         </div>
 
@@ -295,7 +318,11 @@ export default function LosAngelesBestClubsPage() {
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
-                    <h3 className="text-3xl font-bold mb-2">{club.name}</h3>
+                    <h3 className="text-3xl font-bold mb-2">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-green-200 transition-colors">
+                        {club.name}
+                      </Link>
+                    </h3>
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
@@ -322,12 +349,30 @@ export default function LosAngelesBestClubsPage() {
                     <Users className="w-5 h-5 text-green-600 flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
+                  {club.phone && (
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <Phone className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <a href={`tel:${club.phone}`} className="hover:text-green-600">{club.phone}</a>
+                    </div>
+                  )}
                   {club.website && (
                     <div className="flex items-center gap-2 text-gray-700">
                       <Globe className="w-5 h-5 text-green-600 flex-shrink-0" />
                       <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-green-600">
                         {club.website}
                       </a>
+                    </div>
+                  )}
+                  {club.email && (
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <Mail className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <a href={`mailto:${club.email}`} className="hover:text-green-600">{club.email}</a>
+                    </div>
+                  )}
+                  {club.hours && (
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <Clock className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <span>{club.hours}</span>
                     </div>
                   )}
                 </div>
@@ -363,7 +408,7 @@ export default function LosAngelesBestClubsPage() {
                   <h4 className="font-bold text-gray-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
-                      <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                      <span key={index} className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">
                         ✓ {item}
                       </span>
                     ))}
@@ -374,29 +419,17 @@ export default function LosAngelesBestClubsPage() {
           ))}
         </div>
 
-        <div className="bg-green-50 border-l-4 border-green-600 p-6 mb-12 mt-12">
-          <h3 className="text-xl font-bold mb-3">🌴 Why LA is America&apos;s Next Padel Capital</h3>
-          <ul className="space-y-2 text-gray-700">
-            <li>✓ <strong>Perfect weather:</strong> 300+ days of sunshine, 70°F year-round</li>
-            <li>✓ <strong>International city:</strong> Massive Latin American, European populations</li>
-            <li>✓ <strong>Wealth:</strong> Resources to build world-class facilities</li>
-            <li>✓ <strong>Sports culture:</strong> Tennis, beach sports already huge</li>
-            <li>✓ <strong>Rooftop opportunities:</strong> Parking lots convert to courts</li>
-            <li>✓ <strong>Diverse geography:</strong> Beach to Valley to Downtown options</li>
-          </ul>
-        </div>
-
         <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in LA?</h2>
           <p className="text-xl text-green-100 mb-6">
-            From beaches to hills, find your perfect LA padel court
+            Find all Los Angeles padel courts in one place
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/search?city=Los+Angeles"
+              href="/california/los-angeles"
               className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
             >
-              View LA Courts Map
+              View LA Courts
             </Link>
             <Link
               href="/california"
@@ -408,37 +441,19 @@ export default function LosAngelesBestClubsPage() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">More California Padel</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/best-padel-clubs-san-diego" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in San Diego</h4>
-              <p className="text-sm text-gray-600">5 clubs from downtown to North County</p>
-            </Link>
-            <Link href="/blog/best-padel-clubs-san-francisco" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in San Francisco</h4>
-              <p className="text-sm text-gray-600">Bay Area emerging scene</p>
-            </Link>
-            <Link href="/blog/best-padel-clubs-miami" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Miami</h4>
-              <p className="text-sm text-gray-600">10+ clubs, America&apos;s capital</p>
-            </Link>
-          </div>
-        </div>
-        {/* Related Guides */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">More California Padel Guides</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">More Padel Guides</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/best-padel-clubs-san-francisco" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-gray-900 mb-2">Best Clubs in San Francisco</h4>
-              <p className="text-sm text-gray-600">Bay Area padel revolution</p>
+              <p className="text-sm text-gray-600">Bay Area padel with stunning views</p>
             </Link>
             <Link href="/blog/best-padel-clubs-san-diego" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-gray-900 mb-2">Best Clubs in San Diego</h4>
-              <p className="text-sm text-gray-600">Year-round perfect weather</p>
+              <p className="text-sm text-gray-600">Year-round padel in perfect weather</p>
             </Link>
-            <Link href="/blog/best-padel-clubs-austin" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Austin</h4>
-              <p className="text-sm text-gray-600">America&apos;s padel capital</p>
+            <Link href="/blog/best-padel-clubs-phoenix" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Phoenix</h4>
+              <p className="text-sm text-gray-600">Desert padel with world-class facilities</p>
             </Link>
           </div>
         </div>

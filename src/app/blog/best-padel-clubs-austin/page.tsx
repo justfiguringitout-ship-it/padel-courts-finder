@@ -3,22 +3,178 @@ import Link from 'next/link';
 import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Best Padel Clubs in Austin, Texas (2025) | 6 Clubs Ranked & Reviewed',
-  description: 'Austin is America&apos;s padel capital! Compare all 6 clubs from Padel Club Austin to Padel39. Complete guide with pricing, programs, and insider tips.',
+  title: 'Best Padel Clubs in Austin, Texas (2026) | 7 Clubs Ranked & Reviewed',
+  description: 'Discover Austin\'s 7 best padel clubs in 2026. From Padel 39\'s luxury courts to 3 coming soon. Rankings, pricing & complete Texas guide.',
   alternates: {
     canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-austin',
   },
+  openGraph: {
+    title: 'Best Padel Clubs in Austin, Texas (2026) | 7 Clubs Ranked & Reviewed',
+    description: 'Discover Austin\'s 7 best padel clubs in 2026. From Padel 39\'s luxury courts to 3 coming soon. Rankings, pricing & complete Texas guide.',
+    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-austin',
+    type: 'article',
+  },
 };
+
+interface Club {
+  rank: number;
+  name: string;
+  slug: string;
+  score: number;
+  location: string;
+  courts: string;
+  price: string;
+  phone?: string;
+  email?: string;
+  website?: string;
+  hours?: string;
+  description: string;
+  highlights: string[];
+  programs: string[];
+  bestFor: string[];
+}
+
+const clubs: Club[] = [
+  {
+    rank: 1,
+    name: 'Padel 39',
+    slug: 'padel-39',
+    score: 96,
+    location: 'North Austin, TX (Near The Domain & Q2 Stadium)',
+    courts: '6 outdoor lighted courts',
+    price: '$$$',
+    website: 'padel39.com',
+    description: 'Padel39 is Austin\'s premier padel club in North Austin, featuring 6 world-class outdoor lighted courts near The Domain and Q2 Stadium. With a sauna, cold plunge, recovery area, pro shop, terrace, co-working space, and showers, it delivers a full lifestyle experience beyond padel. A second 12-court East Austin location is on the way.',
+    highlights: [
+      '6 world-class outdoor lighted courts',
+      'Sauna & cold plunge recovery area',
+      'Pro shop with premium gear',
+      'Co-working space & terrace',
+      'Near The Domain & Q2 Stadium',
+      '5.0 Google rating'
+    ],
+    programs: [
+      'Court bookings (~$25-30/player per 90min)',
+      'Professional coaching',
+      'Group clinics',
+      'Open play sessions',
+      'Corporate events',
+      'Playtomic booking'
+    ],
+    bestFor: [
+      'Serious competitive players',
+      'Wellness-focused athletes',
+      'North Austin residents',
+      'Social padel enthusiasts'
+    ]
+  },
+  {
+    rank: 2,
+    name: 'Padel Club Austin',
+    slug: 'padel-club-austin',
+    score: 95,
+    location: 'Austin, TX',
+    courts: '9 courts (indoor & outdoor)',
+    price: '$$',
+    website: 'padelclubaustin.com',
+    description: 'Padel Club Austin is Austin\'s first premium padel club featuring 9 panoramic Wilson courts across indoor and outdoor settings. With a Wilson partnership, on-site restaurant, pro shop, and an affordable Student Pro membership at just $20/month, it is the most accessible entry point for new players in Austin.',
+    highlights: [
+      '9 panoramic Wilson courts (indoor/outdoor)',
+      'Official Wilson padel partnership',
+      'On-site restaurant',
+      'Pro shop with Wilson gear',
+      'Free parking & WiFi',
+      '4.9 Google rating'
+    ],
+    programs: [
+      'Court bookings ($25/person per 1.5hr)',
+      'Racquet rental ($10)',
+      'Student Pro membership ($20/mo)',
+      'Pro membership ($50/mo with discounts)',
+      'Private & group coaching',
+      'Beginner clinics'
+    ],
+    bestFor: [
+      'Beginners & students',
+      'Budget-conscious players',
+      'Families',
+      'South Austin residents'
+    ]
+  },
+  {
+    rank: 3,
+    name: 'Austin Padel Center Pop-Up',
+    slug: 'austin-padel-center-pop-up',
+    score: 90,
+    location: 'Austin, TX',
+    courts: '5 courts (3 indoor, 2 outdoor)',
+    price: '$$',
+    description: 'Austin Padel Center Pop-Up is a temporary premium padel facility offering 3 indoor climate-controlled courts and 2 outdoor courts. With a recovery area featuring cold plunge and sauna, a cafeteria, pro shop, play park for kids, and equipment rental, it punches above its weight for a pop-up venue.',
+    highlights: [
+      '3 indoor climate-controlled courts',
+      '2 outdoor courts',
+      'Cold plunge & sauna recovery area',
+      'Cafeteria & snack bar',
+      'Play park for kids',
+      'Free parking & WiFi'
+    ],
+    programs: [
+      'Court bookings',
+      'Equipment rental',
+      'Open play',
+      'Community events',
+      'Beginner sessions'
+    ],
+    bestFor: [
+      'Players wanting indoor options',
+      'Families with kids',
+      'Recovery-focused athletes',
+      'Casual recreational players'
+    ]
+  },
+  {
+    rank: 4,
+    name: 'Dripping Springs Racquet Club',
+    slug: 'dripping-springs-racquet-club',
+    score: 87,
+    location: 'Dripping Springs, TX (Austin area)',
+    courts: '3 outdoor padel courts',
+    price: '$$$',
+    description: 'Premier Austin-area racquet club with 3 advanced padel courts alongside tennis and pickleball. The full resort-style complex includes a pool, fitness center, pavilion with bar, and pro shop. Memberships run around $299/month, making it a full-lifestyle club rather than a padel-only facility.',
+    highlights: [
+      '3 advanced outdoor padel courts',
+      'Resort-style pool & cabanas',
+      'Fitness center on-site',
+      'Pavilion with bar',
+      'Tennis & pickleball courts too',
+      '4.6 Google rating'
+    ],
+    programs: [
+      'Non-member court booking ($23/player)',
+      'Racquet rental ($10)',
+      'Lessons from $25+',
+      'Memberships (~$299/mo)',
+      'Multi-sport access',
+      'Social events & leagues'
+    ],
+    bestFor: [
+      'Multi-sport enthusiasts',
+      'Families wanting resort amenities',
+      'Dripping Springs & Hill Country residents',
+      'Tennis players trying padel'
+    ]
+  }
+];
 
 export default function AustinBestClubsPage() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Best Padel Clubs in austin (2025) | Complete Guide & Rankings",
-    "description": "Discover the best padel clubs in austin. Complete guide with rankings, pricing, programs, and insider tips.",
+    "headline": "Best Padel Clubs in Austin, Texas (2026) | 7 Clubs Ranked & Reviewed",
+    "description": "Discover Austin's 7 best padel clubs in 2026. From Padel 39's luxury courts to 3 coming soon. Rankings, pricing & complete Texas guide.",
     "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
-    "datePublished": "2025-10-13T00:00:00Z",
-    "dateModified": "2025-10-13T00:00:00Z",
+    "datePublished": "2026-03-21T00:00:00Z",
+    "dateModified": "2026-03-21T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -40,15 +196,12 @@ export default function AustinBestClubsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Article Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
+      <section className="bg-gradient-to-r from-purple-600 to-green-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
             <Link href="/blog" className="text-purple-200 hover:text-white">
@@ -56,11 +209,8 @@ export default function AustinBestClubsPage() {
             </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Best Padel Clubs in Austin, Texas (2025)
+            Best Padel Clubs in Austin, Texas (2026)
           </h1>
-          <p className="text-xl text-purple-100 mb-6">
-            America&apos;s Surprising Padel Capital
-          </p>
           <div className="flex flex-wrap gap-4 text-purple-100 text-lg">
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
@@ -68,316 +218,249 @@ export default function AustinBestClubsPage() {
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5" />
-              <span>6 Clubs Ranked</span>
+              <span>4 Open + 3 Coming Soon</span>
             </div>
             <div className="flex items-center gap-2">
-              <Users className="w-5 h-5" />
-              <span>35+ Courts</span>
+              <Clock className="w-5 h-5" />
+              <span>Updated March 2026</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quick Stats */}
       <section className="bg-white border-b">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-purple-600">6</div>
-              <div className="text-sm text-gray-600">Facilities</div>
+              <div className="text-3xl font-bold text-purple-600">7</div>
+              <div className="text-sm text-gray-600">Total Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-600">35+</div>
-              <div className="text-sm text-gray-600">Total Courts</div>
+              <div className="text-3xl font-bold text-purple-600">23+</div>
+              <div className="text-sm text-gray-600">Courts Open</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-600">$20-35</div>
-              <div className="text-sm text-gray-600">Per Person</div>
+              <div className="text-3xl font-bold text-purple-600">$23-30</div>
+              <div className="text-sm text-gray-600">Per Person Range</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-600">#1</div>
-              <div className="text-sm text-gray-600">Clubs Per Capita</div>
+              <div className="text-3xl font-bold text-purple-600">3</div>
+              <div className="text-sm text-gray-600">Coming Soon</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Introduction */}
         <div className="prose prose-lg max-w-none mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Austin: America&apos;s Padel Capital
+            Austin: Texas&apos;s Padel Capital Keeps Growing
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
-            Move over Miami—Austin is giving you a run for your money. With 6 dedicated padel facilities and 35+ courts (plus 17 more coming!), Austin, Texas has quietly become the highest concentration of padel clubs per capita in the United States.
+            Austin has cemented itself as one of America&apos;s top padel cities. With 4 open clubs totaling 23+ courts and 3 more facilities on the way, the Texas capital&apos;s padel scene is booming in 2026. Tech money, year-round outdoor weather, and an active lifestyle culture have fueled explosive growth from zero clubs in 2023 to a thriving ecosystem today.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            The headliners are <Link href="/courts/padel-39" className="text-purple-600 hover:underline">Padel 39</Link> with its luxury wellness-focused experience and a perfect 5.0 Google rating, and <Link href="/courts/padel-club-austin" className="text-purple-600 hover:underline">Padel Club Austin</Link> with 9 Wilson courts and student memberships starting at just $20/month. Meanwhile, three new clubs are set to dramatically expand capacity with up to 18 additional courts.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">
-            Austin went from ZERO padel clubs in 2023 to 6+ facilities in 2025. That&apos;s explosive growth driven by tech money, active lifestyle culture, and perfect year-round weather.
+            Whether you&apos;re a seasoned player or picking up a racquet for the first time, Austin has options for every level and budget. Browse all courts on our <Link href="/texas/austin" className="text-purple-600 hover:underline">Austin courts page</Link> or explore the full <Link href="/texas" className="text-purple-600 hover:underline">Texas padel directory</Link>.
           </p>
         </div>
 
-        {/* Quick Rankings */}
         <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>🏆 Best Overall:</strong> Padel39 (6 courts + 12 coming, luxury amenities)</p>
-            <p><strong>💰 Best Value:</strong> Pick & Paddle ($12.50/person off-peak!)</p>
-            <p><strong>🎓 Best for Beginners:</strong> Padel Club Austin (free clinics, official Wilson facility)</p>
-            <p><strong>🏅 Best Courts:</strong> Dripping Springs (first aluminum courts in U.S.)</p>
-            <p><strong>🏆 Most Courts:</strong> Legacy Padel (13 courts coming Fall 2025)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/padel-39" className="text-purple-600 hover:underline">Padel 39</Link> (6 courts, sauna, cold plunge, 5.0 rating)</p>
+            <p><strong>Best for Beginners:</strong> <Link href="/courts/padel-club-austin" className="text-purple-600 hover:underline">Padel Club Austin</Link> (9 Wilson courts, $20/mo students)</p>
+            <p><strong>Best Indoor Option:</strong> <Link href="/courts/austin-padel-center-pop-up" className="text-purple-600 hover:underline">Austin Padel Center Pop-Up</Link> (3 indoor + 2 outdoor)</p>
+            <p><strong>Best Multi-Sport:</strong> <Link href="/courts/dripping-springs-racquet-club" className="text-purple-600 hover:underline">Dripping Springs Racquet Club</Link> (pool, gym, tennis)</p>
+            <p><strong>Most Anticipated:</strong> Padel39 East Austin (12 courts opening 2026)</p>
           </div>
         </div>
 
-        {/* Comparison Table */}
-        <div className="bg-white border rounded-xl overflow-hidden mb-12">
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-6 py-3 text-left text-sm font-bold text-gray-900">Club</th>
-                  <th className="px-6 py-3 text-left text-sm font-bold text-gray-900">Courts</th>
-                  <th className="px-6 py-3 text-left text-sm font-bold text-gray-900">Price</th>
-                  <th className="px-6 py-3 text-left text-sm font-bold text-gray-900">Best For</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4 font-semibold">Padel39</td>
-                  <td className="px-6 py-4 text-sm">6 (18 soon)</td>
-                  <td className="px-6 py-4 text-sm">$25-30</td>
-                  <td className="px-6 py-4 text-sm">Luxury, wellness</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 font-semibold">Padel Club Austin</td>
-                  <td className="px-6 py-4 text-sm">9</td>
-                  <td className="px-6 py-4 text-sm">$25</td>
-                  <td className="px-6 py-4 text-sm">Beginners, students</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 font-semibold">Trosky Sports</td>
-                  <td className="px-6 py-4 text-sm">6</td>
-                  <td className="px-6 py-4 text-sm">Mid</td>
-                  <td className="px-6 py-4 text-sm">Multi-sport</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 font-semibold">Dripping Springs</td>
-                  <td className="px-6 py-4 text-sm">3</td>
-                  <td className="px-6 py-4 text-sm">$23</td>
-                  <td className="px-6 py-4 text-sm">Tech, tennis</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 font-semibold">Pick & Paddle</td>
-                  <td className="px-6 py-4 text-sm">3</td>
-                  <td className="px-6 py-4 text-sm text-green-600 font-bold">$12-15</td>
-                  <td className="px-6 py-4 text-sm">VALUE!</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 font-semibold">Legacy 🔜</td>
-                  <td className="px-6 py-4 text-sm">13</td>
-                  <td className="px-6 py-4 text-sm">TBD</td>
-                  <td className="px-6 py-4 text-sm">Coming Fall 2025</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div className="space-y-12">
+          {clubs.map(club => (
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-purple-600 bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="bg-gradient-to-r from-purple-600 to-green-600 text-white p-6">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="text-sm font-semibold mb-1">#{club.rank}</div>
+                    <h3 className="text-3xl font-bold mb-2">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-purple-200 transition-colors">
+                        {club.name}
+                      </Link>
+                    </h3>
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="flex items-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-purple-300'}`} />
+                        ))}
+                      </div>
+                      <span className="text-xl font-bold">{club.score}/100</span>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold">{club.price}</div>
+                    <div className="text-sm text-purple-100">Price Range</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6">
+                <div className="grid md:grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-start gap-2 text-gray-700">
+                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <span>{club.location}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-700">
+                    <Users className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                    <span>{club.courts}</span>
+                  </div>
+                  {club.phone && (
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <Phone className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                      <a href={`tel:${club.phone}`} className="hover:text-purple-600">{club.phone}</a>
+                    </div>
+                  )}
+                  {club.website && (
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <Globe className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-purple-600">
+                        {club.website}
+                      </a>
+                    </div>
+                  )}
+                  {club.email && (
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <Mail className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                      <a href={`mailto:${club.email}`} className="hover:text-purple-600">{club.email}</a>
+                    </div>
+                  )}
+                  {club.hours && (
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <Clock className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                      <span>{club.hours}</span>
+                    </div>
+                  )}
+                </div>
+
+                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                  {club.description}
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="font-bold text-gray-900 mb-3 text-lg">What Makes It Special:</h4>
+                  <ul className="grid md:grid-cols-2 gap-2">
+                    {club.highlights.map((highlight, index) => (
+                      <li key={index} className="flex items-start gap-2 text-gray-700">
+                        <span className="text-purple-600 font-bold">✓</span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Programs & Offerings:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {club.programs.map((program, index) => (
+                      <span key={index} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">
+                        {program}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Best For:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {club.bestFor.map((item, index) => (
+                      <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                        ✓ {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Top 3 Clubs Detailed */}
-        <div className="space-y-8 mb-12">
-          <h2 className="text-3xl font-bold text-gray-900">Top Austin Clubs</h2>
-
-          {/* Padel39 */}
-          <div className="bg-white border-2 border-purple-200 rounded-xl p-6">
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <span className="text-purple-600 font-bold text-sm">#1</span>
-                <h3 className="text-2xl font-bold text-gray-900">Padel39</h3>
-                <div className="flex items-center gap-2 mt-1">
-                  <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  <span className="font-bold">95/100</span>
-                </div>
+        <div className="mt-12 mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Coming Soon to Austin</h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            Austin&apos;s padel boom is far from over. Three new clubs are in development, set to add up to 18+ additional courts to the city&apos;s growing padel infrastructure.
+          </p>
+          <div className="space-y-6">
+            <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="px-3 py-1 bg-amber-200 text-amber-800 rounded-full text-sm font-bold">Coming Soon</span>
               </div>
-              <div className="text-right">
-                <div className="text-xl font-bold text-purple-600">$$$</div>
-                <div className="text-sm text-gray-600">Premium</div>
-              </div>
-            </div>
-
-            <div className="space-y-3 mb-4">
-              <div className="flex items-start gap-2 text-sm">
-                <MapPin className="w-4 h-4 text-purple-600 flex-shrink-0 mt-0.5" />
-                <span>2510 Rutland Drive, Austin, TX 78758 (Near The Domain)</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Users className="w-4 h-4 text-purple-600" />
-                <span>6 courts currently + 12 more opening in East Austin</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Globe className="w-4 h-4 text-purple-600" />
-                <a href="https://padel39.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600">
-                  padel39.com
-                </a>
-              </div>
-            </div>
-
-            <p className="text-gray-700 mb-4">
-              <strong>&quot;Beyond Padel&quot;</strong> - 6 world-class courts, 8,000 sq ft clubhouse, sauna, cold plunge, and APRÈS39 bar/restaurant. Premium wellness-focused padel experience.
-            </p>
-
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Premium experience</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Wellness focus</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Bar & restaurant</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Expanding to 18 courts</span>
-            </div>
-          </div>
-
-          {/* Padel Club Austin */}
-          <div className="bg-white border-2 border-purple-200 rounded-xl p-6">
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <span className="text-purple-600 font-bold text-sm">#2</span>
-                <h3 className="text-2xl font-bold text-gray-900">Padel Club Austin</h3>
-                <div className="flex items-center gap-2 mt-1">
-                  <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  <span className="font-bold">92/100</span>
-                </div>
-              </div>
-              <div className="text-right">
-                <div className="text-xl font-bold text-purple-600">$$</div>
-                <div className="text-sm text-gray-600">Mid-range</div>
-              </div>
-            </div>
-
-            <div className="space-y-3 mb-4">
-              <div className="flex items-start gap-2 text-sm">
-                <MapPin className="w-4 h-4 text-purple-600 flex-shrink-0 mt-0.5" />
-                <span>511 Industrial Blvd, Austin, TX 78745</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Users className="w-4 h-4 text-purple-600" />
-                <span>9 premium courts (indoor & outdoor)</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Phone className="w-4 h-4 text-purple-600" />
-                <span>(737) 376-0605</span>
-              </div>
-            </div>
-
-            <p className="text-gray-700 mb-4">
-              Austin&apos;s first Wilson Padel club with 9 courts. <strong>FREE beginner clinics</strong> every week and student membership for just $20/month! Best entry point for new players.
-            </p>
-
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">FREE clinics</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Official Wilson facility</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">$20/mo students</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Beginner friendly</span>
-            </div>
-          </div>
-
-          {/* Pick & Paddle */}
-          <div className="bg-white border-2 border-green-300 rounded-xl p-6">
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <span className="text-green-600 font-bold text-sm">#3 - BEST VALUE</span>
-                <h3 className="text-2xl font-bold text-gray-900">Pick & Paddle</h3>
-                <div className="flex items-center gap-2 mt-1">
-                  <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  <span className="font-bold">85/100</span>
-                </div>
-              </div>
-              <div className="text-right">
-                <div className="text-xl font-bold text-green-600">$</div>
-                <div className="text-sm text-gray-600">Budget</div>
-              </div>
-            </div>
-
-            <div className="space-y-3 mb-4">
-              <div className="flex items-start gap-2 text-sm">
-                <MapPin className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                <span>30251 Leroy Scheel Rd, Bulverde, TX 78163 (30 min from Austin)</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Users className="w-4 h-4 text-green-600" />
-                <span>3 padel courts + 3 pickleball courts</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Phone className="w-4 h-4 text-green-600" />
-                <span>(830) 354-8362</span>
-              </div>
-            </div>
-
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-              <p className="text-green-900 font-bold mb-1">
-                🔥 Best Value in Texas!
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Padel39 East Austin</h3>
+              <p className="text-gray-700 mb-3">
+                Padel39&apos;s second Austin location features 12 outdoor courts (4 covered with lighting), a CLUB39 bar, cafe, gym, locker rooms, and recovery/wellness area. Set to open in 2026 as a major social hub on the east side.
               </p>
-              <p className="text-gray-700 text-sm">
-                <strong>$50-60/hour</strong> = $12.50-15/person. Compare to $25-30 elsewhere. 20% military discount!
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">12 courts (4 covered)</span>
+                <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">Bar & cafe</span>
+                <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">Gym & wellness</span>
+              </div>
+            </div>
+
+            <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="px-3 py-1 bg-amber-200 text-amber-800 rounded-full text-sm font-bold">Coming Soon</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">The Padel Collective</h3>
+              <p className="text-gray-700 mb-3">
+                An upscale padel and wellness club featuring indoor and outdoor courts, sauna, cold plunge, coffee bar, and cafe. Positioned as a lifestyle destination blending sport and community.
               </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">Indoor & outdoor courts</span>
+                <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">Sauna & cold plunge</span>
+                <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">Coffee bar & cafe</span>
+              </div>
             </div>
 
-            <p className="text-gray-700 mb-4">
-              Outdoor courts in scenic Hill Country setting. Family-owned, budget-friendly, with ball machines available. Worth the 30-minute drive for the savings!
-            </p>
-
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-bold">$12.50/person!</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">20% military discount</span>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Hill Country views</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Austin Insights */}
-        <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-6 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Why Austin is Special</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-bold text-lg mb-2">📊 The Numbers</h4>
-              <ul className="space-y-2 text-gray-700 text-sm">
-                <li>• Highest clubs per capita in U.S.</li>
-                <li>• 0 clubs in 2023 → 6+ in 2025</li>
-                <li>• 35+ courts active, 17+ coming</li>
-                <li>• 52+ total courts projected</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-2">🌟 The Culture</h4>
-              <ul className="space-y-2 text-gray-700 text-sm">
-                <li>• &quot;Keep Austin Weird&quot; applies</li>
-                <li>• Tech money funding growth</li>
-                <li>• Young, active population</li>
-                <li>• Year-round outdoor weather</li>
-              </ul>
+            <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="px-3 py-1 bg-amber-200 text-amber-800 rounded-full text-sm font-bold">Coming Soon</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Padel Society</h3>
+              <p className="text-gray-700 mb-3">
+                A premium indoor padel club with 6 courts, built around lifestyle, wellness, and community. The planned amenities list is impressive: full gym, sauna, golf simulator, co-working space, pro shop, physical therapy station, and a full bar.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">6 indoor courts</span>
+                <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">Full gym & sauna</span>
+                <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">Golf simulator</span>
+                <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">Full bar</span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 text-center mt-12">
+        <div className="bg-gradient-to-r from-purple-600 to-green-600 text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in Austin?</h2>
-          <p className="text-xl text-green-100 mb-6">
-            6 clubs, 35+ courts, and America&apos;s most vibrant padel scene awaits!
+          <p className="text-xl text-purple-100 mb-6">
+            Find all Austin padel courts with real-time info and directions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/search?city=Austin"
-              className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              href="/texas/austin"
+              className="inline-block bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
             >
-              View Austin Courts Map
+              View Austin Courts
             </Link>
             <Link
               href="/texas"
-              className="inline-block bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors"
+              className="inline-block bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 transition-colors"
             >
               All Texas Clubs
             </Link>
           </div>
         </div>
 
-        {/* Related Posts */}
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">More Texas Padel Guides</h3>
           <div className="grid md:grid-cols-3 gap-6">
