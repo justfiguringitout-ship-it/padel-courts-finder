@@ -1,5 +1,17 @@
 # Padel Courts Finder — Project Context
 
+## Core Strategy
+This site exists to generate organic search traffic and eventually monetize through ads, sponsorships, and/or lead generation. Every code change, content addition, and data update should be evaluated through an SEO lens. Key principles:
+- Every page must have proper schema.org structured data (JSON-LD)
+- Every page must have unique, descriptive meta titles and descriptions
+- No fabricated or duplicate content — Google's helpful content system penalizes this
+- Rich, unique per-page content is the primary competitive advantage
+- Internal linking between related pages (court → city → state → blog guide) matters
+- Page speed and Core Web Vitals affect rankings
+- Blog city guides target "best padel clubs in [city]" keywords
+- Court pages target "[club name]" and "[club name] padel" keywords
+- State/city pages target "padel courts in [state/city]" keywords
+
 ## What This Is
 A US padel court directory site at padelcourtsfinder.com. Next.js 15 + TypeScript + Tailwind CSS, deployed on Vercel. Court data lives in `src/data/padel-courts.ts` as the single source of truth.
 
