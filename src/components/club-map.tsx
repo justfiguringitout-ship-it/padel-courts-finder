@@ -23,7 +23,9 @@ interface ClubMapProps {
 export function ClubMap({ name, address, coordinates, googleMapsUrl }: ClubMapProps) {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-  if (!apiKey || apiKey === "YOUR_API_KEY_HERE") {
+  const hasValidCoords = Number.isFinite(coordinates?.latitude) && Number.isFinite(coordinates?.longitude);
+
+  if (!apiKey || apiKey === "YOUR_API_KEY_HERE" || !hasValidCoords) {
     return (
       <Card>
         <CardHeader>

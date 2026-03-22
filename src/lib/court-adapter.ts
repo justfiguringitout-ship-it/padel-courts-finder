@@ -261,195 +261,272 @@ function getStateName(stateCode: string): string {
 }
 
 // City center coordinates for geocoding fallback when specific coordinates not available
-function getCityDefaultCoordinates(city: string, state: string): { lat: number; lng: number } {
-  const cityCoords: Record<string, { lat: number; lng: number }> = {
+function getCityDefaultCoordinates(city: string, state: string): { latitude: number; longitude: number } {
+  const cityCoords: Record<string, { latitude: number; longitude: number }> = {
     // Florida
-    "Miami": { lat: 25.7617, lng: -80.1918 },
-    "Orlando": { lat: 28.5383, lng: -81.3792 },
-    "Tampa": { lat: 27.9506, lng: -82.4572 },
-    "Jacksonville": { lat: 30.3322, lng: -81.6557 },
-    "Fort Lauderdale": { lat: 26.1224, lng: -80.1373 },
-    "Boynton Beach": { lat: 26.5259, lng: -80.0931 },
-    "Coconut Creek": { lat: 26.2517, lng: -80.1790 },
-    "North Miami": { lat: 25.8901, lng: -80.1867 },
-    "Pembroke Pines": { lat: 26.0032, lng: -80.2962 },
-    "Doral": { lat: 25.8195, lng: -80.3553 },
-    "Miami Beach": { lat: 25.7907, lng: -80.1300 },
-    "Aventura": { lat: 25.9565, lng: -80.1393 },
-    "Coral Gables": { lat: 25.7210, lng: -80.2683 },
-    "Key Biscayne": { lat: 25.6931, lng: -80.1631 },
-    "Hallandale Beach": { lat: 25.9812, lng: -80.1484 },
-    "Hollywood": { lat: 26.0112, lng: -80.1495 },
-    "Miramar": { lat: 25.9873, lng: -80.3322 },
-    "Sunrise": { lat: 26.1669, lng: -80.2565 },
-    "Plantation": { lat: 26.1276, lng: -80.2331 },
-    "Davie": { lat: 26.0765, lng: -80.2520 },
-    "Weston": { lat: 26.1003, lng: -80.3997 },
-    "Boca Raton": { lat: 26.3683, lng: -80.1289 },
-    "Delray Beach": { lat: 26.4615, lng: -80.0728 },
-    "West Palm Beach": { lat: 26.7153, lng: -80.0534 },
-    "Palm Beach": { lat: 26.7056, lng: -80.0364 },
-    "Sarasota": { lat: 27.3364, lng: -82.5307 },
-    "Clearwater": { lat: 27.9659, lng: -82.8001 },
-    "St. Petersburg": { lat: 27.7676, lng: -82.6403 },
-    "Naples": { lat: 26.1420, lng: -81.7948 },
-    "Fort Myers": { lat: 26.6406, lng: -81.8723 },
-    "Cape Coral": { lat: 26.5629, lng: -81.9495 },
-    "Tallahassee": { lat: 30.4383, lng: -84.2807 },
-    "Gainesville": { lat: 29.6516, lng: -82.3248 },
-    "Ocala": { lat: 29.1872, lng: -82.1401 },
-    
-    // Texas  
-    "Austin": { lat: 30.2672, lng: -97.7431 },
-    "Houston": { lat: 29.7604, lng: -95.3698 },
-    "Dallas": { lat: 32.7767, lng: -96.7970 },
-    "San Antonio": { lat: 29.4241, lng: -98.4936 },
-    "Fort Worth": { lat: 32.7555, lng: -97.3308 },
-    "El Paso": { lat: 31.7619, lng: -106.4850 },
-    "Arlington": { lat: 32.7357, lng: -97.1081 },
-    "Corpus Christi": { lat: 27.8006, lng: -97.3964 },
-    "Plano": { lat: 33.0198, lng: -96.6989 },
-    "Lubbock": { lat: 33.5779, lng: -101.8552 },
-    "Irving": { lat: 32.8140, lng: -96.9489 },
-    "Laredo": { lat: 27.5306, lng: -99.4803 },
-    "Garland": { lat: 32.9126, lng: -96.6389 },
-    "Frisco": { lat: 33.1507, lng: -96.8236 },
-    "McKinney": { lat: 33.1972, lng: -96.6397 },
-    "Katy": { lat: 29.7858, lng: -95.8244 },
-    "Conroe": { lat: 30.3119, lng: -95.4560 },
-    "Spring": { lat: 30.0799, lng: -95.4172 },
-    "The Woodlands": { lat: 30.1658, lng: -95.4613 },
-    "Pearland": { lat: 29.5636, lng: -95.2861 },
-    "Sugar Land": { lat: 29.6196, lng: -95.6349 },
-    
+    "Miami": { latitude: 25.7617, longitude: -80.1918 },
+    "Orlando": { latitude: 28.5383, longitude: -81.3792 },
+    "Tampa": { latitude: 27.9506, longitude: -82.4572 },
+    "Jacksonville": { latitude: 30.3322, longitude: -81.6557 },
+    "Fort Lauderdale": { latitude: 26.1224, longitude: -80.1373 },
+    "Boynton Beach": { latitude: 26.5259, longitude: -80.0931 },
+    "Coconut Creek": { latitude: 26.2517, longitude: -80.1790 },
+    "North Miami": { latitude: 25.8901, longitude: -80.1867 },
+    "Pembroke Pines": { latitude: 26.0032, longitude: -80.2962 },
+    "Doral": { latitude: 25.8195, longitude: -80.3553 },
+    "Miami Beach": { latitude: 25.7907, longitude: -80.1300 },
+    "Aventura": { latitude: 25.9565, longitude: -80.1393 },
+    "Coral Gables": { latitude: 25.7210, longitude: -80.2683 },
+    "Key Biscayne": { latitude: 25.6931, longitude: -80.1631 },
+    "Hallandale Beach": { latitude: 25.9812, longitude: -80.1484 },
+    "Hollywood": { latitude: 26.0112, longitude: -80.1495 },
+    "Miramar": { latitude: 25.9873, longitude: -80.3322 },
+    "Sunrise": { latitude: 26.1669, longitude: -80.2565 },
+    "Plantation": { latitude: 26.1276, longitude: -80.2331 },
+    "Davie": { latitude: 26.0765, longitude: -80.2520 },
+    "Weston": { latitude: 26.1003, longitude: -80.3997 },
+    "Boca Raton": { latitude: 26.3683, longitude: -80.1289 },
+    "Delray Beach": { latitude: 26.4615, longitude: -80.0728 },
+    "West Palm Beach": { latitude: 26.7153, longitude: -80.0534 },
+    "Palm Beach": { latitude: 26.7056, longitude: -80.0364 },
+    "Sarasota": { latitude: 27.3364, longitude: -82.5307 },
+    "Clearwater": { latitude: 27.9659, longitude: -82.8001 },
+    "St. Petersburg": { latitude: 27.7676, longitude: -82.6403 },
+    "Naples": { latitude: 26.1420, longitude: -81.7948 },
+    "Fort Myers": { latitude: 26.6406, longitude: -81.8723 },
+    "Cape Coral": { latitude: 26.5629, longitude: -81.9495 },
+    "Tallahassee": { latitude: 30.4383, longitude: -84.2807 },
+    "Gainesville": { latitude: 29.6516, longitude: -82.3248 },
+    "Ocala": { latitude: 29.1872, longitude: -82.1401 },
+    "Hialeah": { latitude: 25.8576, longitude: -80.2781 },
+    "Kissimmee": { latitude: 28.2920, longitude: -81.4076 },
+    "Vero Beach": { latitude: 27.6386, longitude: -80.3973 },
+    "Westlake": { latitude: 26.7198, longitude: -80.1897 },
+    "Zephyrhills": { latitude: 28.2336, longitude: -82.1812 },
+
+    // Texas
+    "Austin": { latitude: 30.2672, longitude: -97.7431 },
+    "Houston": { latitude: 29.7604, longitude: -95.3698 },
+    "Dallas": { latitude: 32.7767, longitude: -96.7970 },
+    "San Antonio": { latitude: 29.4241, longitude: -98.4936 },
+    "Fort Worth": { latitude: 32.7555, longitude: -97.3308 },
+    "El Paso": { latitude: 31.7619, longitude: -106.4850 },
+    "Arlington": { latitude: 32.7357, longitude: -97.1081 },
+    "Corpus Christi": { latitude: 27.8006, longitude: -97.3964 },
+    "Plano": { latitude: 33.0198, longitude: -96.6989 },
+    "Lubbock": { latitude: 33.5779, longitude: -101.8552 },
+    "Irving": { latitude: 32.8140, longitude: -96.9489 },
+    "Laredo": { latitude: 27.5306, longitude: -99.4803 },
+    "Garland": { latitude: 32.9126, longitude: -96.6389 },
+    "Frisco": { latitude: 33.1507, longitude: -96.8236 },
+    "McKinney": { latitude: 33.1972, longitude: -96.6397 },
+    "Katy": { latitude: 29.7858, longitude: -95.8244 },
+    "Conroe": { latitude: 30.3119, longitude: -95.4560 },
+    "Spring": { latitude: 30.0799, longitude: -95.4172 },
+    "The Woodlands": { latitude: 30.1658, longitude: -95.4613 },
+    "Pearland": { latitude: 29.5636, longitude: -95.2861 },
+    "Sugar Land": { latitude: 29.6196, longitude: -95.6349 },
+    "Amarillo": { latitude: 35.2220, longitude: -101.8313 },
+    "Brownsville": { latitude: 25.9017, longitude: -97.4975 },
+    "Bulverde": { latitude: 29.7438, longitude: -98.4531 },
+    "Eagle Pass": { latitude: 28.7091, longitude: -100.4995 },
+    "Hidalgo": { latitude: 26.1003, longitude: -98.2633 },
+    "Magnolia": { latitude: 30.2094, longitude: -95.7508 },
+    "Mission": { latitude: 26.2159, longitude: -98.3253 },
+    "Rancho Viejo": { latitude: 26.0322, longitude: -97.5558 },
+
     // California
-    "Los Angeles": { lat: 34.0522, lng: -118.2437 },
-    "San Diego": { lat: 32.7157, lng: -117.1611 },
-    "San Francisco": { lat: 37.7749, lng: -122.4194 },
-    "Sacramento": { lat: 38.5816, lng: -121.4944 },
-    "San Jose": { lat: 37.3382, lng: -121.8863 },
-    "Fresno": { lat: 36.7378, lng: -119.7871 },
-    "Oakland": { lat: 37.8044, lng: -122.2712 },
-    "Long Beach": { lat: 33.7701, lng: -118.1937 },
-    "Bakersfield": { lat: 35.3733, lng: -119.0187 },
-    "Anaheim": { lat: 33.8366, lng: -117.9143 },
-    "Santa Monica": { lat: 34.0195, lng: -118.4912 },
-    "Pasadena": { lat: 34.1478, lng: -118.1445 },
-    "Oceanside": { lat: 33.1959, lng: -117.3795 },
-    "Carlsbad": { lat: 33.1581, lng: -117.3506 },
-    "Chula Vista": { lat: 32.6401, lng: -117.0842 },
-    "Irvine": { lat: 33.6846, lng: -117.8265 },
-    
+    "Los Angeles": { latitude: 34.0522, longitude: -118.2437 },
+    "San Diego": { latitude: 32.7157, longitude: -117.1611 },
+    "San Francisco": { latitude: 37.7749, longitude: -122.4194 },
+    "Sacramento": { latitude: 38.5816, longitude: -121.4944 },
+    "San Jose": { latitude: 37.3382, longitude: -121.8863 },
+    "Fresno": { latitude: 36.7378, longitude: -119.7871 },
+    "Oakland": { latitude: 37.8044, longitude: -122.2712 },
+    "Long Beach": { latitude: 33.7701, longitude: -118.1937 },
+    "Bakersfield": { latitude: 35.3733, longitude: -119.0187 },
+    "Anaheim": { latitude: 33.8366, longitude: -117.9143 },
+    "Santa Monica": { latitude: 34.0195, longitude: -118.4912 },
+    "Pasadena": { latitude: 34.1478, longitude: -118.1445 },
+    "Oceanside": { latitude: 33.1959, longitude: -117.3795 },
+    "Carlsbad": { latitude: 33.1581, longitude: -117.3506 },
+    "Chula Vista": { latitude: 32.6401, longitude: -117.0842 },
+    "Irvine": { latitude: 33.6846, longitude: -117.8265 },
+    "Whittier": { latitude: 33.9792, longitude: -118.0328 },
+    "Venice": { latitude: 33.9850, longitude: -118.4695 },
+    "San Rafael": { latitude: 37.9735, longitude: -122.5311 },
+    "Carson": { latitude: 33.8317, longitude: -118.2818 },
+
     // New York
-    "Brooklyn": { lat: 40.6782, lng: -73.9442 },
-    "New York": { lat: 40.7128, lng: -74.0060 },
-    "Manhattan": { lat: 40.7831, lng: -73.9712 },
-    "Queens": { lat: 40.7282, lng: -73.7949 },
-    "Bronx": { lat: 40.8448, lng: -73.8648 },
-    "Staten Island": { lat: 40.5795, lng: -74.1502 },
-    "New Rochelle": { lat: 40.9115, lng: -73.7823 },
-    "Yonkers": { lat: 40.9312, lng: -73.8987 },
-    "East Hampton": { lat: 40.9632, lng: -72.1848 },
-    "Southampton": { lat: 40.8843, lng: -72.3895 },
-    "Montauk": { lat: 41.0357, lng: -71.9579 },
-    
+    "Brooklyn": { latitude: 40.6782, longitude: -73.9442 },
+    "New York": { latitude: 40.7128, longitude: -74.0060 },
+    "Manhattan": { latitude: 40.7831, longitude: -73.9712 },
+    "Queens": { latitude: 40.7282, longitude: -73.7949 },
+    "Bronx": { latitude: 40.8448, longitude: -73.8648 },
+    "Staten Island": { latitude: 40.5795, longitude: -74.1502 },
+    "New Rochelle": { latitude: 40.9115, longitude: -73.7823 },
+    "Yonkers": { latitude: 40.9312, longitude: -73.8987 },
+    "East Hampton": { latitude: 40.9632, longitude: -72.1848 },
+    "Southampton": { latitude: 40.8843, longitude: -72.3895 },
+    "Montauk": { latitude: 41.0357, longitude: -71.9579 },
+    "Long Island City": { latitude: 40.7425, longitude: -73.9560 },
+    "Mamaroneck": { latitude: 40.9487, longitude: -73.7329 },
+    "Syosset": { latitude: 40.8262, longitude: -73.5023 },
+    "Tuxedo Park": { latitude: 41.2001, longitude: -74.2013 },
+
     // Arizona
-    "Phoenix": { lat: 33.4484, lng: -112.0740 },
-    "Tucson": { lat: 32.2226, lng: -110.9747 },
-    "Mesa": { lat: 33.4152, lng: -111.8315 },
-    "Chandler": { lat: 33.3062, lng: -111.8413 },
-    "Scottsdale": { lat: 33.4942, lng: -111.9261 },
-    "Tempe": { lat: 33.4255, lng: -111.9400 },
-    
+    "Phoenix": { latitude: 33.4484, longitude: -112.0740 },
+    "Tucson": { latitude: 32.2226, longitude: -110.9747 },
+    "Mesa": { latitude: 33.4152, longitude: -111.8315 },
+    "Chandler": { latitude: 33.3062, longitude: -111.8413 },
+    "Scottsdale": { latitude: 33.4942, longitude: -111.9261 },
+    "Tempe": { latitude: 33.4255, longitude: -111.9400 },
+
     // Illinois
-    "Chicago": { lat: 41.8781, lng: -87.6298 },
-    "Naperville": { lat: 41.7508, lng: -88.1535 },
-    "Aurora": { lat: 41.7606, lng: -88.3201 },
-    "Rockford": { lat: 42.2711, lng: -89.0940 },
-    "Joliet": { lat: 41.5250, lng: -88.0817 },
-    
+    "Chicago": { latitude: 41.8781, longitude: -87.6298 },
+    "Naperville": { latitude: 41.7508, longitude: -88.1535 },
+    "Rockford": { latitude: 42.2711, longitude: -89.0940 },
+    "Joliet": { latitude: 41.5250, longitude: -88.0817 },
+    "Deerfield": { latitude: 42.1711, longitude: -87.8445 },
+    "Homewood": { latitude: 41.5570, longitude: -87.6656 },
+
     // Pennsylvania
-    "Philadelphia": { lat: 39.9526, lng: -75.1652 },
-    "Pittsburgh": { lat: 40.4406, lng: -79.9959 },
-    
+    "Philadelphia": { latitude: 39.9526, longitude: -75.1652 },
+    "Pittsburgh": { latitude: 40.4406, longitude: -79.9959 },
+    "Bala Cynwyd": { latitude: 40.0076, longitude: -75.2282 },
+    "Flourtown": { latitude: 40.1046, longitude: -75.2116 },
+    "Lancaster": { latitude: 40.0379, longitude: -76.3055 },
+    "Malvern": { latitude: 40.0362, longitude: -75.5138 },
+
     // Georgia
-    "Atlanta": { lat: 33.7490, lng: -84.3880 },
-    "Savannah": { lat: 32.0809, lng: -81.0912 },
-    "Augusta": { lat: 33.4735, lng: -82.0105 },
-    "Columbus": { lat: 32.4609, lng: -84.9877 },
-    
+    "Atlanta": { latitude: 33.7490, longitude: -84.3880 },
+    "Savannah": { latitude: 32.0809, longitude: -81.0912 },
+    "Augusta": { latitude: 33.4735, longitude: -82.0105 },
+    "Columbus": { latitude: 32.4609, longitude: -84.9877 },
+    "Sandy Springs": { latitude: 33.9304, longitude: -84.3733 },
+    "Tucker": { latitude: 33.8554, longitude: -84.2171 },
+
     // Colorado
-    "Denver": { lat: 39.7392, lng: -104.9903 },
-    "Colorado Springs": { lat: 38.8339, lng: -104.8214 },
-    "Aurora": { lat: 39.7294, lng: -104.8319 },
-    "Boulder": { lat: 40.0150, lng: -105.2705 },
-    
+    "Denver": { latitude: 39.7392, longitude: -104.9903 },
+    "Colorado Springs": { latitude: 38.8339, longitude: -104.8214 },
+    "Boulder": { latitude: 40.0150, longitude: -105.2705 },
+    "Aspen": { latitude: 39.1911, longitude: -106.8175 },
+    "Parker": { latitude: 39.5186, longitude: -104.7614 },
+
     // Tennessee
-    "Nashville": { lat: 36.1627, lng: -86.7816 },
-    "Memphis": { lat: 35.1495, lng: -90.0490 },
-    "Knoxville": { lat: 35.9606, lng: -83.9207 },
-    "Chattanooga": { lat: 35.0456, lng: -85.3097 },
-    
+    "Nashville": { latitude: 36.1627, longitude: -86.7816 },
+    "Memphis": { latitude: 35.1495, longitude: -90.0490 },
+    "Knoxville": { latitude: 35.9606, longitude: -83.9207 },
+    "Chattanooga": { latitude: 35.0456, longitude: -85.3097 },
+
     // North Carolina
-    "Charlotte": { lat: 35.2271, lng: -80.8431 },
-    "Raleigh": { lat: 35.7796, lng: -78.6382 },
-    "Durham": { lat: 35.9940, lng: -78.8986 },
-    "Greensboro": { lat: 36.0726, lng: -79.7920 },
-    
+    "Charlotte": { latitude: 35.2271, longitude: -80.8431 },
+    "Raleigh": { latitude: 35.7796, longitude: -78.6382 },
+    "Durham": { latitude: 35.9940, longitude: -78.8986 },
+    "Greensboro": { latitude: 36.0726, longitude: -79.7920 },
+
     // Missouri
-    "St. Louis": { lat: 38.6270, lng: -90.1994 },
-    "Kansas City": { lat: 39.0997, lng: -94.5786 },
-    
+    "St. Louis": { latitude: 38.6270, longitude: -90.1994 },
+    "Kansas City": { latitude: 39.0997, longitude: -94.5786 },
+    "Olivette": { latitude: 38.6653, longitude: -90.3779 },
+
     // New Jersey
-    "Newark": { lat: 40.7357, lng: -74.1724 },
-    "Jersey City": { lat: 40.7178, lng: -74.0431 },
-    
+    "Newark": { latitude: 40.7357, longitude: -74.1724 },
+    "Jersey City": { latitude: 40.7178, longitude: -74.0431 },
+    "Cresskill": { latitude: 40.9415, longitude: -73.9593 },
+    "East Hanover": { latitude: 40.8201, longitude: -74.3646 },
+    "Englewood": { latitude: 40.8929, longitude: -73.9726 },
+    "Hillsborough Township": { latitude: 40.4863, longitude: -74.6368 },
+    "Monroe Township": { latitude: 40.3318, longitude: -74.4332 },
+    "Morristown": { latitude: 40.7968, longitude: -74.4815 },
+    "Oakland": { latitude: 41.0131, longitude: -74.2643 },
+
     // Nevada
-    "Las Vegas": { lat: 36.1699, lng: -115.1398 },
-    "Reno": { lat: 39.5296, lng: -119.8138 },
-    
+    "Las Vegas": { latitude: 36.1699, longitude: -115.1398 },
+    "Reno": { latitude: 39.5296, longitude: -119.8138 },
+
     // Massachusetts
-    "Boston": { lat: 42.3601, lng: -71.0589 },
-    "Cambridge": { lat: 42.3736, lng: -71.1097 },
-    
+    "Boston": { latitude: 42.3601, longitude: -71.0589 },
+    "Cambridge": { latitude: 42.3736, longitude: -71.1097 },
+    "Brookline": { latitude: 42.3318, longitude: -71.1212 },
+
     // Wisconsin
-    "Milwaukee": { lat: 43.0389, lng: -87.9065 },
-    "Madison": { lat: 43.0731, lng: -89.4012 },
-    
+    "Milwaukee": { latitude: 43.0389, longitude: -87.9065 },
+    "Madison": { latitude: 43.0731, longitude: -89.4012 },
+
     // Michigan
-    "Detroit": { lat: 42.3314, lng: -83.0458 },
-    "Grand Rapids": { lat: 42.9634, lng: -85.6681 },
-    
+    "Detroit": { latitude: 42.3314, longitude: -83.0458 },
+    "Grand Rapids": { latitude: 42.9634, longitude: -85.6681 },
+
     // Maryland
-    "Baltimore": { lat: 39.2904, lng: -76.6122 },
-    "Bethesda": { lat: 38.9807, lng: -77.1003 },
-    
+    "Baltimore": { latitude: 39.2904, longitude: -76.6122 },
+    "Bethesda": { latitude: 38.9807, longitude: -77.1003 },
+    "Pikesville": { latitude: 39.3743, longitude: -76.7225 },
+    "Rosedale": { latitude: 39.3204, longitude: -76.5155 },
+    "Towson": { latitude: 39.4015, longitude: -76.6019 },
+
     // Virginia
-    "Virginia Beach": { lat: 36.8529, lng: -75.9780 },
-    "Norfolk": { lat: 36.8508, lng: -76.2859 },
-    "Richmond": { lat: 37.5407, lng: -77.4360 },
-    
+    "Virginia Beach": { latitude: 36.8529, longitude: -75.9780 },
+    "Norfolk": { latitude: 36.8508, longitude: -76.2859 },
+    "Richmond": { latitude: 37.5407, longitude: -77.4360 },
+    "Charlottesville": { latitude: 38.0293, longitude: -78.4767 },
+
     // Puerto Rico
-    "San Juan": { lat: 18.4655, lng: -66.1057 },
-    "Ponce": { lat: 18.0111, lng: -66.6141 },
-    
+    "San Juan": { latitude: 18.4655, longitude: -66.1057 },
+    "Ponce": { latitude: 18.0111, longitude: -66.6141 },
+
     // Connecticut
-    "Hartford": { lat: 41.7658, lng: -72.6734 },
-    "New Haven": { lat: 41.3083, lng: -72.9279 },
-    "Stamford": { lat: 41.0534, lng: -73.5387 },
-    
+    "Hartford": { latitude: 41.7658, longitude: -72.6734 },
+    "New Haven": { latitude: 41.3083, longitude: -72.9279 },
+    "Stamford": { latitude: 41.0534, longitude: -73.5387 },
+    "Branford": { latitude: 41.2795, longitude: -72.8151 },
+    "New Canaan": { latitude: 41.1468, longitude: -73.4951 },
+    "Newington": { latitude: 41.6979, longitude: -72.7226 },
+
     // New Mexico
-    "Albuquerque": { lat: 35.0844, lng: -106.6504 },
-    "Santa Fe": { lat: 35.6870, lng: -105.9378 },
-    
+    "Albuquerque": { latitude: 35.0844, longitude: -106.6504 },
+    "Santa Fe": { latitude: 35.6870, longitude: -105.9378 },
+
     // Utah
-    "Salt Lake City": { lat: 40.7608, lng: -111.8910 },
-    "Provo": { lat: 40.2338, lng: -111.6585 },
+    "Salt Lake City": { latitude: 40.7608, longitude: -111.8910 },
+    "Provo": { latitude: 40.2338, longitude: -111.6585 },
+    "West Jordan": { latitude: 40.6097, longitude: -111.9391 },
+
+    // Ohio
+    "Cincinnati": { latitude: 39.1031, longitude: -84.5120 },
+    "Cleveland": { latitude: 41.4993, longitude: -81.6944 },
+    "Columbus": { latitude: 39.9612, longitude: -82.9988 },
+    "Avon Lake": { latitude: 41.5053, longitude: -82.0282 },
+    "Garfield Heights": { latitude: 41.4170, longitude: -81.6065 },
+    "Glendale": { latitude: 39.2706, longitude: -84.4594 },
+
+    // Oklahoma
+    "Oklahoma City": { latitude: 35.4676, longitude: -97.5164 },
+
+    // Oregon
+    "Portland": { latitude: 45.5152, longitude: -122.6784 },
+
+    // South Carolina
+    "Mauldin": { latitude: 34.7787, longitude: -82.3118 },
+
+    // Indiana
+    "Westfield": { latitude: 40.0428, longitude: -86.1275 },
+
+    // Kentucky
+    "Louisville": { latitude: 38.2527, longitude: -85.7585 },
+
+    // Minnesota
+    "Mendota Heights": { latitude: 44.8835, longitude: -93.1388 },
+
+    // Maine
+    "Rockport": { latitude: 44.1834, longitude: -69.0726 },
+
+    // Vermont
+    "Wilmington": { latitude: 42.8676, longitude: -72.8718 },
   };
-  
-  const key = city;
+
   // Return city coordinates if found, otherwise return geographic center of USA
-  return cityCoords[key] || { lat: 39.8283, lng: -98.5795 };
+  return cityCoords[city] || { latitude: 39.8283, longitude: -98.5795 };
 }
 
 // Adapted court interface for page template

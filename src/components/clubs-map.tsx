@@ -43,7 +43,14 @@ export function ClubsMap({ clubs, title = "Club Locations", description }: Clubs
   const [selectedClub, setSelectedClub] = useState<Club | null>(null);
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-  if (!apiKey || apiKey === "YOUR_API_KEY_HERE") {
+  // Filter out clubs with invalid coordinates to prevent map crashes
+  const validClubs = clubs.filter(
+    (club) =>
+      Number.isFinite(club.coordinates?.latitude) &&
+      Number.isFinite(club.coordinates?.longitude)
+  );
+
+  if (!apiKey || apiKey === "YOUR_API_KEY_HERE" || validClubs.length === 0) {
     return (
       <Card>
         <CardHeader>
@@ -56,7 +63,9 @@ export function ClubsMap({ clubs, title = "Club Locations", description }: Clubs
         <CardContent>
           <div className="bg-muted rounded-lg p-8 text-center">
             <p className="text-muted-foreground">
-              Map preview unavailable - Google Maps API key not configured
+              {!apiKey || apiKey === "YOUR_API_KEY_HERE"
+                ? "Map preview unavailable - Google Maps API key not configured"
+                : "Map preview unavailable"}
             </p>
           </div>
         </CardContent>
@@ -64,9 +73,9 @@ export function ClubsMap({ clubs, title = "Club Locations", description }: Clubs
     );
   }
 
-  // Calculate center point of all clubs
-  const centerLat = clubs.reduce((sum, club) => sum + club.coordinates.latitude, 0) / clubs.length;
-  const centerLng = clubs.reduce((sum, club) => sum + club.coordinates.longitude, 0) / clubs.length;
+  // Calculate center point of all valid clubs
+  const centerLat = validClubs.reduce((sum, club) => sum + club.coordinates.latitude, 0) / validClubs.length;
+  const centerLng = validClubs.reduce((sum, club) => sum + club.coordinates.longitude, 0) / validClubs.length;
 
   return (
     <Card>
@@ -82,12 +91,12 @@ export function ClubsMap({ clubs, title = "Club Locations", description }: Clubs
           <APIProvider apiKey={apiKey}>
             <Map
               defaultCenter={{ lat: centerLat, lng: centerLng }}
-              defaultZoom={clubs.length === 1 ? 15 : 10}
+              defaultZoom={validClubs.length === 1 ? 15 : 10}
               mapId="padel-clubs-map"
               gestureHandling="cooperative"
               disableDefaultUI={false}
             >
-              {clubs.map((club, index) => (
+              {validClubs.map((club, index) => (
                 <AdvancedMarker
                   key={club.id}
                   position={{ lat: club.coordinates.latitude, lng: club.coordinates.longitude }}
