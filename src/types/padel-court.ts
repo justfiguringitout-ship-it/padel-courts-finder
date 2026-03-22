@@ -41,6 +41,8 @@ export interface PadelCourt {
   pricingText?: string;                          // Pricing info as free text
   status?: "open" | "coming_soon" | "temporarily_closed"; // Facility status
   ogImageUrl?: string;                                    // OG image URL from club website
+  googlePlacePhotoRef?: string;                            // Google Places photo_reference
+  googleMapsPlaceId?: string;                              // Google Maps place_id
 }
 
 export interface OpeningHours {
