@@ -51,6 +51,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "Excellent courts indoor/outdoor, friendly staff, great clinics/lessons, strong community vibe, ample parking",
     pricingText: "Court bookings start at $28/90min outdoor; clinics $60/90min; private lessons $150/60min",
     status: 'open',
+    ogImageUrl: "https://framerusercontent.com/images/4OYRFRKGm1qkSAL18PZsZ8cSs.jpg",
   },
     {
     id: 2,
@@ -129,6 +130,7 @@ export const padelCourts: PadelCourt[] = [
     status: 'open',
   
     positiveReviewThemes: "High-quality courts and facilities, excellent staff and coaches, comfortable AC environment",
+    ogImageUrl: "https://img1.wsimg.com/isteam/ip/121636bb-79f2-4ba5-b6e8-64d71341d62c/Tezza-8742.JPG",
   },
     {
     id: 4,
@@ -210,6 +212,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Peak: ~$50-65/hour; Off-peak: ~$30-55/hour; clinics ~$50; student membership $10 (varies by source, check site)",
     status: 'open',
+    ogImageUrl: "https://cdn.prod.website-files.com/661525f50a5ecbcf790108d4/66a355e9bad39cc346d16a60_miami%20padel%20court.webp",
   },
   {
     id: 6,
@@ -276,6 +279,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "welcoming community, top facilities, great coaching, good food/coffee, location",
     pricingText: "120 min court rental: Off-peak Mon-Fri 11AM-4PM & 10-11:30PM $51 +tax; Early 7-8:30AM $100 +tax; Regular $128 +tax",
     status: 'open',
+    ogImageUrl: "https://framerusercontent.com/images/j7FcF14p5x9LFrDdmlBFmwcWeR4.png",
   },
     {
     id: 8,
@@ -362,6 +366,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "luxury facilities, friendly staff, great amenities, clean courts",
     pricingText: "Memberships $200-450/month; courts $20-40/hr; drop-in $15",
     status: 'open',
+    ogImageUrl: "https://replayclub.com/wp-content/uploads/2025/11/membership_0003_Padel-pickleball.jpg",
   },
     {
     id: 10,
@@ -554,6 +559,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "modern facilities, great community/vibe, excellent coaches, high-quality courts, exclusive atmosphere, attention to detail",
     pricingText: "Memberships $350/month (Premier); court fees ~$45/1.5hr for members (non-member higher); bookings via app/site",
     status: 'open',
+    ogImageUrl: "https://img1.wsimg.com/isteam/ip/3c49ef86-1deb-488c-834e-b9962882f6f0/ARQUITECT38.JPG",
   },
     {
     id: 15,
@@ -693,6 +699,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly staff, clean facilities, great courts, fun atmosphere",
     pricingText: "memberships from $50/month; court rental rates unknown",
     status: 'open',
+    ogImageUrl: "https://cubepadel.com/wp-content/uploads/2024/08/cube-padel-slide.jpg",
   },
     {
     id: 18,
@@ -739,6 +746,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "high-quality facilities, great courts, coaching, community atmosphere",
     pricingText: "Memberships from $190/month; court bookings ~$40-80/hour (peak/off-peak varies)",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png/v1/fit/w_2500,h_1330,al_c/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png",
   },
     {
     id: 19,
@@ -875,6 +883,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "clean courts, good coaching, friendly staff, community events",
     pricingText: "~$25–$45 hourly",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/432b84_8924925f845b47e4a4619c56bb5a9133~mv2.jpg/v1/fill/w_2500,h_1666,al_c/432b84_8924925f845b47e4a4619c56bb5a9133~mv2.jpg",
   },
     {
     id: 23,
@@ -921,6 +930,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Memberships: Club $60/mo, Plus $150/mo, Premium $250/mo, Signature $350/mo (initiation $150); discounts on court fees (base est. $40-50/hr), day pass $25",
     status: 'open',
+    ogImageUrl: "https://charlottepadelclub.com/og-image.png",
   },
     {
     id: 24,
@@ -1016,6 +1026,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Memberships from $90/month student to $3,720/year household; hourly rates unknown. See https://nashville.padel.haus/f/nashville/memberships",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png/v1/fit/w_2500,h_1330,al_c/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png",
   },
     {
     id: 28,
@@ -1195,6 +1206,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Public: $65/80 per hour (weekday/weekend); Memberships from $1200 (off-peak) to $5250 (ORO) seasonal May-Sep; racket rental $10 public",
     status: 'open',
+    ogImageUrl: "http://brisas.us/cdn/shop/files/BRISAS-Share.png?v=1752676791",
   },
   {
     id: 36,
@@ -1283,6 +1295,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "great courts and facilities, amazing coaches/staff, clean, community vibe, value for money",
     pricingText: "Court rentals from $65-$120/hour; memberships available with discounts",
     status: 'open',
+    ogImageUrl: "http://static1.squarespace.com/static/68951892d186a242dea5edf8/t/689a3f9647f3046a6ca08cd7/1761752096804/PP.png?format=1500w",
   },
     {
     id: 38,
@@ -1369,6 +1382,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly staff, community, beachside location",
     pricingText: "Court $36-$84/hr; membership $500/yr w/ 20% discount; coaching $119/hr incl court",
     status: 'open',
+    ogImageUrl: "https://padelcalifornia.us/wp-content/uploads/2024/01/padel.jpg",
   },
   {
     id: 41,
@@ -1542,6 +1556,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "excellent courts, helpful staff, clean facilities, community events",
     pricingText: "Peak: $180/1.5hr non-member, $99/1.5hr premium member; Memberships: $140/mo; Rentals: standard racket $5",
     status: 'open',
+    ogImageUrl: "https://cubepadel.com/wp-content/uploads/2024/08/cube-padel-slide.jpg",
   },
     {
     id: 45,
@@ -1585,6 +1600,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "high quality facilities, great coaching, community",
     pricingText: "Unlimited membership $299/month; hourly $30-65",
     status: 'open',
+    ogImageUrl: "https://urbanpadel.us/wp-content/uploads/2025/07/side-view-woman-holding-palette-scaled.jpg",
   },
     {
     id: 47,
@@ -1667,6 +1683,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "courts slightly close together",
     pricingText: "Court fees: $22/person for padel (+ $25 day pass for non-members); lessons $120-140/hr; memberships available",
     status: 'open',
+    ogImageUrl: "http://static1.squarespace.com/static/668dedb87d45f9216c55c187/t/67ec6eb911a5d47ebf31c1d2/1743548089856/Untitled+design+%282%29+copy.png?format=1500w",
   },
     {
     id: 51,
@@ -1711,6 +1728,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Off-peak per person/hr: Platinum $0, Gold/Family $10, Bronze $15, Walk-in $20; Peak: $0/$16/$30/$35. Memberships Bronze $45/mo, Gold $99/mo, Platinum $350/mo, Family $200/mo",
     status: 'open',
+    ogImageUrl: "https://conquerpadel.com/wp-content/uploads/2026/01/hero.webp",
   },
 
   // 52-141: Verified padel clubs added October 13, 2025
@@ -1758,6 +1776,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "excellent courts, great coaching, community vibe",
     pricingText: "$40+ per hour; lessons $40–$80/hr",
     status: 'open',
+    ogImageUrl: "https://img1.wsimg.com/isteam/stock/24442",
   },
     {
     id: 53,
@@ -2079,6 +2098,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Members-only; court time ~$150 for 90 min for members (per group); initiation fee required; details via membership application",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/2d8d9d_7b35a0bae0aa4f3cadcc137d7ef4fd66%7Emv2.jpeg/v1/fit/w_2500,h_1330,al_c/2d8d9d_7b35a0bae0aa4f3cadcc137d7ef4fd66%7Emv2.jpeg",
   },
     {
     id: 60,
@@ -2125,6 +2145,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "well-kept courts, helpful staff, lively community, waterfront location",
     pricingText: "$20–$50 per hour per court; memberships available with discounts; corporate events ~$250/hour per court",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/2d8d9d_7b35a0bae0aa4f3cadcc137d7ef4fd66%7Emv2.jpeg/v1/fit/w_2500,h_1330,al_c/2d8d9d_7b35a0bae0aa4f3cadcc137d7ef4fd66%7Emv2.jpeg",
   },
     {
     id: 61,
@@ -2174,6 +2195,7 @@ export const padelCourts: PadelCourt[] = [
     status: 'open',
   
     courtSurface: "synthetic turf",
+    ogImageUrl: "https://static.wixstatic.com/media/2d8d9d_7b35a0bae0aa4f3cadcc137d7ef4fd66%7Emv2.jpeg/v1/fit/w_2500,h_1330,al_c/2d8d9d_7b35a0bae0aa4f3cadcc137d7ef4fd66%7Emv2.jpeg",
   },
     {
     id: 64,
@@ -2222,6 +2244,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "No showers https://www.youtube.com/watch?v=i3ipAtGGp5g]",
     pricingText: "Court bookings $120/hour ($30/person); memberships $199+/month; off-peak $65/hr, peak $75/hr https://padelupusa.playbypoint.com/f/padelupusa/pages/faqs-651bc61a-d86b-4794-9a14-daf21b545dcf, https://padelupusa.playbypoint.com/f/padelupusa/memberships, https://www.padelcourtsfinder.com/courts/padel-up-sterling]",
     status: 'open',
+    ogImageUrl: "https://i.vimeocdn.com/video/1981222474-1a2a0df466ab7205e7a26769ba646901975983d9b21029b4e20aaf0f671f47ec-d_1920x1080?r=pad",
   },
     {
     id: 65,
@@ -2363,6 +2386,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "overpriced https://www.yelp.com/biz/the-padel-courts-los-angeles-los-angeles",
     pricingText: "Courts ~$25-60/hr, clinics $35-45, lessons $60-120/hr",
     status: 'open',
+    ogImageUrl: "https://img1.wsimg.com/isteam/ip/37b16837-021b-439a-bf27-a443023d5071/09.jpg",
   },
     {
     id: 68,
@@ -2588,6 +2612,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "clean courts, good condition, friendly staff, well-maintained",
     pricingText: "Court rental 1.5hr $88; lessons available (pricing varies); ~$20-50/hr estimates",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/70ef0f_48ea6a300f884ef6824f5473165ab0ec%7Emv2.png/v1/fit/w_2500,h_1330,al_c/70ef0f_48ea6a300f884ef6824f5473165ab0ec%7Emv2.png",
   },
     {
     id: 74,
@@ -2631,6 +2656,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none mentioned",
     pricingText: "Memberships from $99/mo individual; non-members $225/hr",
     status: 'open',
+    ogImageUrl: "https://framerusercontent.com/images/nYw4QQOJCrJ3pMG7ZsUM9tnxVkQ.png",
   },
     {
     id: 75,
@@ -2726,6 +2752,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "high quality facilities, great environment, clean, friendly staff, good for all levels",
     pricingText: "Peak: $100/hr ($25/person); Off-peak: $60/hr ($15/person). Memberships: Monthly $220, Annual $2400, Family monthly $360, annual $3800. Paddle rental $9.",
     status: 'open',
+    ogImageUrl: "http://static1.squarespace.com/static/6612e6bf5da81c78b78242e7/t/6629231663a8807a1c765ba4/1713971990369/Social%402x.png?format=1500w",
   },
     {
     id: 77,
@@ -2771,6 +2798,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly community, well-maintained courts, attentive staff, full amenities, professional facility",
     negativeReviewThemes: "none found (perfect 5.0 rating)",
     status: 'open',
+    ogImageUrl: "https://res.cloudinary.com/playtomic/image/upload/v1741318678/pro/tenants/233180b0-2551-4d98-8e9e-401a08fc1c89/1741318677655.jpg",
   },
   {
     id: 78,
@@ -2888,6 +2916,7 @@ export const padelCourts: PadelCourt[] = [
     instagram: "https://www.instagram.com/padel.social.us/",
     facebook: "https://www.facebook.com/p/Padel-Social-61560079678777/",
     status: "open",
+    ogImageUrl: "https://padelsocial.com/wp-content/uploads/2025/03/padel-social.jpg",
   },
     {
     id: 81,
@@ -3063,6 +3092,7 @@ export const padelCourts: PadelCourt[] = [
     status: 'open',
   
     foodAndDrink: false,
+    ogImageUrl: "https://img1.wsimg.com/isteam/ip/c2d127b7-18fe-4042-ae6d-8d53e85584af/Paddles%20Up%20Black%20P%20copy.png",
   },
     {
     id: 87,
@@ -3241,6 +3271,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none found",
     pricingText: "$100/hour",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/3d6662_258a5bf26c0e4993a35b4e14fb1e0ed1%7Emv2.png/v1/fit/w_2500,h_1330,al_c/3d6662_258a5bf26c0e4993a35b4e14fb1e0ed1%7Emv2.png",
   },
     {
     id: 92,
@@ -3519,6 +3550,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "Gets hot, some courts smaller/tighter, low water pressure (prior)",
     pricingText: "Pay-to-play: $60/hour, $90/1.5 hours prime time indoor; Memberships from $49/month to $500 all-you-can-play",
     status: 'open',
+    ogImageUrl: "https://kingdomofpadel.com/wp-content/uploads/2025/08/2-scaled.webp",
   },
     {
     id: 100,
@@ -3884,6 +3916,7 @@ export const padelCourts: PadelCourt[] = [
     rentalAvailable: true,
     pricingText: "$55 per hour",
     status: 'open',
+    ogImageUrl: "https://framerusercontent.com/images/tB0oFrHEWK2Q44p1C8CfOf5W2xs.jpg",
   },
     {
     id: 111,
@@ -3931,6 +3964,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly atmosphere, good for all levels",
     pricingText: "Memberships: Student $115/mo (unlimited daytime), Pro $135+/mo (8 bookings/mo), Premium $220+/mo (unlimited); Court bookings ~$15-28/1.5hr",
     status: 'open',
+    ogImageUrl: "https://upadel.us/wp-content/uploads/2024/05/IMG_9086-scaled.jpg",
   },
     {
     id: 112,
@@ -4076,6 +4110,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none found",
     pricingText: "~$25-30/player per 90min via Playtomic; courts ~$80/hr",
     status: 'open',
+    ogImageUrl: "https://cdn.prod.website-files.com/65d108bc26bc0f5d9c9ea6ae/68d32d1b1603664a9e8ec178_Drone_Share_1200_630.avif",
   },
     {
     id: 118,
@@ -4120,6 +4155,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "poor tournament organization",
     pricingText: "membership-based (initiation est. $5k, monthly est. $500); hourly unknown",
     status: 'open',
+    ogImageUrl: "https://cdn.prod.website-files.com/6705a9746d6ac114e2a7ae91/67953d3578ead9cd535446cd_Screenshot%202025-01-25%20143608.avif",
   },
     {
     id: 119,
@@ -4161,6 +4197,7 @@ export const padelCourts: PadelCourt[] = [
     socialArea: true,
     positiveReviewThemes: "premium courts, welcoming community, expert coaching",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/4087dd_76d3946fd86d4f318f4370eaa624d673%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/4087dd_76d3946fd86d4f318f4370eaa624d673%7Emv2.jpg",
   },
     {
     id: 121,
@@ -4328,6 +4365,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none",
     pricingText: "Founding membership $149/mo (first 3 months); racquets/balls included",
     status: 'open',
+    ogImageUrl: "https://epic-padel.com/imgs/opengraph-image-v2.jpg",
   },
   {
     id: 126,
@@ -4353,7 +4391,8 @@ export const padelCourts: PadelCourt[] = [
     chainName: "Charlotte Padel Club",
     locationName: "Matthews",
     verified: true,
-    verificationDate: "2025-10-13"
+    verificationDate: "2025-10-13",
+    ogImageUrl: "https://charlottepadelclub.com/og-image.png",
   },
     {
     id: 127,
@@ -4525,6 +4564,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "no heating (one review)",
     pricingText: "Peak: $35/hour/person; Memberships from $160/month, founding from $2,100/year",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png/v1/fit/w_2500,h_1330,al_c/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png",
   },
     {
     id: 136,
@@ -4736,6 +4776,7 @@ export const padelCourts: PadelCourt[] = [
     socialArea: true,
     pricingText: "$20–$50 per hour",
     status: 'open',
+    ogImageUrl: "https://img1.wsimg.com/isteam/ip/6b3485fd-b059-4cac-a3c9-bf191f9572ca/padel4.jpg",
   },
     {
     id: 141,
@@ -4781,6 +4822,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "ownership handling issues",
     pricingText: "$110/hour; $5 paddle rental; 50% discount with membership",
     status: 'open',
+    ogImageUrl: "https://img1.wsimg.com/isteam/ip/a6daecec-4ccc-4ee4-aec6-46971b87520e/PADEL%20PALS_AERIAL%20(2).jpg",
   },
     {
     id: 142,
@@ -4826,6 +4868,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "Rude staff at events, parking, lack of amenities at events (water, benches)",
     pricingText: "Non-members: court booking $23/player, racquet $10, lessons $25+; Members: free courts/rentals (lessons vary); Memberships ~$299/mo",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/11062b_4d6455c7d7094955a1ebca5b0d537b80~mv2.jpg/v1/fill/w_2500,h_1666,al_c/11062b_4d6455c7d7094955a1ebca5b0d537b80~mv2.jpg",
   },
     {
     id: 143,
@@ -5089,6 +5132,7 @@ export const padelCourts: PadelCourt[] = [
     instagram: "@padelhaus",
     phone: "(917) 970-0036",
     status: 'open',
+    ogImageUrl: "https://static.wixstatic.com/media/3d6662_258a5bf26c0e4993a35b4e14fb1e0ed1%7Emv2.png/v1/fit/w_2500,h_1330,al_c/3d6662_258a5bf26c0e4993a35b4e14fb1e0ed1%7Emv2.png",
   },
   {
     id: 151,
@@ -5204,6 +5248,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "welcoming atmosphere, good staff",
     pricingText: "$110/90min (~$73/hr); typical indoor $20-45/hr",
     status: 'open',
+    ogImageUrl: "https://res.cloudinary.com/playtomic/image/upload/v1737310655/pro/tenants/021f6ec2-362b-4604-a697-0ed98e1c2de6/1737310654908.jpg",
   },
   {
     id: 155,
@@ -5297,7 +5342,8 @@ export const padelCourts: PadelCourt[] = [
     chainName: "Cube Padel",
     locationName: "Chicago",
     verified: true,
-    verificationDate: "2025-10-15"
+    verificationDate: "2025-10-15",
+    ogImageUrl: "https://cubepadel.com/wp-content/uploads/2024/08/cube-padel-slide.jpg",
   },
     {
     id: 158,
@@ -5525,7 +5571,8 @@ export const padelCourts: PadelCourt[] = [
     chainName: "Padel California",
     locationName: "Whittier",
     description: "Padel California's Whittier location in Los Angeles features 5 outdoor padel courts and a clubhouse. Part of the first padel-only club chain in California.",
-    verified: false
+    verified: false,
+    ogImageUrl: "https://padelcalifornia.us/wp-content/uploads/2024/01/padel.jpg",
   },
   // --- Section 2: 203 New Courts ---
   {
@@ -5567,6 +5614,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "90 min: $80 ($20/pp), 120 min: $107 ($26.75/pp); racket rental $5, balls $9",
     status: "open",
     verified: false,
+    ogImageUrl: "https://eslpadel.com/wp-content/uploads/2026/02/default-social-share-eslpadel.webp",
   },
   {
     id: 175,
@@ -5608,6 +5656,7 @@ export const padelCourts: PadelCourt[] = [
     verified: false,
   
     rentalAvailable: true,
+    ogImageUrl: "http://static1.squarespace.com/static/67aa658739053174f72f4dff/t/67ae5daba7ed9416e7b4165d/1739480491590/LAPC_Social_021325.jpg?format=1500w",
   },
   {
     id: 176,
@@ -5762,6 +5811,7 @@ export const padelCourts: PadelCourt[] = [
     membersOnly: true,
     status: "open",
     verified: false,
+    ogImageUrl: "https://img1.wsimg.com/isteam/ip/fe6e1161-9fa4-47d6-af5c-3c840e0e73fd/green%20aspen%20padel%20club.png",
   },
   {
     id: 193,
@@ -5806,6 +5856,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Non-members: peak $35/hr per person, off-peak $25/hr per person; open play $50/2hr; private lessons $120-150/hr. Premier membership $125/mo + $100 initiation (discounted rates)",
     status: "open",
     verified: false,
+    ogImageUrl: "http://static1.squarespace.com/static/67d46a6b2cd3d15d5ca42324/t/69431b90aa73f02235ce7fe4/1766005648847/Untitled+design+%2817%29.png?format=1500w",
   },
   {
     id: 195,
@@ -5844,6 +5895,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Free 10am-4pm weekdays; $80/hour peak (7-10am & 4-9pm)",
     status: "open",
     verified: false,
+    ogImageUrl: "https://img1.wsimg.com/isteam/ip/fe6e1161-9fa4-47d6-af5c-3c840e0e73fd/green%20aspen%20padel%20club.png",
   },
   {
     id: 196,
@@ -5928,6 +5980,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Membership $100/mo + $300 initiation; padel $25/pp/hr, pickleball $12.50/pp/hr (members)",
     status: "open",
     verified: false,
+    ogImageUrl: "https://lirp.cdn-website.com/1eae966c/dms3rep/multi/opt/Serve+-+Smash+%281200+x+630+px%29-35da9fb5-1920w.png",
   },
   {
     id: 198,
@@ -6052,6 +6105,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Court rental starting at $28 per player for 90min outdoor; private lessons $150/60min; clinics $60/90min",
     status: "open",
     verified: false,
+    ogImageUrl: "https://framerusercontent.com/images/4OYRFRKGm1qkSAL18PZsZ8cSs.jpg",
   },
   {
     id: 204,
@@ -6097,6 +6151,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$99/hour, $129/1.5 hours; memberships from $99/year ($19/match premium)",
     status: "open",
     verified: false,
+    ogImageUrl: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1af123e0-14ee-45f3-853c-6f02f44d9a08/id-preview-69f28f4e--8382a601-3cc4-4edd-acda-c9a458f86e1e.lovable.app-1774126225266.png",
   },
   {
     id: 206,
@@ -6186,6 +6241,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships: Individual $459/mo (4 clinics, unlimited reservations), Family $559/mo; court rates excellent per reviews",
     status: "open",
     verified: false,
+    ogImageUrl: "https://thesetpadel.com/images/man_tennis-1450x815.webp",
   },
   {
     id: 215,
@@ -6350,6 +6406,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "hard to find, confusing directions",
     status: "open",
     verified: false,
+    ogImageUrl: "https://cdn.prod.website-files.com/601447d1b548d50166a4c2bb/60145c04b862aa5afdbc9bc5_Stadio%20Landing%20Image.jpg",
   },
   {
     id: 225,
@@ -6650,6 +6707,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Pay-per-play: outdoor $30-35/player/hour, indoor $50/player/1.5hr ($200/court); memberships: annual $10k unlimited, monthly $275 w/ discounts; lessons $40-175",
     status: "open",
     verified: false,
+    ogImageUrl: "https://static.wixstatic.com/media/8ccd58_2a8207f9ec9b498ab1e3a33def718c90~mv2.jpg/v1/fill/w_2500,h_1666,al_c/8ccd58_2a8207f9ec9b498ab1e3a33def718c90~mv2.jpg",
   },
   {
     id: 242,
@@ -6777,6 +6835,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "Excellent coaching and facilities; welcoming staff",
     status: "open",
     verified: false,
+    ogImageUrl: "https://www.mouratoglou.com/wp-content/uploads/2025/07/a329c38d-2bf2-4952-abb1-a083bedbdd76-DJI202504142308160007D.jpg",
   },
   {
     id: 246,
@@ -6858,6 +6917,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     verified: false,
+    ogImageUrl: "https://proximopadel.com/wp-content/uploads/2025/09/PROXIMO-PADEL-RENDER-2-scaled.jpg",
   },
   {
     id: 249,
@@ -6976,6 +7036,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Peak: $25/hr/person (weekday evenings, Sat mornings); Non-peak: $20/hr/person; Clinics: $40/participant",
     status: "open",
     verified: false,
+    ogImageUrl: "http://static1.squarespace.com/static/69233f86258ff11e79299905/t/693af6a08f3e0732e818ffc3/1765471904256/North+Point+Padel+Social.png?format=1500w",
   },
   {
     id: 253,
@@ -7061,6 +7122,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$128/hour per court (example); Founding Membership $160/month",
     status: "open",
     verified: false,
+    ogImageUrl: "http://static1.squarespace.com/static/6768de4972535a39d2be8adc/t/680e1f9bc0c9454626961aa4/1745756059423/PADELHUB+BANNER.png?format=1500w",
   },
   {
     id: 256,
@@ -7098,6 +7160,7 @@ export const padelCourts: PadelCourt[] = [
     socialArea: true,
     status: "open",
     verified: false,
+    ogImageUrl: "https://brooklinepaddle.com/wp-content/uploads/2024/12/Wreck-League-Champs.png",
   },
   {
     id: 259,
@@ -7182,6 +7245,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Pay-per-play: $20/player/90min prime, $10/player/90min non-prime; Memberships: $575/year single, $60/month",
     status: "open",
     verified: false,
+    ogImageUrl: "https://img1.wsimg.com/isteam/ip/da8c0392-07d5-4c0c-bbdf-2c4d01034ff9/c1581238-2c9b-4cec-bc39-91a17f433990.jpg",
   },
   {
     id: 261,
@@ -7434,6 +7498,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships from $275/mo; private lessons $100-160/hr; court fees 50% off for members (exact hourly unknown)",
     status: "open",
     verified: false,
+    ogImageUrl: "http://static1.squarespace.com/static/65944868df93fc061290dee0/t/66a9514e5d837b1f43a2293e/1722372430186/Social_Site_Image_1800x.jpg?format=1500w",
   },
   {
     id: 267,
@@ -7478,6 +7543,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships: Flex $100/mo pay-per-play; Core $225/mo incl. 10 hrs/mo reduced fees; All Access $275/mo 90min daily + lesson. +$100 one-time fee each. Pay-per-play rates unknown.",
     status: "open",
     verified: false,
+    ogImageUrl: "https://framerusercontent.com/images/mqctaR6uhhmQ9MSxy3Zl3cXS6g.png",
   },
   {
     id: 268,
@@ -7607,6 +7673,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$20–$45/hour; memberships available",
     status: "open",
     verified: false,
+    ogImageUrl: "http://static1.squarespace.com/static/633bb9752a5d2a489346bdb7/t/638b731e56227f270cf9f6ee/1670083358463/WhatsApp+Image+2022-11-24+at+4.36.21+PM.jpeg?format=1500w",
   },
   {
     id: 271,
@@ -7646,6 +7713,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Court rentals $20-80/hr (varies by peak/off-peak); lessons $60-100/hr; memberships available",
     status: "open",
     verified: false,
+    ogImageUrl: "http://static1.squarespace.com/static/633bb9752a5d2a489346bdb7/t/638b731e56227f270cf9f6ee/1670083358463/WhatsApp+Image+2022-11-24+at+4.36.21+PM.jpeg?format=1500w",
   },
   {
     id: 272,
@@ -7688,6 +7756,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Membership $400/year (court $20/hr, open play $35); non-member hourly ~$20+/person, clinics $40, private lessons $120/hr",
     status: "open",
     verified: false,
+    ogImageUrl: "https://theclubnj.com/wp-content/uploads/2025/04/the-club-at-monre-about-page.jpg",
   },
   {
     id: 273,
@@ -7927,6 +7996,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "unknown (private residential club)",
     status: "open",
     verified: false,
+    ogImageUrl: "https://www.datocms-assets.com/143478/1730720710-2-views-copy.jpeg",
   },
   {
     id: 289,
@@ -8171,6 +8241,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships: Open $0/mo, Basic $45/mo (20% off courts), Premium $100/mo (40% off courts); racket rental $7 non-members",
     status: "open",
     verified: false,
+    ogImageUrl: "https://padel-square.com/wp-content/uploads/2025/03/padelsquare-sample10-1-e1745460648270.png",
   },
   {
     id: 295,
@@ -8213,6 +8284,7 @@ export const padelCourts: PadelCourt[] = [
     socialArea: true,
     status: "open",
     verified: false,
+    ogImageUrl: "https://www.glendalelyceum.com/wp-content/uploads/2024/08/banner.webp",
   },
   {
     id: 296,
@@ -8294,6 +8366,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$60 per court per hour ($15 per player)",
     status: "open",
     verified: false,
+    ogImageUrl: "https://www.foundrypadel.com/og-image.png",
   },
   {
     id: 298,
@@ -8416,6 +8489,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$48/hour; $199/year padel membership",
     status: "open",
     verified: false,
+    ogImageUrl: "https://static.wixstatic.com/media/bdab60_74032b17807c4affa7eef04458c85db7%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/bdab60_74032b17807c4affa7eef04458c85db7%7Emv2.jpg",
   },
   {
     id: 302,
@@ -8462,6 +8536,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Court $20-27/hr per person (off-peak/peak, 4 players); rentals $10-15; lessons $100-150; memberships $120+/mo",
     status: "open",
     verified: false,
+    ogImageUrl: "https://cdn.prod.website-files.com/67aa4d62be8b23d215472bb3/682a919e94d7fac2596f5c98_open-graph.jpg",
   },
   {
     id: 305,
@@ -8503,6 +8578,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$15/$20 per player (non-peak/peak, 60 min)",
     status: "open",
     verified: false,
+    ogImageUrl: "https://40fortypadel.com/wp-content/uploads/2025/01/40FP-RacketClub_001.jpg",
   },
   {
     id: 306,
@@ -8623,6 +8699,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Gold membership $100/mo, VIP $180/mo; hourly unknown",
     status: "open",
     verified: false,
+    ogImageUrl: "https://framerusercontent.com/images/tB0oFrHEWK2Q44p1C8CfOf5W2xs.jpg",
   },
   {
     id: 314,
@@ -8741,6 +8818,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$20-40 per hour (typical)",
     status: "open",
     verified: false,
+    ogImageUrl: "https://img1.wsimg.com/isteam/ip/70f7342b-4856-4e9b-9cbf-411b1fd1fda5/IMG_7097.jpeg",
   },
   {
     id: 321,
@@ -8781,6 +8859,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "unknown (court reservations required, discounts on Tuesdays)",
     status: "open",
     verified: false,
+    ogImageUrl: "https://serveep.com/assets/ogimage2-30e56bc0c113fc0deb6e0f348f8858f0fb9335105e57f3ea38dfe7914ff4c088.png",
   },
   {
     id: 322,
@@ -8933,6 +9012,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "luxurious facilities, excellent amenities",
     status: "open",
     verified: false,
+    ogImageUrl: "https://lh3.googleusercontent.com/ZUSFUy8pQIQnY3S_XtM65IyWqcl6IekxXGyVHtj6yqd4IlY1j-28qVE1tQhgbw94jqdksr-cur6iedtbJrnyI9exf-oJgYmejXUg9dLuWzjtyLC8KQ=s0",
   },
   {
     id: 326,
@@ -9056,6 +9136,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     verified: false,
+    ogImageUrl: "https://storage.googleapis.com/gpt-engineer-file-uploads/UDgP0xXJy1N19mTCA1imgThAT2C3/social-images/social-1762813287996-Punto_Azul_ACA_HTX_transparent.png",
   },
   {
     id: 330,
@@ -9234,6 +9315,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Founding yearly memberships available (details/pricing coming soon); book via Playtomic",
     status: "open",
     verified: false,
+    ogImageUrl: "https://deucespadel.com/og-image.png",
   },
   {
     id: 334,
@@ -9276,6 +9358,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$15-40 per hour/1.5 hours (peak/non-peak via MATCHi)",
     status: "open",
     verified: false,
+    ogImageUrl: "https://upadel.us/wp-content/uploads/2023/12/PHOTO-2023-12-05-11-27-26-scaled.jpg",
   },
   {
     id: 335,
@@ -9314,6 +9397,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "Friendly owners/staff, great facilities and atmosphere",
     status: "open",
     verified: false,
+    ogImageUrl: "https://wpadel.us/wp-content/uploads/2024/05/HOR-CHICO.png",
   },
   {
     id: 337,
@@ -9480,6 +9564,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "maintenance issues, bugs, poor service",
     status: "open",
     verified: false,
+    ogImageUrl: "https://d282wvk2qi4wzk.cloudfront.net/RKdr7CCAEA_burgee_1686171112624",
   },
   {
     id: 342,
@@ -9646,6 +9731,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Founding membership $2000 (limited); hourly/pay-per-play pricing not announced",
     status: "open",
     verified: false,
+    ogImageUrl: "https://static.wixstatic.com/media/27dace_a25d462befcd48d48d465545937e8d64%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/27dace_a25d462befcd48d48d465545937e8d64%7Emv2.jpg",
   },
   {
     id: 351,
@@ -9769,6 +9855,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Padel: $60/hour (non-members), $30/hour (members); Pickleball: $30/hour; Memberships: $250 single/$350 family annual; Lessons: $100-$120/hr",
     status: "open",
     verified: false,
+    ogImageUrl: "https://www.brookboundinnvt.com/wp-content/uploads/2023/07/302308116_567806818474475_8777716555500732027_n.jpg",
   },
   // --- Section 4: Coming Soon Courts ---
   {
@@ -10015,6 +10102,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "coming_soon",
     verified: false,
+    ogImageUrl: "https://cdn.prod.website-files.com/67728a09bfa0af15d71f0c79/6868092ff9b28abead26b1e9_DUS%20Opengraph%20White.avif",
   },
   {
     id: 364,
@@ -10164,6 +10252,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$30–$70 per court/hour; memberships available",
     status: "coming_soon",
     verified: false,
+    ogImageUrl: "https://static.wixstatic.com/media/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png/v1/fit/w_2500,h_1330,al_c/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png",
   },
   {
     id: 369,
@@ -10283,6 +10372,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "per 90-min session per player (TBD); North Austin example $30/90min",
     status: "coming_soon",
     verified: false,
+    ogImageUrl: "https://cdn.prod.website-files.com/65d108bd26bc0f5d9c9ea793/6966994dc5e9297c599814c3_Square_6.jpeg",
   },
   {
     id: 372,
@@ -10354,6 +10444,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Founding memberships coming soon",
     status: "coming_soon",
     verified: false,
+    ogImageUrl: "https://img1.wsimg.com/isteam/getty/1330166129",
   },
   {
     id: 375,
@@ -10394,6 +10485,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Founding membership: $0 initiation fee (regular up to $250); hourly rates unknown",
     status: "coming_soon",
     verified: false,
+    ogImageUrl: "https://cdn.prod.website-files.com/693ffa7584910cc8434dde2d/6964bb01e1517735a31526f8_OpenGraph.jpg",
   },
 ];
 

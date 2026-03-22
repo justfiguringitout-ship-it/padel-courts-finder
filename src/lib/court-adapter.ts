@@ -698,11 +698,17 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
     `${court.address}, ${court.city}, ${stateCode} ${court.zipCode}`
   )}`;
 
-  // Generate placeholder images
+  // Use OG image from club website when available, otherwise Unsplash placeholder
+  const placeholderUrl = "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=800&fit=crop";
+  const primaryImageUrl = court.ogImageUrl || placeholderUrl;
+  const primaryImageAlt = court.ogImageUrl
+    ? `${court.name} - Padel courts in ${court.city}, ${stateCode}`
+    : `${court.name} - Main court view`;
+
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=800&fit=crop",
-      alt: `${court.name} - Main court view`,
+      url: primaryImageUrl,
+      alt: primaryImageAlt,
       caption: `Professional padel courts at ${court.name}`,
       isPrimary: true,
       width: 1200,

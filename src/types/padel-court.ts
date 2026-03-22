@@ -40,6 +40,7 @@ export interface PadelCourt {
   negativeReviewThemes?: string[];               // Common negative review themes
   pricingText?: string;                          // Pricing info as free text
   status?: "open" | "coming_soon" | "temporarily_closed"; // Facility status
+  ogImageUrl?: string;                                    // OG image URL from club website
 }
 
 export interface OpeningHours {
