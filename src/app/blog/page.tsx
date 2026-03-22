@@ -356,7 +356,7 @@ export default function BlogPage() {
               Find Courts
             </h3>
             <p className="text-gray-600 text-sm">
-              Search 348+ padel courts across America
+              Search 249+ padel courts across America
             </p>
           </Link>
           <Link

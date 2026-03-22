@@ -15,21 +15,17 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, MapPin, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const states = [
-  { name: "Florida", slug: "florida", code: "FL" },
-  { name: "Texas", slug: "texas", code: "TX" },
-  { name: "California", slug: "california", code: "CA" },
-  { name: "New York", slug: "new-york", code: "NY" },
-  { name: "Tennessee", slug: "tennessee", code: "TN" },
-  { name: "Illinois", slug: "illinois", code: "IL" },
-  { name: "Pennsylvania", slug: "pennsylvania", code: "PA" },
-  { name: "New Jersey", slug: "new-jersey", code: "NJ" },
-  { name: "Arizona", slug: "arizona", code: "AZ" },
-  { name: "Missouri", slug: "missouri", code: "MO" },
-  { name: "North Carolina", slug: "north-carolina", code: "NC" },
-];
+interface StateItem {
+  name: string;
+  slug: string;
+  code: string;
+}
 
-export function SiteHeader() {
+interface SiteHeaderProps {
+  states: StateItem[];
+}
+
+export function SiteHeader({ states }: SiteHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
