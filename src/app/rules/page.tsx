@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Padel Rules and Regulations - Official Guide",
     description: "Complete guide to padel rules and regulations including court dimensions, scoring, serves, and official gameplay guidelines.",
-    url: "https://padelcourtsfinder.com/rules",
+    url: "https://www.padelcourtsfinder.com/rules",
     siteName: "Padel Courts Finder",
     type: "article",
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Complete guide to padel rules and regulations including court dimensions, scoring, serves, and official gameplay guidelines.",
   },
   alternates: {
-    canonical: "https://padelcourtsfinder.com/rules",
+    canonical: "https://www.padelcourtsfinder.com/rules",
   },
 };
 

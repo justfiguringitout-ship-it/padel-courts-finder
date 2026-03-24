@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How to Play Padel - Complete Beginner's Guide",
     description: "Learn the basics of padel tennis with our comprehensive guide covering rules, techniques, scoring, and everything you need to start playing.",
-    url: "https://padelcourtsfinder.com/how-to-play",
+    url: "https://www.padelcourtsfinder.com/how-to-play",
     siteName: "Padel Courts Finder",
     type: "article",
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Learn the basics of padel tennis with our comprehensive guide covering rules, techniques, scoring, and everything you need to start playing.",
   },
   alternates: {
-    canonical: "https://padelcourtsfinder.com/how-to-play",
+    canonical: "https://www.padelcourtsfinder.com/how-to-play",
   },
 };
 

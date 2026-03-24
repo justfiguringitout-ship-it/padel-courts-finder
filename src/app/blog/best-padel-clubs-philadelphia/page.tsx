@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Philadelphia & Pennsylvania (2026) | Complete Guide',
   description: 'Philadelphia & PA\'s best padel clubs ranked for 2026. Ballers Philly, PADELphia, VIVA Padel & more. Complete guide with pricing and programs.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-philadelphia',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-philadelphia',
   },
   openGraph: {
     title: 'Best Padel Clubs in Philadelphia & Pennsylvania (2026) | Complete Guide',
     description: 'Philadelphia & PA\'s best padel clubs ranked for 2026. Ballers Philly, PADELphia, VIVA Padel & more. Complete guide with pricing and programs.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-philadelphia',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-philadelphia',
     type: 'article',
   },
 };
@@ -205,19 +205,19 @@ export default function PhiladelphiaBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-philadelphia"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-philadelphia"
     }
   };
 

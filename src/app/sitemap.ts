@@ -3,7 +3,7 @@ import { getStates, getAllCities } from '@/lib/site-structure';
 import { getAllAdaptedCourtSlugs } from '@/lib/court-adapter';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://padelcourtsfinder.com';
+  const baseUrl = 'https://www.padelcourtsfinder.com';
   const currentDate = new Date();
 
   // Static pages

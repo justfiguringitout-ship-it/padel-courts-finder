@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Houston (2026) | Complete HTX Guide',
   description: 'Discover Houston\'s 9 best padel clubs in 2026. TEMPO, Cube Padel, Punto Azul & more. Rankings, pricing & complete Houston padel guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-houston',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-houston',
   },
   openGraph: {
     title: 'Best Padel Clubs in Houston (2026) | Complete HTX Guide',
     description: 'Discover Houston\'s 9 best padel clubs in 2026. TEMPO, Cube Padel, Punto Azul & more. Rankings, pricing & complete Houston padel guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-houston',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-houston',
     type: 'article',
   },
 };
@@ -338,19 +338,19 @@ export default function HoustonBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-houston"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-houston"
     }
   };
 

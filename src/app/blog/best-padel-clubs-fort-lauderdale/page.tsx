@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Fort Lauderdale (2026) | Complete Broward County Guide',
   description: 'Discover Fort Lauderdale\'s 6 best padel clubs in 2026. From 10by20\'s premium courts to Replay Club luxury. Rankings, pricing & Broward County guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-fort-lauderdale',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-fort-lauderdale',
   },
   openGraph: {
     title: 'Best Padel Clubs in Fort Lauderdale (2026) | Complete Broward County Guide',
     description: 'Discover Fort Lauderdale\'s 6 best padel clubs in 2026. From 10by20\'s premium courts to Replay Club luxury. Rankings, pricing & Broward County guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-fort-lauderdale',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-fort-lauderdale',
     type: 'article',
   },
 };
@@ -241,19 +241,19 @@ export default function FortLauderdaleBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-fort-lauderdale"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-fort-lauderdale"
     }
   };
 

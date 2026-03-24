@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in New Jersey (2026) | 8 Clubs Ranked Across the Garden State',
   description: 'New Jersey\'s 8 best padel clubs ranked for 2026. From Centercourt Morristown to Padel United\'s wellness campus. Complete NJ padel guide with pricing.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-new-jersey',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-new-jersey',
   },
   openGraph: {
     title: 'Best Padel Clubs in New Jersey (2026) | 8 Clubs Ranked Across the Garden State',
     description: 'New Jersey\'s 8 best padel clubs ranked for 2026. From Centercourt Morristown to Padel United\'s wellness campus. Complete NJ padel guide with pricing.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-new-jersey',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-new-jersey',
     type: 'article',
   },
 };
@@ -299,19 +299,19 @@ export default function NewJerseyBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-new-jersey"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-new-jersey"
     }
   };
 

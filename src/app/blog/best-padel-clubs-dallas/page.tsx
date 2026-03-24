@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Dallas (2026) | Complete DFW Guide',
   description: 'Dallas padel clubs ranked for 2026. Banner House at T Bar M\'s private club with 4 courts, plus Styslinger/Altec Tennis Complex. DFW padel guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-dallas',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-dallas',
   },
   openGraph: {
     title: 'Best Padel Clubs in Dallas (2026) | Complete DFW Guide',
     description: 'Dallas padel clubs ranked for 2026. Banner House at T Bar M\'s private club with 4 courts, plus Styslinger/Altec Tennis Complex. DFW padel guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-dallas',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-dallas',
     type: 'article',
   },
 };
@@ -112,19 +112,19 @@ export default function DallasBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-dallas"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-dallas"
     }
   };
 

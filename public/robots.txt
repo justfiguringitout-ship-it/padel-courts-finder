@@ -13,4 +13,4 @@ Allow: /courts
 Allow: /search
 
 # Sitemap location
-Sitemap: https://padelcourtsfinder.com/sitemap.xml
+Sitemap: https://www.padelcourtsfinder.com/sitemap.xml

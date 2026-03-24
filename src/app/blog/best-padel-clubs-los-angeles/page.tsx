@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Los Angeles (2026) | 5 Clubs Ranked',
   description: 'Discover LA\'s 5 best padel clubs in 2026. Rooftop courts, Sunset Blvd originals & indoor gems. Rankings, pricing & Los Angeles guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-los-angeles',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-los-angeles',
   },
   openGraph: {
     title: 'Best Padel Clubs in Los Angeles (2026) | 5 Clubs Ranked',
     description: 'Discover LA\'s 5 best padel clubs in 2026. Rooftop courts, Sunset Blvd originals & indoor gems. Rankings, pricing & Los Angeles guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-los-angeles',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-los-angeles',
     type: 'article',
   },
 };
@@ -211,19 +211,19 @@ export default function LosAngelesBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-los-angeles"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-los-angeles"
     }
   };
 

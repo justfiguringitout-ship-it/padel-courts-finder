@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us - America's Complete Padel Directory",
     description: "Learn about the most comprehensive padel court directory in the United States with 120+ verified clubs and 525+ courts mapped nationwide.",
-    url: "https://padelcourtsfinder.com/about",
+    url: "https://www.padelcourtsfinder.com/about",
     siteName: "Padel Courts Finder",
     type: "website",
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "Learn about the most comprehensive padel court directory in the United States with 120+ verified clubs and 525+ courts mapped nationwide.",
   },
   alternates: {
-    canonical: "https://padelcourtsfinder.com/about",
+    canonical: "https://www.padelcourtsfinder.com/about",
   },
 };
 

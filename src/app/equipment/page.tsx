@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Padel Equipment Guide - Rackets, Balls & Gear",
     description: "Everything you need to know about padel equipment including racket selection, balls, shoes, bags, and accessories for players of all levels.",
-    url: "https://padelcourtsfinder.com/equipment",
+    url: "https://www.padelcourtsfinder.com/equipment",
     siteName: "Padel Courts Finder",
     type: "article",
   },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description: "Everything you need to know about padel equipment including racket selection, balls, shoes, bags, and accessories for players of all levels.",
   },
   alternates: {
-    canonical: "https://padelcourtsfinder.com/equipment",
+    canonical: "https://www.padelcourtsfinder.com/equipment",
   },
 };
 

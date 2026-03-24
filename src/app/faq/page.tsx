@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Padel FAQ - Frequently Asked Questions",
     description: "Answers to the most common questions about padel tennis including rules, equipment, court locations, pricing, and how to get started.",
-    url: "https://padelcourtsfinder.com/faq",
+    url: "https://www.padelcourtsfinder.com/faq",
     siteName: "Padel Courts Finder",
     type: "website",
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Answers to the most common questions about padel tennis including rules, equipment, court locations, pricing, and how to get started.",
   },
   alternates: {
-    canonical: "https://padelcourtsfinder.com/faq",
+    canonical: "https://www.padelcourtsfinder.com/faq",
   },
 };
 

@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Atlanta (2026) | Complete ATL Padel Guide',
   description: 'Discover Atlanta\'s 3 best padel clubs in 2026. Padel Haus, ITP Training Academy & Piedmont Driving Club. Rankings, pricing & ATL guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-atlanta',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-atlanta',
   },
   openGraph: {
     title: 'Best Padel Clubs in Atlanta (2026) | Complete ATL Padel Guide',
     description: 'Discover Atlanta\'s 3 best padel clubs in 2026. Padel Haus, ITP Training Academy & Piedmont Driving Club. Rankings, pricing & ATL guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-atlanta',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-atlanta',
     type: 'article',
   },
 };
@@ -145,19 +145,19 @@ export default function AtlantaBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-atlanta"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-atlanta"
     }
   };
 

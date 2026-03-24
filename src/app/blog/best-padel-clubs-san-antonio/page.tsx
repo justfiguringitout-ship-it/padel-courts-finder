@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in San Antonio (2026) | Alamo City Padel Guide',
   description: 'Discover San Antonio\'s 4 best padel clubs in 2026. From Slice Padel Co\'s food truck park to King of Padel\'s 6 indoor courts. Rankings & pricing.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-san-antonio',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-antonio',
   },
   openGraph: {
     title: 'Best Padel Clubs in San Antonio (2026) | Alamo City Padel Guide',
     description: 'Discover San Antonio\'s 4 best padel clubs in 2026. From Slice Padel Co\'s food truck park to King of Padel\'s 6 indoor courts. Rankings & pricing.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-san-antonio',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-antonio',
     type: 'article',
   },
 };
@@ -175,19 +175,19 @@ export default function SanAntonioBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-san-antonio"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-antonio"
     }
   };
 

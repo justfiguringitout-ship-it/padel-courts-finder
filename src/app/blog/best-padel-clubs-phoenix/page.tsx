@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Phoenix (2026) | Complete Arizona Guide',
   description: 'Phoenix metro\'s 3 best padel clubs ranked for 2026, plus 2 coming soon. Conquer Padel, Padel Pals & Camelback. Indoor AC courts & desert padel.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-phoenix',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-phoenix',
   },
   openGraph: {
     title: 'Best Padel Clubs in Phoenix (2026) | Complete Arizona Guide',
     description: 'Phoenix metro\'s 3 best padel clubs ranked for 2026, plus 2 coming soon. Conquer Padel, Padel Pals & Camelback. Indoor AC courts & desert padel.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-phoenix',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-phoenix',
     type: 'article',
   },
 };
@@ -145,19 +145,19 @@ export default function PhoenixBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-phoenix"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-phoenix"
     }
   };
 

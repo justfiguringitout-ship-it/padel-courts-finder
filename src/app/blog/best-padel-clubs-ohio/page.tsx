@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Ohio (2026) | Cleveland, Cincinnati & Columbus Guide',
   description: 'Ohio\'s best padel clubs ranked for 2026. Padel Square\'s 6-court facility, Cleveland Premier, Cincinnati clubs & more. Complete OH padel guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-ohio',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-ohio',
   },
   openGraph: {
     title: 'Best Padel Clubs in Ohio (2026) | Cleveland, Cincinnati & Columbus Guide',
     description: 'Ohio\'s best padel clubs ranked for 2026. Padel Square\'s 6-court facility, Cleveland Premier, Cincinnati clubs & more. Complete OH padel guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-ohio',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-ohio',
     type: 'article',
   },
 };
@@ -202,19 +202,19 @@ export default function OhioBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-ohio"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-ohio"
     }
   };
 

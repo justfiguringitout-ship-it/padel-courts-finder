@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Find Padel Courts Near Me | Book Padel Courts Across the USA",
     description: "Discover and book padel courts across the United States. Find courts in your city, compare prices, read reviews, and book online.",
-    url: "https://padelcourtsfinder.com",
+    url: "https://www.padelcourtsfinder.com",
     siteName: "Padel Courts Finder",
     type: "website",
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ["https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop"],
   },
   alternates: {
-    canonical: "https://padelcourtsfinder.com",
+    canonical: "https://www.padelcourtsfinder.com",
   },
   robots: {
     index: true,
@@ -79,8 +79,8 @@ export default function HomePage() {
             "@type": "Organization",
             name: "Padel Courts Finder",
             description: "Premier directory for finding and booking padel courts across the United States",
-            url: "https://padelcourtsfinder.com",
-            logo: "https://padelcourtsfinder.com/logo.png",
+            url: "https://www.padelcourtsfinder.com",
+            logo: "https://www.padelcourtsfinder.com/logo.png",
             sameAs: [
               "https://facebook.com/padelcourtsfinder",
               "https://twitter.com/padelcourtsfinder",

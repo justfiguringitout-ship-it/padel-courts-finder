@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Charlotte (2026) | Complete QC Padel Guide',
   description: 'Discover Charlotte\'s 2 best padel clubs in 2026. Charlotte Padel Club & Epic Padel Inc. Rankings, pricing & Queen City padel guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-charlotte',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-charlotte',
   },
   openGraph: {
     title: 'Best Padel Clubs in Charlotte (2026) | Complete QC Padel Guide',
     description: 'Discover Charlotte\'s 2 best padel clubs in 2026. Charlotte Padel Club & Epic Padel Inc. Rankings, pricing & Queen City padel guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-charlotte',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-charlotte',
     type: 'article',
   },
 };
@@ -114,19 +114,19 @@ export default function CharlotteBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-charlotte"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-charlotte"
     }
   };
 

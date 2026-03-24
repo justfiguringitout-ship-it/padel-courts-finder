@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Miami (2026) | Complete South Florida Guide',
   description: 'Explore Miami\'s top 29+ padel clubs in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-miami',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-miami',
   },
   openGraph: {
     title: 'Best Padel Clubs in Miami (2026) | Complete South Florida Guide',
     description: 'Explore Miami\'s top 29+ padel clubs in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-miami',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-miami',
     type: 'article',
   },
 };
@@ -372,19 +372,19 @@ export default function MiamiBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-miami"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-miami"
     }
   };
 

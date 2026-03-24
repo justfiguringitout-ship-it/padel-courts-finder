@@ -45,13 +45,13 @@ export async function generateMetadata({ params }: CourtPageProps): Promise<Meta
     openGraph: {
       title: court.name,
       description: court.description,
-      url: `https://padelcourtsfinder.com/courts/${court.slug}`,
+      url: `https://www.padelcourtsfinder.com/courts/${court.slug}`,
       siteName: "Padel Courts Finder",
       type: "website",
       images: court.heroImage ? [{ url: court.heroImage }] : [],
     },
     alternates: {
-      canonical: `https://padelcourtsfinder.com/courts/${court.slug}`,
+      canonical: `https://www.padelcourtsfinder.com/courts/${court.slug}`,
     },
   };
 }
@@ -94,7 +94,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
             },
             telephone: court.phone,
             email: court.email,
-            url: court.website || `https://padelcourtsfinder.com/courts/${court.slug}`,
+            url: court.website || `https://www.padelcourtsfinder.com/courts/${court.slug}`,
             image: court.images.map((img) => img.url),
             aggregateRating: {
               "@type": "AggregateRating",

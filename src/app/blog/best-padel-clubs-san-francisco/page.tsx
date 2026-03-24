@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in San Francisco (2026) | Bay Area Padel Guide',
   description: 'Discover San Francisco\'s 3 best padel clubs in 2026. Bay views, indoor courts & world-class facilities. Rankings, pricing & Bay Area guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-san-francisco',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-francisco',
   },
   openGraph: {
     title: 'Best Padel Clubs in San Francisco (2026) | Bay Area Padel Guide',
     description: 'Discover San Francisco\'s 3 best padel clubs in 2026. Bay views, indoor courts & world-class facilities. Rankings, pricing & Bay Area guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-san-francisco',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-francisco',
     type: 'article',
   },
 };
@@ -145,19 +145,19 @@ export default function SanFranciscoBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-san-francisco"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-francisco"
     }
   };
 

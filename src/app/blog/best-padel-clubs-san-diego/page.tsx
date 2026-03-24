@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in San Diego (2026) | Complete Rankings & Guide',
   description: 'San Diego\'s 4 best padel clubs ranked for 2026. Padel N9NE, Kingdom of Padel, Taktika at Barnes & Fairmont. Courts, pricing & year-round play.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-san-diego',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-diego',
   },
   openGraph: {
     title: 'Best Padel Clubs in San Diego (2026) | Complete Rankings & Guide',
     description: 'San Diego\'s 4 best padel clubs ranked for 2026. Padel N9NE, Kingdom of Padel, Taktika at Barnes & Fairmont. Courts, pricing & year-round play.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-san-diego',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-diego',
     type: 'article',
   },
 };
@@ -179,19 +179,19 @@ export default function SanDiegoBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-san-diego"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-diego"
     }
   };
 

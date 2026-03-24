@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in Austin, Texas (2026) | 7 Clubs Ranked & Reviewed',
   description: 'Discover Austin\'s 7 best padel clubs in 2026. From Padel 39\'s luxury courts to 3 coming soon. Rankings, pricing & complete Texas guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-austin',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-austin',
   },
   openGraph: {
     title: 'Best Padel Clubs in Austin, Texas (2026) | 7 Clubs Ranked & Reviewed',
     description: 'Discover Austin\'s 7 best padel clubs in 2026. From Padel 39\'s luxury courts to 3 coming soon. Rankings, pricing & complete Texas guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-austin',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-austin',
     type: 'article',
   },
 };
@@ -178,19 +178,19 @@ export default function AustinBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-austin"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-austin"
     }
   };
 

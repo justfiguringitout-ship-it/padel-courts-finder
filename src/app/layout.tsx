@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Padel Courts Finder",
   },
   description: "Discover and book padel courts across the United States. Find courts in your city, compare prices, read reviews, and book online. 45+ verified padel facilities nationwide.",
-  metadataBase: new URL("https://padelcourtsfinder.com"),
+  metadataBase: new URL("https://www.padelcourtsfinder.com"),
   keywords: [
     "padel courts",
     "padel near me",

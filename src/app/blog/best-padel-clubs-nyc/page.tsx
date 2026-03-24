@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Best Padel Clubs in NYC (2026) | Brooklyn, Manhattan & Beyond',
   description: 'Discover NYC\'s 7 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.',
   alternates: {
-    canonical: 'https://padelcourtsfinder.com/blog/best-padel-clubs-nyc',
+    canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-nyc',
   },
   openGraph: {
     title: 'Best Padel Clubs in NYC (2026) | Brooklyn, Manhattan & Beyond',
     description: 'Discover NYC\'s 7 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.',
-    url: 'https://padelcourtsfinder.com/blog/best-padel-clubs-nyc',
+    url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-nyc',
     type: 'article',
   },
 };
@@ -275,19 +275,19 @@ export default function NYCBestClubsPage() {
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
-      "url": "https://padelcourtsfinder.com"
+      "url": "https://www.padelcourtsfinder.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://padelcourtsfinder.com/logo.png"
+        "url": "https://www.padelcourtsfinder.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://padelcourtsfinder.com/blog/best-padel-clubs-nyc"
+      "@id": "https://www.padelcourtsfinder.com/blog/best-padel-clubs-nyc"
     }
   };
 
