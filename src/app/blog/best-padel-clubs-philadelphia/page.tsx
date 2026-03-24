@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Philadelphia & PA\'s best padel clubs ranked for 2026. Ballers Philly, PADELphia, VIVA Padel & more. Complete guide with pricing and programs.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-philadelphia',
     type: 'article',
+    images: [{ url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop' }],
   },
 };
 

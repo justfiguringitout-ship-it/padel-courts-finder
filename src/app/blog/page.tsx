@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, MapPin, TrendingUp, BookOpen, Award } from 'lucide-react';
+import { getAdaptedCourtBySlug } from '@/lib/court-adapter';
 
 export const metadata: Metadata = {
   title: 'Padel Blog | Expert Guides, Club Reviews & Tips',
@@ -18,6 +19,7 @@ interface BlogPost {
   date: string;
   readTime: string;
   imageAlt: string;
+  courtSlug: string;
   featured?: boolean;
 }
 
@@ -31,6 +33,7 @@ const blogPosts: BlogPost[] = [
     date: '2026-03-21',
     readTime: '10 min read',
     imageAlt: 'Miami padel courts with ocean views',
+    courtSlug: 'ultra-padel-club',
     featured: true
   },
   {
@@ -41,6 +44,7 @@ const blogPosts: BlogPost[] = [
     date: '2026-03-21',
     readTime: '8 min read',
     imageAlt: 'NYC padel facilities',
+    courtSlug: 'padel-haus-dumbo',
     featured: true
   },
   {
@@ -51,6 +55,7 @@ const blogPosts: BlogPost[] = [
     date: '2026-03-21',
     readTime: '9 min read',
     imageAlt: 'Houston padel courts',
+    courtSlug: 'tempo-padel-pickleball-club',
     featured: true
   },
   {
@@ -60,7 +65,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Austin\'s padel scene features 4 open clubs plus 3 coming soon. Padel 39\'s outdoor paradise, Padel Club Austin\'s 9 courts, and Hill Country vibes.',
     date: '2026-03-21',
     readTime: '8 min read',
-    imageAlt: 'Austin padel facilities'
+    imageAlt: 'Austin padel facilities',
+    courtSlug: 'padel-39'
   },
   {
     slug: 'best-padel-clubs-los-angeles',
@@ -69,7 +75,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'LA\'s 5 padel clubs span from Sunset Blvd to Century City rooftops. Los Angeles Padel Club\'s 7 courts, Padel Up\'s indoor gems, and year-round outdoor play.',
     date: '2026-03-21',
     readTime: '8 min read',
-    imageAlt: 'LA padel club with city views'
+    imageAlt: 'LA padel club with city views',
+    courtSlug: 'los-angeles-padel-club'
   },
   {
     slug: 'best-padel-clubs-san-francisco',
@@ -78,7 +85,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Bay Area padel led by Bay Padel and Park Padel. Treasure Island\'s historic hangar courts, Embarcadero waterfront play, and 11 courts across 3 locations.',
     date: '2026-03-21',
     readTime: '7 min read',
-    imageAlt: 'San Francisco Bay Padel courts'
+    imageAlt: 'San Francisco Bay Padel courts',
+    courtSlug: 'bay-padel-treasure-island'
   },
   {
     slug: 'best-padel-clubs-san-diego',
@@ -87,7 +95,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'San Diego\'s 4 padel clubs offer 22 courts with year-round sunshine. Padel N9NE\'s 8-court campus, Kingdom\'s crystal courts, and Taktika\'s coaching programs.',
     date: '2026-03-21',
     readTime: '8 min read',
-    imageAlt: 'San Diego padel courts'
+    imageAlt: 'San Diego padel courts',
+    courtSlug: 'padel-n9ne'
   },
   {
     slug: 'best-padel-clubs-phoenix',
@@ -96,7 +105,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Desert padel with 3 open clubs and 2 coming soon. Conquer Padel\'s indoor oasis, Padel Pals\' 7-court mega facility, and PURE\'s 1,200-seat arena on the way.',
     date: '2026-03-21',
     readTime: '7 min read',
-    imageAlt: 'Phoenix padel in the desert'
+    imageAlt: 'Phoenix padel in the desert',
+    courtSlug: 'conquer-padel-club'
   },
   {
     slug: 'best-padel-clubs-chicago',
@@ -105,7 +115,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Windy City padel goes 100% indoor with 3 clubs and 15 courts. Cube Padel\'s bar & lounge, Union Padel\'s West Loop wellness, and Proximo\'s 40-ft ceilings.',
     date: '2026-03-21',
     readTime: '7 min read',
-    imageAlt: 'Chicago indoor padel courts'
+    imageAlt: 'Chicago indoor padel courts',
+    courtSlug: 'cube-padel-chicago'
   },
   {
     slug: 'best-padel-clubs-fort-lauderdale',
@@ -114,7 +125,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Broward County\'s padel scene features 6 clubs with 27+ courts. 10by20\'s dual locations, Replay Club\'s luxury wellness experience, and Society Las Olas downtown.',
     date: '2026-03-21',
     readTime: '8 min read',
-    imageAlt: 'Fort Lauderdale padel courts'
+    imageAlt: 'Fort Lauderdale padel courts',
+    courtSlug: '10by20-padel-fort-lauderdale'
   },
   {
     slug: 'best-padel-clubs-new-jersey',
@@ -123,7 +135,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'New Jersey\'s 8 padel clubs pack 32 courts across 9 cities. Centercourt Morristown, Padel United, Rax NJ, and the Garden State\'s booming scene.',
     date: '2026-03-21',
     readTime: '8 min read',
-    imageAlt: 'New Jersey padel facilities'
+    imageAlt: 'New Jersey padel facilities',
+    courtSlug: 'centercourt-morristown'
   },
   {
     slug: 'best-padel-clubs-philadelphia',
@@ -132,7 +145,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Pennsylvania\'s 5 open padel clubs span from Philly to Pittsburgh. Ballers, PADELphia, VIVA Padel, plus OH! Padel opening soon in Malvern.',
     date: '2026-03-21',
     readTime: '7 min read',
-    imageAlt: 'Philadelphia padel facilities'
+    imageAlt: 'Philadelphia padel facilities',
+    courtSlug: 'padelphia'
   },
   {
     slug: 'best-padel-clubs-ohio',
@@ -141,7 +155,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Ohio\'s 5 padel clubs span Cleveland, Cincinnati, and Columbus. Padel Square\'s 6 courts lead the Buckeye State, plus Club Padel opening in Newtown.',
     date: '2026-03-21',
     readTime: '7 min read',
-    imageAlt: 'Ohio padel facilities'
+    imageAlt: 'Ohio padel facilities',
+    courtSlug: 'padel-square'
   },
   {
     slug: 'best-padel-clubs-orlando',
@@ -150,7 +165,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Orlando\'s 5 padel clubs offer 15 courts from USTA National Campus to resort-based play. Plus BullDog Padel Club coming to Lake Nona.',
     date: '2026-03-21',
     readTime: '7 min read',
-    imageAlt: 'Orlando padel facilities'
+    imageAlt: 'Orlando padel facilities',
+    courtSlug: 'orlando-padel-club-indoor'
   },
   {
     slug: 'best-padel-clubs-san-antonio',
@@ -159,7 +175,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'San Antonio\'s 4 padel clubs feature 16 courts. The King of Padel\'s entertainment complex, Slice Padel Co\'s rooftop bar, and year-round Texas play.',
     date: '2026-03-21',
     readTime: '7 min read',
-    imageAlt: 'San Antonio padel courts'
+    imageAlt: 'San Antonio padel courts',
+    courtSlug: 'the-king-of-padel-san-antonio'
   },
   {
     slug: 'best-padel-clubs-atlanta',
@@ -168,7 +185,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Atlanta\'s 3 padel clubs bring 11 courts to Georgia. Padel Haus Atlanta\'s stunning Westside Paper venue, ITP Training Academy, and year-round play.',
     date: '2026-03-21',
     readTime: '7 min read',
-    imageAlt: 'Atlanta padel facilities'
+    imageAlt: 'Atlanta padel facilities',
+    courtSlug: 'padel-haus-atlanta'
   },
   {
     slug: 'best-padel-clubs-dallas',
@@ -177,7 +195,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Dallas-Fort Worth padel with 2 facilities. Banner House at T Bar M\'s private club courts and SMU\'s Styslinger complex. DFW\'s scene is early but growing.',
     date: '2026-03-21',
     readTime: '6 min read',
-    imageAlt: 'Dallas padel courts'
+    imageAlt: 'Dallas padel courts',
+    courtSlug: 'dallas-padel-club'
   },
   {
     slug: 'best-padel-clubs-denver',
@@ -186,7 +205,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Mile High padel arrives with Cloud 9 Park Padel offering free daytime play. Denver\'s outdoor scene at 5,280 ft elevation is just getting started.',
     date: '2026-03-21',
     readTime: '6 min read',
-    imageAlt: 'Denver padel facilities'
+    imageAlt: 'Denver padel facilities',
+    courtSlug: 'cloud-9-park-padel'
   },
   {
     slug: 'best-padel-clubs-charlotte',
@@ -195,7 +215,8 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Queen City padel with 2 clubs and 7 courts. Charlotte Padel Club\'s indoor facility and Epic Padel\'s 5 outdoor courts at Prosperity Athletic Club.',
     date: '2026-03-21',
     readTime: '6 min read',
-    imageAlt: 'Charlotte padel facilities'
+    imageAlt: 'Charlotte padel facilities',
+    courtSlug: 'charlotte-padel-club-south-charlotte'
   }
 ];
 
@@ -205,6 +226,11 @@ const categories = [
   { id: 'how-to', name: 'How-To Guides', icon: TrendingUp },
   { id: 'equipment', name: 'Equipment', icon: MapPin },
 ];
+
+function getPostImage(courtSlug: string): string | null {
+  const court = getAdaptedCourtBySlug(courtSlug);
+  return court?.heroImage || null;
+}
 
 export default function BlogPage() {
   return (
@@ -252,16 +278,27 @@ export default function BlogPage() {
             Featured Posts
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {blogPosts.filter(post => post.featured).map(post => (
+            {blogPosts.filter(post => post.featured).map(post => {
+              const imageUrl = getPostImage(post.courtSlug);
+              return (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
                 className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all"
               >
-                <div className="aspect-video bg-gradient-to-br from-purple-400 to-purple-600 relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-white">
-                    <MapPin className="w-16 h-16 opacity-50" />
-                  </div>
+                <div className="aspect-video bg-gradient-to-br from-purple-400 to-purple-600 relative overflow-hidden">
+                  {imageUrl && (
+                    <img
+                      src={imageUrl}
+                      alt={post.imageAlt}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  )}
+                  {!imageUrl && (
+                    <div className="absolute inset-0 flex items-center justify-center text-white">
+                      <MapPin className="w-16 h-16 opacity-50" />
+                    </div>
+                  )}
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 bg-white/90 text-purple-700 text-sm font-semibold rounded-full">
                       Featured
@@ -286,7 +323,8 @@ export default function BlogPage() {
                   </div>
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
 
@@ -297,16 +335,27 @@ export default function BlogPage() {
             Best Padel Clubs by City
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map(post => (
+            {blogPosts.map(post => {
+              const imageUrl = getPostImage(post.courtSlug);
+              return (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
                 className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all"
               >
-                <div className="aspect-video bg-gradient-to-br from-blue-400 to-blue-600 relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-white">
-                    <MapPin className="w-12 h-12 opacity-50" />
-                  </div>
+                <div className="aspect-video bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden">
+                  {imageUrl && (
+                    <img
+                      src={imageUrl}
+                      alt={post.imageAlt}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  )}
+                  {!imageUrl && (
+                    <div className="absolute inset-0 flex items-center justify-center text-white">
+                      <MapPin className="w-12 h-12 opacity-50" />
+                    </div>
+                  )}
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
@@ -323,7 +372,8 @@ export default function BlogPage() {
                   </p>
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
 

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Ohio\'s best padel clubs ranked for 2026. Padel Square\'s 6-court facility, Cleveland Premier, Cincinnati clubs & more. Complete OH padel guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-ohio',
     type: 'article',
+    images: [{ url: 'https://padel-square.com/wp-content/uploads/2025/03/padelsquare-sample10-1-e1745460648270.png' }],
   },
 };
 
@@ -196,7 +197,7 @@ export default function OhioBestClubsPage() {
     "@type": "Article",
     "headline": "Best Padel Clubs in Ohio (2026) | Cleveland, Cincinnati & Columbus Guide",
     "description": "Ohio's best padel clubs ranked for 2026. Complete guide with pricing and programs.",
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "image": "https://padel-square.com/wp-content/uploads/2025/03/padelsquare-sample10-1-e1745460648270.png",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
     "author": {

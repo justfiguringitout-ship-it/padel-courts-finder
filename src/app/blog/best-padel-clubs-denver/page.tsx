@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Denver\'s padel scene in 2026: Cloud 9 Park Padel with free daytime play. Complete guide to Colorado padel with pricing and tips.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-denver',
     type: 'article',
+    images: [{ url: 'https://img1.wsimg.com/isteam/ip/fe6e1161-9fa4-47d6-af5c-3c840e0e73fd/green%20aspen%20padel%20club.png' }],
   },
 };
 
@@ -75,7 +76,7 @@ export default function DenverBestClubsPage() {
     "@type": "Article",
     "headline": "Best Padel Clubs in Denver (2026) | Rocky Mountain Padel Guide",
     "description": "Denver's padel scene in 2026: Cloud 9 Park Padel with free daytime play. Complete guide to Colorado padel.",
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "image": "https://img1.wsimg.com/isteam/ip/fe6e1161-9fa4-47d6-af5c-3c840e0e73fd/green%20aspen%20padel%20club.png",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
     "author": {

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Discover LA\'s 5 best padel clubs in 2026. Rooftop courts, Sunset Blvd originals & indoor gems. Rankings, pricing & Los Angeles guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-los-angeles',
     type: 'article',
+    images: [{ url: 'http://static1.squarespace.com/static/67aa658739053174f72f4dff/t/67ae5daba7ed9416e7b4165d/1739480491590/LAPC_Social_021325.jpg?format=1500w' }],
   },
 };
 
@@ -205,7 +206,7 @@ export default function LosAngelesBestClubsPage() {
     "@type": "Article",
     "headline": "Best Padel Clubs in Los Angeles (2026) | 5 Clubs Ranked",
     "description": "Discover LA's 5 best padel clubs in 2026. Rooftop courts, Sunset Blvd originals & indoor gems. Rankings, pricing & Los Angeles guide.",
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "image": "http://static1.squarespace.com/static/67aa658739053174f72f4dff/t/67ae5daba7ed9416e7b4165d/1739480491590/LAPC_Social_021325.jpg?format=1500w",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
     "author": {

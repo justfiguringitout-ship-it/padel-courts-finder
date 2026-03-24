@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Discover Orlando\'s 5 best padel clubs in 2026. From USTA National Campus to Padel Plus Indoor. Rankings, pricing & Central Florida guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-orlando',
     type: 'article',
+    images: [{ url: 'https://res.cloudinary.com/playtomic/image/upload/v1737310655/pro/tenants/021f6ec2-362b-4604-a697-0ed98e1c2de6/1737310654908.jpg' }],
   },
 };
 
@@ -204,7 +205,7 @@ export default function OrlandoBestClubsPage() {
     "@type": "Article",
     "headline": "Best Padel Clubs in Orlando (2026) | Complete Central Florida Guide",
     "description": "Discover Orlando's 5 best padel clubs in 2026. From USTA National Campus to Padel Plus Indoor. Rankings, pricing & Central Florida guide.",
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "image": "https://res.cloudinary.com/playtomic/image/upload/v1737310655/pro/tenants/021f6ec2-362b-4604-a697-0ed98e1c2de6/1737310654908.jpg",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
     "author": {

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Dallas padel clubs ranked for 2026. Banner House at T Bar M\'s private club with 4 courts, plus Styslinger/Altec Tennis Complex. DFW padel guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-dallas',
     type: 'article',
+    images: [{ url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop' }],
   },
 };
 

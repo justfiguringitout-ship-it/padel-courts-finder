@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Phoenix metro\'s 3 best padel clubs ranked for 2026, plus 2 coming soon. Conquer Padel, Padel Pals & Camelback. Indoor AC courts & desert padel.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-phoenix',
     type: 'article',
+    images: [{ url: 'https://conquerpadel.com/wp-content/uploads/2026/01/hero.webp' }],
   },
 };
 
@@ -139,7 +140,7 @@ export default function PhoenixBestClubsPage() {
     "@type": "Article",
     "headline": "Best Padel Clubs in Phoenix (2026) | Complete Arizona Guide",
     "description": "Phoenix metro's 3 best padel clubs ranked for 2026, plus 2 coming soon. Conquer Padel, Padel Pals & Camelback.",
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "image": "https://conquerpadel.com/wp-content/uploads/2026/01/hero.webp",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
     "author": {

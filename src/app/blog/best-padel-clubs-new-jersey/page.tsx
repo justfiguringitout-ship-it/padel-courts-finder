@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'New Jersey\'s 8 best padel clubs ranked for 2026. From Centercourt Morristown to Padel United\'s wellness campus. Complete NJ padel guide with pricing.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-new-jersey',
     type: 'article',
+    images: [{ url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop' }],
   },
 };
 

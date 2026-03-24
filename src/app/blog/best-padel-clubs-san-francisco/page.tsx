@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Discover San Francisco\'s 3 best padel clubs in 2026. Bay views, indoor courts & world-class facilities. Rankings, pricing & Bay Area guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-francisco',
     type: 'article',
+    images: [{ url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop' }],
   },
 };
 

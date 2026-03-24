@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: 'Discover Houston\'s 9 best padel clubs in 2026. TEMPO, Cube Padel, Punto Azul & more. Rankings, pricing & complete Houston padel guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-houston',
     type: 'article',
+    images: [{ url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop' }],
   },
 };
 

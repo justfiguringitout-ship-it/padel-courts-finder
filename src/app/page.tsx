@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, TrendingUp, Clock, Phone } from "lucide-react";
 import { getStates, getSiteStats } from "@/lib/site-structure";
-import { getAllAdaptedCourts } from "@/lib/court-adapter";
+import { getAllAdaptedCourts, getAdaptedCourtBySlug } from "@/lib/court-adapter";
 import { HeroSearch } from "@/components/hero-search";
 import type { Metadata } from "next";
 
@@ -310,55 +310,41 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <Link href="/blog/best-padel-clubs-miami" className="group">
-            <Card className="h-full hover:border-primary transition-all overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-blue-500 to-blue-600 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <MapPin className="w-16 h-16 text-white/30" />
-                </div>
-                <Badge className="absolute top-3 right-3 bg-white text-blue-600">Popular</Badge>
-              </div>
-              <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">Best Clubs in Miami</CardTitle>
-                <CardDescription>
-                  14+ clubs reviewed - Reserve Padel, Ultra Padel, and more
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </Link>
-          
-          <Link href="/blog/best-padel-clubs-austin" className="group">
-            <Card className="h-full hover:border-primary transition-all overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-purple-500 to-purple-600 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <MapPin className="w-16 h-16 text-white/30" />
-                </div>
-                <Badge className="absolute top-3 right-3 bg-white text-purple-600">Top Rated</Badge>
-              </div>
-              <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">Best Clubs in Austin</CardTitle>
-                <CardDescription>
-                  America's padel capital - Padel39, Padel Club Austin & more
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </Link>
-          
-          <Link href="/blog/best-padel-clubs-los-angeles" className="group">
-            <Card className="h-full hover:border-primary transition-all overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-pink-500 to-pink-600 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <MapPin className="w-16 h-16 text-white/30" />
-                </div>
-              </div>
-              <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">Best Clubs in Los Angeles</CardTitle>
-                <CardDescription>
-                  8+ LA clubs from Santa Monica to Pasadena
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </Link>
+          {[
+            { href: '/blog/best-padel-clubs-miami', courtSlug: 'ultra-padel-club', badge: 'Popular', title: 'Best Clubs in Miami', desc: '14+ clubs reviewed - Reserve Padel, Ultra Padel, and more', alt: 'Miami padel courts' },
+            { href: '/blog/best-padel-clubs-austin', courtSlug: 'padel-39', badge: 'Top Rated', title: 'Best Clubs in Austin', desc: "America's padel capital - Padel39, Padel Club Austin & more", alt: 'Austin padel courts' },
+            { href: '/blog/best-padel-clubs-los-angeles', courtSlug: 'los-angeles-padel-club', badge: null, title: 'Best Clubs in Los Angeles', desc: '8+ LA clubs from Santa Monica to Pasadena', alt: 'Los Angeles padel courts' },
+          ].map((item) => {
+            const court = getAdaptedCourtBySlug(item.courtSlug);
+            const imageUrl = court?.heroImage;
+            return (
+              <Link key={item.href} href={item.href} className="group">
+                <Card className="h-full hover:border-primary transition-all overflow-hidden">
+                  <div className="aspect-video bg-gradient-to-br from-blue-500 to-blue-600 relative overflow-hidden">
+                    {imageUrl && (
+                      <img
+                        src={imageUrl}
+                        alt={item.alt}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    )}
+                    {!imageUrl && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <MapPin className="w-16 h-16 text-white/30" />
+                      </div>
+                    )}
+                    {item.badge && (
+                      <Badge className="absolute top-3 right-3 bg-white/90 text-primary">{item.badge}</Badge>
+                    )}
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="group-hover:text-primary transition-colors">{item.title}</CardTitle>
+                    <CardDescription>{item.desc}</CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
         <div className="text-center mt-8">
           <Button asChild variant="outline" size="lg">
