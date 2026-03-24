@@ -9,21 +9,22 @@ import { HeroSearch } from "@/components/hero-search";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Find Padel Courts Near Me | Book Padel Courts Across the USA",
-  description: "Discover and book padel courts across the United States. Find courts in your city, compare prices, read reviews, and book online. 45+ verified padel facilities nationwide.",
+  title: "Padel Courts Near Me | Find & Book 249+ Padel Courts in the USA",
+  description: "Find padel courts near you. Browse 249+ padel clubs across 34 states. Compare prices, read reviews, check hours, and book courts online. The #1 US padel court directory.",
   keywords: [
     "padel courts near me",
-    "book padel court",
-    "padel courts USA",
     "padel near me",
-    "padel court booking",
-    "padel facilities",
+    "padel court near me",
+    "find padel courts",
+    "padel clubs near me",
+    "padel courts USA",
+    "book padel court",
     "indoor padel courts",
     "outdoor padel courts",
   ],
   openGraph: {
-    title: "Find Padel Courts Near Me | Book Padel Courts Across the USA",
-    description: "Discover and book padel courts across the United States. Find courts in your city, compare prices, read reviews, and book online.",
+    title: "Padel Courts Near Me | Find & Book 249+ Padel Courts in the USA",
+    description: "Find padel courts near you. Browse 249+ padel clubs across 34 states. Compare prices, read reviews, check hours, and book courts online.",
     url: "https://www.padelcourtsfinder.com",
     siteName: "Padel Courts Finder",
     type: "website",
@@ -32,14 +33,14 @@ export const metadata: Metadata = {
         url: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
         width: 1200,
         height: 630,
-        alt: "Find Padel Courts Near Me",
+        alt: "Padel Courts Near Me - Find padel clubs across the USA",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Find Padel Courts Near Me | Book Padel Courts Across the USA",
-    description: "Discover and book padel courts across the United States. Find courts in your city, compare prices, and read reviews.",
+    title: "Padel Courts Near Me | Find & Book 249+ Padel Courts in the USA",
+    description: "Find padel courts near you. Browse 249+ padel clubs across 34 states. Compare prices, read reviews, and book courts online.",
     images: ["https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop"],
   },
   alternates: {
@@ -70,25 +71,19 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Schema.org JSON-LD for Organization */}
+      {/* Schema.org JSON-LD for WebSite with SearchAction */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "WebSite",
             name: "Padel Courts Finder",
-            description: "Premier directory for finding and booking padel courts across the United States",
             url: "https://www.padelcourtsfinder.com",
-            logo: "https://www.padelcourtsfinder.com/logo.png",
-            sameAs: [
-              "https://facebook.com/padelcourtsfinder",
-              "https://twitter.com/padelcourtsfinder",
-              "https://instagram.com/padelcourtsfinder",
-            ],
-            areaServed: {
-              "@type": "Country",
-              name: "United States",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://www.padelcourtsfinder.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string",
             },
           }),
         }}
@@ -104,11 +99,11 @@ export default function HomePage() {
             </Badge>
 
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Find <span className="text-primary">Padel Clubs</span> Near You
+              Find <span className="text-primary">Padel Courts</span> Near Me
             </h1>
 
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover and book padel clubs across the United States. Compare facilities, read reviews, and reserve your court online.
+              Browse {stats.totalCourts}+ padel clubs across {stats.totalStates} states. Compare facilities, read reviews, and book your court online.
             </p>
 
             {/* Search Bar */}
@@ -131,6 +126,13 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Directory intro */}
+      <section className="container mx-auto px-4 pt-12 pb-4 max-w-3xl text-center">
+        <p className="text-muted-foreground leading-relaxed">
+          Looking for padel courts near me? Padel Courts Finder is the most comprehensive US padel directory, helping you find padel clubs near you in {stats.totalStates} states and {stats.totalCities}+ cities. Whether you&apos;re searching for a padel court near me to try the sport for the first time or looking to find padel courts with lessons, equipment rental, and league play, browse our verified listings to compare hours, pricing, and player reviews.
+        </p>
       </section>
 
       {/* Browse by State */}
