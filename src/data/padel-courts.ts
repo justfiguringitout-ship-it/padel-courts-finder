@@ -52,6 +52,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Court bookings start at $28/90min outdoor; clinics $60/90min; private lessons $150/60min",
     status: 'open',
     ogImageUrl: "https://framerusercontent.com/images/4OYRFRKGm1qkSAL18PZsZ8cSs.jpg",
+    featured: true,
   },
     {
     id: 2,
@@ -171,6 +172,7 @@ export const padelCourts: PadelCourt[] = [
     status: 'open',
     googlePlacePhotoRef: "AU_ZVEEkb31lhNTRzZd5rjKBN7l2KRSAgc0sm-F1yMunhtv63Apl26F871QTsvhrgderGeGMqX6sVbdtK5XN294zdoMwAvEFPGUKqeoGL4Ls2InNKkjuEtnVA0sHa2LhvdPhEyg6gJ9kGEeEzUJN2Fy9i_AvFRiyx1ovzQwOn1-yaCtkZ6MEO_MipG6acY9k0hKdibPq1LVtpt5q7oL08zuWYCDGgz2RHX7R0VihNcvgPKE3npINBBRTAEcNijG2O9sXsb3KjgsW9PV6iALoArWV7BpqZiMV_Jav0SVIS73hQfxXGw",
     googleMapsPlaceId: "ChIJvax2Qigf2YgRwhNiv7MgBv8",
+    featured: true,
   },
     {
     id: 5,
@@ -217,6 +219,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Peak: ~$50-65/hour; Off-peak: ~$30-55/hour; clinics ~$50; student membership $10 (varies by source, check site)",
     status: 'open',
     ogImageUrl: "https://cdn.prod.website-files.com/661525f50a5ecbcf790108d4/66a355e9bad39cc346d16a60_miami%20padel%20court.webp",
+    featured: true,
   },
   {
     id: 6,
@@ -286,6 +289,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "120 min court rental: Off-peak Mon-Fri 11AM-4PM & 10-11:30PM $51 +tax; Early 7-8:30AM $100 +tax; Regular $128 +tax",
     status: 'open',
     ogImageUrl: "https://framerusercontent.com/images/j7FcF14p5x9LFrDdmlBFmwcWeR4.png",
+    featured: true,
   },
     {
     id: 8,
@@ -331,6 +335,7 @@ export const padelCourts: PadelCourt[] = [
     status: 'open',
     googlePlacePhotoRef: "AU_ZVEEfPp0f8QCtjGbA12WrbJF7IbxTdRh7x-zCsB8GnsKHuTzz5cY-JxjhR3uq_WzlhrOB6ihISt4smqFn6Ize8Z0Zn7yjPa_lnsEd7LBrFSWVEH5lmxjd5vntApF_Y-_0mNz2UFAmsoqGgVy9jj-koHdQdzcw26h6-oiJiRH0-2gGhjGA6esqfCsRrWju8dwwuK6Lu7qPkmxN7RPID6VsXW_5Uk5mNN0LrRLfhiUdL1AmrWW8lXWlMN1Vj9Fj5Hop9GpMfHUIafLrA_ZI0TqA742clj3O8K0JxiSiDKqqOuOvXA",
     googleMapsPlaceId: "ChIJy1WZhTDbQIYRUtHIxg8lK68",
+    featured: true,
   },
     {
     id: 9,
@@ -375,6 +380,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships $200-450/month; courts $20-40/hr; drop-in $15",
     status: 'open',
     ogImageUrl: "https://replayclub.com/wp-content/uploads/2025/11/membership_0003_Padel-pickleball.jpg",
+    featured: true,
   },
     {
     id: 10,

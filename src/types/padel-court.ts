@@ -43,6 +43,7 @@ export interface PadelCourt {
   ogImageUrl?: string;                                    // OG image URL from club website
   googlePlacePhotoRef?: string;                            // Google Places photo_reference
   googleMapsPlaceId?: string;                              // Google Maps place_id
+  featured?: boolean;                                      // true = featured listing, shows badge + priority placement
 }
 
 export interface OpeningHours {

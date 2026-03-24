@@ -114,8 +114,12 @@ export default async function CityPage({ params }: CityPageProps) {
       court.address.city === city.name
   );
 
-  // Sort courts by rating
-  const sortedCourts = cityCourts.sort((a, b) => b.rating.ratingValue - a.rating.ratingValue);
+  // Sort courts: featured first, then by rating
+  const sortedCourts = cityCourts.sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return b.rating.ratingValue - a.rating.ratingValue;
+  });
 
   // Get nearby cities (same state, different city)
   const nearbyCities = state.cities
@@ -237,8 +241,8 @@ export default async function CityPage({ params }: CityPageProps) {
                     alt={court.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  {court.isFeatured && (
-                    <Badge className="absolute top-2 right-2 bg-primary">
+                  {court.featured && (
+                    <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600">
                       Featured
                     </Badge>
                   )}

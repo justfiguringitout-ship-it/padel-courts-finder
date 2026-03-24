@@ -160,7 +160,11 @@ function SearchPageContent() {
         });
         break;
       case "rating":
-        results.sort((a, b) => b.rating.ratingValue - a.rating.ratingValue);
+        results.sort((a, b) => {
+          if (a.featured && !b.featured) return -1;
+          if (!a.featured && b.featured) return 1;
+          return b.rating.ratingValue - a.rating.ratingValue;
+        });
         break;
       case "price-low":
         results.sort((a, b) => a.pricing.offPeakHourlyRate - b.pricing.offPeakHourlyRate);
@@ -363,8 +367,8 @@ function SearchPageContent() {
                           alt={court.name}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
-                        {court.isFeatured && (
-                          <Badge className="absolute top-2 right-2 bg-primary">
+                        {court.featured && (
+                          <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600">
                             Featured
                           </Badge>
                         )}

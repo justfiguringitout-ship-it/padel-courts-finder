@@ -163,8 +163,8 @@ export default async function CourtPage({ params }: CourtPageProps) {
             {/* Left: Club Info */}
             <div>
               <div className="flex items-start gap-3 mb-4 flex-wrap">
-                {court.isFeatured && (
-                  <Badge variant="default">Featured</Badge>
+                {court.featured && (
+                  <Badge className="bg-amber-500 hover:bg-amber-600 text-white">Featured Club</Badge>
                 )}
                 {court.isActive && isOpen && (
                   <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">

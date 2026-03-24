@@ -656,6 +656,7 @@ export interface AdaptedCourt {
   negativeReviewThemes?: string[];
   pricingText?: string;
   status?: string;
+  featured?: boolean;
 
   // Original data reference
   _original?: ExistingCourt;
@@ -842,7 +843,7 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
     faqs: faqs.length > 0 ? faqs : undefined,
 
     isActive: true,
-    isFeatured: court.verified || court.rating >= 4.8,
+    isFeatured: court.featured || court.verified || court.rating >= 4.8,
     lastUpdated: court.verificationDate || new Date().toISOString().split("T")[0],
 
     // Passthrough new fields (no fabrication)
@@ -865,6 +866,7 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
         : undefined,
     pricingText: court.pricingText,
     status: court.status,
+    featured: court.featured,
 
     _original: court,
   };

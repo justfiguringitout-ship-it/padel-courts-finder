@@ -64,10 +64,11 @@ export default function HomePage() {
   const states = getStates();
   const allCourts = getAllAdaptedCourts();
 
-  // Get featured courts (verified and highly rated)
-  const featuredCourts = allCourts
-    .filter((court) => court.isFeatured)
-    .slice(0, 6);
+  // Get featured courts: prefer courts with featured: true, fall back to isFeatured
+  const explicitFeatured = allCourts.filter((court) => court.featured);
+  const featuredCourts = explicitFeatured.length > 0
+    ? explicitFeatured.slice(0, 6)
+    : allCourts.filter((court) => court.isFeatured).slice(0, 6);
 
   return (
     <div className="min-h-screen">
@@ -204,8 +205,8 @@ export default function HomePage() {
                     alt={court.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  {court.isFeatured && (
-                    <Badge className="absolute top-2 right-2 bg-primary">
+                  {court.featured && (
+                    <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600">
                       Featured
                     </Badge>
                   )}
