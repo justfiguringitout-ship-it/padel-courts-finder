@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Calendar, MapPin, TrendingUp, BookOpen, Award, Zap } from 'lucide-react';
 
 export interface BlogPostWithImage {
   slug: string;
@@ -14,80 +13,108 @@ export interface BlogPostWithImage {
   imageAlt: string;
   imageUrl: string | null;
   featured?: boolean;
+  priceRange?: string;
 }
 
 const categories = [
-  { id: 'all', name: 'All Posts', icon: BookOpen },
-  { id: 'best-clubs', name: 'Best Clubs', icon: Award },
-  { id: 'equipment', name: 'Equipment', icon: Zap },
+  { id: 'all', name: 'All Posts' },
+  { id: 'best-clubs', name: 'City Guides' },
+  { id: 'equipment', name: 'Equipment' },
 ];
 
-function PostCard({ post, size = 'normal' }: { post: BlogPostWithImage; size?: 'featured' | 'normal' }) {
-  const isEquipment = post.category === 'equipment';
-  const gradientClass = isEquipment
-    ? 'from-amber-400 to-orange-600'
-    : 'from-blue-400 to-blue-600';
-  const FallbackIcon = isEquipment ? Zap : MapPin;
-  const iconSize = size === 'featured' ? 'w-16 h-16' : 'w-12 h-12';
+function CategoryTag({ category }: { category: string }) {
+  if (category === 'equipment') {
+    return <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-medium">Equipment</span>;
+  }
+  return <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-medium">City Guide</span>;
+}
 
+function FeaturedCard({ post }: { post: BlogPostWithImage }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all"
+      className="group block bg-white border border-stone-200 rounded-lg overflow-hidden hover:shadow-md hover:border-stone-300 hover:-translate-y-0.5 transition-all duration-200"
     >
-      <div className={`aspect-video bg-gradient-to-br ${gradientClass} relative overflow-hidden`}>
+      <div className="aspect-[16/10] bg-stone-100 relative overflow-hidden">
         {post.imageUrl ? (
           <img
             src={post.imageUrl}
             alt={post.imageAlt}
-            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
           />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center text-white">
-            <FallbackIcon className={`${iconSize} opacity-50`} />
-          </div>
-        )}
-        {size === 'featured' && (
-          <div className="absolute top-4 left-4">
-            <span className="px-3 py-1 bg-white/90 text-purple-700 text-sm font-semibold rounded-full">
-              Featured
-            </span>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-stone-100 to-stone-200" />
         )}
       </div>
-      <div className={size === 'featured' ? 'p-6' : 'p-5'}>
-        <div className={`flex items-center gap-2 ${size === 'featured' ? 'text-sm' : 'text-xs'} text-gray-500 mb-2`}>
-          <Calendar className={size === 'featured' ? 'w-4 h-4' : 'w-3 h-3'} />
-          <span>
-            {new Date(post.date).toLocaleDateString('en-US',
-              size === 'featured'
-                ? { month: 'short', day: 'numeric', year: 'numeric' }
-                : { month: 'short', year: 'numeric' }
-            )}
+      <div className="p-5">
+        <div className="flex items-center gap-2 mb-2.5">
+          <CategoryTag category={post.category} />
+          <span className="text-xs text-stone-400">
+            {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
           </span>
-          <span>&bull;</span>
-          <span>{post.readTime}</span>
         </div>
-        <h3 className={`${size === 'featured' ? 'text-xl' : 'text-lg'} font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors`}>
+        <h3 className="text-lg font-bold text-[#1a1a1a] mb-1.5 group-hover:text-emerald-700 transition-colors">
           {post.title}
         </h3>
-        <p className={`text-gray-600 text-sm ${size === 'featured' ? 'line-clamp-3' : 'line-clamp-2'}`}>
+        <p className="text-stone-500 text-sm leading-relaxed line-clamp-3 mb-3">
           {post.excerpt}
         </p>
-        {size === 'featured' && (
-          <div className="mt-4 flex items-center text-purple-600 font-semibold text-sm">
-            Read More &rarr;
-          </div>
-        )}
+        <span className="text-emerald-600 text-sm font-medium">
+          Read more &rarr;
+        </span>
       </div>
     </Link>
   );
 }
 
-const sectionMeta: Record<string, { title: string; Icon: React.ComponentType<{ className?: string }> }> = {
-  all: { title: 'All Posts', Icon: BookOpen },
-  'best-clubs': { title: 'Best Padel Clubs by City', Icon: Award },
-  equipment: { title: 'Equipment & Gear Guides', Icon: Zap },
+function PostCard({ post }: { post: BlogPostWithImage }) {
+  const isEquipment = post.category === 'equipment';
+
+  return (
+    <Link
+      href={`/blog/${post.slug}`}
+      className={`group block border rounded-lg overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 ${
+        isEquipment
+          ? 'bg-amber-50/40 border-amber-200/60 hover:border-amber-300'
+          : 'bg-white border-stone-200 hover:border-stone-300'
+      }`}
+    >
+      {!isEquipment && (
+        <div className="aspect-video bg-stone-100 relative overflow-hidden">
+          {post.imageUrl ? (
+            <img
+              src={post.imageUrl}
+              alt={post.imageAlt}
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
+            />
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-stone-100 to-stone-200" />
+          )}
+        </div>
+      )}
+      <div className="p-5">
+        <div className="flex items-center gap-2 mb-2">
+          <CategoryTag category={post.category} />
+          {isEquipment && post.priceRange && (
+            <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100/80 text-amber-800 font-medium">{post.priceRange}</span>
+          )}
+          <span className="text-xs text-stone-400">{post.readTime}</span>
+        </div>
+        <h3 className={`font-bold text-[#1a1a1a] mb-1.5 group-hover:text-emerald-700 transition-colors ${isEquipment ? 'text-base' : 'text-base'}`}>
+          {post.title}
+        </h3>
+        <p className="text-stone-500 text-sm leading-relaxed line-clamp-2">
+          {post.excerpt}
+        </p>
+      </div>
+    </Link>
+  );
+}
+
+const sectionTitles: Record<string, string> = {
+  all: 'All Posts',
+  'best-clubs': 'City Guides',
+  equipment: 'Equipment & Gear',
 };
 
 export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
@@ -98,121 +125,116 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
     : posts.filter(p => p.category === activeFilter);
 
   const featuredPosts = posts.filter(p => p.featured);
-  const { title: sectionTitle, Icon: SectionIcon } = sectionMeta[activeFilter] || sectionMeta.all;
 
   return (
     <>
-      {/* Category Filter */}
-      <section className="bg-white border-b shadow-sm sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap gap-3 justify-center">
+      {/* Filter Tabs */}
+      <nav className="border-b border-stone-200 sticky top-0 z-30 bg-white/95 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex gap-8 justify-center">
             {categories.map(category => {
-              const Icon = category.icon;
               const isActive = activeFilter === category.id;
               return (
                 <button
                   key={category.id}
                   onClick={() => setActiveFilter(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
+                  className={`relative py-3.5 text-sm transition-colors ${
                     isActive
-                      ? 'bg-purple-600 text-white shadow-md'
-                      : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
+                      ? 'font-semibold text-[#1a1a1a]'
+                      : 'text-stone-400 hover:text-stone-600'
                   }`}
                 >
-                  <Icon className="w-4 h-4" />
                   {category.name}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-600 rounded-full" />
+                  )}
                 </button>
               );
             })}
           </div>
         </div>
-      </section>
+      </nav>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Featured Posts — always visible */}
         {featuredPosts.length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <TrendingUp className="w-8 h-8 text-purple-600" />
-              Featured Posts
+          <section className="mb-14">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-stone-400 mb-5">
+              Featured
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-5">
               {featuredPosts.map(post => (
-                <PostCard key={post.slug} post={post} size="featured" />
+                <FeaturedCard key={post.slug} post={post} />
               ))}
             </div>
-          </div>
+          </section>
         )}
 
         {/* Filtered Posts Grid */}
         {filteredPosts.length > 0 && (
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <SectionIcon className="w-8 h-8 text-purple-600" />
-              {sectionTitle}
+          <section>
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-stone-400 mb-5">
+              {sectionTitles[activeFilter] || 'All Posts'}
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {filteredPosts.map(post => (
                 <PostCard key={post.slug} post={post} />
               ))}
             </div>
-          </div>
+          </section>
         )}
 
         {/* Newsletter CTA */}
-        <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl p-8 text-center mt-12">
-          <h2 className="text-3xl font-bold mb-4">Stay Updated on Padel</h2>
-          <p className="text-xl text-purple-100 mb-6 max-w-2xl mx-auto">
-            Get the latest club reviews, how-to guides, and padel news delivered to your inbox
+        <div className="bg-[#1a1a1a] text-white rounded-xl p-8 text-center mt-16">
+          <h2 className="text-2xl font-bold mb-3">Stay in the loop</h2>
+          <p className="text-stone-400 mb-6 max-w-lg mx-auto">
+            Club reviews, gear guides, and padel news — delivered when it matters.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
               type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900"
+              placeholder="you@email.com"
+              className="flex-1 px-4 py-3 rounded-lg text-stone-900 bg-white text-sm"
             />
-            <button className="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+            <button className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium text-sm hover:bg-emerald-700 transition-colors">
               Subscribe
             </button>
           </div>
         </div>
 
         {/* Quick Links */}
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="grid md:grid-cols-3 gap-5 mt-12">
           <Link
             href="/search"
-            className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+            className="group border border-stone-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-sm transition-all"
           >
-            <MapPin className="w-8 h-8 text-purple-600 mb-3" />
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
+            <h3 className="font-bold text-[#1a1a1a] mb-1 group-hover:text-emerald-700 transition-colors">
               Find Courts
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-stone-500 text-sm">
               Search 249+ padel courts across America
             </p>
           </Link>
           <Link
             href="/get-started"
-            className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+            className="group border border-stone-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-sm transition-all"
           >
-            <BookOpen className="w-8 h-8 text-purple-600 mb-3" />
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
+            <h3 className="font-bold text-[#1a1a1a] mb-1 group-hover:text-emerald-700 transition-colors">
               Get Started
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-stone-500 text-sm">
               Learn how to start playing in 30 days
             </p>
           </Link>
           <Link
             href="/get-started/glossary"
-            className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+            className="group border border-stone-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-sm transition-all"
           >
-            <BookOpen className="w-8 h-8 text-purple-600 mb-3" />
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
+            <h3 className="font-bold text-[#1a1a1a] mb-1 group-hover:text-emerald-700 transition-colors">
               Glossary
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-stone-500 text-sm">
               100+ padel terms defined A-Z
             </p>
           </Link>

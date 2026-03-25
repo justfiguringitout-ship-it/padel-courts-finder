@@ -20,6 +20,7 @@ interface BlogPost {
   imageAlt: string;
   courtSlug: string;
   featured?: boolean;
+  priceRange?: string;
 }
 
 const blogPosts: BlogPost[] = [
@@ -226,7 +227,8 @@ const blogPosts: BlogPost[] = [
     date: '2026-03-24',
     readTime: '9 min read',
     imageAlt: 'Best beginner padel rackets 2026',
-    courtSlug: ''
+    courtSlug: '',
+    priceRange: '$90\u2013$130'
   },
   {
     slug: 'best-padel-rackets-intermediate',
@@ -236,7 +238,8 @@ const blogPosts: BlogPost[] = [
     date: '2026-03-24',
     readTime: '9 min read',
     imageAlt: 'Best intermediate padel rackets 2026',
-    courtSlug: ''
+    courtSlug: '',
+    priceRange: '$170\u2013$280'
   },
   {
     slug: 'best-padel-rackets-2026',
@@ -246,7 +249,8 @@ const blogPosts: BlogPost[] = [
     date: '2026-03-24',
     readTime: '10 min read',
     imageAlt: 'Best pro padel rackets 2026',
-    courtSlug: ''
+    courtSlug: '',
+    priceRange: '$250\u2013$400'
   }
 ];
 
@@ -267,23 +271,22 @@ export default function BlogPage() {
     imageAlt: post.imageAlt,
     imageUrl: getPostImage(post.courtSlug),
     featured: post.featured,
+    priceRange: post.priceRange,
   }));
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-purple-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Padel Courts Finder Blog
-            </h1>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-              Expert club reviews, how-to guides, equipment tips, and everything you need to master America&apos;s fastest-growing sport
-            </p>
-          </div>
+    <div className="min-h-screen bg-[#FAFAF8]">
+      {/* Editorial Header */}
+      <header className="bg-white border-b border-stone-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] tracking-tight mb-3">
+            The Padel Blog
+          </h1>
+          <p className="text-lg text-stone-500 max-w-2xl">
+            Club reviews, gear guides, and expert insights on America&apos;s fastest-growing sport.
+          </p>
         </div>
-      </section>
+      </header>
 
       <BlogContent posts={postsWithImages} />
     </div>
