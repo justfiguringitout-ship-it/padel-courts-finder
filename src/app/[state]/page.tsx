@@ -11,9 +11,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { MapPin, Star, Clock, ChevronRight, Building2, BookOpen } from "lucide-react";
+import { MapPin, Star, Clock, ChevronRight, Building2, BookOpen, TrendingUp } from "lucide-react";
 import { getStates, getStateBySlug } from "@/lib/site-structure";
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
+import { stateIntros, stateBlogSlugs } from "@/data/page-content";
 import { ClubsMapClient } from "@/components/clubs-map-client";
 import type { Metadata } from "next";
 
@@ -41,8 +42,15 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
     };
   }
 
+  // Compute total individual courts for meta
+  const allCourtsForMeta = getAllAdaptedCourts();
+  const stateCourtsMeta = allCourtsForMeta.filter((c) => c.address.stateCode === state.code);
+  const totalIndividualCourts = stateCourtsMeta.reduce((sum, c) => sum + c.facility.totalCourts, 0);
+
   const title = `${state.courtCount} Best Padel Courts in ${state.name} | Find Padel Near Me`;
-  const description = `Discover ${state.courtCount} padel courts across ${state.cities.length} cities in ${state.name}. Compare prices, read reviews, and book online. Find the perfect padel court near you.`;
+  const description = totalIndividualCourts > 0
+    ? `Find ${state.courtCount} padel clubs across ${state.cities.length} cities in ${state.name} with ${totalIndividualCourts}+ courts. Compare prices, hours, reviews, and facilities. The complete ${state.name} padel court directory.`
+    : `Find ${state.courtCount} padel clubs across ${state.cities.length} cities in ${state.name}. Compare prices, hours, reviews, and facilities. The complete ${state.name} padel court directory.`;
   const canonicalUrl = `https://www.padelcourtsfinder.com/${state.slug}`;
 
   return {
@@ -107,6 +115,12 @@ export default async function StatePage({ params }: StatePageProps) {
     return b.rating.ratingValue - a.rating.ratingValue;
   });
 
+  // Compute stats for content
+  const totalCourts = stateCourts.reduce((sum, c) => sum + c.facility.totalCourts, 0);
+  const customIntro = stateIntros[state.code];
+  const blogSlugs = stateBlogSlugs[state.code] || [];
+  const bigMarkets = ["FL", "TX", "CA"];
+
   return (
     <div className="min-h-screen">
       {/* Schema.org JSON-LD for State Page */}
@@ -168,13 +182,27 @@ export default async function StatePage({ params }: StatePageProps) {
               </h1>
             </div>
             <p className="text-xl text-muted-foreground mb-6">
-              Discover {state.courtCount} padel {state.courtCount === 1 ? 'club' : 'clubs'} across {state.cities.length} {state.cities.length === 1 ? 'city' : 'cities'} in {state.name}. Compare facilities, read reviews, and book online.
+              {customIntro || (
+                <>
+                  {state.name} has {state.courtCount} padel {state.courtCount === 1 ? 'club' : 'clubs'} across {state.cities.length} {state.cities.length === 1 ? 'city' : 'cities'}
+                  {totalCourts > 0 ? ` with ${totalCourts}+ total courts` : ''}.
+                  {bigMarkets.includes(state.code) ? " One of America's largest padel markets." : ""}
+                  {" "}Browse clubs by city below, or use our{" "}
+                  <Link href="/search" className="text-primary hover:underline">search</Link>
+                  {" "}to find courts near you.
+                </>
+              )}
             </p>
             <div className="flex flex-wrap gap-2">
               <Badge variant="secondary" className="text-base px-4 py-2">
                 <Building2 className="w-4 h-4 mr-2" />
                 {state.courtCount} Clubs
               </Badge>
+              {totalCourts > 0 && (
+                <Badge variant="secondary" className="text-base px-4 py-2">
+                  {totalCourts}+ Courts
+                </Badge>
+              )}
               <Badge variant="outline" className="text-base px-4 py-2">
                 {state.cities.length} {state.cities.length === 1 ? 'City' : 'Cities'}
               </Badge>
@@ -294,84 +322,92 @@ export default async function StatePage({ params }: StatePageProps) {
         </div>
       </section>
 
-      {/* SEO Content Section */}
+      {/* City Breakdown */}
       <section className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto prose prose-gray dark:prose-invert">
-          <h2>About Padel in {state.name}</h2>
-          <p>
-            {state.name} is home to {state.courtCount} padel {state.courtCount === 1 ? 'club' : 'clubs'} spread across {state.cities.length} {state.cities.length === 1 ? 'city' : 'cities'}, making it one of the growing hubs for padel tennis in the United States.
-            Whether you&apos;re a beginner looking to try padel for the first time or an experienced player seeking competitive matches,
-            you&apos;ll find excellent facilities throughout the state.
-          </p>
-
-          <h3>Popular Cities for Padel in {state.name}</h3>
-          <p>The top cities for padel in {state.name} include:</p>
-          <ul>
-            {state.cities.slice(0, 5).map((city) => (
-              <li key={city.slug}>
-                <Link href={`/${state.slug}/${city.slug}`} className="text-primary hover:underline">
-                  {city.name}
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-4">Padel Clubs by City in {state.name}</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-2">
+            {state.cities.map((city) => {
+              const cityCourtsTotal = stateCourts
+                .filter((c) => c.address.city === city.name)
+                .reduce((sum, c) => sum + c.facility.totalCourts, 0);
+              return (
+                <Link
+                  key={city.slug}
+                  href={`/${state.slug}/${city.slug}`}
+                  className="flex items-center justify-between py-2 border-b border-muted hover:text-primary transition-colors text-sm"
+                >
+                  <span className="font-medium">{city.name}</span>
+                  <span className="text-muted-foreground">
+                    {city.courtCount} {city.courtCount === 1 ? 'club' : 'clubs'}
+                    {cityCourtsTotal > 0 ? `, ${cityCourtsTotal} courts` : ''}
+                  </span>
                 </Link>
-                {" "}with {city.courtCount} {city.courtCount === 1 ? 'club' : 'clubs'}
-              </li>
-            ))}
-          </ul>
-
-          <h3>Find the Perfect Court</h3>
-          <p>
-            Use our directory to compare facilities, check availability, read reviews from other players,
-            and book your court online. Each listing includes detailed information about court surfaces,
-            amenities, pricing, and opening hours to help you make the best choice for your game.
-          </p>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* Related Blog Posts */}
+      {/* Related Guides & Links */}
       <section className="container mx-auto px-4 py-12 bg-muted/20">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-2 mb-4">
             <BookOpen className="w-6 h-6 text-primary" />
-            <h2 className="text-2xl font-bold">Expert City Guides</h2>
+            <h2 className="text-2xl font-bold">Explore {state.name} Padel</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-4">
-            {state.cities.slice(0, 3).map((city) => {
-              const blogSlug = city.slug === 'brooklyn' ? 'nyc' : 
-                              city.slug === 'los-angeles' ? 'los-angeles' :
-                              city.slug === 'san-francisco' ? 'san-francisco' :
-                              city.slug === 'san-diego' ? 'san-diego' :
-                              city.slug === 'san-antonio' ? 'san-antonio' :
-                              city.slug;
-              const hasBlogPost = ['miami', 'austin', 'los-angeles', 'san-francisco', 'san-diego', 
-                                   'brooklyn', 'phoenix', 'chicago', 'denver', 'dallas', 'atlanta', 
-                                   'houston', 'charlotte', 'san-antonio', 'orlando'].includes(city.slug);
-              
-              if (!hasBlogPost) return null;
-              
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {blogSlugs.map((slug) => {
+              const cityName = slug === 'nyc' ? 'New York City'
+                : slug === 'fort-lauderdale' ? 'Fort Lauderdale'
+                : slug === 'san-francisco' ? 'San Francisco'
+                : slug === 'san-diego' ? 'San Diego'
+                : slug === 'san-antonio' ? 'San Antonio'
+                : slug === 'los-angeles' ? 'Los Angeles'
+                : slug === 'new-jersey' ? 'New Jersey'
+                : slug === 'ohio' ? 'Ohio'
+                : slug.charAt(0).toUpperCase() + slug.slice(1);
               return (
-                <Link
-                  key={city.slug}
-                  href={`/blog/best-padel-clubs-${blogSlug}`}
-                  className="group"
-                >
+                <Link key={slug} href={`/blog/best-padel-clubs-${slug}`} className="group">
                   <Card className="h-full hover:border-primary transition-all">
-                    <CardHeader>
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center gap-2 mb-1">
+                        <TrendingUp className="w-4 h-4 text-primary" />
+                        <Badge variant="secondary" className="text-xs">Expert Guide</Badge>
+                      </div>
                       <CardTitle className="text-base group-hover:text-primary transition-colors">
-                        Best Clubs in {city.name}
+                        Best Clubs in {cityName}
                       </CardTitle>
                       <CardDescription className="text-sm">
-                        Expert review & rankings →
+                        In-depth rankings & reviews →
                       </CardDescription>
                     </CardHeader>
                   </Card>
                 </Link>
               );
             })}
+            {state.courtCount <= 5 && (
+              <Link href="/how-to-play" className="group">
+                <Card className="h-full hover:border-primary transition-all">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-base group-hover:text-primary transition-colors">
+                      New to Padel?
+                    </CardTitle>
+                    <CardDescription className="text-sm">
+                      Learn how to play padel →
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+            )}
           </div>
-          <div className="mt-6 text-center">
-            <Button asChild variant="outline">
-              <Link href="/blog">View All City Guides</Link>
-            </Button>
-          </div>
+          {blogSlugs.length === 0 && (
+            <div className="mt-4">
+              <Button asChild variant="outline">
+                <Link href="/blog">View All City Guides</Link>
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 

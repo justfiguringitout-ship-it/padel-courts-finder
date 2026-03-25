@@ -11,9 +11,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { MapPin, Star, Clock, Phone, Globe, Navigation, TrendingUp } from "lucide-react";
+import { MapPin, Star, Clock, Phone, Globe, Navigation, TrendingUp, BookOpen } from "lucide-react";
 import { getStates, getStateBySlug, getCityBySlug } from "@/lib/site-structure";
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
+import { cityIntros, cityBlogSlugs } from "@/data/page-content";
 import { ClubsMapClient } from "@/components/clubs-map-client";
 import type { Metadata } from "next";
 
@@ -51,8 +52,17 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     };
   }
 
+  // Compute total courts for meta description
+  const allCourtsForMeta = getAllAdaptedCourts();
+  const cityCourtsMeta = allCourtsForMeta.filter(
+    (c) => c.address.stateCode === state.code && c.address.city === city.name
+  );
+  const totalCourtCount = cityCourtsMeta.reduce((sum, c) => sum + c.facility.totalCourts, 0);
+
   const title = `${city.courtCount} Best Padel Courts in ${city.name}, ${state.code} | Find Padel Near Me`;
-  const description = `Find and book padel courts in ${city.name}, ${state.name}. Compare ${city.courtCount} facilities, read reviews, check prices and availability. Book your padel court online today.`;
+  const description = totalCourtCount > 0
+    ? `Find ${city.courtCount} padel clubs with ${totalCourtCount}+ courts in ${city.name}, ${state.name}. Compare prices, hours, read reviews, and book your court. ${city.name}'s complete padel directory.`
+    : `Find ${city.courtCount} padel clubs in ${city.name}, ${state.name}. Compare prices, hours, read reviews, and book your court. ${city.name}'s complete padel directory.`;
   const canonicalUrl = `https://www.padelcourtsfinder.com/${state.slug}/${city.slug}`;
 
   return {
@@ -126,6 +136,37 @@ export default async function CityPage({ params }: CityPageProps) {
     .filter((c) => c.slug !== city.slug)
     .slice(0, 6);
 
+  // Compute dynamic stats for SEO content
+  const totalCourts = cityCourts.reduce((sum, c) => sum + c.facility.totalCourts, 0);
+  const indoorCount = cityCourts.filter((c) => c.features.some(f => f.toLowerCase() === "indoor")).length;
+  const outdoorCount = cityCourts.filter((c) => c.features.some(f => f.toLowerCase() === "outdoor")).length;
+  const lessonsCount = cityCourts.filter((c) => c.lessonsAvailable).length;
+  const rentalCount = cityCourts.filter((c) => c.rentalAvailable).length;
+  const comingSoon = cityCourts.filter((c) => c.status === "coming_soon");
+  const openClubs = cityCourts.filter((c) => c.status !== "coming_soon" && c.status !== "temporarily_closed");
+
+  // Extract price range from pricingText
+  const prices: number[] = [];
+  cityCourts.forEach((c) => {
+    if (c.pricingText) {
+      const matches = c.pricingText.match(/\$(\d+)/g);
+      if (matches) {
+        matches.forEach((m) => prices.push(parseInt(m.replace("$", ""), 10)));
+      }
+    }
+  });
+  const minPrice = prices.length > 0 ? Math.min(...prices) : 0;
+  const maxPrice = prices.length > 0 ? Math.max(...prices) : 0;
+
+  // Custom or dynamic intro
+  const customIntro = cityIntros[`${state.code}-${city.name}`];
+  const blogSlug = cityBlogSlugs[city.slug];
+
+  // Build indoor/outdoor descriptor
+  const facilityMix = indoorCount > 0 && outdoorCount > 0
+    ? "indoor and outdoor"
+    : indoorCount > 0 ? "indoor" : outdoorCount > 0 ? "outdoor" : "";
+
   return (
     <div className="min-h-screen">
       {/* Schema.org JSON-LD for City Page */}
@@ -197,8 +238,16 @@ export default async function CityPage({ params }: CityPageProps) {
               </h1>
             </div>
             <p className="text-xl text-muted-foreground mb-6">
-              Find and book from {city.courtCount} padel {city.courtCount === 1 ? 'club' : 'clubs'} in {city.name}, {state.name}.
-              Compare facilities, read reviews, and reserve your court online.
+              {customIntro || (
+                <>
+                  {city.name} is home to {openClubs.length} padel {openClubs.length === 1 ? 'club' : 'clubs'}
+                  {totalCourts > 0 ? ` with ${totalCourts}+ courts` : ''}
+                  {state.cities.length > 1 ? `, making it one of ${state.name}'s top destinations for padel` : ` in ${state.name}`}.
+                  {facilityMix ? ` From ${facilityMix} facilities` : ' From modern facilities'}
+                  {lessonsCount > 0 ? ' offering lessons, leagues, and equipment rental' : ''}, {city.name} has options for players of all levels.
+                  Browse all {city.name} padel clubs below to compare pricing, hours, amenities, and player reviews.
+                </>
+              )}
             </p>
             <div className="flex flex-wrap gap-2">
               <Badge variant="secondary" className="text-base px-4 py-2">
@@ -339,99 +388,130 @@ export default async function CityPage({ params }: CityPageProps) {
         </section>
       )}
 
-      {/* SEO Content Section */}
-      <section className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto prose prose-gray dark:prose-invert">
-          <h2>Padel Clubs in {city.name}, {state.name}</h2>
-          <p>
-            {city.name} offers {city.courtCount} excellent padel {city.courtCount === 1 ? 'club' : 'clubs'} for players of all skill levels.
-            Whether you&apos;re new to the sport or a seasoned player, you&apos;ll find top-quality courts with modern amenities
-            and professional instruction available.
-          </p>
-
-          <h3>Why Play Padel in {city.name}?</h3>
-          <ul>
-            <li>
-              <strong>Quality Facilities:</strong> All courts listed are verified and maintained to professional standards
-            </li>
-            <li>
-              <strong>Flexible Booking:</strong> Easy online reservation system with real-time availability
-            </li>
-            <li>
-              <strong>Competitive Pricing:</strong> Compare prices across facilities to find the best rates
-            </li>
-            <li>
-              <strong>Community:</strong> Join a growing community of padel enthusiasts in {city.name}
-            </li>
-          </ul>
-
-          <h3>Book Your Court Today</h3>
-          <p>
-            Browse our selection of {city.courtCount} padel {city.courtCount === 1 ? 'club' : 'clubs'} in {city.name} above.
-            Each listing includes detailed information about facilities, pricing, hours, and user reviews.
-            Click on any court to see full details, photos, and booking availability.
-          </p>
-
-          {nearbyCities.length > 0 && (
-            <>
-              <h3>Other Cities in {state.name}</h3>
-              <p>
-                Looking for courts in other parts of {state.name}? Check out our listings in{" "}
-                {nearbyCities.slice(0, 3).map((c, i) => (
-                  <span key={c.slug}>
-                    {i > 0 && (i === nearbyCities.slice(0, 3).length - 1 ? ", and " : ", ")}
-                    <Link href={`/${state.slug}/${c.slug}`} className="text-primary hover:underline">
-                      {c.name}
-                    </Link>
+      {/* What to Know Section */}
+      {(totalCourts > 0 || lessonsCount > 0 || rentalCount > 0 || prices.length > 0 || comingSoon.length > 0) && (
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4">What to Know About Padel in {city.name}</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {minPrice > 0 && maxPrice > 0 && (
+                <div className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
+                  <span className="text-2xl">💰</span>
+                  <div>
+                    <p className="font-medium text-sm">Pricing</p>
+                    <p className="text-sm text-muted-foreground">
+                      Courts typically cost ${minPrice}–${maxPrice}/hour
+                    </p>
+                  </div>
+                </div>
+              )}
+              {(indoorCount > 0 || outdoorCount > 0) && (
+                <div className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
+                  <span className="text-2xl">🏟️</span>
+                  <div>
+                    <p className="font-medium text-sm">Court Types</p>
+                    <p className="text-sm text-muted-foreground">
+                      {indoorCount > 0 && `${indoorCount} indoor`}
+                      {indoorCount > 0 && outdoorCount > 0 && " and "}
+                      {outdoorCount > 0 && `${outdoorCount} outdoor`}
+                      {" "}{indoorCount + outdoorCount === 1 ? "facility" : "facilities"}
+                    </p>
+                  </div>
+                </div>
+              )}
+              {lessonsCount > 0 && (
+                <div className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
+                  <span className="text-2xl">🎓</span>
+                  <div>
+                    <p className="font-medium text-sm">Lessons</p>
+                    <p className="text-sm text-muted-foreground">
+                      {lessonsCount} of {openClubs.length} clubs offer lessons for beginners
+                    </p>
+                  </div>
+                </div>
+              )}
+              {rentalCount > 0 && (
+                <div className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
+                  <span className="text-2xl">🎾</span>
+                  <div>
+                    <p className="font-medium text-sm">Equipment Rental</p>
+                    <p className="text-sm text-muted-foreground">
+                      {rentalCount} {rentalCount === 1 ? "club offers" : "clubs offer"} equipment rental
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+            {comingSoon.length > 0 && (
+              <p className="text-sm text-muted-foreground mt-4">
+                <strong>Coming soon:</strong>{" "}
+                {comingSoon.map((c, i) => (
+                  <span key={c.id}>
+                    {i > 0 && ", "}
+                    {c.name}
                   </span>
                 ))}
-                .
               </p>
-            </>
-          )}
-        </div>
-      </section>
-
-      {/* Related Content - Blog Post Link */}
-      {(city.slug === 'miami' || city.slug === 'austin' || city.slug === 'los-angeles' || 
-        city.slug === 'san-francisco' || city.slug === 'san-diego' || city.slug === 'brooklyn' ||
-        city.slug === 'phoenix' || city.slug === 'chicago' || city.slug === 'denver' ||
-        city.slug === 'dallas' || city.slug === 'atlanta' || city.slug === 'houston' ||
-        city.slug === 'charlotte' || city.slug === 'san-antonio' || city.slug === 'orlando') && (
-        <section className="container mx-auto px-4 py-12 bg-gradient-to-r from-primary/10 to-purple/10">
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-primary/20">
-              <CardHeader>
-                <div className="flex items-center gap-2 mb-2">
-                  <TrendingUp className="w-5 h-5 text-primary" />
-                  <Badge variant="secondary">Expert Guide</Badge>
-                </div>
-                <CardTitle className="text-2xl">
-                  Want the Complete {city.name} Padel Guide?
-                </CardTitle>
-                <CardDescription className="text-base">
-                  Read our in-depth expert review of the best padel clubs in {city.name} with ratings, 
-                  insider tips, and detailed comparisons.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button asChild size="lg" className="w-full sm:w-auto">
-                  <Link href={`/blog/best-padel-clubs-${
-                    city.slug === 'brooklyn' ? 'nyc' : 
-                    city.slug === 'los-angeles' ? 'los-angeles' :
-                    city.slug === 'san-francisco' ? 'san-francisco' :
-                    city.slug === 'san-diego' ? 'san-diego' :
-                    city.slug === 'san-antonio' ? 'san-antonio' :
-                    city.slug
-                  }`}>
-                    Read the Complete {city.name} Guide →
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
+            )}
           </div>
         </section>
       )}
+
+      {/* Related Guides & Internal Links */}
+      <section className="container mx-auto px-4 py-12 bg-muted/20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <BookOpen className="w-6 h-6 text-primary" />
+            Related Guides
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {blogSlug && (
+              <Link href={`/blog/best-padel-clubs-${blogSlug}`} className="group">
+                <Card className="h-full hover:border-primary transition-all">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <TrendingUp className="w-4 h-4 text-primary" />
+                      <Badge variant="secondary" className="text-xs">Expert Guide</Badge>
+                    </div>
+                    <CardTitle className="text-base group-hover:text-primary transition-colors">
+                      Best Padel Clubs in {city.name}
+                    </CardTitle>
+                    <CardDescription className="text-sm">
+                      In-depth rankings, insider tips & comparisons →
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+            )}
+            <Link href={`/${state.slug}`} className="group">
+              <Card className="h-full hover:border-primary transition-all">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-base group-hover:text-primary transition-colors">
+                    All Padel Clubs in {state.name}
+                  </CardTitle>
+                  <CardDescription className="text-sm">
+                    {state.courtCount} clubs across {state.cities.length} cities →
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
+            {nearbyCities.slice(0, blogSlug ? 1 : 2).map((nearbyCity) => (
+              <Link key={nearbyCity.slug} href={`/${state.slug}/${nearbyCity.slug}`} className="group">
+                <Card className="h-full hover:border-primary transition-all">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-base group-hover:text-primary transition-colors">
+                      Padel in {nearbyCity.name}
+                    </CardTitle>
+                    <CardDescription className="text-sm">
+                      {nearbyCity.courtCount} {nearbyCity.courtCount === 1 ? 'club' : 'clubs'} nearby →
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground py-12">
