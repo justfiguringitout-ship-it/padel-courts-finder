@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, MapPin, TrendingUp, BookOpen, Award } from 'lucide-react';
+import { Calendar, MapPin, TrendingUp, BookOpen, Award, Zap } from 'lucide-react';
 import { getAdaptedCourtBySlug } from '@/lib/court-adapter';
 
 export const metadata: Metadata = {
@@ -217,6 +217,37 @@ const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     imageAlt: 'Charlotte padel facilities',
     courtSlug: 'charlotte-padel-club-south-charlotte'
+  },
+  // Equipment Buying Guides
+  {
+    slug: 'best-padel-rackets-beginners',
+    title: 'Best Padel Rackets for Beginners (2026)',
+    category: 'equipment',
+    excerpt: 'The 5 best beginner padel rackets from $90–$130. Round shapes, forgiving sweet spots, and lightweight frames to help you learn faster.',
+    date: '2026-03-24',
+    readTime: '9 min read',
+    imageAlt: 'Best beginner padel rackets 2026',
+    courtSlug: ''
+  },
+  {
+    slug: 'best-padel-rackets-intermediate',
+    title: 'Best Padel Rackets for Intermediate Players (2026)',
+    category: 'equipment',
+    excerpt: 'Ready to upgrade? The 5 best intermediate padel rackets from $170–$280. Carbon faces, teardrop shapes, and more power for advancing players.',
+    date: '2026-03-24',
+    readTime: '9 min read',
+    imageAlt: 'Best intermediate padel rackets 2026',
+    courtSlug: ''
+  },
+  {
+    slug: 'best-padel-rackets-2026',
+    title: 'Best Padel Rackets 2026 — Top 5 Pro Picks',
+    category: 'equipment',
+    excerpt: 'The 5 best pro-level padel rackets from $250–$400. Flagship editions with 18K carbon, Kevlar cores, and tour-proven performance.',
+    date: '2026-03-24',
+    readTime: '10 min read',
+    imageAlt: 'Best pro padel rackets 2026',
+    courtSlug: ''
   }
 ];
 
@@ -335,7 +366,7 @@ export default function BlogPage() {
             Best Padel Clubs by City
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map(post => {
+            {blogPosts.filter(post => post.category === 'best-clubs').map(post => {
               const imageUrl = getPostImage(post.courtSlug);
               return (
               <Link
@@ -374,6 +405,43 @@ export default function BlogPage() {
               </Link>
               );
             })}
+          </div>
+        </div>
+
+        {/* Equipment & Gear */}
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <Zap className="w-8 h-8 text-purple-600" />
+            Equipment &amp; Gear Guides
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {blogPosts.filter(post => post.category === 'equipment').map(post => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all"
+              >
+                <div className="aspect-video bg-gradient-to-br from-amber-400 to-orange-600 relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center text-white">
+                    <Zap className="w-12 h-12 opacity-50" />
+                  </div>
+                </div>
+                <div className="p-5">
+                  <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
+                    <Calendar className="w-3 h-3" />
+                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
+                    <span>•</span>
+                    <span>{post.readTime}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
 
