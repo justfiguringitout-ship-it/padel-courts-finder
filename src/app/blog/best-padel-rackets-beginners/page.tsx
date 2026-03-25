@@ -157,7 +157,7 @@ export default function BeginnerRacketsPage() {
               href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-emerald-600 font-medium text-sm hover:underline"
+              className="inline-flex items-center px-7 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
             >
               Check Price on Amazon &rarr;
             </a>
@@ -195,7 +195,7 @@ export default function BeginnerRacketsPage() {
               href="https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-emerald-600 font-medium text-sm hover:underline"
+              className="inline-flex items-center px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
             >
               Check Price on Amazon &rarr;
             </a>
@@ -233,7 +233,7 @@ export default function BeginnerRacketsPage() {
               href="https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-emerald-600 font-medium text-sm hover:underline"
+              className="inline-flex items-center px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
             >
               Check Price on Amazon &rarr;
             </a>
@@ -271,7 +271,7 @@ export default function BeginnerRacketsPage() {
               href="https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-emerald-600 font-medium text-sm hover:underline"
+              className="inline-flex items-center px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
             >
               Check Price on Amazon &rarr;
             </a>
@@ -309,7 +309,7 @@ export default function BeginnerRacketsPage() {
               href="https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-emerald-600 font-medium text-sm hover:underline"
+              className="inline-flex items-center px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
             >
               Check Price on Amazon &rarr;
             </a>

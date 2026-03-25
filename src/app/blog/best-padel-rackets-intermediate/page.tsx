@@ -100,7 +100,7 @@ export default function IntermediateRacketsPage() {
               <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">✓</span> Rough sand finish for topspin, low balance = great at net</p>
               <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">✗</span> Fiberglass face limits raw power</p>
             </div>
-            <a href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-medium text-sm hover:underline">Check Price on Amazon →</a>
+            <a href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-7 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon →</a>
           </div>
 
           {/* 2. Wilson Blade Elite V2 */}
@@ -123,7 +123,7 @@ export default function IntermediateRacketsPage() {
               <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">✓</span> Proven Wilson build quality, teardrop balances power/control</p>
               <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">✗</span> 2022 model (older but battle-tested)</p>
             </div>
-            <a href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-medium text-sm hover:underline">Check Price on Amazon →</a>
+            <a href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon →</a>
           </div>
 
           {/* 3. NOX AT10 Genius Attack 12K */}
@@ -146,7 +146,7 @@ export default function IntermediateRacketsPage() {
               <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">✓</span> 12K carbon face is elite at this price, SPIN 3D texture</p>
               <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">✗</span> Diamond shape + head-heavy = demanding. Not for lower-intermediate.</p>
             </div>
-            <a href="https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-medium text-sm hover:underline">Check Price on Amazon →</a>
+            <a href="https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon →</a>
           </div>
 
           {/* 4. Bullpadel Neuron 2025 */}
@@ -169,7 +169,7 @@ export default function IntermediateRacketsPage() {
               <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">✓</span> Hybrid shape = round&apos;s sweet spot + teardrop&apos;s power. Vibradrive reduces fatigue.</p>
               <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">✗</span> Stiffer than fiberglass, pro-model pricing</p>
             </div>
-            <a href="https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-medium text-sm hover:underline">Check Price on Amazon →</a>
+            <a href="https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon →</a>
           </div>
 
           {/* 5. Adidas Metalbone HRD+ 3.3 */}
@@ -192,7 +192,7 @@ export default function IntermediateRacketsPage() {
               <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">✓</span> One of the most powerful surfaces under $300, 3M tape pre-applied</p>
               <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">✗</span> Hard EVA core punishes mishits, demanding for pure intermediates</p>
             </div>
-            <a href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-medium text-sm hover:underline">Check Price on Amazon →</a>
+            <a href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon →</a>
           </div>
         </section>
 

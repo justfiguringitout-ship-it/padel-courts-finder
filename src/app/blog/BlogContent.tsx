@@ -157,8 +157,8 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Featured Posts — always visible */}
-        {featuredPosts.length > 0 && (
+        {/* Featured Posts — only in "All Posts" view */}
+        {activeFilter === 'all' && featuredPosts.length > 0 && (
           <section className="mb-14">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-stone-400 mb-5">
               Featured
