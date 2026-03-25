@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-import { Calendar, MapPin, TrendingUp, BookOpen, Award, Zap } from 'lucide-react';
 import { getAdaptedCourtBySlug } from '@/lib/court-adapter';
+import BlogContent, { BlogPostWithImage } from './BlogContent';
 
 export const metadata: Metadata = {
   title: 'Padel Blog | Expert Guides, Club Reviews & Tips',
@@ -223,7 +222,7 @@ const blogPosts: BlogPost[] = [
     slug: 'best-padel-rackets-beginners',
     title: 'Best Padel Rackets for Beginners (2026)',
     category: 'equipment',
-    excerpt: 'The 5 best beginner padel rackets from $90–$130. Round shapes, forgiving sweet spots, and lightweight frames to help you learn faster.',
+    excerpt: 'The 5 best beginner padel rackets from $90\u2013$130. Round shapes, forgiving sweet spots, and lightweight frames to help you learn faster.',
     date: '2026-03-24',
     readTime: '9 min read',
     imageAlt: 'Best beginner padel rackets 2026',
@@ -233,7 +232,7 @@ const blogPosts: BlogPost[] = [
     slug: 'best-padel-rackets-intermediate',
     title: 'Best Padel Rackets for Intermediate Players (2026)',
     category: 'equipment',
-    excerpt: 'Ready to upgrade? The 5 best intermediate padel rackets from $170–$280. Carbon faces, teardrop shapes, and more power for advancing players.',
+    excerpt: 'Ready to upgrade? The 5 best intermediate padel rackets from $170\u2013$280. Carbon faces, teardrop shapes, and more power for advancing players.',
     date: '2026-03-24',
     readTime: '9 min read',
     imageAlt: 'Best intermediate padel rackets 2026',
@@ -241,9 +240,9 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: 'best-padel-rackets-2026',
-    title: 'Best Padel Rackets 2026 — Top 5 Pro Picks',
+    title: 'Best Padel Rackets 2026 \u2014 Top 5 Pro Picks',
     category: 'equipment',
-    excerpt: 'The 5 best pro-level padel rackets from $250–$400. Flagship editions with 18K carbon, Kevlar cores, and tour-proven performance.',
+    excerpt: 'The 5 best pro-level padel rackets from $250\u2013$400. Flagship editions with 18K carbon, Kevlar cores, and tour-proven performance.',
     date: '2026-03-24',
     readTime: '10 min read',
     imageAlt: 'Best pro padel rackets 2026',
@@ -251,19 +250,25 @@ const blogPosts: BlogPost[] = [
   }
 ];
 
-const categories = [
-  { id: 'all', name: 'All Posts', icon: BookOpen },
-  { id: 'best-clubs', name: 'Best Clubs', icon: Award },
-  { id: 'how-to', name: 'How-To Guides', icon: TrendingUp },
-  { id: 'equipment', name: 'Equipment', icon: MapPin },
-];
-
 function getPostImage(courtSlug: string): string | null {
+  if (!courtSlug) return null;
   const court = getAdaptedCourtBySlug(courtSlug);
   return court?.heroImage || null;
 }
 
 export default function BlogPage() {
+  const postsWithImages: BlogPostWithImage[] = blogPosts.map(post => ({
+    slug: post.slug,
+    title: post.title,
+    category: post.category,
+    excerpt: post.excerpt,
+    date: post.date,
+    readTime: post.readTime,
+    imageAlt: post.imageAlt,
+    imageUrl: getPostImage(post.courtSlug),
+    featured: post.featured,
+  }));
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
@@ -280,229 +285,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="bg-white border-b shadow-sm sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map(category => {
-              const Icon = category.icon;
-              return (
-                <button
-                  key={category.id}
-                  className="flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-lg font-medium hover:bg-purple-200 transition-colors"
-                >
-                  <Icon className="w-4 h-4" />
-                  {category.name}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Featured Posts */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-            <TrendingUp className="w-8 h-8 text-purple-600" />
-            Featured Posts
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {blogPosts.filter(post => post.featured).map(post => {
-              const imageUrl = getPostImage(post.courtSlug);
-              return (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all"
-              >
-                <div className="aspect-video bg-gradient-to-br from-purple-400 to-purple-600 relative overflow-hidden">
-                  {imageUrl && (
-                    <img
-                      src={imageUrl}
-                      alt={post.imageAlt}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  )}
-                  {!imageUrl && (
-                    <div className="absolute inset-0 flex items-center justify-center text-white">
-                      <MapPin className="w-16 h-16 opacity-50" />
-                    </div>
-                  )}
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-white/90 text-purple-700 text-sm font-semibold rounded-full">
-                      Featured
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                    <span>•</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="mt-4 flex items-center text-purple-600 font-semibold text-sm">
-                    Read More →
-                  </div>
-                </div>
-              </Link>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* All Posts Grid */}
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-            <Award className="w-8 h-8 text-purple-600" />
-            Best Padel Clubs by City
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.filter(post => post.category === 'best-clubs').map(post => {
-              const imageUrl = getPostImage(post.courtSlug);
-              return (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all"
-              >
-                <div className="aspect-video bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden">
-                  {imageUrl && (
-                    <img
-                      src={imageUrl}
-                      alt={post.imageAlt}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  )}
-                  {!imageUrl && (
-                    <div className="absolute inset-0 flex items-center justify-center text-white">
-                      <MapPin className="w-12 h-12 opacity-50" />
-                    </div>
-                  )}
-                </div>
-                <div className="p-5">
-                  <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                    <Calendar className="w-3 h-3" />
-                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
-                    <span>•</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                </div>
-              </Link>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Equipment & Gear */}
-        <div className="mt-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-            <Zap className="w-8 h-8 text-purple-600" />
-            Equipment &amp; Gear Guides
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {blogPosts.filter(post => post.category === 'equipment').map(post => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all"
-              >
-                <div className="aspect-video bg-gradient-to-br from-amber-400 to-orange-600 relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center text-white">
-                    <Zap className="w-12 h-12 opacity-50" />
-                  </div>
-                </div>
-                <div className="p-5">
-                  <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                    <Calendar className="w-3 h-3" />
-                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
-                    <span>•</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Newsletter CTA */}
-        <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl p-8 text-center mt-12">
-          <h2 className="text-3xl font-bold mb-4">Stay Updated on Padel</h2>
-          <p className="text-xl text-purple-100 mb-6 max-w-2xl mx-auto">
-            Get the latest club reviews, how-to guides, and padel news delivered to your inbox
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900"
-            />
-            <button className="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-              Subscribe
-            </button>
-          </div>
-        </div>
-
-        {/* Quick Links */}
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
-          <Link
-            href="/search"
-            className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
-          >
-            <MapPin className="w-8 h-8 text-purple-600 mb-3" />
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Find Courts
-            </h3>
-            <p className="text-gray-600 text-sm">
-              Search 249+ padel courts across America
-            </p>
-          </Link>
-          <Link
-            href="/get-started"
-            className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
-          >
-            <BookOpen className="w-8 h-8 text-purple-600 mb-3" />
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Get Started
-            </h3>
-            <p className="text-gray-600 text-sm">
-              Learn how to start playing in 30 days
-            </p>
-          </Link>
-          <Link
-            href="/get-started/glossary"
-            className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
-          >
-            <BookOpen className="w-8 h-8 text-purple-600 mb-3" />
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Glossary
-            </h3>
-            <p className="text-gray-600 text-sm">
-              100+ padel terms defined A-Z
-            </p>
-          </Link>
-        </div>
-      </div>
+      <BlogContent posts={postsWithImages} />
     </div>
   );
 }
