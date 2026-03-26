@@ -232,6 +232,17 @@ const blogPosts: BlogPost[] = [
   },
   // Equipment Buying Guides
   {
+    slug: 'padel-gifts-mothers-day-2026',
+    title: 'Best Padel Gifts for Mom (2026) — 12 Ideas She\'ll Actually Use',
+    category: 'equipment',
+    excerpt: 'From beginner rackets to premium bags, 12 curated padel gifts at every budget — $14 to $399. Gift guide for the padel-loving mom.',
+    date: '2026-03-25',
+    readTime: '8 min read',
+    imageAlt: 'Padel gifts for Mother\'s Day 2026',
+    courtSlug: '',
+    priceRange: '$14\u2013$399'
+  },
+  {
     slug: 'best-padel-rackets-beginners',
     title: 'Best Padel Rackets for Beginners (2026)',
     category: 'equipment',
