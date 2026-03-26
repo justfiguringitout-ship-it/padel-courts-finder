@@ -76,7 +76,7 @@ const clubs: Club[] = [
     location: 'Orlando, FL',
     courts: '4 indoor courts',
     price: '$$-$$$',
-    description: 'Orlando\'s premier indoor padel facility with 4 professional courts, a full gym, and a vibrant community atmosphere. Padel Plus stands out with its comprehensive offering: memberships starting at just $90/month, paddle rentals for $5, a ball machine for solo practice, and a Juan Valdez Cafe on-site. The climate-controlled indoor setting makes it the go-to for year-round play.',
+    description: 'Orlando\'s premier indoor padel facility with 4 professional courts, a full gym, and a vibrant community atmosphere. Padel Plus stands out with its comprehensive offering: memberships starting at just $90/month, racket rentals for $10, a ball machine for solo practice, and a Juan Valdez Cafe on-site. The climate-controlled indoor setting makes it the go-to for year-round play.',
     highlights: [
       '4 professional indoor courts',
       'Full gym & fitness center',
@@ -88,7 +88,7 @@ const clubs: Club[] = [
     programs: [
       'Court rentals ($25-60/hr)',
       'Memberships from $90/mo',
-      'Paddle rental ($5)',
+      'Racket rental ($10)',
       'Professional coaching',
       'Group clinics (all levels)',
       'Community events & leagues'

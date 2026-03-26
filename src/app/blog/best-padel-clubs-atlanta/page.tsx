@@ -87,7 +87,7 @@ const clubs: Club[] = [
     ],
     programs: [
       'Court time: $60/hour (~$15/person)',
-      'Paddle rental: $5',
+      'Racket rental: $5',
       'Balls: $9',
       'Clinics from $30+',
       'Private lessons: $120 (ITA members 25% off)',
