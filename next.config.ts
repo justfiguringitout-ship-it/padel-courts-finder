@@ -71,7 +71,7 @@ const nextConfig: NextConfig = {
       { source: '/courts/xcel-padel-west-palm-beach', destination: '/courts/xcel-padel', permanent: true },
       { source: '/courts/priv-padel-at-thesis-the-gables-padel', destination: '/courts/the-gables-padel', permanent: true },
       { source: '/courts/patl', destination: '/courts/itp-training-academy', permanent: true },
-      { source: '/courts/sensa-padel', destination: '/courts/sensa-padel-boston', permanent: true },
+      { source: '/courts/sensa-padel', destination: '/courts/sensa-padel-nashville', permanent: true },
       { source: '/courts/padel-social', destination: '/courts/padel-social-bethesda', permanent: true },
       { source: '/courts/padel-garten-by-glassbox-padel-club', destination: '/courts/glassbox-padel-club', permanent: true },
       { source: '/courts/centercourt-padel', destination: '/courts/centercourt-morristown', permanent: true },
@@ -98,6 +98,10 @@ const nextConfig: NextConfig = {
       { source: '/courts/woodlands-padel-inc', destination: '/courts/woodlands-padel', permanent: true },
       { source: '/courts/giammalva-racquet-club-elite-academy', destination: '/courts/giammalva-padel-club', permanent: true },
       { source: '/courts/padel-up', destination: '/courts/padel-up-sterling', permanent: true },
+
+      // === Additional duplicate removals ===
+      { source: '/courts/i-95-padel', destination: '/courts/i95-padel-club-miami', permanent: true },
+      { source: '/courts/padel-x', destination: '/courts/padel-x-miami', permanent: true },
 
       // === Junk entries → /search (7) ===
       { source: '/courts/north-park-paddle-courts', destination: '/search', permanent: true },

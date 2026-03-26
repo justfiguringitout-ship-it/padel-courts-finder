@@ -137,7 +137,7 @@ const clubs: Club[] = [
   {
     rank: 4,
     name: 'Padel X',
-    slug: 'padel-x',
+    slug: 'padel-x-miami',
     score: 94,
     location: 'Downtown Miami, FL',
     courts: '12 outdoor courts',
