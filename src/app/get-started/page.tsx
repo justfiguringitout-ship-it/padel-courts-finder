@@ -4,7 +4,7 @@ import { CheckCircle2, PlayCircle, Calendar, DollarSign, Users, BookOpen, MapPin
 
 export const metadata: Metadata = {
   title: 'Start Playing Padel in 30 Days | Complete Beginner\'s Guide',
-  description: 'Learn how to start playing padel from scratch. Find free beginner clinics at 525+ courts nationwide, calculate costs, and join America\'s fastest-growing sport.',
+  description: 'Learn how to start playing padel from scratch. Find beginner clinics at 243+ clubs nationwide, calculate costs, and join America\'s fastest-growing sport.',
 };
 
 export default function GetStartedPage() {
@@ -122,6 +122,9 @@ export default function GetStartedPage() {
                 <Link href="/how-to-play" className="text-green-600 hover:text-green-700 text-sm font-medium">
                   Read full guide →
                 </Link>
+                <p className="text-slate-600 text-sm mt-2">
+                  Not sure if padel is for you? Read our <Link href="/blog/padel-vs-pickleball" className="text-green-600 hover:text-green-700 font-medium">Padel vs Pickleball comparison</Link>.
+                </p>
               </div>
 
               <div className="bg-white p-4 rounded-lg shadow-sm">
@@ -308,8 +311,8 @@ export default function GetStartedPage() {
                   <li>• Balls: $20 (case)</li>
                   <li>• Bag: $30-50 (or use gym bag)</li>
                 </ul>
-                <Link href="/equipment" className="text-green-600 hover:text-green-700 text-sm font-medium mt-2 inline-block">
-                  Equipment Guide for Beginners →
+                <Link href="/blog/best-padel-rackets-beginners" className="text-green-600 hover:text-green-700 text-sm font-medium mt-2 inline-block">
+                  Best Beginner Rackets (2026) →
                 </Link>
               </div>
 
@@ -330,7 +333,7 @@ export default function GetStartedPage() {
             <Link href="/get-started/glossary" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border-2 border-transparent hover:border-green-200">
               <BookOpen className="w-10 h-10 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-2">Padel Glossary</h3>
-              <p className="text-slate-600 mb-4">100+ padel terms defined. From bandeja to víbora.</p>
+              <p className="text-slate-600 mb-4">30+ padel terms defined. From bandeja to víbora.</p>
               <span className="text-green-600 font-medium text-sm">Most popular resource! →</span>
             </Link>
 
@@ -341,11 +344,11 @@ export default function GetStartedPage() {
               <span className="text-green-600 font-medium text-sm">Find Clinics Now →</span>
             </Link>
 
-            <Link href="/equipment" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border-2 border-transparent hover:border-green-200">
+            <Link href="/blog/best-padel-rackets-beginners" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition border-2 border-transparent hover:border-green-200">
               <DollarSign className="w-10 h-10 text-green-600 mb-4" />
-              <h3 className="text-xl font-bold mb-2">Cost Calculator</h3>
-              <p className="text-slate-600 mb-4">Calculate your actual costs. Membership vs pay-per-play.</p>
-              <span className="text-green-600 font-medium text-sm">Interactive tool →</span>
+              <h3 className="text-xl font-bold mb-2">Equipment Guide</h3>
+              <p className="text-slate-600 mb-4">Best beginner rackets from $90–$130. Top 5 picks for 2026.</p>
+              <span className="text-green-600 font-medium text-sm">See our picks →</span>
             </Link>
           </div>
         </div>
@@ -355,24 +358,24 @@ export default function GetStartedPage() {
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-4">Where to Play</h2>
         <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-          We've mapped 525+ courts across America
+          We&apos;ve mapped 243+ clubs across America
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <Link href="/florida" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
+            Florida (57 clubs)
+          </Link>
           <Link href="/texas" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            Texas (20+ clubs)
+            Texas (48 clubs)
           </Link>
           <Link href="/california" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            California (13 clubs)
-          </Link>
-          <Link href="/florida" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            Florida (15+ clubs)
-          </Link>
-          <Link href="/arizona" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            Arizona (7 clubs)
+            California (26 clubs)
           </Link>
           <Link href="/new-york" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            New York (6+ clubs)
+            New York (16 clubs)
+          </Link>
+          <Link href="/arizona" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
+            Arizona (9 clubs)
           </Link>
           <Link href="/search" className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-medium">
             View All States →
@@ -381,7 +384,7 @@ export default function GetStartedPage() {
 
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
           <p className="text-lg mb-2">
-            <strong>Top padel cities:</strong> Austin (America&apos;s padel capital!), Miami (traditional stronghold), Los Angeles, San Francisco, Phoenix, San Diego
+            <strong>Top padel cities:</strong> Miami (59 clubs), Houston (10 clubs), Orlando (8 clubs), Austin (7 clubs), Los Angeles (5 clubs), Brooklyn (5 clubs)
           </p>
         </div>
       </section>
@@ -393,7 +396,7 @@ export default function GetStartedPage() {
             Ready to Start?
           </h2>
           <p className="text-xl mb-8 text-green-100">
-            525+ courts nationwide. One of them has your name on it.
+            243+ clubs nationwide. One of them has your name on it.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

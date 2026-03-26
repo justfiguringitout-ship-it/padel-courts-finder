@@ -7,8 +7,8 @@ import { Search, BookOpen } from 'lucide-react';
 
 // This would normally be in metadata but we need client component for interactivity
 // export const metadata: Metadata = {
-//   title: 'Padel Glossary: 100+ Terms Defined | Learn the Language of Padel',
-//   description: 'Complete A-Z padel glossary with 100+ terms defined. From bandeja to víbora, learn every padel term with pronunciations, examples, and video tutorials.',
+//   title: 'Padel Glossary: 30+ Terms Defined | Learn the Language of Padel',
+//   description: 'Complete A-Z padel glossary with 30+ terms defined. From bandeja to víbora, learn every padel term with pronunciations, examples, and video tutorials.',
 // };
 
 interface Term {
@@ -427,7 +427,7 @@ export default function GlossaryPage() {
             </h1>
           </div>
           <p className="text-xl text-blue-100 max-w-3xl">
-            Your complete dictionary of 100+ padel terms. From bandeja to víbora, learn every term with pronunciations, examples, and video tutorials.
+            Your complete dictionary of 30+ padel terms. From bandeja to víbora, learn every term with pronunciations, examples, and video tutorials.
           </p>
         </div>
       </section>
@@ -501,7 +501,7 @@ export default function GlossaryPage() {
               <div className="text-sm text-blue-700">Terms Found</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">100+</div>
+              <div className="text-3xl font-bold text-blue-600">32</div>
               <div className="text-sm text-blue-700">Total Terms</div>
             </div>
             <div>

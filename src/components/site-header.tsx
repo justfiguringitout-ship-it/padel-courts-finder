@@ -83,6 +83,58 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
+                  <NavigationMenuTrigger>Equipment</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[280px] gap-2 p-4">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="/blog/best-padel-rackets-beginners"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Best Beginner Rackets</div>
+                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">Top 5 picks from $90–$130</p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="/blog/best-padel-rackets-intermediate"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Best Intermediate Rackets</div>
+                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">5 rackets from $170–$280</p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="/blog/best-padel-rackets-2026"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Best Pro Rackets</div>
+                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">Top 5 flagship rackets from $250–$400</p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="/blog/padel-gifts-mothers-day-2026"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Gift Guide</div>
+                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">12 curated padel gift picks</p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <Link href="/about" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                       About
@@ -152,6 +204,26 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                   >
                     Blog
                   </Link>
+
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-semibold text-muted-foreground">
+                      Equipment
+                    </h3>
+                    <div className="flex flex-col gap-2 pl-2">
+                      <Link href="/blog/best-padel-rackets-beginners" className="text-sm hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                        Best Beginner Rackets
+                      </Link>
+                      <Link href="/blog/best-padel-rackets-intermediate" className="text-sm hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                        Best Intermediate Rackets
+                      </Link>
+                      <Link href="/blog/best-padel-rackets-2026" className="text-sm hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                        Best Pro Rackets
+                      </Link>
+                      <Link href="/blog/padel-gifts-mothers-day-2026" className="text-sm hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                        Gift Guide
+                      </Link>
+                    </div>
+                  </div>
 
                   <Link
                     href="/about"
