@@ -6597,7 +6597,7 @@ export const padelCourts: PadelCourt[] = [
     rentalAvailable: true,
     socialArea: true,
     foodAndDrink: true,
-    pricingText: "Off-peak: $25/person for 90 min (M-F 8am-3:30pm); Peak: $45/person for 90 min; paddle rental $5",
+    pricingText: "Off-peak: $25/person for 90 min (M-F 8am-3:30pm); Peak: $45/person for 90 min; paddle rental $10",
     status: "open",
     verified: false,
     googlePlacePhotoRef: "AU_ZVEFC8WW7yWFMd9amhQ8URt98uukqqk1wf_SZiVDSw2jDhHjt6hinkoNenKlKzDF6D4Ur4XPmznGyUHE5jpzUk3cCgvkqOR0duDTeWSfuCNw78FvBDXlSwOKQZ_v_0kKzlKn9d-DcJE8Kocnb5fPXvwgurL3Fvtc7H0v1rMccgcQ36QTxwZIh37RRezsnEGuwk3W3jS6K2kOLPHwP9pLlHnRHQS1d1XrAYs24wyCHWjych0DvKwRc7--up5aC_b4Ilhnnxr1jG9dLQU2fLF7X-kWwcv1SogjWcnFodrdUHieFBA",

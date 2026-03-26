@@ -200,8 +200,8 @@ function convertOpeningHours(hours: ExistingCourt["openingHours"]) {
       };
     }
 
-    // Parse format like "7h-23h" or "8:30-23:30"
-    const match = hourString.match(/(\d+):?(\d*)-(\d+):?(\d*)/);
+    // Parse format like "7h-23h", "8h-21:30", "8:30-23:30", or "8-21"
+    const match = hourString.match(/(\d+)h?:?(\d*)-(\d+)h?:?(\d*)/);
     if (match) {
       const [, openHour, openMin = "00", closeHour, closeMin = "00"] = match;
       return {
