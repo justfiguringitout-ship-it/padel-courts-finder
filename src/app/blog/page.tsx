@@ -218,6 +218,18 @@ const blogPosts: BlogPost[] = [
     imageAlt: 'Charlotte padel facilities',
     courtSlug: 'charlotte-padel-club-south-charlotte'
   },
+  // How-To Guides
+  {
+    slug: 'padel-vs-pickleball',
+    title: 'Padel vs Pickleball: What\'s the Difference? (2026 Guide)',
+    category: 'how-to',
+    excerpt: 'Courts, rules, equipment, cost, fitness — a side-by-side breakdown of America\'s two fastest-growing racquet sports so you can pick the right one.',
+    date: '2026-03-25',
+    readTime: '11 min read',
+    imageAlt: 'Padel vs pickleball comparison',
+    courtSlug: '',
+    featured: true
+  },
   // Equipment Buying Guides
   {
     slug: 'best-padel-rackets-beginners',

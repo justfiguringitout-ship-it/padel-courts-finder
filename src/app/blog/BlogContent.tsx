@@ -20,11 +20,15 @@ const categories = [
   { id: 'all', name: 'All Posts' },
   { id: 'best-clubs', name: 'City Guides' },
   { id: 'equipment', name: 'Equipment' },
+  { id: 'how-to', name: 'How-To Guides' },
 ];
 
 function CategoryTag({ category }: { category: string }) {
   if (category === 'equipment') {
     return <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-medium">Equipment</span>;
+  }
+  if (category === 'how-to') {
+    return <span className="text-xs px-2 py-0.5 rounded-full bg-sky-50 text-sky-700 font-medium">How-To Guide</span>;
   }
   return <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-medium">City Guide</span>;
 }
@@ -69,6 +73,8 @@ function FeaturedCard({ post }: { post: BlogPostWithImage }) {
 
 function PostCard({ post }: { post: BlogPostWithImage }) {
   const isEquipment = post.category === 'equipment';
+  const isHowTo = post.category === 'how-to';
+  const hasImage = !isEquipment && !isHowTo;
 
   return (
     <Link
@@ -76,10 +82,12 @@ function PostCard({ post }: { post: BlogPostWithImage }) {
       className={`group block border rounded-lg overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 ${
         isEquipment
           ? 'bg-amber-50/40 border-amber-200/60 hover:border-amber-300'
+          : isHowTo
+          ? 'bg-sky-50/40 border-sky-200/60 hover:border-sky-300'
           : 'bg-white border-stone-200 hover:border-stone-300'
       }`}
     >
-      {!isEquipment && (
+      {hasImage && (
         <div className="aspect-video bg-stone-100 relative overflow-hidden">
           {post.imageUrl ? (
             <img
@@ -115,6 +123,7 @@ const sectionTitles: Record<string, string> = {
   all: 'All Posts',
   'best-clubs': 'City Guides',
   equipment: 'Equipment & Gear',
+  'how-to': 'How-To Guides',
 };
 
 export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
