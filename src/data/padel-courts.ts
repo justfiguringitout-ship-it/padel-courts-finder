@@ -1392,8 +1392,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "92054",
     phone: "+1 (760) 825-8365",
     website: "https://padelcalifornia.us",
-    rating: 4.4,
-    reviewCount: 7,
+    rating: 4.6,
+    reviewCount: 19,
     openingHours: {
       monday: "",
       tuesday: "",
@@ -1842,8 +1842,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "53215",
     phone: "+1 414-231-1272",
     website: "https://padelmke.com",
-    rating: 4.8,
-    reviewCount: 0,
+    rating: 4.7,
+    reviewCount: 28,
     openingHours: {
       monday: "7h-23h",
       tuesday: "7h-23h",
@@ -3968,8 +3968,8 @@ export const padelCourts: PadelCourt[] = [
     state: "NM",
     zipCode: "87102",
     website: "https://www.padelcourtsfinder.com/courts/padel-quattro",
-    rating: 4.5,
-    reviewCount: 6,
+    rating: 5,
+    reviewCount: 26,
     openingHours: {
       monday: "Peak: weekday evenings (5pm-9pm), weekend mornings (8am-12pm)",
       tuesday: "Peak: weekday evenings (5pm-9pm), weekend mornings (8am-12pm)",
@@ -4415,7 +4415,7 @@ export const padelCourts: PadelCourt[] = [
     phone: "(704) 947-7770",
     website: "https://www.epic-padel.com/locations/charlotte",
     rating: 4.6,
-    reviewCount: 0,
+    reviewCount: 23,
     openingHours: {
       monday: "7h-22h",
       tuesday: "7h-22h",
@@ -4757,8 +4757,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "92260",
     phone: "(760) 250-0261",
     website: "https://www.taktikapadel.com",
-    rating: 4.8,
-    reviewCount: 0,
+    rating: 4.3,
+    reviewCount: 32,
     openingHours: {
       monday: "8h-21h",
       tuesday: "8h-21h",
@@ -5835,7 +5835,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "94901",
     phone: "(805) 463-5983",
     website: "https://www.flytemarin.com",
-    reviewCount: 0,
+    reviewCount: 8,
+    rating: 4.5,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -5878,7 +5879,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "90291",
     phone: "(310) 396-6764",
     website: "https://www.laparks.org/venice/",
-    reviewCount: 0,
+    reviewCount: 57,
+    rating: 4.6,
     openingHours: {
       monday: "8h-19h",
       tuesday: "8h-19h",
@@ -5998,7 +6000,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "80220",
     phone: "+1 (970) 507-8215",
     website: "https://aspenpadel.club/cloud9park/",
-    reviewCount: 0,
+    reviewCount: 20,
+    rating: 4.9,
     openingHours: {
       monday: "7h-21h",
       tuesday: "7h-21h",
@@ -6082,7 +6085,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "06405",
     phone: "(475) 338-3700",
     website: "https://www.serveandsmashpickleball.com",
-    reviewCount: 0,
+    reviewCount: 18,
+    rating: 5,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -6124,7 +6128,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "06840",
     phone: "(203) 966-6879",
     website: "https://www.nc-fc.com",
-    reviewCount: 0,
+    reviewCount: 27,
+    rating: 4.5,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -6208,7 +6213,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "33180",
     phone: "(305) 384-1053",
     website: "https://ultrapadelclub.com/ultra-padel-aventura",
-    reviewCount: 0,
+    reviewCount: 28,
+    rating: 4.9,
     openingHours: {
       monday: "7h-19h",
       tuesday: "7h-19h",
@@ -6346,7 +6352,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "33172",
     phone: "(786) 481-7774",
     website: "https://thesetpadel.com",
-    reviewCount: 0,
+    reviewCount: 13,
+    rating: 4.7,
     openingHours: {
       monday: "7h-23:30",
       tuesday: "7h-23:30",
@@ -6433,7 +6440,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "33149",
     phone: "305-365-4300",
     website: "https://www.rckbracquetgarden.com/ | https://www.cliffdrysdale.com/locations-the-ritz-carlton-miami",
-    reviewCount: 0,
+    reviewCount: 16,
+    rating: 4.4,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -6558,7 +6566,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "32837",
     phone: "(407) 636-1547",
     website: "https://padelplususa.net",
-    reviewCount: 0,
+    reviewCount: 24,
+    rating: 4.8,
     openingHours: {
       monday: "8h-21:30",
       tuesday: "8h-21:30",
@@ -6602,7 +6611,8 @@ export const padelCourts: PadelCourt[] = [
     state: "FL",
     zipCode: "34243",
     website: "https://book.thepadsarasota.com",
-    reviewCount: 0,
+    reviewCount: 24,
+    rating: 5,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -6690,7 +6700,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "33411",
     phone: "+1 (561) 839-8778",
     website: "https://www.xcelpadel.com",
-    reviewCount: 0,
+    reviewCount: 16,
+    rating: 5,
     openingHours: {
       monday: "7h-22h",
       tuesday: "7h-22h",
@@ -6782,7 +6793,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "33409",
     phone: "(561) 410-3724",
     website: "https://palmbeachpadel.com",
-    reviewCount: 0,
+    reviewCount: 39,
+    rating: 5,
     openingHours: {
       monday: "6:30-23h",
       tuesday: "6:30-23h",
@@ -6828,7 +6840,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "33470",
     phone: "+1 (561) 839-8777",
     website: "https://www.xcelpadel.com",
-    reviewCount: 0,
+    reviewCount: 18,
+    rating: 4.6,
     openingHours: {
       monday: "7h-22h",
       tuesday: "7h-22h",
@@ -6873,7 +6886,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "33541",
     phone: "(813) 361-6660",
     website: "https://www.mouratoglou.com/en/international/zephyrhills/",
-    reviewCount: 0,
+    reviewCount: 147,
+    rating: 4.6,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -6914,7 +6928,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "30309",
     phone: "(404) 875-2565",
     website: "https://www.drivingclub.org",
-    reviewCount: 0,
+    reviewCount: 202,
+    rating: 4.6,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -6954,7 +6969,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "60641",
     phone: "312-858-9021",
     website: "https://proximopadel.com",
-    reviewCount: 0,
+    reviewCount: 45,
+    rating: 4.7,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -6998,7 +7014,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "60015",
     phone: "847-945-2660",
     website: "https://www.briarwoodcountryclub.com",
-    reviewCount: 0,
+    reviewCount: 57,
+    rating: 4.6,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -7034,7 +7051,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "60430",
     phone: "708-799-1323",
     website: "https://hfracquetandfitness.com",
-    reviewCount: 0,
+    reviewCount: 222,
+    rating: 4.4,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -7078,7 +7096,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "46074",
     phone: "317-371-1188",
     website: "https://www.northpointpadel.com",
-    reviewCount: 0,
+    reviewCount: 7,
+    rating: 5,
     openingHours: {
       monday: "0h-24h",
       tuesday: "0h-24h",
@@ -7119,7 +7138,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "40206",
     phone: "(502) 290-2730",
     website: "https://playpatl.com/louisville-waterfront-park/",
-    reviewCount: 0,
+    reviewCount: 1,
+    rating: 5,
     openingHours: {
       monday: "7h-23h",
       tuesday: "7h-23h",
@@ -7163,7 +7183,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "02210",
     phone: "+1 857-413-6949",
     website: "https://www.padelhubusa.com",
-    reviewCount: 0,
+    reviewCount: 26,
+    rating: 5,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -7207,7 +7228,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "02467",
     phone: "(617) 888-8888",
     website: "https://brooklinepaddle.com/",
-    reviewCount: 0,
+    reviewCount: 1,
+    rating: 5,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -7245,7 +7267,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "21208",
     phone: "410-296-0601",
     website: "https://www.bmorepadel.com/; https://playtomic.com/clubs/bmorepadel",
-    reviewCount: 0,
+    reviewCount: 9,
+    rating: 5,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -7332,7 +7355,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "21204",
     phone: "(410) 825-2400",
     website: "https://lhirondelle.com",
-    reviewCount: 0,
+    reviewCount: 83,
+    rating: 4.3,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -7420,7 +7444,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "55120",
     phone: "(612) 254-2624",
     website: "https://www.heightsracquetmn.com",
-    reviewCount: 0,
+    reviewCount: 34,
+    rating: 5,
     openingHours: {
       monday: "6h-23h",
       tuesday: "6h-23h",
@@ -7507,7 +7532,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "27609",
     phone: "(919) 787-3655",
     website: "https://www.northhillsclub.com",
-    reviewCount: 0,
+    reviewCount: 209,
+    rating: 4.5,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -7549,7 +7575,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "07626",
     phone: "(201) 328-0006",
     website: "https://www.padelunitedsportsclub.com",
-    reviewCount: 0,
+    reviewCount: 32,
+    rating: 4.7,
     openingHours: {
       monday: "6h-22:30",
       tuesday: "6h-22:30",
@@ -7595,7 +7622,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "07936",
     phone: "929-310-7006",
     website: "https://www.vamosracquets.com",
-    reviewCount: 0,
+    reviewCount: 2,
+    rating: 5,
     openingHours: {
       monday: "6h-22h",
       tuesday: "6h-22h",
@@ -7689,7 +7717,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "08844",
     phone: "732-498-5107",
     website: "https://www.accesspadelclub.com",
-    reviewCount: 0,
+    reviewCount: 17,
+    rating: 5,
     openingHours: {
       monday: "6h-22h",
       tuesday: "6h-22h",
@@ -7774,7 +7803,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "07302",
     phone: "(551) 328-7867",
     website: "https://www.kotofit.com",
-    reviewCount: 0,
+    reviewCount: 23,
+    rating: 4.7,
     openingHours: {
       monday: "19h-23:30",
       tuesday: "19h-23:30",
@@ -7814,7 +7844,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "08831",
     phone: "732-400-1755",
     website: "https://theclubnj.com",
-    reviewCount: 0,
+    reviewCount: 104,
+    rating: 4.9,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -7857,7 +7888,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "07960",
     phone: "(862) 435-3031",
     website: "https://centercourtacademy.com/sports/padel/",
-    reviewCount: 0,
+    reviewCount: 35,
+    rating: 4.6,
     openingHours: {
       monday: "4h-21h",
       tuesday: "4h-21h",
@@ -7899,7 +7931,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "07436",
     phone: "201-644-0198",
     website: "https://book.raxnj.com",
-    reviewCount: 0,
+    reviewCount: 2,
+    rating: 5,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -7975,7 +8008,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "11101",
     phone: "+1 718-389-6252",
     website: "https://cityviewracquet.com",
-    reviewCount: 0,
+    reviewCount: 50,
+    rating: 3.9,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -8020,7 +8054,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "10543",
     phone: "(914) 698-1900",
     website: "https://www.orientabeachclub.com",
-    reviewCount: 0,
+    reviewCount: 74,
+    rating: 4.8,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -8066,7 +8101,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "10019",
     phone: "https://111w57.com/contact",
     website: "https://111w57.com",
-    reviewCount: 0,
+    reviewCount: 144,
+    rating: 4.6,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -8188,7 +8224,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "44012",
     phone: "(440) 242-7620",
     website: "https://clevelandpremierpickleball.com",
-    reviewCount: 0,
+    reviewCount: 191,
+    rating: 5,
     openingHours: {
       monday: "7h-22h",
       tuesday: "7h-22h",
@@ -8232,7 +8269,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "45237",
     phone: "(513) 242-9200",
     website: "https://maketewah.com",
-    reviewCount: 0,
+    reviewCount: 208,
+    rating: 4.6,
     openingHours: {
       monday: "8h-16h",
       tuesday: "8h-16h",
@@ -8274,7 +8312,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "43221",
     phone: "614.451.3762",
     website: "https://swimandracquet.com",
-    reviewCount: 0,
+    reviewCount: 44,
+    rating: 4.4,
     openingHours: {
       monday: "8h-23h",
       tuesday: "8h-23h",
@@ -8317,7 +8356,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "44125",
     phone: "(216) 202-9735",
     website: "https://padel-square.com",
-    reviewCount: 0,
+    reviewCount: 10,
+    rating: 5,
     openingHours: {
       monday: "9h-22h",
       tuesday: "9h-22h",
@@ -8358,7 +8398,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "45246",
     phone: "(513) 771-8383",
     website: "https://www.glendalelyceum.com",
-    reviewCount: 0,
+    reviewCount: 70,
+    rating: 4.7,
     openingHours: {
       monday: "7h-22:30",
       tuesday: "7h-22:30",
@@ -8401,7 +8442,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "73120",
     phone: "405.751.6266",
     website: "https://www.thegreenscc.com",
-    reviewCount: 0,
+    reviewCount: 317,
+    rating: 4.6,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -8442,7 +8484,8 @@ export const padelCourts: PadelCourt[] = [
     state: "OR",
     zipCode: "97203",
     website: "https://foundrypadel.com",
-    reviewCount: 0,
+    reviewCount: 2,
+    rating: 5,
     openingHours: {
       monday: "7h-22h",
       tuesday: "7h-22h",
@@ -8485,7 +8528,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "19004",
     phone: "610.664.3242",
     website: "https://www.padelphia.com",
-    reviewCount: 0,
+    reviewCount: 20,
+    rating: 4.5,
     openingHours: {
       monday: "5:30-23h",
       tuesday: "5:30-23h",
@@ -8529,7 +8573,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "19031",
     phone: "(215) 836-5585",
     website: "https://www.vivapadelpickleball.com",
-    reviewCount: 0,
+    reviewCount: 43,
+    rating: 4.4,
     openingHours: {
       monday: "6h-22h",
       tuesday: "6h-22h",
@@ -8571,7 +8616,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "17603",
     phone: "717-299-5631",
     website: "https://www.rcwathleticclub.com",
-    reviewCount: 0,
+    reviewCount: 199,
+    rating: 4.8,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -8612,7 +8658,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "19125",
     phone: "(267) 761-4288",
     website: "https://www.ballers-us.com/location/philadelphia",
-    reviewCount: 0,
+    reviewCount: 35,
+    rating: 4.9,
     openingHours: {
       monday: "6h-22h",
       tuesday: "6h-22h",
@@ -8659,7 +8706,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "29662",
     phone: "+1 864-516-4907",
     website: "https://40fortypadel.com",
-    reviewCount: 0,
+    reviewCount: 3,
+    rating: 5,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -8701,7 +8749,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "79109",
     phone: "(806) 359-2090",
     website: "https://www.amarilloparks.org/programs-events/tennis",
-    reviewCount: 0,
+    reviewCount: 63,
+    rating: 4.7,
     openingHours: {
       monday: "8h-22h",
       tuesday: "8h-22h",
@@ -8739,7 +8788,8 @@ export const padelCourts: PadelCourt[] = [
     state: "TX",
     zipCode: "78753",
     website: "https://racketcenters.com",
-    reviewCount: 0,
+    reviewCount: 6,
+    rating: 5,
     openingHours: {
       monday: "7h-23h",
       tuesday: "7h-23h",
@@ -8826,7 +8876,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "78163",
     phone: "(830) 354-8362",
     website: "https://www.pickandpadel.us",
-    reviewCount: 0,
+    reviewCount: 16,
+    rating: 4.6,
     openingHours: {
       monday: "4h-22h",
       tuesday: "4h-22h",
@@ -8907,7 +8958,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "78852",
     phone: "+1 (830) 971-4125",
     website: "https://theonepadelclub.com",
-    reviewCount: 0,
+    reviewCount: 2,
+    rating: 5,
     openingHours: {
       monday: "7h-23:30",
       tuesday: "7h-23:30",
@@ -8949,7 +9001,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "79912",
     phone: "(915) 257-3783",
     website: "https://serveep.com",
-    reviewCount: 0,
+    reviewCount: 143,
+    rating: 4.5,
     openingHours: {
       monday: "8h-23h",
       tuesday: "8h-23h",
@@ -9070,7 +9123,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "77092",
     phone: "(940) 923-9699 (WhatsApp)",
     website: "https://houstonpadelindoor.com/",
-    reviewCount: 0,
+    reviewCount: 2,
+    rating: 3,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -9105,7 +9159,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "77024",
     phone: "713.685.6888",
     website: "https://www.houstonian.com/the-club",
-    reviewCount: 0,
+    reviewCount: 135,
+    rating: 4.9,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -9323,7 +9378,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "77009",
     phone: "(334) 444-7239",
     website: "https://book.west43padel.com",
-    reviewCount: 0,
+    reviewCount: 19,
+    rating: 4.7,
     openingHours: {
       monday: "6h-23h",
       tuesday: "6h-23h",
@@ -9460,7 +9516,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "77354",
     phone: "+1 (346) 525-4010",
     website: "https://upadel.us/woodlands-padel-club/",
-    reviewCount: 0,
+    reviewCount: 23,
+    rating: 4.7,
     openingHours: {
       monday: "6h-0h",
       tuesday: "6h-0h",
@@ -9542,7 +9599,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "78572",
     phone: "(956) 252-0986",
     website: "https://www.imgnpark.com",
-    reviewCount: 0,
+    reviewCount: 7,
+    rating: 5,
     openingHours: {
       monday: "5:30-23:30",
       tuesday: "5:30-23:30",
@@ -9585,7 +9643,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "78572",
     phone: "(956) 585-2041",
     website: "https://missionincredibowl.com",
-    reviewCount: 0,
+    reviewCount: 1187,
+    rating: 4.1,
     openingHours: {
       monday: "12h-0h",
       tuesday: "12h-0h",
@@ -9629,7 +9688,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "78572",
     phone: "+1 956-957-8819",
     website: "https://rgvpadelclub.com",
-    reviewCount: 0,
+    reviewCount: 6,
+    rating: 5,
     openingHours: {
       monday: "5:30-23:30",
       tuesday: "5:30-23:30",
@@ -9675,7 +9735,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "78575",
     phone: "956-350-4000",
     website: "https://rvrcc.com",
-    reviewCount: 0,
+    reviewCount: 650,
+    rating: 4.4,
     openingHours: {
       monday: "9h-21h",
       tuesday: "9h-21h",
@@ -9715,7 +9776,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "78250",
     phone: "210-200-8511",
     website: "https://sa-msc.com",
-    reviewCount: 0,
+    reviewCount: 307,
+    rating: 4.4,
     openingHours: {
       monday: "12h-0h",
       tuesday: "12h-0h",
@@ -9802,7 +9864,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "77379",
     phone: "(281) 370-5801",
     website: "https://giammalva.com/",
-    reviewCount: 0,
+    reviewCount: 200,
+    rating: 4.6,
     openingHours: {
       monday: "7h-10h",
       tuesday: "7h-10h",
@@ -9888,7 +9951,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "22911",
     phone: "434-974-5567",
     website: "https://forestlakes.net",
-    reviewCount: 0,
+    reviewCount: 3,
+    rating: 4.3,
     openingHours: {
       monday: "15h-23h",
       tuesday: "15h-23h",
@@ -9924,7 +9988,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "23219",
     phone: "804-715-5760",
     website: "https://www.padelplant.com",
-    reviewCount: 0,
+    reviewCount: 51,
+    rating: 4.3,
     openingHours: {
       monday: "5h-21h",
       tuesday: "5h-21h",
@@ -9970,7 +10035,8 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "05363",
     phone: "802-430-2001",
     website: "https://www.brookboundinnvt.com",
-    reviewCount: 0,
+    reviewCount: 36,
+    rating: 4.9,
     openingHours: {
       monday: "year-round (weather permitting)",
       tuesday: "year-round (weather permitting)",
