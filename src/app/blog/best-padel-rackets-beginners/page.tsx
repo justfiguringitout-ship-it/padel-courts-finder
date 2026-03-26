@@ -91,7 +91,7 @@ export default function BeginnerRacketsPage() {
                 You just tried padel and you&apos;re hooked. Now you need your own racket — but with dozens of options, where do you start? The good news: choosing a beginner racket is straightforward if you know what to look for.
               </p>
               <p className="text-stone-600 leading-[1.75]">
-                Beginners should always look for a <strong>round shape</strong> (bigger sweet spot, more forgiveness), a <strong>soft EVA core</strong> (comfortable, less arm fatigue), a <strong>fiberglass or hybrid surface</strong> (forgiving on mishits), and a <strong>weight under 365g</strong>. Budget $60–130 for your first racket — don&apos;t overspend until you know your play style. Here are our top 5 picks for 2026.
+                Beginners should always look for a <strong>round shape</strong> (bigger sweet spot, more forgiveness), a <strong>soft EVA core</strong> (comfortable, less arm fatigue), a <strong>fiberglass or hybrid surface</strong> (forgiving on mishits), and a <strong>weight under 365g</strong>. Budget $60–130 for your first racket — don&apos;t overspend until you know your play style. Here are our top 5 picks for 2026. Once you have your racket, <Link href="/search" className="text-emerald-600 hover:underline">find a court near you</Link> to start playing.
               </p>
             </div>
 
@@ -600,6 +600,10 @@ export default function BeginnerRacketsPage() {
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-[#1a1a1a] mb-2">How long will a beginner racket last?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">1–2 years with regular play (2–3 times per week). The EVA foam core gradually loses its responsiveness before the frame shows wear. You&apos;ll likely want to upgrade before the racket actually breaks — that&apos;s when it&apos;s time for an <Link href="/blog/best-padel-rackets-intermediate" className="text-emerald-600 hover:underline">intermediate racket</Link>.</p>
+                </div>
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-[#1a1a1a] mb-2">Where can I play padel near me?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">Check our <Link href="/search" className="text-emerald-600 hover:underline">court finder</Link> — we list 350+ padel clubs across the US. If you&apos;re in South Florida, don&apos;t miss our <Link href="/blog/best-padel-clubs-miami" className="text-emerald-600 hover:underline">Miami padel guide</Link>.</p>
                 </div>
               </div>
             </section>

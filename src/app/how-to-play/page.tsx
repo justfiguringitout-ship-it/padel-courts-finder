@@ -102,6 +102,16 @@ export default function HowToPlayPage() {
             {content}
           </ReactMarkdown>
         </article>
+        <div className="max-w-4xl mx-auto mt-12 border-t pt-8">
+          <h2 className="text-lg font-semibold mb-4">Related</h2>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <Link href="/rules" className="text-primary hover:underline">Rules &amp; Regulations</Link>
+            <Link href="/blog/best-padel-rackets-beginners" className="text-primary hover:underline">Best Beginner Rackets (2026)</Link>
+            <Link href="/equipment" className="text-primary hover:underline">Equipment Guide</Link>
+            <Link href="/search" className="text-primary hover:underline">Find Courts</Link>
+            <Link href="/blog/padel-vs-pickleball" className="text-primary hover:underline">Padel vs Pickleball</Link>
+          </div>
+        </div>
       </div>
     </div>
   );

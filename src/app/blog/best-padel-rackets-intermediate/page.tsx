@@ -66,7 +66,7 @@ export default function IntermediateRacketsPage() {
 
             <div className="prose prose-lg prose-stone max-w-none mb-0">
               <p className="text-stone-600 leading-[1.75]">You&apos;ve been playing for 6+ months. Your technique is more consistent, you&apos;re reading the game better, and that beginner racket is starting to feel like it&apos;s holding you back. Sound familiar? It&apos;s time to upgrade.</p>
-              <p className="text-stone-600 leading-[1.75]">An intermediate racket gives you more <strong className="text-[#1a1a1a]">power</strong>, better <strong className="text-[#1a1a1a]">spin</strong>, and a more responsive <strong className="text-[#1a1a1a]">feel</strong> &mdash; but it also demands cleaner technique. Look for: a <strong className="text-[#1a1a1a]">carbon or hybrid surface</strong> for ball speed, a <strong className="text-[#1a1a1a]">teardrop or hybrid shape</strong> for balanced power/control, a <strong className="text-[#1a1a1a]">medium EVA core</strong>, and a <strong className="text-[#1a1a1a]">weight of 360&ndash;375g</strong>. Budget $170&ndash;280 for a quality intermediate racket.</p>
+              <p className="text-stone-600 leading-[1.75]">An intermediate racket gives you more <strong className="text-[#1a1a1a]">power</strong>, better <strong className="text-[#1a1a1a]">spin</strong>, and a more responsive <strong className="text-[#1a1a1a]">feel</strong> &mdash; but it also demands cleaner technique. Look for: a <strong className="text-[#1a1a1a]">carbon or hybrid surface</strong> for ball speed, a <strong className="text-[#1a1a1a]">teardrop or hybrid shape</strong> for balanced power/control, a <strong className="text-[#1a1a1a]">medium EVA core</strong>, and a <strong className="text-[#1a1a1a]">weight of 360&ndash;375g</strong>. Budget $170&ndash;280 for a quality intermediate racket. Ready to test your new racket? <Link href="/search" className="text-emerald-600 hover:underline">Find a court near you</Link>.</p>
             </div>
 
             {/* Quick Picks Box */}
@@ -106,7 +106,7 @@ export default function IntermediateRacketsPage() {
                   <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-[#1a1a1a]">You want more power on smashes.</strong> Fiberglass faces have a power ceiling. Carbon surfaces return energy faster and reward clean contact with explosive ball speed.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-[#1a1a1a]">Your racket feels &quot;dead.&quot;</strong> EVA cores degrade over time. If everything feels flat and unresponsive, the foam has lost its memory &mdash; time for a fresh racket.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-[#1a1a1a]">Your racket feels &quot;dead.&quot;</strong> EVA cores degrade over time. If you&apos;re playing 2&ndash;3 times a week &mdash; easy to do if you&apos;re near <Link href="/blog/best-padel-clubs-houston" className="text-emerald-600 hover:underline">Houston&apos;s padel scene</Link> or another growing market &mdash; expect to replace after 12&ndash;18 months. If everything feels flat and unresponsive, the foam has lost its memory &mdash; time for a fresh racket.</p>
                 </div>
               </div>
             </section>

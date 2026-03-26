@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import { getAllAdaptedCourtSlugs, getAdaptedCourtBySlug, getAdaptedRelatedCourts, getTodayHours, isCurrentlyOpen } from "@/lib/court-adapter";
 import { ClubMapClient } from "@/components/club-map-client";
+import { cityBlogSlugs } from "@/data/page-content";
+import { getStates } from "@/lib/site-structure";
 import type { Metadata } from "next";
 
 interface CourtPageProps {
@@ -565,6 +567,38 @@ export default async function CourtPage({ params }: CourtPageProps) {
             </div>
           </section>
         )}
+
+        {/* Explore More */}
+        {(() => {
+          const citySlug = court.address.city.toLowerCase().replace(/\s+/g, "-");
+          const blogSlug = cityBlogSlugs[citySlug];
+          const stateInfo = getStates().find(s => s.code === court.address.stateCode);
+          return (
+            <section className="mt-12 border-t pt-8">
+              <h2 className="text-lg font-semibold mb-4">Explore More</h2>
+              <div className="flex flex-wrap gap-x-6 gap-y-2">
+                {stateInfo && (
+                  <Link href={`/${stateInfo.slug}/${citySlug}`} className="text-primary hover:underline">
+                    All padel clubs in {court.address.city} &rarr;
+                  </Link>
+                )}
+                {blogSlug && (
+                  <Link href={`/blog/best-padel-clubs-${blogSlug}`} className="text-primary hover:underline">
+                    Best Padel Clubs in {court.address.city} (2026) &rarr;
+                  </Link>
+                )}
+                {stateInfo && (
+                  <Link href={`/${stateInfo.slug}`} className="text-primary hover:underline">
+                    Browse all {stateInfo.name} padel clubs &rarr;
+                  </Link>
+                )}
+                <Link href="/blog/best-padel-rackets-beginners" className="text-primary hover:underline">
+                  Best Beginner Rackets (2026) &rarr;
+                </Link>
+              </div>
+            </section>
+          );
+        })()}
       </div>
     </div>
   );
