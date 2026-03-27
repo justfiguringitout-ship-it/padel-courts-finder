@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { TrackedLink } from '@/components/TrackedLink';
 
 export const metadata: Metadata = {
   title: 'Best Padel Rackets 2026 — Top 5 Pro Picks Reviewed',
@@ -75,15 +76,15 @@ export default function ProRacketsPage() {
               <div className="space-y-2.5">
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Overall:</span>
-                  <span className="text-sm"><a href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">NOX AT10 Genius 18K</a> <span className="text-stone-500">&mdash; $272.00</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">NOX AT10 Genius 18K</TrackedLink> <span className="text-stone-500">&mdash; $272.00</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Pure Power:</span>
-                  <span className="text-sm"><a href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">HEAD Extreme Pro</a> <span className="text-stone-500">&mdash; $319.95</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">HEAD Extreme Pro</TrackedLink> <span className="text-stone-500">&mdash; $319.95</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Value at Pro Level:</span>
-                  <span className="text-sm"><a href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">Babolat Technical Viper</a> <span className="text-stone-500">&mdash; $249.00</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">Babolat Technical Viper</TrackedLink> <span className="text-stone-500">&mdash; $249.00</span></span>
                 </div>
               </div>
               <a href="#top-5-pro" className="text-sm text-stone-500 hover:text-emerald-600 mt-3 inline-block">Jump to full reviews &darr;</a>
@@ -150,7 +151,7 @@ export default function ProRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">&#10003;</span> Adjustable weight system, temperature-stable 18K carbon, Dual Spin surface</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Teardrop delivers less raw smash power than diamond shapes</p>
                 </div>
-                <a href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</a>
+                <TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
 
               {/* 2. Babolat Technical Viper */}
@@ -203,7 +204,7 @@ export default function ProRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">&#10003;</span> Explosive ball exit, Dynamic Stability System, 3D Spin+ texture</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Extremely demanding — hard core + high balance + 370g requires strong technique</p>
                 </div>
-                <a href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</a>
+                <TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
 
               {/* 3. Adidas Metalbone 3.4 */}
@@ -256,7 +257,7 @@ export default function ProRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">&#10003;</span> Weight &amp; Balance adjustable, 16K carbon for all-weather consistency</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Base weight light without inserts, soft EVA gets softer in cold</p>
                 </div>
-                <a href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</a>
+                <TrackedLink href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" type="affiliate" productName="Adidas Metalbone 3.4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
 
               {/* 4. HEAD Extreme Pro */}
@@ -309,7 +310,7 @@ export default function ProRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">&#10003;</span> UD Carbon HS = immediate explosive feel, Auxetic 2.0 amplifies power</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> 370g + high balance demands serious physical conditioning</p>
                 </div>
-                <a href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</a>
+                <TrackedLink href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
 
               {/* 5. Wilson Bela V3 */}
@@ -362,7 +363,7 @@ export default function ProRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">&#10003;</span> 24K carbon = most precise surface available, C2 tubular frame</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> $399 price tag, head-heavy + firm core demands strong technique</p>
                 </div>
-                <a href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</a>
+                <TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela V3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
             </section>
           </div>
@@ -383,11 +384,11 @@ export default function ProRacketsPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Overall</td><td className="py-3 pr-4"><a href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">NOX AT10 Genius 18K</a></td><td className="py-3 text-stone-600">$272.00</td></tr>
-                    <tr className="border-b border-stone-100 bg-stone-50/50"><td className="py-3 pr-4 font-medium text-stone-700">Best Pure Power</td><td className="py-3 pr-4"><a href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">HEAD Extreme Pro</a></td><td className="py-3 text-stone-600">$319.95</td></tr>
-                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Customization</td><td className="py-3 pr-4"><a href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Adidas Metalbone 3.4</a></td><td className="py-3 text-stone-600">$304.50</td></tr>
-                    <tr className="border-b border-stone-100 bg-stone-50/50"><td className="py-3 pr-4 font-medium text-stone-700">Best Premium Material</td><td className="py-3 pr-4"><a href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Wilson Bela V3 (24K)</a></td><td className="py-3 text-stone-600">$399.00</td></tr>
-                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Value at Pro Level</td><td className="py-3 pr-4"><a href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Babolat Technical Viper</a></td><td className="py-3 text-stone-600">$249.00</td></tr>
+                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Overall</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">NOX AT10 Genius 18K</TrackedLink></td><td className="py-3 text-stone-600">$272.00</td></tr>
+                    <tr className="border-b border-stone-100 bg-stone-50/50"><td className="py-3 pr-4 font-medium text-stone-700">Best Pure Power</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">HEAD Extreme Pro</TrackedLink></td><td className="py-3 text-stone-600">$319.95</td></tr>
+                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Customization</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" type="affiliate" productName="Adidas Metalbone 3.4" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Adidas Metalbone 3.4</TrackedLink></td><td className="py-3 text-stone-600">$304.50</td></tr>
+                    <tr className="border-b border-stone-100 bg-stone-50/50"><td className="py-3 pr-4 font-medium text-stone-700">Best Premium Material</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela V3" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Wilson Bela V3 (24K)</TrackedLink></td><td className="py-3 text-stone-600">$399.00</td></tr>
+                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Value at Pro Level</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Babolat Technical Viper</TrackedLink></td><td className="py-3 text-stone-600">$249.00</td></tr>
                   </tbody>
                 </table>
               </div>

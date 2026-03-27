@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { TrackedLink } from '@/components/TrackedLink';
 
 export const metadata: Metadata = {
   title: 'Best Padel Gifts for Dad (2026) — 12 Ideas He\'ll Actually Use',
@@ -181,14 +182,16 @@ export default function FathersDay2026GiftGuidePage() {
                     Every padel player goes through balls. He&apos;ll always need more. The HEAD Pro S is the most popular padel ball in the US &mdash; consistent bounce, good durability.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: any padel dad, any level</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20"
+                    type="affiliate"
+                    productName="HEAD Padel Pro S Balls"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
 
                 {/* 2. Wilson Overgrip */}
@@ -201,14 +204,16 @@ export default function FathersDay2026GiftGuidePage() {
                     The grip he&apos;ll actually replace every few weeks. Tacky, absorbent, and the industry standard. A 12-pack lasts months.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: any padel dad who plays regularly</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20"
+                    type="affiliate"
+                    productName="Wilson Pro Overgrip 12-Pack"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
               </div>
             </section>
@@ -229,14 +234,16 @@ export default function FathersDay2026GiftGuidePage() {
                     Purpose-built for padel with a racket compartment, shoe pocket, and room for everything else. Sleek black design that works on and off the court. If he&apos;s still using a gym bag, this is a major upgrade.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the dad who plays 2+ times a week</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20"
+                    type="affiliate"
+                    productName="Babolat Court Lite Backpack"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
 
                 {/* 4. Babolat Contact */}
@@ -249,14 +256,16 @@ export default function FathersDay2026GiftGuidePage() {
                     The <Link href="/blog/best-padel-rackets-beginners" className="text-emerald-600 hover:underline">best beginner racket on the market</Link>. 340g, huge sweet spot, gentle on arms. If he&apos;s just starting padel, this is the one &mdash; our #1 pick in our beginner racket guide.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the beginner dad</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20"
+                    type="affiliate"
+                    productName="Babolat Contact Racket"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
 
                 {/* 5. HEAD Men's Shoes */}
@@ -269,14 +278,16 @@ export default function FathersDay2026GiftGuidePage() {
                     Non-marking padel-approved court shoes built for lateral stability. Lightweight, breathable mesh upper with herringbone tread for grip on all court surfaces. Reinforced toe for durability.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the dad still wearing running shoes on court</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20"
+                    type="affiliate"
+                    productName="HEAD Sprint Pro 4.0 Shoes"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
               </div>
             </section>
@@ -311,14 +322,16 @@ export default function FathersDay2026GiftGuidePage() {
               <p className="text-stone-600 text-sm leading-relaxed mb-4">
                 Everything he needs for his first session on court. The racket is beginner-perfect, the balls are tour-standard, and the overgrips will keep his grip fresh for months. If he&apos;s brand new to padel, this is the gift.
               </p>
-              <a
+              <TrackedLink
                 href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20"
+                type="affiliate"
+                productName="Padel Starter Set"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
               >
                 Shop the set on Amazon &rarr;
-              </a>
+              </TrackedLink>
             </div>
           </div>
         </div>
@@ -341,14 +354,16 @@ export default function FathersDay2026GiftGuidePage() {
                     Innegra vibration dampening protects arms and elbows &mdash; important for the dad who plays multiple times a week. The most comfortable beginner racket we&apos;ve tested, with the largest sweet spot in its category. Our <Link href="/blog/best-padel-rackets-beginners" className="text-emerald-600 hover:underline">#2 beginner pick</Link>.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the dad who values comfort above all</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20"
+                    type="affiliate"
+                    productName="HEAD Extreme Evo Racket"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
 
                 {/* 7. HEAD Tour Bag */}
@@ -361,14 +376,16 @@ export default function FathersDay2026GiftGuidePage() {
                     Holds up to 6 rackets with padded compartments. Separate shoe compartment, insulated pocket for drinks, and adjustable shoulder straps. For the dad who plays multiple times a week and carries gear for the whole group.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the serious player who carries everything</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B0G8RX2824?tag=padel02-20"
+                    type="affiliate"
+                    productName="HEAD Tour Bag M"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
 
                 {/* 8. Wilson Optix V1 */}
@@ -381,14 +398,16 @@ export default function FathersDay2026GiftGuidePage() {
                     All-fiberglass build for the softest feel possible. Wilson&apos;s Sharp Hole Technology adds spin without extra effort. Perfect for the dad transitioning from tennis who wants a forgiving, easy-on-the-arm racket.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the tennis-to-padel convert</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20"
+                    type="affiliate"
+                    productName="Wilson Optix V1 Racket"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
 
                 {/* 9. NOX Pro Cup */}
@@ -401,14 +420,16 @@ export default function FathersDay2026GiftGuidePage() {
                     Official USPA circuit racket. NOX&apos;s signature HR3 core delivers consistent feel across the face. A step up from basic beginner rackets &mdash; ideal for the dad who&apos;s been playing 6+ months and wants something with pedigree.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the competitive dad who follows the tour</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20"
+                    type="affiliate"
+                    productName="NOX Pro Cup USPA Edition"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
               </div>
             </section>
@@ -433,14 +454,16 @@ export default function FathersDay2026GiftGuidePage() {
                     For the <Link href="/blog/best-padel-rackets-intermediate" className="text-emerald-600 hover:underline">intermediate player</Link>. Rough sand finish for topspin, low balance for net play. Miguel Lamperti signature model &mdash; one of the most popular rackets in professional padel.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the intermediate dad who wants more spin</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20"
+                    type="affiliate"
+                    productName="NOX ML10 Pro Cup"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
 
                 {/* 11. Bullpadel Neuron */}
@@ -453,14 +476,16 @@ export default function FathersDay2026GiftGuidePage() {
                     Full carbon pro racket with a hybrid shape that forgives mistakes. Paquito Navarro&apos;s former partner Chingotto plays with this line. For the dad who&apos;s getting serious about competing.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the dad who&apos;s playing tournaments</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20"
+                    type="affiliate"
+                    productName="Bullpadel Neuron"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
 
                 {/* 12. Wilson Bela V3 */}
@@ -477,14 +502,16 @@ export default function FathersDay2026GiftGuidePage() {
                     The ultimate. 24K carbon face &mdash; the finest weave in commercial padel. Fernando Belastegu&iacute;n&apos;s signature racket, designed with the greatest player in the sport&apos;s history. This is the gift he&apos;d never buy himself but would absolutely love. Featured in our <Link href="/blog/best-padel-rackets-2026" className="text-emerald-600 hover:underline">best pro rackets guide</Link>.
                   </p>
                   <p className="text-xs text-stone-500 mb-4">Great for: the dad who wants the absolute best</p>
-                  <a
+                  <TrackedLink
                     href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20"
+                    type="affiliate"
+                    productName="Wilson Bela V3"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
-                  </a>
+                  </TrackedLink>
                 </div>
               </div>
             </section>
@@ -495,7 +522,7 @@ export default function FathersDay2026GiftGuidePage() {
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-[#1a1a1a] mb-2">What&apos;s a good padel gift for a beginner?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">A round-shape beginner racket like the <a href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Babolat Contact</a> ($90) plus a can of balls and an overgrip &mdash; total ~$130. That covers everything he needs for his first session. See our full <Link href="/blog/best-padel-rackets-beginners" className="text-emerald-600 hover:underline">beginner racket guide</Link> for more options.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">A round-shape beginner racket like the <TrackedLink href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" type="affiliate" productName="Babolat Contact Racket" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Babolat Contact</TrackedLink> ($90) plus a can of balls and an overgrip &mdash; total ~$130. That covers everything he needs for his first session. See our full <Link href="/blog/best-padel-rackets-beginners" className="text-emerald-600 hover:underline">beginner racket guide</Link> for more options.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-[#1a1a1a] mb-2">How much should I spend on a padel racket as a gift?</h3>

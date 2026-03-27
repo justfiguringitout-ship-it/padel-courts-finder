@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CheckCircle, Star, Search, Users, TrendingUp, Zap } from "lucide-react";
 import { getSiteStats } from "@/lib/site-structure";
+import { TrackFormSubmit } from "@/components/TrackFormSubmit";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -226,6 +227,7 @@ export default async function ListYourCourtPage({
           {submitted === "true" ? (
             <Card className="border-green-200 bg-green-50/50">
               <CardContent className="pt-8 pb-8 text-center space-y-4">
+                <TrackFormSubmit />
                 <CheckCircle className="w-16 h-16 text-green-600 mx-auto" />
                 <h3 className="text-2xl font-bold">Thanks for Submitting!</h3>
                 <p className="text-muted-foreground max-w-md mx-auto">

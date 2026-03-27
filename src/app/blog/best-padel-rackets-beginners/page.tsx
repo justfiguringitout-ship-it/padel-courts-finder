@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { TrackedLink } from '@/components/TrackedLink';
 
 export const metadata: Metadata = {
   title: 'Best Padel Rackets for Beginners (2026) — Top 5 Picks',
@@ -103,15 +104,15 @@ export default function BeginnerRacketsPage() {
               <div className="space-y-2.5">
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Overall:</span>
-                  <span className="text-sm"><a href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">Babolat Contact</a> <span className="text-stone-500">&mdash; $89.95</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" type="affiliate" productName="Babolat Contact" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">Babolat Contact</TrackedLink> <span className="text-stone-500">&mdash; $89.95</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best All-Around:</span>
-                  <span className="text-sm"><a href="https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">HEAD Extreme Evo</a> <span className="text-stone-500">&mdash; $99.95</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20" type="affiliate" productName="HEAD Extreme Evo" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">HEAD Extreme Evo</TrackedLink> <span className="text-stone-500">&mdash; $99.95</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best to Grow With:</span>
-                  <span className="text-sm"><a href="https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">Adidas Adipower</a> <span className="text-stone-500">&mdash; $129.00</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" type="affiliate" productName="Adidas Adipower" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">Adidas Adipower</TrackedLink> <span className="text-stone-500">&mdash; $129.00</span></span>
                 </div>
               </div>
               <a href="#top-5-beginner" className="text-sm text-stone-500 hover:text-emerald-600 mt-3 inline-block">Jump to full reviews &darr;</a>
@@ -214,14 +215,16 @@ export default function BeginnerRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> May lack stability on hard returns due to low weight</p>
                 </div>
 
-                <a
+                <TrackedLink
                   href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20"
+                  type="affiliate"
+                  productName="Babolat Contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                 >
                   Check Price on Amazon &rarr;
-                </a>
+                </TrackedLink>
               </div>
 
               {/* 2. HEAD Extreme Evo */}
@@ -283,14 +286,16 @@ export default function BeginnerRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Slightly firmer than pure fiberglass options</p>
                 </div>
 
-                <a
+                <TrackedLink
                   href="https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20"
+                  type="affiliate"
+                  productName="HEAD Extreme Evo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                 >
                   Check Price on Amazon &rarr;
-                </a>
+                </TrackedLink>
               </div>
 
               {/* 3. Wilson Optix V1 */}
@@ -352,14 +357,16 @@ export default function BeginnerRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Limited power ceiling — you&apos;ll outgrow it</p>
                 </div>
 
-                <a
+                <TrackedLink
                   href="https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20"
+                  type="affiliate"
+                  productName="Bullpadel Flow"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                 >
                   Check Price on Amazon &rarr;
-                </a>
+                </TrackedLink>
               </div>
 
               {/* 4. NOX Pro Cup USPA */}
@@ -421,14 +428,16 @@ export default function BeginnerRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Slightly heavier than other beginner options</p>
                 </div>
 
-                <a
+                <TrackedLink
                   href="https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20"
+                  type="affiliate"
+                  productName="Wilson Padel Racket"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                 >
                   Check Price on Amazon &rarr;
-                </a>
+                </TrackedLink>
               </div>
 
               {/* 5. Adidas Adipower */}
@@ -490,14 +499,16 @@ export default function BeginnerRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> At 365g+ with weights, toward the heavy end for beginners</p>
                 </div>
 
-                <a
+                <TrackedLink
                   href="https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20"
+                  type="affiliate"
+                  productName="Adidas Adipower"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
                 >
                   Check Price on Amazon &rarr;
-                </a>
+                </TrackedLink>
               </div>
             </section>
           </div>
@@ -521,27 +532,27 @@ export default function BeginnerRacketsPage() {
                   <tbody>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Value</td>
-                      <td className="py-3 pr-4"><a href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Babolat Contact</a></td>
+                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" type="affiliate" productName="Babolat Contact" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Babolat Contact</TrackedLink></td>
                       <td className="py-3 text-stone-600">$89.95</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best All-Around</td>
-                      <td className="py-3 pr-4"><a href="https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">HEAD Extreme Evo</a></td>
+                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20" type="affiliate" productName="HEAD Extreme Evo" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">HEAD Extreme Evo</TrackedLink></td>
                       <td className="py-3 text-stone-600">$99.95</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best to Grow With</td>
-                      <td className="py-3 pr-4"><a href="https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Adidas Adipower</a></td>
+                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" type="affiliate" productName="Adidas Adipower" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Adidas Adipower</TrackedLink></td>
                       <td className="py-3 text-stone-600">$129.00</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Lightest / Most Forgiving</td>
-                      <td className="py-3 pr-4"><a href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Babolat Contact (340g)</a></td>
+                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" type="affiliate" productName="Babolat Contact" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Babolat Contact (340g)</TrackedLink></td>
                       <td className="py-3 text-stone-600">$89.95</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Brand Pedigree</td>
-                      <td className="py-3 pr-4"><a href="https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">NOX Pro Cup USPA</a></td>
+                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20" type="affiliate" productName="Wilson Padel Racket" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">NOX Pro Cup USPA</TrackedLink></td>
                       <td className="py-3 text-stone-600">$119.00</td>
                     </tr>
                   </tbody>
@@ -558,24 +569,24 @@ export default function BeginnerRacketsPage() {
                   <h3 className="font-semibold text-[#1a1a1a] mb-1">Padel Balls</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Padel balls look like tennis balls but have slightly less pressure. Most clubs provide them, but having your own is handy for practice.</p>
                   <div className="flex flex-col gap-1.5">
-                    <a href="https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">HEAD Padel Pro S — $13.91</a>
-                    <a href="https://www.amazon.com/dp/B07SBHNKJF?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">Dunlop Pro Padel — $14.74</a>
+                    <TrackedLink href="https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20" type="affiliate" productName="HEAD Padel Pro S" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">HEAD Padel Pro S — $13.91</TrackedLink>
+                    <TrackedLink href="https://www.amazon.com/dp/B07SBHNKJF?tag=padel02-20" type="affiliate" productName="Dunlop Pro Padel" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">Dunlop Pro Padel — $14.74</TrackedLink>
                   </div>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-[#1a1a1a] mb-1">Overgrips</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Replace your overgrip every few sessions to maintain tackiness and sweat absorption. Buy in bulk — you&apos;ll go through them.</p>
                   <div className="flex flex-col gap-1.5">
-                    <a href="https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">Wilson Pro Overgrip 12-pack — $27</a>
-                    <a href="https://www.amazon.com/dp/B018SC9APW?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">Babolat VS 12-pack — $35</a>
+                    <TrackedLink href="https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20" type="affiliate" productName="Wilson Pro Overgrip 12-pack" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">Wilson Pro Overgrip 12-pack — $27</TrackedLink>
+                    <TrackedLink href="https://www.amazon.com/dp/B018SC9APW?tag=padel02-20" type="affiliate" productName="Babolat VS 12-pack" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">Babolat VS 12-pack — $35</TrackedLink>
                   </div>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5 sm:col-span-2">
                   <h3 className="font-semibold text-[#1a1a1a] mb-1">Court Shoes</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Don&apos;t wear running shoes on court. Padel requires lateral movement — get shoes with herringbone soles designed for court sports.</p>
                   <div className="flex flex-col sm:flex-row gap-1.5 sm:gap-4">
-                    <a href="https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">HEAD Sprint Pro 4.0 Men&apos;s — $129</a>
-                    <a href="https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">HEAD Sprint Pro 4.0 Women&apos;s — $89</a>
+                    <TrackedLink href="https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" type="affiliate" productName="HEAD Sprint Pro 4.0 Mens" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">HEAD Sprint Pro 4.0 Men&apos;s — $129</TrackedLink>
+                    <TrackedLink href="https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20" type="affiliate" productName="HEAD Sprint Pro 4.0 Womens" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">HEAD Sprint Pro 4.0 Women&apos;s — $89</TrackedLink>
                   </div>
                 </div>
               </div>

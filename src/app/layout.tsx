@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SiteHeader } from "@/components/site-header";
 import { getStates } from "@/lib/site-structure";
 import "./globals.css";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-85F1NDMHLH";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,6 +57,7 @@ export default function RootLayout({
       >
         <SiteHeader states={getStates().map(s => ({ name: s.name, slug: s.slug, code: s.code }))} />
         {children}
+        <GoogleAnalytics gaId={GA_ID} />
       </body>
     </html>
   );
