@@ -10717,12 +10717,7 @@ export const padelCourts: PadelCourt[] = [
     verified: false,
     ogImageUrl: "https://cdn.prod.website-files.com/693ffa7584910cc8434dde2d/6964bb01e1517735a31526f8_OpenGraph.jpg",
   },
-];
-
-// Export grouped by state
-export const courtsByState = padelCourts.reduce((acc, court) => {
-  if (!acc[court.state]) {
-    acc[court.state] = [  {
+  {
     id: 376,
     name: "Matrix Club",
     slug: "matrix-club",
@@ -13775,7 +13770,14 @@ export const courtsByState = padelCourts.reduce((acc, court) => {
     status: "open",
     featured: false,
   },
+
 ];
+
+
+// Export grouped by state
+export const courtsByState = padelCourts.reduce((acc, court) => {
+  if (!acc[court.state]) {
+    acc[court.state] = [];
   }
   acc[court.state].push(court);
   return acc;

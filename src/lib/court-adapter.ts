@@ -188,8 +188,26 @@ function convertOpeningHours(hours: ExistingCourt["openingHours"]) {
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   const hourKeys = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
+  if (!hours) {
+    return days.map((day) => ({
+      dayOfWeek: day,
+      opens: "07:00",
+      closes: "22:00",
+      closed: false,
+    }));
+  }
+
   return days.map((day, index) => {
     const hourString = hours[hourKeys[index] as keyof typeof hours];
+
+    if (!hourString || hourString === "Closed") {
+      return {
+        dayOfWeek: day,
+        opens: "00:00",
+        closes: "00:00",
+        closed: true,
+      };
+    }
 
     if (hourString === "varies" || hourString === "24h") {
       return {
