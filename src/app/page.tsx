@@ -9,8 +9,8 @@ import { HeroSearch } from "@/components/hero-search";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Padel Courts Near Me | Find & Book 249+ Padel Courts in the USA",
-  description: "Find padel courts near you. Browse 249+ padel clubs across 34 states. Compare prices, read reviews, check hours, and book courts online. The #1 US padel court directory.",
+  title: "Padel Courts Near Me | Find & Book 313+ Padel Courts in the USA",
+  description: "Find padel courts near you. Browse 313+ padel clubs across 37 states. Compare prices, read reviews, check hours, and book courts online. The #1 US padel court directory.",
   keywords: [
     "padel courts near me",
     "padel near me",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     "outdoor padel courts",
   ],
   openGraph: {
-    title: "Padel Courts Near Me | Find & Book 249+ Padel Courts in the USA",
-    description: "Find padel courts near you. Browse 249+ padel clubs across 34 states. Compare prices, read reviews, check hours, and book courts online.",
+    title: "Padel Courts Near Me | Find & Book 313+ Padel Courts in the USA",
+    description: "Find padel courts near you. Browse 313+ padel clubs across 37 states. Compare prices, read reviews, check hours, and book courts online.",
     url: "https://www.padelcourtsfinder.com",
     siteName: "Padel Courts Finder",
     type: "website",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Padel Courts Near Me | Find & Book 249+ Padel Courts in the USA",
-    description: "Find padel courts near you. Browse 249+ padel clubs across 34 states. Compare prices, read reviews, and book courts online.",
+    title: "Padel Courts Near Me | Find & Book 313+ Padel Courts in the USA",
+    description: "Find padel courts near you. Browse 313+ padel clubs across 37 states. Compare prices, read reviews, and book courts online.",
     images: ["https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop"],
   },
   alternates: {

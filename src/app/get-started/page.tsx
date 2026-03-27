@@ -4,7 +4,7 @@ import { CheckCircle2, PlayCircle, Calendar, DollarSign, Users, BookOpen, MapPin
 
 export const metadata: Metadata = {
   title: 'Start Playing Padel in 30 Days | Complete Beginner\'s Guide',
-  description: 'Learn how to start playing padel from scratch. Find beginner clinics at 243+ clubs nationwide, calculate costs, and join America\'s fastest-growing sport.',
+  description: 'Learn how to start playing padel from scratch. Find beginner clinics at 313+ clubs nationwide, calculate costs, and join America\'s fastest-growing sport.',
 };
 
 export default function GetStartedPage() {
@@ -358,21 +358,21 @@ export default function GetStartedPage() {
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-4">Where to Play</h2>
         <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-          We&apos;ve mapped 243+ clubs across America
+          We&apos;ve mapped 313+ clubs across America
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           <Link href="/florida" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            Florida (57 clubs)
+            Florida (79 clubs)
           </Link>
           <Link href="/texas" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            Texas (48 clubs)
+            Texas (55 clubs)
           </Link>
           <Link href="/california" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            California (26 clubs)
+            California (30 clubs)
           </Link>
           <Link href="/new-york" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            New York (16 clubs)
+            New York (25 clubs)
           </Link>
           <Link href="/arizona" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
             Arizona (9 clubs)
@@ -384,7 +384,7 @@ export default function GetStartedPage() {
 
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
           <p className="text-lg mb-2">
-            <strong>Top padel cities:</strong> Miami (59 clubs), Houston (10 clubs), Orlando (8 clubs), Austin (7 clubs), Los Angeles (5 clubs), Brooklyn (5 clubs)
+            <strong>Top padel cities:</strong> Miami (19 clubs), Houston (10 clubs), Austin (8 clubs), Orlando (7 clubs), Los Angeles (5 clubs), Brooklyn (5 clubs)
           </p>
         </div>
       </section>
@@ -396,7 +396,7 @@ export default function GetStartedPage() {
             Ready to Start?
           </h2>
           <p className="text-xl mb-8 text-green-100">
-            243+ clubs nationwide. One of them has your name on it.
+            313+ clubs nationwide. One of them has your name on it.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

@@ -222,7 +222,7 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
               Find Courts
             </h3>
             <p className="text-stone-500 text-sm">
-              Search 249+ padel courts across America
+              Search 313+ padel courts across America
             </p>
           </Link>
           <Link
