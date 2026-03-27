@@ -125,8 +125,19 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                             href="/blog/padel-gifts-mothers-day-2026"
                             className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Gift Guide</div>
-                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">12 curated padel gift picks</p>
+                            <div className="text-sm font-medium leading-none">Mother&apos;s Day Guide</div>
+                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">12 padel gifts for Mom</p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href="/blog/padel-gifts-fathers-day-2026"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Father&apos;s Day Guide</div>
+                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">12 padel gifts for Dad</p>
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -220,7 +231,10 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                         Best Pro Rackets
                       </Link>
                       <Link href="/blog/padel-gifts-mothers-day-2026" className="text-sm hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
-                        Gift Guide
+                        Mother&apos;s Day Guide
+                      </Link>
+                      <Link href="/blog/padel-gifts-fathers-day-2026" className="text-sm hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                        Father&apos;s Day Guide
                       </Link>
                     </div>
                   </div>

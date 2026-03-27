@@ -243,6 +243,17 @@ const blogPosts: BlogPost[] = [
     priceRange: '$14\u2013$399'
   },
   {
+    slug: 'padel-gifts-fathers-day-2026',
+    title: 'Best Padel Gifts for Dad (2026) — 12 Ideas He\'ll Actually Use',
+    category: 'equipment',
+    excerpt: 'From beginner rackets to premium bags, 12 curated padel gifts at every budget — $14 to $399. Gift guide for the padel-loving dad.',
+    date: '2026-03-26',
+    readTime: '8 min read',
+    imageAlt: 'Padel gifts for Father\'s Day 2026',
+    courtSlug: '',
+    priceRange: '$14\u2013$399'
+  },
+  {
     slug: 'best-padel-rackets-beginners',
     title: 'Best Padel Rackets for Beginners (2026)',
     category: 'equipment',
