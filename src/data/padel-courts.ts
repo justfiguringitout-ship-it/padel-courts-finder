@@ -10735,6 +10735,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$20 guest fee per person per sport; membership-based unlimited access also available",
     status: "open",
     featured: false,
+    ogImageUrl: "https://static.wixstatic.com/media/eebc71_c15a27d4fc4d4cd0a1cd40ec75a86b2f~mv2.jpg/v1/fill/w_2500,h_1580,al_c/eebc71_c15a27d4fc4d4cd0a1cd40ec75a86b2f~mv2.jpg",
   },
   {
     id: 377,
@@ -10783,6 +10784,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Free for Members; Guest fee ~$10 for social play; Resort guests $30 daily resort amenity fee",
     status: "open",
     featured: false,
+    ogImageUrl: "https://lavallecoastalclub.com/wp-content/uploads/la_valle_coastal_club_grounds_1.jpg",
   },
   {
     id: 378,
@@ -10869,6 +10871,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Padel memberships start at $149/month with 50% off court reservations; open play $5/session",
     status: "open",
     featured: false,
+    ogImageUrl: "http://static1.squarespace.com/static/66c6ae31b3df03248ece76d3/t/69246b629d4f034be3f3a167/1763994466193/b72c6a76-39ff-4a89-922d-8eb22f23570d-6fe3dfca-303w.webp?format=1500w",
   },
   {
     id: 380,
@@ -10967,6 +10970,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$130/hour",
     status: "open",
     featured: false,
+    ogImageUrl: "https://static.wixstatic.com/media/ca65f6_b1e65ea01ed44021990f8ca38cc3df6a%7Emv2.png/v1/fit/w_2500,h_1330,al_c/ca65f6_b1e65ea01ed44021990f8ca38cc3df6a%7Emv2.png",
   },
   {
     id: 382,
@@ -11273,6 +11277,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Private lessons: $40-90/hr; Open play: $30-60/hr (Members only for court rentals)",
     status: "open",
     featured: false,
+    ogImageUrl: "https://kineticracquet.com/wp-content/uploads/2024/01/ErickQuituizaca-02747-scaled.jpg",
   },
   {
     id: 389,
@@ -11818,6 +11823,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Drop-In: $30/session; Monthly Membership: $149/month; Annual: $1,299/year",
     status: "open",
     featured: false,
+    ogImageUrl: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/306ecdf5-01f2-46bb-a89a-58882dc480da/id-preview-866350d8--8f491c2c-0bef-403a-aac5-69f865ee1921.lovable.app-1771977429840.png",
   },
   {
     id: 401,
@@ -11861,6 +11867,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Lessons (90 min): 2 person $150, 3 person $175, 4 person $200; Private: $125/hour; Paddle rental: $5",
     status: "open",
     featured: false,
+    ogImageUrl: "https://anytimepadelusa.com/wp-content/uploads/2022/02/sarasota-padel-og.jpg",
   },
   {
     id: 402,
@@ -12093,6 +12100,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     featured: false,
+    ogImageUrl: "https://mondopadel.com/wp-content/uploads/2023/02/cropped-Mask-group.png",
   },
   {
     id: 407,
@@ -12140,6 +12148,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     featured: false,
+    ogImageUrl: "http://static1.squarespace.com/static/5d235ff1fdd42c0001908e34/t/5d2365e6a6c12f0001b7885f/1563992722636/IW_Logo_426_872.jpg?format=1500w",
   },
   {
     id: 408,
@@ -12188,6 +12197,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Guest fees: $25-$45; Day passes: $30-$40; Monthly Pickleball + Padel membership: $175",
     status: "open",
     featured: false,
+    ogImageUrl: "https://letsgopickleball.com/wp-content/uploads/2025/01/cropped-FinalLogoTM-480x480-1.webp",
   },
   {
     id: 409,
@@ -12325,6 +12335,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Off-peak: $30/hour/court; Peak: $40/hour/court (Peak: Fri 5pm - Sun)",
     status: "open",
     featured: false,
+    ogImageUrl: "https://picklenpins.com/wp-content/uploads/2024/10/Untitled-design-12.png",
   },
   {
     id: 412,
@@ -12373,6 +12384,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Estimated $15-$30 per hour per person; rink time $15-$20/hr",
     status: "coming_soon",
     featured: false,
+    ogImageUrl: "https://cdn.prod.website-files.com/67aa4d62be8b23d215472bb3/682a919e94d7fac2596f5c98_open-graph.jpg",
   },
   {
     id: 413,
@@ -12563,6 +12575,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     featured: false,
+    ogImageUrl: "http://static1.squarespace.com/static/609453074cd2962e27ad5c54/t/69652828ba95953d8b4f3e5e/1768237096646/Pine+Hollow+Logo+Tree+Symbol_White.png?format=1500w",
   },
   {
     id: 417,
@@ -12614,6 +12627,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     featured: false,
+    ogImageUrl: "http://static1.squarespace.com/static/61f85b44d3edc52855d1284a/t/621d1558d1ad5a46d95ea3cf/1740433960811/only+script-01.png?format=1500w",
   },
   {
     id: 418,
@@ -12700,6 +12714,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$300/hour",
     status: "open",
     featured: false,
+    ogImageUrl: "https://static.wixstatic.com/media/2d8d9d_7b35a0bae0aa4f3cadcc137d7ef4fd66%7Emv2.jpeg/v1/fit/w_2500,h_1330,al_c/2d8d9d_7b35a0bae0aa4f3cadcc137d7ef4fd66%7Emv2.jpeg",
   },
   {
     id: 420,
@@ -12779,6 +12794,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     featured: false,
+    ogImageUrl: "https://cdn.prod.website-files.com/645706d557b42101e950c323/68e7a33b178075421bdf9171_The%20Racquet%20Lounge%20Social%20Card%20(1).jpg",
   },
   {
     id: 422,
@@ -12873,6 +12889,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Members: $15-$20/hour per person; Non-members: $30-$40/hour per person",
     status: "open",
     featured: false,
+    ogImageUrl: "https://cincyopensportingclub.com/wp-content/uploads/2026/03/BA4A1163-edited-scaled.jpg",
   },
   {
     id: 424,
@@ -13064,6 +13081,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Padel: $25-$35/person/hour or $100-$140/hour court rental; Open Play: $15/session ($0 for members)",
     status: "open",
     featured: false,
+    ogImageUrl: "https://www.portresclub.com/wp-content/uploads/2025/02/Portres-Club-Logo-Master-01.png",
   },
   {
     id: 428,
@@ -13111,6 +13129,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     featured: false,
+    ogImageUrl: "https://www.doradobeach.com/files/media/pages/01_home/00_slideshow/homepage-01.jpg",
   },
   {
     id: 429,
@@ -13240,6 +13259,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Resort Guests: $48/hour; Non-Guests: $58/hour; Racket Rental: $10/hour",
     status: "open",
     featured: false,
+    ogImageUrl: "https://kiawahresort.com/wp-content/uploads/2018/08/hero-home.jpg",
   },
   {
     id: 432,
@@ -13280,6 +13300,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     featured: false,
+    ogImageUrl: "https://cliffsliving.com/wp-content/uploads/2026/03/shutterstock_2164518259-1.jpg",
   },
   // id 433 removed — was a duplicate of Dripping Springs Racquet Club (id 142)
   {
@@ -13568,6 +13589,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Mon-Thu: $17.49/player for 1.5 hours; Fri-Sun: $20/player for 1.5 hours; Open Play: $20 for 3 hours",
     status: "open",
     featured: false,
+    ogImageUrl: "https://storage.googleapis.com/gpt-engineer-file-uploads/qkKT8M94mYMZPbmYpYQCKSqJ8kh1/social-images/social-1769142384438-Court-House drone.webp",
   },
   {
     id: 440,
