@@ -4,7 +4,7 @@
 
 We're obsessed with padel. And we're pretty sure once you try it, you will be too.
 
-Think of us as your personal padel concierge—whether you're looking for courts in your backyard or planning a padel road trip across the country, we've got you covered. We've mapped, verified, and documented **over 120 padel clubs** and **525+ courts** across the United States, so you can spend less time searching and more time smashing.
+Think of us as your personal padel concierge—whether you're looking for courts in your backyard or planning a padel road trip across the country, we've got you covered. We've mapped, verified, and documented **over 311 padel clubs** across **37 states and 182+ cities** in the United States, so you can spend less time searching and more time smashing.
 
 ## Our Story: From "What's Padel?" to "Where Can I Play?"
 
@@ -12,7 +12,7 @@ It started with a simple question that every padel player in America has asked: 
 
 After falling in love with padel (it happens fast, we warned you), we realized that finding courts in the United States was like a treasure hunt—but without the map. Some clubs were on Google, others hidden on Instagram, many weren't listed anywhere searchable. Players were asking the same questions in Facebook groups, posting "Anyone know where to play in [insert city]?" over and over again.
 
-We thought: **This is ridiculous. In 2025, finding a padel court shouldn't be harder than actually learning to play.**
+We thought: **This is ridiculous. In 2026, finding a padel court shouldn't be harder than actually learning to play.**
 
 So we built this.
 
@@ -29,7 +29,7 @@ We don't just copy and paste from directories. Every club in our database has be
 - **Quality checked** (we note which are active, coming soon, or temporarily closed)
 
 ### 📍 We Make It Searchable
-Search by state, city, indoor/outdoor, number of courts, amenities—whatever matters to you. Planning a trip to Austin? We'll show you all 6 facilities. Looking for indoor courts in winter? Filter for climate-controlled options.
+Search by state, city, indoor/outdoor, number of courts, amenities—whatever matters to you. Planning a trip to Austin? We'll show you every facility in the area. Looking for indoor courts in winter? Filter for climate-controlled options.
 
 ### 🎾 We Keep It Current
 Padel is the fastest-growing sport in the world for a reason. New clubs are opening every month. We track grand openings, expansion plans, and club updates so our directory stays fresh.
@@ -42,7 +42,7 @@ We understand the difference between a casual drop-in facility and a luxury club
 
 **We're Comprehensive**
 
-Other directories list 20-30 clubs. We've documented 120+. Why? Because that small outdoor court in Bulverde, Texas (Pick and Paddle) deserves to be found just as much as the massive Bay Padel Treasure Island with the "world's highest ceilings."
+Other directories list 20-30 clubs. We've documented 311+. Why? Because that small outdoor court in Bulverde, Texas (Pick and Paddle) deserves to be found just as much as the massive Bay Padel Treasure Island with the "world's highest ceilings."
 
 **We're Accurate**
 
@@ -51,10 +51,10 @@ We caught mistakes in existing directories (hello, Hialeah vs. Doral confusion w
 ## The Numbers Don't Lie
 
 Since launching our verification project, we've:
-- ✅ Mapped **525+ courts** across **20+ states**
-- ✅ Verified **120 padel facilities** from official sources
-- ✅ Documented **23 multi-location chains** (from Reserve Padel to Padel Haus)
-- ✅ Identified **19 facilities opening soon** (with actual dates)
+- ✅ Mapped **311+ clubs** across **37 states** and **182+ cities**
+- ✅ Verified **every padel facility** from official sources
+- ✅ Documented **23+ multi-location chains** (from Reserve Padel to Padel Haus)
+- ✅ Identified **20+ facilities opening soon** (with actual dates)
 - ✅ Cross-referenced with **USPA, Playtomic, and individual websites**
 - ✅ Created the **most detailed padel database** in the United States
 
@@ -104,6 +104,6 @@ We're always improving, and we'd love to hear from you.
 
 ---
 
-*Last Updated: October 2025 | Verified Clubs: 120+ | Total Courts: 525+*
+*Last Updated: March 2026 | Verified Clubs: 311+ | States: 37 | Cities: 182+*
 
 

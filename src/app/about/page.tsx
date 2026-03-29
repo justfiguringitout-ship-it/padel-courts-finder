@@ -15,7 +15,7 @@ import {
 
 export const metadata: Metadata = {
   title: "About Us - America's Complete Padel Directory | Padel Courts Finder",
-  description: "Learn about the most comprehensive padel court directory in the United States with 120+ verified clubs and 525+ courts mapped nationwide.",
+  description: "Learn about the most comprehensive padel court directory in the United States with 311+ verified clubs across 37 states mapped nationwide.",
   keywords: [
     "about padel directory",
     "padel court finder",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "About Us - America's Complete Padel Directory",
-    description: "Learn about the most comprehensive padel court directory in the United States with 120+ verified clubs and 525+ courts mapped nationwide.",
+    description: "Learn about the most comprehensive padel court directory in the United States with 311+ verified clubs across 37 states mapped nationwide.",
     url: "https://www.padelcourtsfinder.com/about",
     siteName: "Padel Courts Finder",
     type: "website",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About Us - America's Complete Padel Directory",
-    description: "Learn about the most comprehensive padel court directory in the United States with 120+ verified clubs and 525+ courts mapped nationwide.",
+    description: "Learn about the most comprehensive padel court directory in the United States with 311+ verified clubs across 37 states mapped nationwide.",
   },
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/about",
@@ -73,7 +73,7 @@ export default function AboutPage() {
               About Padel Courts Finder
             </h1>
             <p className="text-xl text-muted-foreground">
-              America&apos;s most comprehensive padel court directory - 120+ clubs, 525+ courts verified
+              America&apos;s most comprehensive padel court directory — 311+ clubs across 37 states
             </p>
           </div>
         </div>

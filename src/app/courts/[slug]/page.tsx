@@ -18,6 +18,7 @@ import {
 import { getAllAdaptedCourtSlugs, getAdaptedCourtBySlug, getAdaptedRelatedCourts, getTodayHours, isCurrentlyOpen } from "@/lib/court-adapter";
 import { ClubMapClient } from "@/components/club-map-client";
 import { TrackedLink } from "@/components/TrackedLink";
+import { GearWidget } from "@/components/GearWidget";
 import { cityBlogSlugs } from "@/data/page-content";
 import { getStates } from "@/lib/site-structure";
 import type { Metadata } from "next";
@@ -600,6 +601,9 @@ export default async function CourtPage({ params }: CourtPageProps) {
             </section>
           );
         })()}
+
+        {/* Gear Widget */}
+        <GearWidget />
       </div>
     </div>
   );
