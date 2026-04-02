@@ -1260,20 +1260,20 @@ export const padelCourts: PadelCourt[] = [
     rating: 4.6,
     reviewCount: 9,
     openingHours: {
-      monday: "7h-23h",
-      tuesday: "7h-23h",
-      wednesday: "7h-23h",
-      thursday: "7h-23h",
-      friday: "7h-23h",
-      saturday: "7h-23h",
-      sunday: "7h-23h"
+      monday: "8h-23h",
+      tuesday: "8h-23h",
+      wednesday: "8h-23h",
+      thursday: "8h-23h",
+      friday: "8h-23h",
+      saturday: "8h-23h",
+      sunday: "8h-23h"
     },
     description: "Pura Padel embodies the pure joy and passion of the sport. Rooftop courts with beautiful views and exceptional service in the Valley.",
-  
+
     numberOfCourts: 3,
     courtType: "outdoor",
     courtSurface: "synthetic turf (sand-filled)",
-    pricingText: "Court bookings ~$25-60/hr; memberships with discounts (e.g., free play M-F 10am-3pm, 25% off); private lessons packages $1750 for 5-10 hrs",
+    pricingText: "$24–$30/hr per person; memberships: discount-based with full value returned as club credits plus additional credits on top; private lessons starting at $175/hr",
     lessonsAvailable: true,
     rentalAvailable: true,
     socialArea: true,
