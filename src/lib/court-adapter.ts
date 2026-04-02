@@ -7,6 +7,69 @@
 import { PadelCourt as ExistingCourt } from "@/types/padel-court";
 import { padelCourts } from "@/data/padel-courts";
 
+/**
+ * Normalize an Instagram field value into a valid URL.
+ * Handles: @handle, bare handle, full URL, handle+URL combos, trailing junk.
+ * Returns undefined for values with invalid characters (spaces in handle, etc).
+ */
+function normalizeInstagramUrl(value: string | undefined): string | undefined {
+  if (!value || !value.trim()) return undefined;
+
+  let cleaned = value.trim();
+
+  // If it contains a full Instagram URL, extract the handle from it
+  const urlMatch = cleaned.match(/https?:\/\/(?:www\.)?instagram\.com\/([a-zA-Z0-9_.]+)/);
+  if (urlMatch) {
+    return `https://www.instagram.com/${urlMatch[1]}`;
+  }
+
+  // Take only the first token (handles "handle URL" and "handle, handle2" cases)
+  cleaned = cleaned.split(/[\s,]+/)[0];
+
+  // Remove parenthetical suffixes like "(location-tagged)"
+  cleaned = cleaned.replace(/\s*\(.*\)/, '');
+
+  // Strip trailing brackets/parens
+  cleaned = cleaned.replace(/[\]\)]+$/, '');
+
+  // Strip leading @
+  cleaned = cleaned.replace(/^@/, '');
+
+  // Must be a valid Instagram handle (letters, numbers, dots, underscores)
+  if (!cleaned || !/^[a-zA-Z0-9_.]+$/.test(cleaned)) {
+    return undefined;
+  }
+
+  return `https://www.instagram.com/${cleaned}`;
+}
+
+/**
+ * Normalize a Facebook field value into a valid URL.
+ * Most are already full URLs; handles bare page names and strips trailing junk.
+ * Returns undefined for free-text descriptions.
+ */
+function normalizeFacebookUrl(value: string | undefined): string | undefined {
+  if (!value || !value.trim()) return undefined;
+
+  let cleaned = value.trim();
+
+  // Strip trailing brackets
+  cleaned = cleaned.replace(/[\]]+$/, '');
+
+  // Already a full URL
+  if (cleaned.startsWith('https://')) {
+    return cleaned;
+  }
+
+  // A bare page name (no spaces, valid FB identifier chars)
+  if (/^[a-zA-Z0-9._]+$/.test(cleaned)) {
+    return `https://www.facebook.com/${cleaned}`;
+  }
+
+  // Otherwise it's probably a description like "Park District of HP page" — skip
+  return undefined;
+}
+
 // Coordinate mapping for all clubs (from geocoding via Google Geocoding API)
 const coordinateMap: Record<number, { latitude: number; longitude: number }> = {
   // Original manually geocoded clubs
@@ -864,9 +927,9 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
     isFeatured: court.featured || court.verified || court.rating >= 4.8,
     lastUpdated: court.verificationDate || new Date().toISOString().split("T")[0],
 
-    // Passthrough new fields (no fabrication)
-    instagram: court.instagram,
-    facebook: court.facebook,
+    // Normalize social media URLs from messy data
+    instagram: normalizeInstagramUrl(court.instagram),
+    facebook: normalizeFacebookUrl(court.facebook),
     membersOnly: court.membersOnly,
     lessonsAvailable: court.lessonsAvailable,
     rentalAvailable: court.rentalAvailable,
