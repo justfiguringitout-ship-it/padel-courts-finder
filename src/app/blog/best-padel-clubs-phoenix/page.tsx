@@ -435,6 +435,10 @@ export default function PhoenixBestClubsPage() {
               <h4 className="font-bold text-gray-900 mb-2">Best Beginner Rackets (2026)</h4>
               <p className="text-sm text-gray-600">Top 5 picks from $90–$130 →</p>
             </Link>
+            <Link href="/rules" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <h4 className="font-bold text-gray-900 mb-2">Padel Rules Explained</h4>
+              <p className="text-sm text-gray-600">Complete guide to scoring &amp; gameplay</p>
+            </Link>
           </div>
         </div>
       </article>

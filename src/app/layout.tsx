@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SiteHeader } from "@/components/site-header";
@@ -57,6 +58,50 @@ export default function RootLayout({
       >
         <SiteHeader states={getStates().map(s => ({ name: s.name, slug: s.slug, code: s.code }))} />
         {children}
+        <footer className="border-t bg-stone-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div>
+                <h3 className="font-semibold text-stone-900 mb-3">Directory</h3>
+                <ul className="space-y-2 text-sm text-stone-600">
+                  <li><Link href="/search" className="hover:text-stone-900">Find Courts</Link></li>
+                  <li><Link href="/blog" className="hover:text-stone-900">Blog</Link></li>
+                  <li><Link href="/about" className="hover:text-stone-900">About</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-900 mb-3">Resources</h3>
+                <ul className="space-y-2 text-sm text-stone-600">
+                  <li><Link href="/rules" className="hover:text-stone-900">Padel Rules</Link></li>
+                  <li><Link href="/how-to-play" className="hover:text-stone-900">How to Play</Link></li>
+                  <li><Link href="/get-started" className="hover:text-stone-900">Get Started</Link></li>
+                  <li><Link href="/get-started/glossary" className="hover:text-stone-900">Glossary</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-900 mb-3">Gear</h3>
+                <ul className="space-y-2 text-sm text-stone-600">
+                  <li><Link href="/equipment" className="hover:text-stone-900">Equipment Guide</Link></li>
+                  <li><Link href="/blog/best-padel-rackets-beginners" className="hover:text-stone-900">Beginner Rackets</Link></li>
+                  <li><Link href="/blog/best-padel-rackets-intermediate" className="hover:text-stone-900">Intermediate Rackets</Link></li>
+                  <li><Link href="/faq" className="hover:text-stone-900">FAQ</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-stone-900 mb-3">Top Cities</h3>
+                <ul className="space-y-2 text-sm text-stone-600">
+                  <li><Link href="/blog/best-padel-clubs-miami" className="hover:text-stone-900">Miami</Link></li>
+                  <li><Link href="/blog/best-padel-clubs-houston" className="hover:text-stone-900">Houston</Link></li>
+                  <li><Link href="/blog/best-padel-clubs-nyc" className="hover:text-stone-900">New York</Link></li>
+                  <li><Link href="/blog/best-padel-clubs-los-angeles" className="hover:text-stone-900">Los Angeles</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t mt-8 pt-6 text-center text-xs text-stone-400">
+              Padel Courts Finder
+            </div>
+          </div>
+        </footer>
         <GoogleAnalytics gaId={GA_ID} />
       </body>
     </html>

@@ -601,6 +601,9 @@ export default async function CourtPage({ params }: CourtPageProps) {
                 <Link href="/blog/best-padel-rackets-beginners" className="text-primary hover:underline">
                   Best Beginner Rackets (2026) &rarr;
                 </Link>
+                <Link href="/rules" className="text-primary hover:underline">
+                  Learn the Rules &rarr;
+                </Link>
               </div>
             </section>
           );

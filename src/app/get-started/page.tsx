@@ -123,6 +123,9 @@ export default function GetStartedPage() {
                   Read full guide →
                 </Link>
                 <p className="text-slate-600 text-sm mt-2">
+                  Then check out the <Link href="/rules" className="text-green-600 hover:text-green-700 font-medium">official padel rules</Link> for the complete scoring and gameplay guide.
+                </p>
+                <p className="text-slate-600 text-sm mt-2">
                   Not sure if padel is for you? Read our <Link href="/blog/padel-vs-pickleball" className="text-green-600 hover:text-green-700 font-medium">Padel vs Pickleball comparison</Link>.
                 </p>
               </div>

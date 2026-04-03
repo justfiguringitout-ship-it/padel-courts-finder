@@ -427,7 +427,7 @@ export default function GlossaryPage() {
             </h1>
           </div>
           <p className="text-xl text-blue-100 max-w-3xl">
-            Your complete dictionary of 30+ padel terms. From bandeja to víbora, learn every term with pronunciations, examples, and video tutorials.
+            Your complete dictionary of 30+ padel terms. From bandeja to víbora, learn every term with pronunciations, examples, and video tutorials. Looking for the complete rules? See our <Link href="/rules" className="text-white underline hover:text-blue-200">padel rules guide</Link>.
           </p>
         </div>
       </section>
