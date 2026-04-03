@@ -14,8 +14,8 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Padel Rules and Regulations - Official Guide | Padel Courts Finder",
-  description: "Complete guide to padel rules and regulations including court dimensions, scoring, serves, and official gameplay guidelines.",
+  title: "Padel Rules Explained: The Complete Guide to How Padel Scoring & Gameplay Works",
+  description: "Learn the rules of padel in 5 minutes. Scoring (same as tennis), serving (underhand only), wall play, and the key rules every beginner needs to know before their first match.",
   keywords: [
     "padel rules",
     "padel regulations",
@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     "padel gameplay",
   ],
   openGraph: {
-    title: "Padel Rules and Regulations - Official Guide",
-    description: "Complete guide to padel rules and regulations including court dimensions, scoring, serves, and official gameplay guidelines.",
+    title: "Padel Rules Explained: The Complete Guide to How Padel Scoring & Gameplay Works",
+    description: "Learn the rules of padel in 5 minutes. Scoring (same as tennis), serving (underhand only), wall play, and the key rules every beginner needs to know before their first match.",
     url: "https://www.padelcourtsfinder.com/rules",
     siteName: "Padel Courts Finder",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Padel Rules and Regulations - Official Guide",
-    description: "Complete guide to padel rules and regulations including court dimensions, scoring, serves, and official gameplay guidelines.",
+    title: "Padel Rules Explained: The Complete Guide to How Padel Scoring & Gameplay Works",
+    description: "Learn the rules of padel in 5 minutes. Scoring (same as tennis), serving (underhand only), wall play, and the key rules every beginner needs to know before their first match.",
   },
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/rules",
@@ -72,7 +72,7 @@ export default function RulesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Padel Rules & Regulations
+              Padel Rules: Everything You Need to Know
             </h1>
             <p className="text-xl text-muted-foreground">
               Official rules and guidelines to master the game

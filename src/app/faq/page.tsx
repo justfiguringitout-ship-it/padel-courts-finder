@@ -14,8 +14,8 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Padel FAQ - Frequently Asked Questions | Padel Courts Finder",
-  description: "Answers to the most common questions about padel tennis including rules, equipment, court locations, pricing, and how to get started.",
+  title: "Padel FAQ: Your Questions Answered | Padel Courts Finder",
+  description: "What is padel? How much does it cost? Is it hard to learn? Get clear answers to the most common padel questions — from equipment and rules to finding courts near you.",
   keywords: [
     "padel FAQ",
     "padel questions",
@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     "padel for beginners FAQ",
   ],
   openGraph: {
-    title: "Padel FAQ - Frequently Asked Questions",
-    description: "Answers to the most common questions about padel tennis including rules, equipment, court locations, pricing, and how to get started.",
+    title: "Padel FAQ: Your Questions Answered",
+    description: "What is padel? How much does it cost? Is it hard to learn? Get clear answers to the most common padel questions — from equipment and rules to finding courts near you.",
     url: "https://www.padelcourtsfinder.com/faq",
     siteName: "Padel Courts Finder",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Padel FAQ - Frequently Asked Questions",
-    description: "Answers to the most common questions about padel tennis including rules, equipment, court locations, pricing, and how to get started.",
+    title: "Padel FAQ: Your Questions Answered",
+    description: "What is padel? How much does it cost? Is it hard to learn? Get clear answers to the most common padel questions — from equipment and rules to finding courts near you.",
   },
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/faq",
@@ -115,7 +115,7 @@ export default function FAQPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Padel FAQ
+              Padel FAQ: Your Questions Answered
             </h1>
             <p className="text-xl text-muted-foreground">
               Your questions answered - everything you need to know about padel

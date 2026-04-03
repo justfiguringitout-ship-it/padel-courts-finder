@@ -100,13 +100,15 @@ export default async function CourtPage({ params }: CourtPageProps) {
             email: court.email,
             url: court.website || `https://www.padelcourtsfinder.com/courts/${court.slug}`,
             image: court.images.map((img) => img.url),
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: court.rating.ratingValue,
-              reviewCount: court.rating.reviewCount,
-              bestRating: court.rating.bestRating,
-              worstRating: court.rating.worstRating,
-            },
+            ...(court.rating.ratingValue > 0 && court.rating.reviewCount > 0 ? {
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: court.rating.ratingValue,
+                reviewCount: court.rating.reviewCount,
+                bestRating: court.rating.bestRating,
+                worstRating: court.rating.worstRating,
+              },
+            } : {}),
             ...(court.pricingText ? { priceRange: court.pricingText } : {}),
             openingHoursSpecification: court.hours.map((h) => ({
               "@type": "OpeningHoursSpecification",
@@ -196,6 +198,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
                 </span>
               </div>
 
+              {court.rating.ratingValue > 0 && court.rating.reviewCount > 0 && (
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center gap-1">
                   <Star className="w-5 h-5 fill-primary text-primary" />
@@ -203,6 +206,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
                   <span className="text-muted-foreground">({court.rating.reviewCount} reviews)</span>
                 </div>
               </div>
+              )}
 
               {court.description && (
                 <p className="text-lg text-muted-foreground mb-6">{court.description}</p>
