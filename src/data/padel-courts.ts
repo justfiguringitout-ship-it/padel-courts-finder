@@ -2921,7 +2921,7 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 80,
     name: "Padel Social Bethesda",
-    address: "5452 Westbard Avenue",
+    address: "5455 Westbard Ave",
     city: "Bethesda",
     state: "MD",
     zipCode: "20816",
@@ -2938,14 +2938,14 @@ export const padelCourts: PadelCourt[] = [
       wednesday: "7h-23h",
       thursday: "7h-23h",
       friday: "7h-23h",
-      saturday: "8h-22h",
-      sunday: "8h-22h"
+      saturday: "7h-23h",
+      sunday: "7h-23h"
     },
     verified: true,
     verificationDate: "2025-10-13",
     description: "Premier community-focused padel club in Bethesda with 3 lighted outdoor synthetic turf courts, pro shop, lessons/clinics, social space, and food/beverage options. Book via Playtomic app; active with recent events as of late 2026.",
     courtSurface: "synthetic turf",
-    pricingText: "Court time $15-40/hour (est.); founding memberships $100; monthly from $199; book via Playtomic",
+    pricingText: "$15-$20/hr per player; Membership from $100/month",
     lessonsAvailable: true,
     rentalAvailable: true,
     socialArea: true,
@@ -2956,7 +2956,6 @@ export const padelCourts: PadelCourt[] = [
     instagram: "https://www.instagram.com/padel.social.us/",
     facebook: "https://www.facebook.com/p/Padel-Social-61560079678777/",
     status: "open",
-    ogImageUrl: "https://padelsocial.com/wp-content/uploads/2025/03/padel-social.jpg",
   },
     {
     id: 81,
