@@ -2921,7 +2921,7 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 80,
     name: "Padel Social Bethesda",
-    address: "5455 Westbard Ave",
+    address: "5452 Westbard Ave (moving to 5455 Westbard Ave in June 2026)",
     city: "Bethesda",
     state: "MD",
     zipCode: "20816",
@@ -2956,6 +2956,7 @@ export const padelCourts: PadelCourt[] = [
     instagram: "https://www.instagram.com/padel.social.us/",
     facebook: "https://www.facebook.com/p/Padel-Social-61560079678777/",
     status: "open",
+    ogImageUrl: "/images/courts/padel-social-bethesda.jpg",
   },
     {
     id: 81,
