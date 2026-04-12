@@ -33,7 +33,7 @@ const nextConfig: NextConfig = {
       { source: '/courts/miami-padel-federation', destination: '/courts/smart-padel-house', permanent: true },
       { source: '/courts/pura-padel-la', destination: '/courts/pura-padel', permanent: true },
       { source: '/courts/goldenpoint-new-york', destination: '/courts/golden-point-padel', permanent: true },
-      { source: '/courts/patl-atlanta', destination: '/courts/itp-training-academy', permanent: true },
+      { source: '/courts/patl-atlanta', destination: '/courts/padel-haus-atlanta', permanent: true },
       { source: '/courts/conquer-padel-tempe', destination: '/courts/conquer-padel-club', permanent: true },
       { source: '/courts/conquer-padel', destination: '/courts/conquer-padel-club', permanent: true },
       { source: '/courts/padelaz-at-maracana', destination: '/courts/padel-az', permanent: true },
@@ -111,6 +111,42 @@ const nextConfig: NextConfig = {
       { source: '/courts/somos-padel-llc', destination: '/search', permanent: true },
       { source: '/courts/bowlero-miami-fl', destination: '/search', permanent: true },
       { source: '/courts/pro-padel-league-experience-x-miami-open-presented-by-ita', destination: '/search', permanent: true },
+
+      // === State abbreviation → full name (12) ===
+      { source: '/ut', destination: '/utah', permanent: true },
+      { source: '/ct', destination: '/connecticut', permanent: true },
+      { source: '/ga', destination: '/georgia', permanent: true },
+      { source: '/ma', destination: '/massachusetts', permanent: true },
+      { source: '/nv', destination: '/nevada', permanent: true },
+      { source: '/mi', destination: '/michigan', permanent: true },
+      { source: '/nm', destination: '/new-mexico', permanent: true },
+      { source: '/co', destination: '/colorado', permanent: true },
+      { source: '/pr', destination: '/puerto-rico', permanent: true },
+      { source: '/wi', destination: '/wisconsin', permanent: true },
+      { source: '/md', destination: '/maryland', permanent: true },
+      { source: '/va', destination: '/virginia', permanent: true },
+
+      // === State abbreviation city paths (12) ===
+      { source: '/ut/:path*', destination: '/utah/:path*', permanent: true },
+      { source: '/ct/:path*', destination: '/connecticut/:path*', permanent: true },
+      { source: '/ga/:path*', destination: '/georgia/:path*', permanent: true },
+      { source: '/ma/:path*', destination: '/massachusetts/:path*', permanent: true },
+      { source: '/nv/:path*', destination: '/nevada/:path*', permanent: true },
+      { source: '/mi/:path*', destination: '/michigan/:path*', permanent: true },
+      { source: '/nm/:path*', destination: '/new-mexico/:path*', permanent: true },
+      { source: '/co/:path*', destination: '/colorado/:path*', permanent: true },
+      { source: '/pr/:path*', destination: '/puerto-rico/:path*', permanent: true },
+      { source: '/wi/:path*', destination: '/wisconsin/:path*', permanent: true },
+      { source: '/md/:path*', destination: '/maryland/:path*', permanent: true },
+      { source: '/va/:path*', destination: '/virginia/:path*', permanent: true },
+
+      // === Renamed/old court slugs ===
+      { source: '/courts/cloud-9-park-padel', destination: '/courts/9co-padel-at-cloud-9-park', permanent: true },
+      { source: '/courts/cliffsliving', destination: '/courts/the-cliffs-at-mountain-park', permanent: true },
+
+      // === Dead pages → closest useful page ===
+      { source: '/contact', destination: '/list-your-court', permanent: true },
+      { source: '/hour', destination: '/', permanent: true },
     ];
   },
   async headers() {
