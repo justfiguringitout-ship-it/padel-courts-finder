@@ -8361,7 +8361,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships: Open $0/mo, Basic $45/mo (20% off courts), Premium $100/mo (40% off courts); racket rental $7 non-members",
     status: "open",
     verified: false,
-    ogImageUrl: "https://padel-square.com/wp-content/uploads/2025/03/padelsquare-sample10-1-e1745460648270.png",
+    ogImageUrl: "/images/courts/padel-square.jpg",
   },
   {
     id: 295,
