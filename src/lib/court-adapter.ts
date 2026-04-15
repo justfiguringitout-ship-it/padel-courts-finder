@@ -131,7 +131,7 @@ const coordinateMap: Record<number, { latitude: number; longitude: number }> = {
   61: { latitude: 25.9112275, longitude: -80.1535835 },
   62: { latitude: 25.898494, longitude: -80.2219904 },
   63: { latitude: 25.8310624, longitude: -80.33491769999999 },
-  64: { latitude: 39.0066993, longitude: -77.4291298 },
+  64: { latitude: 38.9860520, longitude: -77.4507727 },
   65: { latitude: 34.026452, longitude: -118.3652122 },
   66: { latitude: 42.5442913, longitude: -83.04102089999999 },
   67: { latitude: 34.0791098, longitude: -118.2687094 },
