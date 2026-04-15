@@ -870,8 +870,10 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
     email: court.email,
     website: court.website,
 
-    // Use specific coordinates if available, otherwise use city center
-    coordinates: coordinateMap[court.id] || getCityDefaultCoordinates(court.city, court.state),
+    // Use inline coordinates from data, then coordinateMap, then city center fallback
+    coordinates: court.coordinates
+      ? { latitude: court.coordinates.lat, longitude: court.coordinates.lng }
+      : coordinateMap[court.id] || getCityDefaultCoordinates(court.city, court.state),
 
     googleMapsUrl,
 

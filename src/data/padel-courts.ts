@@ -7092,7 +7092,7 @@ export const padelCourts: PadelCourt[] = [
       "app-controlled access/lighting",
     ],
     courtSurface: "professional-grade artificial turf",
-    coordinates: { lat: 39.838, lng: -98.5698 }, // coordinates estimated
+    coordinates: { lat: 40.0815058, lng: -86.1206771 },
     instagram: "@northpointpadel",
     facebook: "https://www.facebook.com/northpointpadelwestfield/",
     membersOnly: false,
