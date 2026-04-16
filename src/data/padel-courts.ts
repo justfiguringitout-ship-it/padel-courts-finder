@@ -8228,7 +8228,7 @@ export const padelCourts: PadelCourt[] = [
     lessonsAvailable: true,
     rentalAvailable: true,
     socialArea: true,
-    pricingText: "Memberships: Gold $1500/year or $125/month, Silver $360/year or $40/month (includes open play); Open play $8 non-members. Padel-specific unknown.",
+    pricingText: "$10/person/hour",
     status: "open",
     verified: false,
     googlePlacePhotoRef: "AU_ZVEEJb2n5q9ODIhNTUE1iaBdf4F1ZASsMwWIDxK6PDpRSOFujV46rT-uTqSGxJJ63nRr1I7nfEUVN1Jb7CuUJPFBg62eRgdWbZcvo3xk2B9LbHg-Vka5CiV8PEJNAggcr6SX6x_VtnMkewCD_PfVBYxJW6jHlyTNJoz6qIgfAXN9m32jY8XPf-wjMrMM5GCTwybQBuyr3Bqs2hz9xuADks_2QVgnevmnKn5O3VzH_X-owywMtHNN_s2vqcWVTh3S0Q6e-JYT4ud0AdSX4x_KHK1gHECN7BCQOO_bVt-MQ-sbFtA",
