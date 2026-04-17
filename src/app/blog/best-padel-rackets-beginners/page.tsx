@@ -46,7 +46,7 @@ export default function BeginnerRacketsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8]">
+    <div className="min-h-screen bg-stone-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
@@ -56,7 +56,7 @@ export default function BeginnerRacketsPage() {
       <div className="h-1 bg-amber-500" />
 
       {/* Dark Gradient Hero */}
-      <header className="bg-[#1a1a1a]">
+      <header className="bg-stone-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
           <div className="mb-4">
             <Link href="/blog" className="text-stone-400 hover:text-amber-400 text-sm">&larr; Back to Blog</Link>
@@ -98,7 +98,7 @@ export default function BeginnerRacketsPage() {
 
             {/* Quick Picks Box */}
             <div className="border-l-4 border-amber-500 bg-amber-50/80 rounded-r-lg p-5 sm:p-6 mt-8">
-              <h3 className="font-bold text-[#1a1a1a] mb-3 flex items-center gap-2">
+              <h3 className="font-bold text-foreground mb-3 flex items-center gap-2">
                 <span className="text-amber-500">&#9889;</span> Quick Picks
               </h3>
               <div className="space-y-2.5">
@@ -125,26 +125,26 @@ export default function BeginnerRacketsPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             {/* What Makes a Good Beginner Racket */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">What Makes a Good Beginner Racket?</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">What Makes a Good Beginner Racket?</h2>
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-1">Shape: Round</h3>
+                  <h3 className="font-semibold text-foreground mb-1">Shape: Round</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">Round rackets have the largest sweet spot centered in the middle of the face. This means off-center hits still feel decent — exactly what you want while your technique develops. Teardrop and diamond shapes offer more power but punish mishits.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-1">Weight: 340–365g</h3>
+                  <h3 className="font-semibold text-foreground mb-1">Weight: 340–365g</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">Lighter rackets are easier to maneuver and cause less fatigue during long sessions. As you develop technique, you&apos;ll naturally want more weight for power — but start light.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-1">Core: Soft EVA Foam</h3>
+                  <h3 className="font-semibold text-foreground mb-1">Core: Soft EVA Foam</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">Soft EVA absorbs vibration and provides a comfortable, forgiving feel. Hard cores deliver more power but transmit more shock to your arm. Save those for when your technique is solid.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-1">Surface: Fiberglass</h3>
+                  <h3 className="font-semibold text-foreground mb-1">Surface: Fiberglass</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">Fiberglass faces offer a softer, more flexible feel than carbon. They&apos;re more forgiving on your arm and easier to generate natural ball control. Carbon surfaces come later when you need raw power.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-1">Price: $60–130</h3>
+                  <h3 className="font-semibold text-foreground mb-1">Price: $60–130</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">Don&apos;t spend $300 on your first racket. You don&apos;t yet know if you prefer control, power, or spin. A $90–130 racket from a trusted brand will serve you well for your first 1–2 years.</p>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function BeginnerRacketsPage() {
 
             {/* Product Reviews */}
             <section>
-              <h2 id="top-5-beginner" className="text-2xl font-bold text-[#1a1a1a] mb-5">Top 5 Beginner Padel Rackets</h2>
+              <h2 id="top-5-beginner" className="text-2xl font-bold text-foreground mb-5">Top 5 Beginner Padel Rackets</h2>
 
               {/* 1. Babolat Contact */}
               <div id="babolat-contact" className="relative bg-white border-2 border-amber-400 rounded-xl p-6 md:p-8 mb-8 shadow-sm">
@@ -161,8 +161,8 @@ export default function BeginnerRacketsPage() {
                 </div>
 
                 <div className="flex items-start justify-between gap-4 mb-1 mt-2">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">Babolat Contact</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$89.95</span>
+                  <h3 className="text-xl font-bold text-foreground">Babolat Contact</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$89.95</span>
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Complete beginners and smaller players</p>
@@ -232,8 +232,8 @@ export default function BeginnerRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 — Best All-Around</span>
 
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">HEAD Extreme Evo</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$99.95</span>
+                  <h3 className="text-xl font-bold text-foreground">HEAD Extreme Evo</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$99.95</span>
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want arm protection</p>
@@ -303,8 +303,8 @@ export default function BeginnerRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#3 — Softest Feel</span>
 
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">Wilson Optix V1</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$109.00</span>
+                  <h3 className="text-xl font-bold text-foreground">Wilson Optix V1</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$109.00</span>
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Comfort-first players</p>
@@ -374,8 +374,8 @@ export default function BeginnerRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#4 — Official USPA Racket</span>
 
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">NOX Pro Cup USPA Edition</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$119.00</span>
+                  <h3 className="text-xl font-bold text-foreground">NOX Pro Cup USPA Edition</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$119.00</span>
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want tour pedigree</p>
@@ -445,8 +445,8 @@ export default function BeginnerRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#5 — Best to Grow With</span>
 
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">Adidas Adipower</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$129.00</span>
+                  <h3 className="text-xl font-bold text-foreground">Adidas Adipower</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$129.00</span>
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want customizable weight</p>
@@ -519,7 +519,7 @@ export default function BeginnerRacketsPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             {/* Comparison Summary */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Quick Comparison</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Quick Comparison</h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
@@ -562,11 +562,11 @@ export default function BeginnerRacketsPage() {
 
             {/* What Else You Need */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">What Else You Need</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">What Else You Need</h2>
               <p className="text-stone-600 leading-[1.75] mb-4">A racket alone won&apos;t get you on court. Here&apos;s the essential gear to round out your kit:</p>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-1">Padel Balls</h3>
+                  <h3 className="font-semibold text-foreground mb-1">Padel Balls</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Padel balls look like tennis balls but have slightly less pressure. Most clubs provide them, but having your own is handy for practice.</p>
                   <div className="flex flex-col gap-1.5">
                     <TrackedLink href="https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20" type="affiliate" productName="HEAD Padel Pro S" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">HEAD Padel Pro S — $13.91</TrackedLink>
@@ -574,7 +574,7 @@ export default function BeginnerRacketsPage() {
                   </div>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-1">Overgrips</h3>
+                  <h3 className="font-semibold text-foreground mb-1">Overgrips</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Replace your overgrip every few sessions to maintain tackiness and sweat absorption. Buy in bulk — you&apos;ll go through them.</p>
                   <div className="flex flex-col gap-1.5">
                     <TrackedLink href="https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20" type="affiliate" productName="Wilson Pro Overgrip 12-pack" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">Wilson Pro Overgrip 12-pack — $27</TrackedLink>
@@ -582,7 +582,7 @@ export default function BeginnerRacketsPage() {
                   </div>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5 sm:col-span-2">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-1">Court Shoes</h3>
+                  <h3 className="font-semibold text-foreground mb-1">Court Shoes</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Don&apos;t wear running shoes on court. Padel requires lateral movement — get shoes with herringbone soles designed for court sports.</p>
                   <div className="flex flex-col sm:flex-row gap-1.5 sm:gap-4">
                     <TrackedLink href="https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" type="affiliate" productName="HEAD Sprint Pro 4.0 Mens" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline text-sm">HEAD Sprint Pro 4.0 Men&apos;s — $129</TrackedLink>
@@ -594,26 +594,26 @@ export default function BeginnerRacketsPage() {
 
             {/* FAQ */}
             <section>
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Frequently Asked Questions</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-2">Can I use a tennis racket for padel?</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Can I use a tennis racket for padel?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">No — they&apos;re completely different. Padel rackets are solid (no strings) with a perforated face, shorter handle, and wrist strap. Using a tennis racket on a padel court would be like using a baseball bat for golf.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-2">How much should I spend on my first racket?</h3>
+                  <h3 className="font-semibold text-foreground mb-2">How much should I spend on my first racket?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">$60–130 is the sweet spot for beginners. Don&apos;t overspend until you know your play style — after 6–12 months you&apos;ll have a much better idea of what you want in an upgrade. Check out our <Link href="/blog/best-padel-rackets-intermediate" className="text-emerald-600 hover:underline">intermediate rackets guide</Link> when you&apos;re ready.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-2">Round, teardrop, or diamond shape?</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Round, teardrop, or diamond shape?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">Round. Always round for beginners. The sweet spot is centered and large, which means more forgiveness on off-center hits. Teardrop and diamond shapes shift the sweet spot higher and reward precise technique — something you&apos;ll develop over time.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-2">How long will a beginner racket last?</h3>
+                  <h3 className="font-semibold text-foreground mb-2">How long will a beginner racket last?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">1–2 years with regular play (2–3 times per week). The EVA foam core gradually loses its responsiveness before the frame shows wear. You&apos;ll likely want to upgrade before the racket actually breaks — that&apos;s when it&apos;s time for an <Link href="/blog/best-padel-rackets-intermediate" className="text-emerald-600 hover:underline">intermediate racket</Link>.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-2">Where can I play padel near me?</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Where can I play padel near me?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">Check our <Link href="/search" className="text-emerald-600 hover:underline">court finder</Link> — we list 350+ padel clubs across the US. If you&apos;re in South Florida, don&apos;t miss our <Link href="/blog/best-padel-clubs-miami" className="text-emerald-600 hover:underline">Miami padel guide</Link>.</p>
                 </div>
               </div>
@@ -623,7 +623,7 @@ export default function BeginnerRacketsPage() {
       </article>
 
       {/* Dark Keep Reading Section */}
-      <div className="bg-[#1a1a1a]">
+      <div className="bg-stone-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <h2 className="text-lg font-bold text-white mb-4">Keep Reading</h2>
           <div className="grid sm:grid-cols-2 gap-4">

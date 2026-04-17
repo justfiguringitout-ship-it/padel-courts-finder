@@ -142,7 +142,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
       )}
 
       {/* Breadcrumbs */}
-      <div className="border-b bg-muted/20">
+      <div className="border-b bg-muted/40">
         <div className="container mx-auto px-4 py-4">
           <Breadcrumb>
             <BreadcrumbList>

@@ -202,19 +202,19 @@ export default function ChicagoBestClubsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600">3</div>
-              <div className="text-sm text-gray-600">Clubs</div>
+              <div className="text-sm text-stone-600">Clubs</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">15</div>
-              <div className="text-sm text-gray-600">Indoor Courts</div>
+              <div className="text-sm text-stone-600">Indoor Courts</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">$47-120</div>
-              <div className="text-sm text-gray-600">Per Hour Range</div>
+              <div className="text-sm text-stone-600">Per Hour Range</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">100%</div>
-              <div className="text-sm text-gray-600">Indoor Facilities</div>
+              <div className="text-sm text-stone-600">Indoor Facilities</div>
             </div>
           </div>
         </div>
@@ -222,22 +222,22 @@ export default function ChicagoBestClubsPage() {
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-stone-900 mb-4">
             Chicago&apos;s Padel Boom: From 1 Club to 3 in 2026
           </h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             Chicago&apos;s padel scene has tripled in size. What started with <Link href="/courts/cube-padel-chicago" className="text-blue-600 hover:underline">Cube Padel</Link> as the city&apos;s sole option has expanded to 3 dedicated indoor clubs with 15 courts, all designed to keep Chicagoans playing year-round regardless of the brutal Midwest winters. Every facility is fully indoor and climate-controlled.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             The newest additions are impressive. <Link href="/courts/union-padel-club" className="text-blue-600 hover:underline">Union Padel Club</Link> in the West Loop pairs 5 world-class courts with lifestyle amenities like sauna, cold plunge, and coworking space. <Link href="/courts/proximo-padel" className="text-blue-600 hover:underline">Proximo Padel</Link> in Logan Square features 4 panoramic courts under 40-foot ceilings with competition lighting.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-stone-700 text-lg leading-relaxed">
             With all three clubs earning 5.0 Google ratings and offering distinct neighborhoods, Chicago players now have real choice. Browse all courts on our <Link href="/illinois/chicago" className="text-blue-600 hover:underline">Chicago courts page</Link> or explore the full <Link href="/illinois" className="text-blue-600 hover:underline">Illinois state directory</Link>.
           </p>
         </div>
 
         <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Rankings</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/cube-padel-chicago" className="text-blue-600 hover:underline">Cube Padel Chicago</Link> (6 courts, bar & lounge)</p>
             <p><strong>Best Lifestyle:</strong> <Link href="/courts/union-padel-club" className="text-blue-600 hover:underline">Union Padel Club</Link> (sauna, cold plunge, coworking)</p>
@@ -276,22 +276,22 @@ export default function ChicagoBestClubsPage() {
 
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-2 text-gray-700">
+                  <div className="flex items-start gap-2 text-stone-700">
                     <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-700">
+                  <div className="flex items-center gap-2 text-stone-700">
                     <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <a href={`tel:${club.phone}`} className="hover:text-blue-600">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
                         {club.website}
@@ -299,28 +299,28 @@ export default function ChicagoBestClubsPage() {
                     </div>
                   )}
                   {club.email && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <a href={`mailto:${club.email}`} className="hover:text-blue-600">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Clock className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
                 </div>
 
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-stone-700 text-lg leading-relaxed mb-6">
                   {club.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">What Makes It Special:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">What Makes It Special:</h4>
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-start gap-2 text-gray-700">
+                      <li key={index} className="flex items-start gap-2 text-stone-700">
                         <span className="text-blue-600 font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
@@ -329,7 +329,7 @@ export default function ChicagoBestClubsPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Programs & Offerings:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
                       <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
@@ -340,7 +340,7 @@ export default function ChicagoBestClubsPage() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Best For:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
                       <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
@@ -376,27 +376,27 @@ export default function ChicagoBestClubsPage() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">More Padel Guides</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-6">More Padel Guides</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/best-padel-clubs-denver" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Denver</h4>
-              <p className="text-sm text-gray-600">Rocky Mountain padel scene</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Denver</h4>
+              <p className="text-sm text-stone-600">Rocky Mountain padel scene</p>
             </Link>
             <Link href="/blog/best-padel-clubs-nyc" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in NYC</h4>
-              <p className="text-sm text-gray-600">7 clubs across Brooklyn & Manhattan</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in NYC</h4>
+              <p className="text-sm text-stone-600">7 clubs across Brooklyn & Manhattan</p>
             </Link>
             <Link href="/blog/best-padel-clubs-dallas" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Dallas</h4>
-              <p className="text-sm text-gray-600">Texas padel with premium facilities</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Dallas</h4>
+              <p className="text-sm text-stone-600">Texas padel with premium facilities</p>
             </Link>
             <Link href="/blog/best-padel-rackets-beginners" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Beginner Rackets (2026)</h4>
-              <p className="text-sm text-gray-600">Top 5 picks from $90–$130 →</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Beginner Rackets (2026)</h4>
+              <p className="text-sm text-stone-600">Top 5 picks from $90–$130 →</p>
             </Link>
             <Link href="/rules" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Padel Rules Explained</h4>
-              <p className="text-sm text-gray-600">Complete guide to scoring &amp; gameplay</p>
+              <h4 className="font-bold text-stone-900 mb-2">Padel Rules Explained</h4>
+              <p className="text-sm text-stone-600">Complete guide to scoring &amp; gameplay</p>
             </Link>
           </div>
         </div>

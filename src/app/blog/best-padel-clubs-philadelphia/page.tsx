@@ -259,19 +259,19 @@ export default function PhiladelphiaBestClubsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600">5</div>
-              <div className="text-sm text-gray-600">Open Clubs</div>
+              <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">17</div>
-              <div className="text-sm text-gray-600">Courts</div>
+              <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">$20-60</div>
-              <div className="text-sm text-gray-600">Per Hour Range</div>
+              <div className="text-sm text-stone-600">Per Hour Range</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">7</div>
-              <div className="text-sm text-gray-600">Cities</div>
+              <div className="text-sm text-stone-600">Cities</div>
             </div>
           </div>
         </div>
@@ -279,19 +279,19 @@ export default function PhiladelphiaBestClubsPage() {
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-stone-900 mb-4">
             Pennsylvania&apos;s Padel Scene Arrives
           </h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             Pennsylvania has established a solid padel foundation with 5 open clubs and 17 courts stretching from Philadelphia to Pittsburgh. The Philly metro area leads with <Link href="/courts/ballers-philly" className="text-blue-600 hover:underline">Ballers</Link> in a historic Battery building, <Link href="/courts/padelphia" className="text-blue-600 hover:underline">PADELphia</Link> with AI training tech, and <Link href="/courts/viva-padel-flourtown" className="text-blue-600 hover:underline">VIVA Padel</Link> offering 5 courts -- the most at any PA location.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-stone-700 text-lg leading-relaxed">
             On the western side, <Link href="/courts/matts-pickle-and-padel" className="text-blue-600 hover:underline">Matt&apos;s Pickle and Padel</Link> in Pittsburgh has earned a perfect 4.9 Google rating. And with <Link href="/courts/oh-padel" className="text-blue-600 hover:underline">OH! Padel</Link> coming soon to the Main Line in Malvern, PA&apos;s padel scene is only growing. See all courts on our <Link href="/pennsylvania" className="text-blue-600 hover:underline">Pennsylvania page</Link>.
           </p>
         </div>
 
         <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Rankings</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/ballers-philly" className="text-blue-600 hover:underline">Ballers Philly</Link> (historic venue, full social club)</p>
             <p><strong>Best Tech:</strong> <Link href="/courts/padelphia" className="text-blue-600 hover:underline">PADELphia</Link> (AI training, court cameras)</p>
@@ -330,29 +330,29 @@ export default function PhiladelphiaBestClubsPage() {
 
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-2 text-gray-700">
+                  <div className="flex items-start gap-2 text-stone-700">
                     <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-700">
+                  <div className="flex items-center gap-2 text-stone-700">
                     <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.website && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">{club.website}</a>
                     </div>
                   )}
                 </div>
 
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">{club.description}</p>
+                <p className="text-stone-700 text-lg leading-relaxed mb-6">{club.description}</p>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">What Makes It Special:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">What Makes It Special:</h4>
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-start gap-2 text-gray-700">
+                      <li key={index} className="flex items-start gap-2 text-stone-700">
                         <span className="text-blue-600 font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
@@ -361,7 +361,7 @@ export default function PhiladelphiaBestClubsPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Programs & Offerings:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
                       <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">{program}</span>
@@ -370,7 +370,7 @@ export default function PhiladelphiaBestClubsPage() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Best For:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
                       <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">✓ {item}</span>
@@ -388,10 +388,10 @@ export default function PhiladelphiaBestClubsPage() {
           <div className="flex items-start gap-4">
             <div className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">Coming Soon</div>
             <div>
-              <h4 className="font-bold text-gray-900 text-lg">
+              <h4 className="font-bold text-stone-900 text-lg">
                 <Link href="/courts/oh-padel" className="text-amber-700 hover:underline">OH! Padel</Link> - Malvern, PA
               </h4>
-              <p className="text-gray-700 mt-1">The first elite indoor padel club on the Main Line. Features fitness and training spaces plus locker rooms. Located in Malvern, serving the affluent western suburbs of Philadelphia.</p>
+              <p className="text-stone-700 mt-1">The first elite indoor padel club on the Main Line. Features fitness and training spaces plus locker rooms. Located in Malvern, serving the affluent western suburbs of Philadelphia.</p>
             </div>
           </div>
         </div>
@@ -410,27 +410,27 @@ export default function PhiladelphiaBestClubsPage() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">More Northeast Padel Guides</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-6">More Northeast Padel Guides</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/best-padel-clubs-nyc" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in NYC</h4>
-              <p className="text-sm text-gray-600">Brooklyn, Manhattan & beyond</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in NYC</h4>
+              <p className="text-sm text-stone-600">Brooklyn, Manhattan & beyond</p>
             </Link>
             <Link href="/blog/best-padel-clubs-new-jersey" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in New Jersey</h4>
-              <p className="text-sm text-gray-600">8 clubs across the Garden State</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in New Jersey</h4>
+              <p className="text-sm text-stone-600">8 clubs across the Garden State</p>
             </Link>
             <Link href="/blog/best-padel-clubs-miami" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Miami</h4>
-              <p className="text-sm text-gray-600">America&apos;s padel capital</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Miami</h4>
+              <p className="text-sm text-stone-600">America&apos;s padel capital</p>
             </Link>
             <Link href="/blog/best-padel-rackets-beginners" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Beginner Rackets (2026)</h4>
-              <p className="text-sm text-gray-600">Top 5 picks from $90–$130 →</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Beginner Rackets (2026)</h4>
+              <p className="text-sm text-stone-600">Top 5 picks from $90–$130 →</p>
             </Link>
             <Link href="/rules" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Padel Rules Explained</h4>
-              <p className="text-sm text-gray-600">Complete guide to scoring &amp; gameplay</p>
+              <h4 className="font-bold text-stone-900 mb-2">Padel Rules Explained</h4>
+              <p className="text-sm text-stone-600">Complete guide to scoring &amp; gameplay</p>
             </Link>
           </div>
         </div>

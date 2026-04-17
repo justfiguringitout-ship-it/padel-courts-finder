@@ -183,7 +183,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Courts */}
-      <section className="container mx-auto px-4 py-16 bg-muted/20">
+      <section className="container mx-auto px-4 py-16 bg-muted/40">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Featured Padel Clubs</h2>
           <p className="text-muted-foreground">
@@ -302,7 +302,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Blog Posts */}
-      <section className="container mx-auto px-4 py-16 bg-muted/20">
+      <section className="container mx-auto px-4 py-16 bg-muted/40">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Expert Club Guides & Reviews</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">

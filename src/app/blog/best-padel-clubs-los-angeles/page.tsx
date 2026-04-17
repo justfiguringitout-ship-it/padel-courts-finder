@@ -267,19 +267,19 @@ export default function LosAngelesBestClubsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-green-600">5</div>
-              <div className="text-sm text-gray-600">Clubs</div>
+              <div className="text-sm text-stone-600">Clubs</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-green-600">17+</div>
-              <div className="text-sm text-gray-600">Courts</div>
+              <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-green-600">$25-60</div>
-              <div className="text-sm text-gray-600">Per Hour Range</div>
+              <div className="text-sm text-stone-600">Per Hour Range</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-green-600">300+</div>
-              <div className="text-sm text-gray-600">Sunny Days/Year</div>
+              <div className="text-sm text-stone-600">Sunny Days/Year</div>
             </div>
           </div>
         </div>
@@ -287,22 +287,22 @@ export default function LosAngelesBestClubsPage() {
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-stone-900 mb-4">
             LA&apos;s Padel Scene in 2026: From Rooftops to Historic Clubhouses
           </h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             Los Angeles has cemented its position as the West Coast&apos;s padel capital in 2026. With 5 clubs and over 17 courts, the city offers everything from rooftop courts atop Century City to LA&apos;s original outdoor club on Sunset Boulevard. The biggest addition is <Link href="/courts/los-angeles-padel-club" className="text-green-600 hover:underline">Los Angeles Padel Club</Link>, which leads the pack with 7 outdoor courts in a historic clubhouse setting.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             The <Link href="/courts/padel-up-culver-city" className="text-green-600 hover:underline">Padel Up</Link> brand has two LA locations covering both indoor (Culver City) and outdoor (Century City) play, while <Link href="/courts/the-padel-courts" className="text-green-600 hover:underline">The Padel Courts</Link> on Sunset Blvd continues to build community with its inclusive, welcoming atmosphere and a perfect 5.0 Google rating.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-stone-700 text-lg leading-relaxed">
             With 300+ days of sunshine and a massive international population, LA is primed for continued padel growth. Browse all courts on our <Link href="/california/los-angeles" className="text-green-600 hover:underline">Los Angeles courts page</Link> or explore the full <Link href="/california" className="text-green-600 hover:underline">California state directory</Link>.
           </p>
         </div>
 
         <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Rankings</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/los-angeles-padel-club" className="text-green-600 hover:underline">LA Padel Club</Link> (7 courts, historic clubhouse)</p>
             <p><strong>Best Indoor:</strong> <Link href="/courts/padel-up-culver-city" className="text-green-600 hover:underline">Padel Up Culver City</Link> (3 courts, sauna & cold plunge)</p>
@@ -342,22 +342,22 @@ export default function LosAngelesBestClubsPage() {
 
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-2 text-gray-700">
+                  <div className="flex items-start gap-2 text-stone-700">
                     <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-700">
+                  <div className="flex items-center gap-2 text-stone-700">
                     <Users className="w-5 h-5 text-green-600 flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Phone className="w-5 h-5 text-green-600 flex-shrink-0" />
                       <a href={`tel:${club.phone}`} className="hover:text-green-600">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-green-600 flex-shrink-0" />
                       <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-green-600">
                         {club.website}
@@ -365,28 +365,28 @@ export default function LosAngelesBestClubsPage() {
                     </div>
                   )}
                   {club.email && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Mail className="w-5 h-5 text-green-600 flex-shrink-0" />
                       <a href={`mailto:${club.email}`} className="hover:text-green-600">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Clock className="w-5 h-5 text-green-600 flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
                 </div>
 
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-stone-700 text-lg leading-relaxed mb-6">
                   {club.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">What Makes It Special:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">What Makes It Special:</h4>
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-start gap-2 text-gray-700">
+                      <li key={index} className="flex items-start gap-2 text-stone-700">
                         <span className="text-green-600 font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
@@ -395,7 +395,7 @@ export default function LosAngelesBestClubsPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Programs & Offerings:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
                       <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
@@ -406,7 +406,7 @@ export default function LosAngelesBestClubsPage() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Best For:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
                       <span key={index} className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">
@@ -442,27 +442,27 @@ export default function LosAngelesBestClubsPage() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">More Padel Guides</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-6">More Padel Guides</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/best-padel-clubs-san-francisco" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in San Francisco</h4>
-              <p className="text-sm text-gray-600">Bay Area padel with stunning views</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in San Francisco</h4>
+              <p className="text-sm text-stone-600">Bay Area padel with stunning views</p>
             </Link>
             <Link href="/blog/best-padel-clubs-san-diego" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in San Diego</h4>
-              <p className="text-sm text-gray-600">Year-round padel in perfect weather</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in San Diego</h4>
+              <p className="text-sm text-stone-600">Year-round padel in perfect weather</p>
             </Link>
             <Link href="/blog/best-padel-clubs-phoenix" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Phoenix</h4>
-              <p className="text-sm text-gray-600">Desert padel with world-class facilities</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Phoenix</h4>
+              <p className="text-sm text-stone-600">Desert padel with world-class facilities</p>
             </Link>
             <Link href="/blog/best-padel-rackets-beginners" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Beginner Rackets (2026)</h4>
-              <p className="text-sm text-gray-600">Top 5 picks from $90–$130 →</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Beginner Rackets (2026)</h4>
+              <p className="text-sm text-stone-600">Top 5 picks from $90–$130 →</p>
             </Link>
             <Link href="/rules" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Padel Rules Explained</h4>
-              <p className="text-sm text-gray-600">Complete guide to scoring &amp; gameplay</p>
+              <h4 className="font-bold text-stone-900 mb-2">Padel Rules Explained</h4>
+              <p className="text-sm text-stone-600">Complete guide to scoring &amp; gameplay</p>
             </Link>
           </div>
         </div>

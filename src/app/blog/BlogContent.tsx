@@ -57,7 +57,7 @@ function FeaturedCard({ post }: { post: BlogPostWithImage }) {
             {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
           </span>
         </div>
-        <h3 className="text-lg font-bold text-[#1a1a1a] mb-1.5 group-hover:text-emerald-700 transition-colors">
+        <h3 className="text-lg font-bold text-foreground mb-1.5 group-hover:text-emerald-700 transition-colors">
           {post.title}
         </h3>
         <p className="text-stone-500 text-sm leading-relaxed line-clamp-3 mb-3">
@@ -108,7 +108,7 @@ function PostCard({ post }: { post: BlogPostWithImage }) {
           )}
           <span className="text-xs text-stone-400">{post.readTime}</span>
         </div>
-        <h3 className={`font-bold text-[#1a1a1a] mb-1.5 group-hover:text-emerald-700 transition-colors ${isEquipment ? 'text-base' : 'text-base'}`}>
+        <h3 className={`font-bold text-foreground mb-1.5 group-hover:text-emerald-700 transition-colors ${isEquipment ? 'text-base' : 'text-base'}`}>
           {post.title}
         </h3>
         <p className="text-stone-500 text-sm leading-relaxed line-clamp-2">
@@ -149,7 +149,7 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
                   onClick={() => setActiveFilter(category.id)}
                   className={`relative py-3.5 text-sm transition-colors ${
                     isActive
-                      ? 'font-semibold text-[#1a1a1a]'
+                      ? 'font-semibold text-foreground'
                       : 'text-stone-400 hover:text-stone-600'
                   }`}
                 >
@@ -195,7 +195,7 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
         )}
 
         {/* Newsletter CTA */}
-        <div className="bg-[#1a1a1a] text-white rounded-xl p-8 text-center mt-16">
+        <div className="bg-stone-900 text-white rounded-xl p-8 text-center mt-16">
           <h2 className="text-2xl font-bold mb-3">Stay in the loop</h2>
           <p className="text-stone-400 mb-6 max-w-lg mx-auto">
             Club reviews, gear guides, and padel news — delivered when it matters.
@@ -218,7 +218,7 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
             href="/search"
             className="group border border-stone-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-sm transition-all"
           >
-            <h3 className="font-bold text-[#1a1a1a] mb-1 group-hover:text-emerald-700 transition-colors">
+            <h3 className="font-bold text-foreground mb-1 group-hover:text-emerald-700 transition-colors">
               Find Courts
             </h3>
             <p className="text-stone-500 text-sm">
@@ -229,7 +229,7 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
             href="/get-started"
             className="group border border-stone-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-sm transition-all"
           >
-            <h3 className="font-bold text-[#1a1a1a] mb-1 group-hover:text-emerald-700 transition-colors">
+            <h3 className="font-bold text-foreground mb-1 group-hover:text-emerald-700 transition-colors">
               Get Started
             </h3>
             <p className="text-stone-500 text-sm">
@@ -240,7 +240,7 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
             href="/get-started/glossary"
             className="group border border-stone-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-sm transition-all"
           >
-            <h3 className="font-bold text-[#1a1a1a] mb-1 group-hover:text-emerald-700 transition-colors">
+            <h3 className="font-bold text-foreground mb-1 group-hover:text-emerald-700 transition-colors">
               Glossary
             </h3>
             <p className="text-stone-500 text-sm">

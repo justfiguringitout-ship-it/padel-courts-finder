@@ -331,19 +331,19 @@ export default function NYCBestClubsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600">7</div>
-              <div className="text-sm text-gray-600">Clubs</div>
+              <div className="text-sm text-stone-600">Clubs</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">25</div>
-              <div className="text-sm text-gray-600">Courts</div>
+              <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">$25-225</div>
-              <div className="text-sm text-gray-600">Per Hour Range</div>
+              <div className="text-sm text-stone-600">Per Hour Range</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">1 More</div>
-              <div className="text-sm text-gray-600">Coming Soon</div>
+              <div className="text-sm text-stone-600">Coming Soon</div>
             </div>
           </div>
         </div>
@@ -351,22 +351,22 @@ export default function NYCBestClubsPage() {
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-stone-900 mb-4">
             NYC&apos;s Padel Scene Explodes in 2026
           </h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             New York City&apos;s padel revolution is in full swing. From Brooklyn&apos;s waterfront to Manhattan&apos;s Hudson Yards, the city now boasts 7 open clubs with 25 courts and another facility on the way. Led by <Link href="/courts/padel-haus-dumbo" className="text-blue-600 hover:underline">Padel Haus Dumbo</Link> and the massive 6-court <Link href="/courts/padel-greenpoint" className="text-blue-600 hover:underline">Padel& Greenpoint</Link>, NYC has become one of America&apos;s most exciting padel markets.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             Brooklyn dominates the scene with five clubs, while Manhattan contributes three unique venues: <Link href="/courts/mink-padel" className="text-blue-600 hover:underline">Mink Padel</Link>&apos;s historic Harlem courtyard, <Link href="/courts/reserve-padel-hudson-yards" className="text-blue-600 hover:underline">Reserve Padel</Link>&apos;s bubble-enclosed Hudson Yards courts, and the ultra-exclusive <Link href="/courts/elite-sports-club-at-111-west-57th-street" className="text-blue-600 hover:underline">Elite Sports Club</Link> at 111 West 57th Street.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-stone-700 text-lg leading-relaxed">
             Whether you&apos;re a Brooklyn local, a Manhattan commuter, or visiting the city, this guide covers every padel option in the five boroughs. Browse all courts on our <Link href="/new-york/new-york" className="text-blue-600 hover:underline">New York City courts page</Link> or explore the full <Link href="/new-york" className="text-blue-600 hover:underline">New York state directory</Link>.
           </p>
         </div>
 
         <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Rankings</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/padel-haus-dumbo" className="text-blue-600 hover:underline">Padel Haus Dumbo</Link> (premium Brooklyn waterfront)</p>
             <p><strong>Most Courts:</strong> <Link href="/courts/padel-greenpoint" className="text-blue-600 hover:underline">Padel& Greenpoint</Link> (6 courts, 36-ft ceilings)</p>
@@ -406,22 +406,22 @@ export default function NYCBestClubsPage() {
 
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-2 text-gray-700">
+                  <div className="flex items-start gap-2 text-stone-700">
                     <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-700">
+                  <div className="flex items-center gap-2 text-stone-700">
                     <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <a href={`tel:${club.phone}`} className="hover:text-blue-600">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
                         {club.website}
@@ -429,28 +429,28 @@ export default function NYCBestClubsPage() {
                     </div>
                   )}
                   {club.email && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <a href={`mailto:${club.email}`} className="hover:text-blue-600">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Clock className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
                 </div>
 
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-stone-700 text-lg leading-relaxed mb-6">
                   {club.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">What Makes It Special:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">What Makes It Special:</h4>
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-start gap-2 text-gray-700">
+                      <li key={index} className="flex items-start gap-2 text-stone-700">
                         <span className="text-blue-600 font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
@@ -459,7 +459,7 @@ export default function NYCBestClubsPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Programs & Offerings:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
                       <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
@@ -470,7 +470,7 @@ export default function NYCBestClubsPage() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Best For:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
                       <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
@@ -485,13 +485,13 @@ export default function NYCBestClubsPage() {
         </div>
 
         <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6 mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Coming Soon to NYC</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-4">Coming Soon to NYC</h3>
           <div className="space-y-4">
             <div className="flex items-start gap-3">
               <span className="px-2 py-1 bg-amber-200 text-amber-800 rounded text-xs font-semibold whitespace-nowrap">COMING SOON</span>
               <div>
-                <h4 className="font-bold text-gray-900">Padel Haus Greenpoint</h4>
-                <p className="text-gray-700">5 indoor courts along the Brooklyn waterfront near McCarren Park. Features state-of-the-art courts, spa-like locker rooms, Juice Haus bar, lounge and co-working space. Court rates expected $30-70/hr.</p>
+                <h4 className="font-bold text-stone-900">Padel Haus Greenpoint</h4>
+                <p className="text-stone-700">5 indoor courts along the Brooklyn waterfront near McCarren Park. Features state-of-the-art courts, spa-like locker rooms, Juice Haus bar, lounge and co-working space. Court rates expected $30-70/hr.</p>
               </div>
             </div>
           </div>
@@ -519,27 +519,27 @@ export default function NYCBestClubsPage() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">More Padel Guides</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-6">More Padel Guides</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/best-padel-clubs-new-jersey" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in New Jersey</h4>
-              <p className="text-sm text-gray-600">NYC&apos;s neighbor with growing padel options</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in New Jersey</h4>
+              <p className="text-sm text-stone-600">NYC&apos;s neighbor with growing padel options</p>
             </Link>
             <Link href="/blog/best-padel-clubs-philadelphia" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Philadelphia</h4>
-              <p className="text-sm text-gray-600">Philly&apos;s emerging padel scene</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Philadelphia</h4>
+              <p className="text-sm text-stone-600">Philly&apos;s emerging padel scene</p>
             </Link>
             <Link href="/blog/best-padel-clubs-chicago" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Chicago</h4>
-              <p className="text-sm text-gray-600">Windy City&apos;s indoor padel boom</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Chicago</h4>
+              <p className="text-sm text-stone-600">Windy City&apos;s indoor padel boom</p>
             </Link>
             <Link href="/blog/best-padel-rackets-beginners" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Beginner Rackets (2026)</h4>
-              <p className="text-sm text-gray-600">Top 5 picks from $90–$130 →</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Beginner Rackets (2026)</h4>
+              <p className="text-sm text-stone-600">Top 5 picks from $90–$130 →</p>
             </Link>
             <Link href="/rules" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Padel Rules Explained</h4>
-              <p className="text-sm text-gray-600">Complete guide to scoring &amp; gameplay</p>
+              <h4 className="font-bold text-stone-900 mb-2">Padel Rules Explained</h4>
+              <p className="text-sm text-stone-600">Complete guide to scoring &amp; gameplay</p>
             </Link>
           </div>
         </div>

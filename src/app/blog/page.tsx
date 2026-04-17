@@ -309,11 +309,11 @@ export default function BlogPage() {
   }));
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8]">
+    <div className="min-h-screen bg-stone-50">
       {/* Editorial Header */}
       <header className="bg-white border-b border-stone-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] tracking-tight mb-3">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-3">
             The Padel Blog
           </h1>
           <p className="text-lg text-stone-500 max-w-2xl">

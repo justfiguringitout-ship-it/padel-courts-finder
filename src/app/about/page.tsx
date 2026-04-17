@@ -47,7 +47,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Breadcrumbs */}
-      <div className="border-b bg-muted/20">
+      <div className="border-b bg-muted/40">
         <div className="container mx-auto px-4 py-4">
           <Breadcrumb>
             <BreadcrumbList>
@@ -86,7 +86,7 @@ export default function AboutPage() {
           prose-h1:text-4xl prose-h1:mb-6 prose-h1:mt-12
           prose-h2:text-3xl prose-h2:mb-4 prose-h2:mt-12 prose-h2:border-b prose-h2:pb-2
           prose-h3:text-2xl prose-h3:mb-3 prose-h3:mt-8
-          prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
+          prose-p:text-stone-700 dark:prose-p:text-stone-300 prose-p:leading-relaxed
           prose-a:text-primary prose-a:no-underline hover:prose-a:underline
           prose-strong:text-primary prose-strong:font-semibold
           prose-ul:my-6 prose-li:my-2 prose-li:marker:text-primary

@@ -84,7 +84,7 @@ export default function PadelVsPickleballPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8]">
+    <div className="min-h-screen bg-stone-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
@@ -98,7 +98,7 @@ export default function PadelVsPickleballPage() {
       <div className="h-1 bg-emerald-600" />
 
       {/* Dark Hero */}
-      <header className="bg-[#1a1a1a]">
+      <header className="bg-stone-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
           <div className="mb-4">
             <Link href="/blog" className="text-stone-400 hover:text-emerald-400 text-sm">&larr; Back to Blog</Link>
@@ -132,7 +132,7 @@ export default function PadelVsPickleballPage() {
 
             {/* Quick Comparison Table */}
             <section>
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Quick Comparison</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Quick Comparison</h2>
               <div className="overflow-x-auto -mx-4 sm:mx-0">
                 <table className="w-full text-sm min-w-[600px]">
                   <thead>
@@ -220,7 +220,7 @@ export default function PadelVsPickleballPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             {/* The Courts */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">The Courts</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">The Courts</h2>
               <div className="bg-white border border-stone-200 rounded-xl p-6 md:p-8">
                 <p className="text-stone-600 leading-[1.75] mb-4">
                   The biggest visual difference. Padel courts are enclosed in glass and metal mesh &mdash; the walls are <strong>in play</strong>, meaning you can hit the ball off them like squash. This creates longer rallies and angles that don&apos;t exist in any other racket sport. Courts cost $40,000&ndash;100,000+ to build, which is why padel requires dedicated facilities.
@@ -236,17 +236,17 @@ export default function PadelVsPickleballPage() {
 
             {/* Equipment */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Equipment</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Equipment</h2>
               <div className="grid sm:grid-cols-2 gap-4 mb-5">
                 <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-[#1a1a1a] mb-2">Padel Racket</h3>
+                  <h3 className="font-bold text-foreground mb-2">Padel Racket</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Solid with holes, made of carbon fiber or fiberglass, weighs 340&ndash;390g. Different shapes for different styles &mdash; round for control, diamond for power, teardrop for balance.</p>
-                  <p className="text-sm text-stone-500">Starter cost: <strong className="text-[#1a1a1a]">$80&ndash;130</strong></p>
+                  <p className="text-sm text-stone-500">Starter cost: <strong className="text-foreground">$80&ndash;130</strong></p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-[#1a1a1a] mb-2">Pickleball Paddle</h3>
+                  <h3 className="font-bold text-foreground mb-2">Pickleball Paddle</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Flat and lighter, made of wood, graphite, or composite. Simpler design with less variation in shape &mdash; most paddles look similar.</p>
-                  <p className="text-sm text-stone-500">Starter cost: <strong className="text-[#1a1a1a]">$30&ndash;80</strong></p>
+                  <p className="text-sm text-stone-500">Starter cost: <strong className="text-foreground">$30&ndash;80</strong></p>
                 </div>
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-6">
@@ -261,22 +261,22 @@ export default function PadelVsPickleballPage() {
 
             {/* Rules & Gameplay */}
             <section>
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Rules &amp; Gameplay</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Rules &amp; Gameplay</h2>
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-[#1a1a1a] mb-2">Padel</h3>
+                  <h3 className="font-bold text-foreground mb-2">Padel</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">
                     Always doubles. Walls are in play &mdash; the ball can bounce off the glass after hitting your side of the court, and you play it off the wall. Scoring is tennis-style: 15-30-40-game, best of 3 sets. The serve must be underhand, bounce in the diagonal service box, and can then hit the back wall. The walls create longer, more dynamic rallies with unique angles.
                   </p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-[#1a1a1a] mb-2">Pickleball</h3>
+                  <h3 className="font-bold text-foreground mb-2">Pickleball</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">
                     Singles or doubles. The defining feature is the &ldquo;kitchen&rdquo; &mdash; a 7-foot non-volley zone at the net. You cannot hit the ball out of the air while standing in the kitchen, which forces a soft &ldquo;dinking&rdquo; game near the net. Scoring goes to 11 (win by 2), and only the serving team can score points. The serve is underhand and must bounce before the return.
                   </p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-[#1a1a1a] mb-2">Common Ground</h3>
+                  <h3 className="font-bold text-foreground mb-2">Common Ground</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">
                     Both require an underhand serve. Both have a &ldquo;two-bounce rule&rdquo; &mdash; the serve must bounce, and the return must bounce, before volleys are allowed. Both are played with a net. And both are <em>dramatically</em> more social than most individual sports &mdash; you&apos;re always playing with and against other people on a small court.
                   </p>
@@ -294,7 +294,7 @@ export default function PadelVsPickleballPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             {/* How Hard Is It to Learn? */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">How Hard Is It to Learn?</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">How Hard Is It to Learn?</h2>
               <p className="text-stone-600 leading-[1.75] mb-4">
                 Both are easier than tennis. Pickleball has the lowest barrier of any racket sport &mdash; most people rally within minutes. The smaller court, slower ball, and simple scoring make it incredibly accessible, especially for older players or those returning to sport after a break.
               </p>
@@ -310,15 +310,15 @@ export default function PadelVsPickleballPage() {
 
             {/* Fitness & Workout */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Fitness &amp; Workout</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Fitness &amp; Workout</h2>
               <div className="grid sm:grid-cols-2 gap-4 mb-5">
                 <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-[#1a1a1a] mb-1">Padel</h3>
+                  <h3 className="font-bold text-foreground mb-1">Padel</h3>
                   <p className="text-3xl font-bold text-emerald-600 mb-2">400&ndash;600 cal/hr</p>
                   <p className="text-stone-600 text-sm leading-relaxed">Larger court means more running, more lateral movement, more explosive bursts. A solid cardio and agility workout.</p>
                 </div>
                 <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-[#1a1a1a] mb-1">Pickleball</h3>
+                  <h3 className="font-bold text-foreground mb-1">Pickleball</h3>
                   <p className="text-3xl font-bold text-amber-500 mb-2">250&ndash;400 cal/hr</p>
                   <p className="text-stone-600 text-sm leading-relaxed">Lower impact, less running, less strain on joints. Great for staying active without high physical demands.</p>
                 </div>
@@ -330,7 +330,7 @@ export default function PadelVsPickleballPage() {
 
             {/* Cost to Play */}
             <section>
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Cost to Play</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Cost to Play</h2>
               <p className="text-stone-600 leading-[1.75] mb-4">
                 This is where pickleball wins decisively. Public pickleball courts are free in many US cities &mdash; parks departments have been adding courts at an incredible pace. A starter paddle costs $30&ndash;50. Total cost to start: <strong>under $50</strong>.
               </p>
@@ -352,7 +352,7 @@ export default function PadelVsPickleballPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             {/* Which Should You Play? */}
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Which Should You Play?</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Which Should You Play?</h2>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-5">
                 <div className="bg-white border-2 border-emerald-200 rounded-xl p-6">
@@ -378,7 +378,7 @@ export default function PadelVsPickleballPage() {
               </div>
 
               <div className="bg-white border border-stone-200 rounded-xl p-6">
-                <h3 className="font-bold text-[#1a1a1a] mb-2">Choose Both If You&hellip;</h3>
+                <h3 className="font-bold text-foreground mb-2">Choose Both If You&hellip;</h3>
                 <p className="text-stone-600 text-sm leading-relaxed">
                   Live somewhere with both options. Many players enjoy both for different reasons &mdash; pickleball for the casual accessibility and large community, padel for the athletic intensity and unique wall gameplay. They train different skills and scratch different itches. There&apos;s no rule that says you have to pick just one.
                 </p>
@@ -387,22 +387,22 @@ export default function PadelVsPickleballPage() {
 
             {/* FAQ */}
             <section>
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Frequently Asked Questions</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-2">Is padel the same as pickleball?</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Is padel the same as pickleball?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">No &mdash; they&apos;re completely different sports. Padel uses enclosed glass courts with walls in play, pressurized rubber balls, and is always played as doubles. Pickleball uses open courts, plastic wiffle-style balls, and can be played as singles or doubles. The rules, scoring, equipment, and gameplay feel are entirely different.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-2">Is padel harder than pickleball?</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Is padel harder than pickleball?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">Slightly. Padel has a steeper learning curve because of the glass walls &mdash; reading rebounds takes practice. But both are significantly easier than tennis. Pickleball is the easiest racket sport to start. Padel becomes more complex and strategically rewarding faster as you improve.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-2">Which is more popular, padel or pickleball?</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Which is more popular, padel or pickleball?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">In the US, pickleball dominates with ~36 million players. Globally, padel has ~35 million players across 150+ countries and is the fastest-growing sport in Europe and Latin America. Padel is growing rapidly in the US with <Link href="/search" className="text-emerald-600 hover:underline">350+ clubs now operating</Link>.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-[#1a1a1a] mb-2">Can you play padel on a pickleball court?</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Can you play padel on a pickleball court?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">No. Padel requires enclosed glass walls that are integral to gameplay. Pickleball courts are open. The two sports require completely different facilities, which is why padel is played at dedicated clubs while pickleball can use converted tennis courts or portable setups.</p>
                 </div>
               </div>
@@ -412,7 +412,7 @@ export default function PadelVsPickleballPage() {
       </article>
 
       {/* Dark CTA Section */}
-      <div className="bg-[#1a1a1a]">
+      <div className="bg-stone-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-2xl font-bold text-white mb-2">Ready to Try Padel?</h2>
           <p className="text-stone-400 mb-6">Find a court, learn the rules, and get your first racket.</p>

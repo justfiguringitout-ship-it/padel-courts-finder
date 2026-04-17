@@ -231,19 +231,19 @@ export default function SanAntonioBestClubsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600">4</div>
-              <div className="text-sm text-gray-600">Clubs</div>
+              <div className="text-sm text-stone-600">Clubs</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">16</div>
-              <div className="text-sm text-gray-600">Courts</div>
+              <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">$15-40</div>
-              <div className="text-sm text-gray-600">Per Hour Range</div>
+              <div className="text-sm text-stone-600">Per Hour Range</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">Year-Round</div>
-              <div className="text-sm text-gray-600">Texas Climate</div>
+              <div className="text-sm text-stone-600">Texas Climate</div>
             </div>
           </div>
         </div>
@@ -251,22 +251,22 @@ export default function SanAntonioBestClubsPage() {
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-stone-900 mb-4">
             Alamo City&apos;s Padel Scene Arrives
           </h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             San Antonio has gone from zero padel courts to 4 active clubs with 16 courts in a remarkably short time. As Texas&apos;s second-largest city with 1.5 million residents and deep Latin American roots, San Antonio was always a natural fit for the sport. Now in 2026, the Alamo City is delivering on that promise with a diverse mix of indoor entertainment complexes, outdoor court clusters, and one of the most creatively designed padel venues in the entire state.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             The standout story is <Link href="/courts/slice-padel-co" className="text-blue-600 hover:underline">Slice Padel Co</Link>, which pairs 4 indoor courts with a food truck park, live music, and a rooftop bar. Meanwhile, <Link href="/courts/the-king-of-padel-san-antonio" className="text-blue-600 hover:underline">The King of Padel</Link> leads on scale with 6 indoor courts inside a full sports entertainment complex featuring gym, golf simulators, and a sports bar.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-stone-700 text-lg leading-relaxed">
             Whether you&apos;re a local looking for your first padel hit or a visitor exploring beyond the River Walk, this guide covers every option. Browse all courts on our <Link href="/texas/san-antonio" className="text-blue-600 hover:underline">San Antonio courts page</Link> or explore the full <Link href="/texas" className="text-blue-600 hover:underline">Texas padel directory</Link>.
           </p>
         </div>
 
         <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Rankings</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/the-king-of-padel-san-antonio" className="text-blue-600 hover:underline">The King of Padel</Link> (6 indoor courts, full complex)</p>
             <p><strong>Most Unique:</strong> <Link href="/courts/slice-padel-co" className="text-blue-600 hover:underline">Slice Padel Co</Link> (food trucks, live music, rooftop bar)</p>
@@ -305,22 +305,22 @@ export default function SanAntonioBestClubsPage() {
 
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-2 text-gray-700">
+                  <div className="flex items-start gap-2 text-stone-700">
                     <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-700">
+                  <div className="flex items-center gap-2 text-stone-700">
                     <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <a href={`tel:${club.phone}`} className="hover:text-blue-600">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
                         {club.website}
@@ -328,28 +328,28 @@ export default function SanAntonioBestClubsPage() {
                     </div>
                   )}
                   {club.email && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <a href={`mailto:${club.email}`} className="hover:text-blue-600">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Clock className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
                 </div>
 
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-stone-700 text-lg leading-relaxed mb-6">
                   {club.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">What Makes It Special:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">What Makes It Special:</h4>
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-start gap-2 text-gray-700">
+                      <li key={index} className="flex items-start gap-2 text-stone-700">
                         <span className="text-blue-600 font-bold">&#10003;</span>
                         <span>{highlight}</span>
                       </li>
@@ -358,7 +358,7 @@ export default function SanAntonioBestClubsPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Programs & Offerings:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
                       <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
@@ -369,7 +369,7 @@ export default function SanAntonioBestClubsPage() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Best For:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
                       <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
@@ -405,27 +405,27 @@ export default function SanAntonioBestClubsPage() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">More Texas Padel Guides</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-6">More Texas Padel Guides</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/best-padel-clubs-austin" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Austin</h4>
-              <p className="text-sm text-gray-600">Just 80 miles north with 7+ clubs</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Austin</h4>
+              <p className="text-sm text-stone-600">Just 80 miles north with 7+ clubs</p>
             </Link>
             <Link href="/blog/best-padel-clubs-houston" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Houston</h4>
-              <p className="text-sm text-gray-600">Space City&apos;s growing padel scene</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Houston</h4>
+              <p className="text-sm text-stone-600">Space City&apos;s growing padel scene</p>
             </Link>
             <Link href="/blog/best-padel-clubs-dallas" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Dallas</h4>
-              <p className="text-sm text-gray-600">DFW metroplex padel facilities</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Dallas</h4>
+              <p className="text-sm text-stone-600">DFW metroplex padel facilities</p>
             </Link>
             <Link href="/blog/best-padel-rackets-beginners" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Beginner Rackets (2026)</h4>
-              <p className="text-sm text-gray-600">Top 5 picks from $90–$130 →</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Beginner Rackets (2026)</h4>
+              <p className="text-sm text-stone-600">Top 5 picks from $90–$130 →</p>
             </Link>
             <Link href="/rules" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Padel Rules Explained</h4>
-              <p className="text-sm text-gray-600">Complete guide to scoring &amp; gameplay</p>
+              <h4 className="font-bold text-stone-900 mb-2">Padel Rules Explained</h4>
+              <p className="text-sm text-stone-600">Complete guide to scoring &amp; gameplay</p>
             </Link>
           </div>
         </div>

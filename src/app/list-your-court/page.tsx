@@ -165,7 +165,7 @@ export default async function ListYourCourtPage({
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-muted/20 py-16">
+      <section className="bg-muted/40 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Why List With Us?</h2>
@@ -382,7 +382,7 @@ export default async function ListYourCourtPage({
                       id="featuredInterest"
                       name="featuredInterest"
                       value="yes"
-                      className="mt-1 h-4 w-4 rounded border-gray-300"
+                      className="mt-1 h-4 w-4 rounded border-stone-300"
                     />
                     <Label
                       htmlFor="featuredInterest"

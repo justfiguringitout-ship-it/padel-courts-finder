@@ -207,7 +207,7 @@ export default async function CityPage({ params }: CityPageProps) {
       />
 
       {/* Breadcrumbs */}
-      <div className="border-b bg-muted/20">
+      <div className="border-b bg-muted/40">
         <div className="container mx-auto px-4 py-4">
           <Breadcrumb>
             <BreadcrumbList>
@@ -272,7 +272,7 @@ export default async function CityPage({ params }: CityPageProps) {
       </section>
 
       {/* Courts Grid */}
-      <section className="container mx-auto px-4 py-12 bg-muted/20">
+      <section className="container mx-auto px-4 py-12 bg-muted/40">
         <h2 className="text-2xl font-bold mb-6">
           All Padel Clubs in {city.name}
         </h2>
@@ -363,7 +363,7 @@ export default async function CityPage({ params }: CityPageProps) {
 
       {/* Nearby Cities */}
       {nearbyCities.length > 0 && (
-        <section className="container mx-auto px-4 py-12 bg-muted/20">
+        <section className="container mx-auto px-4 py-12 bg-muted/40">
           <h2 className="text-2xl font-bold mb-6">
             Padel Courts in Nearby Cities
           </h2>
@@ -458,7 +458,7 @@ export default async function CityPage({ params }: CityPageProps) {
       )}
 
       {/* Related Guides & Internal Links */}
-      <section className="container mx-auto px-4 py-12 bg-muted/20">
+      <section className="container mx-auto px-4 py-12 bg-muted/40">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
             <BookOpen className="w-6 h-6 text-primary" />

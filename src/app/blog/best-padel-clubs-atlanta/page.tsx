@@ -201,19 +201,19 @@ export default function AtlantaBestClubsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-green-600">3</div>
-              <div className="text-sm text-gray-600">Open Clubs</div>
+              <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-green-600">11</div>
-              <div className="text-sm text-gray-600">Total Courts</div>
+              <div className="text-sm text-stone-600">Total Courts</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-green-600">$15-35</div>
-              <div className="text-sm text-gray-600">Per Person</div>
+              <div className="text-sm text-stone-600">Per Person</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-green-600">Year-Round</div>
-              <div className="text-sm text-gray-600">Mild Climate</div>
+              <div className="text-sm text-stone-600">Mild Climate</div>
             </div>
           </div>
         </div>
@@ -221,22 +221,22 @@ export default function AtlantaBestClubsPage() {
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-stone-900 mb-4">
             Atlanta&apos;s Padel Scene Arrives in 2026
           </h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             Atlanta&apos;s padel scene has transformed from &quot;emerging&quot; to genuinely exciting. The Southeast&apos;s major hub now has 3 distinct padel destinations with 11 courts, anchored by the stunning <Link href="/courts/padel-haus-atlanta" className="text-green-600 hover:underline">Padel Haus Atlanta</Link> in the historic Westside Paper building -- the city&apos;s first dedicated indoor padel club with 6 premium courts under soaring ceilings.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
             <Link href="/courts/itp-training-academy" className="text-green-600 hover:underline">ITP Training Academy</Link> brings a full-service multi-sport experience with restaurant, bar, and a 4.9 Google rating, while the historic <Link href="/courts/piedmont-driving-club" className="text-green-600 hover:underline">Piedmont Driving Club</Link> has added padel to its prestigious 1887-founded campus. Atlanta&apos;s diverse international community, population growth, and sports-loving culture make it primed for continued expansion.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-stone-700 text-lg leading-relaxed">
             Browse all courts on our <Link href="/georgia/atlanta" className="text-green-600 hover:underline">Atlanta courts page</Link> or explore the full <Link href="/georgia" className="text-green-600 hover:underline">Georgia padel directory</Link>.
           </p>
         </div>
 
         <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Rankings</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/padel-haus-atlanta" className="text-green-600 hover:underline">Padel Haus Atlanta</Link> (6 indoor courts, Westside Paper)</p>
             <p><strong>Best Amenities:</strong> <Link href="/courts/itp-training-academy" className="text-green-600 hover:underline">ITP Training Academy</Link> (restaurant, bar, 4.9 rating)</p>
@@ -275,22 +275,22 @@ export default function AtlantaBestClubsPage() {
 
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-2 text-gray-700">
+                  <div className="flex items-start gap-2 text-stone-700">
                     <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-700">
+                  <div className="flex items-center gap-2 text-stone-700">
                     <Users className="w-5 h-5 text-green-600 flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Phone className="w-5 h-5 text-green-600 flex-shrink-0" />
                       <a href={`tel:${club.phone}`} className="hover:text-green-600">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-green-600 flex-shrink-0" />
                       <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-green-600">
                         {club.website}
@@ -298,28 +298,28 @@ export default function AtlantaBestClubsPage() {
                     </div>
                   )}
                   {club.email && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Mail className="w-5 h-5 text-green-600 flex-shrink-0" />
                       <a href={`mailto:${club.email}`} className="hover:text-green-600">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
-                    <div className="flex items-center gap-2 text-gray-700">
+                    <div className="flex items-center gap-2 text-stone-700">
                       <Clock className="w-5 h-5 text-green-600 flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
                 </div>
 
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-stone-700 text-lg leading-relaxed mb-6">
                   {club.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">What Makes It Special:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">What Makes It Special:</h4>
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-start gap-2 text-gray-700">
+                      <li key={index} className="flex items-start gap-2 text-stone-700">
                         <span className="text-green-600 font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
@@ -328,7 +328,7 @@ export default function AtlantaBestClubsPage() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Programs & Offerings:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
                       <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
@@ -339,7 +339,7 @@ export default function AtlantaBestClubsPage() {
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-3 text-lg">Best For:</h4>
+                  <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
                       <span key={index} className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">
@@ -375,27 +375,27 @@ export default function AtlantaBestClubsPage() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">More Southeast Padel Guides</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-6">More Southeast Padel Guides</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/best-padel-clubs-charlotte" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Charlotte</h4>
-              <p className="text-sm text-gray-600">Queen City&apos;s growing padel scene</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Charlotte</h4>
+              <p className="text-sm text-stone-600">Queen City&apos;s growing padel scene</p>
             </Link>
             <Link href="/blog/best-padel-clubs-orlando" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Orlando</h4>
-              <p className="text-sm text-gray-600">Central Florida padel with indoor courts</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Orlando</h4>
+              <p className="text-sm text-stone-600">Central Florida padel with indoor courts</p>
             </Link>
             <Link href="/blog/best-padel-clubs-miami" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Clubs in Miami</h4>
-              <p className="text-sm text-gray-600">29+ clubs, America&apos;s padel capital</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Miami</h4>
+              <p className="text-sm text-stone-600">29+ clubs, America&apos;s padel capital</p>
             </Link>
             <Link href="/blog/best-padel-rackets-beginners" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Best Beginner Rackets (2026)</h4>
-              <p className="text-sm text-gray-600">Top 5 picks from $90–$130 →</p>
+              <h4 className="font-bold text-stone-900 mb-2">Best Beginner Rackets (2026)</h4>
+              <p className="text-sm text-stone-600">Top 5 picks from $90–$130 →</p>
             </Link>
             <Link href="/rules" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <h4 className="font-bold text-gray-900 mb-2">Padel Rules Explained</h4>
-              <p className="text-sm text-gray-600">Complete guide to scoring &amp; gameplay</p>
+              <h4 className="font-bold text-stone-900 mb-2">Padel Rules Explained</h4>
+              <p className="text-sm text-stone-600">Complete guide to scoring &amp; gameplay</p>
             </Link>
           </div>
         </div>

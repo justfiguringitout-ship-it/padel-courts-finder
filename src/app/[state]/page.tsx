@@ -155,7 +155,7 @@ export default async function StatePage({ params }: StatePageProps) {
       />
 
       {/* Breadcrumbs */}
-      <div className="border-b bg-muted/20">
+      <div className="border-b bg-muted/40">
         <div className="container mx-auto px-4 py-4">
           <Breadcrumb>
             <BreadcrumbList>
@@ -247,7 +247,7 @@ export default async function StatePage({ params }: StatePageProps) {
       </section>
 
       {/* All Courts in State */}
-      <section className="container mx-auto px-4 py-12 bg-muted/20">
+      <section className="container mx-auto px-4 py-12 bg-muted/40">
         <h2 className="text-2xl font-bold mb-6">All Padel Clubs in {state.name}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sortedCourts.map((court) => (
@@ -350,7 +350,7 @@ export default async function StatePage({ params }: StatePageProps) {
       </section>
 
       {/* Related Guides & Links */}
-      <section className="container mx-auto px-4 py-12 bg-muted/20">
+      <section className="container mx-auto px-4 py-12 bg-muted/40">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-2 mb-4">
             <BookOpen className="w-6 h-6 text-primary" />

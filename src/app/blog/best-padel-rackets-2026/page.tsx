@@ -32,14 +32,14 @@ export default function ProRacketsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8]">
+    <div className="min-h-screen bg-stone-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
 
       {/* Amber Accent Stripe */}
       <div className="h-1 bg-amber-500" />
 
       {/* Dark Hero */}
-      <header className="bg-[#1a1a1a]">
+      <header className="bg-stone-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
           <div className="mb-5"><Link href="/blog" className="text-stone-400 hover:text-amber-400 text-sm">&larr; Back to Blog</Link></div>
           <span className="inline-block bg-amber-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Equipment</span>
@@ -70,7 +70,7 @@ export default function ProRacketsPage() {
 
             {/* Quick Picks Box */}
             <div className="border-l-4 border-amber-500 bg-amber-50/80 rounded-r-lg p-5 sm:p-6 mt-8">
-              <h3 className="font-bold text-[#1a1a1a] mb-3 flex items-center gap-2">
+              <h3 className="font-bold text-foreground mb-3 flex items-center gap-2">
                 <span className="text-amber-500">&#9889;</span> Quick Picks
               </h3>
               <div className="space-y-2.5">
@@ -96,7 +96,7 @@ export default function ProRacketsPage() {
         <div className="bg-stone-50">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <section>
-              <h2 id="top-5-pro" className="text-2xl font-bold text-[#1a1a1a] mb-5">Top 5 Pro Padel Rackets for 2026</h2>
+              <h2 id="top-5-pro" className="text-2xl font-bold text-foreground mb-5">Top 5 Pro Padel Rackets for 2026</h2>
 
               {/* 1. NOX AT10 Genius 18K */}
               <div id="nox-at10-18k" className="relative bg-white border-2 border-amber-400 rounded-xl p-6 md:p-8 mb-8 shadow-sm">
@@ -105,8 +105,8 @@ export default function ProRacketsPage() {
                 </div>
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1 mt-2">#1 — Best Overall</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">NOX AT10 Genius 18K Alum</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$272.00</span>
+                  <h3 className="text-xl font-bold text-foreground">NOX AT10 Genius 18K Alum</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$272.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: All-court advanced players who want versatility</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -158,8 +158,8 @@ export default function ProRacketsPage() {
               <div id="babolat-viper" className="bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 — Best Value at Pro Level</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">Babolat Technical Viper Juan Lebr&oacute;n</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$249.00</span>
+                  <h3 className="text-xl font-bold text-foreground">Babolat Technical Viper Juan Lebr&oacute;n</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$249.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Aggressive players with strong technique</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -211,8 +211,8 @@ export default function ProRacketsPage() {
               <div id="adidas-metalbone" className="bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#3 — Best Customization</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">Adidas Metalbone 3.4 (Ale Gal&aacute;n)</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$304.50</span>
+                  <h3 className="text-xl font-bold text-foreground">Adidas Metalbone 3.4 (Ale Gal&aacute;n)</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$304.50</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want tunable weight and balance</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -264,8 +264,8 @@ export default function ProRacketsPage() {
               <div id="head-extreme-pro" className="bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#4 — Best Pure Power</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">HEAD Extreme Pro</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$319.95</span>
+                  <h3 className="text-xl font-bold text-foreground">HEAD Extreme Pro</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$319.95</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Left-side attackers and tournament competitors</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -317,8 +317,8 @@ export default function ProRacketsPage() {
               <div id="wilson-bela-v3" className="bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#5 — Best Premium Material</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">Wilson Bela V3</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$399.00</span>
+                  <h3 className="text-xl font-bold text-foreground">Wilson Bela V3</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$399.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Advanced players who want the finest materials</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -373,7 +373,7 @@ export default function ProRacketsPage() {
         <div className="bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <section>
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Quick Comparison</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Quick Comparison</h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
@@ -398,7 +398,7 @@ export default function ProRacketsPage() {
       </article>
 
       {/* Dark Section: Keep Reading (outside article) */}
-      <div className="bg-[#1a1a1a]">
+      <div className="bg-stone-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <h2 className="text-lg font-bold text-white mb-4">Keep Reading</h2>
           <div className="grid sm:grid-cols-2 gap-4">

@@ -32,14 +32,14 @@ export default function IntermediateRacketsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8]">
+    <div className="min-h-screen bg-stone-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
 
       {/* Amber Accent Stripe */}
       <div className="h-1 bg-amber-500" />
 
       {/* Dark Hero */}
-      <header className="bg-[#1a1a1a]">
+      <header className="bg-stone-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
           <div className="mb-5">
             <Link href="/blog" className="text-stone-400 hover:text-amber-400 text-sm">&larr; Back to Blog</Link>
@@ -67,12 +67,12 @@ export default function IntermediateRacketsPage() {
 
             <div className="prose prose-lg prose-stone max-w-none mb-0">
               <p className="text-stone-600 leading-[1.75]">You&apos;ve been playing for 6+ months. Your technique is more consistent, you&apos;re reading the game better, and that beginner racket is starting to feel like it&apos;s holding you back. Sound familiar? It&apos;s time to upgrade.</p>
-              <p className="text-stone-600 leading-[1.75]">An intermediate racket gives you more <strong className="text-[#1a1a1a]">power</strong>, better <strong className="text-[#1a1a1a]">spin</strong>, and a more responsive <strong className="text-[#1a1a1a]">feel</strong> &mdash; but it also demands cleaner technique. Look for: a <strong className="text-[#1a1a1a]">carbon or hybrid surface</strong> for ball speed, a <strong className="text-[#1a1a1a]">teardrop or hybrid shape</strong> for balanced power/control, a <strong className="text-[#1a1a1a]">medium EVA core</strong>, and a <strong className="text-[#1a1a1a]">weight of 360&ndash;375g</strong>. Budget $170&ndash;280 for a quality intermediate racket. Ready to test your new racket? <Link href="/search" className="text-emerald-600 hover:underline">Find a court near you</Link>.</p>
+              <p className="text-stone-600 leading-[1.75]">An intermediate racket gives you more <strong className="text-foreground">power</strong>, better <strong className="text-foreground">spin</strong>, and a more responsive <strong className="text-foreground">feel</strong> &mdash; but it also demands cleaner technique. Look for: a <strong className="text-foreground">carbon or hybrid surface</strong> for ball speed, a <strong className="text-foreground">teardrop or hybrid shape</strong> for balanced power/control, a <strong className="text-foreground">medium EVA core</strong>, and a <strong className="text-foreground">weight of 360&ndash;375g</strong>. Budget $170&ndash;280 for a quality intermediate racket. Ready to test your new racket? <Link href="/search" className="text-emerald-600 hover:underline">Find a court near you</Link>.</p>
             </div>
 
             {/* Quick Picks Box */}
             <div className="border-l-4 border-amber-500 bg-amber-50/80 rounded-r-lg p-5 sm:p-6 mt-8">
-              <h3 className="font-bold text-[#1a1a1a] mb-3 flex items-center gap-2">
+              <h3 className="font-bold text-foreground mb-3 flex items-center gap-2">
                 <span className="text-amber-500">&#9889;</span> Quick Picks
               </h3>
               <div className="space-y-2.5">
@@ -98,22 +98,22 @@ export default function IntermediateRacketsPage() {
         <div className="bg-stone-50">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <section className="mb-12">
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">When to Upgrade</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">When to Upgrade</h2>
               <div className="space-y-3">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-[#1a1a1a]">Your sweet spot feels too small.</strong> If you&apos;re consistently hitting the center and the round shape feels limiting, you&apos;re ready for teardrop or diamond.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Your sweet spot feels too small.</strong> If you&apos;re consistently hitting the center and the round shape feels limiting, you&apos;re ready for teardrop or diamond.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-[#1a1a1a]">You want more power on smashes.</strong> Fiberglass faces have a power ceiling. Carbon surfaces return energy faster and reward clean contact with explosive ball speed.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">You want more power on smashes.</strong> Fiberglass faces have a power ceiling. Carbon surfaces return energy faster and reward clean contact with explosive ball speed.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-[#1a1a1a]">Your racket feels &quot;dead.&quot;</strong> EVA cores degrade over time. If you&apos;re playing 2&ndash;3 times a week &mdash; easy to do if you&apos;re near <Link href="/blog/best-padel-clubs-houston" className="text-emerald-600 hover:underline">Houston&apos;s padel scene</Link> or another growing market &mdash; expect to replace after 12&ndash;18 months. If everything feels flat and unresponsive, the foam has lost its memory &mdash; time for a fresh racket.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Your racket feels &quot;dead.&quot;</strong> EVA cores degrade over time. If you&apos;re playing 2&ndash;3 times a week &mdash; easy to do if you&apos;re near <Link href="/blog/best-padel-clubs-houston" className="text-emerald-600 hover:underline">Houston&apos;s padel scene</Link> or another growing market &mdash; expect to replace after 12&ndash;18 months. If everything feels flat and unresponsive, the foam has lost its memory &mdash; time for a fresh racket.</p>
                 </div>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 id="top-5-intermediate" className="text-2xl font-bold text-[#1a1a1a] mb-5">Top 5 Intermediate Padel Rackets</h2>
+              <h2 id="top-5-intermediate" className="text-2xl font-bold text-foreground mb-5">Top 5 Intermediate Padel Rackets</h2>
 
               {/* 1. NOX ML10 Pro Cup */}
               <div id="nox-ml10-pro-cup" className="relative bg-white border-2 border-amber-400 rounded-xl p-6 md:p-8 mb-8 shadow-sm">
@@ -122,8 +122,8 @@ export default function IntermediateRacketsPage() {
                 </div>
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mt-2 mb-1">#1 &mdash; Best Value Upgrade</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">NOX ML10 Pro Cup Rough Surface</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$169.99</span>
+                  <h3 className="text-xl font-bold text-foreground">NOX ML10 Pro Cup Rough Surface</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$169.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Spin-focused players upgrading from beginner</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -175,8 +175,8 @@ export default function IntermediateRacketsPage() {
               <div id="wilson-blade-elite" className="bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 &mdash; Best All-Around</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">Wilson Blade Elite V2</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$189.00</span>
+                  <h3 className="text-xl font-bold text-foreground">Wilson Blade Elite V2</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$189.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: All-court players who want balance</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -228,8 +228,8 @@ export default function IntermediateRacketsPage() {
               <div id="nox-at10-attack" className="bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#3 &mdash; Best Spin Generation</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">NOX AT10 Genius Attack 12K</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$229.99</span>
+                  <h3 className="text-xl font-bold text-foreground">NOX AT10 Genius Attack 12K</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$229.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Aggressive players with clean technique</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -281,8 +281,8 @@ export default function IntermediateRacketsPage() {
               <div id="bullpadel-neuron" className="bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#4 &mdash; Best for Future Growth</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">Bullpadel Neuron 2025 (Chingotto)</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$236.00</span>
+                  <h3 className="text-xl font-bold text-foreground">Bullpadel Neuron 2025 (Chingotto)</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$236.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Upper-intermediates transitioning to advanced</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -334,8 +334,8 @@ export default function IntermediateRacketsPage() {
               <div id="adidas-metalbone-hrd" className="bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#5 &mdash; Most Power Under $300</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-[#1a1a1a]">Adidas Metalbone HRD+ 3.3</h3>
-                  <span className="bg-[#1a1a1a] text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$279.99</span>
+                  <h3 className="text-xl font-bold text-foreground">Adidas Metalbone HRD+ 3.3</h3>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$279.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Left-side attackers who want firepower</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -390,7 +390,7 @@ export default function IntermediateRacketsPage() {
         <div className="bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <section>
-              <h2 className="text-2xl font-bold text-[#1a1a1a] mb-5">Quick Comparison</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Quick Comparison</h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
@@ -435,7 +435,7 @@ export default function IntermediateRacketsPage() {
       </article>
 
       {/* Keep Reading — Dark Section (outside article) */}
-      <div className="bg-[#1a1a1a]">
+      <div className="bg-stone-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <h2 className="text-lg font-bold text-white mb-4">Keep Reading</h2>
           <div className="grid sm:grid-cols-2 gap-4">

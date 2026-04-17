@@ -438,13 +438,13 @@ export default function GlossaryPage() {
           {/* Search Bar */}
           <div className="mb-4">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search glossary... (type any term or definition)"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
           </div>
@@ -458,7 +458,7 @@ export default function GlossaryPage() {
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   selectedCategory === category
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
                 }`}
               >
                 {category}
@@ -478,7 +478,7 @@ export default function GlossaryPage() {
                   className={`w-8 h-8 rounded font-semibold transition-colors ${
                     hasTerms
                       ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
-                      : 'bg-gray-50 text-gray-300 cursor-not-allowed'
+                      : 'bg-stone-50 text-stone-300 cursor-not-allowed'
                   }`}
                 >
                   {letter}
@@ -522,7 +522,7 @@ export default function GlossaryPage() {
 
           return (
             <div key={letter} id={`letter-${letter}`} className="mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6 border-b-4 border-blue-600 inline-block pb-2">
+              <h2 className="text-4xl font-bold text-stone-900 mb-6 border-b-4 border-blue-600 inline-block pb-2">
                 {letter}
               </h2>
 
@@ -531,15 +531,15 @@ export default function GlossaryPage() {
                   <div
                     key={term.id}
                     id={term.id}
-                    className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+                    className="bg-white border border-stone-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
                   >
                     <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-1">
+                        <h3 className="text-2xl font-bold text-stone-900 mb-1">
                           {term.name}
                         </h3>
                         {term.pronunciation && (
-                          <p className="text-sm text-gray-600 italic">
+                          <p className="text-sm text-stone-600 italic">
                             Pronunciation: {term.pronunciation}
                           </p>
                         )}
@@ -548,32 +548,32 @@ export default function GlossaryPage() {
                         <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">
                           {term.category}
                         </span>
-                        <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full">
+                        <span className="px-3 py-1 bg-stone-100 text-stone-700 text-sm font-medium rounded-full">
                           {term.skillLevel}
                         </span>
                       </div>
                     </div>
 
-                    <p className="text-gray-700 mb-3 leading-relaxed">
+                    <p className="text-stone-700 mb-3 leading-relaxed">
                       <strong>Definition:</strong> {term.definition}
                     </p>
 
                     {term.usage && (
-                      <p className="text-gray-600 mb-3 italic">
+                      <p className="text-stone-600 mb-3 italic">
                         <strong>Usage:</strong> "{term.usage}"
                       </p>
                     )}
 
                     {term.difficulty && (
-                      <p className="text-gray-700 mb-3">
+                      <p className="text-stone-700 mb-3">
                         <strong>Difficulty:</strong> {term.difficulty}
                       </p>
                     )}
 
                     {term.hasVideo && (
-                      <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-3">
-                        <div className="aspect-video bg-gray-200 rounded flex items-center justify-center mb-2">
-                          <div className="text-gray-500 text-center">
+                      <div className="bg-stone-50 border border-stone-200 rounded-lg p-4 mb-3">
+                        <div className="aspect-video bg-stone-200 rounded flex items-center justify-center mb-2">
+                          <div className="text-stone-500 text-center">
                             <BookOpen className="w-12 h-12 mx-auto mb-2" />
                             <p className="text-sm">Video Tutorial Available</p>
                             <p className="text-xs">Watch professional demonstration</p>
@@ -584,8 +584,8 @@ export default function GlossaryPage() {
                     )}
 
                     {term.seeAlso && term.seeAlso.length > 0 && (
-                      <div className="border-t border-gray-200 pt-3">
-                        <p className="text-sm text-gray-600">
+                      <div className="border-t border-stone-200 pt-3">
+                        <p className="text-sm text-stone-600">
                           <strong>See also:</strong>{' '}
                           {term.seeAlso.map((relatedId, index) => (
                             <span key={relatedId}>
@@ -603,7 +603,7 @@ export default function GlossaryPage() {
                     )}
 
                     {/* Share Link */}
-                    <div className="border-t border-gray-200 pt-3 mt-3">
+                    <div className="border-t border-stone-200 pt-3 mt-3">
                       <button
                         onClick={() => {
                           navigator.clipboard.writeText(
@@ -611,7 +611,7 @@ export default function GlossaryPage() {
                           );
                           alert('Link copied to clipboard!');
                         }}
-                        className="text-sm text-gray-500 hover:text-gray-700 underline"
+                        className="text-sm text-stone-500 hover:text-stone-700 underline"
                       >
                         📋 Copy link to this term
                       </button>
@@ -626,11 +626,11 @@ export default function GlossaryPage() {
         {/* No Results */}
         {filteredTerms.length === 0 && (
           <div className="text-center py-12">
-            <Search className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">
+            <Search className="w-16 h-16 text-stone-300 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-stone-700 mb-2">
               No terms found
             </h3>
-            <p className="text-gray-500">
+            <p className="text-stone-500">
               Try adjusting your search or filter criteria
             </p>
           </div>
@@ -662,34 +662,34 @@ export default function GlossaryPage() {
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           <Link
             href="/how-to-play"
-            className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+            className="bg-white border border-stone-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
           >
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
+            <h3 className="text-lg font-bold text-stone-900 mb-2">
               How to Play Padel
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-stone-600 text-sm">
               Complete rules and gameplay guide
             </p>
           </Link>
           <Link
             href="/rules"
-            className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+            className="bg-white border border-stone-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
           >
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
+            <h3 className="text-lg font-bold text-stone-900 mb-2">
               Rules & Regulations
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-stone-600 text-sm">
               Official FIP rules detailed
             </p>
           </Link>
           <Link
             href="/equipment"
-            className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+            className="bg-white border border-stone-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
           >
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
+            <h3 className="text-lg font-bold text-stone-900 mb-2">
               Equipment Guide
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-stone-600 text-sm">
               Buying guide for all gear
             </p>
           </Link>
