@@ -91,7 +91,7 @@ export default function HomePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-primary/10 via-background to-background py-16 md:py-24">
+      <section className="relative bg-gradient-to-b from-primary/10 via-background to-background py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-6 max-w-4xl mx-auto">
             <Badge variant="secondary" className="mb-4">
@@ -111,7 +111,7 @@ export default function HomePage() {
             <HeroSearch />
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-8 max-w-xl mx-auto">
+            <div className="grid grid-cols-3 gap-4 pt-8 max-w-md mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">{stats.totalCourts}+</div>
                 <div className="text-sm text-muted-foreground">Clubs</div>
@@ -130,14 +130,14 @@ export default function HomePage() {
       </section>
 
       {/* Directory intro */}
-      <section className="container mx-auto px-4 pt-12 pb-4 max-w-3xl text-center">
+      <section className="container mx-auto px-4 pt-12 pb-4 max-w-4xl text-center">
         <p className="text-muted-foreground leading-relaxed">
           Looking for padel courts near me? Padel Courts Finder is the most comprehensive US padel directory, helping you find padel clubs near you in {stats.totalStates} states and {stats.totalCities}+ cities. Whether you&apos;re searching for a padel court near me to try the sport for the first time or looking to find padel courts with lessons, equipment rental, and league play, browse our verified listings to compare hours, pricing, and player reviews.
         </p>
       </section>
 
       {/* Browse by State */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Browse Padel Clubs by State</h2>
           <p className="text-muted-foreground">
@@ -183,7 +183,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Courts */}
-      <section className="container mx-auto px-4 py-16 bg-muted/40">
+      <section className="container mx-auto px-4 py-12 md:py-16 bg-muted/40">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Featured Padel Clubs</h2>
           <p className="text-muted-foreground">
@@ -192,14 +192,14 @@ export default function HomePage() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {featuredCourts.map((court) => (
+          {featuredCourts.map((court, index) => (
             <Link
               key={court.id}
               href={`/courts/${court.slug}`}
-              className="group"
+              className={`group ${index === 0 ? 'md:col-span-2 lg:col-span-2 md:row-span-2' : ''}`}
             >
-              <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden">
-                <div className="aspect-video relative overflow-hidden">
+              <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
+                <div className={`relative overflow-hidden ${index === 0 ? 'aspect-[2/1] lg:aspect-auto lg:flex-1 lg:min-h-[300px]' : 'aspect-video'}`}>
                   <img
                     src={court.heroImage}
                     alt={court.name}
@@ -212,7 +212,7 @@ export default function HomePage() {
                   )}
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-1">
+                  <CardTitle className={`group-hover:text-primary transition-colors line-clamp-1 ${index === 0 ? 'text-xl' : 'text-lg'}`}>
                     {court.name}
                   </CardTitle>
                   <CardDescription className="space-y-2">
@@ -241,7 +241,7 @@ export default function HomePage() {
                     </div>
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="mt-auto">
                   <div className="flex items-center justify-between">
                     {court.pricing.offPeakHourlyRate > 0 ? (
                       <div>
@@ -273,7 +273,7 @@ export default function HomePage() {
       </section>
 
       {/* Top Cities */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Popular Cities for Padel</h2>
           <p className="text-muted-foreground">
@@ -281,7 +281,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {stats.topCities.map((city) => (
             <Link
               key={`${city.slug}-${city.stateCode}`}
@@ -302,7 +302,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Blog Posts */}
-      <section className="container mx-auto px-4 py-16 bg-muted/40">
+      <section className="container mx-auto px-4 py-12 md:py-16 bg-muted/40">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Expert Club Guides & Reviews</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -354,7 +354,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-primary-foreground py-16">
+      <section className="bg-primary text-primary-foreground py-16 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Own a Padel Club?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">

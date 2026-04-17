@@ -256,7 +256,7 @@ export default async function StatePage({ params }: StatePageProps) {
               href={`/courts/${court.slug}`}
               className="group"
             >
-              <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden">
+              <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
                 <div className="aspect-video relative overflow-hidden">
                   <img
                     src={court.heroImage}
@@ -299,7 +299,7 @@ export default async function StatePage({ params }: StatePageProps) {
                     </div>
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="mt-auto">
                   <div className="flex items-center justify-between">
                     {court.pricing.offPeakHourlyRate > 0 ? (
                       <div>
