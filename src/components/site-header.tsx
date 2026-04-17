@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -27,6 +28,7 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ states }: SiteHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -76,7 +78,7 @@ export function SiteHeader({ states }: SiteHeaderProps) {
 
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
-                    <Link href="/blog" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                    <Link href="/blog" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50", pathname.startsWith("/blog") ? "text-primary font-semibold" : "bg-background font-medium")}>
                       Blog
                     </Link>
                   </NavigationMenuLink>
@@ -147,7 +149,7 @@ export function SiteHeader({ states }: SiteHeaderProps) {
 
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
-                    <Link href="/about" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                    <Link href="/about" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50", pathname === "/about" ? "text-primary font-semibold" : "bg-background font-medium")}>
                       About
                     </Link>
                   </NavigationMenuLink>
@@ -155,7 +157,7 @@ export function SiteHeader({ states }: SiteHeaderProps) {
 
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
-                    <Link href="/list-your-court" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                    <Link href="/list-your-court" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50", pathname === "/list-your-court" ? "text-primary font-semibold" : "bg-background font-medium")}>
                       List Your Court
                     </Link>
                   </NavigationMenuLink>
@@ -184,7 +186,7 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                 <nav className="flex flex-col space-y-4 mt-8">
                   <Link
                     href="/"
-                    className="text-lg font-medium hover:text-primary transition-colors"
+                    className={cn("text-lg hover:text-primary transition-colors", pathname === "/" ? "text-primary font-semibold" : "font-medium")}
                     onClick={() => setIsOpen(false)}
                   >
                     Home
@@ -210,7 +212,7 @@ export function SiteHeader({ states }: SiteHeaderProps) {
 
                   <Link
                     href="/blog"
-                    className="text-lg font-medium hover:text-primary transition-colors"
+                    className={cn("text-lg hover:text-primary transition-colors", pathname.startsWith("/blog") ? "text-primary font-semibold" : "font-medium")}
                     onClick={() => setIsOpen(false)}
                   >
                     Blog
@@ -241,7 +243,7 @@ export function SiteHeader({ states }: SiteHeaderProps) {
 
                   <Link
                     href="/about"
-                    className="text-lg font-medium hover:text-primary transition-colors"
+                    className={cn("text-lg hover:text-primary transition-colors", pathname === "/about" ? "text-primary font-semibold" : "font-medium")}
                     onClick={() => setIsOpen(false)}
                   >
                     About
@@ -249,7 +251,7 @@ export function SiteHeader({ states }: SiteHeaderProps) {
 
                   <Link
                     href="/list-your-court"
-                    className="text-lg font-medium hover:text-primary transition-colors"
+                    className={cn("text-lg hover:text-primary transition-colors", pathname === "/list-your-court" ? "text-primary font-semibold" : "font-medium")}
                     onClick={() => setIsOpen(false)}
                   >
                     List Your Court

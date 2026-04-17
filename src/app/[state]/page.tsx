@@ -221,7 +221,7 @@ export default async function StatePage({ params }: StatePageProps) {
               href={`/${state.slug}/${city.slug}`}
               className="group"
             >
-              <Card className="hover:border-primary transition-colors h-full">
+              <Card className="hover:border-primary hover:shadow-md transition-all h-full">
                 <CardHeader className="p-4">
                   <CardTitle className="text-sm font-medium group-hover:text-primary transition-colors flex items-center justify-between">
                     <span className="line-clamp-1">{city.name}</span>
@@ -256,7 +256,7 @@ export default async function StatePage({ params }: StatePageProps) {
               href={`/courts/${court.slug}`}
               className="group"
             >
-              <Card className="hover:border-primary transition-all h-full overflow-hidden">
+              <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden">
                 <div className="aspect-video relative overflow-hidden">
                   <img
                     src={court.heroImage}
@@ -369,7 +369,7 @@ export default async function StatePage({ params }: StatePageProps) {
                 : slug.charAt(0).toUpperCase() + slug.slice(1);
               return (
                 <Link key={slug} href={`/blog/best-padel-clubs-${slug}`} className="group">
-                  <Card className="h-full hover:border-primary transition-all">
+                  <Card className="h-full hover:border-primary hover:shadow-md transition-all">
                     <CardHeader className="pb-3">
                       <div className="flex items-center gap-2 mb-1">
                         <TrendingUp className="w-4 h-4 text-primary" />
@@ -388,7 +388,7 @@ export default async function StatePage({ params }: StatePageProps) {
             })}
             {state.courtCount <= 5 && (
               <Link href="/how-to-play" className="group">
-                <Card className="h-full hover:border-primary transition-all">
+                <Card className="h-full hover:border-primary hover:shadow-md transition-all">
                   <CardHeader className="pb-3">
                     <CardTitle className="text-base group-hover:text-primary transition-colors">
                       New to Padel?

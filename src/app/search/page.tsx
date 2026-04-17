@@ -360,7 +360,7 @@ function SearchPageContent() {
                     href={`/courts/${court.slug}`}
                     className="group"
                   >
-                    <Card className="hover:border-primary transition-all h-full overflow-hidden">
+                    <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden">
                       <div className="aspect-video relative overflow-hidden">
                         <img
                           src={court.heroImage}

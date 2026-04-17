@@ -152,7 +152,7 @@ export default function HomePage() {
               href={`/${state.slug}`}
               className="group"
             >
-              <Card className="hover:border-primary transition-colors h-full">
+              <Card className="hover:border-primary hover:shadow-md transition-all h-full">
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
                     <MapPin className="w-5 h-5 text-primary" />
@@ -198,7 +198,7 @@ export default function HomePage() {
               href={`/courts/${court.slug}`}
               className="group"
             >
-              <Card className="hover:border-primary transition-all h-full overflow-hidden">
+              <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden">
                 <div className="aspect-video relative overflow-hidden">
                   <img
                     src={court.heroImage}
@@ -288,7 +288,7 @@ export default function HomePage() {
               href={`/${states.find(s => s.code === city.stateCode)?.slug}/${city.slug}`}
               className="group"
             >
-              <Card className="hover:border-primary transition-colors text-center p-4">
+              <Card className="hover:border-primary hover:shadow-md transition-all text-center p-4">
                 <CardTitle className="text-base mb-2 group-hover:text-primary transition-colors">
                   {city.name}
                 </CardTitle>
@@ -319,7 +319,7 @@ export default function HomePage() {
             const imageUrl = court?.heroImage;
             return (
               <Link key={item.href} href={item.href} className="group">
-                <Card className="h-full hover:border-primary transition-all overflow-hidden">
+                <Card className="h-full hover:border-primary hover:shadow-md transition-all overflow-hidden">
                   <div className="aspect-video bg-gradient-to-br from-blue-500 to-blue-600 relative overflow-hidden">
                     {imageUrl && (
                       <img

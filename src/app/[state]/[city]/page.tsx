@@ -283,7 +283,7 @@ export default async function CityPage({ params }: CityPageProps) {
               href={`/courts/${court.slug}`}
               className="group"
             >
-              <Card className="hover:border-primary transition-all h-full overflow-hidden">
+              <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden">
                 <div className="aspect-video relative overflow-hidden">
                   <img
                     src={court.heroImage}
@@ -374,7 +374,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 href={`/${state.slug}/${nearbyCity.slug}`}
                 className="group"
               >
-                <Card className="hover:border-primary transition-colors h-full text-center p-4">
+                <Card className="hover:border-primary hover:shadow-md transition-all h-full text-center p-4">
                   <CardTitle className="text-sm font-medium group-hover:text-primary transition-colors mb-1">
                     {nearbyCity.name}
                   </CardTitle>
@@ -467,7 +467,7 @@ export default async function CityPage({ params }: CityPageProps) {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {blogSlug && (
               <Link href={`/blog/best-padel-clubs-${blogSlug}`} className="group">
-                <Card className="h-full hover:border-primary transition-all">
+                <Card className="h-full hover:border-primary hover:shadow-md transition-all">
                   <CardHeader className="pb-3">
                     <div className="flex items-center gap-2 mb-1">
                       <TrendingUp className="w-4 h-4 text-primary" />
@@ -484,7 +484,7 @@ export default async function CityPage({ params }: CityPageProps) {
               </Link>
             )}
             <Link href={`/${state.slug}`} className="group">
-              <Card className="h-full hover:border-primary transition-all">
+              <Card className="h-full hover:border-primary hover:shadow-md transition-all">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-base group-hover:text-primary transition-colors">
                     All Padel Clubs in {state.name}
@@ -497,7 +497,7 @@ export default async function CityPage({ params }: CityPageProps) {
             </Link>
             {nearbyCities.slice(0, blogSlug ? 1 : 2).map((nearbyCity) => (
               <Link key={nearbyCity.slug} href={`/${state.slug}/${nearbyCity.slug}`} className="group">
-                <Card className="h-full hover:border-primary transition-all">
+                <Card className="h-full hover:border-primary hover:shadow-md transition-all">
                   <CardHeader className="pb-3">
                     <CardTitle className="text-base group-hover:text-primary transition-colors">
                       Padel in {nearbyCity.name}
