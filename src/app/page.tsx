@@ -191,15 +191,91 @@ export default function HomePage() {
           </p>
         </div>
 
+        {/* Hero featured court — horizontal card */}
+        {featuredCourts.length > 0 && (() => {
+          const court = featuredCourts[0];
+          return (
+            <Link
+              href={`/courts/${court.slug}`}
+              className="group block max-w-6xl mx-auto mb-6"
+            >
+              <Card className="hover:border-primary hover:shadow-md transition-all overflow-hidden flex flex-col md:flex-row">
+                <div className="relative overflow-hidden md:w-1/2 aspect-video md:aspect-auto md:min-h-[280px]">
+                  <img
+                    src={court.heroImage}
+                    alt={court.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {court.featured && (
+                    <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600">
+                      Featured
+                    </Badge>
+                  )}
+                </div>
+                <div className="md:w-1/2 flex flex-col">
+                  <CardHeader>
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                      {court.name}
+                    </CardTitle>
+                    <CardDescription className="space-y-2">
+                      <div className="flex items-center gap-1 text-sm">
+                        <MapPin className="w-4 h-4" />
+                        {court.address.city}, {court.address.stateCode}
+                      </div>
+                      <div className="flex items-center gap-4 text-sm">
+                        {(court.rating.ratingValue > 0 || court.rating.reviewCount > 0) && (
+                          <div className="flex items-center gap-1">
+                            <Star className="w-4 h-4 fill-primary text-primary" />
+                            <span className="font-medium">{court.rating.ratingValue}</span>
+                            {court.rating.reviewCount > 0 && (
+                              <span className="text-muted-foreground">
+                                ({court.rating.reviewCount})
+                              </span>
+                            )}
+                          </div>
+                        )}
+                        {court.facility.totalCourts > 0 && (
+                          <div className="flex items-center gap-1">
+                            <Clock className="w-4 h-4" />
+                            {court.facility.totalCourts} {court.facility.totalCourts === 1 ? 'court' : 'courts'}
+                          </div>
+                        )}
+                      </div>
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="mt-auto">
+                    <div className="flex items-center justify-between">
+                      {court.pricing.offPeakHourlyRate > 0 ? (
+                        <div>
+                          <div className="text-2xl font-bold text-primary">
+                            ${court.pricing.offPeakHourlyRate}
+                          </div>
+                          <div className="text-xs text-muted-foreground">per hour</div>
+                        </div>
+                      ) : (
+                        <div />
+                      )}
+                      <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                        View Details
+                      </Button>
+                    </div>
+                  </CardContent>
+                </div>
+              </Card>
+            </Link>
+          );
+        })()}
+
+        {/* Remaining featured courts — standard grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {featuredCourts.map((court, index) => (
+          {featuredCourts.slice(1).map((court) => (
             <Link
               key={court.id}
               href={`/courts/${court.slug}`}
-              className={`group ${index === 0 ? 'md:col-span-2 lg:col-span-2 md:row-span-2' : ''}`}
+              className="group"
             >
               <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
-                <div className={`relative overflow-hidden ${index === 0 ? 'aspect-[2/1] lg:aspect-auto lg:flex-1 lg:min-h-[300px]' : 'aspect-video'}`}>
+                <div className="aspect-video relative overflow-hidden">
                   <img
                     src={court.heroImage}
                     alt={court.name}
@@ -212,7 +288,7 @@ export default function HomePage() {
                   )}
                 </div>
                 <CardHeader>
-                  <CardTitle className={`group-hover:text-primary transition-colors line-clamp-1 ${index === 0 ? 'text-xl' : 'text-lg'}`}>
+                  <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-1">
                     {court.name}
                   </CardTitle>
                   <CardDescription className="space-y-2">
