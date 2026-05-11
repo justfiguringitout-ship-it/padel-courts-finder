@@ -84,8 +84,7 @@ export const padelCourts: PadelCourt[] = [
     ],
     pricingText: "$55 per hour",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHRlsMrc5o_GLiP6bNUsZORPE4ULyBk58eE9_U5C924ipB764uCiIfdbrf8NaDa5F-fpniZsHcTHFZhkCyDjDoKPzlvwoAbdSIdd7W8z2j5TFrhIV1HiCIwHFzu-wXeSexPaO9UV1ZCmke5_wiasAowjrWzVh1_0KIeq0hwMqRROP74mkrU7dxTqEnH_Kf1Y5KYrTIFDHM-X7v1rzxtGep0l-uDNUmqjRwKHOzahQ_MN4TjEu2VR7F3Ys5eLYvXxtkBatWzGVz2737p2u8Y2lrUclbLXinfnet2LoySuHWnLZBWPgllc9QgfTCfo3lqJAPYevCzwRNNNCgQR_onAVoUJPwcjIQJnNMXG4SZfoKyJW5QvMf-FcWDstwqdKhdJjSE43Eikh6sF0AcrpGcq5VCbUvSPkhz-M889nrBhCAvlQ",
-    googleMapsPlaceId: "ChIJO-ZGkm6NwokRH5LzBlNfsIQ",
+    ogImageUrl: "/images/courts/new-rochelle-indoor-sports.jpg",
   },
     {
     id: 3,
@@ -170,8 +169,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "quality courts, friendly atmosphere",
     pricingText: "$65 per hour",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEkb31lhNTRzZd5rjKBN7l2KRSAgc0sm-F1yMunhtv63Apl26F871QTsvhrgderGeGMqX6sVbdtK5XN294zdoMwAvEFPGUKqeoGL4Ls2InNKkjuEtnVA0sHa2LhvdPhEyg6gJ9kGEeEzUJN2Fy9i_AvFRiyx1ovzQwOn1-yaCtkZ6MEO_MipG6acY9k0hKdibPq1LVtpt5q7oL08zuWYCDGgz2RHX7R0VihNcvgPKE3npINBBRTAEcNijG2O9sXsb3KjgsW9PV6iALoArWV7BpqZiMV_Jav0SVIS73hQfxXGw",
-    googleMapsPlaceId: "ChIJvax2Qigf2YgRwhNiv7MgBv8",
+    ogImageUrl: "/images/courts/the-padel-club.jpg",
     featured: true,
   },
     {
@@ -241,8 +239,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-21h"
     },
     description: "PlayPadel Coral Gables offers excellent padel facilities with professional coaching and events.",
-    googlePlacePhotoRef: "AU_ZVEGh69nmwi9kR2eJgQWUrg6bB48KGTAsvt-VMlNvpZiWrdO5q8VnTFowPKTH81m_Hqr02QMw9j55WLcrgcA0n-_rW5KjXctktcvXX4hDXGo3kCd15TpFU8HaGTuR8aUE6tL-wRA2_mQKU3BYBclXlC5O5VkZ4aLI4k9aTO22zC6RnpCVbqW4ngwK64NH6FTumSo10bqsknB6rNHv9GENxRPExKaDGgJOiZRKK8qOhjFMd_lqBAWuJl7mHsbpU0uSyVwJG5yUf2Cr23lz-o9F4hz_ofDZ489HRGOTLQDJKlb90Q",
-    googleMapsPlaceId: "ChIJedoea2e32YgR7Bh7-yEJjoQ",
+    ogImageUrl: "/images/courts/playpadel-coral-gables.jpg",
   },
     {
     id: 7,
@@ -333,8 +330,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly staff, well-maintained courts, engaging social programming",
     pricingText: "Padel from $12/player/60min (non-member), Pickleball $9/player/60min; premium members 40% off",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEfPp0f8QCtjGbA12WrbJF7IbxTdRh7x-zCsB8GnsKHuTzz5cY-JxjhR3uq_WzlhrOB6ihISt4smqFn6Ize8Z0Zn7yjPa_lnsEd7LBrFSWVEH5lmxjd5vntApF_Y-_0mNz2UFAmsoqGgVy9jj-koHdQdzcw26h6-oiJiRH0-2gGhjGA6esqfCsRrWju8dwwuK6Lu7qPkmxN7RPID6VsXW_5Uk5mNN0LrRLfhiUdL1AmrWW8lXWlMN1Vj9Fj5Hop9GpMfHUIafLrA_ZI0TqA742clj3O8K0JxiSiDKqqOuOvXA",
-    googleMapsPlaceId: "ChIJy1WZhTDbQIYRUtHIxg8lK68",
+    ogImageUrl: "/images/courts/tempo-padel-pickleball-club.jpg",
     featured: true,
   },
     {
@@ -425,8 +421,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "old bathrooms (older reviews)",
     pricingText: "$20-40/hour",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEGikK2buX-yxHomdSjlmohiQwqm8sQ8k_kWhBUG5G_n5d68O4kG0oA0e-HoTQpGruq93tdpq1K6u_BW2eCfvzrnbwjzKZyrf9tsY8eUBXfUsZZuGqoBstK7pP14zNoDzbcGr_AV9zzEJxAvjXl8cAWqIz7-0VJqIKFeYaAhSQhQoTg1KN8-6sDNj8f9BWXGdWatF9_WivWtqoe-wKGK1cMpN4XrQU-9gLbWYLCY5r7oGcl8jp6DvEkDF9LK-eMlTS1pZAtU8bLjzmdFySSjpmEXdp7aVii74RjGO2_wfbRC6w",
-    googleMapsPlaceId: "ChIJzdSc-FCz2YgRZzlqsGBLods",
+    ogImageUrl: "/images/courts/canas-racket-padel.jpg",
   },
     {
     id: 11,
@@ -455,8 +450,7 @@ export const padelCourts: PadelCourt[] = [
     rentalAvailable: true,
     pricingText: "$65/hour, off-peak better rates",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEt7mGYagDTnoxaJUQCjhun0ttQj2wuxVT0DYF85yBySN4q-XYtg-0AYEDw3yxt5S9-gKHPBkgKuAgE3Kj9Yecsz05C_RQyFdY0kBcTRoF6Gpb3yqKXKG-oayjfenuzYinMHYU9W9u3Sb8u4UFhzHyQSU5qBBJeWfpDhiZz4ztpQ4mxPjStkSfAY18vkXYvij3O0LhC8d6MfuHszQ1sDK3jOBCqKrhIA0aY1Vy7ppqAEYzcDZrdh7imjJbbEokVoE4PyyixszGYT2fq-C9swvLDH3Zz1LKQYu7EnUpP6-23wQ",
-    googleMapsPlaceId: "ChIJzdSc-FCz2YgRZzlqsGBLods",
+    ogImageUrl: "/images/courts/southpadel.jpg",
   },
     {
     id: 12,
@@ -500,8 +494,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "pricey, parking fees, booking issues",
     pricingText: "$30–$60 per court/hour",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEF--QEJ7uZsUikZx42a44SwkcrAdKntMT0jlquwbabLLfAjuu6edltE_Dy9rLPMjyE91_hIsvS8NYTzqRyXJfdUyjawCg1zX41z0GtJrRyn7TgO8nu9__pd44ygjEohS9RLcvqGTQtCcN5hZJl4V9jSChcZB4WcRq7LfbwKo3NSzcriqzmpk_PuMeysyPQZyt_bUj8bMLzjpRugXMUztYctrBUiD7yqy9Xpyuq8vLHCdxB-g5TYOUvRqunZQiEQB5EwH-4NwygvIb8KZQDfVnZLuRlgy5xEFJ8NyuBAlztraA",
-    googleMapsPlaceId: "ChIJ7SOrU3G7woARaSNd6ZLKrPE",
+    ogImageUrl: "/images/courts/padel-up-century-city.jpg",
   },
     {
     id: 13,
@@ -533,8 +526,7 @@ export const padelCourts: PadelCourt[] = [
     rentalAvailable: true,
     pricingText: "Off-peak rates available; specifics unknown. Call to book.",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEI0SriTIXHr7IG9Oai2IMCzfVqGWXGc42ztMemyLNbVlMVSBzT1DwRO5Elbe9ESA5bbqG-diuIKcu24HpS9BRC2YS703FQuDvKudkIiwcMy7RGie5tZZNKYCGd4VFAI7qb16M0fGFYB4puPYidtNpm7BySqCPFcxL26jFsgzEDvD-WWKy-Z6h2e9UAUt29OOf1vPgKccQRS6G8kYZwBimgmitVV-W0mH4tO1UVVwmqloPdYotNe6okCahuLi00xhxrDjeraPTWne3IkuMMGe3G42-64sv41GNbDrtHPbFt7g",
-    googleMapsPlaceId: "ChIJScojIbQD2YgR-P4Kwb-IJyM",
+    ogImageUrl: "/images/courts/society-las-olas-padel.jpg",
   },
 
   // 14-33: Previously scraped courts
@@ -631,8 +623,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "clean, automated, private, comfortable, excellent service, high-tech app access",
     pricingText: "$50 late night (12AM-6AM), $70 daytime (6AM-5PM), $100 prime time (5PM-11:45PM) per Instagram; typical $20-40/hr, $55+/hr per sources",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEH4hH1AO2Qof__8vv_SowrRLfD04qyQamnTRmKZQ2ZaGwqnomKYEbrd4FjLsHDpXCehGa_TzpkrVoHiIx2VX3-5YEWF9EtbWF1IAwaQaQzRi0VjMn3snz9LFGeFBUfTPHCwVq362NC_2UzpYxBO6w9bkfHS6mIl604mAk86cKAYz30c2ecXoPEuU0-PhtsZbEGOMT0EQyw9sARvcnJqnp83d5znhWh64fIpi4FVPttmFGY6CBoW3vh56tVnGlNwZtAUw5uFq9KYdMEsVSYKcEp8NrWCkbsHrnVi-b-XK_LEGMm7YNir2eDnTaAN-EGVLu-Zq3dNgCbEAV4emxm6epp2cAguajfnrOuXYYb5YWOMT0QGDVG7nI-t1KyqAJ3NY2EmFu7be2Bz4OsYktB7HFDO7n-78kK4WWpJRgbaUEsikA",
-    googleMapsPlaceId: "ChIJmxp5DbC72YgRm9UOBATFaBs",
+    ogImageUrl: "/images/courts/smart-padel-house.jpg",
   },
     {
     id: 16,
@@ -680,8 +671,7 @@ export const padelCourts: PadelCourt[] = [
     status: 'open',
   
     courtSurface: "artificial turf",
-    googlePlacePhotoRef: "AU_ZVEHQYnnn9C1DfIcXpEOydqTSxWD2P8KF6pidVIo1VnvaqzlfTdMAJzOjs5f--dZGQGemY2gU3T2bxsj1jEiIVZMrnKUArYC4VSsT4gVIrKtNessalFkVnAzAkMIDhaQXnXSNrRigQZg7aPwAEhIwXshovaWNRTQz_KxsK3hDKHXkyQWEmCoFqgcsb6CMxyy54uvzNDNLX-ITb0NidEbUx4kJz5tpxpFs2Iu1HFA0-9Ree03Pz2m-y6AluLFalxBfxJDkLzx_cn81r4kmJ3CSBjODoTppEZTS02lVKUioNrCMtA",
-    googleMapsPlaceId: "ChIJuwSGItOx2YgRr379rZKAq9U",
+    ogImageUrl: "/images/courts/i95-padel-club-miami.jpg",
   },
     {
     id: 17,
@@ -821,8 +811,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none found",
     pricingText: "~$120/1.5 hours ($30/pp); unlimited daytime membership $199; clinics packs ~$890",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHB_XEs9p2pl6qjM6FwPqh_r9Q0IMwA5PYBLmuF9ijX-HD5Kh4hP384bNI7l9nd39OJLhiP2isZchjwL200aNs7F_T8OjqCHE-yn5qk9s3Lou4b2ZZ5Y0f7SHGdbD6O3hQKMLtF_NJVIgghE1H8eZhnc9NVhdvwW02nPxzymytzZbk_njk6cadJJw03TX-F-_CJbeR2BvumYGDww6S4GVHiZPMCkIo0lw8qR7qW92-_1HwLyOQmJtcclwHZuijZ266gFy4Mb7zdU2HnPzR5d-pqx3BdNO5pdbPbqpSLfpK3ww",
-    googleMapsPlaceId: "ChIJScojIbQD2YgR-P4Kwb-IJyM",
+    ogImageUrl: "/images/courts/10by20-padel-fort-lauderdale.jpg",
   },
     {
     id: 20,
@@ -865,8 +854,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly staff esp. Coach Leo, clean courts, community atmosphere, easy booking, modern facilities",
     pricingText: "Court rentals ~$20-40/hour; memberships ~$90/month; lessons $35-80/session",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEG3VQtWHjOIM7dj83nuAmnqBmdkPkhgy9HWIk8lDugauimLWygEmuyiVecYvvAJKRTDZMYeV180LA2auWWn4nqRDTeY3E2qD8lE1LrUS_Pb9vyg-Cmfhx7WJf9By--qezZkZXQ81Md5HXouRV3NHf5A9gCaCoNUWFgEb3HM2hBCEfVvhjiOeef-mlfldRcEQHNaHbdN4qqUZREtjIATAQUHRSpTVnY6R5L_aZlhhwcYoGgzJFkRS189qfGr_M9jIKJAkxamemFuSLkzCRwogLDZsC602zSA7LZFcDz8mLy-zg",
-    googleMapsPlaceId: "ChIJg13Fd4YzR4YRb1lIx-tqkjE",
+    ogImageUrl: "/images/courts/woodlands-padel.jpg",
   },
     {
     id: 21,
@@ -988,8 +976,7 @@ export const padelCourts: PadelCourt[] = [
     rentalAvailable: true,
     pricingText: "Off-peak hours offer better rates; call to book",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHb6zAePbNFYuAQg-rPUR__lCr_O-xCPXBYMTiR9YF4QEQoCm1GGeCgb0Zzvmq1qFwRAay904vL8XrGJxm79IeN3c5PE4NWVULHXUoaEDhwkDRSBj8n9Ws3caTE5vdGLHVkZX7OfC1UQPMdXznjg8OFSKxsWiV65AQZgZ8qkN5G4SL4YNtYGAM93rhl-lb9LNwEqT5XhFtSD9el0fmzrjXIroGS45NICcryY65gnUeHzgLOyNmvuMvh3xasRg4jSnACw8yVfaU0TQuXtQfWlXX5mLb-hZw-MC1LoS4CUiP9Dlg99iVXmWXcKlniJi6RgqUtthBGlRydDAzwjuSRwCz80YQAq67Gdf8c_v14ZQ1MCu4-T2JxHIa5lvmkHOIIF__NUehA0JPzXwvKii7U49tr0dZ3iiV_cbIZKyHA-w2Z7A",
-    googleMapsPlaceId: "ChIJPSifc1MnQYYRd3TCY3k9bQ4",
+    ogImageUrl: "/images/courts/padel-country-club.jpg",
   },
   {
     id: 25,
@@ -1011,8 +998,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-21h"
     },
     description: "PATL provides quality padel courts in Fort Lauderdale.",
-    googlePlacePhotoRef: "AU_ZVEGeYffnGOM_SjFIXsYuYiV6CpjH-efgiyVWLhCImnNFsGMbU4rA9436L0gHm45hDwdp1I2X5nUiwn4RPFvAQKBa0YjF5Nqi-Uh7RekyUSv5532NGEl89QgYUTPBvBcUc0V2liBRsvcEbiuIvh8BCy8pFdEXIWHeCWjDjfVS3TvEydemPb_ufn17ShfoXEhWDgcBLbzcSvnDq6IdpExTUyYEe38ve3wYylBLlVwT6L8UtaIxhI-lpn5W_c03ur4kins5zPpkrncKfcXBhXNOupJIzh0AN1jl5K5fronZlDLxOw",
-    googleMapsPlaceId: "ChIJScojIbQD2YgR-P4Kwb-IJyM",
+    ogImageUrl: "/images/courts/patl.jpg",
   },
     {
     id: 27,
@@ -1103,8 +1089,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "great courts, welcoming staff, good vibe, well-maintained",
     pricingText: "$80 for 90 minutes (approx $20 per person); typical $30-60/hour",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFaftU7Uc4GUFqn7GQ-YOWxyjLvNxRFtygfHwB9OBrHQLl-ZD2gdINw4IT-hyqyfWwGUhw8Dx2pWZr4qDHlvrTa4njsNj2P2w1puiKHjQBAoHpbCmP5aBrJ0VtzWsGD6YjWpaY6um5-YA-DETXiVNPRztlZUxF8xBmDWJqC8aEAvJwNleDfAXcqE9qbdJsEf3ufOdTt-YFY3vQsB9ZhPEQQ5uQe-_XRESNnDQZ8Xq7mmrpigHqZYpZy0kiMU6f5LgFBCscZEkhCY4I-DCFUhRhXieBiwLstMR7c6Syi01Pkcg",
-    googleMapsPlaceId: "ChIJo6alj-qt2YgRqD_KRxlHBsc",
+    ogImageUrl: "/images/courts/casas-padel-club-aventura.jpg",
   },
     {
     id: 29,
@@ -1153,8 +1138,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "loud music, harsh pickleball lighting (from limited sources)",
     pricingText: "Court rentals via Playtomic; e.g., 12-pack 2hr Pickleball $577.8 (25% off); Groupon deals from $30; memberships unknown",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEV5TUKJ8f3__Vf_N47Cr3WoTqYK0lGuEpopVK-cTJT_iQrWLvALd3XbdQe8-Y6niXxDKc95zRGTcId-_8wjHQRwuHH-FaaIlYTSVlMF4_B4hka8N_WBcMfzgrTzEbYOZL8XirRhrxM1bhFOXHyWHrHn7jJG1f2JOPQv3yf00kDimkXINWyG4s4qlvr2OM2gR55oMdAh6hRpMWaxkl9kTa_QcXt7CnvB4xIg5JhsgLYYs8k0_gWIFtjSJP8_wp4HBOLdl31x2fjjlRtObv9OCCf0EYw6Tlibtvh814zfaWN0g",
-    googleMapsPlaceId: "ChIJ-fIGIaCv2YgRJO__gpZzE0Q",
+    ogImageUrl: "/images/courts/one-indoor-club.jpg",
   },
 
   // 34-51: Newly scraped courts
@@ -1200,8 +1184,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none found",
     pricingText: "$40-$60/hour (reported); lessons $50-$80/hour",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFvGd7ZSrlU2dbjOSpK7ADDp0oMjInnJbEK-HpNpqmjWMBYtZE7ZIMxazINR5hr0mK39-vYruFQy9EvhbS5nO6burLKgqz2svN3dCwPxX9YV87iu7K3ZnqPd_f5t8r9HgVsuxDGe1oA9f-CQE_JypB2vPG2K_jWNCK6EECOu_Kk1iTsvze3TCs_ovykIK3o8jnfmcDmwCxlJJelySVJDeEVigXB0f-uc10NvT8hyFvUqLIgH2kiKpG9T7nhcs-7yx7eta4_yNqlFoRXF_DR86TzkvDmrZSuV0D7gWTv6WShDA",
-    googleMapsPlaceId: "ChIJfxMuVxuz2YgRXI0SGRuhAFc",
+    ogImageUrl: "/images/courts/padel-point-miami.jpg",
   },
     {
     id: 35,
@@ -1292,8 +1275,7 @@ export const padelCourts: PadelCourt[] = [
       "free parking",
       "disabled access",
     ],
-    googlePlacePhotoRef: "AU_ZVEE-shB4rNnSsXIYaAzePFFQL2AGD3vcyfimKAHLb1jL-fHluVOwNo1gDyf8lVGchEP8UcfO5toZHxhIn--csI-fex6p_8vcjKoFXAJUv-4Q_AqrwYQUvBBtUlYSl4eiQGG-zUTb5plIbIZaxMgp2K0g7g_mJSf9gnqfjmIWotbr5LkJFUcBEH8qyoYiMj1Jn1zV3-a34Du9xitH1mQtPWB3OAtG4mYzspgPlOBjuO1BwVdUf86kOdZNOnj4R_e71bllcWaBWL3-YiID5qbwBIKgUej1rN3uSzMpmFSX7GkVbg",
-    googleMapsPlaceId: "ChIJu7suWFGXwoARsX9aIp28SpU",
+    ogImageUrl: "/images/courts/pura-padel.jpg",
   },
     {
     id: 37,
@@ -1380,8 +1362,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "high-quality courts, expert coaching, fun community, beginner-friendly",
     pricingText: "Peak court rental (1hr): $54; Off-peak: $48; Racquet rental: $5; Private lessons: $90 solo to $35/pp (4+)",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHnJwRhJGux6hslzydD1spvAaCay-2Qvfifurx1uRZxP5JTWH6gMnL-Dbx6XJaf9eJwxATEokDzpjf3_e3UmjOSucZ9m9De8hGEnYYRImAiXSKsD9WhnCT3wARh1O6cc7E4WnN8KLtaMkRtpCBHjVYmukFB1UgGdB8i0DDA0PC0pOraCPkhGKJ0Lu2-einZl9rm2z1ouPTUY0LU8n9o6E0JwM3sygSZ6yDDpdt3ors0l9KJ7cyp4n__d2d0DrRH5KcSp3Vt7UobeXts7vtJuscGRjT48Zu4Kyv4juH1NAV6V5dnDNG7Z1A3NiBvS3-1zRzbqzyyFYI-5q-k8PxEakfoGCZvrJ4uKpghfRfAMDIfIn6HMVL83Ra_AoULC6P2JEKAUa3SdvgxHjhA5Zl6HTw_FqdAscttWEVxF8xnbUk",
-    googleMapsPlaceId: "ChIJAfkN9Ab6FmwR0DXfpBZTmbY",
+    ogImageUrl: "/images/courts/la-casa-del-padel.jpg",
   },
     {
     id: 40,
@@ -1471,8 +1452,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "Expert coaching, quality facilities",
     pricingText: "$30–$60 per hour per court; private lessons $40–$90 per hour",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFU5QsWwXZexdH_aZdzpnsi4CmrNUCR3SIRXTnl8j6Xb7T_irw5-pzbzGgAdAVlkD0uXnEjD1zjld8K3McX2sqRpVJLbb_PfqK7HYDpnoJc-gj4T-FguyQc-_374U10sSVjUagsFbkWnqUml55LZ7X7g-iseLRRkzbJEeGhYaC6mHK21Vvbg2KbBpm-zX5gX0wgWD46gZirQo0lrx0vlFlM8fpPsvy7oxzEMmL_hNLzo0QW-JnMNs7VYG8-oLMYt1dwNClCKbryXng_6vd3TYxKGjp07SKALJQCocbyzt2PQw",
-    googleMapsPlaceId: "ChIJpzXBcUnf2IgRHFFFt-bsOkc",
+    ogImageUrl: "/images/courts/rxpadel.jpg",
   },
     {
     id: 43,
@@ -1518,8 +1498,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "fun experience, friendly staff, great atmosphere, good for groups",
     pricingText: "$20–$40 per hour (varies by time/membership); balls $3-7",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEeAf_kiHlpMEcjQajgQ_P88gYR1OI0ydJOLi0Q2SMODa_KsFNI8hnD7ZATZ6Z6BCknjEUTuBFJAQ2M0KFw7V-PauVD44ej62e1FHVGDz4y2hOeSrq-nNHa0zby7o6rH2RTHGWhyk1L96Zp2GPVDxcGJMAiceeNKcKSlbsT02w1-AMN8z7Y6VcweOlzxR7QGAwTPkI5JP5PXw4FTRoUMp7zeWP0m69WMuySQJMPYpAhYXGp3jcoSb1pb5B9HLWclvPsMt6GHx2InsfkB9njeFmVfsDHifDoF3g8y06VHX76bQ",
-    googleMapsPlaceId: "ChIJtXjXxQBv1oYRDNwEylZDdO8",
+    ogImageUrl: "/images/courts/padel-alley.jpg",
   },
     {
     id: 44,
@@ -1647,8 +1626,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "dirty bathrooms, unresponsive phone, possibly temporarily closed",
     pricingText: "Off-peak $55/hr, peak $65/hr",
     status: 'temporarily_closed',
-    googlePlacePhotoRef: "AU_ZVEHMZXeG4Mfpo5H3cu1CoO2U7QrUNdV0bW-XI4AGqsZ9ldQnSI_bfEiKBbceK7sowMRy7SFlHSfaJjbPRBaj1ZtLy5Tyue84lahXXDXXuU6gtUUmiNf6ZVIX580WhEeGlfzVwZ05S2XTldPM8L0mwJ7Jx8_S1OiU2IYCz9biDGChhbwQLRbC2StARJQMrsIinM2EHVJOLibthnDNbHBsIRA0VSCISiXjui0nxc9EE00fHqOmtu02ci49pfW-OSqgk7kTVE-25Z4R0KoDL9WbG75AmW8yDbufxyT1AHpwcbYnYw",
-    googleMapsPlaceId: "ChIJeShI6cfHQIYRhuBkWPyKOfo",
+    ogImageUrl: "/images/courts/sb-padel-houston.jpg",
   },
     {
     id: 50,
@@ -1830,8 +1808,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly staff, great vibe, community",
     pricingText: "Court rentals start at $104/hour; memberships from $200/month with perks like discounts and guest passes",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHavtEmD-XmXuIR0hVTU5gEtQA6n5-QE8A8rD-jh4ft9_Tt4wDubB-2oLAg-hmB3Dm_kTvtVD9FFUwEM4Lc0kuZiWkXrjWeZ0CzCd2yTGnphsZ5PTXTWIkYnfpDCzLExePVcA9kw6tQ-NukmoQGJqeqacWJ0vtyuNy--LnzJKfik-D5D33-uAp6-Vr-1zv45MtJ-jCM2ItPjvSk_iHfj8B1XgmfMl7NDfdZNEnQv7UdHDPj5m4Sffyqkj6w6J35D16nsDktBMaXm8leMHmPgMJksSp50X_Cb849ZQjD946RUA",
-    googleMapsPlaceId: "ChIJedoea2e32YgR7Bh7-yEJjoQ",
+    ogImageUrl: "/images/courts/padel-x-miami.jpg",
   },
     {
     id: 54,
@@ -1876,8 +1853,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Hourly: $12.50 (non-peak), $20 (peak); Memberships from $250/mo, up to $350/mo unlimited",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHPQSbnpohGRajWjPHOZcG5Hz5saK1GDBjYpPmyt3cTtxvkIyq6TNhH_8FNQWYejE8s4763UBq0xOa7DwYAhOuHPPJRbBjSdcLAamiKuzRS46SdC_I59PPizMUzqJsWKfdSan_EIUrn_KhnojYvSdE2vEzRyVz-x2pW0ou9E4NymXZ91MOsUUZIuec3mSxmgGa3sfMYMWdfN0FrDBS11bU4rssZlsnvWB9KCa-rUxXIOKyf8th5poaGRHE-NE-ieLDf8KZjSlrTYA4OYe9XBGKbN27_2X-MGJCkqN8oWw3Fzg",
-    googleMapsPlaceId: "ChIJ5wCpAWwXBYgRcM8AQuZ9mDM",
+    ogImageUrl: "/images/courts/padel-mke.jpg",
   },
     {
     id: 55,
@@ -1926,8 +1902,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none found",
     pricingText: "Non-member: $40 peak / $25 off-peak per person per hour; Premier membership $120/mo ($20 peak / $16 off-peak); Clinics $55/hr non-member / $35 member; Socials $30 non-member / $20 member",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFCh2mLlN5ARs2GJCIN0zTQcCB9ZkOhPKFhQaS4B14HF-vD_hu10czRZE-OdmXRgpeCNW2AJaA2YREZfiGKNCkjRvtJnkJ8yy10_dJCzINo6iovsvex0GPBO-GAmKgYXCPMpzJzhZTarRUQITiNjBLf-uhnXQ6UaNYV8Bzf59K_BMYCRDy-bZA2U0KrXFs6c1cVI4a0p8lBRmRwko38RNOeeEZjHDMBZ4S_GSqkuxhSBHSMDjkxb67jEbJwMmiV-vsSD666xUL4buyOpbqsjnpIMhI-Hu_u3esZL2W4qHl0Pw",
-    googleMapsPlaceId: "ChIJ51H3i-SBhYARqWKxO2bh6Io",
+    ogImageUrl: "/images/courts/park-padel-embarcadero.jpg",
   },
     {
     id: 56,
@@ -1976,8 +1951,7 @@ export const padelCourts: PadelCourt[] = [
   
     courtSurface: "artificial turf",
     facebook: "https://www.facebook.com/p/Park-Padel-61557382367500/",
-    googlePlacePhotoRef: "AU_ZVEEs59bnfE-m2C3xuHyIcCnQg4osegxxcDIPy35ubnBp9yb6g0RMOK8-NNwSEqsXlHKzbgrHg0iDjfCq4JVbfMdkvEAXM2JzmxbIVfbbBCdRQ0XqB_8Nt30u4PVY4Dx8HUHHCezUnUa4Wu_oUUx8L74Tz-yyzelUmBktqiNlcuJlv8RIILsBDqdgEnK2qQwaRkkvErTb7dqSSYxAmBurJMx6E_SbD0z-Rso1QSQYyDavRiokSPzV8Lr-qGMbOWRC51kyoeGvCP7hpdZLbp4f-aThtpeXrgNq9LErtPiRK1q00w",
-    googleMapsPlaceId: "ChIJ42GZ1Id5j4ARooVgJcnWM-M",
+    ogImageUrl: "/images/courts/park-padel-oyster-point.jpg",
   },
     {
     id: 57,
@@ -2023,8 +1997,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Hourly court bookings (per hour per person, ~$20-40/hr); Early Bird Unlimited Membership $99/mo first 3 months; racket rental extra for non-members",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEMGlyNV0ditIQ4xNk3PIvLMw6WUQi9mSUvadfpJCr9wqHUJQUAL2ILa1ggHrkTTT0_7zLwUlG2eV7lAeXDV6Xkkf_8kyolnhHF53TBQln6LJGdbpwjS2slsfVD8be1XxFPOn4ZwseG2qp5rH87BSHCHFHIi0lQ5x-YauAR8Ez-ClmSgcLwjW7x1GTDeWp07p2-09e8AYH1JpBNlkP2bnV_Z5GXT8iJXVfYs5nAWOAc8GnyBXqi3cMCux5PwVUMnANQtxU0AJWwu9j9EtHAfpJSrOnXUVMpA1AVaM-U8WOLow",
-    googleMapsPlaceId: "ChIJQVunKqbRmoARSuWR0fYgp0E",
+    ogImageUrl: "/images/courts/park-padel-west-sacramento.jpg",
   },
     {
     id: 58,
@@ -2071,8 +2044,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "high pricing",
     pricingText: "Peak: $75/hour; Off-peak: $65/hour; Memberships from $75/month; Off-peak membership with 50% off bookings",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEF8nBnmKRZu7S_TwJZLmb2IZgA4dxC_4PZUG-7FxbkqXprAngcsPFcsEIROqIgzBQiKuCn_7FMIk8KFMCWgVzVpwpRSddDi-Qa99kPM62Nrgdrxb8TPqL_iSuS8AHXmCqqVeWiC81LS9QvhLKP3MYRK-89Y4IU6yIKoEjLQp42rzV9tKxWf3i-QUhKETovJnLHYd_5Cy7g2yuyb7KHWNs2zOTw26zU7kHNRZZV-DAHTZrmPmA2SMlvH4uFQXWRg-VSbtHcEQM_oJbEckoespuu0wYnZ6hvhlktTxz69SgpTdg",
-    googleMapsPlaceId: "ChIJMSqnPjZZwokRhjT1BHESMRc",
+    ogImageUrl: "/images/courts/padel-greenpoint.jpg",
   },
     {
     id: 59,
@@ -2315,8 +2287,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "High pricing, occasional cancellations",
     pricingText: "Off-peak $45/hr, peak $55/hr; memberships from $220/mo",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHUiNVGaWfWtrekEgCKSY6yvIaCpwE_33Kz7TPKAN3iN8iWfNnZbdypLrrPqbTWeWjnPA7DRkTzjRxlBnxQHES2ufAVEPz4PIUjj0sCHDq78KZaooDZzyrzf1J11skPpn7tlS0kGBUxW8G_Drfqc8RugQ7Utu6qkZmMcdhRryaUkLmS6epxyOvv_4uTXVRkzOfUj05sj6rEe0RdN6R2x1q7rF41F_78spu9Q4L9iv6lDdXY4oeBZ44_dE3qswjk7Ibjpes3KmTPJf2G56PdvGGjCeqjVN5s5XcLPMcWQskw1w",
-    googleMapsPlaceId: "ChIJF3jXGvq5woARbMR8lGFdedw",
+    ogImageUrl: "/images/courts/padel-up-culver-city.jpg",
   },
     {
     id: 66,
@@ -2363,8 +2334,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none found",
     pricingText: "$20-40/hour per court; memberships ~$20/month for discounts; lessons separate",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEyVAcIVvSBHvWSA09FIwv-1IXVp0pFn93iMCJVBxreX7UHltBetQo2tuTYXvKDOgTfuoAh0vDSvy4S-dv2xZl7Yi6bJwrE4O5299Sm3Nn8ffkMcEUIDSIhbZHAzIoxIagAzsUgCPmmwmN2qg-CXhO4hNJo64kbCxXi2wAq0CRsaKyoFi9FNoJKLuDQd1UnG41Y9G8qfKMDpkMzt2cJp04FBCgkojNWhbMF7I7lo9nTzQnOYAPTzSjwAW2EkjmC9Cpsn-UDNdbpaoVzg5qUQ2M7CARVGuGKtqwEVm81jsmV2A",
-    googleMapsPlaceId: "ChIJ2yoKzQnbJIgRtZTJWH33eM8",
+    ogImageUrl: "/images/courts/zmash-padel.jpg",
   },
     {
     id: 67,
@@ -2458,8 +2428,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "world-class facility, friendly/helpful staff, clean/professional, great for beginners and pros, excellent coaching",
     pricingText: "Court booking from $20/person/hour (non-members); memberships available including unlimited play",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFbmJS9gSvtBSZg3feH3xPqla-hm_dd_t0FvhS4DTiroFDec6HQsVAwaGWdjL50X-j1Pp4h3ZqRg6gQ8dkqNy60n9LoGwUPrMuBEMBDM-Bnco_T0iik5c32dxBuEum8T3dGKt78kNiiIXU-Q4CWqxg2W8eFhDzhPVUhj0ieZIAz8L1rQvDm6gAItgh44eJX0Rg8QvFQnzZ18wnvgzpScwkrTcd-pWlD1ZpfG8s0aBaDALzARSqXtWhn-vwz3EovbFndAardLwTZ19ELPMWvitacCX8hIeEfulJscfCymtwjdA",
-    googleMapsPlaceId: "ChIJw-O_Xb_ByIARFPiMDbOL3UQ",
+    ogImageUrl: "/images/courts/p1-padel-las-vegas.jpg",
   },
     {
     id: 69,
@@ -2503,8 +2472,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "8AM-4PM: $50/1hr, $75/1.5hr, $100/2hr; 4PM-11:30PM: $60/1hr, $90/1.5hr, $120/2hr. Open play $15/player. Youth class $23.",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEGvmOCo_tER4cgoA5s7tU9S9e5STZEUcHuKB3CiTfyV5ma0stDcoDzMh9gxqPyyHBnTKBEM_MhbhQY2BG2DY_9kybKnk57dteodPrk_qI3vjFSUxIV8UMZKQJPlkftzPuPgLvbjrpgNxIpusCt52wOl47amcuWuXvVH5VSGlwxFvF4kBv8EGAhXm7iiK7SDEt7bHr5yLHvL-I77AKxy9N51E3x5zL-F-IrXUnM6RffILTD_Tct_MFR3pAZqCh_QXmogShRP9STRZXBpVkx80-GabrFN4elZiy8SByeKqlJ2Tw",
-    googleMapsPlaceId: "ChIJx64atm9x1oYReT1Ez-pgjQQ",
+    ogImageUrl: "/images/courts/padel-az.jpg",
   },
     {
     id: 70,
@@ -2550,8 +2518,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "great facility, friendly staff, nice courts, good for groups",
     pricingText: "Padel memberships: Adult Unlimited $169/mo, Hybrid $50/mo + $10/visit; drop-in ~$20-40/hr (est.); +$35 initiation. Pickleball members get padel drop-in $10/person",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFIn91qWmcsDIPDJygQKHmSMWR3hn3cSXhHIdMowO137F5_W5DhKNVvFxokRqAlDoFMf2egeR3lsX9kzSnI9gkw-BPM0uitvYoaxrnC6ujLMGeCS4H9IzUfGpD0-Jl7IIG0PQrDmeKUUdGi4vWJ7BCkVrRmTSUz5OXrNSvha8E1Vtf0_k1du5xYtPJizw1kd0MvLES77j1HxFmKJXc_90v1zX8zGVdloGWLLmZ69goi-Osp14HEKNb5p2VBabZW8sUfbSL8i1HJR_TVvj86JwvO3S1_jmCSxuOjHRlpxNsWUw",
-    googleMapsPlaceId: "ChIJxRPRH-Jx1oYRWxxppcNQAWg",
+    ogImageUrl: "/images/courts/the-pad-tucson.jpg",
   },
     {
     id: 71,
@@ -2600,8 +2567,7 @@ export const padelCourts: PadelCourt[] = [
     status: 'open',
   
     facebook: "https://www.facebook.com/p/Padel-in-Orlando-100071668202241/",
-    googlePlacePhotoRef: "AU_ZVEHxVdg3xcOoGUGk8Wac8AN1IezbK_Tu8wjDat947afvw2EkrH-tCEnvHxpwSOFU-zOF6gCPb99U1XJVMQvbe8NInEUxIcLdr4kCq_6QbvGX9ths0cyUgYV3mFUofmDc_2wmtu76AqJs5MYxdX8jYrcM-Hql9ZHEvdAygokDiFLtIYADRuAYbRpXkJNVKEYcwTYoj1Ye3gc5yhqD9uR0NAH8adLQIbk6TxSS02dSxuFHE62ddD-8oAXWpZcSmhEsA0i94wJgn6wgFJeucju5OIDjZZjyzSjA7v7wU-rqyGAkyw",
-    googleMapsPlaceId: "ChIJMyv5sQbLgGIRp6pTOU_za94",
+    ogImageUrl: "/images/courts/padel-in-orlando.jpg",
   },
     {
     id: 72,
@@ -2739,8 +2705,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "parking challenges",
     pricingText: "Per person 60min Mon-Fri: 8am-12 $8, 12-3pm $6, 3-9pm $13; racket $5; lessons from $80/hr",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEG5eOwubHJDJ-Ubx28exeoW7rJg1JYEnoK_rOphUXISgb7XbiS83Hwh3pud9aUHrflZnDjs09slJbBI1grCrh9HhcmKKbzyxd_a3_Ki6o_YAAzGtAgGRHyOJFPDUg-7-prAZ38FTjC883d3wbl_ACWWYkN5camkcOech8XfHVnVI4XmbwMchUTYubDDr_57tMBIqQGaVEgMFq37p-I20VDTQz0GpzYSL1MSn6KqXbo9r3Uzi7EqHN1MTAYt8dedrbgszLKlTPP919N6c-vY2TvOWfrGqSZrXOJsdeL68iWy1bd9nMeaGUsmRxVG3lprVozEz_bWzEBON2r4Ksbu1DPcriX4VdfkZtqJBRAakI5UjLCqdG4sRQw0iwIthGfuastZWUn7Mp49BsxblavFETaje52ibOSesHcFmeCHgmk4wg",
-    googleMapsPlaceId: "ChIJZSFPOKir3oARe6FQguHus4A",
+    ogImageUrl: "/images/courts/taktika-padel-san-diego.jpg",
   },
     {
     id: 76,
@@ -2874,8 +2839,7 @@ export const padelCourts: PadelCourt[] = [
     facebook: "https://www.facebook.com/PadelLifeSoccer/",
     website: "https://www.padellifemiami.com/",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEGWRUSTxeudUDQkxaAcC5xaIh_czPhcjdvCZ2nTe2e-3tRVGPCKmgC3KG_3Yrnj236QwBdnCK9MdT8MevI81tF_0VHIzgylstauOtuKhQLwKk9jOZtYcAoGiWjGMmiR56Z7c-ZaxrL8ZYs1E5v2H1uM5-e-C4vyFjv1TqPndpvfTZHlxetzI-ryUqqK3ASNNQLyP58Qc849CxwjaNTdHSLvgVFW0Rrb8-uuBOOXL0P8ovdpRaYnt93LalNBpdQdPEzzAMD_fvEF5ynwFh2lViztdKTrkpQSRwiU6YAco8Ujqw",
-    googleMapsPlaceId: "ChIJY8hsvYyr2YgRntqMi-qve7Y",
+    ogImageUrl: "/images/courts/padel-life-soccer.jpg",
   },
     {
     id: 79,
@@ -2915,8 +2879,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "Excellent courts, good clinics, beautiful location in nature, hosts Citi Open",
     negativeReviewThemes: "Poor customer service, unresponsive phone/staff, high prices for public facility, parking issues during events, aging infrastructure",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEZZUUyx0b6Wz_QiH2aKFF4C1IdeQIQAdRfMy8WbAxizAwxVVBim3vGCF5wNeyslLk6UHLLq9Ow33WdPMa290w2cUWE_wKzPEHRvGlKzFtYsrME4CDtLU7pV5rfSDM8tepnqWqKRIZriaV4LGMW72hmm2zG6T3C7ejtUGlDvqEkNkv0679d4NR-4Fj9SMpEZAvhjPeiOVYOAbvEALyDtg3nvOAfsrIStAla89S50UTxvWJaHeCZinuITrmnYmUfcP23n_ZvRzllGC2g_Kzh1fYqrwXg59al7pPdoXQtb64i9tVHAxD2zZWnyP2GIg9gG_R8CjzhWMQ5wh8RfBv2hKMiE2HwwkLPQzukqfeGN4SGpc0igX4MkpBkpruR4bVpp362Z8Goxm5viKqOjq-xAay3y3E6T3SBQGS8B1_Yt6nqm5ABp7xxHe_wHKXGZQ",
-    googleMapsPlaceId: "ChIJp7a5lUPIt4kRaZ-A6mTLUQE",
+    ogImageUrl: "/images/courts/rock-creek-tennis-center.jpg",
   },
   {
     id: 80,
@@ -3002,8 +2965,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none found",
     pricingText: "$60-80/hour, $80/month membership",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEF57LnbLDI_K_JqDIXWO76FdFzQQJ1-Sn_aHpqEchdQeQIXyPhfld-1wmipRbJmssobr4Jtof1I-RyorFOBOIiWHNi7f5XqHNG2alt5WrNFiXpsByasxuU8StUD07A5mePIKukt9xedLarckrHgQgGTXF_n2Spc0hddoJqLK9CY9zFYU2OPV0cj-hARJRHndadplJ7uL2duuF2oSMvc5vggtOfcFyA2Z7QkvbF08ojIMJeJG_ATzZUE-XdlqV_IERx3kCfit0f8jQaTkNLhqjRKo-l-9DfeetQd5mgV1CppSHNnNbFxPQkR4ToR2utJgQkwuqrNUr4DkXN7PHBqoYxfeR1P6hT28EJwlDu_VvmQpJcU-0ML9633lsuVLVbcozGcnl70TJFbxxVWvgB-Ij9T-funm8NrQSawUMrJuumsro8Zq6TrfGbm1I5npYvh",
-    googleMapsPlaceId: "ChIJy-o04ujHt4kR012dG6z5M6o",
+    ogImageUrl: "/images/courts/glassbox-padel-club.jpg",
   },
     {
     id: 83,
@@ -3087,8 +3049,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none found",
     pricingText: "Memberships: Full $550/mo (fees waived), Basic $140/mo (50% off), Student $90/mo (50% off); court rates unknown",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHUDHF5C2sUc1Xq3KQpcZiUHWuI7xj8ZIKIQpjmoZids8C-aVNAyCfNMPdp9BDN-8iDgMZnvViqHgTOqlAanDtSQ7DomMU-ugjWM1maJ61Fe3sSJByMO3_pXPwmagJ0hsbzL8IrNOO3sUzNHZhJ_Q3xT3obpkvxNiVEffA_7MEd6Ljhwu7tuKs-5NmkBI9F3UoLjZJJTznQjk7swI2LagdMwhJFqvYT2VXWsObT8QlPtFc9LHd3DolzMhwR1BPO9oIDpmrYLVKdK1UdKvlMrlURWAM9fhgktYhFaHg4xnoJew",
-    googleMapsPlaceId: "ChIJgVITKOz3wokR6x2JUUULmI4",
+    ogImageUrl: "/images/courts/mink-padel.jpg",
   },
     {
     id: 86,
@@ -3181,8 +3142,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly staff, clean well-lit courts, great for lessons, professional teaching",
     pricingText: "Padel court hourly: Members Peak $120/Off-Peak $100, Non-members Peak $220/Off-Peak $180; Lessons and clinics available at various rates e.g. private lesson 1-player member $140/hr",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHYsrn1zHRhJ1XJa4sESHMrhCOyEYRizcwcwxheZb1V2X1X1EjJRD1yw06RcLGYdN6ID9oBJIb3CYH57CqgLmXJHxcuAmsa35YAxMaTknfxC_C4VKut1Z1tipk3ey6LNu48j1lVDJIq-XoC2CXgKN1dqw3kB4RXC5co5gZO7LDpaGfclUHLKicdRbTRs0UxZvXb3HQ-Eb45ITS-qMeKNsbtIceVrLLx6xUXmQpKMJHRT55Pb1R5JyaDbKEmh_xpFVumsq_UMM0-1BtNncAg1XaZ5DSx9p55Ox4Y5s1_qdMEgxlA8lnQ9PAFf7eJXrLOrbq30iMbSKmNSuYfuw1TdpwsR_uMcqda8j-4FeWYcqXOA3q7DADRPyQ3VmkhkXJ0Ig8jc-c_WHU2csa50Ay3bw9Vv-YlxTOchva1kCafZP_xLg",
-    googleMapsPlaceId: "ChIJW9MHwaUf6IkRjepcIbYZsNA",
+    ogImageUrl: "/images/courts/the-sports-haus.jpg",
   },
     {
     id: 88,
@@ -3228,8 +3188,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly staff and atmosphere, great facility, fun for all levels, clean",
     pricingText: "Padel: $25-45/hour; lessons $60-120/hour; memberships available",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFGKPZa7v4dBl8uhMewUDEJotHuDRze5bMAMLkdbhmIOdQ2zivIwHOaIaJsbnsXI6CTNv1UzRa0JQbme3UdKZtoxH0hHBhxOKxD_df--9AEvYI0dWotHHaByAwEZ1Si2aFAOFUSveOxgBQRNgyFp4YX2lIrMm-n31vFkhyL1Tl7w69F8wd4OEMf-Wayo-zoJ2XSJeWMhQ-mJDafBNBZX0zLQjVjWLQIJfrZSTkxxqkm3B9qfOtcRSG2Iswcu7My-1n0VuDeDTAhzVHXX7SrWkpYMbjzyTlEb7x4KLtpYpyXzg",
-    googleMapsPlaceId: "ChIJq4T39FFfNIgRryXtPqEajWE",
+    ogImageUrl: "/images/courts/matts-pickle-and-padel.jpg",
   },
     {
     id: 89,
@@ -3274,8 +3233,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "excellent courts, friendly staff, great atmosphere",
     pricingText: "Non-member: $32/hr/person, $48/1.5hr/person; Member: $20/hr/person; Clinics $40/hr; Privates $50-140/hr; Membership optional varies",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHiJRvQM_7HOBGhfln1L6Ry4NlclrOLnsVrwTnTXXYsDVkj4AyMkNO6l8fMTC9LKZ156wmLHZFvnH7kQyFLK12EgtsLwuIFMAUmTvLtk6XKan3ho3k9IxclCbUCh4xe9mUqJwyjQ6dw4JVr56DaMnyB9emVFgJD_fwDt4p-_sJ-X07JWiT2kmM3Bn2ixb99d8YDD7n7-bRCJqbNqg8iY06OmCZIoJXToL-C0WWm38o4vGrrlNzuwLeYB63EccskO4fNUmMSLCOwFVwzRveKcLgvIzEzF-TqLonNhpoGURU",
-    googleMapsPlaceId: "ChIJu4EIxyPHD4gRVL7DmCQZx-U",
+    ogImageUrl: "/images/courts/alma-padel.jpg",
   },
     {
     id: 91,
@@ -3371,8 +3329,7 @@ export const padelCourts: PadelCourt[] = [
     status: 'open',
   
     courtSurface: "synthetic turf",
-    googlePlacePhotoRef: "AU_ZVEG7khy5w3zb5gQEq8zhrwkz_CjnJartU5n4fpNYMCnwmahHrP52km1hCqpeRDSK132u71PmRJcR63xrqU-0A5W57TPA6Z4o1h4UL93DewjtRZFXwaqTCLWwXP2tBK1App4_qqgT0V-qTcrDXR5PDFrmnWluEkYu7RiD7nNdDG1Avjh3crSAgYdQORyXG-9pCcWrpd9_DxKT9wh0i-te4SSRUH8x3kETpbd2DaikvP-ndPjpQkwp9JVdJU6POn11pOXbN_UzV1dOf2bJULDKpWvzKaZI8yr6IF-TSMXskHbg7b3GQ-kn7cmfCwS6_qluCwj8I5JdPyzxUA6NygLMhCU8ALF7tyN4R7D1Qb-pyxTHeIoG2S-UqYxKyEM6JPGvgmRfoyi3whE8sfS6b-W_pFbPOUJDTwgZx4RVlh1jAUMlDg",
-    googleMapsPlaceId: "ChIJN6BQnN2BhYARZiaQR4CPSD8",
+    ogImageUrl: "/images/courts/bay-padel-treasure-island.jpg",
   },
     {
     id: 93,
@@ -3421,8 +3378,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "some areas feel incomplete, gym needs equipment",
     pricingText: "Peak/non-peak court bookings (~$35–$80/hr); memberships from $99/mo",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEG4AzvwN3KbIdXDaQiudCqLjC1Fk59dyD6x1xgZTGAGV8uEpnqW69pJnSbPJ-zP9hcwmC6N397NUA_CeAhzBosg2uChQHIFYYb1V1sApUSFEOTYZ8nom2eb-jmbAQoD9UlVFu0NtVu6IKNgkNVQR0KtfbG6OEmSvF4qhlcYq4Ntb8l-zbZYteDhRBwiNjKevOJOTrHVmO_W2Bq_Nq9uUzSu0Mfcw_-5fPxVCDfFx18L2LSedFTnNwGGJnC-i2e5qh2veUF7K9XWx8JuKXJnltj8kQCkNbOVmDWfcbGo_07oKQ2IXwbi6WaSbint9Nu6JM9EXr-vDLvuv9HjoBfvydyHYwF1eBjdrs1WmHyl_nskxYKFnT8Q2F5ml1PazU00dtQzhTuiU0JHj_GbtnzV4ttO9uxMhglxqLtJBE-y58AyY78Z9Ql3cpns5kA5xQeN",
-    googleMapsPlaceId: "ChIJ9bAKCwB_j4ARqAQbpe2djhk",
+    ogImageUrl: "/images/courts/bay-padel-dogpatch.jpg",
   },
     {
     id: 94,
@@ -3471,8 +3427,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly staff, community-oriented, clean courts, great for all levels, knowledgeable coaches",
     pricingText: "$30–$60 per court per hour; memberships $99 standard, $319 unlimited",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHcV1LNwlUrpKferPnccjIC4M8NNw6LvONi3r8n9tGAcKMTlkzPDPxhmTsYiS1_B6-g6qfdvrr3hGkcdUL-gTcxcJTl2rxNftnwefVKqnC-PaWn-_ul9v8CUOyCixhi8nDM4RWW-ium91fb4fUEo-zPDr8XBBo5Gz_tuR8rIATL7VZKsMnXv7yf-qbMg1W0phZqkQd-v-2GtOxz0aQC5L5tGbiw1r6RIRglERXqIm9G30iedxDeocyPsq2CarPgZQiDGZtWC5xIpmSl_RlpAAzBv7DSWVI0YfGaxWYvu-wohQ",
-    googleMapsPlaceId: "ChIJYdMmYAC3j4ARd2RdxCONaDg",
+    ogImageUrl: "/images/courts/bay-padel-sunnyvale.jpg",
   },
     {
     id: 96,
@@ -3559,8 +3514,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly community, high-end facilities, great coaching, social events",
     pricingText: "Members: unlimited free court bookings (Standard Membership, 6-month commitment, initiation fee); Non-members: $20–$60/hour per court (est.), charged per person; up to 55% off lessons for members; example no-show fee $45/player prime time",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEG1x45MPW-ZMs2HlouCL-5s-bEus_pE04rKkwmEuR4YCSF2VomTNL1qgTYHpk6yw88aAb-VjPHCCZWHF3OjL4WTU79gOFDUeV0vH3H9WtySX2RaRQERLragoZ1BGcEDj13AYZ8Nyskxsm2TBc1d-ALTN0iNoxLa7TTBBrR6i7LPV8WiMuPvZm33C2qeetqVikNX1tN0gsE6Yb6h2JbUOQqtGdCkFbNybGL66_FwPMD21WyyQqI8Oip1RoIl-dGdFJpngkhBUCWWa8Q3gTdVkBspx95zRh8GHJ0g7Yf5R0_Mdw",
-    googleMapsPlaceId: "ChIJX45THYEH3IARbJtMhjsB03k",
+    ogImageUrl: "/images/courts/padel-n9ne.jpg",
   },
     {
     id: 99,
@@ -3656,8 +3610,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "maintenance/cleanliness (mold/pools), fee increases, management response, dated facilities",
     pricingText: "Memberships: Fitness $79-89/mo, Full $109+/mo (courts free for members); initiation $99",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEXkdciZq6x1OyKzcNIlQZcRGGAbH8jvJp98HQlH_sItu8v63IGDRJ5mVNzxyGOGUWYnTrr8ExA4ACe_JVlZ_NodAQm8jbWrzuXyH86uzLu0IaO9aHWC_7ZCcVuUABHQAfOkFpMqUYGsvN8jK9_m7On0XI96KLpIuRtb-RdWQg4G8xuARTBad42KPo5BYLEN8tcUGJ27Bwa131Ap9XkGZzMSQVmpvLOU-VA5wZsNfX7z_y9CmBNKQDKQfRbf7a1ixltjqilcFP2ImrQGXgKM-Dkrj7DMGcfPJlik-44DNk",
-    googleMapsPlaceId: "ChIJqf6vFCJy1oYRdIW2RmMtQIc",
+    ogImageUrl: "/images/courts/tucson-racquet-fitness-club.jpg",
   },
     {
     id: 101,
@@ -3701,8 +3654,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "high pricing",
     pricingText: "Peak $20/hr per person, off-peak $18/hr per person (non-members); memberships $99-$249/month",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEF393FRhxjcqi6_aogxYNygpbfAdaC3Ji-NW1y1sHPuYrSkA05TekmU4ijlDkoqPxlMXnfLWhxinu0VA691skAE6ibycN3_wZpKoh_lruG-cYlU3_yBEYVD4uDTPnTq-YeTbWKS_Cjy9B-tuKP-b0eNkpR63_LOCQaFjiIK12K1KCyTnh5TLxVghhYlOdbTQ-vvjuYRUxajbLKfwUpKEOdq8-OgZAAk5beEpiEtbLyZvL38eED2Q2vwF-sJ-rXvEm7ZoiEPJ6RzA7ddRAOF2TKQabA0A2Rf6q2fmGaN47tdE5oKWJtyyl6qiIWvxMg-SAb17qpfIBDJycLzrGvBvnsvqOIw6IIHGNz1Qf78N1IbvBVe9EQCwr-ms7b2hvab6fqWzPrqNNv5jSc_Yf4ZzYmbhUE2rqrA3aw0uA8I-jIA86BBLeI5_2-m8qims-Ys",
-    googleMapsPlaceId: "ChIJkzOjO233UocROCTah76IX3Q",
+    ogImageUrl: "/images/courts/slc-padel-club.jpg",
   },
     {
     id: 102,
@@ -3749,8 +3701,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "premium courts, welcoming community, coaching",
     pricingText: "Padel: $128/90min; Pickleball: $40/hr; classes $20-25; memberships available with discounts",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEXln4so5HDZrZZSTAAZkfnsFPKSDfX8tCahD8lmVDvcodjZ8eLNzC1_bUbmjVvaxRI4KL74JRMn-eypnmQh0aeoP5ADFyaOEgzBAH8vP2L6ht3KkUXzAF_adgyt9g2oGuFxMsUCBjWTNMUkWdeEo0Rn9HIaQugTSAxlmByOeRowMtIdOhx1cAwCxisTQ3rH05fcZpRZy-_L36c8DPTOdc21tuS5LlX2YV-iKtxDKGEzhnq5CgIlY7BQL01OR-wlZkZEUIJRxv0hUbsHypXKWJR9tb45JdJIvsGRksFUjfgYg",
-    googleMapsPlaceId: "ChIJIyMTuOeFbIcR8qbdPxn9tsE",
+    ogImageUrl: "/images/courts/racket-social-club-denver.jpg",
   },
     {
     id: 103,
@@ -3790,8 +3741,7 @@ export const padelCourts: PadelCourt[] = [
     lessonsAvailable: true,
     pricingText: "Padel standard: $40/hr (Mar-Oct), $28/hr (Nov-Feb); guest fee $12 adults/$6 juniors; memberships from $20-$50/mo + initiation",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEiyxWLU6QRBqyP6uHdmKcmZR5wxJchaX78dvMQP-TleWCWO8s-M57QW08cRKHSkNdxw9AHfTznVIifabFXlFfz0L_STkpEuY53c62lHh_7LwNDFg5L8hNG0SueV7LC53qcmlv7EXIZNla9zkA-URhy4PytYlEFr3CjNdO28LfZ8VqXm4T34uic34ZFzPxU5GwvjHzWjIDwHf04IdKyP5WcdBGcfY9byjnbLq1xm_Rer0EgWdosGdt8jHKTuDohULFDbihFfaOHkK4TH5D6CUUEzlJyMwTIATkAI8F24mPO2Q",
-    googleMapsPlaceId: "ChIJa5QvLc2Aa4cRst_YYgvPk2A",
+    ogImageUrl: "/images/courts/denver-racquets-club.jpg",
   },
     {
     id: 105,
@@ -3826,8 +3776,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Off-peak $55/hr, peak $65/hr",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFYdhGV9cp4uwDBpwKzpAIym57ia5HAlEUyeeLxBMv-B_y_IRPPMNDhVb_kgykKh45W6RPtP60dfUWX4RJXbl7Aq4eWEl89HnUu_1QPWWAsZfUp-XtK-9I1exqsLFv6F4uz8rIyOxhRofDQrJgVunNM10xneXQxEc0V8qrP5LdNrR4Fg8r7ak6ULWiY1mgA4W_REhLpK5f05VJOQnq-EKtsKZSKMbhqk4fKRzUR3lKbnR5jPG47Sp1GEuoIpQ1li9Z1OPFaHRNYBLh0Cq0YTO4aN2NlloxiNU5XOpSyYmULeCaEG5ldZMTxhUm4g0ZsxiyeZ1c-zB3Lbg-CrFOr_tOkGQ7B9SCC7-BFYRaPlIi1dLAhN-70pGGMHzJjwqB1jSwO55EYiFgyJgjOMkFssWSQgnPnuSjfJDQqUvaGUtCS5HUdkX-gY6PPTos2Tw",
-    googleMapsPlaceId: "ChIJqVubbQD53YYRT8kRyZFMkg4",
+    ogImageUrl: "/images/courts/padel-ranch.jpg",
   },
     {
     id: 106,
@@ -3867,8 +3816,7 @@ export const padelCourts: PadelCourt[] = [
     rentalAvailable: true,
     foodAndDrink: true,
     positiveReviewThemes: "well-maintained courts, friendly staff",
-    googlePlacePhotoRef: "AU_ZVEF5d8TbCJBR2mCwc9ynptFlNe65vz_SWFeCa7x8XPoXN1h32yhHzcnbLfN4Rgj7223GuI-YJFojlrpURt3cYTqgDzNSEjsuDDjmR7kQH3Ftjvv6HwpKA-TQ1iw_IaMyPrhkSUFzj8sGOFDeSLWZVpXT3wWjqLk687Kg2M8dHQuHWRdbpLQ14x5DRFDGC3wFS2tedMJ2mHfLaFBNs_MQS0bB2qXRIXk_FDJOAo6jjkvNdmjP7YpeYEymV39r6bHwDeLgw2dptE1mu7m9F3nQbD7q4ObOIOQYrllfCSawzzJY3Q",
-    googleMapsPlaceId: "ChIJwYKXsAP53YYRi4ew4k7jTnc",
+    ogImageUrl: "/images/courts/padel-club-el-paso.jpg",
   },
     {
     id: 107,
@@ -3910,8 +3858,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly staff, beginner-friendly",
     pricingText: "Open play $15/person; book via Playtomic",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEH2kgcYLg7oua1CTGK43sj5AiaKutWMBMmH-ytIm0Ut2ZzEslgkwUbPGWl-bZVccaCunJ8R4KcEZPD2aKZ1vijhnoprSNYOmT1SZGFqltFV4ZtxITKy6nQTnaY-ATHrCFY43n9CI0wGcHLFkbwI7LZGmui1L4n6lBNfXiRYJGRBsBrfBUrYQ1cxl0pU2YwYOzvMR0hV6TBaUI79Nv-4PrMQ8CznKcFy-0OxkTLBo9oWG4uqnWI1rhqt8wK0v8IbOud_Hmevb1ptrdsSKdlhYsRCwOvVEQq2cJl2n6ygRea5jw",
-    googleMapsPlaceId: "ChIJIVbDOaelZYYR1Ji_HuHx-lI",
+    ogImageUrl: "/images/courts/padel-956.jpg",
   },
     {
     id: 108,
@@ -3958,8 +3905,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "busy, no pick-up games",
     pricingText: "$60/90min ($15/pp), racket rental $5, memberships available",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFzGGW95A8VCdFzd8NrczjSt8yn-a3oYOYo2OOneS8UUUvVcF7kjJGFhke5AZHxdZ9ZCzeGbezWNtTLTd0yvba_GTM0daoTLHZKNChxN7_CmRPbY6SKUW60B4hfAbnFI8jdOK0Xb3VepNoW5AITnUD8a0g0RlpL-tqJjY8Fm2OJ7aD4gzKJuvkRmaAKO0IniYhMQdcSr7fP8IN18yFi36UJYj9fTsCCmVDf8unyGAOLv0YcbYo82yqCvxZWEBCLbDnMsNVDY5tzpbY5J7_drsxJSvd6y_Tvl0nCov9-_UOmYA",
-    googleMapsPlaceId: "ChIJK-Hd-2unZYYRCldgsUvVmSc",
+    ogImageUrl: "/images/courts/rgv-padel-club.jpg",
   },
     // id 109 removed — was a duplicate of Padel Quattro (now id 312, Brownsville TX)
     {
@@ -4059,8 +4005,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "new facility, multiple courts, bar/gym amenities, parking",
     pricingText: "Court rentals ~$20-40/hour (est.); memberships from $49/month (gym) to $199/month (unlimited padel); lessons ~$40-90/hour (est.). Exact rates on booking site.",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEF76lPRec0km-nO9YnLv9BhuMQOq5FzNIjDOtcfnpE_SNSyAihX9JOlpfHYlVr6P7cpoeZfsngMisSYFQTfG1pl9120uX3D1ep0P14LAvVFaAQPUXhLrAHTOWVeEZQuherHhzTmiX9M_33uTgkx2jx8rh5mHsp5JjNvw0IXdyvjBxCPNdSIOQud_k9vaT0QHgmfM7gPcjmeGo6BAPlVIGeFt_HVkNIN4Sp2hQ0G_8z4h2OA5_JQQJiGtvOBcgDO5MZ8J-0R5yQT41i8lDOhFj3QTV89EhaTPg5BLnghBdOacA",
-    googleMapsPlaceId: "ChIJ90pgEdX1XIYRyD54Idgq_tQ",
+    ogImageUrl: "/images/courts/the-king-of-padel-san-antonio.jpg",
   },
     {
     id: 114,
@@ -4107,8 +4052,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "Great community, fun events/tournaments, clean facilities, good location",
     pricingText: "Court: $25/person/1.5hr; Rentals: racquets $10, balls $8-10; Student Pro membership $20/mo; Pro $50/mo w/ discounts",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEGM1M2brWmzu1o4RLRXqy6ueNGWUuq6a-hGBkRnFUqBLJm_1_tsV5kdwJO8w225cYykkI6UaC8LB0q7KTaYc2qeEH1NKr4_9t7LJm_gq1X8v6hxwCa9tisJ8x1AIjmzHPTscHQlirXDJSTJTSC7MgPoFzANpJppOIK7z8ZY3Q6sMp9nqau-BuTxAeGxSWee2M5yi_DDW2bH9GKAuvJ0FEw7DFADdEG6oIJXg5DJK-WNU9wkAdO4DNj98Kp5iW3n73pWeLcuogUw4Xai75pwSoYmufpOIly_Lj1LI9afFj2aSQ",
-    googleMapsPlaceId: "ChIJsY6kN6C1RIYRjg7wHLxLUzw",
+    ogImageUrl: "/images/courts/padel-club-austin.jpg",
   },
     {
     id: 115,
@@ -4294,8 +4238,7 @@ export const padelCourts: PadelCourt[] = [
     status: 'open',
   
     pricingText: "$60/hour court time (approx $15/person), racket rental $5, balls $9, clinics $30+, lessons $120 (ITA members 25% off)",
-    googlePlacePhotoRef: "AU_ZVEGU01mNWxsYGFnqkRk_B-Q5ABM23Jvv6Ujl7S_nQXRWrbG1vhBQBrgcAVnxUe06XnuWkrFSsupURv-zin0SoefErYMyMOy75MrPRMAhFHIzABswVK7_0KzB2H_AlzKyCbxOndqcap8C22jiKt1vQ5K_D5qknsYWc5ou95IAdnnaju3ZQEXmF3vPIbGp8j1TPzFcbsQRen7vBkxrGvRRjuqVyifmLe6Myasrc3uHN-xp7E6woelkNtwHTcTMpd7pf_LIlubwjaecmiB_usRFDuMcbeiwGXJ86u4MG43bAt2PcA",
-    googleMapsPlaceId: "ChIJS7m_KHWn9YgRZjWTNLgv0v4",
+    ogImageUrl: "/images/courts/itp-training-academy.jpg",
   },
     {
     id: 122,
@@ -4325,8 +4268,7 @@ export const padelCourts: PadelCourt[] = [
     instagram: "@marcos.delpilar",
     facebook: "https://www.facebook.com/MarcosdelPilarCOACHING/",
     lessonsAvailable: true,
-    googlePlacePhotoRef: "AU_ZVEGWJxvvWsqQwN7u5bz6F9jJv-aB1FGTGtWkD-k-uJpzT1yJhzy7z2JcACczOICDPVvPHYEhfR4oIKZskL-Qjdy09NHBNeLXqSsAXKpkXlvrLUQJ_A1VjWyHIXBnayMVROF-rRYWqDjzroR7cN8TGlT5m_t_tcZ3YsecoYQ2kTPElFmoTkSAj-U31tasMTMCaMr820wuEFUXQFPyY60Mt1yj9ujvaA1gkulhGPqCyyMq3FUjKwLxekQrge1gg1JHZ2ASw6f0nXnpxg0EegBB2Qncy8jFhgFf7JIazCIYGfx-eqoWc0OM5ytqMtO1sPTbCSXzeRcufjjpdV2zH0OYcSrcKTuZhyVgBcChclngBoRNcIv0o7PfIJAPW1ciNF6a5KtBetPy94rc3ERTHqZ9FBJ2buYWyW1oRalLfs5bBvj9Bg",
-    googleMapsPlaceId: "ChIJN8-ij_uJ3YgRjsOajbE365E",
+    ogImageUrl: "/images/courts/marcos-del-pilar-padel-usa.jpg",
   },
     {
     id: 124,
@@ -4373,8 +4315,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "friendly staff, good coaching, clean facilities, community events",
     pricingText: "Hourly $20–$40/court; lessons $35",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEG-GrJvy3oGlLFtSGR7y_zJz_4sQaNRMVVM7cX_aHP6lUhBezIH1e4Uv-y3PzfzK54C_0-Sx4_WONXW18ld2t5JGQFarB3csNY4c6OJSUW74Q2DeFv-b-uxA1liLaGvUH7WLl_1L2DAYSZqLqH2UBHTrWF8cRHPL0TyqN71dq0lKImh3SAsxcoTdMuTRcJRxU-afsYwKitsxabhGwAi9lS50LE_Ow5Jwtn7uv8oOZyr-RftJcVzmTVlh5LGOVP9z-loLDYnC7Um-ZzqtwX9ok9MT1dytfVmgqhExgB79ymDZg",
-    googleMapsPlaceId: "ChIJifBOFRuD3YgRVKul809Ap1U",
+    ogImageUrl: "/images/courts/padel-world-play.jpg",
   },
     {
     id: 125,
@@ -4490,8 +4431,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "great service/staff, good facilities, coaches available, easy booking app, showers",
     negativeReviewThemes: "one pickleball court uncomfortable (fence proximity)",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEGcpZ_w_qcBzg4wjYrSXeJ5MC2ThHGgK3n3yyz0MLyAk0XMsnMicRhlvr1_vbfMLmfMVTRYz-KmI0LkQWedSfWQHr2PCaEMYcP4Z2QfitU2l8r1KVIyyQmR5aVDJLyy-Gb0IVfRK9aoaFaWhjlvIaZceN85xMf_W01qbLQ2DwPrdH5RUbci7aKZuM4xMpcfITd0AnznEf-W4IiYBEK9g0qsaO33loeIuvKnE3hSH9gEHmyRkcZCbNLdX49SEpd9mbf1amGFmW9dL1A2gHXEqyeDtXQCeJwe0qRNDig2vvJOrQ",
-    googleMapsPlaceId: "ChIJF88DKQBpA4wRHer7yfTKqkk",
+    ogImageUrl: "/images/courts/the-drop-club.jpg",
   },
     {
     id: 128,
@@ -4537,8 +4477,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "parking fees during events",
     pricingText: "$55 per hour",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEmQdBgDWde8SLCcalW9_gXeF_QkepWxKs-zrodRZk-XqRwX8-rQKdKhG_j0pLDjcxc1vnq4VF136x5Y-FxKDeoY7yzNqy4cXJj3h4vw-KRuEg5U5B7sxlT2oMzWc-EeL3ZP7hnzmuAtC1Q8xe-vWQ-yY54grnNvUwDt3o7yJ4hh_2joWjkCZ0fC9M5MH5dYAtCNSpQ0uQxLgsC_uod71j3gIiAB1bjWxyyUtnTzXeH_cqweorQgVvYQodBKMjNHz_anHe8EZqmc1xgx9WwdySD4eNcwQNMLRSLkfmhrChNlA",
-    googleMapsPlaceId: "ChIJM4aV2-xoA4wRlOteEJYgVl4",
+    ogImageUrl: "/images/courts/ecos-sports-park.jpg",
   },
     {
     id: 129,
@@ -4574,8 +4513,7 @@ export const padelCourts: PadelCourt[] = [
     socialArea: true,
     foodAndDrink: true,
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEkFEw9m_Q-VbEnmAGcTeovU2oQPTYQbI6rk7jzr0udQXO8jKufGp8slDhfgj5Bsiprt116NsWj77W_u0-ddgQZnxIlK_hzEXxY1Ez02U2WByFfxptP1Duuj7yilPAFoObUMXx1LFuKTcKDLCM0mswpU79UcaQV8VYlk7ojLtAgb9aowe4fTIlRSplI1LHsXWdZP8K6S4oX2MiHNrjgTPPXnzzT2qkq06wyK9YxhGBaIrK712J7KRE_kAzgWrba6yohsMLOe0BUBtul9LRLHmCExDAcwp-AUD4Yl6mcmEY",
-    googleMapsPlaceId: "ChIJOwG8tu5pA4wRo2fFGS4ejng",
+    ogImageUrl: "/images/courts/riviera-tennis-center.jpg",
   },
     {
     id: 135,
@@ -4669,8 +4607,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "great courts, good coaching, nice facility",
     pricingText: "$55-65/hour (off-peak $55, peak $65)",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEpqIt1Gy0_0M699RO7YyJ3XkP8rOoE5QBQ45EaKvHhZ8_eVvt7aOmC33G5I-9xnkoqjLuD00JX-OxV2bm3KsiebnEn1to5FR6d97lHph2-2qLlkFm8602SwhdgxEI5IxUIwH6AWxNadkZvCmUuxKhVtbq2wJZ76QCiQZT1hqB00W3_IvHe57lLqGBZwMk5pXmnpnWrNATgqhI7UuFSLqNCe6j5cFwSpAgEEqAxSBi3OoZ5Y89wVMDSY8R_tJm-Fii_yLTHaOE9xagAwCXLY6sWUtX6IygOWq9OoC9QP9B-SQcU3rMmoyGZNJRwetzeVD6FYNX8Y2rGxSBmLHwGlPqJaUggxRNPQTPf3-Zq-omQqXRN7qoAoa3b45nbgOizlQw2v0xZvWGVJA0f7_OUJRd2920bo15CMiM9vlU-SBmrDw",
-    googleMapsPlaceId: "ChIJZSFPOKir3oARe6FQguHus4A",
+    ogImageUrl: "/images/courts/taktika-padel-la-galaxy.jpg",
   },
     {
     id: 137,
@@ -4716,8 +4653,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Lessons: private from $100, semi-private from $150, clinics $180-320/month; court rates unknown",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHthy3YOoCIkaLxitBE3wYIWDMh8CO4ERF-waQKJUCKvGa8-uQ_xOltqZSyr6LScym8CQs5IrkJifJQd2_eHjbXMiLtumY_946pI4o71_YyD5RSagASyQUiFsuEobJTA8Cc0AYaKXDJtw_tPEyMejmeM3sB6T418MuguaSy13hzvIOTtyRR3R4yxWRXqAcsaVNtJTQaF2dfQWdgxwpFD-GkIIgXeZ-HoTUnPXKLE_yk62EjN5OFvSGtCYuniLWi_vyMC3Hqb7XeibNJujIwEUsGo3zU_ACgtpwtq-K2kqMp-A",
-    googleMapsPlaceId: "ChIJ42GZ1Id5j4ARooVgJcnWM-M",
+    ogImageUrl: "/images/courts/taktika-padel-stockton.jpg",
   },
     {
     id: 138,
@@ -4763,8 +4699,7 @@ export const padelCourts: PadelCourt[] = [
   
     pricingText: "Court rental ~$6-15 per person per hour (off-peak to peak, based on other Taktika locations); racket rental $5; lessons $40-100 per person per hour",
     facebook: "https://www.facebook.com/taktikaracquetsports/",
-    googlePlacePhotoRef: "AU_ZVEH_URKdYzE3MtWsD2gU-aMScocWd7qMD6_3G0SNhaIJS9HAgnoTy_ohP0PLmEY3A1rxvKQGxwlVxELW-MKsLXZRa0LCsqWFrXvUtKgXZ1FhQ5CukrH_XZzjry5cuXudGANJblg5-ObfmgqLLrvcdYJXn17O5Mw151Kn4tpJYI-i4Prpz_VDGpnZQoEU6piy0ZGqM0S88HTPRGhpXodEAHY5Hky5cXkFXf1L8k1GH5j_FX5cGLdLKqNDCCwsfpna5Nnut3oIkSWZLUQ3-OMZW-x1LKsSz-qfBF9ub3vCNJJLMw",
-    googleMapsPlaceId: "ChIJ7xls-k4d24ARZZ23lN4k5pk",
+    ogImageUrl: "/images/courts/taktika-padel-palm-desert.jpg",
   },
     {
     id: 139,
@@ -4807,8 +4742,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Lessons from $80-$130; court rates unknown",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHV0O50HMyFxneEDi-nO3P5q6yKRNF265Y6IwudPngkQIkNRmHC4M1Y_5pDvX-nHnZ-VtH5QtfEdL_nQL9dwoX1ispB_eUgfxcSjxpaLGK13yDZl84NEwilAvowr-jByTolDxyopICSP-YLuLZuH0r4-PDuNrhbGjSps7mWZzUtIrPTFLUOZrSrW2g6npclzJC-nVp7ayxQK1MLFlftu5oU0jFHdHQqmJ1DWc1leV7lO5ikWvnF0QqkLpbv_jcfOgCRXEOfFSbjipktoVpk1s7mzW_-GHxvTcX2HA-RQBhXaOM8_BA6nSMmkbGwPW-j1Vz_dbT7T1cqFIv9FNEyePSLOM6tavEgc3D2AWqMgA7Bi5-O3Pq4ZqV9YZBXDsJQM_uesDzn0sXZfGaXEU1Xt8OaMUiSklObEjN94Hu_al9akw",
-    googleMapsPlaceId: "ChIJZSFPOKir3oARe6FQguHus4A",
+    ogImageUrl: "/images/courts/taktika-padel-fairmont-grand-del-mar.jpg",
   },
     {
     id: 140,
@@ -4982,8 +4916,7 @@ export const padelCourts: PadelCourt[] = [
   
     courtSurface: "artificial turf",
     positiveReviewThemes: "great atmosphere, wonderful coaches",
-    googlePlacePhotoRef: "AU_ZVEHsL-WM0EfP1d2fzycU_h2nvuBLhn3X21indpHLHQfcmGeRuRiaL-5qUD6aNtGFCx-1s61yqbb4I1ozEvDY5RC3BASSf9gEhmxGf0YAzdvIw6Q32XvTFLaBbH17WOapJ1Gm9EcI4Hok8rf1kP69LrOJKuUJCElCglZaKSn4Ujf_HjbpxhT0iAFku4a8_ZL9hFs1yS5-4eyvbv9jmc41I7G6_IiuThXcrRh2AIwMKfNEs-bPJiam5B_k3FaJUjVIB1dpuKB5DMhQrAA3PzO1o2Bw4C5ohQDkh-Grz0XUNn5Wzw",
-    googleMapsPlaceId: "ChIJP9y92_gnTIYR2PUwCK8m3o4",
+    ogImageUrl: "/images/courts/dallas-padel-club.jpg",
   },
     {
     id: 144,
@@ -5029,8 +4962,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "world-class facilities, training, community, 5-star ratings on padel sites",
     pricingText: "Court rentals around $100+/hr via third-party booking; memberships/pricing details on website",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHxa-nLax99beAm97cBnzRxKnm-QzE4kJd9WMHpbWMWrQcHafUcFd9ZAG7uA08aNIhCEmIrvcPira1ecja6-XUdLxTUpqjMuQrglG-yq1_T-GGL1fLIrRvuGRt-ddcaVQLLRZQTVwCS-MSL8D6xiecPG1qMxXvVGenA7pSyceWbWQyphwzfdQvfNoszNJN9fruTPpllfOutAxntWhqFokcHMdB4up5whA25TMCzkmpD-KTb6WJTVCkOtncToymrQ99xaJVGL4tmLCYfqCGNZ1s57rF7tNr9ylnXnpfpD9t_CQ",
-    googleMapsPlaceId: "ChIJPaZRcK8nTIYRHxk-BUHQmdI",
+    ogImageUrl: "/images/courts/kraken-padel-club.jpg",
   },
     {
     id: 145,
@@ -5071,8 +5003,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: false,
     pricingText: "Non-members: $35 no-show/cancel fee, booking fee required; hourly rates unknown",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEEn3IzwIBGWjHjnJS8Z6xX-4rpI-h8vu1Dkm3PlRUoU88wuPcdK9OmEHdmKbGgQCs-Bc7L3kJHBDQ9BGmtFwTIE0emK7-OQBmIjWbFYy1_baDf2LGVUyWYeyyC59o1d7_3iXCwYyVpHTyR2Z3YIpXIqiIJ7vBW3__OqCm4-dixq1POPwRUiCYS8cRaX8__QPWJYRbRKRddMQHGLRcA3bdCGQt8sFdfrfT0wOJzHCOArMmEnKfztjBA6NXnuhqrYRAzZAtBf4hkacvKQJdho9BZLGy5AK73msz4VtGcSDIHaPpAb8uRLom3P8CEPntkcj6CH_4A2RRUjNp0tN1Gpt_xkummcubuR2F2Z5aAl0MNCPB-QZYAPiFSfiBbCmsk4hs-93xaKHD8G06cGVSwIbgQMM0jP4fmnqu2odLx4Tt4",
-    googleMapsPlaceId: "ChIJVVVV5VA5TIYR_yaZbexRIuY",
+    ogImageUrl: "/images/courts/north-texas-racquet-club.jpg",
   },
     {
     id: 146,
@@ -5119,8 +5050,7 @@ export const padelCourts: PadelCourt[] = [
     courtSurface: "artificial turf",
     positiveReviewThemes: "beautiful facility",
     negativeReviewThemes: "poor communication and organization",
-    googlePlacePhotoRef: "AU_ZVEGoUhjDXj_xAvCsMxBvuT8Wcc8Zbmq4QVYaU5yS1mU7dA2xDwGEJbCHwumNs08nQv5D_tMoYwJyQ2teiEVT_ZY4wAgGLxY9-fLybUs-yh2nFllhhOzYsa9FkhnrXVTo_rb2E7j1JJmhnl1SH-QUqVuAmO3m-3601RLrKZqBPchoLpVbrdFks3qJoWpryuTTVEUIgOWm1pnzRTqL35LlWwQyNQUntLFSNG48r2nJPStvnLdfzIazu4eRNowvkNeN0MdXgjLSlTZAswBNTNGYDcAdnN7i0RpOryNxqPDbE88uEg",
-    googleMapsPlaceId: "ChIJNSwf9XzY-4YRHfCkw_ySR0g",
+    ogImageUrl: "/images/courts/bush-tennis-center-texas-padel.jpg",
   },
     {
     id: 147,
@@ -5168,8 +5098,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "Expensive parking, limited access (members-only waitlist)",
     pricingText: "Court ~$225/hr; clinics $40-50 ($32-40 member); membership cost unknown (waitlist)",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEGw6qnHjWcLDHktQ1Ovs3pD2VyaJsZKC-tCJfRBgFT5mrEyfj6WFADJSmwn-PudcCESgeB3Q-scFlghvQy5w6ZVlUN-02e56TfBQmdZY3CJTFSl4fA1129oPFKxRldrxNygEaHjzX8l8rhZbl4R_ebqsm-926gn2vJYjy2m7b8prpmr_i8YuWqRrCjDwMtqJ4FSUNDGeOVU7FV4iCSlwYSIoTwMWdn5-5vmdMAjCiruzSefNmAEQXRosPe9LmhW3VUokwdx-l7vrPPTRwvDVwyX6NUMvdYA59Ls7rCf_abBpxVnzl037pAD9N-9wRV5WkFLnZkFHS8R2vOdiyPwiTnkCIGI6Qe3cN4qGyp9bPy5U-ZH-ATpsheziexuRKd-fw2KSTFJbYbT_F7wVgAl9RkZP3aJL2WxvJ6LM1vyaXwxtjKP",
-    googleMapsPlaceId: "ChIJ-1eDRzlZwokRvpSvClmGwzE",
+    ogImageUrl: "/images/courts/reserve-padel-hudson-yards.jpg",
   },
   {
     id: 149,
@@ -5235,8 +5164,7 @@ export const padelCourts: PadelCourt[] = [
     description: "Brisas brings upscale padel to the Hamptons with 3 premium outdoor courts in East Hampton. Luxury setting perfect for summer padel in one of New York's most exclusive destinations.",
     verified: true,
     verificationDate: "2025-10-15",
-    googlePlacePhotoRef: "AU_ZVEFWbTlMeLoh7kzvIkqvZLLCEifwqkbND-JCe-z8WlOpB-1vaJZnCs3BmKUhAynn5S9bYYyjpmC9gxQD8r-VnLlHY5OHOMkgoLcw2xMsRfd9Qq29xhrl1VG5875JXNa-SXwiZg29Gkbp-MvMx68_0KEXT3VlKrxHWwlc0d5j6TvI36si1mZKKDBxm8PjuPexvxACv7EPdjEIp4fMG8sWo6xNlVuW9vMoMtazf5ond9b0NJwqKusog8yiEmcVESQ2Dp5Ghjet7BYyLakQKzMLk5GQyOOmLo15p9ECtoZpd5Wmbxj5EFcIIMJUJDLxpUGYDDKFP9Zm058wgzhEQqv3XxBSFbENNfjdi1ukIWqEcMfIg-oPatk6qRg7OVBG918WFhijuFijvHWk0IhN_5WrYKn9ggKGMXLjvvt8u_kdy76OT2q_",
-    googleMapsPlaceId: "ChIJL2Rhq5O96IkRkhRjF_Q-gU4",
+    ogImageUrl: "/images/courts/brisas.jpg",
   },
     {
     id: 152,
@@ -5282,8 +5210,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "some customer service issues with lesson booking",
     pricingText: "$70 per hour + tax (recent); previously $60",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEG55z2IbPs6M4EaVCKrzD3GyiubtJWS0G7jaQHCBxcl5gdoMck3MDEKrHwcGHpIIUDgiMINn2VBbupfeDbrYLU6qeEbbtEGZuS3E1Lfn-rbEOQ1geo7F5RXVEwaWeKTfVQs-IuT1pDW8gZgnqDKj1qjgJu9wX_-VuCkpRC0a92ptjXGg8ihYqgxNUhQkN1naqsp1vV9QpmifttAF9EnoiMs1fDUpIpoV5jQOCGPB2XY_NIjN4PeefQBB7SFxPH95vqckw8U_JRkIh4wHa7Z9VHSD__Xlxxt3uwQkE78d1BU4dcRsoQEiKDDgN62PSBso7rwjfw6nPwZ36_GOpODc_VwW2AKFvOmf3HcuqsuT4yH1mB0uxWYGFnqVKhbWj2fBYEcM_rwSdukECTUgApdY3dHYp9MPYgcOUtAVzKnKL4",
-    googleMapsPlaceId: "ChIJOfRcOQti54gRUXlcljT80-k",
+    ogImageUrl: "/images/courts/usta-national-campus.jpg",
   },
     {
     id: 153,
@@ -5355,8 +5282,7 @@ export const padelCourts: PadelCourt[] = [
     description: "10by20 Fort Lauderdale is a premium padel destination with 7 courts (both indoor and outdoor), full-service bar/restaurant, and vibrant social scene. One of South Florida's top facilities.",
     verified: true,
     verificationDate: "2025-10-15",
-    googlePlacePhotoRef: "AU_ZVEGobi-6obGwptVzh9h36gShb0rKoqRHUnfX6OkTXgHp1HtbfUSiHo1OI9b8dbFAUxz2z4sJa8JOQpNG9LAWa9fZrp7cS7JnQxekz8nY8A3-BPYh3zYrGEUChhmsi8D6S5VQ0pox7UqzSNXXIV_RNLt8jYJlcC3ZhBjdjfhb3DKrV2X1rlC2SD4nq2z4L6n4D0bgnPTD46b9SBfXOQ7CRZS20QbZS1mbXxPSs4UrpGhqJo31zfKDfSJxq4V-JKAwc95_vKvmNfTY6iEccalkBLoGzJjRBQ4OpMB0unD4Y4_Z7A",
-    googleMapsPlaceId: "ChIJScojIbQD2YgR-P4Kwb-IJyM",
+    ogImageUrl: "/images/courts/10by20-padel-downtown-fort-lauderdale.jpg",
   },
     {
     id: 156,
@@ -5398,8 +5324,7 @@ export const padelCourts: PadelCourt[] = [
     lessonsAvailable: true,
     rentalAvailable: true,
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEGOJ9eM5fe0iZ8Ujqi_su0z9dSsJFqpuACWx8ZgeMQBzFG6HsvRzH7WV8P3tU-OM0cKjkDKduZBXj5LpTqc-u1AUSy_Hd1Ufb316wVTmmHG1JOTk0fbCeI5Ha-yC2GjOSUFUw1qkHeDcZi8YZxOE3GI4el6kSzY1D4qGRyV6sa0Exo8iGR1IA1jpPOfhNN4SR6yn0g1q7Pk4ol9JVcJ4nZb-bs-n1aIz6NFmHPyGFqlJX79De-hkdHfQtQk99o49SyQ0yfaFt1cHwe5vhKpqhDCWKWSB0GtptOfIwt6FZPu9Q",
-    googleMapsPlaceId: "ChIJXdSvmRm12YgRXLWzi4mJ1dQ",
+    ogImageUrl: "/images/courts/6-love-sports.jpg",
   },
   {
     id: 157,
@@ -5473,8 +5398,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Core membership $110/mo early bird, Elite $250/mo; 10-pack 90min $470 (~$47/hr)",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFFJDFSMXCx1BoZnvTCvTv8iu4plD8rw2vy9XrX2tCpt9pPxfHty0VTNsc_XUjdpAYx_xZgnvD2iQoYwK9j1E27VWxSesK2KAUGQ4SNJmKaXvOqd-0v3d0orhBzWkgWrbq88Aj2511pqxJVMdIU_uuwhvrSIaIdLTpy3tIbbF2MWO7eyScIQIeDoIkdoqX3P_iG1D6TpWKWPLUBpqB_Iq3yQhZeUApk2zsv2V35Ha3iWBiG4AgAbY6BPxK-Eel1CgewqYQ1l6Re_mhc8Gbsua30bKWJ0PeOtOUPgBVRg6LzDg",
-    googleMapsPlaceId: "ChIJcevuH30tDogRZ8cUtflUFe8",
+    ogImageUrl: "/images/courts/union-padel-club.jpg",
   },
     {
     id: 160,
@@ -5516,8 +5440,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "new courts, friendly staff, relaxing common area",
     pricingText: "Membership options; court bookings, events $25-$160; full details unknown",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHngOCF4SSK6sj-MgqkawlReUGeW4VzYgoUEY4OXyco5EnqNd1TmKDkwt3M043598oPsN6CaLWSJGzUrnHLsRUJkLgSa6F5cKhavAVWpba3yVozN4m0vLhh5sziGt3MzRB2t3-r1wuINIEcQEynMTfj-ZPdPLAOsV53URSAdDLr3f5KYhBOAY3yTQxIOqxGrgZsOUcl2QwwX04lamqmOWM4zlqApr6RLffdLfUNGBewODHsySLshdFT9NvcKzZWL6KKh78GPZiQm9XXWwHLSho1Vj_Elyx01hgWpsE6rGthYM7diyKXhuQC9rS9wsRTk0I8I7AogU2dxEzrLokiDZgbJjUGs4bmO0cyfg2rzlg_tSE_c9AeHarnS94WIJz_vkajmxg1izcV-1VROjMkv0UanItAVfr9WJMrWCr92ESSP_4EuxVBmTKflJ9AKQ",
-    googleMapsPlaceId: "ChIJA-IFlGDBD4gRV60sYOWfkSs",
+    ogImageUrl: "/images/courts/club-pickle-padel.jpg",
   },
     {
     id: 163,
@@ -5564,8 +5487,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "beautiful courts, great community, high ceilings, professional instruction",
     pricingText: "Peak: ~$20-60/hr; memberships available (e.g. Play More: discounted rates $10-20/hr); exact prices via booking site",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEHXsWhM1w-s7VaxO_pmJcn_QAp6W0WbaWTskOc6UN0DQ6S8Pwb6kurHA6-QaRLRRjeW3WFxtC-Am9S8Qwm30sbp8ZBEsOwGgU0klWy76n5PqM7zj8cPPFdbWFWowLWGB9Wbsq2Ihlt_vCGb5jbXDCrMhH5vkuvF9FQ_Uidi5dzXqIfnlJyJOOFpD1p0p96GWh-1aSCepmlSSAfSYD6i6dxmPK5CXtTmYx1qVvIcRtxKjSC-JUoXq12XpQgmrzv-p147mV99b_uULgOLjBs_09NCAB2Kh6AWjZKJ3kQ2MeunPQ",
-    googleMapsPlaceId: "ChIJu7qtRQB_44kRaq-PjWT1qzc",
+    ogImageUrl: "/images/courts/sensa-padel-boston.jpg",
   },
     {
     id: 164,
@@ -5611,8 +5533,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     pricingText: "Memberships from $99/mo off-peak to $199/mo unlimited; court rentals ~$30-60/hr non-members (via site for exact)",
     status: 'open',
-    googlePlacePhotoRef: "AU_ZVEFHTYRXJaVxutrKBYOrAYpgvZCVBj9ep7CRKee5s1pxffcah9mUsvEC-VC7RoHsSFTdab_i0cdQqsj8l64usB6m3ZNlDf8rTF0EV8wqaXC9jJgyK-KR2bVqYRBxwkJin70J76yLs_HhGLck_LU8Z4g-WHeuveQkyKMR1IyRYGLCoLX4oc_8OxHe-_zieDLJg1k3rH7DIP3x2l-yZlB5ZIcCNZid_-84-ATPeLLBMbDoH3UzgQ5icwb5smTg1Cf-K2iO6dVJeC_-ZDHo_AzsET6_OfnTzMgvJg9K1g3AbHs5hA",
-    googleMapsPlaceId: "ChIJechAFdRnZIgRnF8xAuXdRJA",
+    ogImageUrl: "/images/courts/sensa-padel-nashville.jpg",
   },
   {
     id: 165,
@@ -5638,8 +5559,7 @@ export const padelCourts: PadelCourt[] = [
     description: "Charlotte Padel Club serves the greater Charlotte area with 5 quality outdoor courts in Matthews. Welcoming community with active leagues and programs for all skill levels.",
     verified: true,
     verificationDate: "2025-10-15",
-    googlePlacePhotoRef: "AU_ZVEHjgDiBP7zF5Y7ZxLgRz0QIfEZL2vdrhEHzJ-YuTk7GCP3zftJzPPNR5bqmH5ZdV4iUTgkgyJodp6mYH5tMHPkiBtFOJ_AqY3k3CJZdAptZH3tnKKBcgHPprTQCLjx-Kx_DUyM_xpyWqiE4SrvAlFoKcNiQZh2wczy5RqAPJAnQ1RbHg3jcxMR4OrUyjLokePcwueivNb2FVnVm5tCBXOLyyOZJ-7h7gElQrY3EPIgc7MpX70vdepg6XAJcvx3BpfTjFIDkSO_DTvUe2UWSdDmwDQiSH_FGovmY1D4vj55Vfw",
-    googleMapsPlaceId: "ChIJt8IgGSwnVIgRJkjRpQFckl8",
+    ogImageUrl: "/images/courts/charlotte-padel-club.jpg",
   },
   {
     id: 167,
@@ -5793,8 +5713,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEt0yOGwVk6HKn2DhI4nYTTlvXYbdgo2fo8bvGNo2vSbs1xQSe7foGm7GjI7cE8124zXRlhCI7NsI-gKnshDvEDaVbnvCD79uXO8_7FnVy2IGxx5Iv3YW7Vdomuq0MD7Lf6mD21Rmq96cacWMsi2ZbXn7fPQejXS1311CtCcxvlUQ7O7mwiQr9ehjy3SPYQl7whChpnuWQtNJEhzNz7h62GGPhO2CViSZ0_5bQ6Hd6-fAAOUy6Kp2DQzRU7QSLlP64vLsNWcxNrxjs2O7DEQV_ad9Dzc9uxba238b-tpVmKxQ",
-    googleMapsPlaceId: "ChIJF3jXGvq5woARbMR8lGFdedw",
+    ogImageUrl: "/images/courts/padel-up-club.jpg",
   },
   {
     id: 186,
@@ -5837,8 +5756,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Padel clinics: Members $25, Non-members $50; Open play Members $15-25 Non $35-50; Pickleball drop-in $25, monthly $199 individual,",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEF_PV08wiKmZYRohnGd59niydOKZkBCFGc0XZb2Xby-lRCLHRI0SnDbKb4GLAYwocePYkDYb_ZxMaAHGgm9Gno5p_AHeLUdDhG7axEfooUuL5vEGIfvZlUtRWrtcz9JMRnFIM8PmhaC36XqaqTOn3h5w-UnloZ_8rS-0Ol5ftuaaMRmra7GLLRLzKZzRAzj7JFR7s9WKW4R3mQmIkhyBeINRAUSe9UqxJhKtCmEE22FNOoWwdV9neKOz6R6NzcH1iQFYLIBFvQczfGRLK63r4xThEZXEXUAJnBT019RjUjFx_HQf8voaqhpcwTRCz_VMDF_o1ZUzccQsxnITlcFx0lml2EtZqs8SzC33-yRtdCk1ANw-2j2rWIApj7gYmw-vM0onocC60Jj6kRfPgIe8kna-Hayx3Lsa9k4v9UP2MfAhw",
-    googleMapsPlaceId: "ChIJ88E-JSGZhYARNi_0PBa1kYI",
+    ogImageUrl: "/images/courts/flyte-racquet-club.jpg",
   },
   {
     id: 191,
@@ -5880,8 +5798,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "free public access",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHmcmmlvmQo1DqpqxH7w4pxz07FlieOaQoKU4z5Pd5bj8X9am5ReBvPPr238_QTLkkj0zNG0FNK4GZFmX6u6YQz_5NG6OqQe5lSYNgMlX4c5tzRS-Mw8P_WhDaBUyJ2yQ5e31qY2pGWj5KFaL0dhELAHECl0-RiZZ2MQJSaEKL3XWmv0tmKqJxV4tJqlPr6cQ9YPD7JiViBEsAbk2io068N849GkTP7XQ25_5LMqquLgcRl887FyxTH1EGz7uy3RuVOsF-W89zU2lWRdiyyrHyu0uPJSe1_mZ2mvb7xCkxPT9z87iqODqg9gV4tXqNOU3iBC5kqBnOSgyMdBmKWKtwaWDoSJvHnbMU9KPe9osTTx58UvTiUXD2E40VMOgnK8OQ7pdw2OwSm0JcP9wTKUNkjdpS3r-49V7OUJIgrcq9Zjg",
-    googleMapsPlaceId: "ChIJ2zbwK7q6woAR33rLFIc36Jo",
+    ogImageUrl: "/images/courts/venice-beach-paddle-tennis-courts.jpg",
   },
   {
     id: 192,
@@ -6047,8 +5964,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Members: free; Guests: $24/hr; lessons $40-100/hr",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFD20FijDgI22tQkVkl4zSdUJLgFWi32Ry8uKYEn3qT0-11h-mg8HlwqcSKBdIY3intGIsXOs7xS_E1jg_G1fNdWschBooXbSFgo-eXGnqxVuaxAYwQ3r8CCYk9lM6xdjF_1kY9tmGb4dCSDAqFzz0IiNHFrd23igSbGmM3RqUk6zWisVI7IIOym1d0Gcj0V6k79W-kRpWgRfm4J-zNGrOlf_D4pizKAiNjzU8Q1j-Z6dVGsFPJvr0QEL4mg1xBlJ-Z-VfnRKwLhyvos7WbYQvMJ54TbO8ewepREyhmBp20Aw",
-    googleMapsPlaceId: "ChIJHwvoKyCObIcR8ARBXl-39nA",
+    ogImageUrl: "/images/courts/the-parker-racquet-club.jpg",
   },
   {
     id: 197,
@@ -6135,8 +6051,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "unknown (private club, initiation fees ~$600k-$1.4M annually)",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFjX4dcdxPyvM5LLVTD-i4wsqdjMCJDRRHxuaSqs8NtwOGnuA4ydZgzWjTcKhvw8o-67G64-i9N6LewsHXcpJMDI_Ymap4mzyJfbyRN-cw49RBdM36GmD2I7InN2bMSr8WIpFubsdW1k2C4J_0GZN5CLBuYboOzUSSiGnWMGRwThM8sOG-MnK0PRGgkNPGNbbPWnPAc3yJaV3EuyYOn_NzrN8hcXCgF_5qTptbZS219OvzlBzOIWsvVjEjck0C2ualG3XDOEjxxhKUakUU3yeEJ3CMi5818tkepjuqHJjajDupR59I7wIe0W1DbAY1Z3TJEggbieNRq-2CfadEQredUfHancTa45OSGBFNe-BwicGdICpE0iBeqLXs-rnt38ks7OdDOgJbK1998MG2tHRl5Sxj7RGPcGgl7O6o2fmKTLg",
-    googleMapsPlaceId: "ChIJP5gLcKSnwokRskAZ4JczC9U",
+    ogImageUrl: "/images/courts/new-canaan-field-club.jpg",
   },
   {
     id: 199,
@@ -6175,8 +6090,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Court fees: $20–$50 per hour; private lessons: $40–$100+ per hour",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEH8FpYNxrbx1lpPc4cZNpUgyKTzD_48doYyxmUWQPbbnIjyIFJE8CYmJvgqeABVfRFdGFD9yLiTghsmCrcigKwtvaRPclqcNwjkVCMFXjqjCQhl4WgXT3ocgd-cyrkCe-zOibB205O8AiMF1eTJ2jjX8G2iN9rGLSUuv0inofMLp8wzQiSDAZ5n6rJS_W2eZ1-4upmgiOGN7eITrNw37RFGyLHDNB48chv2ZGCrWdSF6eaoPjsuLuSPeBeC8b108p7glnaVQ1xojLcntcv-jJWU9b1MsAM8OhJlbPqIsb9cyA",
-    googleMapsPlaceId: "ChIJ9-FN477V54kRahpQ9qT-1x8",
+    ogImageUrl: "/images/courts/padel-club-ct-padel-smash-club.jpg",
   },
   {
     id: 200,
@@ -6314,8 +6228,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Court bookings with memberships; inaugural discounts noted (details vary)",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEGaZiLBvemSksLGF7UrMXiXbEAlja1km7C5MtB8q10x7kH6G6McbVSzzbTEFOaZdGKFFH7NDoQ9_aacHNGFLcWgQLQUm8RKDaT4qPE1ln3J13OwH7GEYNoWQbpsb2NeMKUbcW2hj9hkbHBd9DuWDlLvlgOT99bPhqkhhUqjSa53vt1TW3E0QFdaVi9o8JpXm5LLR-KH26nVkvNRUpLC3lPVRu0XTG4wS2ZOZsZETpS3XUECMeFiE8v_dHQ9kpkXKg9D0WV90Id_U5MAeN9AyCNLUylzaSwDCPnbZW6ngV8MUw",
-    googleMapsPlaceId: "ChIJvax2Qigf2YgRwhNiv7MgBv8",
+    ogImageUrl: "/images/courts/padel-x-boca-raton.jpg",
   },
   {
     id: 210,
@@ -6402,8 +6315,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$20-50/hour courts, $40-80/hour lessons",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFNYIlPB5uGHA2YoQWttxVzJKDvviSE14SFxHrHo7JzKAliBPDF3kpFZp7zxlZNLBsx2HmTl6VRTF4VoOR5QELcKcOsnrA35vJk2SmwyCMUyXbtE6OHB4surZ-ye4NCZ1nAdwWTzJgtwq3nAvrtlffs87X_KBoutDA4enZ7NuW46JeWBgfHD13H-7hiBB2SbViKOUTcm0rdGy9vhhSlxHxsny0sOY_h_Qifa9p6TVAuBADqh4Rtsi3a8h1R9aJAbIU6IsjmV-zQWUOeBigxNvE-qVQ8c-c4KU3H8r7j2GrbcF7Y86Lm9FfiVHnbMv2VtGVv9jRN3xJA49N8W52cXbT4P56HjO8rcWp_9J9mBfSTnSRCizrmgPnzU2GarPjIujy65Y6QfNZv0XYR_9FuBYI3APzPX-dBhP97-kPdOu-NVY4JEa7S3HjmeEJT1Q",
-    googleMapsPlaceId: "ChIJ1UZ2bBG72YgR8m2stbXYX3A",
+    ogImageUrl: "/images/courts/arena-sports-usa.jpg",
   },
   {
     id: 216,
@@ -6528,8 +6440,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "Excellent courts/facilities, helpful staff for beginners",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEuliSkJ2rlGlyNFO_pbKI_iioXnJfT4UP7GeQUyg1K6HWfsYOUs1xqXRh6s_AzHCaxADLObaxPbbzMSpZCwOW1ZA6U9j7eQXlOtA9nWkLlDtLOjRpfFBwb6KlxBMQobWvT_izKEWTWZhamUrU568FqtNdl7vyHzGezOrixnQf89GRXm1xDzMHBI839vFcVFuol5eTRBFfiKX_DNCkAHcRWdfzNM52MfdRqHLZm2ySK4mLWLToVNRnOKFu3qixGQ-F1108yn7-jqZwVOgg_by6GgdWVrb_pD80uJIt1Ox8WvzDGm2BUPYw0gUNDILVgJeoumm6S2eiyHbLeJllG4Z42mRyFh87hTVbUlI4w89V7MQ_4B75_xvLNgeYGOs3ttkEk4CAfGWamyO7ALp0rqjNzCXJOrEapJE2Mvoj05DWaFw",
-    googleMapsPlaceId: "ChIJ5b2N04ql2YgRAuYrw45Ybw4",
+    ogImageUrl: "/images/courts/padel-break-point.jpg",
   },
   {
     id: 236,
@@ -6574,8 +6485,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Off-peak: $25/person for 90 min (M-F 8am-3:30pm); Peak: $45/person for 90 min; racket rental $10",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFC8WW7yWFMd9amhQ8URt98uukqqk1wf_SZiVDSw2jDhHjt6hinkoNenKlKzDF6D4Ur4XPmznGyUHE5jpzUk3cCgvkqOR0duDTeWSfuCNw78FvBDXlSwOKQZ_v_0kKzlKn9d-DcJE8Kocnb5fPXvwgurL3Fvtc7H0v1rMccgcQ36QTxwZIh37RRezsnEGuwk3W3jS6K2kOLPHwP9pLlHnRHQS1d1XrAYs24wyCHWjych0DvKwRc7--up5aC_b4Ilhnnxr1jG9dLQU2fLF7X-kWwcv1SogjWcnFodrdUHieFBA",
-    googleMapsPlaceId: "ChIJDSTtpmB954gROT7aGNyRurk",
+    ogImageUrl: "/images/courts/padel-plus-indoor-racquet-club.jpg",
   },
   {
     id: 238,
@@ -6616,8 +6526,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships: $50/mo (50% off courts), $175/mo (unlimited part-court); court rentals ~$20-40/hr, programs $15-35 (member/non-member)",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEIVHbHgpErS5w_FiZYAA3rJkuNnwNDLGAjU2RG7Y7JAHrOpPDb4G3UEY8WK6JJru64CKoKQb0vLucEAejfK5azq8Et555rrajZZ5ympdonbQpNYAkTXyRKdZ45u0CZRNoc0Rnh5SZR7Du1DlooqFWJg5TSUJQi6BVd7ETf90bJYvX_vMyGLN0pbSQuqQkB27gBsUD86Nok86uiTjHbps6Y9PT3HHNbZvuFAgVseFEBYTr4675nLnKFKczoiGEQ6-qKlT8Rj-tYtshOdCRI1eGRQb8zNsPAK0bGNNAcfTWaKwPGzN_DtCB2gE2Y0piSh2AVmyFlo41JJAa2oN7_11Po3Mw7u4DreGBqP8Ldy6xu531rOF_214EKbRqhFi8EGVVGzB3hiTfn4t2vFlFMnvYWN7V7fHEuCtiSW9pQ3wigSYAbsbU5obIYYTaB1Har",
-    googleMapsPlaceId: "ChIJ7egwpEw_w4gRQSPpppfsup0",
+    ogImageUrl: "/images/courts/the-pad-sarasota.jpg",
   },
   {
     id: 239,
@@ -6662,8 +6571,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Clinic fees $30-$50; memberships call for info",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEaQ-j3HIO0IKKuHU1E0svMa3hDLLqhMOBcoJ5lW-6jqZooovnZBgivf3RVduZT8o4O9s28WFT7U5D5ixR9077_xTdlKIZNUCPdvlTGVniMl_fVJKefMz1XUPZM-lWpqp4TYRPvOErOYWETxb0dAlEM4KaEzLU8dlPalbG2v61owtjtAJ5mCicIYlmBjblvMUNCU1kR_PBss7o-uRNTtGM2GrTotYTl3_whvZYXVDgx7US-ZNcjyiSukMVXjrwCakUYH6r98OibVsD-BsVPGSn1AXIH7zGyEvHB1zGHzj1a3QJw5IShWHzoMrEFnDMS2rviI1577KdpVFDQko2cyvX1GarU2oIphYdrPT2iYV3SQcehpd1I9kw_kTmVuUmIkSGR4My2jmHIqwPm3ubhduSiOAJsRQ8Qe7_GW7BTieiYZw",
-    googleMapsPlaceId: "ChIJp-KgXoVe3ogR4ieZJOP00Iw",
+    ogImageUrl: "/images/courts/boulevard-tennis-padel-club.jpg",
   },
   {
     id: 240,
@@ -6712,8 +6620,7 @@ export const padelCourts: PadelCourt[] = [
     verified: false,
   
     positiveReviewThemes: "friendly staff, upscale/clean venue",
-    googlePlacePhotoRef: "AU_ZVEFMZQLUejIy59Aw0SGuIMDXXF4qigsSb7H9RQHhthpxEp7TjtUCAqropAOIqGDWCtafTRjIt2xdnlBsPBiqFP-RofEweLaS23IZp8L1fbLVl-uNgNoe-sfro2hMdCIiaHHGVTZ3bYeoVgsVvJCsOtRkUYaVB3Bo7MK7MAmZxhD7z8UyGmBQSkQEK4_Uv5lRLCXOJUD3WtAFmlLDRi_JdcyLerW_Iao8zpvySi7y3mmbzLVYTEwjl2UIE_5VH4rIPg-Uvd_Z1hwoOESEnqXfX821dIY-Lh-RClnPOnoTBg0aHQ",
-    googleMapsPlaceId: "ChIJrbTriyAp2YgRI2JoT_eDAq0",
+    ogImageUrl: "/images/courts/xcel-padel.jpg",
   },
   {
     id: 241,
@@ -6802,8 +6709,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$30-40 per player per hour (off-peak/peak); memberships available",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHtSo9D-PqKh96Qq5B_Dw13n8sLFDClWQdb6NypKZNFLqDrj-D27EZo0v3N_8TqB6h2zoD0QyqGNHlpRvH5pxTSw-BrH808MR03lsZiZJdYiLy1DCfQd0J-NGeLySKofEMHj5PSAnWxwodyTA41-IhmmIFrmTB6NqGq00vK1lRrDut3P00e3GMlGUwzLOrMPRFmYYy-ASW0BAKekIcyHEMJXiXf4DtzHEerV7WFR8It6R1Q3ogLU7glybf3psUnH3pLtTHFTND7V8HkzXLPCC6LDLukio7_kvxtQcfs9IVfYg",
-    googleMapsPlaceId: "ChIJE9kF6pnX2IgRV9HnNZbf52o",
+    ogImageUrl: "/images/courts/palm-beach-padel.jpg",
   },
   {
     id: 244,
@@ -6848,8 +6754,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Non-member open play: peak $40/person or $160/90min court, off-peak $35/person or $140/90min; lessons $50-$225; memberships $99+/month with discounts",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEuV5o2Sk7t0BgwwtLLNZvhLsvku3YMRtF-gRGTqP5jy4RgalB6zPHPDbDe_ds7OIpsdpWIz-yZFKHjoleNS9_as7kauOEz5KDQHglK3YOURywtMImCvF4jt7w84Tlc4vm0nOc-4Xld6jy8TZadJ_TzNuE4YU5gSCE-1-A1ykFKYpCL81lJQJVDC9UKlnbk0oHMvDep8pccqqgAnIHex0oROqmOHFwLa6qXudTTACCRm44QZxRXlP0rkqwk1WgJKJloRnoUSVPi-lwt9199DiUWFXqqC4U0mc657BVi6weFxA",
-    googleMapsPlaceId: "ChIJNxiMX30z2YgRNgRjNh-Qx6U",
+    ogImageUrl: "/images/courts/xcel-padel-westlake.jpg",
   },
   {
     id: 245,
@@ -6931,8 +6836,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEV_GEVG-ewOFoNg9vAV2Zzi3-gg9KyEtS_OQ1eWFOEFQN5IKOrriKHgMBxwOxuPDp9x-de4IdlmYolbS00X73lCI2zdBLHYTktpPEOArfLH4E8lIT5sGGxU8gbHP384V1ofKBGfRTk0PyNi3joUfnPxBkSr-IGsjmhkDAXkuUW5mgdoObEhFUrBl-SKoDFdLkQgzgddA6hZkFZ4m3d_YXNaZy8kpPEtMlvw3aYPQb73GqQmCRdlzzVfyAvHQISu3YFdIEchOYdHyB14Fje0NAL0xUxytnvYDR9w0_X8vxCISRbYtyBs0KQtz5jCJVf5_MWvkBsKf4U6EpOLPQ3JZPOAsFM5msqd9URTU9kjaCJPfgVDx0BOUnM8pyW545ihHeU-YcFRlZczB2bTiSNsBKBzb-hyHXz8jrzkUiReeTwwv2dzIuruz9kx72VnzhS",
-    googleMapsPlaceId: "ChIJsbNADEcE9YgRSSOx65HsxIo",
+    ogImageUrl: "/images/courts/piedmont-driving-club.jpg",
   },
   {
     id: 248,
@@ -7058,8 +6962,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Court rentals (pickleball/tennis): $12-$20/hr; memberships and guest fees available",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFD4IoH8OVXxsYL-MPQ8oKj7ig0LDOLIZRVMO13Vtujploi-QrzuyBGkWPaJwj-2Ni-Fvke9lvrm45m3QyAy0eJulMHYSEoNQTj4Nr550oWR5VHuQVqg22VOXoD36aiVkPpspDgfgwSGMghSmsVyDaFajiWUm6Ti7vENeGdmhCu--7Y72RJKpq0ufmxiIQ8wFNZiFkxrlxwAtkHjIf9k-YquJj5E4VJYahq4zmBm1QiGZx3EmR69vQF0Ez9iQnbUjsIxnDuCH34sL8Q7rVbFNWqDpK_uZKZm6iHq6T_nE9MTG-nbQR1NJtgljHrgxD2nmOFdY30I4_KLWAdZGQzvcepdKJNcK6X_EFzqso2ZphbtAp1153cwUAifcb2i1XkoOg-WMSeHCPVo1AxdO5aJYbdAjQmOfOeA4DMsCn8oBfiRg",
-    googleMapsPlaceId: "ChIJrZ8qaD0YDogRPj62IAqttWs",
+    ogImageUrl: "/images/courts/h-f-racquet-fitness-club.jpg",
   },
   {
     id: 252,
@@ -7145,8 +7048,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$25–$50/hour (est.); Goodbounce courts $32/hr",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFhzHteLLLFRXHVdleUCbXpHrxW_P0MsC2Z6H2CmrXha_qrvCNtVid69tb7wYT2ITpUqlbExDUUzCduZ2_dqUGp0vNIGQEnwPazK4m-VOUUMxcyOtA68bt8ACz7p0ISJkbNTWjjuqkOhLUJSioFr7n91oOMViXBwVJYSckihGqW1IkmCcit5xUjd_pzrVX773HdUIlnAm8SGc3nn83KFl78N-WPdldL6dtMfz5S4w8vg6ALWr4EAABsVMyDF-aOHFRuvtJ8aCYxA8cLMrNMrJfxQBHn1rBEYOSnW7IrZ0EPyQ",
-    googleMapsPlaceId: "ChIJ1Ub0J49zaYgRtgR4w0RaZR8",
+    ogImageUrl: "/images/courts/patl-louisville.jpg",
   },
   {
     id: 254,
@@ -7273,8 +7175,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships: Basic $100/mo, Frequent $200/mo, Unlimited $300/mo (founding rates); court booking via Playtomic (rates unknown)",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHS1Detu66WVtmmsGKP2XECcdgbXcuuJYnpAKzTUmmi0OjbSwu1L-NkEXrQko__3EjQy8Sr5vbMN5qJ37FAThPZw24WHOObZT9HmA5QCDesP3IvAMGu1ewk15PBM1I_4s_Ss8HHZt_EuXWy13fa_S46MxOyGhRzNxCyIrYnYjDP_lyzGSMb3IB3yyAd3HKFna18zCaZEbQgdyID_MsB5_kIkCd0YqalCRP7WUv9FnqmD9RSD1pc6BAl5fcR6OXnBVMuJLsvLbJvaEZ2IvtVFDn4hzbxyoa-cx_n-Y26CkYLuxTSPLD2Vxhh5MdldwlldCDjNWP3qzqrIzOVwckcnhUYpsvRhPCaze8aJdV9ENmpmmrCWZzaG4tkoFvQP53uQfITUoZzj1u0aJDeMuOuZ26RjOOyADewj72FukHE8dGa_AbYGAUrTBB2G2UkaQ",
-    googleMapsPlaceId: "ChIJT8mxDVUXyIkRKwm_ccAjLJc",
+    ogImageUrl: "/images/courts/bmorepadel.jpg",
   },
   {
     id: 260,
@@ -7364,8 +7265,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "poor service, food quality issues, snobby atmosphere",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHo5hJ3su1pPGDf3kacafs1tlk64_K8D-xhz0xA3mGMXi-h7s6BfutJ34N29WrgYbJ6jo-N-XpdxTEYB--Yga8PMHYdCYzKr3hbBhOGhWlg47MksvHZ3l4ull4Nei70yS5wQzt4txQ0bC8Vq0qlrkoafR5-v8UbMDqbbari0hcfQCp5SPyA569Y9RHz4SwhI3QTfqSgj_pjGPmeRe1kst9a4jhDdeCEZR_Tvk4SSFd6crP4zeklMeDlefwXciO_l-5f21-QO2SLs2cASFYK_L6IS3NLgdvFmASjYgGj6xYhcXqiQA035qZKHhtCUg8_AIvZmd5lBNcsaOusxR4OCtKOqK1qqvOzM0ouodjtvNjAcG7ZIJh90Dzb7G0ohmc3zrdXSwLzZpupw1WO2f7Szk9ZRHa9_PCccVLB8JcGCdFppxk",
-    googleMapsPlaceId: "ChIJMTH4bSEQyIkRl_ARb9k9Fjo",
+    ogImageUrl: "/images/courts/lhirondelle-club-of-ruxton.jpg",
   },
   {
     id: 262,
@@ -7406,8 +7306,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "rude staff, nonsensical rules",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFpRrdg_ZKCeIqEBb3kURnAhTWuB6di_05D_l4BrEXqWmLBNqpl6UFpxdtzX-iIlVGjFi5ty9TwlSRga2IK0BuLJptR_fqik56Phv8TEpegkwx4Em7AnSGGje3n044nSEMCgUIeiar5V0v2CfuydTXBn4XzO693o6iayffW8p5BEqFn9852tJ0dwkw5N6ExGRrSS_d4vkX1PV9u6072lCuesQ7IrVi06jJwUGteAaqGbZ52tpYkdWfNjfIlEKKnFpraLLYS6oklDOJrpYhdRrfD0b41Od6zMGh_6r1pcIA9ST8eNnzEPBi2TwAo9Ga5kkYOITdZ64zf0o0n0HqSsD_e5e_T5cuWXpTsm0ypK80dTrx7ZRRijAh5pl9p8sS7AFUTkG7PF3wjm5Bo05XwV29c-IHcmBlnc3iCsBRFlb09onzFD-9MWjAEhWfqSwG9",
-    googleMapsPlaceId: "ChIJlZMypAParUwRWrMxR8H42kc",
+    ogImageUrl: "/images/courts/mid-coast-recreation-center-inc.jpg",
   },
   {
     id: 263,
@@ -7448,8 +7347,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships $95-$185/month unlimited play; guest fees ~$12-$30 per reservation",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHM4ZcAtDyAvDm1AlOJrlQw7SlRDdWng23noUWtmLjGbsqM_CsqtM8htAigJnNJIB2Apoq6_5rp6EZaR8T_ljFW3RaGZLWxn9Ag1313qN46xkCxmo_t6At-f8L8jofsIBxAUDlGcHkJX9mNQFQWcEAiW5ywEP1XILm8nE5Gimzj29TpPOs_gOMQjdMM4icMVCb86a7fuCNweumk7iuRgiHZn8eTERFXHkuvoUxh0n1qam5woRVnESy1ZBM1A_nXrNQty-WqQU7r1_gX38ipGCK61F0jlK7YAi2y2FsEmFfEnsMxJZEqgkQi6Ngo6GPEpOUfDb4Hqs7B_bCbkOhHkazaN5cNNfCJ5yqMY7Y3CDwjHTRzdf6obxz_C5eTTIrmDR6COSISkO0N8-lqFNcsh0_93ejE_ZHSwN0eSPmqPwkHi96b",
-    googleMapsPlaceId: "ChIJXSO8HQMt9ocRqS19857BDIg",
+    ogImageUrl: "/images/courts/the-heights-racquet-and-social-club.jpg",
   },
   {
     id: 264,
@@ -7494,8 +7392,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Padel peak: member $20/pp/hr, non-member $30/pp/hr; Pickleball peak: member $7.50/pp/hr, non $12/pp/hr (off-peak lower, doubles; singles double). Memberships $10-$250/mo + initiation. See",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEErl5M-Jvl_z6xX8DJXEq3wcp6jfH1LuWpJ73nKhzrGoEclvAXGW6Me0hMTGtPVWwLUES-hl9IYp2B0N_UBEh6kkL557FVfjYqv-xs_UUzBzT22PCb4ki-bLfcmMUWF9pAbJsu_JGRAbJaE-gyvw_uIHS_WJFR1L6F4-DAd-T6ghbmX9AxOt-c7OrncsSGkvr3uXT06ut_2kaPrmYEcIphes6Ml0w_uSxpc4EJtfoXLLu8IV5sfXVWydGgjFektAJCDUur_cYxVHBGU-N2v6MDWoXJs_5J5fLcXnIGxVt5PjA",
-    googleMapsPlaceId: "ChIJ205wQgA134cR1562In9t38Q",
+    ogImageUrl: "/images/courts/padel-pickle.jpg",
   },
   {
     id: 265,
@@ -7537,8 +7434,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEsM_-_AYlmcpBUB2nP8wwAQJjkClrCIyqziveUUG7INW-QUAQkBJvV0dnBeOPv_Dua6O4_FVUOy2OCnMAsopUrFCnnpRnE0ccBiUtzZtoINMxJ_FfvofAXwiQBRtbCBym0dZrFwha9Qokd8DiUUi1ZCcgzJb8dW5-bNO69Tx6iwK3o1ivMdMAp8X6LRFsIhQZsobjiJQmPGuQ46S0I35uofKjGzQqNdfuyid-sTAPjdp3Vgo3dX8xtMNi-zYgx5EnemFURS1zMD0yMAAaEt4pYJhUs0lGtlBHSB9r7JKU7Tzq2t16zDyFJnXHXpg31bDjt8YUYn-to99tJaxtvmNFQNiTpNsdjmCH54C5phaiE0Mg29Z_eE3dVbpN31u349tq9mUNAb8C9KHmqirW8tFD-eiMFZy0mZ2ImLswIqj7hxg",
-    googleMapsPlaceId: "ChIJewSREoRYrIkRqy6j2ooLbL4",
+    ogImageUrl: "/images/courts/north-hills-club-inc.jpg",
   },
   {
     id: 266,
@@ -7679,8 +7575,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "cliquey social scene, poor food quality",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFeS_fgAs91oFiwdOsE3xMZ4zSc1oqXHhr2-VI6yE-hef1XC05ZagoT4rTOTmRPM_3saRNKgEfNw-JxbY86scN1VIS8W2bN31Yo4PiQMcz_VBPxqHcHu0WZTRHMTd-qA036jcYXxEXriMEtp7C2t7_ERL1V3AaWNSCj3loJAHJPKeD62LD5oyCoGrFsfptgGEv6jtf2DbS1-Ujmwdo8g9HMMyX8hLt-wyBzci_s5xh9tJAJjsmzVeGoMohKLYfMCZLIkmkTBwljHQJO_uj6JnLCD9HogbsSrehT71AwiPO0Dg",
-    googleMapsPlaceId: "ChIJO6JMYg7xwokR7e2jzIT5hbU",
+    ogImageUrl: "/images/courts/englewood-field-club.jpg",
   },
   {
     id: 269,
@@ -7724,8 +7619,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$355 for 10 peak hour games + 2 free; memberships with discounts; hourly booking",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEE7_va0gG-3IPGzBK0v0Rh4sj_k9jSSuOKOSwUEeWmPAwnsmkQro-uFM4Q771jVdtC24vUKFCh_WYentsVxtal9j97ivjToZfaU7Yye3R0aXe0lDMApl9Y-KNe4nWlIi_WWQckhRA-hZnDYAeCz9fDeH3V6bWXCcCBKZ3P6gnP3nwL8rpux68Ur5C5z6RLU6lRrBkZQ1tvkEhgNrn8HIupzdskY9dONANxlxeTIMimwStcO4MGYUAu6LNXqGOwt8kyxr0hsjCsLuPRfe25c_xF5O9ZwBNURxHLa6JGzQTVhSnSbJOxH9OnGEbQYPnqoDC-gkS7XNc2hcBnH1396TYSzedkVfpdcDvOCGh0g8XzLkP-_YiKx0ZkuA4a9MfZP8cg07CeX7UPmftBVJb0l6CcsIWiemNIZkcO0MoDNAckJlgGtMTDbAIjEouZ2_knN",
-    googleMapsPlaceId: "ChIJrT4Mv43rw4kRqaJifoVccRQ",
+    ogImageUrl: "/images/courts/access-padel.jpg",
   },
   {
     id: 270,
@@ -7893,8 +7787,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$20–$60 per court hour (peak); lessons $60–$120/hour",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEGZ-Gv-S9Bt1QffyYlw_WRyzncGcCfnjtwoEuTygGlLBXLs3ktYBHXQBbKCF_jIp1RfjzHmucWYr2cEn6fSRRw4ZDOvtFvDktuPbT0mbNAIrmlCiBh-PD5KqnL4G8Gy8dZqvNCctr0tEOM3YBpXyTz_btw4TJM6quF60cm9ePBpe-9z_wJGkVSNV33UPly9T18mZGD6Tk7z00xoe2_7Ba3tcCSPtPEuE1hh3907q4x1WD2EvgIDureu1deNX1OdvKNbmeu-c_H2EBr-n-SQkVkiZD3mCNTAR-DJmRhngnc",
-    googleMapsPlaceId: "ChIJ_-RUC2Kmw4kR6Gm4qtCP9eM",
+    ogImageUrl: "/images/courts/centercourt-morristown.jpg",
   },
   {
     id: 275,
@@ -7937,8 +7830,7 @@ export const padelCourts: PadelCourt[] = [
     courtSurface: "synthetic turf",
     socialArea: true,
     foodAndDrink: true,
-    googlePlacePhotoRef: "AU_ZVEFI3cSq8Jp6k6eNf2G7LcgNTx9m8f6ljzwNoAUsclKwdX4Mz3Zied1sLJhIKU2uBPQ0gjSmKX-4b1bWsUj8KP4gziz4jMXtvIERMzWy71ar2cBd2_Oij2W2mjoQgzlfvAy4_E43dtsbv7PRkCr_QYfBfDdM-kvfiftdV9cH0_cJOR5QL-GgIzwHZ35hjoSWrbMvsKTysCFrIIiBP1mb5RA6hmfnaxcmxG-A7OE3wO8imZYmFWk3uXL9SeZRXdLlB2LQzHi-nI7tWc98gNM3m7P8r82TNB_-yf1n9EdW6iOj-w",
-    googleMapsPlaceId: "ChIJg29Oarwdw4kRy1bcJ8-I6E0",
+    ogImageUrl: "/images/courts/rax-new-jersey.jpg",
   },
   {
     id: 282,
@@ -7970,8 +7862,7 @@ export const padelCourts: PadelCourt[] = [
     lessonsAvailable: true,
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEGKo7ML03MZ90iuIF9bPIia5KZTWmyelwwHc13Ss6bpDKmjaa7AVJupc3ALMeFI-9nkQC3dEq_vYU_YRcgifmXMSk9tqV9DZzbBZwV8yZI104Hbidc9P6-IHfpKaJ_Ko9DUTM_lF6bYd9WGGWpLt643OHx4bRknhiCnSha7dmNWqZzwvt0KLe5XC9PdBAP_fUEL_RbcdT_TCDINHKBrU6wuHsmNUHORHdNYfr91Xob9x_0h0nF3KxnLC1EcKZYKQv9O_5ZALTIB8iXioBWZdXekYYtMNvAV8ImAxyZkY3eZOA",
-    googleMapsPlaceId: "ChIJw-O_Xb_ByIARFPiMDbOL3UQ",
+    ogImageUrl: "/images/courts/the-padel-nomads.jpg",
   },
   {
     id: 284,
@@ -8016,8 +7907,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Padel by Brisas membership $275/month (discounted court time $30 off-peak/$40 peak); All-Access $525/month",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEaOyiGsb95XeoIAlgZIlhY-TNw6vAjHCgjn44uZKN8vGfuRghufgTvp-ES2Z2reALMWwbXHe3wse5orBEZUlemF65Ehf8rvn5JfufDHzpSBU8A8q_IFkN0NGxsxSj_7nEsKgrtfOGgYHGmmXtEy6fB2eDQKn4UpyXx4gHfOSaTBGVaHyUSs0dHkf6z1e6FZ5ox5ilnjLNX8_bWjq4uoh2wVb13UDXH_Fw1_Qgu09ctuYlbMpmONjAEt67_uyYtOYt7eCw0ncz6odmegID-C4gakYahC0MJKMqmRELjJTY",
-    googleMapsPlaceId: "ChIJ6cNu-ctfwokR5rbxEQxJei8",
+    ogImageUrl: "/images/courts/cityview-racquet-club.jpg",
   },
   {
     id: 285,
@@ -8063,8 +7953,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "unprofessional staff, organizational issues (from Yelp/Indeed)",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEdLt3oE04XasuleAD67d7MkQmWnz_HU8LnW7813aUlE9JHvI2Se3mjutF1fMlBza93_ItEabTLTpgGdrZ0pCK33-LUJS9qL3EEjY5Lv1MRuYztRmk0JFJEImfVekXVUjFvQcp2-tdg5O729rS-dKQkEQjovaVKdX9dz-Xn3Fm5sKXrumUar-RQpRzNCqWz1uNlkcf4e-NK_RXmLHrPB6xOm2N8CR3MyT4GSs3shgnhz9I4xY41gQnMI1cjiGuUfg402oytJEne_LXnh_URpa3yDZIgKfnwiWrg9YeCzTUi337NtB4Gl8QOE7myojNTYKU843v0-_wsQnvOyxVgL1PAT1_sM0m7OHNUwBg1sxMKDog_KpAX7ybz2D53daKCDX_bK7-O2WxNQNZ5Sj1ZNnrfWDXtBFvKE-X0VCPr1FL1Lg",
-    googleMapsPlaceId: "ChIJ9XAoyOqRwokR5jH3PbDYetQ",
+    ogImageUrl: "/images/courts/orienta-beach-club.jpg",
   },
   {
     id: 287,
@@ -8231,9 +8120,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$10/person/hour",
     status: "open",
     verified: false,
-    ogImageUrl: "/images/courts/cleveland-premier-pickleball.jpg",
-    googlePlacePhotoRef: "AU_ZVEEJb2n5q9ODIhNTUE1iaBdf4F1ZASsMwWIDxK6PDpRSOFujV46rT-uTqSGxJJ63nRr1I7nfEUVN1Jb7CuUJPFBg62eRgdWbZcvo3xk2B9LbHg-Vka5CiV8PEJNAggcr6SX6x_VtnMkewCD_PfVBYxJW6jHlyTNJoz6qIgfAXN9m32jY8XPf-wjMrMM5GCTwybQBuyr3Bqs2hz9xuADks_2QVgnevmnKn5O3VzH_X-owywMtHNN_s2vqcWVTh3S0Q6e-JYT4ud0AdSX4x_KHK1gHECN7BCQOO_bVt-MQ-sbFtA",
-    googleMapsPlaceId: "ChIJASCMZHmTMIgRK9SIBFa6Y_c",
+    ogImageUrl: "/images/courts/cleveland-premier-pickleball-padel.jpg",
   },
   {
     id: 292,
@@ -8275,8 +8162,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEF41uB20-1cvFl0Cz1Fy3nnJ_G8sf77BP2ef5kVQpK5u0OIbAyM0YOrRLPnzfZIyyelvLVNa2gJjeNKjfsJ0G5JcKtT2n1cdjmy0iR5XbsGXjVM_blqf4_zXGZMegRqamw_qd7nPdVuSI_Fr6J3r8DZSn_8O7dAOTN3-BWTm1p4TI-jnnGQXgvNFXGilsuzOFdCLcVz7uNrP1uN4yyX9io9T8GqDnAqpuEkfuIIKo2G80idmfaK7khsXp78pgyFGdMuH8cy1wKFuGDzQv3wtsP5BMAoArIkv66TsWqlRCXLbptQiM5aHgomgVR-GgP9UG5Jp0XAGnfl-sjajI6Cv-8OPqIAstNE_MbScbT79I23UyrrszBqvbsJlLIHXbAly7xdTWA8wltmO8J-PFgu2QWLQkZ-ykeldu_hBry4hg4Tbr8X",
-    googleMapsPlaceId: "ChIJQzrmStCyQYgR64xHDFTRL0M",
+    ogImageUrl: "/images/courts/maketewah-country-club.jpg",
   },
   {
     id: 293,
@@ -8319,8 +8205,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Membership: Family initiation $3,750 annual dues $1,565; guest fees tennis $10 platform $15",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEF8fVAaD3n3IDGGqhjR_t0tKXnY_TTaF30yoMv1xF7JV7A5HyhclpCq3O82nCS1w5be14Mx2AV8_gaBChRi9_UUFPhLPGvqnxeyPOdSyZO2NgWFpxbBieAskd9_wV6OwLOCa3Pi8o_6VXYDQA_Rj88XHRSGzZmVNyQ76sLHpYq6QmXCQqZzxpad7BjvT9idvQ2j4v36o99sNpJkoW_45JOlDhNT2bqeFVqnjxlQYTN46Qs-PaSLF7X35IO4zu1oE9tFbZO0hbBhvJ4_-PD89i0C11RJXMPy2Sz5fb-wTi7X-oz-rNUZtpNaKu-BB9kW7Wos15GcD18hRgHVoGQfNllj4fk3G092ukDz_TegiCaFkhrkCcjvvWWXowJ-8eM-AuyBw_58GXGsOnntsoS54pE0kJJDA42NcnZstDcwxFauXg",
-    googleMapsPlaceId: "ChIJB-ZAQ5SOOIgRM79SReqgWlI",
+    ogImageUrl: "/images/courts/swim-and-racquet-club.jpg",
   },
   {
     id: 294,
@@ -8448,8 +8333,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEPWJOgPlZAh32DweMHTZtB_cbtLsCHvT55UUF0hwlr7EzqsObGVRgVEyFSshI1y2QtA7YPeMML18CtKwavjM0Sv7_7zyaaR2PRcF7esjpguP8XJKRlKRjfQYHkGaL8oMPhcy30RbTgV0BT7Yh-LG47BWMtNScboPX5545tVuIfVR2qdD3XdZHEJ0ycSbRV8jTYu5eCUhLdYTuOQQJYLV3ahZEmC5Sf1mCe9wLNYtWd0exiZB8tawQIZj4JS-PB0hkUpCdDKw5uu2qEHso91tkkRiA3OsLiEGKkh4a16rOrF9ZVMbNgp4OHZveZN0DOAKaTnyIZXnzQUgLwh2Ga4CW7gf5-DFVOoIbbPsPSWPy5DYeR5b9aKF4Zd4ZeQJrX8vv1TNa5xY10P6ahrNlTlYR7O0OUray7ofB8KE_sR24",
-    googleMapsPlaceId: "ChIJjbXmT7ocsocRF0QVi1VilRU",
+    ogImageUrl: "/images/courts/the-greens-country-club.jpg",
   },
   {
     id: 297,
@@ -8536,8 +8420,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$25–$60 per court/hour (estimate)",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHsss81gKvCZJkkqa9hVHTvHk3Pxydcfc_jULh0VWV8nDEUzRTybWX9mH85Sxo9-ENvkGva8LAA3EHDaYYgZOkfKBhjYqm-0waYqZVzGeX92HNwDind6WqZ6K_XIiYbnMucPWjd2P-LY7bHXEl9kZ8CUESDGAaYfqdDSgQ4wxffRV2hzVv6F9PgFIGZ0ngY4uisHTAKcnTugFJGzLggP5xrpqSiW8cDo_bvLU5ptw-g_BMyzkyAzAPAHwmD9LPgLSh_emXY_MhYZu2JWOmhmJTh-aMThwDn7gkmn76a9vQK2qnrLT-xqxTg3mppmhwYMfqMEJ5j9Qh_hY1je0h1x3EpVteDNSXC9qvZRiRPwdstCJXVx6bxi42M5fhOo5PsqRP20JW1khUEbx5-BDGr4h34Wp5f0BHInU1ivrWrY2qWdiDj",
-    googleMapsPlaceId: "ChIJGzsDBFu5xokRx3GKpl3EC-I",
+    ogImageUrl: "/images/courts/padelphia.jpg",
   },
   {
     id: 299,
@@ -8579,8 +8462,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Padel: Non-member peak $35/person/hr (4 ppl/court), non-peak $25/person/hr; memberships from $12.50-$17.50/person/hr or free for premium",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEE5I1LgugVq3ycJU0HgG8rz97j8cKeaQT_ByKlDJfz50jYdXaiLlLvBfgDMz2qoDQlBnUvl8UNtbApyBs3mEPZowKMMRDK3zd0_XPns178WXt_-4hSGIr46_op5jyGNoGwhra2RzewTdKbmkCWz1Rp8qolSKUyaru4SkVR4qrS1pqZHkDFheaggvbIsNeD_XLzudVkWDs5XDV6mmE6plKaYQbS43Q8rUrgRf3_J-aBFChIGI-lXTcfaYgER1BT_Ew8-DNeBPUCPNTwXYJCJVmphFCX1rpIQsbJAx98LyVtddQ",
-    googleMapsPlaceId: "ChIJaRkXI7q7xokRyeEaQ-uvaqw",
+    ogImageUrl: "/images/courts/viva-padel-flourtown.jpg",
   },
   {
     id: 301,
@@ -8752,8 +8634,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$5 per player for 90 min outdoor court time",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFrZaLJMTFJhqyu4gCgpPz7gVBez1ziLMQHSIvxymZQBcgWPFMG1GtV53iI6ZSqWFfbK_VXPENKKoNBtgYQ1Khpn_u8h7d4jg-o-lbarRTYSWNI8zVYpoJq8lsl8P_glxY72hnpNgmAHx9oH6oVN403Hzr_XiZhBznC3AAUp4XgrMqvyfuoUu0m0y5xLvIXBpX4_I0TBIM2wL5CMcxz6L7l4dmSyNEQ4OJNttYSj1SJXMuKVliU9Kg9KH3yrkj4Tkf9_0VxXlEx2rO641WeqNodtKbTASmxBWDEQn14Tt0d2w54sWqZotN_que9phJF4S-xLRXSHpcKJkBgqU2smWKq4JP39gf2P6ERWchyu509aZij0PvKU_WosX159lDZmr1wBwEXBgvIaGaJ33h0X6NM_PfcEXgckB5lKUl-vtydng",
-    googleMapsPlaceId: "ChIJfSeGXwhQAYcR_3k8nmqjzP4",
+    ogImageUrl: "/images/courts/amarillo-national-tennis-center.jpg",
   },
   {
     id: 309,
@@ -8796,8 +8677,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEGc_S4kQYPUWf5VqtGEBxdq7Gzo5qU4U7BhWs4fkN8pfbUqsIBKKfLeiFVObW75F7uZdnV9lyxZFJjYCixV2KbDcAGzlxx68Kp7nMOUt7N5cxAmL6cSX8jcRqDSAaxRkseH5NRkjUjIXGL0HzeyW1po83huy11AC_389nRS455N_J79Jh3e8OcLI5n3ZuBxFIxB91iIpY1JwgWCVmxtPvJDP2qfaMAP01tyBubqVa4Ue7DMeOlSHRMdEQjZBwqmqTXkB8YMAtmYuf7O-PrcGWptQI9Oaf-PQNWYrLkYehSrTPTho9BgEfz32BsRpYNCK5qkpy1veWcBjtZuAaneyMiWbqIfn1YAUWxDw0LHArOYXcFQ2G02OV5cVezLj7QVoaDk0WKeHG05DNdG-9rFYgsiYCd_d00vvlDK_09AsSIPPfyjL6xEt_rt2ol-dXkd",
-    googleMapsPlaceId: "ChIJOU2syMfJRIYRux9TjnxVXTw",
+    ogImageUrl: "/images/courts/austin-padel-center-pop-up.jpg",
   },
   {
     id: 312,
@@ -8884,8 +8764,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$20–$40 per hour",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEGyLM1MPJxlQiIgjaFDK5nFSj1Y6uvCcK9lANmoYsbUCOhRIy5aC8LAGIFsLbpQP9z7zV-JdHeg5tF-zegAcpdSZ5cngH-7V4sZWAuPPeUUXrDUIsUsS-w_ubrrZL2bjJzDUtg31052uSaczT3TfgvFY8Iksjzj40bXFpu7Dfeo5RfI_k2In5GKY6OZq4x2Z9iwx7Yjo_3OoT_zSf0C1xYQ1VpdIioUS5dUnGWhZMOKWBmWviRKuxlq-RXepQA88aOcChZQy4BJn-I1vAeunJyefs2h0mmzr89hR170E2M-Cg",
-    googleMapsPlaceId: "ChIJVbsJ5sZ9XIYRQm6NTMb4Qdk",
+    ogImageUrl: "/images/courts/pick-and-padel-san-antonio.jpg",
   },
   {
     id: 319,
@@ -8922,8 +8801,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHqbJvPzVg4O4dY0BVjdZlZvnCcdZdijTtrVahjyw9OUvXh6C5S3c42CeMnQtd5MZ4es_cgz5WGTx4PDrMvwuGFNxAZLknJ5w8I7eeURHY7OzJ3YOtZ5Cf_l1yNiSpj3g5cqSynMNJwh_gkPW_sXsRxOp1CsTPb8n72zgLLFt0JiQWcJNSFEEfBtdhzVf50rmQdMbz8YiD_ezod0cJ7Z1_PfeDNqx1Cfsb7VCiCiY85Mg7ASNRkyRtQwF4msealId0yHgxV87T0cru6Acm5IQ0AYbC8RYnaWp-G_0_-9PYeKzcLhJQzX-UN0umUNCz1VjE-k7ITM6OcB99jh1b357A4wHsn8nn6HcQgCVnvBF48CPwfnJ4pflhFCAoq2l8OOOsJFZEevjVce-RoUDKNTbnXXHooQVTzHrV0p7cpEqGO7g",
-    googleMapsPlaceId: "ChIJdekPVBCfToYR8ZIdFd-6lak",
+    ogImageUrl: "/images/courts/styslinger-altec-tennis-complex.jpg",
   },
   {
     id: 320,
@@ -9048,8 +8926,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEGevFV3513SzM7Q8r2gb3iJ0e3LTB713yFa78S2w3b6JhrtbTccXgL_261_sJcCxYnhrFD3FdQSsd3WcIQQsgS1yG2q1NUq1Dv5FYYoXqcL2_VlEqJHsaHvNF3JgyvSx8Cg-XWgwTrtCmjgWX1M5po4D3I4nnVyeal7rSHExrJGQyFraY1L7VzyaQOn0PMuWyHJlVNQQRgAzQFfsHpGj4oJJs3mcCZ5g7X-sDDws_k88Fh0w4G9nJ_jwWCzIMuob-scYX8QAZGyXdtyvnSL8ns5PxBfbafIg6IFJzY4un8Jdw",
-    googleMapsPlaceId: "ChIJwYKXsAP53YYRi4ew4k7jTnc",
+    ogImageUrl: "/images/courts/padel-paso.jpg",
   },
   {
     id: 323,
@@ -9087,8 +8964,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$20–$60 per hour",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEG2Y7mgNrAYdbZy-hCvxfaoRiUdH_i0-xi37jLnfTc_EHc9fJ0guFlmIbI-jxqvwQdQvnivM2iH0urxlybyY-fdu9aSGw6d_qsuEaFuVD1f9hn_to_OxB_CxpA49Jnvyt9xmcLbYmziv8XvxCxeabSia6wNLiNe7rdmWK2oSpzEV2tBfuBEOMN3X6VGC3Bk9Zw8olKiCOfj97pT3MRyYV9pS7MMKV0bY96OOq5pmOkPia1KxR6cRi3JK9JncRih01B3MRqz0I49zYN5vlhhACkxafRgg_zXZBDNrqg7XUbilw",
-    googleMapsPlaceId: "ChIJqY7shFMJZYYRdcsqu5NqKE4",
+    ogImageUrl: "/images/courts/padel-protech.jpg",
   },
   {
     id: 324,
@@ -9209,8 +9085,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "excellent courts and maintenance; friendly staff and great atmosphere",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEK3S1JWgBnYRIW5z9sCSCU6dmDnVKXc4bgtt6ipGkGglGR6LzllJGm4O39-5QRcV9pyTFESonklw7CQoblQNGIF-SvkGCq_mnWiGZLqpcd5GqadUUrMmu5nzcP3st1AKV54y42qLHNNVR6RwkYK6YETYpf-RpkW4E6zEyQw6ddbhZ9kMNXk8N0hJpEmj4xGbZWZ7xL8UjRfsrIPo8mwG3YusLbgj1fBu-NrsnAUe09MmkvMf_-k79HwjCpawgdXkdxRqXasoCv4f0UYs4ect7CPERUkBdcFbMXq4wNV8BQQw",
-    googleMapsPlaceId: "ChIJf42Za77NQIYRl6vwL3Nc7jA",
+    ogImageUrl: "/images/courts/racket-social-club.jpg",
   },
   {
     id: 327,
@@ -9254,8 +9129,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Court: 60min $45, 90min $65; racket rental $5/pp",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHALkapwIlF0LckSBAiq-Dd3Nam52Rewcn0914zym-6WROTxYj0lTKua0gTN_6gO4ilpuRQohr2JSSS6idpsITHbKwSz-7YEiPiZahsb9iAdt2WWIbLaA6mju4tRWxyRvCwPM8-1IxntB7eaxmZ1rruvk1Jn2i0i9I9xUvze_YDDxPOGy5OI-mEReYiCUIO4zMQVIrXNEaqxXPBqSKdbdGpwHnAfNFcc5k-QNhB8ZEvjQfm4gDpDYUfLxQ1UxPvwkLf_JXv7p4doYpi9Lr8TEbKOLJdUEKjmBiBEG-Kt6xhMw",
-    googleMapsPlaceId: "ChIJEzkGyOC4QIYR458MBksXoAI",
+    ogImageUrl: "/images/courts/ipadel-houston.jpg",
   },
   {
     id: 328,
@@ -9342,8 +9216,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$60 per hour",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHD98pck0WLO9MK0vQlateMbavhZ2-Mowz-9pxvUz4xSj32B5a89dIHjpNuIM96kCDlQ6zoO9fJxZdHMXFOBrA8D889Imf0NoaZAxd5UrSoMEosfNqWWohLMkTsNIRSIY5ZIRKyvtVlyqCxmv1GZy5BKZncc8EyXgNMYLrq32C3_DAjIbf0b0Rhhimco86_AbE0_wcjpuOGjrOypbuE8eLKR3JALxUZsf3XPoI-zqD8ELzkBAMdBa9qTrI30vlDAixufFNjAs-oHAhuKPxtiel39PQGwMvsAxhyGdEAeJ396A",
-    googleMapsPlaceId: "ChIJf8rejjHbQIYRSOIHV1YHuVQ",
+    ogImageUrl: "/images/courts/padel-country-club-memorial.jpg",
   },
   {
     id: 331,
@@ -9384,8 +9257,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships from $99/month (3 free 90-min courts), $149, $299; events $20-$30; hourly booking available (rate unknown)",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHhzW9E6GrcwwUCH88hK0aOrK1lMKaHItLQRb-C3WUvnWg1EM9R7I8jR5Xdvjg4lMNyZENKtWBOSkzLSFPCUvp0pvHPAp_ycULO3pFvU7G6nt-WyuiWl4HbyTwPLJa-kpYtcJi10mXvouuEJQj2LJY-oQGBnTMUlCfJd2p3uTlbQZb3MBbjgj6bqiUEiiHRc3h1mzmFjLEOOk7jMOXACvjbVG-JC879UUzyQx18bA9-H3Ni0-Orx86OKawSyg2RNabh-Efnj6JHVY6pKaErqZQtgL5MYEvYtb1FGfY4hPOrC7TpJovaDYcRUPJJgmmeAjdqLOVFdKBHUTW2PqS4tdyQYy7JScUSCK3UbSjvEwlhxlPX90JpiD5Msc8ctFkjKvllYjgKK1Y8RmIv37SGfiRM-xIiUF5P2NbBSjXZyi8POQDhjolMT76wKk4EmnG-",
-    googleMapsPlaceId: "ChIJCQ7S60W5QIYRN8_9QDOm-Y0",
+    ogImageUrl: "/images/courts/west43-padel.jpg",
   },
   {
     id: 332,
@@ -9433,8 +9305,6 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Hourly $25–$45; memberships $890-$1344/year",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHb6zAePbNFYuAQg-rPUR__lCr_O-xCPXBYMTiR9YF4QEQoCm1GGeCgb0Zzvmq1qFwRAay904vL8XrGJxm79IeN3c5PE4NWVULHXUoaEDhwkDRSBj8n9Ws3caTE5vdGLHVkZX7OfC1UQPMdXznjg8OFSKxsWiV65AQZgZ8qkN5G4SL4YNtYGAM93rhl-lb9LNwEqT5XhFtSD9el0fmzrjXIroGS45NICcryY65gnUeHzgLOyNmvuMvh3xasRg4jSnACw8yVfaU0TQuXtQfWlXX5mLb-hZw-MC1LoS4CUiP9Dlg99iVXmWXcKlniJi6RgqUtthBGlRydDAzwjuSRwCz80YQAq67Gdf8c_v14ZQ1MCu4-T2JxHIa5lvmkHOIIF__NUehA0JPzXwvKii7U49tr0dZ3iiV_cbIZKyHA-w2Z7A",
-    googleMapsPlaceId: "ChIJPSifc1MnQYYRd3TCY3k9bQ4",
   },
   {
     id: 333,
@@ -9607,8 +9477,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Padel: $30–60 per 60–90 min; Membership: $99/month; Soccer: $60/hour (,",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEpkJGH6zWmOdRs6QPEMWYlxP8Jv0J0BoUnuSVJ6EgMB065IH_EKeglvSSf8VO9GSw55X06mWttkrq9O6ZnKNErEh-DIAI6UjVMWTE1hDgYaapgQouIbjMvKN5wz7uegFsCkv-SYoZLH4esDobl7226I7qKt8-4P8bFJeNQG1viMYFBxGDnowb7WunIOkbvA4TlMt14np7UJ5xcHelvXgeaVSpMeEs6BmZZVhO6r2yKEcxn9YMZ8zvSAzwEaGof3-nSux3DATF_UoxYntnbvnofK9SA4Sk7-mcn0Sv0Y7PyQA",
-    googleMapsPlaceId: "ChIJJwWOkLenZYYReTzfds5v4gc",
+    ogImageUrl: "/images/courts/imgn-park.jpg",
   },
   {
     id: 338,
@@ -9652,8 +9521,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "book via Playtomic; memberships available (details on site pricing image)",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEGTeQ_8NwC_y_Kt9UJDOB3hjIeH5zPZLVoqlkfEaHRggh5wcFsfmwbenDPqr-wFrrRoCavvK0-Rj4dJTX1QUJ4oph20mXTyQWkzU2ftqxfqZ72lWlOdsaRqSDuN0dWbbreMFVam_GQy0CtW2H6dyylKINFDS16oL5xXKAmcYSY9wSkNZZO6JxlXwidkLnZikisU4pcJ283cbWiDA2SmfqVLW8Gm3HNPEfx9inSBc7m2nEXL-l-ZKvoQE6GFTjEpjLW-f8CWsfjMICjIO5wTclTANzufmeHn66AMPHxZeeDPNN9JSGsVLhuKtwNO6x410Q4xezLzUQdCCG9yyhqMZEi0XAlMI5LXn1YAsQwn9A4ro_O73llo7ziyKH9ppWv9wwRObAsxmooUWosW7DBB0Pu5RTGJR5D5YOz0N70-B-GVWA",
-    googleMapsPlaceId: "ChIJswqK0canZYYRDCtqkbwFM-g",
+    ogImageUrl: "/images/courts/incredibowl-pickle-padel.jpg",
   },
   {
     id: 339,
@@ -9699,8 +9567,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$60 per 90 min ($15/person); peak/off-peak $55-65; racket rental $5",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFt92rYrU3gGPnL8nY_X11pwM11SFwM4DKvGnEkWPAkGfMwxdY-ftIg92vr_FSWWE_34Tu-t_VJybMeCrQUZUZyKZYlnXBsVZMXGE0BfypyqJsqhDpQ5El6ymUreVtD8JDvUUdCgyR2hhv61KMhP-pIa3XFfAfb2uQSPbxclRkqT23M4CPnc_tALYFc9xTbE2A9fz2bPsKSUOqbdhNRf-AkZQABVq495sGySocndEqAN0bsHgimSme9SpDCPgfH9_7h7rBgQJVuiepxZ90FShDyRE29E_fdSP4HNit0sd8nBw",
-    googleMapsPlaceId: "ChIJD-5KXACnZYYRZvHZ1PGKjPw",
+    ogImageUrl: "/images/courts/rgv-padel-pickleball-club.jpg",
   },
   {
     id: 340,
@@ -9783,8 +9650,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Padel league $65/person/6 weeks; hourly unknown",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEETgPNUhitvUbYQZiuYgsQQlJhGIhD4z6L62CqfdAFBKDyST7GMht81ptrd8JQSVQFdRmb0qwc2hxURsKvUzu4TB4h6dzyl5R4fVw3OIW3Zkx-Z1uYuCs3e4zGim43EX4cbbbiTCiW_h5ZlH8QeCsyXjQxSH3c5cC53Mx2Bv7fvjstT39KN-g29hTAKuXppDHC95UQClScMzPNqe65CacFkgyRKxxKhob0wJ19tN8AJnqqrpbNOGQwrKCOOLN7H8ATI3YLTkVGYeqsYLL_zUB826g3pzZ4vCckGXJ6UeZwH3NKPvhJoRL8TK-y06Ui_mrFNV7-R2NWhpQXRS-YcJRtnEN8xHU6bUKjwYgUCtTPlIjJzdeXURtITWEYaF_LJILcQ8CPGNmgaMm3XeKqJfNUPXE7AzpfUDaeg-g2J0aVSgg",
-    googleMapsPlaceId: "ChIJ4dvYc4tnXIYR7Zvwp6wUCPI",
+    ogImageUrl: "/images/courts/mainland-sports-complex.jpg",
   },
   {
     id: 343,
@@ -9828,8 +9694,7 @@ export const padelCourts: PadelCourt[] = [
     verified: false,
   
     pricingText: "Membership $85/month (pre-sale, grandfathered); regular $125/month + $50 activation fee",
-    googlePlacePhotoRef: "AU_ZVEF66kf9KGx9a6JBFduYc6DW2P5Vbv_JJmaDoeX-Ypx2iibxbFQexPe0UWtME-wiLIecosqt1rzqCAIQIAplZQozGfwsZfDAzRryImb2X2hxX6mj5U0oQul3ioKUdBvaI59CcJEDvAByTCQhaP3uyVI_qZ81zWJq5PX2U3fOePJ-r3qnan3QkFPnfSFmMJ4roE7Y884F8RaBeBvkGyDmvoVG_ppqZAPo1jenep9YmLNN8FN_DMnB7I1D-2q-QobuvrLg7cuK1KUv3nMKA7yN69iUX_gFhhp4GHCyZ2tl0KTpBg",
-    googleMapsPlaceId: "ChIJwWuWoUhhXIYR0WBTQVBhZ_I",
+    ogImageUrl: "/images/courts/slice-padel-co.jpg",
   },
   {
     id: 347,
@@ -9873,8 +9738,7 @@ export const padelCourts: PadelCourt[] = [
     verified: false,
   
     courtType: "outdoor",
-    googlePlacePhotoRef: "AU_ZVEEQj4Ts6BfEQ9-oBq5O4Q8uYvu4APovbYHmluYXLp77TyeBhfgPqbT29Qr1b8Z9wOb8AiBWNJqbW4SJCNsix9SB0UGHsgOq8s93Ugn195wOzc2D4kD3qIgpw9fvDtg6hRyrnKHzT_oxpQABV_2xDyxaj3LiXwcBed4nRYUk1ZM0gwlrtNMtjxG1uK5RhIY2hVC-Vt5uQA5wi2xkINSzyyuW0ELFxZ3TQUwje2UiyDj3JjqniElzs4snuNXdu-n2X9TiNxOJY_1MdtwR2LUQ_N7CGPeC_8QMG4s4khgeTM9w6Q",
-    googleMapsPlaceId: "ChIJ98oCZOfMQIYR7xB2AtBSt_w",
+    ogImageUrl: "/images/courts/giammalva-padel-club.jpg",
   },
   {
     id: 350,
@@ -9999,8 +9863,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Off-peak: ~$20/person or $80/hour; Peak: ~$15/person or $60/hour",
     status: "open",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHTifnRRR8DiqxFVygLkvQ_iq7ELt5b7db7Dbb7xf1z3MPO_MKHYzkK5sT8s2AH3XQfkyS-if9u3ZTxf_DKczYu4E-YqIbxrz3c7BzWh6lF1qW-pz7OgoruGsnI4g7PZvOnWG6qgDVV4fNPQDfEuRcl_39Dh-JN_0cBkQrzAIZGHnspi-HoFmx6tz9yiHcWIAHs156pbljN3SqsaRzoADe6uuVuOaymCXckHVYJ7NVK9GyYRRAxXNc7KwRkmmUFjUDFBCwsADykVDP_ERVPzreQFJXeOlmW-E1vn6cs0qO-8A",
-    googleMapsPlaceId: "ChIJH8Nmr-kRsYkRZXtxrKu_sjA",
+    ogImageUrl: "/images/courts/padel-plant.jpg",
   },
   {
     id: 355,
@@ -10088,8 +9951,7 @@ export const padelCourts: PadelCourt[] = [
     positiveReviewThemes: "High-quality courts and facilities",
     status: "coming_soon",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHzLs-w_6ne8AthUtJV1einjnrl_WJPQBGzuixhfGbMhW9NKv5eyXtJ2qXEyX9fqKyIv_bRG3AHChQYByRQt0QvAwzZA3EdzJNpfZSBVXvCeBYRqrOB699K__EKB8SzJam3u9W9DC94LMtPO8NpiYvla5WiIxVcsRoznSVYjAr2oPwdX05aP_iHjbGL5DbKn2kjF3MlgftGbwal-Rrxc6wNFmBTGPPAL7aW5g1_-kGgqv79QG_8Gvcfibm8aIz8fV8P-RpevXqXJ09DsfxJLcSJc87mzj7jqoqNGu3HAm9fsQ",
-    googleMapsPlaceId: "ChIJseC4nhqnK4cRVIPqXoUB5iY",
+    ogImageUrl: "/images/courts/mesa-padel-club.jpg",
   },
   {
     id: 357,
@@ -10129,8 +9991,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "coming_soon",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEGOk3jUdVHJDZZgRwNzcA7KFkCOmagwvagTLb3qnQkBWJ3KDyQlol8PDBr-Nk4UKYYddM-hell1vN2liOk28jqVX5xhJwevw4_iZqFZ3NSwWe89Xg6sWLGoknenks6LiplL47u_VAduMeuoIV92VowdR7pi27tN2n4HB6A2MA0F_J1PjpmaUAa6nL84yKiyU1RMm-8Rb287d_UerKWGk-91IMbuC66D8QPHUonaEprEUQK-yYgkiGjDy7cq6f6LBAg3oliNpJmf_nEMOuyLe_Vn6gLdGl1hJW3r0ZsyLdkeWDnYKhDlU5kxUHPZS3ps9xY24jvuQGbPv4Q5P9b_aeuzPh_NK1VgqcDRC1_0CcSYajrr1nlEKGduoIz4bitJTBdUB_CFYp0GER3DrZVV6u7A_AVNvTvQ85itIZm21_am2CbM",
-    googleMapsPlaceId: "ChIJ05G_JasLK4cRtp6eg1H7oR8",
+    ogImageUrl: "/images/courts/pure-pickleball-padel.jpg",
   },
   {
     id: 359,
@@ -10175,8 +10036,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships: Royal $350/mo (padel+wellness), Iconic $785/mo (padel+pilates)",
     status: "coming_soon",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEGN2dkiWroh0Hci0M1WDZhRLEXn_Lfpl3DevHWU7OsUy4kBjUruWXUbYSioQuVjwTP06BMY3i0Tb-q4mjLLWxR8Maa1Fc-Qgs1Kjji3SE5Ieuco5uBcRmjaexRBz-PTmiwZdgJn6gqeeN3uR5sITA2gFErZ_nevX2CwSFzWLTxoZhxgvpiHDyW35SrJD6ohxRuuncbmdNio93xahE4FBXqR8PaHGpivP5X8i9PLd4cP5wt8UOO4bMwcRoiMYa3mfek81iQeTl-lmMUR8vXlu0xUT7of6PNlzIZjfPVwfplPRoITT59jI3awkILkasYddXupmeX1HnueygSaWJ4FFupcADTHnpaCkr-1R9yhF3Twvcd4lAde_UyLDeOJ_k3NE-zd7c5LNG02Q7v2DJUbwLRJhAnSTcZfxblRmojV3kqgcFWFENzhRqXHfvWv7Ofc",
-    googleMapsPlaceId: "ChIJG6xPsTyt2YgR55Qd7Hir5S4",
+    ogImageUrl: "/images/courts/icon-padel-club.jpg",
   },
   {
     id: 360,
@@ -10218,8 +10078,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "coming_soon",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEFOzXq234bgU_mivfQitAU41gjeuR4QRzsSktO1IhpkrOdiknhTxeZlQE1WecmSYs9ozt_bcnNVoRhCSEv_yDl_PbHmEVX8SqPhbQvoniC5y8ShPsFauN-IRfesmXBQTcQVoDpPZ6SWqQtTNSa0qGJsJAkjAVEi6RayWZK6ubJh_GKdohJL_oz_0tQjh2xXysz_RE1d0RTrjuvcApkBOhZTDg-cXbosOdaEXSVeRhjgU6FRUCHV3P7CbLVdQwIjtUcs3z-Rw0YRmSSqFdaLZjlF4PHozn_OKvsHx9m7JfQb6w",
-    googleMapsPlaceId: "ChIJnc2Qwvi32YgRjUqLW4PE_ts",
+    ogImageUrl: "/images/courts/the-gables-padel.jpg",
   },
   {
     id: 362,
@@ -10341,8 +10200,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Founding Member: $475 upfront then $60/month after 2 free months post-opening; Lifetime Member: $950 ($475 now + $475 at opening)",
     status: "coming_soon",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEEac200gwN7kA06XMAEb-8VrMKdUiXtXnJOFn8DOD-ZK6b19VZEOTko12p0VWuE94EznNN-ygpZN1u-NgRy0MXbcKijay9LCsPu7SphkYSN9G7K4YMcpRofdrWA1R1A5U-oIUXjfI8A8i6HjpxutrgkOd2_z-DB-4Gv6MD6aRmQx3u9CoPNp5xbf_XAJh3YL5oVIGlninJ0tGRbV4eN6vEHSHrflIo8IYGeZUvl56dT4XmgLaZcTwogE7rBaiZFCxPunWhoakobdW0VDQIV98URvIWkHoYmJ-agmWwuY5Iceg",
-    googleMapsPlaceId: "ChIJmTn2AAzNjIgRePKwWlwRHlY",
+    ogImageUrl: "/images/courts/columbus-padel-club.jpg",
   },
   {
     id: 365,
@@ -10382,8 +10240,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Court fees: Non-prime $4.50-$9/person; Prime $5-$10/person (1-2 hrs); Ball machine $30/hr",
     status: "coming_soon",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEER31YTAwtVsJ7irYMd3YPmTHs1HmCCbJWmrSKQXAfocrTgoU1NHgRGPOJ6KunjVPnPrvh-imksfpTUZ55Apbhu7wP4qyw0tLGOqh5I6RtIo0_ivKdLKsGjuQ9F5oWsfRgPBxaY1jcX7kmlMxsyY70Epxg5G8Aev_ubal-6v-VFdddDm4Lb8NrHkq-JDIw3oWO-T6V2Q1TJm0xLCzcy-eadksQRbT4GtgRomNvCL-T2Soj1UtRgA9US0Mou_Hmx8hHluRSMK0899r79GYFWVCt5aFDUXmjmaRXVyG59mgte-09v_ImA46lkvgqMIy2T2m4guZA0wr3o65d6y6tXTA0Y96jAPCxJdP5rX3sbZM2VejMeVS4PSLenvY2UArh_fkmT02bHxaqR2mgFD_P0n67lUGsgJrvcbEGhcEw8b9oeaCaA",
-    googleMapsPlaceId: "ChIJWZf2Wh4M9YgRLiPG4bMKh6o",
+    ogImageUrl: "/images/courts/sandy-springs-racquet-center.jpg",
   },
   {
     id: 366,
@@ -10416,8 +10273,7 @@ export const padelCourts: PadelCourt[] = [
     membersOnly: false,
     status: "coming_soon",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEHc_dTIBWpMmhlfbplUHxJ_n6G0zX9HuF0IES8ztPu9NyAKXcEzwBZm4iz3XiugYr8FMMjA0K58dp6x4ZnUJhHzTCyQEa6HF0nF3xREzGE2Og7DjO2IP1-frGDoIcExBs1sO7r8Q3GpvsjOw5ZUIeUHWwn6Kz15dUNQOPcPPUJdvkQhsAY-wnnRQlaRXjHvinF90Mws4ACmgzjqZIMtjVEVKA4Ek9CMu_A9OyLeUs5X9BfsJhFdJuiqVGMtImMmc7Bm-G84asCegnixgOTupkjcvgI8TvjjDcF_SK5Sejiwhxh_CDsJHXyzu0pRZuMdSFHac0m6cluHN2PACrI1ycIo2X3EV1OLUGbZIRPvYPp0QTRgST8oV4L-2q28mnHgCp8G_v4SwPJiEEw4XBBejvXExHxCNFzGN79Tzhrlgl1YeVgHbF6-XJRl5Ir9pQ",
-    googleMapsPlaceId: "ChIJ9xOY30un9YgR0gQfWb8G8MU",
+    ogImageUrl: "/images/courts/padel-highway.jpg",
   },
   {
     id: 368,
@@ -10496,8 +10352,7 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "coming_soon",
     verified: false,
-    googlePlacePhotoRef: "AU_ZVEGXOP0HYsLQ9c2icDKWNjiM7KN6exGf8RmiWGXgxRSxKbvgL4a2zA28CkXeAf6VZKY8MpvIt70OWyI2WUMa24uGWql9qhtrL28vZz8bXbMiw_iDm4VU4RtVTtOt7yE5-CoTmVNn8XZAOSeZTJq9AjWKoT8MInLXLNwNQsDykvcBboqI5sgX6iywK0Q-4sp2ZH5JVMEN4SYHpjCjO3O8KEP5fe4NQZn3VUqUGbWPLMtQMAmmPpaUJLn9I1AwO8zMriZO4U9ggLcbMcAOBhnahC0e1wvY7P6OQwfcHGXztH4d6g",
-    googleMapsPlaceId: "ChIJ_bvLZnKtQYgRtlKA9FfeyLk",
+    ogImageUrl: "/images/courts/club-padel-newtown.jpg",
   },
   {
     id: 370,

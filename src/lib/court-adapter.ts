@@ -780,13 +780,10 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
     `${court.address}, ${court.city}, ${stateCode} ${court.zipCode}`
   )}`;
 
-  // Image priority: 1) OG image from website, 2) Google Places photo, 3) Unsplash placeholder
+  // Image priority: 1) OG image / local photo, 2) Unsplash placeholder
   const placeholderUrl = "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=800&fit=crop";
-  const googlePhotoUrl = court.googlePlacePhotoRef && process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
-    ? `https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=${court.googlePlacePhotoRef}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`
-    : null;
-  const primaryImageUrl = court.ogImageUrl || googlePhotoUrl || placeholderUrl;
-  const hasRealImage = !!(court.ogImageUrl || googlePhotoUrl);
+  const primaryImageUrl = court.ogImageUrl || placeholderUrl;
+  const hasRealImage = !!court.ogImageUrl;
   const primaryImageAlt = hasRealImage
     ? `${court.name} - Padel courts in ${court.city}, ${stateCode}`
     : `${court.name} - Main court view`;
