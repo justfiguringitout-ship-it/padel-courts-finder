@@ -92,7 +92,7 @@ export default function HomePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-white py-16 md:py-20">
+      <section className="relative bg-gradient-to-b from-primary/10 via-background to-background pt-12 md:pt-16 pb-0">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-6 max-w-4xl mx-auto">
             <Badge variant="secondary" className="mb-4">
@@ -113,12 +113,12 @@ export default function HomePage() {
           </div>
 
           {/* Hero Video */}
-          <div className="mt-12">
+          <div className="-mb-8 mt-4">
             <HeroVideo />
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-4 pt-8 max-w-md mx-auto">
+          <div className="grid grid-cols-3 gap-4 pt-4 max-w-md mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">{stats.totalCourts}+</div>
               <div className="text-sm text-muted-foreground">Clubs</div>
