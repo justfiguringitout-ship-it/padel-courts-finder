@@ -6,6 +6,7 @@ import { MapPin, Star, TrendingUp, Clock, Phone } from "lucide-react";
 import { getStates, getSiteStats } from "@/lib/site-structure";
 import { getAllAdaptedCourts, getAdaptedCourtBySlug } from "@/lib/court-adapter";
 import { HeroSearch } from "@/components/hero-search";
+import { HeroVideo } from "@/components/hero-video";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -91,7 +92,7 @@ export default function HomePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-primary/10 via-background to-background py-20 md:py-28">
+      <section className="relative bg-white py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-6 max-w-4xl mx-auto">
             <Badge variant="secondary" className="mb-4">
@@ -109,21 +110,26 @@ export default function HomePage() {
 
             {/* Search Bar */}
             <HeroSearch />
+          </div>
 
-            {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-8 max-w-md mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">{stats.totalCourts}+</div>
-                <div className="text-sm text-muted-foreground">Clubs</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">{stats.totalStates}</div>
-                <div className="text-sm text-muted-foreground">States</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">{stats.totalCities}+</div>
-                <div className="text-sm text-muted-foreground">Cities</div>
-              </div>
+          {/* Hero Video */}
+          <div className="mt-12">
+            <HeroVideo />
+          </div>
+
+          {/* Quick Stats */}
+          <div className="grid grid-cols-3 gap-4 pt-8 max-w-md mx-auto">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary">{stats.totalCourts}+</div>
+              <div className="text-sm text-muted-foreground">Clubs</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary">{stats.totalStates}</div>
+              <div className="text-sm text-muted-foreground">States</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary">{stats.totalCities}+</div>
+              <div className="text-sm text-muted-foreground">Cities</div>
             </div>
           </div>
         </div>
