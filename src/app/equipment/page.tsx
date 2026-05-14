@@ -12,6 +12,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { HeroVideo } from "@/components/hero-video";
 
 export const metadata: Metadata = {
   title: "Padel Equipment Guide - Rackets, Balls & Gear | Padel Courts Finder",
@@ -78,6 +79,9 @@ export default function EquipmentPage() {
             <p className="text-xl text-muted-foreground">
               Everything you need to know about rackets, balls, shoes, and gear
             </p>
+          </div>
+          <div className="-mb-6 mt-4">
+            <HeroVideo />
           </div>
         </div>
       </section>

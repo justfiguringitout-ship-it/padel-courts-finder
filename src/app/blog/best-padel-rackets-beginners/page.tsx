@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { HeroVideo } from '@/components/hero-video';
 
 export const metadata: Metadata = {
   title: 'Best Padel Rackets for Beginners (2026) — Top 5 Picks',
@@ -71,6 +72,9 @@ export default function BeginnerRacketsPage() {
             <span className="mx-2">&bull;</span>
             <span>12 min read</span>
           </div>
+        </div>
+        <div className="-mb-6 mt-2">
+          <HeroVideo variant="dark" />
         </div>
       </header>
 

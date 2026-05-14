@@ -2,7 +2,11 @@
 
 import { useEffect, useRef } from "react";
 
-export function HeroVideo() {
+interface HeroVideoProps {
+  variant?: "light" | "dark";
+}
+
+export function HeroVideo({ variant = "light" }: HeroVideoProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -32,15 +36,12 @@ export function HeroVideo() {
       }
     }
 
-    // Smooth interpolation loop — lerps toward target instead of jumping
     function animate() {
       if (!video) return;
 
       const diff = targetTime - currentTime;
-      // Lerp factor: smaller = smoother but laggier, 0.08 is a good balance
       currentTime += diff * 0.08;
 
-      // Only seek if the change is meaningful (avoids redundant decodes)
       if (Math.abs(video.currentTime - currentTime) > 0.01) {
         video.currentTime = currentTime;
       }
@@ -68,6 +69,10 @@ export function HeroVideo() {
     };
   }, []);
 
+  const fadeColor = variant === "dark"
+    ? "rgb(28 25 23)"   // stone-900
+    : "hsl(var(--background))";
+
   return (
     <div ref={containerRef} className="relative w-full">
       <div className="relative mx-auto" style={{ maxWidth: "700px" }}>
@@ -81,14 +86,14 @@ export function HeroVideo() {
           <source src="/videos/hero-racket.mp4" type="video/mp4" />
         </video>
 
-        {/* Gradient overlay — soft radial fade into background */}
+        {/* Gradient overlay — fades edges into surrounding background */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background: `
-              radial-gradient(ellipse at center, transparent 30%, hsl(var(--background) / 0.4) 55%, hsl(var(--background)) 75%),
-              linear-gradient(to bottom, transparent 45%, hsl(var(--background)) 95%),
-              linear-gradient(to top, transparent 70%, hsl(var(--background)) 95%)
+              radial-gradient(ellipse at center, transparent 30%, ${fadeColor}40 55%, ${fadeColor} 75%),
+              linear-gradient(to bottom, transparent 45%, ${fadeColor} 95%),
+              linear-gradient(to top, transparent 70%, ${fadeColor} 95%)
             `,
           }}
         />

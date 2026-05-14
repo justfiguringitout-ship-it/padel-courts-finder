@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { HeroVideo } from '@/components/hero-video';
 
 export const metadata: Metadata = {
   title: 'Best Padel Gifts for Dad (2026) — 12 Ideas He\'ll Actually Use',
@@ -114,6 +115,9 @@ export default function FathersDay2026GiftGuidePage() {
             <span className="mx-2">&bull;</span>
             <span>8 min read</span>
           </div>
+        </div>
+        <div className="-mb-6 mt-2">
+          <HeroVideo variant="dark" />
         </div>
       </header>
 
