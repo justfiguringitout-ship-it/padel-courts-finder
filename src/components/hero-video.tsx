@@ -18,7 +18,7 @@ export function HeroVideo({ variant = "light" }: HeroVideoProps) {
 
     let targetTime = 0;
     let currentTime = 0;
-    let rafId: number;
+    let ticking = false;
 
     function handleScroll() {
       if (!containerRef.current || !video) return;
@@ -26,34 +26,52 @@ export function HeroVideo({ variant = "light" }: HeroVideoProps) {
       const rect = containerRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
+      // Start when top of container is 80% down viewport,
+      // finish when top reaches 20% from top
+      const startY = windowHeight * 0.8;
+      const endY = windowHeight * 0.2;
       const progress = Math.min(
         1,
-        Math.max(0, (windowHeight - rect.top) / (windowHeight + rect.height))
+        Math.max(0, (startY - rect.top) / (startY - endY))
       );
 
       if (video.duration && isFinite(video.duration)) {
         targetTime = progress * video.duration;
       }
+
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(tick);
+      }
     }
 
-    function animate() {
+    function tick() {
       if (!video) return;
 
       const diff = targetTime - currentTime;
-      currentTime += diff * 0.08;
 
-      if (Math.abs(video.currentTime - currentTime) > 0.01) {
+      // Fast lerp for snappy response
+      if (Math.abs(diff) < 0.005) {
+        currentTime = targetTime;
+      } else {
+        currentTime += diff * 0.15;
+      }
+
+      if (Math.abs(video.currentTime - currentTime) > 0.008) {
         video.currentTime = currentTime;
       }
 
-      rafId = requestAnimationFrame(animate);
+      if (Math.abs(targetTime - currentTime) > 0.005) {
+        requestAnimationFrame(tick);
+      } else {
+        ticking = false;
+      }
     }
 
     function start() {
       window.addEventListener("scroll", handleScroll, { passive: true });
       handleScroll();
       currentTime = targetTime;
-      rafId = requestAnimationFrame(animate);
     }
 
     if (video.readyState >= 1) {
@@ -65,17 +83,16 @@ export function HeroVideo({ variant = "light" }: HeroVideoProps) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       video.removeEventListener("loadedmetadata", start);
-      cancelAnimationFrame(rafId);
     };
   }, []);
 
   const fadeColor = variant === "dark"
-    ? "rgb(28 25 23)"   // stone-900
+    ? "rgb(28 25 23)"
     : "hsl(var(--background))";
 
   return (
     <div ref={containerRef} className="relative w-full">
-      <div className="relative mx-auto" style={{ maxWidth: "700px" }}>
+      <div className="relative mx-auto" style={{ maxWidth: "420px" }}>
         <video
           ref={videoRef}
           muted
@@ -86,7 +103,6 @@ export function HeroVideo({ variant = "light" }: HeroVideoProps) {
           <source src="/videos/hero-racket.mp4" type="video/mp4" />
         </video>
 
-        {/* Gradient overlay — fades edges into surrounding background */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{

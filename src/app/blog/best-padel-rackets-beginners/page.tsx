@@ -73,9 +73,6 @@ export default function BeginnerRacketsPage() {
             <span>12 min read</span>
           </div>
         </div>
-        <div className="-mb-6 mt-2">
-          <HeroVideo variant="dark" />
-        </div>
       </header>
 
       <article>
@@ -120,6 +117,10 @@ export default function BeginnerRacketsPage() {
                 </div>
               </div>
               <a href="#top-5-beginner" className="text-sm text-stone-500 hover:text-emerald-600 mt-3 inline-block">Jump to full reviews &darr;</a>
+            </div>
+
+            <div className="mt-6">
+              <HeroVideo />
             </div>
           </div>
         </div>

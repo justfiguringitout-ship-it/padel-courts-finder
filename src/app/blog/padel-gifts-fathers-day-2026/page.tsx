@@ -116,9 +116,6 @@ export default function FathersDay2026GiftGuidePage() {
             <span>8 min read</span>
           </div>
         </div>
-        <div className="-mb-6 mt-2">
-          <HeroVideo variant="dark" />
-        </div>
       </header>
 
       <article>
@@ -163,6 +160,10 @@ export default function FathersDay2026GiftGuidePage() {
                 </div>
               </div>
               <a href="#under-25" className="text-sm text-stone-500 hover:text-emerald-600 mt-3 inline-block">Browse all 12 picks &darr;</a>
+            </div>
+
+            <div className="mt-6">
+              <HeroVideo />
             </div>
           </div>
         </div>

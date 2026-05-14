@@ -53,9 +53,6 @@ export default function IntermediateRacketsPage() {
             <span>March 24, 2026 &middot; 11 min read</span>
           </div>
         </div>
-        <div className="-mb-6 mt-2">
-          <HeroVideo variant="dark" />
-        </div>
       </header>
 
       {/* White Section: Affiliate Disclosure + Intro + Quick Picks */}
@@ -94,6 +91,10 @@ export default function IntermediateRacketsPage() {
                 </div>
               </div>
               <a href="#top-5-intermediate" className="text-sm text-stone-500 hover:text-emerald-600 mt-3 inline-block">Jump to full reviews &darr;</a>
+            </div>
+
+            <div className="mt-6">
+              <HeroVideo />
             </div>
           </div>
         </div>

@@ -51,9 +51,6 @@ export default function ProRacketsPage() {
             <span>March 24, 2026</span><span>&middot;</span><span>11 min read</span>
           </div>
         </div>
-        <div className="-mb-6 mt-2">
-          <HeroVideo variant="dark" />
-        </div>
       </header>
 
       <article>
@@ -93,6 +90,10 @@ export default function ProRacketsPage() {
               </div>
               <a href="#top-5-pro" className="text-sm text-stone-500 hover:text-emerald-600 mt-3 inline-block">Jump to full reviews &darr;</a>
             </div>
+          </div>
+
+          <div className="mt-6">
+            <HeroVideo />
           </div>
         </div>
 
