@@ -7851,7 +7851,7 @@ export const padelCourts: PadelCourt[] = [
       saturday: "9h-21h",
       sunday: "9h-21h",
     },
-    description: "Las Vegas-based USPA-sanctioned Premier Community dedicated to growing padel through inclusive events, organized play, international retreats, and empowering women in the sport. Hosts events like round robins and women's days, with private lessons available via booking platform.",
+    description: "Las Vegas-based USPA-sanctioned Premier Community dedicated to growing padel through inclusive events, organized play, international retreats, and empowering women in the sport. Hosts events like round robins and women's days.",
     amenities: [
       "Organized events and retreats; USPA affiliation",
     ],
@@ -7859,7 +7859,7 @@ export const padelCourts: PadelCourt[] = [
     instagram: "@thepadelnomads_",
     facebook: "https://www.facebook.com/p/The-Padel-Nomads-61585139330044/",
     membersOnly: false,
-    lessonsAvailable: true,
+    lessonsAvailable: false,
     status: "open",
     verified: false,
     ogImageUrl: "/images/courts/the-padel-nomads.jpg",
