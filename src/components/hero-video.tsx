@@ -1,6 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const TOTAL_FRAMES = 61;
+
+function getFrameSrc(i: number) {
+  const padded = String(i + 1).padStart(3, "0");
+  return `/videos/frames/f${padded}.jpg`;
+}
 
 interface HeroVideoProps {
   variant?: "light" | "dark";
@@ -8,83 +15,81 @@ interface HeroVideoProps {
 
 export function HeroVideo({ variant = "light" }: HeroVideoProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const [loaded, setLoaded] = useState(false);
+  const currentFrameRef = useRef(-1);
 
+  // Preload all frames
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+    let loadedCount = 0;
+    const images: HTMLImageElement[] = new Array(TOTAL_FRAMES);
 
-    video.pause();
+    for (let i = 0; i < TOTAL_FRAMES; i++) {
+      const img = new Image();
+      img.src = getFrameSrc(i);
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === TOTAL_FRAMES) {
+          imagesRef.current = images;
+          setLoaded(true);
+        }
+      };
+      images[i] = img;
+    }
+  }, []);
 
-    let targetTime = 0;
-    let currentTime = 0;
-    let ticking = false;
+  // Draw frame 0 as soon as it loads, then wire up scroll
+  useEffect(() => {
+    if (!loaded) return;
+
+    const canvas = canvasRef.current;
+    const container = containerRef.current;
+    if (!canvas || !container) return;
+
+    const ctx = canvas.getContext("2d", { alpha: false });
+    if (!ctx) return;
+
+    const firstImg = imagesRef.current[0];
+    canvas.width = firstImg.naturalWidth;
+    canvas.height = firstImg.naturalHeight;
+
+    function drawFrame(index: number) {
+      if (index === currentFrameRef.current) return;
+      currentFrameRef.current = index;
+      const img = imagesRef.current[index];
+      if (img && ctx) {
+        ctx.drawImage(img, 0, 0);
+      }
+    }
 
     function handleScroll() {
-      if (!containerRef.current || !video) return;
+      if (!container) return;
 
-      const rect = containerRef.current.getBoundingClientRect();
+      const rect = container.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      // Start when top of container is 80% down viewport,
-      // finish when top reaches 20% from top
-      const startY = windowHeight * 0.8;
-      const endY = windowHeight * 0.2;
+      const startY = windowHeight * 0.85;
+      const endY = windowHeight * 0.15;
       const progress = Math.min(
         1,
         Math.max(0, (startY - rect.top) / (startY - endY))
       );
 
-      if (video.duration && isFinite(video.duration)) {
-        targetTime = progress * video.duration;
-      }
+      const frameIndex = Math.min(
+        TOTAL_FRAMES - 1,
+        Math.floor(progress * TOTAL_FRAMES)
+      );
 
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(tick);
-      }
+      drawFrame(frameIndex);
     }
 
-    function tick() {
-      if (!video) return;
+    drawFrame(0);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
 
-      const diff = targetTime - currentTime;
-
-      // Fast lerp for snappy response
-      if (Math.abs(diff) < 0.005) {
-        currentTime = targetTime;
-      } else {
-        currentTime += diff * 0.15;
-      }
-
-      if (Math.abs(video.currentTime - currentTime) > 0.008) {
-        video.currentTime = currentTime;
-      }
-
-      if (Math.abs(targetTime - currentTime) > 0.005) {
-        requestAnimationFrame(tick);
-      } else {
-        ticking = false;
-      }
-    }
-
-    function start() {
-      window.addEventListener("scroll", handleScroll, { passive: true });
-      handleScroll();
-      currentTime = targetTime;
-    }
-
-    if (video.readyState >= 1) {
-      start();
-    } else {
-      video.addEventListener("loadedmetadata", start);
-    }
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      video.removeEventListener("loadedmetadata", start);
-    };
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [loaded]);
 
   const fadeColor = variant === "dark"
     ? "rgb(28 25 23)"
@@ -93,16 +98,23 @@ export function HeroVideo({ variant = "light" }: HeroVideoProps) {
   return (
     <div ref={containerRef} className="relative w-full">
       <div className="relative mx-auto" style={{ maxWidth: "420px" }}>
-        <video
-          ref={videoRef}
-          muted
-          playsInline
-          preload="auto"
-          className="w-full h-auto block"
-        >
-          <source src="/videos/hero-racket.mp4" type="video/mp4" />
-        </video>
+        {/* Show first frame as static image until all frames loaded */}
+        {!loaded && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={getFrameSrc(0)}
+            alt=""
+            className="w-full h-auto block"
+          />
+        )}
 
+        <canvas
+          ref={canvasRef}
+          className="w-full h-auto block"
+          style={{ display: loaded ? "block" : "none" }}
+        />
+
+        {/* Gradient overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
