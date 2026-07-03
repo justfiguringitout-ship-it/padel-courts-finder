@@ -163,19 +163,19 @@ const clubs: Club[] = [
   },
   {
     rank: 5,
-    name: 'Nicol NJ',
-    slug: 'nicol-nj',
+    name: 'Nicol Rackets',
+    slug: 'nicol-rackets',
     score: 90,
     location: 'Oceanport, NJ (Fort Monmouth)',
-    courts: '2 indoor courts',
+    courts: '7 courts (4 indoor, 3 outdoor)',
     price: '$$',
-    description: 'A 20,000 sq ft multi-racquet club in Fort Monmouth/Oceanport offering padel, squash, pickleball, physical therapy, and a cafe. With a perfect 5.0 Google rating, Nicol NJ delivers quality over quantity with 2 well-maintained indoor courts.',
+    description: 'A multi-racquet club at Fort Monmouth in Oceanport offering 7 padel courts (4 indoor, 3 outdoor) alongside squash, pickleball, physical therapy, and a cafe. With a perfect 5.0 Google rating, Nicol Rackets pairs its courts with kids camps, adult clinics, leagues, and tournaments.',
     highlights: [
       'Perfect 5.0 Google rating',
-      '20,000 sq ft multi-racquet facility',
+      '7 padel courts (4 indoor, 3 outdoor)',
       'On-site physical therapy (Spear PT)',
+      'Cold plunge & events lounge',
       'Pro shop & cafe',
-      'Showers & towel service',
       'Shore area location'
     ],
     programs: [

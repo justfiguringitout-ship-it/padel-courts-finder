@@ -27,6 +27,7 @@ const nextConfig: NextConfig = {
       { source: '/courts/imgn-park-llc', destination: '/courts/imgn-park', permanent: true },
       { source: '/courts/slice-padel-co-llc', destination: '/courts/slice-padel-co', permanent: true },
       { source: '/courts/padel-highway-llc', destination: '/courts/padel-highway', permanent: true },
+      { source: '/courts/nicol-nj', destination: '/courts/nicol-rackets', permanent: true },
 
       // === Duplicate merges with different slugs (70) ===
       { source: '/courts/pepper-padel-miami', destination: '/courts/pulse-padel-hub', permanent: true },

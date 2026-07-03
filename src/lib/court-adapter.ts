@@ -761,8 +761,9 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
   } else if (court.courtType === "outdoor") {
     outdoorCourts = totalCourts;
   } else if (court.courtType === "both") {
-    indoorCourts = Math.floor(totalCourts / 2);
-    outdoorCourts = totalCourts - indoorCourts;
+    // Only show a split when the real breakdown is known — never estimate
+    indoorCourts = court.indoorCourts || 0;
+    outdoorCourts = court.outdoorCourts || 0;
   }
   // else: unknown courtType — leave both at 0
 

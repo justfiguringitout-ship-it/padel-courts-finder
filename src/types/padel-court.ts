@@ -20,6 +20,8 @@ export interface PadelCourt {
   // Enhanced fields from cross-reference verification
   numberOfCourts?: number;                      // Total individual courts at facility
   courtType?: "indoor" | "outdoor" | "both";   // Indoor, outdoor, or mixed
+  indoorCourts?: number;                        // Known indoor court count (only set when verified)
+  outdoorCourts?: number;                       // Known outdoor court count (only set when verified)
   hasSinglesCourts?: boolean;                   // Has singles courts available
   amenities?: string[];                         // Specific amenities (bar, restaurant, pro shop, etc.)
   courtSurface?: string;                        // e.g., "artificial grass", "synthetic turf"
