@@ -2,7 +2,6 @@
 
 import { useState, KeyboardEvent } from "react";
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 
 export function HeroSearch() {
@@ -24,22 +23,24 @@ export function HeroSearch() {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6 max-w-2xl mx-auto">
+    <div className="flex flex-col sm:flex-row gap-3 max-w-xl">
       <div className="relative flex-1">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 w-5 h-5" />
         <input
           type="text"
-          placeholder="Enter city, state, or ZIP code..."
+          placeholder="City, state, or ZIP code"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="w-full pl-10 pr-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+          className="glass-panel w-full pl-12 pr-4 py-4 rounded-xl text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-turf/70 transition-shadow"
         />
       </div>
-      <Button size="lg" className="whitespace-nowrap" onClick={handleSearch}>
-        <Search className="w-4 h-4 mr-2" />
-        Search Courts
-      </Button>
+      <button
+        onClick={handleSearch}
+        className="rounded-xl bg-padel-green hover:bg-padel-green-dark active:scale-[0.98] text-white font-semibold px-7 py-4 transition-all whitespace-nowrap shadow-lg shadow-padel-green/25"
+      >
+        Find courts
+      </button>
     </div>
   );
 }

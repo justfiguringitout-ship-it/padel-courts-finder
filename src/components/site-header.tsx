@@ -13,8 +13,9 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, MapPin, Search } from "lucide-react";
+import { Menu, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { BrandMark } from "@/components/brand-mark";
 
 interface StateItem {
   name: string;
@@ -35,12 +36,12 @@ export function SiteHeader({ states }: SiteHeaderProps) {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <MapPin className="h-6 w-6 text-primary" />
-            <span className="font-bold text-lg hidden sm:inline-block">
+          <Link href="/" className="group flex items-center gap-2.5">
+            <BrandMark className="h-8 w-8 transition-transform duration-300 group-hover:rotate-[8deg]" />
+            <span className="font-display font-bold text-lg tracking-tight hidden sm:inline-block">
               Padel Courts Finder
             </span>
-            <span className="font-bold text-lg sm:hidden">
+            <span className="font-display font-bold text-lg tracking-tight sm:hidden">
               Padel Finder
             </span>
           </Link>

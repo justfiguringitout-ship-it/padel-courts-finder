@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { MapPin, Star, TrendingUp, Clock, Phone } from "lucide-react";
+import { ArrowRight, MapPin, Star } from "lucide-react";
 import { getStates, getSiteStats } from "@/lib/site-structure";
 import { getAllAdaptedCourts, getAdaptedCourtBySlug } from "@/lib/court-adapter";
 import { HeroSearch } from "@/components/hero-search";
-import { HeroVideo } from "@/components/hero-video";
+import { ClubImage } from "@/components/club-image";
+import { ScrollRotate } from "@/components/scroll-rotate";
+import { StatCounter } from "@/components/stat-counter";
+import { CourtsConstellation } from "@/components/courts-constellation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -60,16 +60,41 @@ export const metadata: Metadata = {
   },
 };
 
+/* Faint top-view padel court, used as a background motif on dark bands */
+function CourtLines({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 400 760"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      <rect x="20" y="20" width="360" height="720" rx="4" stroke="currentColor" strokeWidth="2" />
+      <line x1="20" y1="380" x2="380" y2="380" stroke="currentColor" strokeWidth="2" strokeDasharray="10 8" />
+      <line x1="20" y1="200" x2="380" y2="200" stroke="currentColor" strokeWidth="2" />
+      <line x1="20" y1="560" x2="380" y2="560" stroke="currentColor" strokeWidth="2" />
+      <line x1="200" y1="200" x2="200" y2="560" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  );
+}
+
 export default function HomePage() {
   const stats = getSiteStats();
   const states = getStates();
   const allCourts = getAllAdaptedCourts();
 
-  // Get featured courts: prefer courts with featured: true, fall back to isFeatured
-  const explicitFeatured = allCourts.filter((court) => court.featured);
+  // Get featured courts: prefer courts with featured: true, fall back to isFeatured.
+  // This section is a visual showcase, so only clubs with a real photo qualify.
+  const explicitFeatured = allCourts.filter((court) => court.featured && court.heroImage);
   const featuredCourts = explicitFeatured.length > 0
     ? explicitFeatured.slice(0, 6)
-    : allCourts.filter((court) => court.isFeatured).slice(0, 6);
+    : allCourts.filter((court) => court.isFeatured && court.heroImage).slice(0, 6);
+
+  const [heroClub, ...gridClubs] = featuredCourts;
+
+  const sortedStates = [...states].sort((a, b) => b.courtCount - a.courtCount);
+  const topStates = sortedStates.slice(0, 6);
+  const restStates = sortedStates.slice(6);
 
   return (
     <div className="min-h-screen">
@@ -91,495 +116,376 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-primary/10 via-background to-background pt-12 md:pt-16 pb-0">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-6 max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-4">
-              <TrendingUp className="w-3 h-3 mr-1" />
-              {stats.totalCourts} Clubs Nationwide
-            </Badge>
+      {/* ===== Dark band: hero + constellation ===== */}
+      <div className="grain bg-court text-white overflow-hidden">
+        {/* Hero */}
+        <section className="relative">
+          <div className="absolute -right-10 top-1/2 -translate-y-1/2 hidden md:block" aria-hidden="true">
+            <ScrollRotate base={12} factor={0.05}>
+              <CourtLines className="h-[540px] w-auto text-white/[0.09]" />
+            </ScrollRotate>
+          </div>
+          <div className="container mx-auto px-4 pt-20 md:pt-28 pb-14 relative">
+            <div className="max-w-3xl">
+              <p className="font-mono text-sm text-turf mb-5">the u.s. padel directory</p>
+              <h1 className="font-display text-5xl md:text-7xl font-bold leading-[0.95] mb-6">
+                Every padel court in America.{" "}
+                <span className="text-turf">Find yours.</span>
+              </h1>
+              <p className="text-lg md:text-xl text-white/60 max-w-xl mb-10 leading-relaxed">
+                {stats.totalCourts} clubs across {stats.totalStates} states — hours,
+                pricing, and real player reviews on every one.
+              </p>
+              <HeroSearch />
 
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Find <span className="text-primary">Padel Courts</span> Near Me
-            </h1>
+              <dl className="flex items-center gap-8 md:gap-12 mt-14">
+                <div>
+                  <dt className="sr-only">Clubs</dt>
+                  <dd className="font-display text-4xl md:text-5xl font-bold text-white">
+                    <StatCounter value={stats.totalCourts} suffix="+" />
+                  </dd>
+                  <dd className="text-sm text-white/50 mt-1">clubs</dd>
+                </div>
+                <div className="h-12 w-px bg-white/10" aria-hidden="true" />
+                <div>
+                  <dt className="sr-only">States</dt>
+                  <dd className="font-display text-4xl md:text-5xl font-bold text-white">
+                    <StatCounter value={stats.totalStates} />
+                  </dd>
+                  <dd className="text-sm text-white/50 mt-1">states</dd>
+                </div>
+                <div className="h-12 w-px bg-white/10" aria-hidden="true" />
+                <div>
+                  <dt className="sr-only">Cities</dt>
+                  <dd className="font-display text-4xl md:text-5xl font-bold text-white">
+                    <StatCounter value={stats.totalCities} suffix="+" />
+                  </dd>
+                  <dd className="text-sm text-white/50 mt-1">cities</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
 
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Browse {stats.totalCourts}+ padel clubs across {stats.totalStates} states. Compare facilities, read reviews, and book your court online.
+        {/* Constellation map */}
+        <section className="relative border-t border-white/[0.06]">
+          <div className="container mx-auto px-4 py-14 md:py-20">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+              <div>
+                <h2 className="font-display text-3xl md:text-4xl font-bold">
+                  Lights on, coast to coast
+                </h2>
+                <p className="text-white/50 mt-2">
+                  Every dot is a real club. Hover one, click through, go play.
+                </p>
+              </div>
+              <Link
+                href="/search"
+                className="group inline-flex items-center gap-2 text-turf font-medium hover:gap-3 transition-all"
+              >
+                Browse all clubs
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <CourtsConstellation />
+            <p className="font-mono text-xs text-white/30 mt-6">
+              continental u.s. · positions approximate at national scale
             </p>
-
-            {/* Search Bar */}
-            <HeroSearch />
           </div>
-
-          {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-4 pt-8 max-w-md mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">{stats.totalCourts}+</div>
-              <div className="text-sm text-muted-foreground">Clubs</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">{stats.totalStates}</div>
-              <div className="text-sm text-muted-foreground">States</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">{stats.totalCities}+</div>
-              <div className="text-sm text-muted-foreground">Cities</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Directory intro */}
-      <section className="container mx-auto px-4 pt-12 pb-0 max-w-4xl text-center">
-        <p className="text-muted-foreground leading-relaxed">
-          Looking for padel courts near me? Padel Courts Finder is the most comprehensive US padel directory, helping you find padel clubs near you in {stats.totalStates} states and {stats.totalCities}+ cities. Whether you&apos;re searching for a padel court near me to try the sport for the first time or looking to find padel courts with lessons, equipment rental, and league play, browse our verified listings to compare hours, pricing, and player reviews.
-        </p>
-      </section>
-
-      {/* Hero Video */}
-      <div className="py-4">
-        <HeroVideo />
+        </section>
       </div>
 
-      {/* Browse by State */}
-      <section className="container mx-auto px-4 py-12 md:py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Browse Padel Clubs by State</h2>
-          <p className="text-muted-foreground">
-            Find clubs in your state and discover new places to play
+      {/* ===== Browse by state ===== */}
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="reveal-up max-w-2xl mb-12">
+          <p className="font-mono text-sm text-padel-green mb-3">browse by state</p>
+          <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+            Where the game is growing
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Florida and Texas lead the boom, but padel is landing everywhere.
+            Pick your state and see what&apos;s near you.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-          {states.map((state) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {topStates.map((state, i) => (
             <Link
               key={state.code}
               href={`/${state.slug}`}
-              className="group"
+              className={`reveal-up group relative rounded-2xl p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 ${
+                i === 0
+                  ? "sm:col-span-2 grain bg-court text-white hover:shadow-xl hover:shadow-court/30"
+                  : i === 1
+                  ? "sm:col-span-2 lg:col-span-2 bg-padel-green text-white hover:shadow-xl hover:shadow-padel-green/30"
+                  : "border bg-card hover:border-padel-green hover:shadow-lg"
+              }`}
             >
-              <Card className="hover:border-primary hover:shadow-md transition-all h-full">
-                <CardHeader className="pb-3">
-                  <div className="flex items-start justify-between">
-                    <MapPin className="w-5 h-5 text-primary" />
-                    <Badge variant="secondary" className="text-xs">
-                      {state.courtCount} {state.courtCount === 1 ? 'club' : 'clubs'}
-                    </Badge>
-                  </div>
-                  <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                    {state.name}
-                  </CardTitle>
-                  <CardDescription className="text-sm">
-                    {state.cities.length} {state.cities.length === 1 ? 'city' : 'cities'}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+              <div className={`font-display text-5xl md:text-6xl font-bold tabular-nums ${
+                i === 0 ? "text-turf" : i === 1 ? "text-white" : "text-padel-green"
+              }`}>
+                {state.courtCount}
+              </div>
+              <div className="mt-3 font-display text-xl font-semibold">
+                {state.name}
+              </div>
+              <div className={`text-sm mt-1 ${i <= 1 ? "text-white/60" : "text-muted-foreground"}`}>
+                {state.cities.length} {state.cities.length === 1 ? "city" : "cities"} with courts
+              </div>
+              <ArrowRight
+                className={`absolute top-6 right-6 w-5 h-5 transition-transform group-hover:translate-x-1 ${
+                  i <= 1 ? "text-white/50" : "text-muted-foreground/50"
+                }`}
+              />
             </Link>
           ))}
         </div>
 
-        <div className="text-center mt-8">
-          <p className="text-sm text-muted-foreground">
-            Can&apos;t find your state? We&apos;re constantly adding new locations.{" "}
-            <Link href="/contact" className="text-primary hover:underline">
-              Let us know
-            </Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Featured Courts */}
-      <section className="container mx-auto px-4 py-12 md:py-16 bg-muted/40">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Featured Padel Clubs</h2>
-          <p className="text-muted-foreground">
-            Top-rated and verified clubs across the country
-          </p>
-        </div>
-
-        {/* Hero featured court — horizontal card */}
-        {featuredCourts.length > 0 && (() => {
-          const court = featuredCourts[0];
-          return (
+        <div className="reveal-up flex flex-wrap gap-2">
+          {restStates.map((state) => (
             <Link
-              href={`/courts/${court.slug}`}
-              className="group block max-w-6xl mx-auto mb-6"
+              key={state.code}
+              href={`/${state.slug}`}
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm hover:border-padel-green hover:text-padel-green transition-colors"
             >
-              <Card className="hover:border-primary hover:shadow-md transition-all overflow-hidden flex flex-col md:flex-row">
-                <div className="relative overflow-hidden md:w-1/2 aspect-video md:aspect-auto md:min-h-[280px]">
-                  <img
-                    src={court.heroImage}
-                    alt={court.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  {court.featured && (
-                    <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600">
-                      Featured
-                    </Badge>
-                  )}
-                </div>
-                <div className="md:w-1/2 flex flex-col">
-                  <CardHeader>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                      {court.name}
-                    </CardTitle>
-                    <CardDescription className="space-y-2">
-                      <div className="flex items-center gap-1 text-sm">
-                        <MapPin className="w-4 h-4" />
-                        {court.address.city}, {court.address.stateCode}
-                      </div>
-                      <div className="flex items-center gap-4 text-sm">
-                        {(court.rating.ratingValue > 0 || court.rating.reviewCount > 0) && (
-                          <div className="flex items-center gap-1">
-                            <Star className="w-4 h-4 fill-primary text-primary" />
-                            <span className="font-medium">{court.rating.ratingValue}</span>
-                            {court.rating.reviewCount > 0 && (
-                              <span className="text-muted-foreground">
-                                ({court.rating.reviewCount})
-                              </span>
-                            )}
-                          </div>
-                        )}
-                        {court.facility.totalCourts > 0 && (
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            {court.facility.totalCourts} {court.facility.totalCourts === 1 ? 'court' : 'courts'}
-                          </div>
-                        )}
-                      </div>
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="mt-auto">
-                    <div className="flex items-center justify-between">
-                      {court.pricing.offPeakHourlyRate > 0 ? (
-                        <div>
-                          <div className="text-2xl font-bold text-primary">
-                            ${court.pricing.offPeakHourlyRate}
-                          </div>
-                          <div className="text-xs text-muted-foreground">per hour</div>
-                        </div>
-                      ) : (
-                        <div />
-                      )}
-                      <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
-                        View Details
-                      </Button>
-                    </div>
-                  </CardContent>
-                </div>
-              </Card>
-            </Link>
-          );
-        })()}
-
-        {/* Remaining featured courts — standard grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {featuredCourts.slice(1).map((court) => (
-            <Link
-              key={court.id}
-              href={`/courts/${court.slug}`}
-              className="group"
-            >
-              <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
-                <div className="aspect-video relative overflow-hidden">
-                  <img
-                    src={court.heroImage}
-                    alt={court.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  {court.featured && (
-                    <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600">
-                      Featured
-                    </Badge>
-                  )}
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-1">
-                    {court.name}
-                  </CardTitle>
-                  <CardDescription className="space-y-2">
-                    <div className="flex items-center gap-1 text-sm">
-                      <MapPin className="w-4 h-4" />
-                      {court.address.city}, {court.address.stateCode}
-                    </div>
-                    <div className="flex items-center gap-4 text-sm">
-                      {(court.rating.ratingValue > 0 || court.rating.reviewCount > 0) && (
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 fill-primary text-primary" />
-                          <span className="font-medium">{court.rating.ratingValue}</span>
-                          {court.rating.reviewCount > 0 && (
-                            <span className="text-muted-foreground">
-                              ({court.rating.reviewCount})
-                            </span>
-                          )}
-                        </div>
-                      )}
-                      {court.facility.totalCourts > 0 && (
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {court.facility.totalCourts} {court.facility.totalCourts === 1 ? 'court' : 'courts'}
-                        </div>
-                      )}
-                    </div>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="mt-auto">
-                  <div className="flex items-center justify-between">
-                    {court.pricing.offPeakHourlyRate > 0 ? (
-                      <div>
-                        <div className="text-2xl font-bold text-primary">
-                          ${court.pricing.offPeakHourlyRate}
-                        </div>
-                        <div className="text-xs text-muted-foreground">per hour</div>
-                      </div>
-                    ) : (
-                      <div />
-                    )}
-                    <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
-                      View Details
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+              {state.name}
+              <span className="tabular-nums text-muted-foreground text-xs">{state.courtCount}</span>
             </Link>
           ))}
         </div>
+      </section>
 
-        <div className="text-center mt-8">
-          <Button asChild variant="outline" size="lg">
-            <Link href="/search">
-              View All Clubs
+      {/* ===== Featured clubs ===== */}
+      <section className="border-y bg-muted/50">
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="reveal-up flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+            <div className="max-w-2xl">
+              <p className="font-mono text-sm text-padel-green mb-3">featured clubs</p>
+              <h2 className="font-display text-3xl md:text-5xl font-bold">
+                Worth the drive
+              </h2>
+            </div>
+            <Link
+              href="/search"
+              className="group inline-flex items-center gap-2 text-padel-green font-medium hover:gap-3 transition-all"
+            >
+              View all {stats.totalCourts}+ clubs
+              <ArrowRight className="w-4 h-4" />
             </Link>
-          </Button>
+          </div>
+
+          {heroClub && (
+            <Link
+              href={`/courts/${heroClub.slug}`}
+              className="reveal-up group grid md:grid-cols-5 gap-6 md:gap-10 mb-14 items-center"
+            >
+              <div className="relative md:col-span-3 aspect-[16/10] rounded-2xl overflow-hidden">
+                <ClubImage
+                  src={heroClub.heroImage}
+                  alt={heroClub.name}
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  sizes="(min-width: 768px) 60vw, 100vw"
+                />
+              </div>
+              <div className="md:col-span-2">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                  <MapPin className="w-4 h-4" />
+                  {heroClub.address.city}, {heroClub.address.stateCode}
+                </div>
+                <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 group-hover:text-padel-green transition-colors">
+                  {heroClub.name}
+                </h3>
+                <div className="flex items-center gap-5 text-sm mb-6">
+                  {heroClub.rating.ratingValue > 0 && (
+                    <span className="flex items-center gap-1.5">
+                      <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+                      <span className="font-semibold tabular-nums">{heroClub.rating.ratingValue}</span>
+                      {heroClub.rating.reviewCount > 0 && (
+                        <span className="text-muted-foreground tabular-nums">
+                          ({heroClub.rating.reviewCount})
+                        </span>
+                      )}
+                    </span>
+                  )}
+                  {heroClub.facility.totalCourts > 0 && (
+                    <span className="text-muted-foreground">
+                      {heroClub.facility.totalCourts} courts
+                    </span>
+                  )}
+                  {heroClub.pricing.offPeakHourlyRate > 0 && (
+                    <span className="text-muted-foreground">
+                      from <span className="font-semibold text-foreground tabular-nums">${heroClub.pricing.offPeakHourlyRate}</span>/hr
+                    </span>
+                  )}
+                </div>
+                <span className="inline-flex items-center gap-2 font-medium text-padel-green group-hover:gap-3 transition-all">
+                  See the club
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+          )}
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+            {gridClubs.map((court) => (
+              <Link
+                key={court.id}
+                href={`/courts/${court.slug}`}
+                className="reveal-up group"
+              >
+                <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-4">
+                  <ClubImage
+                    src={court.heroImage}
+                    alt={court.name}
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  />
+                </div>
+                <h3 className="font-display text-xl font-semibold group-hover:text-padel-green transition-colors">
+                  {court.name}
+                </h3>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground mt-1.5">
+                  <span>{court.address.city}, {court.address.stateCode}</span>
+                  {court.rating.ratingValue > 0 && (
+                    <span className="flex items-center gap-1">
+                      <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                      <span className="tabular-nums">{court.rating.ratingValue}</span>
+                    </span>
+                  )}
+                  {court.pricing.offPeakHourlyRate > 0 && (
+                    <span className="tabular-nums">${court.pricing.offPeakHourlyRate}/hr</span>
+                  )}
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Top Cities */}
-      <section className="container mx-auto px-4 py-12 md:py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Popular Cities for Padel</h2>
-          <p className="text-muted-foreground">
-            Explore the most active padel communities in the US
-          </p>
+      {/* ===== Popular cities ===== */}
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <div className="reveal-up flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+          <h2 className="font-display text-3xl md:text-4xl font-bold">
+            Popular padel cities
+          </h2>
         </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-6xl mx-auto">
+        <div className="reveal-up flex flex-wrap gap-3">
           {stats.topCities.map((city) => (
             <Link
               key={`${city.slug}-${city.stateCode}`}
               href={`/${states.find(s => s.code === city.stateCode)?.slug}/${city.slug}`}
-              className="group"
+              className="group inline-flex items-baseline gap-2.5 rounded-xl border bg-card px-5 py-3.5 hover:border-padel-green hover:shadow-md transition-all"
             >
-              <Card className="hover:border-primary hover:shadow-md transition-all text-center p-4">
-                <CardTitle className="text-base mb-2 group-hover:text-primary transition-colors">
-                  {city.name}
-                </CardTitle>
-                <CardDescription className="text-sm">
-                  {city.courtCount} {city.courtCount === 1 ? 'club' : 'clubs'}
-                </CardDescription>
-              </Card>
+              <span className="font-display font-semibold group-hover:text-padel-green transition-colors">
+                {city.name}
+              </span>
+              <span className="tabular-nums text-sm text-muted-foreground">
+                {city.courtCount} {city.courtCount === 1 ? "club" : "clubs"}
+              </span>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Featured Blog Posts */}
-      <section className="container mx-auto px-4 py-12 md:py-16 bg-muted/40">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Expert Club Guides & Reviews</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            In-depth city guides, insider tips, and everything you need to find the perfect padel club in your area
-          </p>
+      {/* ===== City guides ===== */}
+      <section className="container mx-auto px-4 pb-16 md:pb-24">
+        <div className="reveal-up max-w-2xl mb-10">
+          <p className="font-mono text-sm text-padel-green mb-3">city guides</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold">
+            Know before you book
+          </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6">
           {[
-            { href: '/blog/best-padel-clubs-miami', courtSlug: 'ultra-padel-club', badge: 'Popular', title: 'Best Clubs in Miami', desc: '14+ clubs reviewed - Reserve Padel, Ultra Padel, and more', alt: 'Miami padel courts' },
-            { href: '/blog/best-padel-clubs-austin', courtSlug: 'padel-39', badge: 'Top Rated', title: 'Best Clubs in Austin', desc: "America's padel capital - Padel39, Padel Club Austin & more", alt: 'Austin padel courts' },
-            { href: '/blog/best-padel-clubs-los-angeles', courtSlug: 'los-angeles-padel-club', badge: null, title: 'Best Clubs in Los Angeles', desc: '8+ LA clubs from Santa Monica to Pasadena', alt: 'Los Angeles padel courts' },
+            { href: '/blog/best-padel-clubs-miami', courtSlug: 'ultra-padel-club', title: 'Best clubs in Miami', desc: '14+ clubs reviewed — Reserve Padel, Ultra Padel, and more', alt: 'Miami padel courts' },
+            { href: '/blog/best-padel-clubs-austin', courtSlug: 'padel-39', title: 'Best clubs in Austin', desc: "America's padel capital — Padel39, Padel Club Austin & more", alt: 'Austin padel courts' },
+            { href: '/blog/best-padel-clubs-los-angeles', courtSlug: 'los-angeles-padel-club', title: 'Best clubs in Los Angeles', desc: '8+ LA clubs from Santa Monica to Pasadena', alt: 'Los Angeles padel courts' },
           ].map((item) => {
             const court = getAdaptedCourtBySlug(item.courtSlug);
             const imageUrl = court?.heroImage;
             return (
-              <Link key={item.href} href={item.href} className="group">
-                <Card className="h-full hover:border-primary hover:shadow-md transition-all overflow-hidden">
-                  <div className="aspect-video bg-gradient-to-br from-blue-500 to-blue-600 relative overflow-hidden">
-                    {imageUrl && (
-                      <img
-                        src={imageUrl}
-                        alt={item.alt}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    )}
-                    {!imageUrl && (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <MapPin className="w-16 h-16 text-white/30" />
-                      </div>
-                    )}
-                    {item.badge && (
-                      <Badge className="absolute top-3 right-3 bg-white/90 text-primary">{item.badge}</Badge>
-                    )}
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="group-hover:text-primary transition-colors">{item.title}</CardTitle>
-                    <CardDescription>{item.desc}</CardDescription>
-                  </CardHeader>
-                </Card>
+              <Link key={item.href} href={item.href} className="reveal-up group relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-[3/4] block">
+                {imageUrl ? (
+                  <ClubImage
+                    src={imageUrl}
+                    alt={item.alt}
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-court" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-court via-court/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <h3 className="font-display text-2xl font-bold text-white mb-1.5">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-white/70 mb-3">{item.desc}</p>
+                  <span className="inline-flex items-center gap-2 text-sm font-medium text-turf group-hover:gap-3 transition-all">
+                    Read the guide
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
               </Link>
             );
           })}
         </div>
-        <div className="text-center mt-8">
-          <Button asChild variant="outline" size="lg">
-            <Link href="/blog">View All City Guides →</Link>
-          </Button>
+        <div className="reveal-up mt-8">
+          <Link
+            href="/blog"
+            className="group inline-flex items-center gap-2 text-padel-green font-medium hover:gap-3 transition-all"
+          >
+            All city guides
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-primary text-primary-foreground py-16 md:py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Own a Padel Club?</h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            List your club on Padel Courts Finder and reach thousands of players looking for places to play in your area.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/list-your-court">
-                List Your Court
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <Link href="/contact">
-                <Phone className="w-4 h-4 mr-2" />
-                Contact Us
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="container mx-auto px-4 py-12 border-t">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div>
-            <h3 className="font-bold text-lg mb-4">Padel Courts Finder</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              The premier directory for finding and booking padel courts across the United States.
+      {/* ===== Club owner CTA ===== */}
+      <section className="container mx-auto px-4 pb-16 md:pb-24">
+        <div className="reveal-up grain relative bg-court text-white rounded-3xl overflow-hidden">
+          <CourtLines className="absolute -right-10 -bottom-40 h-[500px] w-auto text-white/[0.07] -rotate-12 hidden md:block" />
+          <div className="relative px-6 py-14 md:px-14 md:py-16 max-w-2xl">
+            <p className="font-mono text-sm text-turf mb-4">for club owners</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+              Your courts belong on this map.
+            </h2>
+            <p className="text-white/60 text-lg mb-8">
+              Players check Padel Courts Finder before they book. A free listing
+              puts your club in front of them — hours, pricing, photos, the works.
             </p>
-            <div className="space-y-2 text-sm">
-              <Link href="/search" className="block text-muted-foreground hover:text-primary transition-colors">
-                🔍 Search Courts
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                href="/list-your-court"
+                className="inline-flex items-center justify-center rounded-xl bg-padel-green hover:bg-padel-green-dark active:scale-[0.98] text-white font-semibold px-7 py-3.5 transition-all shadow-lg shadow-padel-green/25"
+              >
+                List your club
               </Link>
-              <Link href="/get-started" className="block text-muted-foreground hover:text-primary transition-colors">
-                🎯 Get Started Guide
-              </Link>
-              <Link href="/get-started/glossary" className="block text-muted-foreground hover:text-primary transition-colors">
-                📖 Padel Glossary
+              <Link
+                href="/contact"
+                className="glass-panel inline-flex items-center justify-center rounded-xl text-white font-medium px-7 py-3.5 hover:bg-white/10 transition-colors"
+              >
+                Talk to us
               </Link>
             </div>
           </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Popular States</h4>
-            <ul className="space-y-2 text-sm">
-              {stats.topStates.slice(0, 4).map((state) => (
-                <li key={state.code}>
-                  <Link href={`/${state.slug}`} className="text-muted-foreground hover:text-primary transition-colors">
-                    {state.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">City Guides</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/blog/best-padel-clubs-miami" className="text-muted-foreground hover:text-primary transition-colors">
-                  Miami Clubs
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog/best-padel-clubs-austin" className="text-muted-foreground hover:text-primary transition-colors">
-                  Austin Clubs
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog/best-padel-clubs-los-angeles" className="text-muted-foreground hover:text-primary transition-colors">
-                  Los Angeles Clubs
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog/best-padel-clubs-nyc" className="text-muted-foreground hover:text-primary transition-colors">
-                  NYC Clubs
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog/best-padel-clubs-san-diego" className="text-muted-foreground hover:text-primary transition-colors">
-                  San Diego Clubs
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-primary hover:underline font-medium">
-                  All City Guides →
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/how-to-play" className="text-muted-foreground hover:text-primary transition-colors">
-                  How to Play Padel
-                </Link>
-              </li>
-              <li>
-                <Link href="/rules" className="text-muted-foreground hover:text-primary transition-colors">
-                  Rules & Regulations
-                </Link>
-              </li>
-              <li>
-                <Link href="/equipment" className="text-muted-foreground hover:text-primary transition-colors">
-                  Equipment Guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-muted-foreground hover:text-primary transition-colors">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/list-your-court" className="text-muted-foreground hover:text-primary transition-colors">
-                  List Your Court
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
+      </section>
 
-        <div className="border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Padel Courts Finder. All rights reserved.</p>
-          <div className="flex justify-center gap-4 mt-4">
-            <Link href="/privacy" className="hover:text-primary transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-primary transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="/sitemap.xml" className="hover:text-primary transition-colors">
-              Sitemap
-            </Link>
-          </div>
+      {/* ===== About / SEO block ===== */}
+      <section className="border-t">
+        <div className="container mx-auto px-4 py-12 max-w-3xl">
+          <h2 className="font-display text-lg font-semibold mb-3">About Padel Courts Finder</h2>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Looking for padel courts near me? Padel Courts Finder is the most comprehensive
+            US padel directory, helping you find padel clubs near you in {stats.totalStates} states
+            and {stats.totalCities}+ cities. Whether you&apos;re searching for a padel court near me
+            to try the sport for the first time or looking to find padel courts with lessons,
+            equipment rental, and league play, browse our verified listings to compare hours,
+            pricing, and player reviews.
+          </p>
         </div>
-      </footer>
+      </section>
     </div>
   );
 }
