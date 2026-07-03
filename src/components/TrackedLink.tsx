@@ -14,7 +14,13 @@ interface TrackedLinkProps {
   rel?: string;
 }
 
-export function TrackedLink({ href, type, clubName, productName, platform, children, ...props }: TrackedLinkProps) {
+export function TrackedLink({ href, type, clubName, productName, platform, children, rel, ...props }: TrackedLinkProps) {
+  // Affiliate links must carry rel="sponsored" (Google) — enforce it centrally
+  const resolvedRel =
+    type === 'affiliate'
+      ? 'sponsored nofollow noopener noreferrer'
+      : rel;
+
   const handleClick = () => {
     switch (type) {
       case 'website':
@@ -36,7 +42,7 @@ export function TrackedLink({ href, type, clubName, productName, platform, child
   };
 
   return (
-    <a href={href} onClick={handleClick} {...props}>
+    <a href={href} onClick={handleClick} rel={resolvedRel} {...props}>
       {children}
     </a>
   );

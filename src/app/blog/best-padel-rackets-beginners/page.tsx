@@ -26,7 +26,7 @@ export default function BeginnerRacketsPage() {
     "description": "Looking for your first padel racket? We compare the 5 best beginner padel rackets available in 2026, from $90 to $130.",
     "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
     "datePublished": "2026-03-24T00:00:00Z",
-    "dateModified": "2026-03-24T00:00:00Z",
+    "dateModified": "2026-07-03T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -46,11 +46,62 @@ export default function BeginnerRacketsPage() {
     }
   };
 
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I use a tennis racket for padel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — they're completely different. Padel rackets are solid (no strings) with a perforated face, shorter handle, and wrist strap. Using a tennis racket on a padel court would be like using a baseball bat for golf."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should I spend on my first padel racket?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "$60–130 is the sweet spot for beginners. Don't overspend until you know your play style — after 6–12 months you'll have a much better idea of what you want in an upgrade."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should beginners choose a round, teardrop, or diamond shape padel racket?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Round. Always round for beginners. The sweet spot is centered and large, which means more forgiveness on off-center hits. Teardrop and diamond shapes shift the sweet spot higher and reward precise technique."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long will a beginner padel racket last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1–2 years with regular play (2–3 times per week). The EVA foam core gradually loses its responsiveness before the frame shows wear, so most players upgrade before the racket actually breaks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I play padel near me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Padel Courts Finder lists 300+ padel clubs across the US with hours, pricing, and reviews — search by city, state, or ZIP code at padelcourtsfinder.com/search."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-stone-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
       />
 
       {/* Amber Accent Stripe */}
@@ -68,7 +119,7 @@ export default function BeginnerRacketsPage() {
           </h1>
           <p className="text-stone-400 mt-3">Tested and compared so you don&apos;t have to</p>
           <div className="text-sm text-stone-500 mt-4">
-            <span>March 24, 2026</span>
+            <span>Updated July 3, 2026</span>
             <span className="mx-2">&bull;</span>
             <span>12 min read</span>
           </div>

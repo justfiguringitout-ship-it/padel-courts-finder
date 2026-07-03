@@ -120,6 +120,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'best-padel-clubs-charlotte',
     'best-padel-clubs-san-antonio',
     'best-padel-clubs-orlando',
+    'best-padel-clubs-fort-lauderdale',
+    'best-padel-clubs-new-jersey',
+    'best-padel-clubs-ohio',
+    'best-padel-clubs-philadelphia',
+    'best-padel-rackets-2026',
+    'best-padel-rackets-beginners',
+    'best-padel-rackets-intermediate',
+    'padel-gifts-mothers-day-2026',
+    'padel-gifts-fathers-day-2026',
+    'padel-vs-pickleball',
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((slug) => ({

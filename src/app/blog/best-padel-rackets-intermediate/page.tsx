@@ -26,7 +26,7 @@ export default function IntermediateRacketsPage() {
     "description": "Ready to upgrade your padel racket? We compare the 5 best intermediate padel rackets in 2026, from $170 to $280.",
     "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
     "datePublished": "2026-03-24T00:00:00Z",
-    "dateModified": "2026-03-24T00:00:00Z",
+    "dateModified": "2026-07-03T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },
     "publisher": { "@type": "Organization", "name": "Padel Courts Finder", "logo": { "@type": "ImageObject", "url": "https://www.padelcourtsfinder.com/logo.png" } },
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.padelcourtsfinder.com/blog/best-padel-rackets-intermediate" }
@@ -50,7 +50,7 @@ export default function IntermediateRacketsPage() {
           <p className="text-lg text-stone-400 mt-3">Top 5 upgrade picks from $170 to $280 &mdash; when your beginner racket stops keeping up</p>
           <p className="text-stone-500 text-sm mt-1">Expert picks for every budget</p>
           <div className="text-sm text-stone-500 mt-4 flex items-center gap-3">
-            <span>March 24, 2026 &middot; 11 min read</span>
+            <span>Updated July 3, 2026 &middot; 11 min read</span>
           </div>
         </div>
       </header>

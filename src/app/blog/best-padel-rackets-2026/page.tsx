@@ -26,7 +26,7 @@ export default function ProRacketsPage() {
     "description": "The 5 best padel rackets money can buy in 2026. Expert reviews for advanced and competitive players.",
     "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
     "datePublished": "2026-03-24T00:00:00Z",
-    "dateModified": "2026-03-24T00:00:00Z",
+    "dateModified": "2026-07-03T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },
     "publisher": { "@type": "Organization", "name": "Padel Courts Finder", "logo": { "@type": "ImageObject", "url": "https://www.padelcourtsfinder.com/logo.png" } },
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.padelcourtsfinder.com/blog/best-padel-rackets-2026" }
@@ -48,7 +48,7 @@ export default function ProRacketsPage() {
           <p className="text-lg text-stone-400 mt-3">The finest rackets money can buy — signature editions from the world&apos;s top players</p>
           <p className="text-stone-500 text-sm mt-1">Expert picks for every budget</p>
           <div className="text-sm text-stone-500 mt-4 flex items-center gap-3">
-            <span>March 24, 2026</span><span>&middot;</span><span>11 min read</span>
+            <span>Updated July 3, 2026</span><span>&middot;</span><span>11 min read</span>
           </div>
         </div>
       </header>
