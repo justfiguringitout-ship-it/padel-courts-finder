@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SiteHeader } from "@/components/site-header";
+import { CursorGlow } from "@/components/cursor-glow";
 import { getStates } from "@/lib/site-structure";
 import "./globals.css";
 
@@ -63,6 +64,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`}
       >
         <SiteHeader states={getStates().map(s => ({ name: s.name, slug: s.slug, code: s.code }))} />
+        <CursorGlow />
         {children}
         <footer className="grain bg-court text-white/70">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { StickyPickBar } from '@/components/sticky-pick-bar';
 
 export const metadata: Metadata = {
   title: 'Best Power Padel Rackets (2026) — Top 5 for Attacking Players',
@@ -139,6 +140,7 @@ export default function PowerRacketsPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <StickyPickBar label="Most power" productName="HEAD Extreme Pro" price="$319.95" href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListData) }} />

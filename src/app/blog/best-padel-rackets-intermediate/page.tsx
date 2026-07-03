@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { StickyPickBar } from '@/components/sticky-pick-bar';
 import { HeroVideo } from '@/components/hero-video';
 
 export const metadata: Metadata = {
@@ -135,6 +136,7 @@ export default function IntermediateRacketsPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <StickyPickBar label="Best value upgrade" productName="NOX ML10 Pro Cup" price="$169.99" href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListData) }} />

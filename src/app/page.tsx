@@ -121,7 +121,7 @@ export default function HomePage() {
         {/* Hero */}
         <section className="relative">
           <div className="absolute -right-10 top-1/2 -translate-y-1/2 hidden md:block" aria-hidden="true">
-            <ScrollRotate base={12} factor={0.05}>
+            <ScrollRotate base={12} factor={0.14}>
               <CourtLines className="h-[540px] w-auto text-white/[0.09]" />
             </ScrollRotate>
           </div>

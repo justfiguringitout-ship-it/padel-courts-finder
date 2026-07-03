@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { StickyPickBar } from '@/components/sticky-pick-bar';
 
 export const metadata: Metadata = {
   title: 'Best Control Padel Rackets (2026) — Top 5 for Precision & Comfort',
@@ -139,6 +140,7 @@ export default function ControlRacketsPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <StickyPickBar label="Best control" productName="Wilson Optix V1" price="$109.00" href="https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListData) }} />

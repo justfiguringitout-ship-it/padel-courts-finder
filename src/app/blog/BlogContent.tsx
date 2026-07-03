@@ -18,97 +18,64 @@ export interface BlogPostWithImage {
 
 const categories = [
   { id: 'all', name: 'All Posts' },
+  { id: 'equipment', name: 'Gear & Buying Guides' },
   { id: 'best-clubs', name: 'City Guides' },
-  { id: 'equipment', name: 'Equipment' },
   { id: 'how-to', name: 'How-To Guides' },
 ];
 
-function CategoryTag({ category }: { category: string }) {
-  if (category === 'equipment') {
-    return <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-medium">Equipment</span>;
-  }
-  if (category === 'how-to') {
-    return <span className="text-xs px-2 py-0.5 rounded-full bg-sky-50 text-sky-700 font-medium">How-To Guide</span>;
-  }
-  return <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-medium">City Guide</span>;
-}
-
-function FeaturedCard({ post }: { post: BlogPostWithImage }) {
+/* Dark court-panel card — the money section gets the brand treatment */
+function GearCard({ post }: { post: BlogPostWithImage }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block bg-white border border-stone-200 rounded-lg overflow-hidden hover:shadow-md hover:border-stone-300 hover:-translate-y-0.5 transition-all duration-200"
+      className="reveal-up group relative grain bg-court text-white rounded-2xl p-6 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-court/30"
     >
-      <div className="aspect-[16/10] bg-stone-100 relative overflow-hidden">
-        {post.imageUrl ? (
-          <img
-            src={post.imageUrl}
-            alt={post.imageAlt}
-            className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-stone-100 to-stone-200" />
-        )}
-      </div>
-      <div className="p-5">
-        <div className="flex items-center gap-2 mb-2.5">
-          <CategoryTag category={post.category} />
-          <span className="text-xs text-stone-400">
-            {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-          </span>
+      <div className="relative">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="font-mono text-[11px] text-turf">buying guide</span>
+          {post.priceRange && (
+            <span className="font-mono text-[11px] text-white/40">{post.priceRange}</span>
+          )}
         </div>
-        <h3 className="text-lg font-bold text-foreground mb-1.5 group-hover:text-emerald-700 transition-colors">
+        <h3 className="font-display text-xl font-bold leading-snug mb-2 group-hover:text-turf transition-colors">
           {post.title}
         </h3>
-        <p className="text-stone-500 text-sm leading-relaxed line-clamp-3 mb-3">
+        <p className="text-white/50 text-sm leading-relaxed line-clamp-2 mb-4">
           {post.excerpt}
         </p>
-        <span className="text-emerald-600 text-sm font-medium">
-          Read more &rarr;
+        <span className="inline-flex items-center gap-2 text-sm font-medium text-turf group-hover:gap-3 transition-all">
+          Read the guide
+          <span aria-hidden="true">&rarr;</span>
         </span>
       </div>
     </Link>
   );
 }
 
-function PostCard({ post }: { post: BlogPostWithImage }) {
-  const isEquipment = post.category === 'equipment';
-  const isHowTo = post.category === 'how-to';
-  const hasImage = !isEquipment && !isHowTo;
-
+function CityCard({ post }: { post: BlogPostWithImage }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className={`group block border rounded-lg overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 ${
-        isEquipment
-          ? 'bg-amber-50/40 border-amber-200/60 hover:border-amber-300'
-          : isHowTo
-          ? 'bg-sky-50/40 border-sky-200/60 hover:border-sky-300'
-          : 'bg-white border-stone-200 hover:border-stone-300'
-      }`}
+      className="reveal-up group block bg-white border border-stone-200 rounded-2xl overflow-hidden hover:border-padel-green hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
     >
-      {hasImage && (
-        <div className="aspect-video bg-stone-100 relative overflow-hidden">
-          {post.imageUrl ? (
-            <img
-              src={post.imageUrl}
-              alt={post.imageAlt}
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
-            />
-          ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-stone-100 to-stone-200" />
-          )}
-        </div>
-      )}
+      <div className="aspect-[16/10] bg-stone-100 relative overflow-hidden">
+        {post.imageUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={post.imageUrl}
+            alt={post.imageAlt}
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
+          />
+        ) : (
+          <div className="absolute inset-0 grain bg-court" />
+        )}
+      </div>
       <div className="p-5">
-        <div className="flex items-center gap-2 mb-2">
-          <CategoryTag category={post.category} />
-          {isEquipment && post.priceRange && (
-            <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100/80 text-amber-800 font-medium">{post.priceRange}</span>
-          )}
-          <span className="text-xs text-stone-400">{post.readTime}</span>
+        <div className="flex items-center gap-2 mb-2.5 text-xs text-stone-400">
+          <span className="font-mono text-padel-green">city guide</span>
+          <span>{post.readTime}</span>
         </div>
-        <h3 className={`font-bold text-foreground mb-1.5 group-hover:text-emerald-700 transition-colors ${isEquipment ? 'text-base' : 'text-base'}`}>
+        <h3 className="font-display text-lg font-bold text-foreground mb-1.5 group-hover:text-padel-green transition-colors">
           {post.title}
         </h3>
         <p className="text-stone-500 text-sm leading-relaxed line-clamp-2">
@@ -119,35 +86,64 @@ function PostCard({ post }: { post: BlogPostWithImage }) {
   );
 }
 
-const sectionTitles: Record<string, string> = {
-  all: 'All Posts',
-  'best-clubs': 'City Guides',
-  equipment: 'Equipment & Gear',
-  'how-to': 'How-To Guides',
-};
+function HowToCard({ post }: { post: BlogPostWithImage }) {
+  return (
+    <Link
+      href={`/blog/${post.slug}`}
+      className="reveal-up group block bg-white border border-stone-200 rounded-2xl p-5 hover:border-padel-green hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+    >
+      <div className="flex items-center gap-2 mb-2.5 text-xs text-stone-400">
+        <span className="font-mono text-padel-green">how-to</span>
+        <span>{post.readTime}</span>
+      </div>
+      <h3 className="font-display text-lg font-bold text-foreground mb-1.5 group-hover:text-padel-green transition-colors">
+        {post.title}
+      </h3>
+      <p className="text-stone-500 text-sm leading-relaxed line-clamp-2">
+        {post.excerpt}
+      </p>
+    </Link>
+  );
+}
 
 export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const filteredPosts = activeFilter === 'all'
-    ? posts
-    : posts.filter(p => p.category === activeFilter);
-
-  const featuredPosts = posts.filter(p => p.featured);
+  const gearOrder = [
+    'best-padel-rackets-beginners',
+    'best-padel-rackets-intermediate',
+    'best-padel-rackets-2026',
+    'best-padel-rackets-power',
+    'best-padel-rackets-control',
+    'padel-racket-shapes-explained',
+    'padel-gifts-mothers-day-2026',
+    'padel-gifts-fathers-day-2026',
+  ];
+  const gearRank = (slug: string) => {
+    const i = gearOrder.indexOf(slug);
+    return i === -1 ? gearOrder.length : i;
+  };
+  const gearPosts = posts
+    .filter(p => p.category === 'equipment')
+    .sort((a, b) => gearRank(a.slug) - gearRank(b.slug));
+  const cityPosts = posts.filter(p => p.category === 'best-clubs');
+  const howToPosts = posts.filter(p => p.category === 'how-to');
+  const featuredCity = cityPosts.filter(p => p.featured);
+  const restCity = cityPosts.filter(p => !p.featured);
 
   return (
     <>
       {/* Filter Tabs */}
-      <nav className="border-b border-stone-200 sticky top-0 z-30 bg-white/95 backdrop-blur-sm">
+      <nav className="border-b border-stone-200 sticky top-16 z-30 bg-white/95 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-8 justify-center">
+          <div className="flex gap-6 md:gap-8 justify-start md:justify-center overflow-x-auto">
             {categories.map(category => {
               const isActive = activeFilter === category.id;
               return (
                 <button
                   key={category.id}
                   onClick={() => setActiveFilter(category.id)}
-                  className={`relative py-3.5 text-sm transition-colors ${
+                  className={`relative py-3.5 text-sm whitespace-nowrap transition-colors ${
                     isActive
                       ? 'font-semibold text-foreground'
                       : 'text-stone-400 hover:text-stone-600'
@@ -155,7 +151,7 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
                 >
                   {category.name}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-600 rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-padel-green rounded-full" />
                   )}
                 </button>
               );
@@ -166,70 +162,77 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Featured Posts — only in "All Posts" view */}
-        {activeFilter === 'all' && featuredPosts.length > 0 && (
-          <section className="mb-14">
-            <h2 className="text-sm font-semibold uppercase tracking-wider text-stone-400 mb-5">
-              Featured
-            </h2>
-            <div className="grid md:grid-cols-3 gap-5">
-              {featuredPosts.map(post => (
-                <FeaturedCard key={post.slug} post={post} />
-              ))}
+        {/* Gear & Buying Guides — first, always */}
+        {(activeFilter === 'all' || activeFilter === 'equipment') && gearPosts.length > 0 && (
+          <section className="mb-16">
+            <div className="flex items-end justify-between mb-6">
+              <div>
+                <p className="font-mono text-sm text-padel-green mb-2">gear & buying guides</p>
+                <h2 className="font-display text-2xl md:text-3xl font-bold">
+                  Find your racket
+                </h2>
+              </div>
             </div>
-          </section>
-        )}
-
-        {/* Filtered Posts Grid */}
-        {filteredPosts.length > 0 && (
-          <section>
-            <h2 className="text-sm font-semibold uppercase tracking-wider text-stone-400 mb-5">
-              {sectionTitles[activeFilter] || 'All Posts'}
-            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filteredPosts.map(post => (
-                <PostCard key={post.slug} post={post} />
+              {gearPosts.map(post => (
+                <GearCard key={post.slug} post={post} />
               ))}
             </div>
           </section>
         )}
 
-        {/* Newsletter CTA */}
-        <div className="bg-stone-900 text-white rounded-xl p-8 text-center mt-16">
-          <h2 className="text-2xl font-bold mb-3">Stay in the loop</h2>
-          <p className="text-stone-400 mb-6 max-w-lg mx-auto">
-            Club reviews, gear guides, and padel news — delivered when it matters.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="you@email.com"
-              className="flex-1 px-4 py-3 rounded-lg text-stone-900 bg-white text-sm"
-            />
-            <button className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium text-sm hover:bg-emerald-700 transition-colors">
-              Subscribe
-            </button>
-          </div>
-        </div>
+        {/* City Guides */}
+        {(activeFilter === 'all' || activeFilter === 'best-clubs') && cityPosts.length > 0 && (
+          <section className="mb-16">
+            <div className="mb-6">
+              <p className="font-mono text-sm text-padel-green mb-2">city guides</p>
+              <h2 className="font-display text-2xl md:text-3xl font-bold">
+                Where to play
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {[...featuredCity, ...restCity].map(post => (
+                <CityCard key={post.slug} post={post} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* How-To Guides */}
+        {(activeFilter === 'all' || activeFilter === 'how-to') && howToPosts.length > 0 && (
+          <section className="mb-16">
+            <div className="mb-6">
+              <p className="font-mono text-sm text-padel-green mb-2">how-to guides</p>
+              <h2 className="font-display text-2xl md:text-3xl font-bold">
+                Play better
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {howToPosts.map(post => (
+                <HowToCard key={post.slug} post={post} />
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Quick Links */}
-        <div className="grid md:grid-cols-3 gap-5 mt-12">
+        <div className="grid md:grid-cols-3 gap-5">
           <Link
             href="/search"
-            className="group border border-stone-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-sm transition-all"
+            className="group border border-stone-200 rounded-2xl p-5 hover:border-padel-green hover:shadow-md transition-all"
           >
-            <h3 className="font-bold text-foreground mb-1 group-hover:text-emerald-700 transition-colors">
+            <h3 className="font-display font-bold text-foreground mb-1 group-hover:text-padel-green transition-colors">
               Find Courts
             </h3>
             <p className="text-stone-500 text-sm">
-              Search 313+ padel courts across America
+              Search 312+ padel clubs across America
             </p>
           </Link>
           <Link
             href="/get-started"
-            className="group border border-stone-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-sm transition-all"
+            className="group border border-stone-200 rounded-2xl p-5 hover:border-padel-green hover:shadow-md transition-all"
           >
-            <h3 className="font-bold text-foreground mb-1 group-hover:text-emerald-700 transition-colors">
+            <h3 className="font-display font-bold text-foreground mb-1 group-hover:text-padel-green transition-colors">
               Get Started
             </h3>
             <p className="text-stone-500 text-sm">
@@ -238,9 +241,9 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
           </Link>
           <Link
             href="/get-started/glossary"
-            className="group border border-stone-200 rounded-lg p-5 hover:border-emerald-300 hover:shadow-sm transition-all"
+            className="group border border-stone-200 rounded-2xl p-5 hover:border-padel-green hover:shadow-md transition-all"
           >
-            <h3 className="font-bold text-foreground mb-1 group-hover:text-emerald-700 transition-colors">
+            <h3 className="font-display font-bold text-foreground mb-1 group-hover:text-padel-green transition-colors">
               Glossary
             </h3>
             <p className="text-stone-500 text-sm">

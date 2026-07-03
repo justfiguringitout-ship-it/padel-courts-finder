@@ -343,13 +343,15 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Editorial Header */}
-      <header className="bg-white border-b border-stone-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-3">
-            The Padel Blog
+      <header className="grain bg-court">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+          <p className="font-mono text-sm text-turf mb-4">the padel blog</p>
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-white tracking-tight mb-4">
+            Read the game.
           </h1>
-          <p className="text-lg text-stone-500 max-w-2xl">
-            Club reviews, gear guides, and expert insights on America&apos;s fastest-growing sport.
+          <p className="text-lg text-white/60 max-w-2xl">
+            Gear guides that pay for themselves, club reviews city by city, and
+            everything else about America&apos;s fastest-growing sport.
           </p>
         </div>
       </header>

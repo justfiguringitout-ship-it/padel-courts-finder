@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { StickyPickBar } from '@/components/sticky-pick-bar';
 import { HeroVideo } from '@/components/hero-video';
 
 export const metadata: Metadata = {
@@ -157,6 +158,7 @@ export default function BeginnerRacketsPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      <StickyPickBar label="Best for beginners" productName="Babolat Contact" price="$89.95" href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
