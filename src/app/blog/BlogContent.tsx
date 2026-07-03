@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { RacketQuiz } from '@/components/racket-quiz';
 
 export interface BlogPostWithImage {
   slug: string;
@@ -172,6 +173,9 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
                   Find your racket
                 </h2>
               </div>
+            </div>
+            <div className="mb-6">
+              <RacketQuiz />
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {gearPosts.map(post => (

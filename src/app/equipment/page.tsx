@@ -13,6 +13,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { HeroVideo } from "@/components/hero-video";
+import { RacketQuiz } from "@/components/racket-quiz";
 
 export const metadata: Metadata = {
   title: "Padel Equipment Guide - Rackets, Balls & Gear | Padel Courts Finder",
@@ -83,6 +84,13 @@ export default function EquipmentPage() {
           <div className="-mb-6 mt-4">
             <HeroVideo />
           </div>
+        </div>
+      </section>
+
+      {/* Racket Finder Quiz */}
+      <section className="container mx-auto px-4 pt-4 pb-2">
+        <div className="max-w-4xl mx-auto">
+          <RacketQuiz />
         </div>
       </section>
 
