@@ -32,26 +32,130 @@ export default function IntermediateRacketsPage() {
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.padelcourtsfinder.com/blog/best-padel-rackets-intermediate" }
   };
 
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I know I'm ready to upgrade from a beginner racket?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The usual signs: you've been playing consistently for 6+ months, you're hitting the sweet spot reliably, and your racket feels like it's capping your power or spin. A racket that feels \"dead\" is another signal — EVA cores degrade after 12-18 months of regular play. If two or more of those apply, you're ready."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does 12K or 18K carbon actually mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The number is how many thousand carbon filaments are bundled into each strand of the weave — 3K is 3,000, 12K is 12,000. Higher counts generally give a stiffer, more responsive face with more power on clean contact, while lower counts flex more and feel softer. It's one factor among several, though — core density and shape change the feel just as much."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a teardrop shape harder to play than a round racket?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A little. The sweet spot sits higher and is slightly smaller than on a round racket, so it rewards consistent contact — but for anyone with 6+ months of play, the adjustment usually takes a few sessions, not months. Hybrid shapes like the Bullpadel Neuron split the difference if you want a gentler transition."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I try these rackets before buying?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many clubs keep demo rackets you can borrow for a session — ask the pro shop at your local club which brands they carry. Use our court finder to locate clubs near you, and call ahead to check demo availability before you commit $200+."
+        }
+      }
+    ]
+  };
+
+  const itemListData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "NOX ML10 Pro Cup Rough Surface",
+          "description": "Best for: Spin-focused players upgrading from beginner",
+          "offers": { "@type": "Offer", "price": "169.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" },
+          "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "Wilson Blade Elite V2",
+          "description": "Best for: All-court players who want balance",
+          "offers": { "@type": "Offer", "price": "189.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" },
+          "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.0, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "NOX AT10 Genius Attack 12K",
+          "description": "Best for: Aggressive players with clean technique",
+          "offers": { "@type": "Offer", "price": "229.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20" },
+          "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 6.7, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Product",
+          "name": "Bullpadel Neuron 2025 (Chingotto)",
+          "description": "Best for: Upper-intermediates transitioning to advanced",
+          "offers": { "@type": "Offer", "price": "236.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" },
+          "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Product",
+          "name": "Adidas Metalbone HRD+ 3.3",
+          "description": "Best for: Left-side attackers who want firepower",
+          "offers": { "@type": "Offer", "price": "279.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" },
+          "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 6.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-stone-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListData) }} />
 
-      {/* Amber Accent Stripe */}
-      <div className="h-1 bg-amber-500" />
+      {/* Accent Stripe */}
+      <div className="h-1 bg-padel-green" />
 
       {/* Dark Hero */}
-      <header className="bg-stone-900">
+      <header className="grain bg-court">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
           <div className="mb-5">
-            <Link href="/blog" className="text-stone-400 hover:text-amber-400 text-sm">&larr; Back to Blog</Link>
+            <Link href="/blog" className="text-stone-400 hover:text-turf text-sm">&larr; Back to Blog</Link>
           </div>
-          <span className="inline-block bg-amber-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Equipment</span>
+          <span className="inline-block bg-padel-green text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Equipment</span>
           <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Best Padel Rackets for Intermediate Players (2026)</h1>
           <p className="text-lg text-stone-400 mt-3">Top 5 upgrade picks from $170 to $280 &mdash; when your beginner racket stops keeping up</p>
           <p className="text-stone-500 text-sm mt-1">Expert picks for every budget</p>
           <div className="text-sm text-stone-500 mt-4 flex items-center gap-3">
             <span>Updated July 3, 2026 &middot; 11 min read</span>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </header>
 
@@ -68,7 +172,7 @@ export default function IntermediateRacketsPage() {
 
             <div className="prose prose-lg prose-stone max-w-none mb-0">
               <p className="text-stone-600 leading-[1.75]">You&apos;ve been playing for 6+ months. Your technique is more consistent, you&apos;re reading the game better, and that beginner racket is starting to feel like it&apos;s holding you back. Sound familiar? It&apos;s time to upgrade.</p>
-              <p className="text-stone-600 leading-[1.75]">An intermediate racket gives you more <strong className="text-foreground">power</strong>, better <strong className="text-foreground">spin</strong>, and a more responsive <strong className="text-foreground">feel</strong> &mdash; but it also demands cleaner technique. Look for: a <strong className="text-foreground">carbon or hybrid surface</strong> for ball speed, a <strong className="text-foreground">teardrop or hybrid shape</strong> for balanced power/control, a <strong className="text-foreground">medium EVA core</strong>, and a <strong className="text-foreground">weight of 360&ndash;375g</strong>. Budget $170&ndash;280 for a quality intermediate racket. Ready to test your new racket? <Link href="/search" className="text-emerald-600 hover:underline">Find a court near you</Link>.</p>
+              <p className="text-stone-600 leading-[1.75]">An intermediate racket gives you more <strong className="text-foreground">power</strong>, better <strong className="text-foreground">spin</strong>, and a more responsive <strong className="text-foreground">feel</strong> &mdash; but it also demands cleaner technique. Look for: a <strong className="text-foreground">carbon or hybrid surface</strong> for ball speed, a <strong className="text-foreground">teardrop or hybrid shape</strong> for balanced power/control, a <strong className="text-foreground">medium EVA core</strong>, and a <strong className="text-foreground">weight of 360&ndash;375g</strong>. Budget $170&ndash;280 for a quality intermediate racket. Ready to test your new racket? <Link href="/search" className="text-padel-green hover:underline">Find a court near you</Link>.</p>
             </div>
 
             {/* Quick Picks Box */}
@@ -79,18 +183,18 @@ export default function IntermediateRacketsPage() {
               <div className="space-y-2.5">
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Value Upgrade:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">NOX ML10 Pro Cup</TrackedLink> <span className="text-stone-500">&mdash; $169.99</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">NOX ML10 Pro Cup</TrackedLink> <span className="text-stone-500">&mdash; $169.99</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best All-Around:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" type="affiliate" productName="Wilson Blade Elite V2" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">Wilson Blade Elite V2</TrackedLink> <span className="text-stone-500">&mdash; $189.00</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" type="affiliate" productName="Wilson Blade Elite V2" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Wilson Blade Elite V2</TrackedLink> <span className="text-stone-500">&mdash; $189.00</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Most Power Under $300:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" type="affiliate" productName="Adidas Metalbone HRD+" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline font-medium">Adidas Metalbone HRD+</TrackedLink> <span className="text-stone-500">&mdash; $279.99</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" type="affiliate" productName="Adidas Metalbone HRD+" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Adidas Metalbone HRD+</TrackedLink> <span className="text-stone-500">&mdash; $279.99</span></span>
                 </div>
               </div>
-              <a href="#top-5-intermediate" className="text-sm text-stone-500 hover:text-emerald-600 mt-3 inline-block">Jump to full reviews &darr;</a>
+              <a href="#top-5-intermediate" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
             </div>
 
             <div className="mt-6">
@@ -112,7 +216,7 @@ export default function IntermediateRacketsPage() {
                   <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">You want more power on smashes.</strong> Fiberglass faces have a power ceiling. Carbon surfaces return energy faster and reward clean contact with explosive ball speed.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Your racket feels &quot;dead.&quot;</strong> EVA cores degrade over time. If you&apos;re playing 2&ndash;3 times a week &mdash; easy to do if you&apos;re near <Link href="/blog/best-padel-clubs-houston" className="text-emerald-600 hover:underline">Houston&apos;s padel scene</Link> or another growing market &mdash; expect to replace after 12&ndash;18 months. If everything feels flat and unresponsive, the foam has lost its memory &mdash; time for a fresh racket.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Your racket feels &quot;dead.&quot;</strong> EVA cores degrade over time. If you&apos;re playing 2&ndash;3 times a week &mdash; easy to do if you&apos;re near <Link href="/blog/best-padel-clubs-houston" className="text-padel-green hover:underline">Houston&apos;s padel scene</Link> or another growing market &mdash; expect to replace after 12&ndash;18 months. If everything feels flat and unresponsive, the foam has lost its memory &mdash; time for a fresh racket.</p>
                 </div>
               </div>
             </section>
@@ -121,8 +225,8 @@ export default function IntermediateRacketsPage() {
               <h2 id="top-5-intermediate" className="text-2xl font-bold text-foreground mb-5">Top 5 Intermediate Padel Rackets</h2>
 
               {/* 1. NOX ML10 Pro Cup */}
-              <div id="nox-ml10-pro-cup" className="relative bg-white border-2 border-amber-400 rounded-xl p-6 md:p-8 mb-8 shadow-sm">
-                <div className="absolute -top-3 -left-2 bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-md -rotate-3 shadow-md z-10">
+              <div id="nox-ml10-pro-cup" className="relative bg-white border-2 border-padel-green rounded-xl p-6 md:p-8 mb-8 shadow-sm">
+                <div className="absolute -top-3 -left-2 bg-padel-green text-white text-xs font-bold px-3 py-1.5 rounded-md -rotate-3 shadow-md z-10">
                   #1 PICK
                 </div>
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mt-2 mb-1">#1 &mdash; Best Value Upgrade</span>
@@ -155,7 +259,7 @@ export default function IntermediateRacketsPage() {
                       <span className="text-xs text-stone-400">9/10</span>
                     </div>
                     <div className="h-1.5 bg-stone-200 rounded-full">
-                      <div className="h-1.5 rounded-full bg-emerald-500" style={{ width: '90%' }} />
+                      <div className="h-1.5 rounded-full bg-padel-green" style={{ width: '90%' }} />
                     </div>
                   </div>
                   <div>
@@ -164,16 +268,16 @@ export default function IntermediateRacketsPage() {
                       <span className="text-xs text-stone-400">8/10</span>
                     </div>
                     <div className="h-1.5 bg-stone-200 rounded-full">
-                      <div className="h-1.5 rounded-full bg-emerald-500" style={{ width: '80%' }} />
+                      <div className="h-1.5 rounded-full bg-padel-green" style={{ width: '80%' }} />
                     </div>
                   </div>
                 </div>
                 <p className="text-stone-600 leading-[1.75] mb-5">The ML10 keeps the safety of a round shape but adds a rough sand-finish surface that bites the ball for serious topspin. The HR3 EVA core provides consistent bounce and rapid memory, while the low balance point makes it exceptionally agile at the net &mdash; where intermediates start spending more time. NOX&apos;s Pulse System dampens vibration in the handle. At $170, this is the most affordable meaningful upgrade from a beginner racket. If you want better spin without giving up forgiveness, start here.</p>
                 <div className="space-y-2 mb-5">
-                  <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">&#10003;</span> Rough sand finish for topspin, low balance = great at net</p>
+                  <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Rough sand finish for topspin, low balance = great at net</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face limits raw power</p>
                 </div>
-                <TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
 
               {/* 2. Wilson Blade Elite V2 */}
@@ -199,7 +303,7 @@ export default function IntermediateRacketsPage() {
                       <span className="text-xs text-stone-400">7/10</span>
                     </div>
                     <div className="h-1.5 bg-stone-200 rounded-full">
-                      <div className="h-1.5 rounded-full bg-emerald-500" style={{ width: '70%' }} />
+                      <div className="h-1.5 rounded-full bg-padel-green" style={{ width: '70%' }} />
                     </div>
                   </div>
                   <div>
@@ -208,7 +312,7 @@ export default function IntermediateRacketsPage() {
                       <span className="text-xs text-stone-400">7/10</span>
                     </div>
                     <div className="h-1.5 bg-stone-200 rounded-full">
-                      <div className="h-1.5 rounded-full bg-emerald-500" style={{ width: '70%' }} />
+                      <div className="h-1.5 rounded-full bg-padel-green" style={{ width: '70%' }} />
                     </div>
                   </div>
                   <div>
@@ -217,16 +321,16 @@ export default function IntermediateRacketsPage() {
                       <span className="text-xs text-stone-400">7/10</span>
                     </div>
                     <div className="h-1.5 bg-stone-200 rounded-full">
-                      <div className="h-1.5 rounded-full bg-emerald-500" style={{ width: '70%' }} />
+                      <div className="h-1.5 rounded-full bg-padel-green" style={{ width: '70%' }} />
                     </div>
                   </div>
                 </div>
                 <p className="text-stone-600 leading-[1.75] mb-5">The Blade Elite V2 is a teardrop that balances power and control beautifully. Wilson&apos;s carbon/fiberglass hybrid surface gives you more ball speed than pure fiberglass while retaining some comfort, and the textured finish helps with spin. The Soft EVA core keeps it forgiving enough for intermediates who still mishit occasionally. Sharp Hole Technology modifies the drilling pattern for extra ball bite. It&apos;s a 2022 model &mdash; older but battle-tested and proven. At $189 for this much Wilson build quality, it&apos;s a steal for the all-court player who wants a bit of everything.</p>
                 <div className="space-y-2 mb-5">
-                  <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">&#10003;</span> Proven Wilson build quality, teardrop balances power/control</p>
+                  <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Proven Wilson build quality, teardrop balances power/control</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> 2022 model (older but battle-tested)</p>
                 </div>
-                <TrackedLink href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" type="affiliate" productName="Wilson Blade Elite V2" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <TrackedLink href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" type="affiliate" productName="Wilson Blade Elite V2" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
 
               {/* 3. NOX AT10 Genius Attack 12K */}
@@ -252,7 +356,7 @@ export default function IntermediateRacketsPage() {
                       <span className="text-xs text-stone-400">8/10</span>
                     </div>
                     <div className="h-1.5 bg-stone-200 rounded-full">
-                      <div className="h-1.5 rounded-full bg-emerald-500" style={{ width: '80%' }} />
+                      <div className="h-1.5 rounded-full bg-padel-green" style={{ width: '80%' }} />
                     </div>
                   </div>
                   <div>
@@ -276,10 +380,10 @@ export default function IntermediateRacketsPage() {
                 </div>
                 <p className="text-stone-600 leading-[1.75] mb-5">This is Agust&iacute;n Tapia&apos;s attack model &mdash; a diamond shape with a 12K carbon face that&apos;s elite at this price point. The SPIN 3D texture on the surface generates serious topspin on bandeja and vibora shots, and the MLD Black EVA core balances power with enough comfort for longer matches. The Pulse System in the handle dampens vibration. Fair warning: a diamond shape with a head-heavy balance is demanding. If your technique is clean and you&apos;re generating good racket-head speed, this rewards aggression like nothing else under $250. If you&apos;re still inconsistent, stick with the ML10 or Blade Elite.</p>
                 <div className="space-y-2 mb-5">
-                  <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">&#10003;</span> 12K carbon face is elite at this price, SPIN 3D texture</p>
+                  <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> 12K carbon face is elite at this price, SPIN 3D texture</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Diamond shape + head-heavy = demanding. Not for lower-intermediate.</p>
                 </div>
-                <TrackedLink href="https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius Attack" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <TrackedLink href="https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius Attack" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
 
               {/* 4. Bullpadel Neuron 2025 */}
@@ -305,7 +409,7 @@ export default function IntermediateRacketsPage() {
                       <span className="text-xs text-stone-400">7/10</span>
                     </div>
                     <div className="h-1.5 bg-stone-200 rounded-full">
-                      <div className="h-1.5 rounded-full bg-emerald-500" style={{ width: '70%' }} />
+                      <div className="h-1.5 rounded-full bg-padel-green" style={{ width: '70%' }} />
                     </div>
                   </div>
                   <div>
@@ -314,7 +418,7 @@ export default function IntermediateRacketsPage() {
                       <span className="text-xs text-stone-400">8/10</span>
                     </div>
                     <div className="h-1.5 bg-stone-200 rounded-full">
-                      <div className="h-1.5 rounded-full bg-emerald-500" style={{ width: '80%' }} />
+                      <div className="h-1.5 rounded-full bg-padel-green" style={{ width: '80%' }} />
                     </div>
                   </div>
                   <div>
@@ -323,16 +427,16 @@ export default function IntermediateRacketsPage() {
                       <span className="text-xs text-stone-400">7/10</span>
                     </div>
                     <div className="h-1.5 bg-stone-200 rounded-full">
-                      <div className="h-1.5 rounded-full bg-emerald-500" style={{ width: '70%' }} />
+                      <div className="h-1.5 rounded-full bg-padel-green" style={{ width: '70%' }} />
                     </div>
                   </div>
                 </div>
                 <p className="text-stone-600 leading-[1.75] mb-5">Fede Chingotto&apos;s signature racket uses a hybrid shape that sits between round and teardrop &mdash; you get the sweet spot forgiveness of a round with the power angle of a teardrop. The Xtend Carbon 3K surface and 100% CarbonTube frame make this a genuinely advanced racket that&apos;s accessible to upper-intermediates thanks to the shape. Bullpadel&apos;s Vibradrive system reduces arm fatigue significantly, which matters in longer tournaments. It&apos;s stiffer than fiberglass options and carries pro-model pricing, but if you&apos;re transitioning to advanced play, this racket will grow with you rather than limit you.</p>
                 <div className="space-y-2 mb-5">
-                  <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">&#10003;</span> Hybrid shape = round&apos;s sweet spot + teardrop&apos;s power. Vibradrive reduces fatigue.</p>
+                  <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Hybrid shape = round&apos;s sweet spot + teardrop&apos;s power. Vibradrive reduces fatigue.</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Stiffer than fiberglass, pro-model pricing</p>
                 </div>
-                <TrackedLink href="https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" type="affiliate" productName="Bullpadel Neuron" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <TrackedLink href="https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" type="affiliate" productName="Bullpadel Neuron" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
 
               {/* 5. Adidas Metalbone HRD+ 3.3 */}
@@ -358,7 +462,7 @@ export default function IntermediateRacketsPage() {
                       <span className="text-xs text-stone-400">9/10</span>
                     </div>
                     <div className="h-1.5 bg-stone-200 rounded-full">
-                      <div className="h-1.5 rounded-full bg-emerald-500" style={{ width: '90%' }} />
+                      <div className="h-1.5 rounded-full bg-padel-green" style={{ width: '90%' }} />
                     </div>
                   </div>
                   <div>
@@ -382,10 +486,10 @@ export default function IntermediateRacketsPage() {
                 </div>
                 <p className="text-stone-600 leading-[1.75] mb-5">The Metalbone HRD+ 3.3 is Ale Gal&aacute;n-designed and built for power. The Carbon Aluminized 2:1 surface is one of the most explosive under $300, and the diamond shape with high balance concentrates weight in the head for devastating smashes. The hard EVA core enhances ball exit speed. The trade-off is real though: this racket punishes mishits. The hard core and head-heavy balance demand precise technique. If you&apos;re an upper-intermediate or borderline advanced player who plays primarily left-side (attacker position), this delivers serious firepower. 3M protection tape comes pre-applied &mdash; a nice touch given the aggressive play this racket invites.</p>
                 <div className="space-y-2 mb-5">
-                  <p className="text-sm text-stone-700"><span className="text-emerald-600 mr-1.5">&#10003;</span> One of the most powerful surfaces under $300, 3M tape pre-applied</p>
+                  <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> One of the most powerful surfaces under $300, 3M tape pre-applied</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Hard EVA core punishes mishits, demanding for pure intermediates</p>
                 </div>
-                <TrackedLink href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" type="affiliate" productName="Adidas Metalbone HRD+" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <TrackedLink href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" type="affiliate" productName="Adidas Metalbone HRD+" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
             </section>
           </div>
@@ -408,27 +512,27 @@ export default function IntermediateRacketsPage() {
                   <tbody>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Value Upgrade</td>
-                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">NOX ML10 Pro Cup</TrackedLink></td>
+                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">NOX ML10 Pro Cup</TrackedLink></td>
                       <td className="py-3 text-stone-600">$169.99</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best All-Around</td>
-                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" type="affiliate" productName="Wilson Blade Elite V2" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Wilson Blade Elite V2</TrackedLink></td>
+                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" type="affiliate" productName="Wilson Blade Elite V2" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Wilson Blade Elite V2</TrackedLink></td>
                       <td className="py-3 text-stone-600">$189.00</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best for Future Growth</td>
-                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" type="affiliate" productName="Bullpadel Neuron" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Bullpadel Neuron</TrackedLink></td>
+                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" type="affiliate" productName="Bullpadel Neuron" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Bullpadel Neuron</TrackedLink></td>
                       <td className="py-3 text-stone-600">$236.00</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Most Power Under $300</td>
-                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" type="affiliate" productName="Adidas Metalbone HRD+" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">Adidas Metalbone HRD+</TrackedLink></td>
+                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" type="affiliate" productName="Adidas Metalbone HRD+" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Adidas Metalbone HRD+</TrackedLink></td>
                       <td className="py-3 text-stone-600">$279.99</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Spin Generation</td>
-                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius Attack" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">NOX AT10 Genius Attack 12K</TrackedLink></td>
+                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius Attack" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">NOX AT10 Genius Attack 12K</TrackedLink></td>
                       <td className="py-3 text-stone-600">$229.99</td>
                     </tr>
                   </tbody>
@@ -437,29 +541,61 @@ export default function IntermediateRacketsPage() {
             </section>
           </div>
         </div>
+
+        {/* Stone-50 Section: FAQ */}
+        <div className="bg-stone-50">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <section>
+              <h2 className="text-2xl font-bold text-foreground mb-5">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">How do I know I&apos;m ready to upgrade from a beginner racket?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">The usual signs: you&apos;ve been playing consistently for 6+ months, you&apos;re hitting the sweet spot reliably, and your racket feels like it&apos;s capping your power or spin. A racket that feels &quot;dead&quot; is another signal &mdash; EVA cores degrade after 12&ndash;18 months of regular play. If two or more of those apply, you&apos;re ready.</p>
+                </div>
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">What does 12K or 18K carbon actually mean?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">The number is how many thousand carbon filaments are bundled into each strand of the weave &mdash; 3K is 3,000, 12K is 12,000. Higher counts generally give a stiffer, more responsive face with more power on clean contact, while lower counts flex more and feel softer. It&apos;s one factor among several, though &mdash; core density and shape change the feel just as much.</p>
+                </div>
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">Is a teardrop shape harder to play than a round racket?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">A little. The sweet spot sits higher and is slightly smaller than on a round racket, so it rewards consistent contact &mdash; but for anyone with 6+ months of play, the adjustment usually takes a few sessions, not months. Hybrid shapes like the Bullpadel Neuron split the difference if you want a gentler transition.</p>
+                </div>
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">Where can I try these rackets before buying?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">Many clubs keep demo rackets you can borrow for a session &mdash; ask the pro shop at your local club which brands they carry. Use our <Link href="/search" className="text-padel-green hover:underline">court finder</Link> to locate clubs near you, and call ahead to check demo availability before you commit $200+.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
       </article>
 
       {/* Keep Reading — Dark Section (outside article) */}
-      <div className="bg-stone-900">
+      <div className="grain bg-court">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <h2 className="text-lg font-bold text-white mb-4">Keep Reading</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            <Link href="/blog/best-padel-rackets-beginners" className="block border border-stone-700 rounded-lg p-4 hover:border-amber-500/50 transition-colors">
-              <span className="text-xs font-medium uppercase tracking-wider text-amber-500">EQUIPMENT</span>
+            <Link href="/blog/best-padel-rackets-beginners" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
+              <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Beginner Rackets (2026)</h3>
               <p className="text-sm text-stone-400 mt-1">Just starting out? 5 rackets from $90&ndash;$130 &rarr;</p>
             </Link>
-            <Link href="/blog/best-padel-rackets-2026" className="block border border-stone-700 rounded-lg p-4 hover:border-amber-500/50 transition-colors">
-              <span className="text-xs font-medium uppercase tracking-wider text-amber-500">EQUIPMENT</span>
+            <Link href="/blog/best-padel-rackets-2026" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
+              <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Pro Rackets (2026)</h3>
               <p className="text-sm text-stone-400 mt-1">Top 5 flagship rackets from $250&ndash;$400 &rarr;</p>
             </Link>
-            <Link href="/search" className="block border border-stone-700 rounded-lg p-4 hover:border-emerald-500/50 transition-colors">
+            <Link href="/blog/padel-racket-shapes-explained" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
+              <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
+              <h3 className="font-semibold text-white mt-1">Racket Shapes Explained</h3>
+              <p className="text-sm text-stone-400 mt-1">Round vs teardrop vs diamond &mdash; what shape does to your game &rarr;</p>
+            </Link>
+            <Link href="/search" className="block border border-stone-700 rounded-lg p-4 hover:border-padel-green/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-stone-500">DIRECTORY</span>
               <h3 className="font-semibold text-white mt-1">Find a Court Near You</h3>
               <p className="text-sm text-stone-400 mt-1">Search 350+ padel clubs across the US &rarr;</p>
             </Link>
-            <Link href="/blog/best-padel-clubs-miami" className="block border border-stone-700 rounded-lg p-4 hover:border-emerald-500/50 transition-colors">
+            <Link href="/blog/best-padel-clubs-miami" className="block border border-stone-700 rounded-lg p-4 hover:border-padel-green/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-stone-500">CITY GUIDE</span>
               <h3 className="font-semibold text-white mt-1">Best Clubs in Miami</h3>
               <p className="text-sm text-stone-400 mt-1">29+ clubs reviewed &mdash; the US padel capital &rarr;</p>

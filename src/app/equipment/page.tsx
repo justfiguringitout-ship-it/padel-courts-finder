@@ -110,9 +110,12 @@ export default function EquipmentPage() {
         <div className="max-w-4xl mx-auto mt-12 border-t pt-8">
           <h2 className="text-lg font-semibold mb-4">Related</h2>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <Link href="/blog/padel-racket-shapes-explained" className="text-primary hover:underline">Racket Shapes Explained</Link>
             <Link href="/blog/best-padel-rackets-beginners" className="text-primary hover:underline">Best Beginner Rackets (2026)</Link>
             <Link href="/blog/best-padel-rackets-intermediate" className="text-primary hover:underline">Best Intermediate Rackets (2026)</Link>
             <Link href="/blog/best-padel-rackets-2026" className="text-primary hover:underline">Best Pro Rackets (2026)</Link>
+            <Link href="/blog/best-padel-rackets-power" className="text-primary hover:underline">Best Power Rackets</Link>
+            <Link href="/blog/best-padel-rackets-control" className="text-primary hover:underline">Best Control Rackets</Link>
             <Link href="/how-to-play" className="text-primary hover:underline">How to Play</Link>
             <Link href="/search" className="text-primary hover:underline">Find Courts</Link>
           </div>

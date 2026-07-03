@@ -232,6 +232,38 @@ const blogPosts: BlogPost[] = [
   },
   // Equipment Buying Guides
   {
+    slug: 'padel-racket-shapes-explained',
+    title: 'Padel Racket Shapes Explained: Round vs Teardrop vs Diamond',
+    category: 'equipment',
+    excerpt: 'The one spec that matters more than price or brand — what each shape does to your sweet spot, balance, and power, and how to pick yours in 30 seconds.',
+    date: '2026-07-03',
+    readTime: '7 min read',
+    imageAlt: 'Padel racket shapes compared: round, teardrop, and diamond',
+    courtSlug: ''
+  },
+  {
+    slug: 'best-padel-rackets-power',
+    title: 'Best Power Padel Rackets (2026) — Top 5 for Attacking Players',
+    category: 'equipment',
+    excerpt: 'The 5 hardest-hitting rackets from our testing, ranked by power score. Diamond and hard-teardrop frames for players who finish points overhead.',
+    date: '2026-07-03',
+    readTime: '9 min read',
+    imageAlt: 'Best power padel rackets 2026',
+    courtSlug: '',
+    priceRange: '$230–$320'
+  },
+  {
+    slug: 'best-padel-rackets-control',
+    title: 'Best Control Padel Rackets (2026) — Top 5 for Precision & Comfort',
+    category: 'equipment',
+    excerpt: 'The 5 most precise, arm-friendly rackets from our testing, ranked by control and comfort scores — from an $89 starter to a $272 flagship.',
+    date: '2026-07-03',
+    readTime: '9 min read',
+    imageAlt: 'Best control padel rackets 2026',
+    courtSlug: '',
+    priceRange: '$89–$272'
+  },
+  {
     slug: 'padel-gifts-mothers-day-2026',
     title: 'Best Padel Gifts for Mom (2026) — 12 Ideas She\'ll Actually Use',
     category: 'equipment',
