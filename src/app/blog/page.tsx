@@ -264,6 +264,100 @@ const blogPosts: BlogPost[] = [
     priceRange: '$89–$272'
   },
   {
+    slug: 'best-padel-shoes',
+    title: 'Best Padel Shoes (2026): What to Look For + Our Picks',
+    category: 'equipment',
+    excerpt: 'Running shoes are the #1 gear mistake in padel. What actually matters in a padel shoe — outsole, lateral support, durability — plus our verified picks.',
+    date: '2026-07-04',
+    readTime: '6 min read',
+    imageAlt: 'Best padel shoes 2026',
+    courtSlug: '',
+    priceRange: '$89–$129'
+  },
+  {
+    slug: 'best-padel-balls',
+    title: 'Best Padel Balls (2026): How to Choose + Our Picks',
+    category: 'equipment',
+    excerpt: 'Padel balls are not tennis balls. Pressure explained, when to replace them, and the two balls that matter at US clubs.',
+    date: '2026-07-04',
+    readTime: '5 min read',
+    imageAlt: 'Best padel balls 2026',
+    courtSlug: '',
+    priceRange: '$13–$15'
+  },
+  {
+    slug: 'best-padel-bags',
+    title: 'Best Padel Bags (2026): Backpack or Tour Bag?',
+    category: 'equipment',
+    excerpt: 'The one decision that matters in padel bags — commuter backpack vs club tour bag — with our verified picks for each.',
+    date: '2026-07-04',
+    readTime: '5 min read',
+    imageAlt: 'Best padel bags 2026',
+    courtSlug: '',
+    priceRange: '$59–$99'
+  },
+  {
+    slug: 'padel-accessories',
+    title: 'The Best Padel Accessories Under $30 (2026)',
+    category: 'equipment',
+    excerpt: 'Overgrips, fresh balls, protector strips — the cheap stuff that actually changes how you play, and what to skip.',
+    date: '2026-07-04',
+    readTime: '5 min read',
+    imageAlt: 'Best padel accessories under $30',
+    courtSlug: '',
+    priceRange: '$13–$27'
+  },
+  {
+    slug: 'padel-bandeja-explained',
+    title: 'The Bandeja, Explained: Padel’s Most Important Shot',
+    category: 'how-to',
+    excerpt: 'The sliced overhead that keeps you at the net — what it is, how to hit it step by step, and how it differs from the víbora and smash.',
+    date: '2026-07-04',
+    readTime: '6 min read',
+    imageAlt: 'The bandeja padel shot explained',
+    courtSlug: ''
+  },
+  {
+    slug: 'padel-positioning-guide',
+    title: 'Padel Positioning 101: Where to Stand and Why',
+    category: 'how-to',
+    excerpt: 'Padel is a fight for three meters of court. The two positions, moving as a pair, left vs right side, and when to advance or retreat.',
+    date: '2026-07-04',
+    readTime: '7 min read',
+    imageAlt: 'Padel court positioning guide',
+    courtSlug: ''
+  },
+  {
+    slug: 'padel-patterns-beginners',
+    title: '7 Padel Patterns Every Beginner Should Know',
+    category: 'how-to',
+    excerpt: 'Chess has openings; padel has patterns. Serve + net rush, the lob, the chiquita, and four more — with the sequence, why it works, and the counter.',
+    date: '2026-07-04',
+    readTime: '7 min read',
+    imageAlt: 'Standard padel patterns and tactics for beginners',
+    courtSlug: ''
+  },
+  {
+    slug: 'how-to-choose-padel-club',
+    title: 'How to Choose a Padel Club: 9 Things to Check Before You Join',
+    category: 'how-to',
+    excerpt: 'The most expensive gear mistake in padel is the wrong club. Courts, pricing models, programming, and the vibe check — what to verify before committing.',
+    date: '2026-07-04',
+    readTime: '6 min read',
+    imageAlt: 'How to choose a padel club',
+    courtSlug: ''
+  },
+  {
+    slug: 'padel-court-cost',
+    title: 'How Much Does It Cost to Build a Padel Court? (2026)',
+    category: 'how-to',
+    excerpt: 'The real numbers behind building padel courts in the US — court kits, site prep, indoor vs outdoor, and the revenue math club owners run.',
+    date: '2026-07-04',
+    readTime: '8 min read',
+    imageAlt: 'Padel court construction cost breakdown',
+    courtSlug: ''
+  },
+  {
     slug: 'padel-gifts-mothers-day-2026',
     title: 'Best Padel Gifts for Mom (2026) — 12 Ideas She\'ll Actually Use',
     category: 'equipment',

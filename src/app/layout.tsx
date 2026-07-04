@@ -82,6 +82,7 @@ export default function RootLayout({
                   <li><Link href="/blog" className="hover:text-turf transition-colors">Blog</Link></li>
                   <li><Link href="/about" className="hover:text-turf transition-colors">About</Link></li>
                   <li><Link href="/list-your-court" className="hover:text-turf transition-colors">List Your Club</Link></li>
+                  <li><Link href="/advertise" className="hover:text-turf transition-colors">Advertise</Link></li>
                 </ul>
               </div>
               <div>

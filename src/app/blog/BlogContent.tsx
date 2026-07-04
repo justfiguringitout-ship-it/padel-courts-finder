@@ -117,6 +117,10 @@ export default function BlogContent({ posts }: { posts: BlogPostWithImage[] }) {
     'best-padel-rackets-power',
     'best-padel-rackets-control',
     'padel-racket-shapes-explained',
+    'best-padel-shoes',
+    'best-padel-balls',
+    'best-padel-bags',
+    'padel-accessories',
     'padel-gifts-mothers-day-2026',
     'padel-gifts-fathers-day-2026',
   ];
