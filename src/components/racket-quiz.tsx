@@ -129,17 +129,43 @@ export function RacketQuiz() {
     : null;
 
   return (
-    <div id="racket-quiz" className="grain relative bg-court text-white rounded-3xl overflow-hidden scroll-mt-24">
+    <div
+      id="racket-quiz"
+      className="grain relative bg-court text-white rounded-3xl overflow-hidden scroll-mt-24 border border-turf/30 shadow-[0_0_80px_-20px_rgba(74,222,128,0.4)]"
+    >
+      {/* Court-line motif */}
+      <svg
+        viewBox="0 0 400 760"
+        fill="none"
+        aria-hidden="true"
+        className="absolute -right-12 -top-40 h-[480px] w-auto text-turf/[0.07] rotate-12 pointer-events-none"
+      >
+        <rect x="20" y="20" width="360" height="720" rx="4" stroke="currentColor" strokeWidth="3" />
+        <line x1="20" y1="380" x2="380" y2="380" stroke="currentColor" strokeWidth="3" strokeDasharray="10 8" />
+        <line x1="20" y1="200" x2="380" y2="200" stroke="currentColor" strokeWidth="3" />
+        <line x1="20" y1="560" x2="380" y2="560" stroke="currentColor" strokeWidth="3" />
+        <line x1="200" y1="200" x2="200" y2="560" stroke="currentColor" strokeWidth="3" />
+      </svg>
+
+      {/* Corner badge */}
+      <div className="absolute top-5 right-5 md:top-6 md:right-6 flex items-center gap-2 rounded-full border border-turf/40 bg-turf/10 px-3 py-1.5">
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-turf opacity-60" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-turf" />
+        </span>
+        <span className="font-mono text-[11px] text-turf whitespace-nowrap">quiz · 20 sec</span>
+      </div>
+
       <div className="relative px-6 py-10 md:px-10 md:py-12">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-end justify-between gap-4 mb-8">
           <div>
             <p className="font-mono text-sm text-turf mb-2">racket finder</p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold">
-              {done ? "Your racket" : "Find your racket in 20 seconds"}
+            <h2 className="font-display text-3xl md:text-4xl font-bold">
+              {done ? "Your racket 🎾" : "Answer 3 questions. Get your racket."}
             </h2>
           </div>
           {/* Progress dots */}
-          <div className="flex gap-2" aria-hidden="true">
+          <div className="hidden sm:flex gap-2 pb-2" aria-hidden="true">
             {[0, 1, 2].map((i) => (
               <span
                 key={i}
@@ -153,18 +179,27 @@ export function RacketQuiz() {
 
         {!done && (
           <div key={step}>
-            <p className="text-lg text-white/80 mb-5">{QUESTIONS[step].prompt}</p>
+            <p className="text-xl md:text-2xl text-white/90 mb-6">
+              <span className="font-mono text-sm text-turf mr-3">{step + 1}/3</span>
+              {QUESTIONS[step].prompt}
+            </p>
             <div className="grid sm:grid-cols-3 gap-3">
               {QUESTIONS[step].options.map((opt) => (
                 <button
                   key={opt.value}
                   onClick={() => setAnswers([...answers, opt.value])}
-                  className="glass-panel group rounded-xl p-5 text-left transition-all duration-200 hover:bg-white/10 hover:-translate-y-0.5 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-turf/70"
+                  className="glass-panel group relative rounded-xl p-5 pr-10 text-left cursor-pointer transition-all duration-200 hover:bg-turf/10 hover:border-turf/50 hover:-translate-y-1 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-turf/70"
                 >
-                  <div className="font-display font-semibold group-hover:text-turf transition-colors">
+                  <div className="font-display text-lg font-semibold group-hover:text-turf transition-colors">
                     {opt.label}
                   </div>
                   <div className="text-sm text-white/50 mt-1">{opt.detail}</div>
+                  <span
+                    aria-hidden="true"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-turf opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
+                  >
+                    &rarr;
+                  </span>
                 </button>
               ))}
             </div>

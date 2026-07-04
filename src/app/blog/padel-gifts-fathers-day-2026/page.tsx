@@ -26,7 +26,7 @@ export default function FathersDay2026GiftGuidePage() {
     "description": "The best padel gifts for Father's Day 2026. From beginner rackets to premium bags, 12 curated picks at every budget — $14 to $399.",
     "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
     "datePublished": "2026-03-26T00:00:00Z",
-    "dateModified": "2026-03-26T00:00:00Z",
+    "dateModified": "2026-07-04T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -85,6 +85,193 @@ export default function FathersDay2026GiftGuidePage() {
     ]
   };
 
+  const itemListData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "HEAD Padel Pro S Balls",
+          "description": "The most popular padel ball in the US — consistent bounce, good durability.",
+          "offers": {
+            "@type": "Offer",
+            "price": "13.91",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "Wilson Pro Overgrip 12-Pack",
+          "description": "Tacky, absorbent, and the industry standard — a 12-pack lasts months.",
+          "offers": {
+            "@type": "Offer",
+            "price": "27.00",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "Babolat Court Lite Padel Backpack",
+          "description": "Purpose-built padel backpack with a racket compartment, shoe pocket, and room for everything else.",
+          "offers": {
+            "@type": "Offer",
+            "price": "59.95",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Product",
+          "name": "Babolat Contact Padel Racket",
+          "description": "The best beginner racket on the market — 340g, huge sweet spot, gentle on arms.",
+          "offers": {
+            "@type": "Offer",
+            "price": "89.95",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Product",
+          "name": "HEAD Men's Sprint Pro 4.0 Shoes",
+          "description": "Non-marking padel-approved court shoes built for lateral stability.",
+          "offers": {
+            "@type": "Offer",
+            "price": "129.00",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Product",
+          "name": "HEAD Extreme Evo Padel Racket",
+          "description": "Innegra vibration dampening — the most comfortable beginner racket we've tested.",
+          "offers": {
+            "@type": "Offer",
+            "price": "99.95",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Product",
+          "name": "HEAD Tour Racquet Bag M",
+          "description": "Holds up to 6 rackets with padded compartments, a separate shoe compartment, and an insulated drinks pocket.",
+          "offers": {
+            "@type": "Offer",
+            "price": "99.00",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0G8RX2824?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Product",
+          "name": "Wilson Optix V1 Padel Racket",
+          "description": "All-fiberglass build for the softest feel possible, with Sharp Hole Technology for spin.",
+          "offers": {
+            "@type": "Offer",
+            "price": "109.00",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "Product",
+          "name": "NOX Pro Cup USPA Edition",
+          "description": "Official USPA circuit racket with NOX's signature HR3 core for consistent feel.",
+          "offers": {
+            "@type": "Offer",
+            "price": "119.00",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "Product",
+          "name": "NOX ML10 Pro Cup Rough Surface",
+          "description": "Miguel Lamperti signature model — rough sand finish for topspin, low balance for net play.",
+          "offers": {
+            "@type": "Offer",
+            "price": "169.99",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "Product",
+          "name": "Bullpadel Neuron (Chingotto)",
+          "description": "Full carbon pro racket with a hybrid shape that forgives mistakes.",
+          "offers": {
+            "@type": "Offer",
+            "price": "236.00",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "Product",
+          "name": "Wilson Bela V3",
+          "description": "Fernando Belasteguín's signature racket — 24K carbon face, the finest weave in commercial padel.",
+          "offers": {
+            "@type": "Offer",
+            "price": "399.00",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20"
+          }
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-stone-50">
       <script
@@ -95,26 +282,31 @@ export default function FathersDay2026GiftGuidePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListData) }}
+      />
 
       {/* Amber Accent Stripe */}
-      <div className="h-1 bg-amber-500" />
+      <div className="h-1 bg-padel-green" />
 
       {/* Dark Hero */}
-      <header className="bg-stone-900">
+      <header className="grain bg-court">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
           <div className="mb-4">
-            <Link href="/blog" className="text-stone-400 hover:text-amber-400 text-sm">&larr; Back to Blog</Link>
+            <Link href="/blog" className="text-stone-400 hover:text-turf text-sm">&larr; Back to Blog</Link>
           </div>
-          <span className="inline-block bg-amber-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Equipment</span>
+          <span className="inline-block bg-padel-green text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Equipment</span>
           <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
             Best Padel Gifts for Dad (2026)
           </h1>
           <p className="text-stone-400 mt-3">Father&apos;s Day 2026 &mdash; curated picks for every budget</p>
           <div className="text-sm text-stone-500 mt-4">
-            <span>March 26, 2026</span>
+            <span>Updated July 4, 2026</span>
             <span className="mx-2">&bull;</span>
             <span>8 min read</span>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </header>
 
@@ -148,18 +340,18 @@ export default function FathersDay2026GiftGuidePage() {
               <div className="space-y-2.5">
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Splurge:</span>
-                  <span className="text-sm"><a href="#wilson-bela-v3" className="text-emerald-600 hover:underline font-medium">Wilson Bela V3</a> <span className="text-stone-500">&mdash; $399</span></span>
+                  <span className="text-sm"><a href="#wilson-bela-v3" className="text-padel-green hover:underline font-medium">Wilson Bela V3</a> <span className="text-stone-500">&mdash; $399</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Starter Set:</span>
-                  <span className="text-sm"><a href="#starter-set" className="text-emerald-600 hover:underline font-medium">Babolat Contact + balls + overgrip</a> <span className="text-stone-500">&mdash; ~$131 total</span></span>
+                  <span className="text-sm"><a href="#starter-set" className="text-padel-green hover:underline font-medium">Babolat Contact + balls + overgrip</a> <span className="text-stone-500">&mdash; ~$131 total</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Under $60:</span>
-                  <span className="text-sm"><a href="#babolat-backpack" className="text-emerald-600 hover:underline font-medium">Babolat Court Lite Backpack</a> <span className="text-stone-500">&mdash; $59.95</span></span>
+                  <span className="text-sm"><a href="#babolat-backpack" className="text-padel-green hover:underline font-medium">Babolat Court Lite Backpack</a> <span className="text-stone-500">&mdash; $59.95</span></span>
                 </div>
               </div>
-              <a href="#under-25" className="text-sm text-stone-500 hover:text-emerald-600 mt-3 inline-block">Browse all 12 picks &darr;</a>
+              <a href="#under-25" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Browse all 12 picks &darr;</a>
             </div>
 
             <div className="mt-6">
@@ -193,7 +385,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="HEAD Padel Pro S Balls"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -215,7 +407,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="Wilson Pro Overgrip 12-Pack"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -245,7 +437,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="Babolat Court Lite Backpack"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -258,7 +450,7 @@ export default function FathersDay2026GiftGuidePage() {
                     <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$89.95</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
-                    The <Link href="/blog/best-padel-rackets-beginners" className="text-emerald-600 hover:underline">best beginner racket on the market</Link>. 340g, huge sweet spot, gentle on arms. If he&apos;s just starting padel, this is the one &mdash; our #1 pick in our beginner racket guide.
+                    The <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">best beginner racket on the market</Link>. 340g, huge sweet spot, gentle on arms. If he&apos;s just starting padel, this is the one &mdash; our #1 pick in our beginner racket guide.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the beginner dad</p>
                   <TrackedLink
@@ -267,7 +459,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="Babolat Contact Racket"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -289,7 +481,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="HEAD Sprint Pro 4.0 Shoes"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -302,7 +494,7 @@ export default function FathersDay2026GiftGuidePage() {
         {/* White Section: Starter Set Callout */}
         <div className="bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            <div id="starter-set" className="border-l-4 border-emerald-500 bg-emerald-50/80 rounded-r-lg p-5 sm:p-6">
+            <div id="starter-set" className="border-l-4 border-padel-green bg-padel-green/5 rounded-r-lg p-5 sm:p-6">
               <h3 className="font-bold text-foreground mb-4 text-lg">The Perfect Starter Set</h3>
               <div className="space-y-2 mb-4">
                 <div className="flex justify-between items-baseline">
@@ -317,7 +509,7 @@ export default function FathersDay2026GiftGuidePage() {
                   <span className="text-stone-700 text-sm">+ Wilson Pro Overgrip 12-pack</span>
                   <span className="text-stone-500 text-sm">$27.00</span>
                 </div>
-                <div className="border-t border-emerald-200 pt-2 mt-2">
+                <div className="border-t border-padel-green/20 pt-2 mt-2">
                   <div className="flex justify-between items-baseline">
                     <span className="text-foreground font-bold text-sm">Total</span>
                     <span className="text-foreground font-bold">~$131</span>
@@ -333,7 +525,7 @@ export default function FathersDay2026GiftGuidePage() {
                 productName="Padel Starter Set"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
               >
                 Shop the set on Amazon &rarr;
               </TrackedLink>
@@ -356,7 +548,7 @@ export default function FathersDay2026GiftGuidePage() {
                     <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$99.95</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
-                    Innegra vibration dampening protects arms and elbows &mdash; important for the dad who plays multiple times a week. The most comfortable beginner racket we&apos;ve tested, with the largest sweet spot in its category. Our <Link href="/blog/best-padel-rackets-beginners" className="text-emerald-600 hover:underline">#2 beginner pick</Link>.
+                    Innegra vibration dampening protects arms and elbows &mdash; important for the dad who plays multiple times a week. The most comfortable beginner racket we&apos;ve tested, with the largest sweet spot in its category. Our <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">#2 beginner pick</Link>.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the dad who values comfort above all</p>
                   <TrackedLink
@@ -365,7 +557,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="HEAD Extreme Evo Racket"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -387,7 +579,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="HEAD Tour Bag M"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -409,7 +601,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="Wilson Optix V1 Racket"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -431,7 +623,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="NOX Pro Cup USPA Edition"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -456,7 +648,7 @@ export default function FathersDay2026GiftGuidePage() {
                     <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$169.99</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
-                    For the <Link href="/blog/best-padel-rackets-intermediate" className="text-emerald-600 hover:underline">intermediate player</Link>. Rough sand finish for topspin, low balance for net play. Miguel Lamperti signature model &mdash; one of the most popular rackets in professional padel.
+                    For the <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate player</Link>. Rough sand finish for topspin, low balance for net play. Miguel Lamperti signature model &mdash; one of the most popular rackets in professional padel.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the intermediate dad who wants more spin</p>
                   <TrackedLink
@@ -465,7 +657,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="NOX ML10 Pro Cup"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -487,15 +679,15 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="Bullpadel Neuron"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-amber-500 text-white font-medium text-sm rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
                 </div>
 
                 {/* 12. Wilson Bela V3 */}
-                <div id="wilson-bela-v3" className="relative bg-white border-2 border-amber-400 rounded-xl p-6 md:p-8 shadow-sm">
-                  <div className="absolute -top-3 -left-2 bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-md -rotate-3 shadow-md z-10">
+                <div id="wilson-bela-v3" className="relative bg-white border-2 border-padel-green rounded-xl p-6 md:p-8 shadow-sm">
+                  <div className="absolute -top-3 -left-2 bg-padel-green text-white text-xs font-bold px-3 py-1.5 rounded-md -rotate-3 shadow-md z-10">
                     TOP PICK
                   </div>
 
@@ -504,7 +696,7 @@ export default function FathersDay2026GiftGuidePage() {
                     <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$399.00</span>
                   </div>
                   <p className="text-stone-600 leading-relaxed mb-3">
-                    The ultimate. 24K carbon face &mdash; the finest weave in commercial padel. Fernando Belastegu&iacute;n&apos;s signature racket, designed with the greatest player in the sport&apos;s history. This is the gift he&apos;d never buy himself but would absolutely love. Featured in our <Link href="/blog/best-padel-rackets-2026" className="text-emerald-600 hover:underline">best pro rackets guide</Link>.
+                    The ultimate. 24K carbon face &mdash; the finest weave in commercial padel. Fernando Belastegu&iacute;n&apos;s signature racket, designed with the greatest player in the sport&apos;s history. This is the gift he&apos;d never buy himself but would absolutely love. Featured in our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets guide</Link>.
                   </p>
                   <p className="text-xs text-stone-500 mb-4">Great for: the dad who wants the absolute best</p>
                   <TrackedLink
@@ -513,7 +705,7 @@ export default function FathersDay2026GiftGuidePage() {
                     productName="Wilson Bela V3"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 hover:shadow-md transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
                   >
                     Shop on Amazon &rarr;
                   </TrackedLink>
@@ -527,11 +719,11 @@ export default function FathersDay2026GiftGuidePage() {
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What&apos;s a good padel gift for a beginner?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">A round-shape beginner racket like the <TrackedLink href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" type="affiliate" productName="Babolat Contact Racket" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Babolat Contact</TrackedLink> ($90) plus a can of balls and an overgrip &mdash; total ~$130. That covers everything he needs for his first session. See our full <Link href="/blog/best-padel-rackets-beginners" className="text-emerald-600 hover:underline">beginner racket guide</Link> for more options.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">A round-shape beginner racket like the <TrackedLink href="https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" type="affiliate" productName="Babolat Contact Racket" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline">Babolat Contact</TrackedLink> ($90) plus a can of balls and an overgrip &mdash; total ~$130. That covers everything he needs for his first session. See our full <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">beginner racket guide</Link> for more options.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">How much should I spend on a padel racket as a gift?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">$80&ndash;130 for a beginner, $170&ndash;280 for an <Link href="/blog/best-padel-rackets-intermediate" className="text-emerald-600 hover:underline">intermediate player</Link>, $250&ndash;400 for advanced. If you&apos;re unsure of his skill level, a beginner racket in the $90&ndash;120 range is always a safe and appreciated choice.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">$80&ndash;130 for a beginner, $170&ndash;280 for an <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate player</Link>, $250&ndash;400 for advanced. If you&apos;re unsure of his skill level, a beginner racket in the $90&ndash;120 range is always a safe and appreciated choice.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What size padel racket should I get?</h3>
@@ -548,23 +740,23 @@ export default function FathersDay2026GiftGuidePage() {
       </article>
 
       {/* Dark Keep Reading / CTA Section */}
-      <div className="bg-stone-900">
+      <div className="grain bg-court">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <h2 className="text-lg font-bold text-white mb-2">Find a Court for Dad</h2>
           <p className="text-stone-400 text-sm mb-5">Gift the gear, then book the court.</p>
           <div className="grid sm:grid-cols-3 gap-4">
-            <Link href="/search" className="block border border-stone-700 rounded-lg p-4 hover:border-emerald-500/50 transition-colors">
+            <Link href="/search" className="block border border-stone-700 rounded-lg p-4 hover:border-padel-green/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-stone-500">DIRECTORY</span>
               <h3 className="font-semibold text-white mt-1">Find Courts Near You</h3>
               <p className="text-sm text-stone-400 mt-1">313+ padel clubs across the US &rarr;</p>
             </Link>
-            <Link href="/how-to-play" className="block border border-stone-700 rounded-lg p-4 hover:border-emerald-500/50 transition-colors">
+            <Link href="/how-to-play" className="block border border-stone-700 rounded-lg p-4 hover:border-padel-green/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-stone-500">GUIDE</span>
               <h3 className="font-semibold text-white mt-1">How to Play Padel</h3>
               <p className="text-sm text-stone-400 mt-1">Perfect if he&apos;s brand new &rarr;</p>
             </Link>
-            <Link href="/blog/best-padel-rackets-beginners" className="block border border-stone-700 rounded-lg p-4 hover:border-amber-500/50 transition-colors">
-              <span className="text-xs font-medium uppercase tracking-wider text-amber-500">EQUIPMENT</span>
+            <Link href="/blog/best-padel-rackets-beginners" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
+              <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Beginner Rackets</h3>
               <p className="text-sm text-stone-400 mt-1">Deep-dive reviews of our top 5 &rarr;</p>
             </Link>

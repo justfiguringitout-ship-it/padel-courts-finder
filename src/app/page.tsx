@@ -441,6 +441,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== Racket quiz banner ===== */}
+      <section className="container mx-auto px-4 pb-16 md:pb-24">
+        <Link
+          href="/equipment#racket-quiz"
+          className="reveal-up group relative block bg-padel-green text-white rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-padel-green/30 hover:-translate-y-0.5"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/10" aria-hidden="true" />
+          <div className="relative px-6 py-10 md:px-14 md:py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <p className="font-mono text-sm text-white/70 mb-3">interactive · 20 seconds</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold">
+                Not sure which racket? Take the quiz.
+              </h2>
+              <p className="text-white/80 mt-2 max-w-xl">
+                Three questions, one honest recommendation from the rackets we&apos;ve actually rated.
+              </p>
+            </div>
+            <span className="shrink-0 inline-flex items-center gap-2 rounded-xl bg-white text-padel-green-dark font-semibold px-7 py-3.5 shadow-lg transition-all group-hover:gap-3">
+              Find my racket
+              <ArrowRight className="w-4 h-4" />
+            </span>
+          </div>
+        </Link>
+      </section>
+
       {/* ===== Club owner CTA ===== */}
       <section className="container mx-auto px-4 pb-16 md:pb-24">
         <div className="reveal-up grain relative bg-court text-white rounded-3xl overflow-hidden">
