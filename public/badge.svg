@@ -1,0 +1,14 @@
+<svg width="240" height="64" viewBox="0 0 240 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Featured on Padel Courts Finder">
+  <rect width="240" height="64" rx="14" fill="#0e1626"/>
+  <rect x="0.5" y="0.5" width="239" height="63" rx="13.5" stroke="#4ADE80" stroke-opacity="0.35"/>
+  <!-- Court mark -->
+  <rect x="16" y="14" width="26" height="36" rx="3" stroke="white" stroke-opacity="0.4" stroke-width="1.6"/>
+  <line x1="16" y1="32" x2="42" y2="32" stroke="white" stroke-opacity="0.4" stroke-width="1.6" stroke-dasharray="2.5 2.5"/>
+  <line x1="29" y1="19" x2="29" y2="27.5" stroke="white" stroke-opacity="0.4" stroke-width="1.6"/>
+  <line x1="29" y1="36.5" x2="29" y2="45" stroke="white" stroke-opacity="0.4" stroke-width="1.6"/>
+  <circle cx="36.5" cy="23" r="6" fill="#4ADE80" fill-opacity="0.25"/>
+  <circle cx="36.5" cy="23" r="3.4" fill="#4ADE80"/>
+  <!-- Text -->
+  <text x="56" y="27" font-family="'SF Mono', 'Menlo', 'Consolas', monospace" font-size="9" letter-spacing="1.5" fill="#4ADE80">FEATURED ON</text>
+  <text x="56" y="46" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Padel Courts Finder</text>
+</svg>

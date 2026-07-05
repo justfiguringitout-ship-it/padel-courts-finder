@@ -83,11 +83,13 @@ export default function RootLayout({
                   <li><Link href="/about" className="hover:text-turf transition-colors">About</Link></li>
                   <li><Link href="/list-your-court" className="hover:text-turf transition-colors">List Your Club</Link></li>
                   <li><Link href="/advertise" className="hover:text-turf transition-colors">Advertise</Link></li>
+                  <li><Link href="/badge" className="hover:text-turf transition-colors">Club Badge</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-semibold text-white mb-3">Resources</h3>
                 <ul className="space-y-2 text-sm">
+                  <li><Link href="/state-of-us-padel-2026" className="hover:text-turf transition-colors">State of US Padel 2026</Link></li>
                   <li><Link href="/rules" className="hover:text-turf transition-colors">Padel Rules</Link></li>
                   <li><Link href="/how-to-play" className="hover:text-turf transition-colors">How to Play</Link></li>
                   <li><Link href="/get-started" className="hover:text-turf transition-colors">Get Started</Link></li>

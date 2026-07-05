@@ -189,7 +189,10 @@ export default function HomePage() {
             </div>
             <CourtsConstellation />
             <p className="font-mono text-xs text-white/30 mt-6">
-              continental u.s. · positions approximate at national scale
+              continental u.s. · positions approximate at national scale ·{" "}
+              <Link href="/state-of-us-padel-2026" className="text-turf/70 hover:text-turf transition-colors">
+                see the full report →
+              </Link>
             </p>
           </div>
         </section>
