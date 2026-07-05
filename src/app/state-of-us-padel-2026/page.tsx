@@ -182,6 +182,45 @@ export default function StateOfPadelPage() {
       </header>
 
       <article>
+        {/* The sport, the boom */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-6">
+            The sport eating the world, arriving in America
+          </h2>
+          <div className="space-y-4 text-stone-700 leading-relaxed max-w-3xl">
+            <p>
+              Padel — the enclosed-court racquet sport that plays like tennis crossed with
+              squash, always in doubles, with walls in play — has spent a decade becoming
+              the sport everyone&apos;s uncle in Madrid already plays and everyone&apos;s gym
+              buddy in Miami just discovered. Playtomic&apos;s Global Padel Report 2026 counts
+              roughly <strong>58,300 courts, nearly 20,000 clubs, and 19.4 million players
+              worldwide</strong>, with close to 5,000 new clubs and 8,000 new courts added in
+              2025 alone — the numbers behind padel&apos;s standing claim to being the world&apos;s
+              fastest-growing sport.
+            </p>
+            <p>
+              The same report projects <strong>91,000 courts globally by 2028</strong> and
+              singles out the United States as one of the sport&apos;s biggest long-term growth
+              markets. The money agrees: the global padel equipment market has grown at a
+              roughly 34% compound annual rate since 2019 per Playtomic&apos;s data, and the
+              US-based Pro Padel League raised $15 million this year to build out its league
+              calendar. Clubs themselves are evolving past courts-in-a-warehouse into what the
+              industry calls &quot;third spaces&quot; — social clubs with coaching, cafes,
+              recovery rooms, and leagues attached to the glass.
+            </p>
+            <p>
+              Here&apos;s the runway math that makes operators salivate: our directory counts{" "}
+              <strong>{totalCourts.toLocaleString()} padel courts in the continental US</strong> —
+              about 2% of the world&apos;s supply, in the country with the world&apos;s largest
+              sports economy. Industry estimates put American players around half a million by
+              the end of 2025, up from fewer than 100,000 in 2023, and the US Padel Association
+              projects 30,000 courts and 10 million players by 2030. Whether or not that
+              projection lands, the direction is unambiguous — and the state-by-state data
+              below shows exactly where it&apos;s happening.
+            </p>
+          </div>
+        </section>
+
         {/* Map */}
         <section className="grain bg-court text-white border-t border-white/[0.06]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
@@ -200,10 +239,23 @@ export default function StateOfPadelPage() {
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-2">
             Where the clubs are
           </h2>
-          <p className="text-stone-500 mb-8">
-            Florida and Texas account for {Math.round(((sortedStates[0]?.courtCount || 0) + (sortedStates[1]?.courtCount || 0)) / stats.totalCourts * 100)}% of
-            all US padel clubs, but the sport now reaches {stats.totalStates} states.
-          </p>
+          <div className="space-y-4 text-stone-700 leading-relaxed max-w-3xl mb-8">
+            <p>
+              Florida and Texas account for {Math.round(((sortedStates[0]?.courtCount || 0) + (sortedStates[1]?.courtCount || 0)) / stats.totalCourts * 100)}% of
+              all US padel clubs, and the concentration isn&apos;t an accident. Both states pair
+              year-round outdoor weather with large Latin American and European communities who
+              arrived already playing — Miami didn&apos;t need to be taught padel, it needed
+              courts. Florida&apos;s {sortedStates[0]?.courtCount} clubs make it, on its own, one
+              of the densest padel markets outside Europe and Latin America.
+            </p>
+            <p>
+              The more interesting story is the long tail: {stats.totalStates} states now have
+              at least one club, and the fastest relative growth is happening in places with no
+              padel heritage at all — Utah, Ohio, the Carolinas — where a single ambitious
+              operator can own an entire metro. That&apos;s the American pattern: the sport
+              spreads club by club, not federation-down.
+            </p>
+          </div>
           <div className="space-y-3">
             {topStates.map((s) => (
               <div key={s.code} className="flex items-center gap-4">
@@ -264,12 +316,27 @@ export default function StateOfPadelPage() {
                 </p>
               </div>
             </div>
-            <p className="text-stone-600 leading-relaxed max-w-3xl">
-              The typical American padel club is a small, purpose-built facility rather than a
-              bolt-on to an existing racquet club — and the indoor share reflects how much of
-              the sport&apos;s growth is happening in year-round climate-controlled venues rather
-              than the outdoor courts common in Spain and Latin America.
-            </p>
+            <div className="space-y-4 text-stone-600 leading-relaxed max-w-3xl">
+              <p>
+                The typical American padel club is a small, purpose-built facility rather than a
+                bolt-on to an existing racquet club — and the indoor share reflects how much of
+                the sport&apos;s growth is happening in year-round climate-controlled venues rather
+                than the outdoor courts common in Spain and Latin America. Indoor-first is a
+                distinctly American adaptation: it makes padel viable in Chicago winters and
+                Houston summers alike, and it turns clubs into the year-round social businesses —
+                cafes, lounges, leagues, recovery rooms — that the industry&apos;s
+                &quot;third space&quot; playbook calls for.
+              </p>
+              <p>
+                It also explains the economics. An indoor club is a real-estate play as much as a
+                sports one — which is why the operators expanding fastest are chains signing
+                warehouse leases, and why our{" "}
+                <Link href="/blog/padel-court-cost" className="text-padel-green hover:underline">
+                  construction cost data
+                </Link>{" "}
+                shows the building, not the court kit, dominating indoor budgets.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -278,10 +345,21 @@ export default function StateOfPadelPage() {
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-2">
             The pipeline: {comingSoon.length} clubs on the way
           </h2>
-          <p className="text-stone-500 mb-6 max-w-3xl">
-            Announced or under-construction clubs our directory currently tracks span{" "}
-            {comingSoonStates.length} states — a leading indicator of where the next wave lands.
-          </p>
+          <div className="space-y-4 text-stone-700 leading-relaxed max-w-3xl mb-6">
+            <p>
+              Announced or under-construction clubs our directory currently tracks span{" "}
+              {comingSoonStates.length} states — a leading indicator of where the next wave
+              lands. Read the list below like a heat map of operator confidence: multiple
+              pipeline clubs in a single metro means someone has run the numbers on demand
+              and liked them.
+            </p>
+            <p>
+              The pipeline also shows the market maturing from independents to chains —
+              multi-location operators expanding along the Sun Belt and into second-tier
+              metros, following the playbook Playtomic&apos;s report describes in Europe:
+              prove the club model once, then replicate it regionally.
+            </p>
+          </div>
           <div className="flex flex-wrap gap-2">
             {comingSoon.map((c) => (
               <Link
@@ -301,10 +379,20 @@ export default function StateOfPadelPage() {
             <h2 className="font-display text-2xl md:text-3xl font-bold mb-2">
               The padel deserts
             </h2>
-            <p className="text-stone-500 mb-8 max-w-3xl">
-              Major US cities with no listed club within 25 miles of downtown — the clearest
-              map of where the opportunity still sits for operators and investors.
-            </p>
+            <div className="space-y-4 text-stone-700 leading-relaxed max-w-3xl mb-8">
+              <p>
+                Major US cities with no listed club within 25 miles of downtown — the clearest
+                map of where the opportunity still sits for operators and investors. These are
+                not small towns: each is a top-40 metro where, today, a padel-curious player has
+                nowhere to play without a road trip.
+              </p>
+              <p>
+                If the USPA&apos;s 30,000-courts-by-2030 projection is even half right, most of
+                these cities get their first club within a couple of years — and in every market
+                the sport has entered so far, the first mover became the community&apos;s default
+                home court.
+              </p>
+            </div>
             {deserts.length > 0 ? (
               <div className="overflow-x-auto rounded-xl border border-stone-200">
                 <table className="w-full text-sm bg-white">
@@ -359,11 +447,17 @@ export default function StateOfPadelPage() {
                 point is unknown for a club (court counts, indoor/outdoor type), it is
                 excluded from that statistic rather than estimated.
               </p>
-              <p className="text-white/60 leading-relaxed mb-8 max-w-3xl">
+              <p className="text-white/60 leading-relaxed mb-4 max-w-3xl">
                 Journalists and researchers are welcome to cite any figure with attribution
                 and a link: <span className="text-white">&quot;Source: Padel Courts Finder, State of US
-                Padel 2026&quot;</span>. For custom cuts of the data, interviews, or the full dataset,
-                get in touch.
+                Padel 2026&quot;</span>. Global figures referenced above come from Playtomic&apos;s
+                Global Padel Report 2026 and US Padel Association projections, credited inline.
+              </p>
+              <p className="text-white/60 leading-relaxed mb-8 max-w-3xl">
+                <span className="text-white font-semibold">Media:</span> you&apos;re welcome to run
+                excerpts or a story built on this report with attribution and a link back. For
+                custom cuts of the data, quotes, interviews, or the full dataset, get in touch —
+                we typically turn press requests around same-day.
               </p>
               <Link
                 href="/advertise#partner-form"
