@@ -273,6 +273,7 @@ export default async function AdvertisePage({
                       <option value="Featured club listing">Featured club listing</option>
                       <option value="Gear / brand partnership">Gear / brand partnership</option>
                       <option value="B2B sponsorship">B2B sponsorship (courts, software, services)</option>
+                      <option value="Press / data inquiry">Press / data inquiry (State of US Padel)</option>
                       <option value="Something else">Something else</option>
                     </select>
                   </div>
