@@ -223,21 +223,21 @@ export default function PhiladelphiaBestClubsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen bg-stone-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
+      <section className="grain bg-court text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-blue-200 hover:text-white">← Back to Blog</Link>
+            <Link href="/blog" className="text-stone-400 hover:text-turf">← Back to Blog</Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Best Padel Clubs in Philadelphia & Pennsylvania (2026)
           </h1>
-          <div className="flex flex-wrap gap-4 text-blue-100 text-lg">
+          <div className="flex flex-wrap gap-4 text-stone-400 text-lg">
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>Philadelphia & Pennsylvania</span>
@@ -251,6 +251,7 @@ export default function PhiladelphiaBestClubsPage() {
               <span>Updated March 2026</span>
             </div>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </section>
 
@@ -258,19 +259,19 @@ export default function PhiladelphiaBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-blue-600">5</div>
+              <div className="text-3xl font-bold text-padel-green">5</div>
               <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">17</div>
+              <div className="text-3xl font-bold text-padel-green">17</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">$20-60</div>
+              <div className="text-3xl font-bold text-padel-green">$20-60</div>
               <div className="text-sm text-stone-600">Per Hour Range</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">7</div>
+              <div className="text-3xl font-bold text-padel-green">7</div>
               <div className="text-sm text-stone-600">Cities</div>
             </div>
           </div>
@@ -283,39 +284,39 @@ export default function PhiladelphiaBestClubsPage() {
             Pennsylvania&apos;s Padel Scene Arrives
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Pennsylvania has established a solid padel foundation with 5 open clubs and 17 courts stretching from Philadelphia to Pittsburgh. The Philly metro area leads with <Link href="/courts/ballers-philly" className="text-blue-600 hover:underline">Ballers</Link> in a historic Battery building, <Link href="/courts/padelphia" className="text-blue-600 hover:underline">PADELphia</Link> with AI training tech, and <Link href="/courts/viva-padel-flourtown" className="text-blue-600 hover:underline">VIVA Padel</Link> offering 5 courts -- the most at any PA location.
+            Pennsylvania has established a solid padel foundation with 5 open clubs and 17 courts stretching from Philadelphia to Pittsburgh. The Philly metro area leads with <Link href="/courts/ballers-philly" className="text-padel-green hover:underline">Ballers</Link> in a historic Battery building, <Link href="/courts/padelphia" className="text-padel-green hover:underline">PADELphia</Link> with AI training tech, and <Link href="/courts/viva-padel-flourtown" className="text-padel-green hover:underline">VIVA Padel</Link> offering 5 courts -- the most at any PA location.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            On the western side, <Link href="/courts/matts-pickle-and-padel" className="text-blue-600 hover:underline">Matt&apos;s Pickle and Padel</Link> in Pittsburgh has earned a perfect 4.9 Google rating. And with <Link href="/courts/oh-padel" className="text-blue-600 hover:underline">OH! Padel</Link> coming soon to the Main Line in Malvern, PA&apos;s padel scene is only growing. See all courts on our <Link href="/pennsylvania" className="text-blue-600 hover:underline">Pennsylvania page</Link>.
+            On the western side, <Link href="/courts/matts-pickle-and-padel" className="text-padel-green hover:underline">Matt&apos;s Pickle and Padel</Link> in Pittsburgh has earned a perfect 4.9 Google rating. And with <Link href="/courts/oh-padel" className="text-padel-green hover:underline">OH! Padel</Link> coming soon to the Main Line in Malvern, PA&apos;s padel scene is only growing. See all courts on our <Link href="/pennsylvania" className="text-padel-green hover:underline">Pennsylvania page</Link>.
           </p>
         </div>
 
-        <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
+        <div className="bg-padel-green/5 border-2 border-padel-green/20 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/ballers-philly" className="text-blue-600 hover:underline">Ballers Philly</Link> (historic venue, full social club)</p>
-            <p><strong>Best Tech:</strong> <Link href="/courts/padelphia" className="text-blue-600 hover:underline">PADELphia</Link> (AI training, court cameras)</p>
-            <p><strong>Most Courts:</strong> <Link href="/courts/viva-padel-flourtown" className="text-blue-600 hover:underline">VIVA Padel</Link> (5 courts, best value)</p>
-            <p><strong>Best in Pittsburgh:</strong> <Link href="/courts/matts-pickle-and-padel" className="text-blue-600 hover:underline">Matt&apos;s Pickle and Padel</Link> (4.9 rating)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/ballers-philly" className="text-padel-green hover:underline">Ballers Philly</Link> (historic venue, full social club)</p>
+            <p><strong>Best Tech:</strong> <Link href="/courts/padelphia" className="text-padel-green hover:underline">PADELphia</Link> (AI training, court cameras)</p>
+            <p><strong>Most Courts:</strong> <Link href="/courts/viva-padel-flourtown" className="text-padel-green hover:underline">VIVA Padel</Link> (5 courts, best value)</p>
+            <p><strong>Best in Pittsburgh:</strong> <Link href="/courts/matts-pickle-and-padel" className="text-padel-green hover:underline">Matt&apos;s Pickle and Padel</Link> (4.9 rating)</p>
           </div>
         </div>
 
         <div className="space-y-12">
           {clubs.map(club => (
-            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-blue-600 bg-white shadow-lg rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-padel-green bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="grain bg-court text-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
                     <h3 className="text-3xl font-bold mb-2">
-                      <Link href={`/courts/${club.slug}`} className="hover:text-blue-200 transition-colors">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-turf transition-colors">
                         {club.name}
                       </Link>
                     </h3>
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-blue-300'}`} />
+                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-stone-500'}`} />
                         ))}
                       </div>
                       <span className="text-xl font-bold">{club.score}/100</span>
@@ -323,7 +324,7 @@ export default function PhiladelphiaBestClubsPage() {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">{club.price}</div>
-                    <div className="text-sm text-blue-100">Price Range</div>
+                    <div className="text-sm text-stone-400">Price Range</div>
                   </div>
                 </div>
               </div>
@@ -331,17 +332,17 @@ export default function PhiladelphiaBestClubsPage() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2 text-stone-700">
-                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-padel-green flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-stone-700">
-                    <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-padel-green flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">{club.website}</a>
+                      <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">{club.website}</a>
                     </div>
                   )}
                 </div>
@@ -353,7 +354,7 @@ export default function PhiladelphiaBestClubsPage() {
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-2 text-stone-700">
-                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="text-padel-green font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -364,7 +365,7 @@ export default function PhiladelphiaBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
-                      <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">{program}</span>
+                      <span key={index} className="px-3 py-1 bg-stone-100 text-stone-700 rounded-full text-sm">{program}</span>
                     ))}
                   </div>
                 </div>
@@ -396,14 +397,14 @@ export default function PhiladelphiaBestClubsPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 text-center mt-12">
+        <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in Pennsylvania?</h2>
-          <p className="text-xl text-green-100 mb-6">Find all Pennsylvania padel courts from Philly to Pittsburgh</p>
+          <p className="text-xl text-stone-400 mb-6">Find all Pennsylvania padel courts from Philly to Pittsburgh</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/pennsylvania" className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+            <Link href="/pennsylvania" className="inline-block bg-white text-padel-green-dark px-8 py-4 rounded-lg font-semibold hover:bg-stone-100 transition-colors">
               View PA Courts
             </Link>
-            <Link href="/pennsylvania/philadelphia" className="inline-block bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors">
+            <Link href="/pennsylvania/philadelphia" className="inline-block bg-padel-green text-white px-8 py-4 rounded-lg font-semibold hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-colors">
               Philadelphia Courts
             </Link>
           </div>

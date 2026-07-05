@@ -160,6 +160,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'padel-gifts-mothers-day-2026',
     'padel-gifts-fathers-day-2026',
     'padel-vs-pickleball',
+    'nox-at10-genius-18k-review',
+    'head-extreme-pro-review',
+    'wilson-bela-v3-review',
+    'babolat-technical-viper-review',
+    'nox-ml10-pro-cup-review',
+    'adidas-metalbone-hrd-review',
+    'babolat-contact-review',
+    'wilson-blade-elite-v2-review',
+    'best-padel-clubs-brooklyn',
+    'best-padel-clubs-west-palm-beach',
+    'best-padel-clubs-boca-raton',
+    'best-padel-clubs-tucson',
+    'new-padel-clubs-july-2026',
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((slug) => ({

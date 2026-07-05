@@ -203,17 +203,17 @@ export default function SanDiegoBestClubsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-      <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-16">
+      <section className="grain bg-court text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-orange-200 hover:text-white">
+            <Link href="/blog" className="text-stone-400 hover:text-turf">
               ← Back to Blog
             </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Best Padel Clubs in San Diego (2026)
           </h1>
-          <div className="flex flex-wrap gap-4 text-orange-100 text-lg">
+          <div className="flex flex-wrap gap-4 text-stone-400 text-lg">
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>San Diego, CA</span>
@@ -227,6 +227,7 @@ export default function SanDiegoBestClubsPage() {
               <span>Updated March 2026</span>
             </div>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </section>
 
@@ -234,19 +235,19 @@ export default function SanDiegoBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-orange-600">4</div>
+              <div className="text-3xl font-bold text-padel-green">4</div>
               <div className="text-sm text-stone-600">Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-orange-600">22</div>
+              <div className="text-3xl font-bold text-padel-green">22</div>
               <div className="text-sm text-stone-600">Total Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-orange-600">$6-90</div>
+              <div className="text-3xl font-bold text-padel-green">$6-90</div>
               <div className="text-sm text-stone-600">Price Range</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-orange-600">Year-Round</div>
+              <div className="text-3xl font-bold text-padel-green">Year-Round</div>
               <div className="text-sm text-stone-600">Perfect Weather</div>
             </div>
           </div>
@@ -262,39 +263,39 @@ export default function SanDiegoBestClubsPage() {
             San Diego&apos;s near-perfect climate and active outdoor culture have made it one of the best cities for padel on the West Coast. With 4 facilities offering 22 courts across the metro area, players enjoy everything from premium membership clubs to affordable per-person play, all under blue skies virtually every day of the year.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            The scene is anchored by <Link href="/courts/padel-n9ne" className="text-orange-600 hover:underline">Padel N9NE</Link> in Sorrento Valley, which hosts USPA and FIP tournaments on 8 courts, while <Link href="/courts/kingdom-of-padel" className="text-orange-600 hover:underline">Kingdom of Padel</Link> delivers the most social experience with a sports bar, golf simulators, and indoor/outdoor crystal courts.
+            The scene is anchored by <Link href="/courts/padel-n9ne" className="text-padel-green hover:underline">Padel N9NE</Link> in Sorrento Valley, which hosts USPA and FIP tournaments on 8 courts, while <Link href="/courts/kingdom-of-padel" className="text-padel-green hover:underline">Kingdom of Padel</Link> delivers the most social experience with a sports bar, golf simulators, and indoor/outdoor crystal courts.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            Whether you are a seasoned competitor looking for tournament-level play or a beginner wanting affordable introductory sessions, San Diego has you covered. Browse all options on our <Link href="/california/san-diego" className="text-orange-600 hover:underline">San Diego courts page</Link> or explore the full <Link href="/california" className="text-orange-600 hover:underline">California padel directory</Link>.
+            Whether you are a seasoned competitor looking for tournament-level play or a beginner wanting affordable introductory sessions, San Diego has you covered. Browse all options on our <Link href="/california/san-diego" className="text-padel-green hover:underline">San Diego courts page</Link> or explore the full <Link href="/california" className="text-padel-green hover:underline">California padel directory</Link>.
           </p>
         </div>
 
         <div className="bg-orange-50 border-2 border-orange-200 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/padel-n9ne" className="text-orange-600 hover:underline">Padel N9NE</Link> (8 courts, stadium seating, USPA/FIP tournaments)</p>
-            <p><strong>Best Social:</strong> <Link href="/courts/kingdom-of-padel" className="text-orange-600 hover:underline">Kingdom of Padel</Link> (bar, golf sims, indoor/outdoor)</p>
-            <p><strong>Best Value:</strong> <Link href="/courts/taktika-padel-san-diego" className="text-orange-600 hover:underline">Taktika Padel - San Diego</Link> (from $6/person off-peak)</p>
-            <p><strong>Best Luxury Setting:</strong> <Link href="/courts/taktika-padel-fairmont-grand-del-mar" className="text-orange-600 hover:underline">Taktika at Fairmont Grand Del Mar</Link> (five-star resort)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/padel-n9ne" className="text-padel-green hover:underline">Padel N9NE</Link> (8 courts, stadium seating, USPA/FIP tournaments)</p>
+            <p><strong>Best Social:</strong> <Link href="/courts/kingdom-of-padel" className="text-padel-green hover:underline">Kingdom of Padel</Link> (bar, golf sims, indoor/outdoor)</p>
+            <p><strong>Best Value:</strong> <Link href="/courts/taktika-padel-san-diego" className="text-padel-green hover:underline">Taktika Padel - San Diego</Link> (from $6/person off-peak)</p>
+            <p><strong>Best Luxury Setting:</strong> <Link href="/courts/taktika-padel-fairmont-grand-del-mar" className="text-padel-green hover:underline">Taktika at Fairmont Grand Del Mar</Link> (five-star resort)</p>
           </div>
         </div>
 
         <div className="space-y-12">
           {clubs.map(club => (
-            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-orange-600 bg-white shadow-lg rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6">
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-padel-green bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="grain bg-court text-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
                     <h3 className="text-3xl font-bold mb-2">
-                      <Link href={`/courts/${club.slug}`} className="hover:text-orange-200 transition-colors">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-turf transition-colors">
                         {club.name}
                       </Link>
                     </h3>
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-orange-300'}`} />
+                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-stone-600'}`} />
                         ))}
                       </div>
                       <span className="text-xl font-bold">{club.score}/100</span>
@@ -302,7 +303,7 @@ export default function SanDiegoBestClubsPage() {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">{club.price}</div>
-                    <div className="text-sm text-orange-100">Price Range</div>
+                    <div className="text-sm text-stone-400">Price Range</div>
                   </div>
                 </div>
               </div>
@@ -310,36 +311,36 @@ export default function SanDiegoBestClubsPage() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2 text-stone-700">
-                    <MapPin className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-padel-green flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-stone-700">
-                    <Users className="w-5 h-5 text-orange-600 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-padel-green flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Phone className="w-5 h-5 text-orange-600 flex-shrink-0" />
-                      <a href={`tel:${club.phone}`} className="hover:text-orange-600">{club.phone}</a>
+                      <Phone className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`tel:${club.phone}`} className="hover:text-padel-green">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Globe className="w-5 h-5 text-orange-600 flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-orange-600">
+                      <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>
                   )}
                   {club.email && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Mail className="w-5 h-5 text-orange-600 flex-shrink-0" />
-                      <a href={`mailto:${club.email}`} className="hover:text-orange-600">{club.email}</a>
+                      <Mail className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`mailto:${club.email}`} className="hover:text-padel-green">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Clock className="w-5 h-5 text-orange-600 flex-shrink-0" />
+                      <Clock className="w-5 h-5 text-padel-green flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
@@ -354,7 +355,7 @@ export default function SanDiegoBestClubsPage() {
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-2 text-stone-700">
-                        <span className="text-orange-600 font-bold">✓</span>
+                        <span className="text-padel-green font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -365,7 +366,7 @@ export default function SanDiegoBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
-                      <span key={index} className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">
+                      <span key={index} className="px-3 py-1 bg-stone-100 text-stone-700 rounded-full text-sm">
                         {program}
                       </span>
                     ))}
@@ -376,7 +377,7 @@ export default function SanDiegoBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
-                      <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                      <span key={index} className="px-3 py-1 bg-padel-green-light text-padel-green-dark rounded-full text-sm font-medium">
                         ✓ {item}
                       </span>
                     ))}
@@ -387,21 +388,21 @@ export default function SanDiegoBestClubsPage() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 text-center mt-12">
+        <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in San Diego?</h2>
-          <p className="text-xl text-green-100 mb-6">
+          <p className="text-xl text-stone-400 mb-6">
             Find all San Diego padel courts with pricing, hours, and directions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/california/san-diego"
-              className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              className="inline-block bg-white text-padel-green-dark px-8 py-4 rounded-lg font-semibold hover:bg-stone-100 transition-colors"
             >
               View San Diego Courts
             </Link>
             <Link
               href="/california"
-              className="inline-block bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors"
+              className="inline-block bg-padel-green text-white px-8 py-4 rounded-lg font-semibold hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-colors"
             >
               All California Clubs
             </Link>

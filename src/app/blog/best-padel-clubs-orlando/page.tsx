@@ -234,10 +234,10 @@ export default function OrlandoBestClubsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+      <section className="grain bg-court text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-blue-200 hover:text-white">
+            <Link href="/blog" className="text-stone-400 hover:text-turf">
               &larr; Back to Blog
             </Link>
           </div>
@@ -258,6 +258,7 @@ export default function OrlandoBestClubsPage() {
               <span>Updated March 2026</span>
             </div>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </section>
 
@@ -265,19 +266,19 @@ export default function OrlandoBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-blue-600">5</div>
+              <div className="text-3xl font-bold text-padel-green">5</div>
               <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">15</div>
+              <div className="text-3xl font-bold text-padel-green">15</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">$20-70</div>
+              <div className="text-3xl font-bold text-padel-green">$20-70</div>
               <div className="text-sm text-stone-600">Per Hour Range</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">+1</div>
+              <div className="text-3xl font-bold text-padel-green">+1</div>
               <div className="text-sm text-stone-600">Coming Soon</div>
             </div>
           </div>
@@ -293,33 +294,33 @@ export default function OrlandoBestClubsPage() {
             Orlando&apos;s padel scene has grown rapidly, now counting 5 open clubs with 15 courts across the metro area and another facility on the way. As Central Florida&apos;s hub with 2.5 million residents and 75 million annual tourists, Orlando brings a unique dynamic: a large local community hungry for new sports combined with international visitors already familiar with padel from Europe and Latin America.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            The <Link href="/courts/usta-national-campus" className="text-blue-600 hover:underline">USTA National Campus</Link> lends world-class credibility with its 4 outdoor courts on a 100+ court tennis campus. For indoor play essential during Orlando&apos;s brutal summers, <Link href="/courts/padel-plus-indoor-racquet-club" className="text-blue-600 hover:underline">Padel Plus Indoor Racquet Club</Link> leads with 4 climate-controlled courts, a gym, and a cafe. The <Link href="/courts/orlando-padel-club-indoor" className="text-blue-600 hover:underline">Orlando Padel Club Indoor</Link> has earned a perfect 5.0 Google rating for its community-first approach.
+            The <Link href="/courts/usta-national-campus" className="text-padel-green hover:underline">USTA National Campus</Link> lends world-class credibility with its 4 outdoor courts on a 100+ court tennis campus. For indoor play essential during Orlando&apos;s brutal summers, <Link href="/courts/padel-plus-indoor-racquet-club" className="text-padel-green hover:underline">Padel Plus Indoor Racquet Club</Link> leads with 4 climate-controlled courts, a gym, and a cafe. The <Link href="/courts/orlando-padel-club-indoor" className="text-padel-green hover:underline">Orlando Padel Club Indoor</Link> has earned a perfect 5.0 Google rating for its community-first approach.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            Whether you&apos;re a local, a snowbird, or a tourist between theme park visits, this guide covers every padel option in Central Florida. Browse all courts on our <Link href="/florida/orlando" className="text-blue-600 hover:underline">Orlando courts page</Link> or explore the full <Link href="/florida" className="text-blue-600 hover:underline">Florida padel directory</Link>.
+            Whether you&apos;re a local, a snowbird, or a tourist between theme park visits, this guide covers every padel option in Central Florida. Browse all courts on our <Link href="/florida/orlando" className="text-padel-green hover:underline">Orlando courts page</Link> or explore the full <Link href="/florida" className="text-padel-green hover:underline">Florida padel directory</Link>.
           </p>
         </div>
 
         <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/usta-national-campus" className="text-blue-600 hover:underline">USTA National Campus</Link> (4 courts, world-class campus)</p>
-            <p><strong>Best Indoor:</strong> <Link href="/courts/padel-plus-indoor-racquet-club" className="text-blue-600 hover:underline">Padel Plus</Link> (4 courts, gym, cafe)</p>
-            <p><strong>Best Community:</strong> <Link href="/courts/orlando-padel-club-indoor" className="text-blue-600 hover:underline">Orlando Padel Club Indoor</Link> (5.0 Google rating)</p>
-            <p><strong>Best for Tourists:</strong> <Link href="/courts/padel-in-orlando" className="text-blue-600 hover:underline">Padel in Orlando</Link> (Caribe Royale resort)</p>
-            <p><strong>Best Outdoor:</strong> <Link href="/courts/sodo-padel" className="text-blue-600 hover:underline">Sodo Padel</Link> (SODO district, floodlit courts)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/usta-national-campus" className="text-padel-green hover:underline">USTA National Campus</Link> (4 courts, world-class campus)</p>
+            <p><strong>Best Indoor:</strong> <Link href="/courts/padel-plus-indoor-racquet-club" className="text-padel-green hover:underline">Padel Plus</Link> (4 courts, gym, cafe)</p>
+            <p><strong>Best Community:</strong> <Link href="/courts/orlando-padel-club-indoor" className="text-padel-green hover:underline">Orlando Padel Club Indoor</Link> (5.0 Google rating)</p>
+            <p><strong>Best for Tourists:</strong> <Link href="/courts/padel-in-orlando" className="text-padel-green hover:underline">Padel in Orlando</Link> (Caribe Royale resort)</p>
+            <p><strong>Best Outdoor:</strong> <Link href="/courts/sodo-padel" className="text-padel-green hover:underline">Sodo Padel</Link> (SODO district, floodlit courts)</p>
           </div>
         </div>
 
         <div className="space-y-12">
           {clubs.map(club => (
-            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-blue-600 bg-white shadow-lg rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-padel-green bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="grain bg-court text-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
                     <h3 className="text-3xl font-bold mb-2">
-                      <Link href={`/courts/${club.slug}`} className="hover:text-blue-200 transition-colors">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-turf transition-colors">
                         {club.name}
                       </Link>
                     </h3>
@@ -342,36 +343,36 @@ export default function OrlandoBestClubsPage() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2 text-stone-700">
-                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-padel-green flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-stone-700">
-                    <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-padel-green flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`tel:${club.phone}`} className="hover:text-blue-600">{club.phone}</a>
+                      <Phone className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`tel:${club.phone}`} className="hover:text-padel-green">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                      <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>
                   )}
                   {club.email && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`mailto:${club.email}`} className="hover:text-blue-600">{club.email}</a>
+                      <Mail className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`mailto:${club.email}`} className="hover:text-padel-green">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Clock className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <Clock className="w-5 h-5 text-padel-green flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
@@ -386,7 +387,7 @@ export default function OrlandoBestClubsPage() {
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-2 text-stone-700">
-                        <span className="text-blue-600 font-bold">&#10003;</span>
+                        <span className="text-padel-green font-bold">&#10003;</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -397,7 +398,7 @@ export default function OrlandoBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
-                      <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
+                      <span key={index} className="px-3 py-1 bg-padel-green-light text-padel-green-dark rounded-full text-sm">
                         {program}
                       </span>
                     ))}
@@ -427,7 +428,7 @@ export default function OrlandoBestClubsPage() {
             </div>
             <div>
               <h4 className="text-xl font-bold text-stone-900 mb-2">
-                <Link href="/courts/bulldog-padel-club" className="text-blue-600 hover:underline">BullDog Padel Club</Link>
+                <Link href="/courts/bulldog-padel-club" className="text-padel-green hover:underline">BullDog Padel Club</Link>
               </h4>
               <p className="text-stone-700 mb-2">
                 Lake Nona&apos;s premier padel club is set to open with 6 outdoor courts, a lounge area, food and beverage options, racket rentals via vending machines, and AI match recording powered by PlaySight cameras. Courts will be premium AFP/adidas surfaces booked through Playbypoint.
@@ -439,7 +440,7 @@ export default function OrlandoBestClubsPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 text-center mt-12">
+        <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in Orlando?</h2>
           <p className="text-xl text-green-100 mb-6">
             Find all Orlando and Central Florida padel courts
@@ -453,7 +454,7 @@ export default function OrlandoBestClubsPage() {
             </Link>
             <Link
               href="/florida"
-              className="inline-block bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors"
+              className="inline-block bg-padel-green text-white px-8 py-4 rounded-lg font-semibold hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-colors"
             >
               All Florida Clubs
             </Link>

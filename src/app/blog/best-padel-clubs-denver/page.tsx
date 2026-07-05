@@ -105,10 +105,10 @@ export default function DenverBestClubsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+      <section className="grain bg-court text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-blue-200 hover:text-white">
+            <Link href="/blog" className="text-stone-400 hover:text-turf">
               ← Back to Blog
             </Link>
           </div>
@@ -129,6 +129,7 @@ export default function DenverBestClubsPage() {
               <span>Updated March 2026</span>
             </div>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </section>
 
@@ -136,19 +137,19 @@ export default function DenverBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-blue-600">1</div>
+              <div className="text-3xl font-bold text-padel-green">1</div>
               <div className="text-sm text-stone-600">Club Open</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">1</div>
+              <div className="text-3xl font-bold text-padel-green">1</div>
               <div className="text-sm text-stone-600">Outdoor Court</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">Free</div>
+              <div className="text-3xl font-bold text-padel-green">Free</div>
               <div className="text-sm text-stone-600">Daytime Play</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">5,280 ft</div>
+              <div className="text-3xl font-bold text-padel-green">5,280 ft</div>
               <div className="text-sm text-stone-600">Elevation</div>
             </div>
           </div>
@@ -161,34 +162,34 @@ export default function DenverBestClubsPage() {
             Denver: Padel Arrives in the Mile High City
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Denver&apos;s padel scene is in its earliest chapter, but the foundation is being laid. <Link href="/courts/cloud-9-park-padel" className="text-blue-600 hover:underline">Cloud 9 Park Padel</Link> is the city&apos;s first dedicated padel court, offering free daytime public play and floodlit evening sessions in a community-focused park setting. For a city with 300 days of sunshine, an outdoor-obsessed population, and a growing tech workforce, the conditions for padel to thrive are ideal.
+            Denver&apos;s padel scene is in its earliest chapter, but the foundation is being laid. <Link href="/courts/cloud-9-park-padel" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> is the city&apos;s first dedicated padel court, offering free daytime public play and floodlit evening sessions in a community-focused park setting. For a city with 300 days of sunshine, an outdoor-obsessed population, and a growing tech workforce, the conditions for padel to thrive are ideal.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             Colorado&apos;s active lifestyle culture, affluent demographics, and large international community all point to significant growth ahead. Playing padel at 5,280 feet elevation adds a unique twist: the ball flies faster and bounces differently in Denver&apos;s thin air, creating distinct playing conditions that experienced players will notice immediately.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            Check our <Link href="/colorado/denver" className="text-blue-600 hover:underline">Denver courts page</Link> for the latest updates, or browse the full <Link href="/colorado" className="text-blue-600 hover:underline">Colorado padel directory</Link> as more facilities open across the state.
+            Check our <Link href="/colorado/denver" className="text-padel-green hover:underline">Denver courts page</Link> for the latest updates, or browse the full <Link href="/colorado" className="text-padel-green hover:underline">Colorado padel directory</Link> as more facilities open across the state.
           </p>
         </div>
 
         <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best (and Only) Club:</strong> <Link href="/courts/cloud-9-park-padel" className="text-blue-600 hover:underline">Cloud 9 Park Padel</Link> (free daytime play, coaching available)</p>
-            <p><strong>Best for Beginners:</strong> <Link href="/courts/cloud-9-park-padel" className="text-blue-600 hover:underline">Cloud 9 Park Padel</Link> (free 10am-4pm, community clinics)</p>
-            <p><strong>Best Value:</strong> <Link href="/courts/cloud-9-park-padel" className="text-blue-600 hover:underline">Cloud 9 Park Padel</Link> (free daytime, $80/hr peak)</p>
+            <p><strong>Best (and Only) Club:</strong> <Link href="/courts/cloud-9-park-padel" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> (free daytime play, coaching available)</p>
+            <p><strong>Best for Beginners:</strong> <Link href="/courts/cloud-9-park-padel" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> (free 10am-4pm, community clinics)</p>
+            <p><strong>Best Value:</strong> <Link href="/courts/cloud-9-park-padel" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> (free daytime, $80/hr peak)</p>
           </div>
         </div>
 
         <div className="space-y-12">
           {clubs.map(club => (
-            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-blue-600 bg-white shadow-lg rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-padel-green bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="grain bg-court text-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
                     <h3 className="text-3xl font-bold mb-2">
-                      <Link href={`/courts/${club.slug}`} className="hover:text-blue-200 transition-colors">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-turf transition-colors">
                         {club.name}
                       </Link>
                     </h3>
@@ -211,36 +212,36 @@ export default function DenverBestClubsPage() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2 text-stone-700">
-                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-padel-green flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-stone-700">
-                    <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-padel-green flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`tel:${club.phone}`} className="hover:text-blue-600">{club.phone}</a>
+                      <Phone className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`tel:${club.phone}`} className="hover:text-padel-green">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                      <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>
                   )}
                   {club.email && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`mailto:${club.email}`} className="hover:text-blue-600">{club.email}</a>
+                      <Mail className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`mailto:${club.email}`} className="hover:text-padel-green">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Clock className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <Clock className="w-5 h-5 text-padel-green flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
@@ -255,7 +256,7 @@ export default function DenverBestClubsPage() {
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-2 text-stone-700">
-                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="text-padel-green font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -266,7 +267,7 @@ export default function DenverBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
-                      <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
+                      <span key={index} className="px-3 py-1 bg-padel-green-light text-padel-green-dark rounded-full text-sm">
                         {program}
                       </span>
                     ))}
@@ -300,10 +301,10 @@ export default function DenverBestClubsPage() {
             <div>
               <h4 className="font-bold text-lg mb-2 text-stone-900">Why Denver is Primed for Growth</h4>
               <ul className="space-y-2 text-stone-700 text-sm">
-                <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> 300 days of sunshine for outdoor play</li>
-                <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Active, outdoor-sports population</li>
-                <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Growing tech & remote worker community</li>
-                <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Large international community familiar with padel</li>
+                <li className="flex items-start gap-2"><span className="text-padel-green font-bold">✓</span> 300 days of sunshine for outdoor play</li>
+                <li className="flex items-start gap-2"><span className="text-padel-green font-bold">✓</span> Active, outdoor-sports population</li>
+                <li className="flex items-start gap-2"><span className="text-padel-green font-bold">✓</span> Growing tech & remote worker community</li>
+                <li className="flex items-start gap-2"><span className="text-padel-green font-bold">✓</span> Large international community familiar with padel</li>
               </ul>
             </div>
             <div>
@@ -318,7 +319,7 @@ export default function DenverBestClubsPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8 text-center mt-12">
+        <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in Denver?</h2>
           <p className="text-xl text-blue-100 mb-6">
             Find Denver padel courts and stay updated as new facilities open
@@ -326,13 +327,13 @@ export default function DenverBestClubsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/colorado/denver"
-              className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
             >
               View Denver Courts
             </Link>
             <Link
               href="/colorado"
-              className="inline-block bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 transition-colors"
+              className="inline-block bg-padel-green text-white px-8 py-4 rounded-lg font-semibold hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-colors"
             >
               All Colorado Clubs
             </Link>

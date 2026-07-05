@@ -220,21 +220,21 @@ export default function OhioBestClubsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen bg-stone-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-      <section className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
+      <section className="grain bg-court text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-red-200 hover:text-white">← Back to Blog</Link>
+            <Link href="/blog" className="text-stone-400 hover:text-turf">← Back to Blog</Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Best Padel Clubs in Ohio (2026)
           </h1>
-          <div className="flex flex-wrap gap-4 text-red-100 text-lg">
+          <div className="flex flex-wrap gap-4 text-stone-400 text-lg">
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>Cleveland, Cincinnati & Columbus</span>
@@ -248,6 +248,7 @@ export default function OhioBestClubsPage() {
               <span>Updated March 2026</span>
             </div>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </section>
 
@@ -255,19 +256,19 @@ export default function OhioBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-red-600">5</div>
+              <div className="text-3xl font-bold text-padel-green">5</div>
               <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-red-600">13+</div>
+              <div className="text-3xl font-bold text-padel-green">13+</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-red-600">3</div>
+              <div className="text-3xl font-bold text-padel-green">3</div>
               <div className="text-sm text-stone-600">Major Cities</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-red-600">$8-45</div>
+              <div className="text-3xl font-bold text-padel-green">$8-45</div>
               <div className="text-sm text-stone-600">Per Session Range</div>
             </div>
           </div>
@@ -280,39 +281,39 @@ export default function OhioBestClubsPage() {
             Ohio Enters the Padel Game
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Ohio is establishing itself as the Midwest&apos;s emerging padel frontier. With 5 open clubs across Cleveland, Cincinnati, and Columbus, plus <Link href="/courts/club-padel-newtown" className="text-blue-600 hover:underline">Club Padel Newtown</Link> coming soon to Greater Cincinnati, the Buckeye State offers more padel options than you might expect.
+            Ohio is establishing itself as the Midwest&apos;s emerging padel frontier. With 5 open clubs across Cleveland, Cincinnati, and Columbus, plus <Link href="/courts/club-padel-newtown" className="text-padel-green hover:underline">Club Padel Newtown</Link> coming soon to Greater Cincinnati, the Buckeye State offers more padel options than you might expect.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            The standout is <Link href="/courts/padel-square" className="text-blue-600 hover:underline">Padel Square</Link> in Garfield Heights -- Ohio&apos;s first indoor padel club with 6 courts in a 30,000 sq ft facility. Meanwhile, Cincinnati boasts two private club options, and Cleveland Premier offers the most affordable padel in the state at just $8 per session. See all courts on our <Link href="/ohio" className="text-blue-600 hover:underline">Ohio page</Link>.
+            The standout is <Link href="/courts/padel-square" className="text-padel-green hover:underline">Padel Square</Link> in Garfield Heights -- Ohio&apos;s first indoor padel club with 6 courts in a 30,000 sq ft facility. Meanwhile, Cincinnati boasts two private club options, and Cleveland Premier offers the most affordable padel in the state at just $8 per session. See all courts on our <Link href="/ohio" className="text-padel-green hover:underline">Ohio page</Link>.
           </p>
         </div>
 
-        <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6 mb-12">
+        <div className="bg-padel-green/5 border-2 border-padel-green/20 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/padel-square" className="text-blue-600 hover:underline">Padel Square</Link> (6 courts, largest in OH)</p>
-            <p><strong>Best Value:</strong> <Link href="/courts/cleveland-premier-pickleball-padel" className="text-blue-600 hover:underline">Cleveland Premier</Link> ($8 open play!)</p>
-            <p><strong>Best Cincinnati:</strong> <Link href="/courts/maketewah-country-club" className="text-blue-600 hover:underline">Maketewah Country Club</Link> (3 outdoor courts)</p>
-            <p><strong>Best Columbus:</strong> <Link href="/courts/swim-and-racquet-club" className="text-blue-600 hover:underline">Swim and Racquet Club</Link> (9-acre campus)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/padel-square" className="text-padel-green hover:underline">Padel Square</Link> (6 courts, largest in OH)</p>
+            <p><strong>Best Value:</strong> <Link href="/courts/cleveland-premier-pickleball-padel" className="text-padel-green hover:underline">Cleveland Premier</Link> ($8 open play!)</p>
+            <p><strong>Best Cincinnati:</strong> <Link href="/courts/maketewah-country-club" className="text-padel-green hover:underline">Maketewah Country Club</Link> (3 outdoor courts)</p>
+            <p><strong>Best Columbus:</strong> <Link href="/courts/swim-and-racquet-club" className="text-padel-green hover:underline">Swim and Racquet Club</Link> (9-acre campus)</p>
           </div>
         </div>
 
         <div className="space-y-12">
           {clubs.map(club => (
-            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-red-600 bg-white shadow-lg rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-red-600 to-red-700 text-white p-6">
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-padel-green bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="grain bg-court text-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
                     <h3 className="text-3xl font-bold mb-2">
-                      <Link href={`/courts/${club.slug}`} className="hover:text-red-200 transition-colors">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-turf transition-colors">
                         {club.name}
                       </Link>
                     </h3>
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-red-300'}`} />
+                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-stone-500'}`} />
                         ))}
                       </div>
                       <span className="text-xl font-bold">{club.score}/100</span>
@@ -320,7 +321,7 @@ export default function OhioBestClubsPage() {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">{club.price}</div>
-                    <div className="text-sm text-red-100">Price Range</div>
+                    <div className="text-sm text-stone-400">Price Range</div>
                   </div>
                 </div>
               </div>
@@ -328,17 +329,17 @@ export default function OhioBestClubsPage() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2 text-stone-700">
-                    <MapPin className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-padel-green flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-stone-700">
-                    <Users className="w-5 h-5 text-red-600 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-padel-green flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Globe className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-red-600">{club.website}</a>
+                      <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">{club.website}</a>
                     </div>
                   )}
                 </div>
@@ -350,7 +351,7 @@ export default function OhioBestClubsPage() {
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-2 text-stone-700">
-                        <span className="text-red-600 font-bold">✓</span>
+                        <span className="text-padel-green font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -361,7 +362,7 @@ export default function OhioBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
-                      <span key={index} className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">{program}</span>
+                      <span key={index} className="px-3 py-1 bg-stone-100 text-stone-700 rounded-full text-sm">{program}</span>
                     ))}
                   </div>
                 </div>
@@ -393,14 +394,14 @@ export default function OhioBestClubsPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 text-center mt-12">
+        <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in Ohio?</h2>
-          <p className="text-xl text-green-100 mb-6">Find all Ohio padel courts across the Buckeye State</p>
+          <p className="text-xl text-stone-400 mb-6">Find all Ohio padel courts across the Buckeye State</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/ohio" className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+            <Link href="/ohio" className="inline-block bg-white text-padel-green-dark px-8 py-4 rounded-lg font-semibold hover:bg-stone-100 transition-colors">
               View Ohio Courts
             </Link>
-            <Link href="/search?state=OH" className="inline-block bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors">
+            <Link href="/search?state=OH" className="inline-block bg-padel-green text-white px-8 py-4 rounded-lg font-semibold hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-colors">
               Search All OH Clubs
             </Link>
           </div>

@@ -202,17 +202,17 @@ export default function AustinBestClubsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-      <section className="bg-gradient-to-r from-purple-600 to-green-600 text-white py-16">
+      <section className="grain bg-court text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-purple-200 hover:text-white">
+            <Link href="/blog" className="text-stone-400 hover:text-turf">
               ← Back to Blog
             </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Best Padel Clubs in Austin, Texas (2026)
           </h1>
-          <div className="flex flex-wrap gap-4 text-purple-100 text-lg">
+          <div className="flex flex-wrap gap-4 text-stone-300 text-lg">
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>Austin, TX</span>
@@ -226,6 +226,7 @@ export default function AustinBestClubsPage() {
               <span>Updated March 2026</span>
             </div>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </section>
 
@@ -233,19 +234,19 @@ export default function AustinBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-purple-600">7</div>
+              <div className="text-3xl font-bold text-padel-green">7</div>
               <div className="text-sm text-stone-600">Total Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-600">23+</div>
+              <div className="text-3xl font-bold text-padel-green">23+</div>
               <div className="text-sm text-stone-600">Courts Open</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-600">$23-30</div>
+              <div className="text-3xl font-bold text-padel-green">$23-30</div>
               <div className="text-sm text-stone-600">Per Person Range</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-600">3</div>
+              <div className="text-3xl font-bold text-padel-green">3</div>
               <div className="text-sm text-stone-600">Coming Soon</div>
             </div>
           </div>
@@ -261,40 +262,40 @@ export default function AustinBestClubsPage() {
             Austin has cemented itself as one of America&apos;s top padel cities. With 4 open clubs totaling 23+ courts and 3 more facilities on the way, the Texas capital&apos;s padel scene is booming in 2026. Tech money, year-round outdoor weather, and an active lifestyle culture have fueled explosive growth from zero clubs in 2023 to a thriving ecosystem today.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            The headliners are <Link href="/courts/padel-39" className="text-purple-600 hover:underline">Padel 39</Link> with its luxury wellness-focused experience and a perfect 5.0 Google rating, and <Link href="/courts/padel-club-austin" className="text-purple-600 hover:underline">Padel Club Austin</Link> with 9 Wilson courts and student memberships starting at just $20/month. Meanwhile, three new clubs are set to dramatically expand capacity with up to 18 additional courts.
+            The headliners are <Link href="/courts/padel-39" className="text-padel-green hover:underline">Padel 39</Link> with its luxury wellness-focused experience and a perfect 5.0 Google rating, and <Link href="/courts/padel-club-austin" className="text-padel-green hover:underline">Padel Club Austin</Link> with 9 Wilson courts and student memberships starting at just $20/month. Meanwhile, three new clubs are set to dramatically expand capacity with up to 18 additional courts.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            Whether you&apos;re a seasoned player or picking up a racquet for the first time, Austin has options for every level and budget. Browse all courts on our <Link href="/texas/austin" className="text-purple-600 hover:underline">Austin courts page</Link> or explore the full <Link href="/texas" className="text-purple-600 hover:underline">Texas padel directory</Link>.
+            Whether you&apos;re a seasoned player or picking up a racquet for the first time, Austin has options for every level and budget. Browse all courts on our <Link href="/texas/austin" className="text-padel-green hover:underline">Austin courts page</Link> or explore the full <Link href="/texas" className="text-padel-green hover:underline">Texas padel directory</Link>.
           </p>
         </div>
 
-        <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-6 mb-12">
+        <div className="bg-padel-green-light border-2 border-padel-green/30 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/padel-39" className="text-purple-600 hover:underline">Padel 39</Link> (6 courts, sauna, cold plunge, 5.0 rating)</p>
-            <p><strong>Best for Beginners:</strong> <Link href="/courts/padel-club-austin" className="text-purple-600 hover:underline">Padel Club Austin</Link> (9 Wilson courts, $20/mo students)</p>
-            <p><strong>Best Indoor Option:</strong> <Link href="/courts/austin-padel-center-pop-up" className="text-purple-600 hover:underline">Austin Padel Center Pop-Up</Link> (3 indoor + 2 outdoor)</p>
-            <p><strong>Best Multi-Sport:</strong> <Link href="/courts/dripping-springs-racquet-club" className="text-purple-600 hover:underline">Dripping Springs Racquet Club</Link> (pool, gym, tennis)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/padel-39" className="text-padel-green hover:underline">Padel 39</Link> (6 courts, sauna, cold plunge, 5.0 rating)</p>
+            <p><strong>Best for Beginners:</strong> <Link href="/courts/padel-club-austin" className="text-padel-green hover:underline">Padel Club Austin</Link> (9 Wilson courts, $20/mo students)</p>
+            <p><strong>Best Indoor Option:</strong> <Link href="/courts/austin-padel-center-pop-up" className="text-padel-green hover:underline">Austin Padel Center Pop-Up</Link> (3 indoor + 2 outdoor)</p>
+            <p><strong>Best Multi-Sport:</strong> <Link href="/courts/dripping-springs-racquet-club" className="text-padel-green hover:underline">Dripping Springs Racquet Club</Link> (pool, gym, tennis)</p>
             <p><strong>Most Anticipated:</strong> Padel39 East Austin (12 courts opening 2026)</p>
           </div>
         </div>
 
         <div className="space-y-12">
           {clubs.map(club => (
-            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-purple-600 bg-white shadow-lg rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-purple-600 to-green-600 text-white p-6">
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-padel-green bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="grain bg-court text-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
                     <h3 className="text-3xl font-bold mb-2">
-                      <Link href={`/courts/${club.slug}`} className="hover:text-purple-200 transition-colors">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-turf transition-colors">
                         {club.name}
                       </Link>
                     </h3>
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-purple-300'}`} />
+                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-stone-500'}`} />
                         ))}
                       </div>
                       <span className="text-xl font-bold">{club.score}/100</span>
@@ -302,7 +303,7 @@ export default function AustinBestClubsPage() {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">{club.price}</div>
-                    <div className="text-sm text-purple-100">Price Range</div>
+                    <div className="text-sm text-stone-400">Price Range</div>
                   </div>
                 </div>
               </div>
@@ -310,36 +311,36 @@ export default function AustinBestClubsPage() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2 text-stone-700">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-padel-green flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-stone-700">
-                    <Users className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-padel-green flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Phone className="w-5 h-5 text-purple-600 flex-shrink-0" />
-                      <a href={`tel:${club.phone}`} className="hover:text-purple-600">{club.phone}</a>
+                      <Phone className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`tel:${club.phone}`} className="hover:text-padel-green">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Globe className="w-5 h-5 text-purple-600 flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-purple-600">
+                      <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>
                   )}
                   {club.email && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Mail className="w-5 h-5 text-purple-600 flex-shrink-0" />
-                      <a href={`mailto:${club.email}`} className="hover:text-purple-600">{club.email}</a>
+                      <Mail className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`mailto:${club.email}`} className="hover:text-padel-green">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Clock className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                      <Clock className="w-5 h-5 text-padel-green flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
@@ -354,7 +355,7 @@ export default function AustinBestClubsPage() {
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-2 text-stone-700">
-                        <span className="text-purple-600 font-bold">✓</span>
+                        <span className="text-padel-green font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -365,7 +366,7 @@ export default function AustinBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
-                      <span key={index} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">
+                      <span key={index} className="px-3 py-1 bg-padel-green-light text-padel-green-dark rounded-full text-sm">
                         {program}
                       </span>
                     ))}
@@ -376,7 +377,7 @@ export default function AustinBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
-                      <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                      <span key={index} className="px-3 py-1 bg-padel-green-light text-padel-green-dark rounded-full text-sm font-medium">
                         ✓ {item}
                       </span>
                     ))}
@@ -441,21 +442,21 @@ export default function AustinBestClubsPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-purple-600 to-green-600 text-white rounded-xl p-8 text-center mt-12">
+        <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in Austin?</h2>
-          <p className="text-xl text-purple-100 mb-6">
+          <p className="text-xl text-stone-300 mb-6">
             Find all Austin padel courts with real-time info and directions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/texas/austin"
-              className="inline-block bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
+              className="inline-block bg-padel-green text-white px-8 py-4 rounded-lg font-semibold hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-colors"
             >
               View Austin Courts
             </Link>
             <Link
               href="/texas"
-              className="inline-block bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 transition-colors"
+              className="inline-block bg-white/10 border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors"
             >
               All Texas Clubs
             </Link>

@@ -169,17 +169,17 @@ export default function PhoenixBestClubsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-      <section className="bg-gradient-to-r from-red-500 to-orange-500 text-white py-16">
+      <section className="grain bg-court text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-orange-200 hover:text-white">
+            <Link href="/blog" className="text-stone-400 hover:text-turf">
               ← Back to Blog
             </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Best Padel Clubs in Phoenix (2026)
           </h1>
-          <div className="flex flex-wrap gap-4 text-orange-100 text-lg">
+          <div className="flex flex-wrap gap-4 text-stone-400 text-lg">
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>Phoenix Metro Area, AZ</span>
@@ -193,6 +193,7 @@ export default function PhoenixBestClubsPage() {
               <span>Updated March 2026</span>
             </div>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </section>
 
@@ -200,19 +201,19 @@ export default function PhoenixBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-red-600">3</div>
+              <div className="text-3xl font-bold text-padel-green">3</div>
               <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-red-600">13</div>
+              <div className="text-3xl font-bold text-padel-green">13</div>
               <div className="text-sm text-stone-600">Courts Now</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-red-600">$20-110</div>
+              <div className="text-3xl font-bold text-padel-green">$20-110</div>
               <div className="text-sm text-stone-600">Price Range</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-red-600">2</div>
+              <div className="text-3xl font-bold text-padel-green">2</div>
               <div className="text-sm text-stone-600">Coming Soon</div>
             </div>
           </div>
@@ -228,39 +229,39 @@ export default function PhoenixBestClubsPage() {
             The Phoenix metropolitan area is emerging as one of the Southwest&apos;s most exciting padel markets. With 3 open clubs spanning Tempe, Mesa, and Phoenix proper, plus 2 ambitious facilities coming soon in Mesa and Scottsdale, the Valley of the Sun is poised for major growth in 2026 and beyond.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Climate-controlled indoor courts are essential here. When summer temperatures soar past 110 degrees Fahrenheit, facilities like <Link href="/courts/conquer-padel-club" className="text-red-600 hover:underline">Conquer Padel Club</Link> and <Link href="/courts/padel-pals" className="text-red-600 hover:underline">Padel Pals</Link> offer comfortable year-round play. The outdoor season from October through May is glorious, with mild temperatures and clear skies.
+            Climate-controlled indoor courts are essential here. When summer temperatures soar past 110 degrees Fahrenheit, facilities like <Link href="/courts/conquer-padel-club" className="text-padel-green hover:underline">Conquer Padel Club</Link> and <Link href="/courts/padel-pals" className="text-padel-green hover:underline">Padel Pals</Link> offer comfortable year-round play. The outdoor season from October through May is glorious, with mild temperatures and clear skies.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            Browse all courts on our <Link href="/arizona/phoenix" className="text-red-600 hover:underline">Phoenix courts page</Link> or explore the full <Link href="/arizona" className="text-red-600 hover:underline">Arizona padel directory</Link>.
+            Browse all courts on our <Link href="/arizona/phoenix" className="text-padel-green hover:underline">Phoenix courts page</Link> or explore the full <Link href="/arizona" className="text-padel-green hover:underline">Arizona padel directory</Link>.
           </p>
         </div>
 
         <div className="bg-orange-50 border-2 border-orange-200 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/conquer-padel-club" className="text-red-600 hover:underline">Conquer Padel Club</Link> (5 indoor courts, wellness amenities)</p>
-            <p><strong>Largest Facility:</strong> <Link href="/courts/padel-pals" className="text-red-600 hover:underline">Padel Pals</Link> (7 indoor courts, sports bar, multi-sport)</p>
-            <p><strong>Best Location:</strong> <Link href="/courts/camelback-padel-club" className="text-red-600 hover:underline">Camelback Padel Club</Link> (base of Camelback Mountain)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/conquer-padel-club" className="text-padel-green hover:underline">Conquer Padel Club</Link> (5 indoor courts, wellness amenities)</p>
+            <p><strong>Largest Facility:</strong> <Link href="/courts/padel-pals" className="text-padel-green hover:underline">Padel Pals</Link> (7 indoor courts, sports bar, multi-sport)</p>
+            <p><strong>Best Location:</strong> <Link href="/courts/camelback-padel-club" className="text-padel-green hover:underline">Camelback Padel Club</Link> (base of Camelback Mountain)</p>
             <p><strong>Most Anticipated:</strong> PURE Pickleball &amp; Padel (8 padel courts coming to Scottsdale)</p>
           </div>
         </div>
 
         <div className="space-y-12">
           {clubs.map(club => (
-            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-red-600 bg-white shadow-lg rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6">
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-padel-green bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="grain bg-court text-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
                     <h3 className="text-3xl font-bold mb-2">
-                      <Link href={`/courts/${club.slug}`} className="hover:text-orange-200 transition-colors">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-turf transition-colors">
                         {club.name}
                       </Link>
                     </h3>
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-orange-300'}`} />
+                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-stone-600'}`} />
                         ))}
                       </div>
                       <span className="text-xl font-bold">{club.score}/100</span>
@@ -268,7 +269,7 @@ export default function PhoenixBestClubsPage() {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">{club.price}</div>
-                    <div className="text-sm text-orange-100">Price Range</div>
+                    <div className="text-sm text-stone-400">Price Range</div>
                   </div>
                 </div>
               </div>
@@ -276,36 +277,36 @@ export default function PhoenixBestClubsPage() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2 text-stone-700">
-                    <MapPin className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-padel-green flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-stone-700">
-                    <Users className="w-5 h-5 text-red-600 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-padel-green flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Phone className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <a href={`tel:${club.phone}`} className="hover:text-red-600">{club.phone}</a>
+                      <Phone className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`tel:${club.phone}`} className="hover:text-padel-green">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Globe className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-red-600">
+                      <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>
                   )}
                   {club.email && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Mail className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <a href={`mailto:${club.email}`} className="hover:text-red-600">{club.email}</a>
+                      <Mail className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`mailto:${club.email}`} className="hover:text-padel-green">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Clock className="w-5 h-5 text-red-600 flex-shrink-0" />
+                      <Clock className="w-5 h-5 text-padel-green flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
@@ -320,7 +321,7 @@ export default function PhoenixBestClubsPage() {
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-2 text-stone-700">
-                        <span className="text-red-600 font-bold">✓</span>
+                        <span className="text-padel-green font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -331,7 +332,7 @@ export default function PhoenixBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
-                      <span key={index} className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm">
+                      <span key={index} className="px-3 py-1 bg-stone-100 text-stone-700 rounded-full text-sm">
                         {program}
                       </span>
                     ))}
@@ -342,7 +343,7 @@ export default function PhoenixBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
-                      <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                      <span key={index} className="px-3 py-1 bg-padel-green-light text-padel-green-dark rounded-full text-sm font-medium">
                         ✓ {item}
                       </span>
                     ))}
@@ -363,7 +364,7 @@ export default function PhoenixBestClubsPage() {
               <div className="flex items-center gap-2 mb-2">
                 <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-semibold">Coming Soon</span>
                 <h4 className="text-xl font-bold text-stone-900">
-                  <Link href="/courts/mesa-padel-club" className="hover:text-red-600 transition-colors">Mesa Padel Club</Link>
+                  <Link href="/courts/mesa-padel-club" className="hover:text-padel-green transition-colors">Mesa Padel Club</Link>
                 </h4>
               </div>
               <p className="text-stone-700 mb-3">
@@ -379,7 +380,7 @@ export default function PhoenixBestClubsPage() {
               <div className="flex items-center gap-2 mb-2">
                 <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-semibold">Coming Soon</span>
                 <h4 className="text-xl font-bold text-stone-900">
-                  <Link href="/courts/pure-pickleball-padel" className="hover:text-red-600 transition-colors">PURE Pickleball &amp; Padel</Link>
+                  <Link href="/courts/pure-pickleball-padel" className="hover:text-padel-green transition-colors">PURE Pickleball &amp; Padel</Link>
                 </h4>
               </div>
               <p className="text-stone-700 mb-3">
@@ -395,21 +396,21 @@ export default function PhoenixBestClubsPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 text-center mt-12">
+        <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in Phoenix?</h2>
-          <p className="text-xl text-green-100 mb-6">
+          <p className="text-xl text-stone-400 mb-6">
             Find all Phoenix metro padel courts with pricing, hours, and directions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/arizona/phoenix"
-              className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              className="inline-block bg-white text-padel-green-dark px-8 py-4 rounded-lg font-semibold hover:bg-stone-100 transition-colors"
             >
               View Phoenix Courts
             </Link>
             <Link
               href="/arizona"
-              className="inline-block bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors"
+              className="inline-block bg-padel-green text-white px-8 py-4 rounded-lg font-semibold hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-colors"
             >
               All Arizona Clubs
             </Link>

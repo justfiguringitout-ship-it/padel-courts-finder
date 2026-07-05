@@ -396,17 +396,17 @@ export default function MiamiBestClubsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
+      <section className="grain bg-court text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-blue-200 hover:text-white">
+            <Link href="/blog" className="text-stone-400 hover:text-turf">
               ← Back to Blog
             </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Best Padel Clubs in Miami (2026)
           </h1>
-          <div className="flex flex-wrap gap-4 text-blue-100 text-lg">
+          <div className="flex flex-wrap gap-4 text-stone-300 text-lg">
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>Miami & South Florida</span>
@@ -420,6 +420,7 @@ export default function MiamiBestClubsPage() {
               <span>Updated March 2026</span>
             </div>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </section>
 
@@ -427,19 +428,19 @@ export default function MiamiBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-blue-600">29+</div>
+              <div className="text-3xl font-bold text-padel-green">29+</div>
               <div className="text-sm text-stone-600">Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">170+</div>
+              <div className="text-3xl font-bold text-padel-green">170+</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">$20-155</div>
+              <div className="text-3xl font-bold text-padel-green">$20-155</div>
               <div className="text-sm text-stone-600">Per Hour Range</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">Year-Round</div>
+              <div className="text-3xl font-bold text-padel-green">Year-Round</div>
               <div className="text-sm text-stone-600">Perfect Weather</div>
             </div>
           </div>
@@ -455,40 +456,40 @@ export default function MiamiBestClubsPage() {
             No city in the United States can match Miami&apos;s padel scene. With 29 open clubs, over 170 courts, and 2 more facilities on the way, Miami and its surrounding metro area have built the densest concentration of padel infrastructure in the country. The Latin American influence, year-round outdoor weather, and a fitness-obsessed culture have made South Florida the epicenter of padel in America.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            The scale is staggering. <Link href="/courts/ultra-padel-club" className="text-blue-600 hover:underline">Ultra Padel Club</Link> alone operates 29 courts in Little Haiti -- the single largest padel facility in the US. <Link href="/courts/urban-padel" className="text-blue-600 hover:underline">Urban Padel</Link> in Doral claims the largest indoor padel facility with 12 climate-controlled courts. From luxury members-only clubs like <Link href="/courts/sunset-padel" className="text-blue-600 hover:underline">Sunset Padel</Link> in Miami Beach to budget-friendly options at <Link href="/courts/champions-padel-club" className="text-blue-600 hover:underline">Champions Padel Club</Link> starting at $25/hour, there is a padel club for every player and every budget.
+            The scale is staggering. <Link href="/courts/ultra-padel-club" className="text-padel-green hover:underline">Ultra Padel Club</Link> alone operates 29 courts in Little Haiti -- the single largest padel facility in the US. <Link href="/courts/urban-padel" className="text-padel-green hover:underline">Urban Padel</Link> in Doral claims the largest indoor padel facility with 12 climate-controlled courts. From luxury members-only clubs like <Link href="/courts/sunset-padel" className="text-padel-green hover:underline">Sunset Padel</Link> in Miami Beach to budget-friendly options at <Link href="/courts/champions-padel-club" className="text-padel-green hover:underline">Champions Padel Club</Link> starting at $25/hour, there is a padel club for every player and every budget.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            Whether you&apos;re a Miami local, a snowbird spending winter in South Florida, or visiting for vacation, this guide ranks the 10 best padel clubs in the Miami metro area. Browse the full list of courts on our <Link href="/florida/miami" className="text-blue-600 hover:underline">Miami courts page</Link> or explore all options across <Link href="/florida" className="text-blue-600 hover:underline">Florida</Link>.
+            Whether you&apos;re a Miami local, a snowbird spending winter in South Florida, or visiting for vacation, this guide ranks the 10 best padel clubs in the Miami metro area. Browse the full list of courts on our <Link href="/florida/miami" className="text-padel-green hover:underline">Miami courts page</Link> or explore all options across <Link href="/florida" className="text-padel-green hover:underline">Florida</Link>.
           </p>
         </div>
 
-        <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
+        <div className="bg-padel-green-light border-2 border-padel-green/30 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/ultra-padel-club" className="text-blue-600 hover:underline">Ultra Padel Club</Link> (29 courts, pool, wellness center)</p>
-            <p><strong>Best Luxury:</strong> <Link href="/courts/sunset-padel" className="text-blue-600 hover:underline">Sunset Padel</Link> (members-only, TechnoGym, physical therapist)</p>
-            <p><strong>Best Value:</strong> <Link href="/courts/champions-padel-club" className="text-blue-600 hover:underline">Champions Padel Club</Link> ($25-45/hr indoor courts)</p>
-            <p><strong>Best for Beginners:</strong> <Link href="/courts/wynwood-padel-club" className="text-blue-600 hover:underline">Wynwood Padel Club</Link> (since 2016, student memberships $10)</p>
-            <p><strong>Best Indoor:</strong> <Link href="/courts/urban-padel" className="text-blue-600 hover:underline">Urban Padel</Link> (12 climate-controlled courts, $299/mo unlimited)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/ultra-padel-club" className="text-padel-green hover:underline">Ultra Padel Club</Link> (29 courts, pool, wellness center)</p>
+            <p><strong>Best Luxury:</strong> <Link href="/courts/sunset-padel" className="text-padel-green hover:underline">Sunset Padel</Link> (members-only, TechnoGym, physical therapist)</p>
+            <p><strong>Best Value:</strong> <Link href="/courts/champions-padel-club" className="text-padel-green hover:underline">Champions Padel Club</Link> ($25-45/hr indoor courts)</p>
+            <p><strong>Best for Beginners:</strong> <Link href="/courts/wynwood-padel-club" className="text-padel-green hover:underline">Wynwood Padel Club</Link> (since 2016, student memberships $10)</p>
+            <p><strong>Best Indoor:</strong> <Link href="/courts/urban-padel" className="text-padel-green hover:underline">Urban Padel</Link> (12 climate-controlled courts, $299/mo unlimited)</p>
           </div>
         </div>
 
         <div className="space-y-12">
           {clubs.map(club => (
-            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-blue-600 bg-white shadow-lg rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-padel-green bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="grain bg-court text-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
                     <h3 className="text-3xl font-bold mb-2">
-                      <Link href={`/courts/${club.slug}`} className="hover:text-blue-200 transition-colors">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-turf transition-colors">
                         {club.name}
                       </Link>
                     </h3>
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-blue-300'}`} />
+                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-stone-500'}`} />
                         ))}
                       </div>
                       <span className="text-xl font-bold">{club.score}/100</span>
@@ -496,7 +497,7 @@ export default function MiamiBestClubsPage() {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">{club.price}</div>
-                    <div className="text-sm text-blue-100">Price Range</div>
+                    <div className="text-sm text-stone-400">Price Range</div>
                   </div>
                 </div>
               </div>
@@ -504,36 +505,36 @@ export default function MiamiBestClubsPage() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2 text-stone-700">
-                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-padel-green flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-stone-700">
-                    <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-padel-green flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`tel:${club.phone}`} className="hover:text-blue-600">{club.phone}</a>
+                      <Phone className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`tel:${club.phone}`} className="hover:text-padel-green">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                      <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>
                   )}
                   {club.email && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`mailto:${club.email}`} className="hover:text-blue-600">{club.email}</a>
+                      <Mail className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`mailto:${club.email}`} className="hover:text-padel-green">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Clock className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <Clock className="w-5 h-5 text-padel-green flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
@@ -548,7 +549,7 @@ export default function MiamiBestClubsPage() {
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-2 text-stone-700">
-                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="text-padel-green font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -559,7 +560,7 @@ export default function MiamiBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
-                      <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
+                      <span key={index} className="px-3 py-1 bg-padel-green-light text-padel-green-dark rounded-full text-sm">
                         {program}
                       </span>
                     ))}
@@ -570,7 +571,7 @@ export default function MiamiBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
-                      <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                      <span key={index} className="px-3 py-1 bg-padel-green-light text-padel-green-dark rounded-full text-sm font-medium">
                         ✓ {item}
                       </span>
                     ))}
@@ -592,7 +593,7 @@ export default function MiamiBestClubsPage() {
                 <span className="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs font-semibold">COMING SOON</span>
               </div>
               <h3 className="text-xl font-bold text-stone-900 mb-2">
-                <Link href="/courts/icon-padel-club" className="text-blue-600 hover:underline">Icon Padel Club</Link>
+                <Link href="/courts/icon-padel-club" className="text-padel-green hover:underline">Icon Padel Club</Link>
               </h3>
               <p className="text-stone-600 text-sm mb-2">Aventura, FL -- 7 indoor courts</p>
               <p className="text-stone-700">
@@ -604,7 +605,7 @@ export default function MiamiBestClubsPage() {
                 <span className="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs font-semibold">COMING SOON</span>
               </div>
               <h3 className="text-xl font-bold text-stone-900 mb-2">
-                <Link href="/courts/the-gables-padel" className="text-blue-600 hover:underline">The Gables Padel</Link>
+                <Link href="/courts/the-gables-padel" className="text-padel-green hover:underline">The Gables Padel</Link>
               </h3>
               <p className="text-stone-600 text-sm mb-2">Coral Gables, Miami, FL -- 8 indoor courts</p>
               <p className="text-stone-700">
@@ -614,21 +615,21 @@ export default function MiamiBestClubsPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 text-center mt-12">
+        <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in Miami?</h2>
-          <p className="text-xl text-green-100 mb-6">
+          <p className="text-xl text-stone-300 mb-6">
             Find all 29+ Miami padel clubs and book your court today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/florida/miami"
-              className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              className="inline-block bg-padel-green text-white px-8 py-4 rounded-lg font-semibold hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-colors"
             >
               View Miami Courts
             </Link>
             <Link
               href="/florida"
-              className="inline-block bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors"
+              className="inline-block bg-white/10 border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors"
             >
               All Florida Clubs
             </Link>

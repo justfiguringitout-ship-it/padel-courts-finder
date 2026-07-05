@@ -230,6 +230,56 @@ const blogPosts: BlogPost[] = [
     courtSlug: '',
     featured: true
   },
+  {
+    slug: 'best-padel-clubs-brooklyn',
+    title: 'Best Padel Clubs in Brooklyn (2026)',
+    category: 'best-clubs',
+    excerpt: 'Five clubs now serve Brooklyn — courts, pricing, and ratings for every one, straight from our directory.',
+    date: '2026-07-05',
+    readTime: '6 min read',
+    imageAlt: 'Best padel clubs in Brooklyn',
+    courtSlug: ''
+  },
+  {
+    slug: 'best-padel-clubs-west-palm-beach',
+    title: 'Best Padel Clubs in West Palm Beach (2026)',
+    category: 'best-clubs',
+    excerpt: 'West Palm Beach padel, club by club — courts, amenities, pricing, and ratings from our verified listings.',
+    date: '2026-07-05',
+    readTime: '6 min read',
+    imageAlt: 'Best padel clubs in West Palm Beach',
+    courtSlug: ''
+  },
+  {
+    slug: 'best-padel-clubs-boca-raton',
+    title: 'Best Padel Clubs in Boca Raton (2026)',
+    category: 'best-clubs',
+    excerpt: 'Every padel club in Boca Raton compared — courts, surfaces, pricing, and player ratings.',
+    date: '2026-07-05',
+    readTime: '6 min read',
+    imageAlt: 'Best padel clubs in Boca Raton',
+    courtSlug: ''
+  },
+  {
+    slug: 'best-padel-clubs-tucson',
+    title: 'Best Padel Clubs in Tucson (2026)',
+    category: 'best-clubs',
+    excerpt: 'Tucson’s padel scene mapped — every club with courts, pricing, and ratings from our directory.',
+    date: '2026-07-05',
+    readTime: '6 min read',
+    imageAlt: 'Best padel clubs in Tucson',
+    courtSlug: ''
+  },
+  {
+    slug: 'new-padel-clubs-july-2026',
+    title: 'New & Upcoming US Padel Clubs — July 2026',
+    category: 'how-to',
+    excerpt: 'The monthly roundup: what’s new on the directory, club news, and the 17 announced clubs on the way.',
+    date: '2026-07-05',
+    readTime: '5 min read',
+    imageAlt: 'New US padel clubs July 2026',
+    courtSlug: ''
+  },
   // Equipment Buying Guides
   {
     slug: 'padel-racket-shapes-explained',
@@ -306,6 +356,94 @@ const blogPosts: BlogPost[] = [
     imageAlt: 'Best padel accessories under $30',
     courtSlug: '',
     priceRange: '$13–$27'
+  },
+  {
+    slug: 'nox-at10-genius-18k-review',
+    title: 'NOX AT10 Genius 18K Review (2026)',
+    category: 'equipment',
+    excerpt: 'Our best-overall racket reviewed in full: Tapia’s 18K flagship scored 7.3/10 with no real weakness.',
+    date: '2026-07-05',
+    readTime: '4 min read',
+    imageAlt: 'NOX AT10 Genius 18K padel racket review',
+    courtSlug: '',
+    priceRange: '$272'
+  },
+  {
+    slug: 'head-extreme-pro-review',
+    title: 'HEAD Extreme Pro Review (2026)',
+    category: 'equipment',
+    excerpt: 'The only 10/10 power score we’ve given — and the trade-offs that come with it.',
+    date: '2026-07-05',
+    readTime: '4 min read',
+    imageAlt: 'HEAD Extreme Pro padel racket review',
+    courtSlug: '',
+    priceRange: '$320'
+  },
+  {
+    slug: 'wilson-bela-v3-review',
+    title: 'Wilson Bela V3 Review (2026)',
+    category: 'equipment',
+    excerpt: 'Bela’s 24K carbon flagship reviewed: 9/10 power, premium price, honest verdict.',
+    date: '2026-07-05',
+    readTime: '4 min read',
+    imageAlt: 'Wilson Bela V3 padel racket review',
+    courtSlug: '',
+    priceRange: '$399'
+  },
+  {
+    slug: 'babolat-technical-viper-review',
+    title: 'Babolat Technical Viper Review (2026)',
+    category: 'equipment',
+    excerpt: 'Lebrón’s weapon at the friendliest flagship price — who it fits and who it punishes.',
+    date: '2026-07-05',
+    readTime: '4 min read',
+    imageAlt: 'Babolat Technical Viper padel racket review',
+    courtSlug: '',
+    priceRange: '$249'
+  },
+  {
+    slug: 'nox-ml10-pro-cup-review',
+    title: 'NOX ML10 Pro Cup Review (2026)',
+    category: 'equipment',
+    excerpt: 'The best-value upgrade racket we’ve rated: 9/10 control, rough spin surface, honest limits.',
+    date: '2026-07-05',
+    readTime: '4 min read',
+    imageAlt: 'NOX ML10 Pro Cup padel racket review',
+    courtSlug: '',
+    priceRange: '$170'
+  },
+  {
+    slug: 'adidas-metalbone-hrd-review',
+    title: 'Adidas Metalbone HRD+ 3.3 Review (2026)',
+    category: 'equipment',
+    excerpt: 'The hardest hitter below pro flagships — adjustable weights, 9/10 power, demanding feel.',
+    date: '2026-07-05',
+    readTime: '4 min read',
+    imageAlt: 'Adidas Metalbone HRD+ 3.3 padel racket review',
+    courtSlug: '',
+    priceRange: '$280'
+  },
+  {
+    slug: 'babolat-contact-review',
+    title: 'Babolat Contact Review (2026)',
+    category: 'equipment',
+    excerpt: 'The $90 beginner favorite reviewed: huge sweet spot, 9/10 comfort, and where its ceiling sits.',
+    date: '2026-07-05',
+    readTime: '4 min read',
+    imageAlt: 'Babolat Contact padel racket review',
+    courtSlug: '',
+    priceRange: '$90'
+  },
+  {
+    slug: 'wilson-blade-elite-v2-review',
+    title: 'Wilson Blade Elite V2 Review (2026)',
+    category: 'equipment',
+    excerpt: 'The 7/7/7 all-rounder of our intermediate picks — nothing flashy, nothing punished.',
+    date: '2026-07-05',
+    readTime: '4 min read',
+    imageAlt: 'Wilson Blade Elite V2 padel racket review',
+    courtSlug: '',
+    priceRange: '$189'
   },
   {
     slug: 'padel-bandeja-explained',

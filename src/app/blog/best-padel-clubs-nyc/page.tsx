@@ -299,17 +299,17 @@ export default function NYCBestClubsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
       />
 
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
+      <section className="grain bg-court text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <Link href="/blog" className="text-blue-200 hover:text-white">
+            <Link href="/blog" className="text-stone-400 hover:text-turf">
               ← Back to Blog
             </Link>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Best Padel Clubs in NYC (2026)
           </h1>
-          <div className="flex flex-wrap gap-4 text-blue-100 text-lg">
+          <div className="flex flex-wrap gap-4 text-stone-300 text-lg">
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>New York City & Brooklyn</span>
@@ -323,6 +323,7 @@ export default function NYCBestClubsPage() {
               <span>Updated March 2026</span>
             </div>
           </div>
+          <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </section>
 
@@ -330,19 +331,19 @@ export default function NYCBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-blue-600">7</div>
+              <div className="text-3xl font-bold text-padel-green">7</div>
               <div className="text-sm text-stone-600">Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">25</div>
+              <div className="text-3xl font-bold text-padel-green">25</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">$25-225</div>
+              <div className="text-3xl font-bold text-padel-green">$25-225</div>
               <div className="text-sm text-stone-600">Per Hour Range</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600">1 More</div>
+              <div className="text-3xl font-bold text-padel-green">1 More</div>
               <div className="text-sm text-stone-600">Coming Soon</div>
             </div>
           </div>
@@ -355,43 +356,43 @@ export default function NYCBestClubsPage() {
             NYC&apos;s Padel Scene Explodes in 2026
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            New York City&apos;s padel revolution is in full swing. From Brooklyn&apos;s waterfront to Manhattan&apos;s Hudson Yards, the city now boasts 7 open clubs with 25 courts and another facility on the way. Led by <Link href="/courts/padel-haus-dumbo" className="text-blue-600 hover:underline">Padel Haus Dumbo</Link> and the massive 6-court <Link href="/courts/padel-greenpoint" className="text-blue-600 hover:underline">Padel& Greenpoint</Link>, NYC has become one of America&apos;s most exciting padel markets.
+            New York City&apos;s padel revolution is in full swing. From Brooklyn&apos;s waterfront to Manhattan&apos;s Hudson Yards, the city now boasts 7 open clubs with 25 courts and another facility on the way. Led by <Link href="/courts/padel-haus-dumbo" className="text-padel-green hover:underline">Padel Haus Dumbo</Link> and the massive 6-court <Link href="/courts/padel-greenpoint" className="text-padel-green hover:underline">Padel& Greenpoint</Link>, NYC has become one of America&apos;s most exciting padel markets.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Brooklyn dominates the scene with five clubs, while Manhattan contributes three unique venues: <Link href="/courts/mink-padel" className="text-blue-600 hover:underline">Mink Padel</Link>&apos;s historic Harlem courtyard, <Link href="/courts/reserve-padel-hudson-yards" className="text-blue-600 hover:underline">Reserve Padel</Link>&apos;s bubble-enclosed Hudson Yards courts, and the ultra-exclusive <Link href="/courts/elite-sports-club-at-111-west-57th-street" className="text-blue-600 hover:underline">Elite Sports Club</Link> at 111 West 57th Street.
+            Brooklyn dominates the scene with five clubs, while Manhattan contributes three unique venues: <Link href="/courts/mink-padel" className="text-padel-green hover:underline">Mink Padel</Link>&apos;s historic Harlem courtyard, <Link href="/courts/reserve-padel-hudson-yards" className="text-padel-green hover:underline">Reserve Padel</Link>&apos;s bubble-enclosed Hudson Yards courts, and the ultra-exclusive <Link href="/courts/elite-sports-club-at-111-west-57th-street" className="text-padel-green hover:underline">Elite Sports Club</Link> at 111 West 57th Street.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            Whether you&apos;re a Brooklyn local, a Manhattan commuter, or visiting the city, this guide covers every padel option in the five boroughs. Browse all courts on our <Link href="/new-york/new-york" className="text-blue-600 hover:underline">New York City courts page</Link> or explore the full <Link href="/new-york" className="text-blue-600 hover:underline">New York state directory</Link>.
+            Whether you&apos;re a Brooklyn local, a Manhattan commuter, or visiting the city, this guide covers every padel option in the five boroughs. Browse all courts on our <Link href="/new-york/new-york" className="text-padel-green hover:underline">New York City courts page</Link> or explore the full <Link href="/new-york" className="text-padel-green hover:underline">New York state directory</Link>.
           </p>
         </div>
 
-        <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
+        <div className="bg-padel-green-light border-2 border-padel-green/30 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/padel-haus-dumbo" className="text-blue-600 hover:underline">Padel Haus Dumbo</Link> (premium Brooklyn waterfront)</p>
-            <p><strong>Most Courts:</strong> <Link href="/courts/padel-greenpoint" className="text-blue-600 hover:underline">Padel& Greenpoint</Link> (6 courts, 36-ft ceilings)</p>
-            <p><strong>Best Manhattan:</strong> <Link href="/courts/mink-padel" className="text-blue-600 hover:underline">Mink Padel</Link> (historic Harlem courtyard)</p>
-            <p><strong>Best Value:</strong> <Link href="/courts/golden-point-padel" className="text-blue-600 hover:underline">Golden Point Padel</Link> (from $25/hr)</p>
-            <p><strong>Best Wellness:</strong> <Link href="/courts/reserve-padel-hudson-yards" className="text-blue-600 hover:underline">Reserve Padel</Link> (cold plunges, yoga, pilates)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/padel-haus-dumbo" className="text-padel-green hover:underline">Padel Haus Dumbo</Link> (premium Brooklyn waterfront)</p>
+            <p><strong>Most Courts:</strong> <Link href="/courts/padel-greenpoint" className="text-padel-green hover:underline">Padel& Greenpoint</Link> (6 courts, 36-ft ceilings)</p>
+            <p><strong>Best Manhattan:</strong> <Link href="/courts/mink-padel" className="text-padel-green hover:underline">Mink Padel</Link> (historic Harlem courtyard)</p>
+            <p><strong>Best Value:</strong> <Link href="/courts/golden-point-padel" className="text-padel-green hover:underline">Golden Point Padel</Link> (from $25/hr)</p>
+            <p><strong>Best Wellness:</strong> <Link href="/courts/reserve-padel-hudson-yards" className="text-padel-green hover:underline">Reserve Padel</Link> (cold plunges, yoga, pilates)</p>
           </div>
         </div>
 
         <div className="space-y-12">
           {clubs.map(club => (
-            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-blue-600 bg-white shadow-lg rounded-xl overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
+            <div key={club.rank} id={`club-${club.rank}`} className="border-t-4 border-padel-green bg-white shadow-lg rounded-xl overflow-hidden">
+              <div className="grain bg-court text-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="text-sm font-semibold mb-1">#{club.rank}</div>
                     <h3 className="text-3xl font-bold mb-2">
-                      <Link href={`/courts/${club.slug}`} className="hover:text-blue-200 transition-colors">
+                      <Link href={`/courts/${club.slug}`} className="hover:text-turf transition-colors">
                         {club.name}
                       </Link>
                     </h3>
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-blue-300'}`} />
+                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-stone-500'}`} />
                         ))}
                       </div>
                       <span className="text-xl font-bold">{club.score}/100</span>
@@ -399,7 +400,7 @@ export default function NYCBestClubsPage() {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">{club.price}</div>
-                    <div className="text-sm text-blue-100">Price Range</div>
+                    <div className="text-sm text-stone-400">Price Range</div>
                   </div>
                 </div>
               </div>
@@ -407,36 +408,36 @@ export default function NYCBestClubsPage() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-2 text-stone-700">
-                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-padel-green flex-shrink-0 mt-0.5" />
                     <span>{club.location}</span>
                   </div>
                   <div className="flex items-center gap-2 text-stone-700">
-                    <Users className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-padel-green flex-shrink-0" />
                     <span>{club.courts}</span>
                   </div>
                   {club.phone && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`tel:${club.phone}`} className="hover:text-blue-600">{club.phone}</a>
+                      <Phone className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`tel:${club.phone}`} className="hover:text-padel-green">{club.phone}</a>
                     </div>
                   )}
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                      <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>
                   )}
                   {club.email && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                      <a href={`mailto:${club.email}`} className="hover:text-blue-600">{club.email}</a>
+                      <Mail className="w-5 h-5 text-padel-green flex-shrink-0" />
+                      <a href={`mailto:${club.email}`} className="hover:text-padel-green">{club.email}</a>
                     </div>
                   )}
                   {club.hours && (
                     <div className="flex items-center gap-2 text-stone-700">
-                      <Clock className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                      <Clock className="w-5 h-5 text-padel-green flex-shrink-0" />
                       <span>{club.hours}</span>
                     </div>
                   )}
@@ -451,7 +452,7 @@ export default function NYCBestClubsPage() {
                   <ul className="grid md:grid-cols-2 gap-2">
                     {club.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start gap-2 text-stone-700">
-                        <span className="text-blue-600 font-bold">✓</span>
+                        <span className="text-padel-green font-bold">✓</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -462,7 +463,7 @@ export default function NYCBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Programs & Offerings:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.programs.map((program, index) => (
-                      <span key={index} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
+                      <span key={index} className="px-3 py-1 bg-padel-green-light text-padel-green-dark rounded-full text-sm">
                         {program}
                       </span>
                     ))}
@@ -473,7 +474,7 @@ export default function NYCBestClubsPage() {
                   <h4 className="font-bold text-stone-900 mb-3 text-lg">Best For:</h4>
                   <div className="flex flex-wrap gap-2">
                     {club.bestFor.map((item, index) => (
-                      <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                      <span key={index} className="px-3 py-1 bg-padel-green-light text-padel-green-dark rounded-full text-sm font-medium">
                         ✓ {item}
                       </span>
                     ))}
@@ -497,21 +498,21 @@ export default function NYCBestClubsPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl p-8 text-center mt-12">
+        <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in NYC?</h2>
-          <p className="text-xl text-green-100 mb-6">
+          <p className="text-xl text-stone-300 mb-6">
             Find all New York City padel courts in one place
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/new-york/new-york"
-              className="inline-block bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              className="inline-block bg-padel-green text-white px-8 py-4 rounded-lg font-semibold hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-colors"
             >
               View NYC Courts
             </Link>
             <Link
               href="/new-york"
-              className="inline-block bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-400 transition-colors"
+              className="inline-block bg-white/10 border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors"
             >
               All New York Clubs
             </Link>
