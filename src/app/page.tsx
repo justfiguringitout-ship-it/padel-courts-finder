@@ -487,12 +487,18 @@ export default function HomePage() {
                 List your club
               </Link>
               <Link
-                href="/contact"
+                href="/advertise"
                 className="glass-panel inline-flex items-center justify-center rounded-xl text-white font-medium px-7 py-3.5 hover:bg-white/10 transition-colors"
               >
-                Talk to us
+                Featured listings
               </Link>
             </div>
+            <p className="text-sm text-white/40 mt-5">
+              Selling gear or building courts?{" "}
+              <Link href="/advertise" className="text-turf hover:underline">
+                Brand &amp; commercial partnerships &rarr;
+              </Link>
+            </p>
           </div>
         </div>
       </section>
