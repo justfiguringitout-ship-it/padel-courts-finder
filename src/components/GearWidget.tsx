@@ -1,6 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { TrackedLink } from "@/components/TrackedLink";
+import { RacketQuiz } from "@/components/racket-quiz";
 
 const products = [
   {
@@ -27,6 +31,16 @@ const products = [
 ];
 
 export function GearWidget() {
+  const [showQuiz, setShowQuiz] = useState(false);
+
+  if (showQuiz) {
+    return (
+      <section className="mt-12">
+        <RacketQuiz />
+      </section>
+    );
+  }
+
   return (
     <section className="mt-12">
       <div className="grain relative bg-court text-white rounded-3xl overflow-hidden">
@@ -39,14 +53,15 @@ export function GearWidget() {
             </h3>
             <p className="text-white/60 mb-6 max-w-sm">
               Three questions, one honest pick from the rackets we&apos;ve actually rated.
+              Answer right here — no need to leave this page.
             </p>
-            <Link
-              href="/equipment#racket-quiz"
+            <button
+              onClick={() => setShowQuiz(true)}
               className="inline-flex items-center gap-2 rounded-xl bg-padel-green hover:bg-padel-green-dark active:scale-[0.98] text-white font-semibold px-6 py-3 transition-all shadow-lg shadow-padel-green/25"
             >
               Take the 20-second quiz
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </button>
           </div>
 
           {/* Court-day picks */}
