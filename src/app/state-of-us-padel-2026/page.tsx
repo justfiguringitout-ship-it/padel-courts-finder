@@ -121,17 +121,23 @@ export default function StateOfPadelPage() {
   const topStates = sortedStates.slice(0, 10);
   const maxCount = topStates[0]?.courtCount || 1;
 
-  // Coverage gaps: metros with no listed club within 25 miles
-  const located = clubs.filter(
-    (c) => Number.isFinite(c.coordinates?.latitude) && Number.isFinite(c.coordinates?.longitude)
-  );
+  // Coverage gaps: metros with no OPEN club within 25 miles.
+  // Coming-soon clubs don't count as somewhere to play — but we surface
+  // them so a desert with clubs in build-out is labeled honestly.
+  const locatable = (c: (typeof clubs)[number]) =>
+    Number.isFinite(c.coordinates?.latitude) && Number.isFinite(c.coordinates?.longitude);
+  const openLocated = clubs.filter((c) => locatable(c) && c.status !== "coming_soon" && c.status !== "temporarily_closed");
+  const pipelineLocated = clubs.filter((c) => locatable(c) && c.status === "coming_soon");
   const deserts = METROS.map((m) => {
     let nearest = Infinity;
-    for (const c of located) {
+    for (const c of openLocated) {
       const d = haversineMiles(m.lat, m.lng, c.coordinates.latitude, c.coordinates.longitude);
       if (d < nearest) nearest = d;
     }
-    return { ...m, nearest };
+    const incoming = pipelineLocated.filter(
+      (c) => haversineMiles(m.lat, m.lng, c.coordinates.latitude, c.coordinates.longitude) <= 25
+    );
+    return { ...m, nearest, incoming };
   })
     .filter((m) => m.nearest > 25)
     .sort((a, b) => b.nearest - a.nearest);
@@ -419,12 +425,14 @@ export default function StateOfPadelPage() {
               </p>
             </div>
             {deserts.length > 0 ? (
+              <>
               <div className="overflow-x-auto rounded-xl border border-stone-200">
                 <table className="w-full text-sm bg-white">
                   <thead>
                     <tr className="bg-stone-50 text-left">
                       <th className="p-3 font-semibold">City</th>
-                      <th className="p-3 font-semibold">Nearest listed club</th>
+                      <th className="p-3 font-semibold">Nearest open club</th>
+                      <th className="p-3 font-semibold">In the pipeline</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -432,13 +440,28 @@ export default function StateOfPadelPage() {
                       <tr key={d.name} className="border-t border-stone-100">
                         <td className="p-3 font-medium">{d.name}</td>
                         <td className="p-3 tabular-nums text-stone-600">
-                          {Number.isFinite(d.nearest) ? `${Math.round(d.nearest)} miles away` : "—"}
+                          {Number.isFinite(d.nearest) ? `~${Math.round(d.nearest)} miles` : "—"}
+                        </td>
+                        <td className="p-3 text-stone-600">
+                          {d.incoming.length > 0 ? (
+                            <span className="text-amber-700">
+                              {d.incoming.map((c) => c.name).join(", ")} in build-out
+                            </span>
+                          ) : (
+                            "none announced"
+                          )}
                         </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
+              <p className="text-xs text-stone-400 mt-3">
+                Distances are straight-line from the city center to the nearest open club in our
+                directory. &quot;In the pipeline&quot; lists announced clubs within 25 miles that
+                haven&apos;t opened yet.
+              </p>
+              </>
             ) : (
               <p className="text-stone-600">
                 Every major metro we track now has at least one club within 25 miles.
