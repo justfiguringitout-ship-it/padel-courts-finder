@@ -39,6 +39,21 @@ export const metadata: Metadata = {
     "padel facilities",
     "padel USA",
   ],
+  openGraph: {
+    siteName: "Padel Courts Finder",
+    images: [
+      {
+        url: "https://www.padelcourtsfinder.com/og/default.png",
+        width: 1200,
+        height: 630,
+        alt: "Padel Courts Finder — every padel court in America",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://www.padelcourtsfinder.com/og/default.png"],
+  },
 };
 
 export default function RootLayout({
@@ -115,7 +130,10 @@ export default function RootLayout({
                 </ul>
               </div>
             </div>
-            <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
+            <p className="text-xs text-white/30 mt-10">
+              As an Amazon Associate, Padel Courts Finder earns from qualifying purchases.
+            </p>
+            <div className="border-t border-white/10 mt-4 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
               <span>© {new Date().getFullYear()} Padel Courts Finder. All rights reserved.</span>
               <div className="flex gap-5">
                 <Link href="/privacy" className="hover:text-white/70 transition-colors">Privacy Policy</Link>

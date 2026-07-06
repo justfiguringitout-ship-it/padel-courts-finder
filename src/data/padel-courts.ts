@@ -5748,7 +5748,7 @@ export const padelCourts: PadelCourt[] = [
       "locker rooms",
       "event spaces",
     ],
-    coordinates: { lat: 39.833, lng: -98.5748 }, // coordinates estimated
+    coordinates: { lat: 37.9765, lng: -122.5341 }, // city-center estimate
     instagram: "https://www.instagram.com/flyteracquetclub",
     facebook: "https://www.facebook.com/p/Flyte-Racquet-Club-61567269492328/",
     membersOnly: false,
@@ -5791,7 +5791,7 @@ export const padelCourts: PadelCourt[] = [
       "beachfront location",
     ],
     courtSurface: "hard / asphalt",
-    coordinates: { lat: 39.8333, lng: -98.5745 }, // coordinates estimated
+    coordinates: { lat: 33.9820, lng: -118.4725 }, // city-center estimate
     instagram: "@pop_paddle_venice",
     facebook: "https://www.facebook.com/pop.paddle.venice/",
     membersOnly: false,
@@ -5830,7 +5830,7 @@ export const padelCourts: PadelCourt[] = [
       "Tennis courts (6)",
       "pickleball courts",
     ],
-    coordinates: { lat: 39.8354, lng: -98.5724 }, // coordinates estimated
+    coordinates: { lat: 39.1911, lng: -106.8175 }, // city-center estimate
     instagram: "@aspenpadelclub",
     membersOnly: true,
     status: "open",
@@ -6001,7 +6001,7 @@ export const padelCourts: PadelCourt[] = [
       "youth camps",
     ],
     courtSurface: "professional (unknown specific type)",
-    coordinates: { lat: 39.8288, lng: -98.579 }, // coordinates estimated
+    coordinates: { lat: 41.2735, lng: -72.8151 }, // city-center estimate
     facebook: "https://www.facebook.com/Serveandsmashpadel/",
     membersOnly: false,
     lessonsAvailable: true,
@@ -6044,7 +6044,7 @@ export const padelCourts: PadelCourt[] = [
       "pickleball courts (4)",
       "platform tennis courts (5)",
     ],
-    coordinates: { lat: 39.8332, lng: -98.5746 }, // coordinates estimated
+    coordinates: { lat: 41.1438, lng: -73.4918 }, // city-center estimate
     instagram: "@newcanaanfieldclub",
     facebook: "https://www.facebook.com/ncfieldclub/",
     membersOnly: true,
@@ -6084,7 +6084,7 @@ export const padelCourts: PadelCourt[] = [
       "parking",
     ],
     courtSurface: "synthetic turf with sand infill / artificial turf",
-    coordinates: { lat: 39.8342, lng: -98.5736 }, // coordinates estimated
+    coordinates: { lat: 41.6976, lng: -72.7171 }, // city-center estimate
     instagram: "@padelsmashofficial",
     membersOnly: false,
     lessonsAvailable: true,
@@ -6746,7 +6746,7 @@ export const padelCourts: PadelCourt[] = [
       "free parking",
       "wellness/fitness services",
     ],
-    coordinates: { lat: 39.8368, lng: -98.571 }, // coordinates estimated
+    coordinates: { lat: 26.7774, lng: -80.2396 }, // city-center estimate
     instagram: "@xcelpadel",
     facebook: "https://www.facebook.com/xcelpadel/",
     membersOnly: false,
@@ -6790,7 +6790,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop (tennis shop in reviews)",
       "cryotherapy/salt room (prior branding)",
     ],
-    coordinates: { lat: 39.8378, lng: -98.57 }, // coordinates estimated
+    coordinates: { lat: 28.2246, lng: -82.1872 }, // city-center estimate
     instagram: "@mouratoglou_academy_florida",
     facebook: "https://www.facebook.com/mouratoglouacademyzephyrhills/",
     membersOnly: false,
@@ -6956,7 +6956,7 @@ export const padelCourts: PadelCourt[] = [
       "boxing studio",
       "group fitness classes",
     ],
-    coordinates: { lat: 39.8321, lng: -98.5757 }, // coordinates estimated
+    coordinates: { lat: 41.5638, lng: -87.6716 }, // city-center estimate
     instagram: "@hfracquetandfitness",
     facebook: "https://www.facebook.com/hfracquetandfitnessclub",
     membersOnly: false,
@@ -7040,7 +7040,7 @@ export const padelCourts: PadelCourt[] = [
       "equipment rentals",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 39.8298, lng: -98.578 }, // coordinates estimated
+    coordinates: { lat: 38.2467, lng: -85.7555 }, // city-center estimate
     instagram: "@playpatl",
     facebook: "https://www.facebook.com/p/PATL-Louisville-61576365762518/",
     membersOnly: false,
@@ -7168,7 +7168,7 @@ export const padelCourts: PadelCourt[] = [
       "refreshment/social areas; Members Lounge coming Spring 2026",
     ],
     courtSurface: "artificial turf (blue)",
-    coordinates: { lat: 39.8349, lng: -98.5729 }, // coordinates estimated
+    coordinates: { lat: 39.3653, lng: -76.7165 }, // city-center estimate
     instagram: "@bmorepadel",
     facebook: "https://www.facebook.com/p/BMore-Padel-61558680937953/",
     membersOnly: false,
@@ -7214,7 +7214,7 @@ export const padelCourts: PadelCourt[] = [
       "yoga studio",
     ],
     courtSurface: "sand-filled artificial turf with glass walls",
-    coordinates: { lat: 39.8294, lng: -98.5784 }, // coordinates estimated
+    coordinates: { lat: 39.3141, lng: -76.5218 }, // city-center estimate
     facebook: "https://www.facebook.com/pvstc",
     membersOnly: false,
     lessonsAvailable: true,
@@ -7257,7 +7257,7 @@ export const padelCourts: PadelCourt[] = [
       "bowling",
       "summer camp",
     ],
-    coordinates: { lat: 39.8296, lng: -98.5782 }, // coordinates estimated
+    coordinates: { lat: 39.3985, lng: -76.6049 }, // city-center estimate
     instagram: "@lhirondelleclubofficial",
     facebook: "https://www.facebook.com/pages/LHirondelle-Club/137605309595345",
     membersOnly: true,
@@ -7299,7 +7299,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop services (racket restringing)",
       "video game room",
     ],
-    coordinates: { lat: 39.8322, lng: -98.5756 }, // coordinates estimated
+    coordinates: { lat: 44.1834, lng: -69.0726 }, // city-center estimate
     instagram: "@midcoastrec",
     facebook: "https://www.facebook.com/midcoastrecreation",
     membersOnly: false,
@@ -7342,7 +7342,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop (likely)",
       "court cameras",
     ],
-    coordinates: { lat: 39.8355, lng: -98.5723 }, // coordinates estimated
+    coordinates: { lat: 44.8865, lng: -93.1358 }, // city-center estimate
     instagram: "@heightsracquetclub",
     facebook: "https://www.facebook.com/heightsracquetclub",
     membersOnly: true,
@@ -7384,7 +7384,7 @@ export const padelCourts: PadelCourt[] = [
       "leagues & tournaments",
     ],
     courtSurface: "artificial turf (Galis panoramic Mundial)",
-    coordinates: { lat: 39.8332, lng: -98.5746 }, // coordinates estimated
+    coordinates: { lat: 38.6713, lng: -90.3702 }, // city-center estimate
     instagram: "@padelandpicklestl",
     facebook: "https://www.facebook.com/PadelandPickleSTL/",
     membersOnly: false,
@@ -7474,7 +7474,7 @@ export const padelCourts: PadelCourt[] = [
       "café",
     ],
     courtSurface: "premium synthetic turf",
-    coordinates: { lat: 39.8291, lng: -98.5787 }, // coordinates estimated
+    coordinates: { lat: 40.9324, lng: -73.9623 }, // city-center estimate
     instagram: "@padelunitedsc",
     facebook: "https://www.facebook.com/padelunitedsc",
     membersOnly: false,
@@ -7520,7 +7520,7 @@ export const padelCourts: PadelCourt[] = [
       "coworking spaces",
       "cafe",
     ],
-    coordinates: { lat: 39.8339, lng: -98.5739 }, // coordinates estimated
+    coordinates: { lat: 40.8141, lng: -74.3646 }, // city-center estimate
     instagram: "@vamosracquets",
     facebook: "https://www.facebook.com/p/Vamos-Racquets-61577748081633/",
     membersOnly: false,
@@ -7568,7 +7568,7 @@ export const padelCourts: PadelCourt[] = [
       "lockers",
       "free parking",
     ],
-    coordinates: { lat: 39.8289, lng: -98.5789 }, // coordinates estimated
+    coordinates: { lat: 40.8899, lng: -73.9696 }, // city-center estimate
     instagram: "@englewoodfieldclubnj",
     facebook: "https://www.facebook.com/englewoodfieldclub1887",
     membersOnly: true,
@@ -7612,7 +7612,7 @@ export const padelCourts: PadelCourt[] = [
       "WiFi",
     ],
     courtSurface: "artificial grass",
-    coordinates: { lat: 39.8346, lng: -98.5732 }, // coordinates estimated
+    coordinates: { lat: 40.4676, lng: -74.6372 }, // city-center estimate
     instagram: "@accesspadel.us",
     facebook: "https://www.facebook.com/p/Access-Padel-Somerset-61580886097950/",
     membersOnly: false,
@@ -7739,7 +7739,7 @@ export const padelCourts: PadelCourt[] = [
       "events",
     ],
     courtSurface: "premium turf",
-    coordinates: { lat: 39.8341, lng: -98.5737 }, // coordinates estimated
+    coordinates: { lat: 40.3280, lng: -74.4282 }, // city-center estimate
     instagram: "@theclubatmonroe",
     facebook: "https://www.facebook.com/theclubatmonroe",
     membersOnly: false,
@@ -7822,7 +7822,7 @@ export const padelCourts: PadelCourt[] = [
       "free intro clinics",
       "pizza & padel nights",
     ],
-    coordinates: { lat: 39.8291, lng: -98.5787 }, // coordinates estimated
+    coordinates: { lat: 41.0102, lng: -74.2703 }, // city-center estimate
     instagram: "https://www.instagram.com/raxnj_padel/",
     membersOnly: false,
     lessonsAvailable: true,
@@ -7946,7 +7946,7 @@ export const padelCourts: PadelCourt[] = [
       "dining clubhouse",
     ],
     courtSurface: "platform (platform tennis/padel)",
-    coordinates: { lat: 39.829, lng: -98.5788 }, // coordinates estimated
+    coordinates: { lat: 40.9545, lng: -73.7386 }, // city-center estimate
     instagram: "@orientabeachclub (location-tagged)",
     facebook: "https://www.facebook.com/orientabeachclub",
     membersOnly: true,
@@ -8029,7 +8029,7 @@ export const padelCourts: PadelCourt[] = [
       "sauna",
       "cold plunge",
     ],
-    coordinates: { lat: 39.8302, lng: -98.5776 }, // coordinates estimated
+    coordinates: { lat: 40.8232, lng: -73.4961 }, // city-center estimate
     instagram: "@padelandsyosset",
     facebook: "https://www.facebook.com/61581853927452",
     membersOnly: false,
@@ -8071,7 +8071,7 @@ export const padelCourts: PadelCourt[] = [
       "golf",
       "fitness",
     ],
-    coordinates: { lat: 39.8373, lng: -98.5705 }, // coordinates estimated
+    coordinates: { lat: 41.1984, lng: -74.2089 }, // city-center estimate
     instagram: "https://www.instagram.com/the_tuxedo_club_/)",
     facebook: "https://www.facebook.com/tuxedo1886/",
     membersOnly: true,
@@ -8114,7 +8114,7 @@ export const padelCourts: PadelCourt[] = [
       "restrooms",
       "spectator seating",
     ],
-    coordinates: { lat: 39.8351, lng: -98.5727 }, // coordinates estimated
+    coordinates: { lat: 41.5083, lng: -82.0312 }, // city-center estimate
     instagram: "https://www.instagram.com/cleveland_premier_pickleball/",
     facebook: "https://www.facebook.com/p/Cleveland-Premier-Pickleball-100094945802900/",
     membersOnly: false,
@@ -8240,7 +8240,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop discounts for members",
     ],
     courtSurface: "artificial turf (standard for padel)",
-    coordinates: { lat: 39.8355, lng: -98.5723 }, // coordinates estimated
+    coordinates: { lat: 41.4080, lng: -81.6005 }, // city-center estimate
     instagram: "@padelsquare.us",
     facebook: "https://www.facebook.com/p/Padel-Square-USA-61579115284396/",
     membersOnly: false,
@@ -8288,7 +8288,7 @@ export const padelCourts: PadelCourt[] = [
       "free parking",
     ],
     courtSurface: "aluminum (platform paddle tennis)",
-    coordinates: { lat: 39.8358, lng: -98.572 }, // coordinates estimated
+    coordinates: { lat: 39.2646, lng: -84.4654 }, // city-center estimate
     facebook: "https://www.facebook.com/115799811782826",
     membersOnly: true,
     lessonsAvailable: true,
@@ -8329,7 +8329,7 @@ export const padelCourts: PadelCourt[] = [
       "dining",
       "pro shop",
     ],
-    coordinates: { lat: 39.8324, lng: -98.5754 }, // coordinates estimated
+    coordinates: { lat: 35.4646, lng: -97.5194 }, // city-center estimate
     instagram: "@greenspadelokc",
     facebook: "https://www.facebook.com/TheGreensCCOKC",
     membersOnly: true,
@@ -8414,7 +8414,7 @@ export const padelCourts: PadelCourt[] = [
       "AI Volley Trainer",
     ],
     courtSurface: "turf infilled with sand",
-    coordinates: { lat: 39.8372, lng: -98.5706 }, // coordinates estimated
+    coordinates: { lat: 40.0106, lng: -75.2311 }, // city-center estimate
     instagram: "@padelphia.padel",
     facebook: "https://www.facebook.com/PADELphia/",
     membersOnly: false,
@@ -8456,7 +8456,7 @@ export const padelCourts: PadelCourt[] = [
       "spectator seating",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 39.8309, lng: -98.5769 }, // coordinates estimated
+    coordinates: { lat: 40.1094, lng: -75.2064 }, // city-center estimate
     instagram: "@vivapadelpickleball",
     facebook: "https://www.facebook.com/p/VIVA-Padel-Pickleball-61571437247866/",
     membersOnly: false,
@@ -8498,7 +8498,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop implied",
       "event space",
     ],
-    coordinates: { lat: 39.837, lng: -98.5708 }, // coordinates estimated
+    coordinates: { lat: 40.0289, lng: -76.3085 }, // city-center estimate
     instagram: "@rcwathleticclub",
     facebook: "https://www.facebook.com/RCWathleticclub/",
     membersOnly: false,
@@ -8588,7 +8588,7 @@ export const padelCourts: PadelCourt[] = [
       "disabled access",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 39.8354, lng: -98.5724 }, // coordinates estimated
+    coordinates: { lat: 34.7817, lng: -82.3178 }, // city-center estimate
     instagram: "@40fortypadel",
     facebook: "https://www.facebook.com/40fortypadel/",
     membersOnly: false,
@@ -8631,7 +8631,7 @@ export const padelCourts: PadelCourt[] = [
       "ball machine rental",
       "ADA accessible",
     ],
-    coordinates: { lat: 39.8319, lng: -98.5759 }, // coordinates estimated
+    coordinates: { lat: 35.2280, lng: -101.8343 }, // city-center estimate
     facebook: "https://www.facebook.com/aobtf",
     membersOnly: false,
     lessonsAvailable: true,
@@ -8756,7 +8756,7 @@ export const padelCourts: PadelCourt[] = [
       "parking",
     ],
     courtSurface: "sports-grade synthetic turf",
-    coordinates: { lat: 39.8331, lng: -98.5747 }, // coordinates estimated
+    coordinates: { lat: 29.7523, lng: -98.4471 }, // city-center estimate
     instagram: "@pick_and_padel",
     facebook: "https://www.facebook.com/p/Pickandpadel-61556778485946/",
     membersOnly: false,
@@ -8838,7 +8838,7 @@ export const padelCourts: PadelCourt[] = [
       "store",
     ],
     courtSurface: "artificial turf",
-    coordinates: { lat: 39.83, lng: -98.5778 }, // coordinates estimated
+    coordinates: { lat: 28.7151, lng: -100.5055 }, // city-center estimate
     instagram: "https://www.instagram.com/theonepadelclub/",
     membersOnly: false,
     lessonsAvailable: true,
@@ -8960,7 +8960,7 @@ export const padelCourts: PadelCourt[] = [
       "restrooms",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 39.8369, lng: -98.5709 }, // coordinates estimated
+    coordinates: { lat: 26.0944, lng: -98.2600 }, // city-center estimate
     membersOnly: false,
     lessonsAvailable: true,
     rentalAvailable: true,
@@ -9378,7 +9378,7 @@ export const padelCourts: PadelCourt[] = [
       "yoga/fitness/wellness",
     ],
     courtSurface: "artificial turf/sand",
-    coordinates: { lat: 39.8287, lng: -98.5791 }, // coordinates estimated
+    coordinates: { lat: 30.2154, lng: -95.7448 }, // city-center estimate
     instagram: "@upadelclub.us",
     facebook: "https://www.facebook.com/upadelclub.us/",
     membersOnly: false,
@@ -9419,7 +9419,7 @@ export const padelCourts: PadelCourt[] = [
       "Free parking",
       "equipment rental",
     ],
-    coordinates: { lat: 39.8291, lng: -98.5787 }, // coordinates estimated
+    coordinates: { lat: 30.2184, lng: -95.7568 }, // city-center estimate
     instagram: "@woodcourtpadel",
     facebook: "https://www.facebook.com/p/Woodcourt-Padel-61559960946358/",
     membersOnly: false,
@@ -9463,7 +9463,7 @@ export const padelCourts: PadelCourt[] = [
       "kitchen ( pickleball",
       "football 7",
     ],
-    coordinates: { lat: 39.8304, lng: -98.5774 }, // coordinates estimated
+    coordinates: { lat: 26.2099, lng: -98.3253 }, // city-center estimate
     instagram: "@imgnpark",
     facebook: "https://www.facebook.com/imgnpark",
     membersOnly: false,
@@ -9505,7 +9505,7 @@ export const padelCourts: PadelCourt[] = [
       "batting cages",
       "climbing tower",
     ],
-    coordinates: { lat: 39.829, lng: -98.5788 }, // coordinates estimated
+    coordinates: { lat: 26.2129, lng: -98.3223 }, // city-center estimate
     instagram: "@pickle.and.padel, @incredibowl",
     facebook: "https://www.facebook.com/MissionIncredibowl",
     membersOnly: false,
@@ -9551,7 +9551,7 @@ export const padelCourts: PadelCourt[] = [
       "changing rooms",
     ],
     courtSurface: "artificial turf",
-    coordinates: { lat: 39.8365, lng: -98.5713 }, // coordinates estimated
+    coordinates: { lat: 26.2159, lng: -98.3193 }, // city-center estimate
     instagram: "https://www.instagram.com/rgvpadelclub/",
     facebook: "https://www.facebook.com/rgvpadelclub/",
     membersOnly: false,
@@ -9593,7 +9593,7 @@ export const padelCourts: PadelCourt[] = [
       "swimming pool",
       "restaurant",
     ],
-    coordinates: { lat: 39.8322, lng: -98.5756 }, // coordinates estimated
+    coordinates: { lat: 26.0414, lng: -97.5621 }, // city-center estimate
     instagram: "@ranchoviejorcc",
     facebook: "https://www.facebook.com/ranchoviejorcc/",
     membersOnly: true,
@@ -9720,7 +9720,7 @@ export const padelCourts: PadelCourt[] = [
       "tennis courts",
       "fitness",
     ],
-    coordinates: { lat: 39.8333, lng: -98.5745 }, // coordinates estimated
+    coordinates: { lat: 30.0829, lng: -95.4172 }, // city-center estimate
     instagram: "@giammalvapadel",
     facebook: "https://www.facebook.com/GiammalvaRacquetClub",
     membersOnly: false,
@@ -9765,7 +9765,7 @@ export const padelCourts: PadelCourt[] = [
       "PT/massage room",
       "exercise studio",
     ],
-    coordinates: { lat: 39.8375, lng: -98.5703 }, // coordinates estimated
+    coordinates: { lat: 40.6007, lng: -111.9451 }, // city-center estimate
     instagram: "@padelparkut",
     facebook: "https://www.facebook.com/p/Padel-Park-Utah-61567836585591/",
     membersOnly: false,
@@ -9807,7 +9807,7 @@ export const padelCourts: PadelCourt[] = [
       "trails",
       "athletic fields",
     ],
-    coordinates: { lat: 39.8378, lng: -98.57 }, // coordinates estimated
+    coordinates: { lat: 38.0233, lng: -78.4797 }, // city-center estimate
     membersOnly: true,
     lessonsAvailable: true,
     positiveReviewThemes: "Well-maintained lighted courts; friendly staff; family-friendly pools/playground",
@@ -9892,7 +9892,7 @@ export const padelCourts: PadelCourt[] = [
       "fire pit",
     ],
     courtSurface: "artificial turf",
-    coordinates: { lat: 39.8317, lng: -98.5761 }, // coordinates estimated
+    coordinates: { lat: 42.8736, lng: -72.8778 }, // city-center estimate
     instagram: "@brookboundinnvt",
     facebook: "https://www.facebook.com/p/Brook-Bound-in-Wilmington-Vermont-100057354853768/",
     membersOnly: false,
@@ -13871,6 +13871,141 @@ export const padelCourts: PadelCourt[] = [
     courtType: "indoor",
     amenities: ["lounge", "bar", "sauna", "cold plunge"],
     coordinates: { lat: 30.2911, lng: -81.3931 }, // coordinates estimated
+    membersOnly: false,
+    status: "coming_soon",
+    verified: false,
+  },
+  {
+    id: 455,
+    name: "Jam Padel",
+    address: "Spring District",
+    city: "Bellevue",
+    state: "WA",
+    zipCode: "98005",
+    phone: "425-546-6391",
+    email: "hello@jampadelclub.com",
+    website: "https://jampadelclub.com",
+    rating: 0,
+    reviewCount: 0,
+    openingHours: {
+      monday: "7h-23h", tuesday: "7h-23h", wednesday: "7h-23h", thursday: "7h-23h",
+      friday: "7h-23h", saturday: "7h-23h", sunday: "7h-23h",
+    },
+    description: "Jam Padel (formerly Pacific Padel Project) brings padel to the Seattle metro with 3 outdoor courts in Bellevue's Spring District — rackets included with bookings, guided open play, and founding memberships.",
+    numberOfCourts: 3,
+    courtType: "outdoor",
+    amenities: ["rackets included", "pro shop", "guided open play"],
+    coordinates: { lat: 47.6229, lng: -122.1802 }, // city-center estimate
+    instagram: "@jampadelus",
+    membersOnly: false,
+    lessonsAvailable: true,
+    rentalAvailable: true,
+    pricingText: "Drop-in from $25/hr; founding memberships $1,200/4 months (3x weekly) or $2,200/4 months (5x weekly)",
+    status: "open",
+    verified: false,
+  },
+  {
+    id: 456,
+    name: "Cascadia Padel",
+    address: "Kirkland (location TBA)",
+    city: "Kirkland",
+    state: "WA",
+    zipCode: "98033",
+    email: "hello@cascadiapadel.com",
+    website: "https://www.cascadiapadel.com",
+    rating: 0,
+    reviewCount: 0,
+    description: "Cascadia Padel is building an indoor padel club in Kirkland with a clubhouse, pro shop, and cafe — targeting a fall 2026 opening, with pre-launch memberships available now.",
+    courtType: "indoor",
+    coordinates: { lat: 47.6769, lng: -122.2060 }, // city-center estimate
+    membersOnly: false,
+    pricingText: "Pre-launch memberships $50, $75, or $150/mo",
+    status: "coming_soon",
+    verified: false,
+  },
+  {
+    id: 457,
+    name: "Park Padel West Sacramento",
+    address: "985 Riverfront St",
+    city: "West Sacramento",
+    state: "CA",
+    zipCode: "95691",
+    website: "https://parkpadel.com/west-sacramento",
+    rating: 0,
+    reviewCount: 0,
+    openingHours: {
+      monday: "8h-22h", tuesday: "8h-22h", wednesday: "8h-22h", thursday: "8h-22h",
+      friday: "8h-22h", saturday: "8h-21h", sunday: "8h-21h",
+    },
+    description: "Park Padel West Sacramento is a 4-court outdoor panoramic padel club in the Bridge District next to Sutter Health Park, opened in April 2025 — with a lounge, pro shop, riverfront views, and sister clubs in San Francisco.",
+    numberOfCourts: 4,
+    courtType: "outdoor",
+    amenities: ["pro shop", "lounge", "food & drink (Drake's The Barn)", "equipment rental"],
+    coordinates: { lat: 38.5804, lng: -121.5133 }, // city-center estimate
+    instagram: "@park.padel.sac",
+    membersOnly: false,
+    lessonsAvailable: true,
+    rentalAvailable: true,
+    socialArea: true,
+    foodAndDrink: true,
+    pricingText: "Hourly court bookings via Playtomic; Premier membership $50/mo (50% off bookings); Unlimited $75/mo; intro classes from $10",
+    status: "open",
+    verified: false,
+  },
+  {
+    id: 458,
+    name: "Matt's Pickle and Padel",
+    address: "301 Deer Run Rd, Suite 200",
+    city: "Sewickley",
+    state: "PA",
+    zipCode: "15143",
+    phone: "412-534-4979",
+    website: "https://www.mattspickleandpadel.com",
+    rating: 0,
+    reviewCount: 0,
+    description: "Matt's Pickle and Padel is the Pittsburgh metro's first padel facility — 4 indoor padel courts alongside indoor pickleball in Sewickley, with leagues, lessons, youth camps, and open play.",
+    numberOfCourts: 4,
+    courtType: "indoor",
+    amenities: ["indoor pickleball", "leagues & tournaments", "youth camps", "pro shop"],
+    coordinates: { lat: 40.5362, lng: -80.1845 }, // city-center estimate
+    instagram: "@mattspickleandpadel",
+    membersOnly: false,
+    lessonsAvailable: true,
+    status: "open",
+    verified: false,
+  },
+  {
+    id: 459,
+    name: "Epic Padel Milwaukee",
+    address: "12350 W Brown Deer Rd",
+    city: "Milwaukee",
+    state: "WI",
+    zipCode: "53224",
+    website: "https://www.epic-padel.com",
+    rating: 0,
+    reviewCount: 0,
+    description: "Epic Padel — the Arlington, VA operator with clubs in Charlotte and Tysons — is developing a roughly 31,000 sq ft indoor padel complex on Milwaukee's far northwest side.",
+    courtType: "indoor",
+    coordinates: { lat: 43.1770, lng: -88.0640 }, // city-center estimate
+    membersOnly: false,
+    status: "coming_soon",
+    verified: false,
+  },
+  {
+    id: 460,
+    name: "Padel KC",
+    address: "77th St & Floyd St",
+    city: "Overland Park",
+    state: "KS",
+    zipCode: "66204",
+    rating: 0,
+    reviewCount: 0,
+    description: "Padel KC is under construction in downtown Overland Park — a roughly 20,000 sq ft facility planned for 4 indoor and 2 outdoor padel courts with a small upstairs restaurant, approved by the city council in 2024.",
+    numberOfCourts: 6,
+    courtType: "both",
+    indoorCourts: 4,
+    outdoorCourts: 2,
+    coordinates: { lat: 38.9967, lng: -94.6690 }, // city-center estimate
     membersOnly: false,
     status: "coming_soon",
     verified: false,

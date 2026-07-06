@@ -73,6 +73,7 @@ export function getStates(): StateInfo[] {
       SC: "South Carolina",
       VT: "Vermont",
       RI: "Rhode Island",
+      WA: "Washington",
     };
 
     const stateName = stateNames[stateCode] || stateCode;

@@ -17,11 +17,20 @@ export const metadata: Metadata = {
     url: "https://www.padelcourtsfinder.com/state-of-us-padel-2026",
     siteName: "Padel Courts Finder",
     type: "article",
+    images: [
+      {
+        url: "https://www.padelcourtsfinder.com/og/state-of-us-padel-2026.png",
+        width: 1200,
+        height: 630,
+        alt: "The State of US Padel 2026 — original data from Padel Courts Finder",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "The State of US Padel 2026",
     description: "Original data on the American padel boom, from the most comprehensive US padel directory.",
+    images: ["https://www.padelcourtsfinder.com/og/state-of-us-padel-2026.png"],
   },
 };
 
@@ -65,6 +74,17 @@ const METROS: Array<{ name: string; lat: number; lng: number }> = [
   { name: "Cincinnati", lat: 39.1, lng: -84.51 },
   { name: "Tampa", lat: 27.95, lng: -82.46 },
   { name: "Salt Lake City", lat: 40.76, lng: -111.89 },
+  { name: "Albuquerque", lat: 35.08, lng: -106.65 },
+  { name: "Oklahoma City", lat: 35.47, lng: -97.52 },
+  { name: "Louisville", lat: 38.25, lng: -85.76 },
+  { name: "Richmond", lat: 37.54, lng: -77.44 },
+  { name: "Raleigh", lat: 35.78, lng: -78.64 },
+  { name: "Buffalo", lat: 42.89, lng: -78.88 },
+  { name: "Fresno", lat: 36.75, lng: -119.77 },
+  { name: "Omaha", lat: 41.26, lng: -95.93 },
+  { name: "Birmingham", lat: 33.52, lng: -86.81 },
+  { name: "Virginia Beach", lat: 36.85, lng: -75.98 },
+  { name: "Hartford", lat: 41.76, lng: -72.67 },
 ];
 
 function haversineMiles(lat1: number, lng1: number, lat2: number, lng2: number) {
@@ -381,10 +401,15 @@ export default function StateOfPadelPage() {
             </h2>
             <div className="space-y-4 text-stone-700 leading-relaxed max-w-3xl mb-8">
               <p>
-                Major US cities with no listed club within 25 miles of downtown — the clearest
-                map of where the opportunity still sits for operators and investors. These are
-                not small towns: each is a top-40 metro where, today, a padel-curious player has
-                nowhere to play without a road trip.
+                Major US cities with no club in our directory within 25 miles of downtown —
+                the clearest map of where the opportunity still sits for operators and
+                investors. These are not small towns: each is a top-40 metro where, as far as
+                our verified listings show, a padel-curious player has nowhere to play without
+                a road trip. Know a club we&apos;re missing?{" "}
+                <Link href="/list-your-court" className="text-padel-green hover:underline">
+                  Tell us
+                </Link>{" "}
+                and we&apos;ll verify and update this analysis.
               </p>
               <p>
                 If the USPA&apos;s 30,000-courts-by-2030 projection is even half right, most of

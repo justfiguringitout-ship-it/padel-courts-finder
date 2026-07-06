@@ -85,7 +85,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       type: "website",
       images: [
         {
-          url: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+          url: "https://www.padelcourtsfinder.com/og/default.png",
           width: 1200,
           height: 630,
           alt: `Padel Courts in ${city.name}, ${state.name}`,
@@ -96,7 +96,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       card: "summary_large_image",
       title,
       description,
-      images: ["https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop"],
+      images: ["https://www.padelcourtsfinder.com/og/default.png"],
     },
     alternates: {
       canonical: canonicalUrl,

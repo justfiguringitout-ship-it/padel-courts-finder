@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'Discover San Francisco\'s 3 best padel clubs in 2026. Bay views, indoor courts & world-class facilities. Rankings, pricing & Bay Area guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-san-francisco',
     type: 'article',
-    images: [{ url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop' }],
+    images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
   },
 };
 
@@ -140,7 +140,7 @@ export default function SanFranciscoBestClubsPage() {
     "@type": "Article",
     "headline": "Best Padel Clubs in San Francisco (2026) | Bay Area Padel Guide",
     "description": "Discover San Francisco's 3 best padel clubs in 2026. Bay views, indoor courts & world-class facilities.",
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
     "author": {
@@ -386,7 +386,7 @@ export default function SanFranciscoBestClubsPage() {
               <h4 className="font-bold text-stone-900 mb-2">Best Clubs in San Diego</h4>
               <p className="text-sm text-stone-600">Perfect weather padel paradise</p>
             </Link>
-            <Link href="/blog/best-padel-clubs-new-york" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
+            <Link href="/blog/best-padel-clubs-nyc" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-stone-900 mb-2">Best Clubs in New York</h4>
               <p className="text-sm text-stone-600">NYC&apos;s booming padel scene</p>
             </Link>

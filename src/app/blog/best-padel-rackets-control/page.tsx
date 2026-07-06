@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: 'The 5 best control padel rackets of 2026, ranked by our control and comfort scores. Precision-first, arm-friendly picks for every level, from $89 to $272.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-rackets-control',
     type: 'article',
-    images: [{ url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop' }],
+    images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,7 +29,7 @@ export default function ControlRacketsPage() {
     "@type": "Article",
     "headline": "Best Control Padel Rackets (2026) — Top 5 for Precision & Comfort",
     "description": "The 5 best control padel rackets of 2026, ranked by our control and comfort scores. Precision-first, arm-friendly picks from $89 to $272.",
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-07-03T00:00:00Z",
     "dateModified": "2026-07-03T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },

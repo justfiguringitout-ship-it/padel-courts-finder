@@ -363,13 +363,14 @@ function getStateName(stateCode: string): string {
     SC: "South Carolina",
     VT: "Vermont",
     RI: "Rhode Island",
+    WA: "Washington",
   };
 
   return stateNames[stateCode] || stateCode;
 }
 
 // City center coordinates for geocoding fallback when specific coordinates not available
-function getCityDefaultCoordinates(city: string, state: string): { latitude: number; longitude: number } {
+function getCityDefaultCoordinates(city: string, state: string): { latitude: number; longitude: number } | undefined {
   const cityCoords: Record<string, { latitude: number; longitude: number }> = {
     // Florida
     "Miami": { latitude: 25.7617, longitude: -80.1918 },
@@ -633,8 +634,11 @@ function getCityDefaultCoordinates(city: string, state: string): { latitude: num
     "Wilmington": { latitude: 42.8676, longitude: -72.8718 },
   };
 
-  // Return city coordinates if found, otherwise return geographic center of USA
-  return cityCoords[city] || { latitude: 39.8283, longitude: -98.5795 };
+  // Return city coordinates if found. Unknown cities get NO coordinates —
+  // a fabricated center-of-USA fallback puts clubs in rural Kansas on the
+  // map and corrupts distance-based analysis. Consumers already skip
+  // clubs without coordinates.
+  return cityCoords[city];
 }
 
 // Adapted court interface for page template

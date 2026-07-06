@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Padel vs pickleball \u2014 what\u2019s the difference? We compare courts, rules, equipment, cost, fitness, and difficulty. Find out which sport is right for you.',
     url: 'https://www.padelcourtsfinder.com/blog/padel-vs-pickleball',
     type: 'article',
-    images: [{ url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop' }],
+    images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
   },
 };
 
@@ -22,7 +22,7 @@ export default function PadelVsPickleballPage() {
     "@type": "Article",
     "headline": "Padel vs Pickleball: What\u2019s the Difference? (2026 Guide)",
     "description": "Padel vs pickleball \u2014 we compare courts, rules, equipment, cost, fitness, and difficulty. Find out which sport is right for you.",
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-25T00:00:00Z",
     "dateModified": "2026-03-25T00:00:00Z",
     "author": {

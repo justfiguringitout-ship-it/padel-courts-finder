@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: 'The best padel gifts for Mother\'s Day 2026. From beginner rackets to premium bags, 12 curated picks at every budget — $14 to $399.',
     url: 'https://www.padelcourtsfinder.com/blog/padel-gifts-mothers-day-2026',
     type: 'article',
-    images: [{ url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop' }],
+    images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
   },
 };
 
@@ -24,7 +24,7 @@ export default function MothersDay2026GiftGuidePage() {
     "@type": "Article",
     "headline": "Best Padel Gifts for Mom (2026) — 12 Ideas She'll Actually Use",
     "description": "The best padel gifts for Mother's Day 2026. From beginner rackets to premium bags, 12 curated picks at every budget — $14 to $399.",
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-25T00:00:00Z",
     "dateModified": "2026-07-04T00:00:00Z",
     "author": {

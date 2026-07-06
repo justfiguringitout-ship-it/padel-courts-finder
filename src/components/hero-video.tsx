@@ -20,23 +20,44 @@ export function HeroVideo({ variant = "light" }: HeroVideoProps) {
   const [loaded, setLoaded] = useState(false);
   const currentFrameRef = useRef(-1);
 
-  // Preload all frames
+  // Preload frames only once the component is near the viewport —
+  // eagerly fetching 121 JPEGs on page load was a real cost on pages
+  // where this sits below the fold.
   useEffect(() => {
-    let loadedCount = 0;
-    const images: HTMLImageElement[] = new Array(TOTAL_FRAMES);
+    const container = containerRef.current;
+    if (!container) return;
 
-    for (let i = 0; i < TOTAL_FRAMES; i++) {
-      const img = new Image();
-      img.src = getFrameSrc(i);
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === TOTAL_FRAMES) {
-          imagesRef.current = images;
-          setLoaded(true);
+    let started = false;
+    const startLoading = () => {
+      if (started) return;
+      started = true;
+      let loadedCount = 0;
+      const images: HTMLImageElement[] = new Array(TOTAL_FRAMES);
+      for (let i = 0; i < TOTAL_FRAMES; i++) {
+        const img = new Image();
+        img.src = getFrameSrc(i);
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === TOTAL_FRAMES) {
+            imagesRef.current = images;
+            setLoaded(true);
+          }
+        };
+        images[i] = img;
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          startLoading();
+          observer.disconnect();
         }
-      };
-      images[i] = img;
-    }
+      },
+      { rootMargin: "150% 0px" }
+    );
+    observer.observe(container);
+    return () => observer.disconnect();
   }, []);
 
   // Draw frame 0 as soon as it loads, then wire up scroll

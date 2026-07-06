@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Ready to upgrade your padel racket? We compare the 5 best intermediate padel rackets in 2026, from $170 to $280. Carbon surfaces, teardrop shapes, and pro-level tech.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-rackets-intermediate',
     type: 'article',
-    images: [{ url: 'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop' }],
+    images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
   },
 };
 
@@ -25,7 +25,7 @@ export default function IntermediateRacketsPage() {
     "@type": "Article",
     "headline": "Best Padel Rackets for Intermediate Players (2026) — Top 5 Upgrades",
     "description": "Ready to upgrade your padel racket? We compare the 5 best intermediate padel rackets in 2026, from $170 to $280.",
-    "image": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-24T00:00:00Z",
     "dateModified": "2026-07-03T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },

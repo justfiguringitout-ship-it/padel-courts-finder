@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop",
+        url: "https://www.padelcourtsfinder.com/og/default.png",
         width: 1200,
         height: 630,
         alt: "Padel Courts Near Me - Find padel clubs across the USA",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Padel Courts Near Me | Find & Book 313+ Padel Courts in the USA",
     description: "Find padel courts near you. Browse 313+ padel clubs across 37 states. Compare prices, read reviews, and book courts online.",
-    images: ["https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=630&fit=crop"],
+    images: ["https://www.padelcourtsfinder.com/og/default.png"],
   },
   alternates: {
     canonical: "https://www.padelcourtsfinder.com",
