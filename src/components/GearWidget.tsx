@@ -1,67 +1,87 @@
-'use client';
-
-import Link from 'next/link';
-import { TrackedLink } from '@/components/TrackedLink';
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { TrackedLink } from "@/components/TrackedLink";
 
 const products = [
   {
-    name: 'Babolat Contact',
-    tagline: 'Best beginner racket',
-    price: '$89.95',
-    url: 'https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20',
+    name: "Wilson Optix V1",
+    tagline: "Beginner racket · 10/10 comfort in our tests",
+    price: "$109.00",
+    url: "https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20",
+    more: "/blog/best-padel-rackets-beginners",
   },
   {
-    name: 'HEAD Padel Pro S',
-    tagline: 'Official WPT match balls',
-    price: '$13.91',
-    url: 'https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20',
+    name: "HEAD Padel Pro S",
+    tagline: "The ball at most US clubs",
+    price: "$13.91",
+    url: "https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20",
+    more: "/blog/best-padel-balls",
   },
   {
-    name: 'Wilson Pro Overgrip 12-Pack',
-    tagline: 'Most popular overgrip',
-    price: '$27.00',
-    url: 'https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20',
+    name: "Wilson Pro Overgrip 12-Pack",
+    tagline: "The highest-ROI $2 in padel",
+    price: "$27.00",
+    url: "https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20",
+    more: "/blog/padel-accessories",
   },
 ];
 
 export function GearWidget() {
   return (
-    <section className="mt-12 border-t pt-8">
-      <h3 className="text-lg font-semibold text-muted-foreground mb-4">
-        Gear up for your visit
-      </h3>
-      <div className="grid sm:grid-cols-3 gap-4">
-        {products.map((product) => (
-          <div
-            key={product.name}
-            className="bg-white border rounded-lg p-4 flex flex-col"
-          >
-            <div className="text-sm font-bold text-foreground">{product.name}</div>
-            <div className="text-xs text-muted-foreground mt-0.5">{product.tagline}</div>
-            <div className="mt-2">
-              <span className="inline-block text-xs font-semibold bg-stone-900 text-white px-2 py-0.5 rounded">
-                {product.price}
-              </span>
-            </div>
-            <TrackedLink
-              href={product.url}
-              type="affiliate"
-              productName={product.name}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 text-sm font-medium text-amber-600 hover:text-amber-700 transition-colors"
+    <section className="mt-12">
+      <div className="grain relative bg-court text-white rounded-3xl overflow-hidden">
+        <div className="relative p-6 md:p-10 grid md:grid-cols-2 gap-8 items-center">
+          {/* Quiz lead */}
+          <div>
+            <p className="font-mono text-sm text-turf mb-3">racket finder</p>
+            <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">
+              What racket is best for you?
+            </h3>
+            <p className="text-white/60 mb-6 max-w-sm">
+              Three questions, one honest pick from the rackets we&apos;ve actually rated.
+            </p>
+            <Link
+              href="/equipment#racket-quiz"
+              className="inline-flex items-center gap-2 rounded-xl bg-padel-green hover:bg-padel-green-dark active:scale-[0.98] text-white font-semibold px-6 py-3 transition-all shadow-lg shadow-padel-green/25"
             >
-              Shop on Amazon &rarr;
-            </TrackedLink>
+              Take the 20-second quiz
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
-        ))}
+
+          {/* Court-day picks */}
+          <div>
+            <p className="text-sm text-white/50 mb-3">Or grab the court-day basics:</p>
+            <div className="space-y-3">
+              {products.map((p) => (
+                <div
+                  key={p.name}
+                  className="glass-panel rounded-xl px-4 py-3 flex items-center justify-between gap-3"
+                >
+                  <div className="min-w-0">
+                    <Link href={p.more} className="font-medium text-sm hover:text-turf transition-colors">
+                      {p.name}
+                    </Link>
+                    <div className="text-xs text-white/40 truncate">{p.tagline}</div>
+                  </div>
+                  <TrackedLink
+                    href={p.url}
+                    type="affiliate"
+                    productName={p.name}
+                    target="_blank"
+                    className="shrink-0 rounded-lg border border-turf/40 text-turf text-xs font-semibold px-3 py-1.5 hover:bg-turf/10 transition-colors whitespace-nowrap tabular-nums"
+                  >
+                    {p.price} &rarr;
+                  </TrackedLink>
+                </div>
+              ))}
+            </div>
+            <p className="text-[10px] text-white/30 mt-3">
+              From our reviewed guides. Affiliate links support the directory at no cost to you.
+            </p>
+          </div>
+        </div>
       </div>
-      <p className="text-sm text-muted-foreground mt-4">
-        New to padel? See our{' '}
-        <Link href="/blog/best-padel-rackets-beginners" className="text-primary hover:underline">
-          complete beginner gear guide &rarr;
-        </Link>
-      </p>
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getStates, getAllCities } from '@/lib/site-structure';
 import { getAllAdaptedCourtSlugs } from '@/lib/court-adapter';
+import { getPadelNearMetros } from '@/lib/metros';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.padelcourtsfinder.com';
@@ -44,8 +45,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.4,
     },
-    ...['fresno', 'memphis', 'albuquerque', 'buffalo', 'omaha', 'birmingham', 'virginia-beach', 'jacksonville'].map((c) => ({
-      url: `${baseUrl}/padel-near/${c}`,
+    ...getPadelNearMetros().map((mm) => ({
+      url: `${baseUrl}/padel-near/${mm.slug}`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.6,

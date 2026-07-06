@@ -10,11 +10,11 @@ import { TrackedLink } from "@/components/TrackedLink";
 
 const PICKS = [
   {
-    name: "Babolat Contact",
+    name: "Wilson Optix V1",
     label: "Starting out",
-    price: "$89.95",
-    href: "https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20",
-    review: "/blog/babolat-contact-review",
+    price: "$109.00",
+    href: "https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20",
+    review: "/blog/best-padel-rackets-control",
   },
   {
     name: "Wilson Blade Elite V2",

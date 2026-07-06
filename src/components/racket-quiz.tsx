@@ -161,7 +161,7 @@ export function RacketQuiz() {
           <div>
             <p className="font-mono text-sm text-turf mb-2">racket finder</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold">
-              {done ? "Your racket 🎾" : "Answer 3 questions. Get your racket."}
+              {done ? "Your racket 🎾" : "What racket is best for you?"}
             </h2>
           </div>
           {/* Progress dots */}

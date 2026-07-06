@@ -5,25 +5,15 @@ import { getAllAdaptedCourts } from "@/lib/court-adapter";
 import { GearStrip } from "@/components/gear-strip";
 import type { Metadata } from "next";
 
+import { UNIQUE_METROS, getPadelNearMetros } from "@/lib/metros";
+
 /**
- * Long-tail pages for major metros with no padel club yet ("padel deserts").
+ * Long-tail pages for major metros without their own directory city page.
  * Everything is computed live from the directory, so when a city gets its
  * first club these pages automatically flip from "not yet" to "yes".
  */
 
-const METROS: Record<
-  string,
-  { name: string; stateName: string; stateCode: string; lat: number; lng: number }
-> = {
-  fresno: { name: "Fresno", stateName: "California", stateCode: "CA", lat: 36.75, lng: -119.77 },
-  memphis: { name: "Memphis", stateName: "Tennessee", stateCode: "TN", lat: 35.15, lng: -90.05 },
-  albuquerque: { name: "Albuquerque", stateName: "New Mexico", stateCode: "NM", lat: 35.08, lng: -106.65 },
-  buffalo: { name: "Buffalo", stateName: "New York", stateCode: "NY", lat: 42.89, lng: -78.88 },
-  omaha: { name: "Omaha", stateName: "Nebraska", stateCode: "NE", lat: 41.26, lng: -95.93 },
-  birmingham: { name: "Birmingham", stateName: "Alabama", stateCode: "AL", lat: 33.52, lng: -86.81 },
-  "virginia-beach": { name: "Virginia Beach", stateName: "Virginia", stateCode: "VA", lat: 36.85, lng: -75.98 },
-  jacksonville: { name: "Jacksonville", stateName: "Florida", stateCode: "FL", lat: 30.33, lng: -81.66 },
-};
+export const dynamicParams = false;
 
 function haversineMiles(lat1: number, lng1: number, lat2: number, lng2: number) {
   const toRad = (d: number) => (d * Math.PI) / 180;
@@ -37,7 +27,7 @@ function haversineMiles(lat1: number, lng1: number, lat2: number, lng2: number) 
 }
 
 function getCityData(slug: string) {
-  const metro = METROS[slug];
+  const metro = UNIQUE_METROS.find((mm) => mm.slug === slug);
   if (!metro) return null;
   const clubs = getAllAdaptedCourts().filter(
     (c) => Number.isFinite(c.coordinates?.latitude) && Number.isFinite(c.coordinates?.longitude)
@@ -58,7 +48,7 @@ function getCityData(slug: string) {
 }
 
 export function generateStaticParams() {
-  return Object.keys(METROS).map((city) => ({ city }));
+  return getPadelNearMetros().map((mm) => ({ city: mm.slug }));
 }
 
 export async function generateMetadata({
