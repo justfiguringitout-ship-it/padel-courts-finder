@@ -16,6 +16,7 @@ import {
   Calendar, CheckCircle, UtensilsCrossed, Dumbbell, Armchair, GraduationCap
 } from "lucide-react";
 import { getAllAdaptedCourtSlugs, getAdaptedCourtBySlug, getAdaptedRelatedCourts, getTodayHours, isCurrentlyOpen } from "@/lib/court-adapter";
+import { GearStrip } from "@/components/gear-strip";
 import { ClubMapClient } from "@/components/club-map-client";
 import { TrackedLink } from "@/components/TrackedLink";
 import { GearWidget } from "@/components/GearWidget";
@@ -520,6 +521,8 @@ export default async function CourtPage({ params }: CourtPageProps) {
                 </div>
               </CardContent>
             </Card>
+
+            <GearStrip />
           </div>
         </div>
 

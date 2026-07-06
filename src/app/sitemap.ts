@@ -44,6 +44,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.4,
     },
+    ...['fresno', 'memphis', 'albuquerque', 'buffalo', 'omaha', 'birmingham', 'virginia-beach', 'jacksonville'].map((c) => ({
+      url: `${baseUrl}/padel-near/${c}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
     {
       url: `${baseUrl}/how-to-play`,
       lastModified: currentDate,

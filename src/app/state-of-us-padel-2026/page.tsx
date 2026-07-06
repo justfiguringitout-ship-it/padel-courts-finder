@@ -438,7 +438,14 @@ export default function StateOfPadelPage() {
                   <tbody>
                     {deserts.map((d) => (
                       <tr key={d.name} className="border-t border-stone-100">
-                        <td className="p-3 font-medium">{d.name}</td>
+                        <td className="p-3 font-medium">
+                          <Link
+                            href={`/padel-near/${d.name.toLowerCase().replace(/[^a-z]+/g, "-")}`}
+                            className="hover:text-padel-green transition-colors"
+                          >
+                            {d.name}
+                          </Link>
+                        </td>
                         <td className="p-3 tabular-nums text-stone-600">
                           {Number.isFinite(d.nearest) ? `~${Math.round(d.nearest)} miles` : "—"}
                         </td>
