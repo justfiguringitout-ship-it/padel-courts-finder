@@ -813,37 +813,26 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
   )}`;
 
   // Image priority: 1) OG image / local photo, 2) Unsplash placeholder
-  const placeholderUrl = "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1200&h=800&fit=crop";
-  const primaryImageUrl = court.ogImageUrl || placeholderUrl;
   const hasRealImage = !!court.ogImageUrl;
   const primaryImageAlt = hasRealImage
     ? `${court.name} - Padel courts in ${court.city}, ${stateCode}`
     : `${court.name} - Main court view`;
 
-  const images = [
-    {
-      url: primaryImageUrl,
-      alt: primaryImageAlt,
-      caption: `Professional padel courts at ${court.name}`,
-      isPrimary: true,
-      width: 1200,
-      height: 800,
-    },
-    {
-      url: "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=1200&h=800&fit=crop",
-      alt: `${court.name} - Court facilities`,
-      caption: "State-of-the-art facilities",
-      width: 1200,
-      height: 800,
-    },
-    {
-      url: "https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=800&h=600&fit=crop",
-      alt: `${court.name} - Players in action`,
-      caption: "Competitive play environment",
-      width: 800,
-      height: 600,
-    },
-  ];
+  // Only surface the club's OWN photo. Injecting shared stock images across
+  // every club page created a site-wide duplicate-content signal and hurt
+  // indexing; pages without a real photo use the branded ClubImage fallback.
+  const images = court.ogImageUrl
+    ? [
+        {
+          url: court.ogImageUrl,
+          alt: primaryImageAlt,
+          caption: `Padel courts at ${court.name}`,
+          isPrimary: true,
+          width: 1200,
+          height: 800,
+        },
+      ]
+    : [];
 
   // Build dynamic FAQs from real data only (max 4)
   const dynamicFaqs: Array<{ question: string; answer: string }> = [];
@@ -929,7 +918,7 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
                "America/New_York",
 
     images,
-    heroImage: images[0].url,
+    heroImage: court.ogImageUrl || undefined,
 
     rating: {
       ratingValue: court.rating,

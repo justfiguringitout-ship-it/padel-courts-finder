@@ -18,6 +18,7 @@ import {
 import { getAllAdaptedCourtSlugs, getAdaptedCourtBySlug, getAdaptedRelatedCourts, getTodayHours, isCurrentlyOpen } from "@/lib/court-adapter";
 import { ClubMapClient } from "@/components/club-map-client";
 import { TrackedLink } from "@/components/TrackedLink";
+import { ClubImage } from "@/components/club-image";
 import { GearWidget } from "@/components/GearWidget";
 import { cityBlogSlugs } from "@/data/page-content";
 import { getStates } from "@/lib/site-structure";
@@ -241,12 +242,12 @@ export default async function CourtPage({ params }: CourtPageProps) {
               )}
             </div>
 
-            {/* Right: Hero Image */}
+            {/* Right: Hero Image — branded fallback when the club has no photo */}
             <div className="relative aspect-video rounded-xl overflow-hidden border">
-              <img
-                src={court.heroImage || court.images[0].url}
+              <ClubImage
+                src={court.heroImage || court.images[0]?.url || ""}
                 alt={court.name}
-                className="w-full h-full object-cover"
+                className="object-cover"
               />
             </div>
           </div>
