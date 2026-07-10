@@ -37,6 +37,8 @@ for (const u of updates) {
 
   setString('phone', u.phone);
   setString('pricingText', u.pricingText);
+  setString('instagram', u.instagram);
+  setString('website', u.website);
   setString('courtSurface', u.courtSurface);
   setString('positiveReviewThemes', u.positiveReviewThemes);
   setString('negativeReviewThemes', u.negativeReviewThemes);
