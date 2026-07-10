@@ -148,6 +148,7 @@ const nextConfig: NextConfig = {
       // === Dead pages → closest useful page ===
       { source: '/contact', destination: '/list-your-court', permanent: true },
       { source: '/hour', destination: '/', permanent: true },
+      { source: '/courts/sandy-springs-racquet-center', destination: '/georgia', permanent: true }, // removed: no padel courts
       // === GSC 404 cleanup: historical Instagram-handle & no-hyphen court slugs ===
       { source: '/courts/@heightsracquetclub', destination: '/courts/the-heights-racquet-and-social-club', permanent: true },
       { source: '/courts/@brookboundinnvt', destination: '/courts/brook-bound-inn', permanent: true },
