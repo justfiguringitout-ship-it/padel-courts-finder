@@ -32,6 +32,7 @@ export default function NoxMl10ProCupReviewPage() {
   const productData = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "NOX ML10 Pro Cup Rough Surface",
     "description": "Round-shape intermediate padel racket with a rough 3K fiberglass surface, HR3 EVA core, and carbon frame. Best for spin-focused players upgrading from a beginner racket.",
     "offers": { "@type": "Offer", "price": "169.99", "priceCurrency": "USD", "url": AMAZON_URL },

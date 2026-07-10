@@ -85,6 +85,7 @@ export default function ControlRacketsPage() {
         "position": 1,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Wilson Optix V1",
           "description": "Best for: Precision players who put comfort first",
           "offers": { "@type": "Offer", "price": "109.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20" },
@@ -96,6 +97,7 @@ export default function ControlRacketsPage() {
         "position": 2,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX ML10 Pro Cup Rough Surface",
           "description": "Best for: Control players who want spin on top of placement",
           "offers": { "@type": "Offer", "price": "169.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" },
@@ -107,6 +109,7 @@ export default function ControlRacketsPage() {
         "position": 3,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX AT10 Genius 18K Alum",
           "description": "Best for: Advanced players who refuse to trade away control",
           "offers": { "@type": "Offer", "price": "272.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" },
@@ -118,6 +121,7 @@ export default function ControlRacketsPage() {
         "position": 4,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Bullpadel Neuron 2025 (Chingotto)",
           "description": "Best for: Improving players who want control that scales with them",
           "offers": { "@type": "Offer", "price": "236.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" },
@@ -129,6 +133,7 @@ export default function ControlRacketsPage() {
         "position": 5,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Babolat Contact",
           "description": "Best for: Budget control and easy handling",
           "offers": { "@type": "Offer", "price": "89.95", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" },

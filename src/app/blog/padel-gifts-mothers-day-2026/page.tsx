@@ -86,6 +86,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 1,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Padel Pro S Balls",
           "description": "The most popular padel ball in the US — consistent bounce, good durability.",
           "offers": {
@@ -101,6 +102,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 2,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Wilson Pro Overgrip 12-Pack",
           "description": "Tacky, absorbent, and the industry standard — a 12-pack lasts months.",
           "offers": {
@@ -116,6 +118,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 3,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Babolat Court Lite Padel Backpack",
           "description": "Purpose-built for padel with a racket compartment, shoe pocket, and room for everything else.",
           "offers": {
@@ -131,6 +134,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 4,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Babolat Contact Padel Racket",
           "description": "The best beginner racket on the market — 340g, huge sweet spot, gentle on arms.",
           "offers": {
@@ -146,6 +150,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 5,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Women's Sprint Pro 4.0 Shoes",
           "description": "Non-marking padel-approved court shoes — lightweight, breathable, with herringbone tread.",
           "offers": {
@@ -161,6 +166,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 6,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Extreme Evo Padel Racket",
           "description": "Innegra vibration dampening — the most comfortable beginner racket we've tested.",
           "offers": {
@@ -176,6 +182,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 7,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Tour Racquet Bag M",
           "description": "Holds up to 6 rackets with padded compartments, a shoe compartment, and an insulated drinks pocket.",
           "offers": {
@@ -191,6 +198,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 8,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Wilson Optix V1 Padel Racket",
           "description": "All-fiberglass build for the softest feel possible, with Sharp Hole Technology for effortless spin.",
           "offers": {
@@ -206,6 +214,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 9,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX Pro Cup USPA Edition",
           "description": "Official USPA circuit racket with NOX's signature HR3 core for consistent feel.",
           "offers": {
@@ -221,6 +230,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 10,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX ML10 Pro Cup Rough Surface",
           "description": "Miguel Lamperti signature model — rough sand finish for topspin, low balance for net play.",
           "offers": {
@@ -236,6 +246,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 11,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Bullpadel Neuron (Chingotto)",
           "description": "Full carbon pro racket with a hybrid shape that forgives mistakes.",
           "offers": {
@@ -251,6 +262,7 @@ export default function MothersDay2026GiftGuidePage() {
         "position": 12,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Wilson Bela V3",
           "description": "Fernando Belasteguín's signature racket with a 24K carbon face — the finest weave in commercial padel.",
           "offers": {

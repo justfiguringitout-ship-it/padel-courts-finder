@@ -32,6 +32,7 @@ export default function AdidasMetalboneHrdReviewPage() {
   const productData = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "Adidas Metalbone HRD+ 3.3",
     "description": "Ale Galán-designed diamond padel racket with a Carbon Aluminized 2:1 surface, hard High Memory EVA core, and carbon frame. Best for left-side attackers who want firepower.",
     "offers": { "@type": "Offer", "price": "279.99", "priceCurrency": "USD", "url": AMAZON_URL },

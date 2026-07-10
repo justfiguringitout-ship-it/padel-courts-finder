@@ -85,6 +85,7 @@ export default function PowerRacketsPage() {
         "position": 1,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Extreme Pro",
           "description": "Best for: Smash-first attackers who want maximum ball speed",
           "offers": { "@type": "Offer", "price": "319.95", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" },
@@ -96,6 +97,7 @@ export default function PowerRacketsPage() {
         "position": 2,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Adidas Metalbone HRD+ 3.3",
           "description": "Best for: Upper-intermediate attackers stepping into power play",
           "offers": { "@type": "Offer", "price": "279.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" },
@@ -107,6 +109,7 @@ export default function PowerRacketsPage() {
         "position": 3,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Babolat Technical Viper Juan Lebrón",
           "description": "Best for: Technical aggressors who want elite power at the lowest pro price",
           "offers": { "@type": "Offer", "price": "249.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" },
@@ -118,6 +121,7 @@ export default function PowerRacketsPage() {
         "position": 4,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Wilson Bela V3",
           "description": "Best for: Advanced attackers who want power with premium precision",
           "offers": { "@type": "Offer", "price": "399.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" },
@@ -129,6 +133,7 @@ export default function PowerRacketsPage() {
         "position": 5,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX AT10 Genius Attack 12K",
           "description": "Best for: Developing attackers who want power with a comfort margin",
           "offers": { "@type": "Offer", "price": "229.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20" },

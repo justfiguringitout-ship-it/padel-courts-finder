@@ -30,6 +30,7 @@ export default function BabolatTechnicalViperReviewPage() {
   const productData = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "Babolat Technical Viper Juan Lebrón",
     "description":
       "Juan Lebrón's signature padel racket with a hard EVA core, 3K carbon face, diamond shape, Dynamic Stability System, and 3D Spin+ texture.",

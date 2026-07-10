@@ -30,6 +30,7 @@ export default function WilsonBelaV3ReviewPage() {
   const productData = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "Wilson Bela V3",
     "description":
       "Fernando Belasteguín's signature padel racket with 24K carbon face, C2 tubular carbon frame, diamond shape, and firm EVA / Power Foam core.",

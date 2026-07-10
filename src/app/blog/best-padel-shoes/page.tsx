@@ -71,6 +71,7 @@ export default function BestPadelShoesPage() {
         "position": 1,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Men's Sprint Pro 4.0",
           "description": "Light, breathable court shoe with omni-style grip for padel turf",
           "offers": { "@type": "Offer", "price": "129.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" }
@@ -81,6 +82,7 @@ export default function BestPadelShoesPage() {
         "position": 2,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Women's Sprint Pro 4.0",
           "description": "Light, breathable court shoe with omni-style grip for padel turf",
           "offers": { "@type": "Offer", "price": "89.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20" }

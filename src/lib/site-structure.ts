@@ -77,7 +77,7 @@ export function getStates(): StateInfo[] {
     };
 
     const stateName = stateNames[stateCode] || stateCode;
-    const slug = stateName.toLowerCase().replace(/\s+/g, "-");
+    const slug = stateName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-");
 
     if (!stateMap.has(stateCode)) {
       stateMap.set(stateCode, {
@@ -111,7 +111,7 @@ export function getCitiesByState(stateCode: string): CityInfo[] {
     .filter((court) => court.state === stateCode)
     .forEach((court) => {
       const cityName = court.city;
-      const citySlug = cityName.toLowerCase().replace(/\s+/g, "-");
+      const citySlug = cityName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-");
 
       if (!cityMap.has(cityName)) {
         cityMap.set(cityName, {
@@ -140,7 +140,7 @@ export function getAllCities(): CityInfo[] {
 
   padelCourts.forEach((court) => {
     const cityKey = `${court.city}-${court.state}`;
-    const citySlug = court.city.toLowerCase().replace(/\s+/g, "-");
+    const citySlug = court.city.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-");
 
     if (!cityMap.has(cityKey)) {
       cityMap.set(cityKey, {

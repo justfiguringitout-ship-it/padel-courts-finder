@@ -30,6 +30,7 @@ export default function BabolatContactReviewPage() {
   const productData = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "Babolat Contact",
     "description": "A 340g round-shaped beginner padel racket with a soft EVA core, fiberglass face, and carbon/fiberglass hybrid frame.",
     "offers": {

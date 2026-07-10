@@ -81,6 +81,7 @@ export default function IntermediateRacketsPage() {
         "position": 1,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX ML10 Pro Cup Rough Surface",
           "description": "Best for: Spin-focused players upgrading from beginner",
           "offers": { "@type": "Offer", "price": "169.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" },
@@ -92,6 +93,7 @@ export default function IntermediateRacketsPage() {
         "position": 2,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Wilson Blade Elite V2",
           "description": "Best for: All-court players who want balance",
           "offers": { "@type": "Offer", "price": "189.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" },
@@ -103,6 +105,7 @@ export default function IntermediateRacketsPage() {
         "position": 3,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX AT10 Genius Attack 12K",
           "description": "Best for: Aggressive players with clean technique",
           "offers": { "@type": "Offer", "price": "229.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20" },
@@ -114,6 +117,7 @@ export default function IntermediateRacketsPage() {
         "position": 4,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Bullpadel Neuron 2025 (Chingotto)",
           "description": "Best for: Upper-intermediates transitioning to advanced",
           "offers": { "@type": "Offer", "price": "236.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" },
@@ -125,6 +129,7 @@ export default function IntermediateRacketsPage() {
         "position": 5,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Adidas Metalbone HRD+ 3.3",
           "description": "Best for: Left-side attackers who want firepower",
           "offers": { "@type": "Offer", "price": "279.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" },

@@ -71,6 +71,7 @@ export default function BestPadelBallsPage() {
         "position": 1,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Padel Pro S",
           "description": "The standard US club ball — durable and consistent",
           "offers": { "@type": "Offer", "price": "13.91", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20" }
@@ -81,6 +82,7 @@ export default function BestPadelBallsPage() {
         "position": 2,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Dunlop Pro Padel",
           "description": "The main alternative, with a slightly different feel",
           "offers": { "@type": "Offer", "price": "14.74", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B07SBHNKJF?tag=padel02-20" }

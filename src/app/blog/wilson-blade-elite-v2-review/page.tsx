@@ -30,6 +30,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
   const productData = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "Wilson Blade Elite V2",
     "description": "A 360g teardrop padel racket with a soft EVA core, textured carbon/fiberglass hybrid surface, and carbon frame, aimed at all-court intermediate players.",
     "offers": {

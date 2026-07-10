@@ -30,6 +30,7 @@ export default function NoxAt10ReviewPage() {
   const productData = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "NOX AT10 Genius 18K Alum",
     "description":
       "Agustín Tapia's flagship padel racket — teardrop shape, 18K aluminized carbon face, MLD Black EVA core, and an adjustable Weight Balance system.",

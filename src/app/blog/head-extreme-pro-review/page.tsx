@@ -30,6 +30,7 @@ export default function HeadExtremeProReviewPage() {
   const productData = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "HEAD Extreme Pro",
     "description":
       "Diamond-shaped power racket with a UD Carbon HS face, Power Foam core, Auxetic 2.0 frame technology, and Extreme Spin rough surface — built for left-side attackers and tournament competitors.",

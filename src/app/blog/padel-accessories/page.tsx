@@ -71,6 +71,7 @@ export default function PadelAccessoriesPage() {
         "position": 1,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Wilson Pro Overgrip 12-Pack",
           "description": "Tacky, sweat-absorbing overgrips — the club standard",
           "offers": { "@type": "Offer", "price": "27.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20" }
@@ -81,6 +82,7 @@ export default function PadelAccessoriesPage() {
         "position": 2,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Babolat VS Overgrip 12-Pack",
           "description": "Thin, classic-feel overgrips that preserve handle shape",
           "offers": { "@type": "Offer", "price": "35.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B018SC9APW?tag=padel02-20" }
@@ -91,6 +93,7 @@ export default function PadelAccessoriesPage() {
         "position": 3,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Padel Pro S Balls",
           "description": "Fresh pressurized padel balls for consistent bounce",
           "offers": { "@type": "Offer", "price": "13.91", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20" }

@@ -71,6 +71,7 @@ export default function BestPadelBagsPage() {
         "position": 1,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Babolat Court Lite Padel Backpack",
           "description": "Purpose-built padel backpack with a racket compartment, shoe pocket, and room for everything else.",
           "offers": {
@@ -86,6 +87,7 @@ export default function BestPadelBagsPage() {
         "position": 2,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Tour Racquet Bag M",
           "description": "Holds up to 6 rackets with padded compartments, a separate shoe compartment, and an insulated drinks pocket.",
           "offers": {

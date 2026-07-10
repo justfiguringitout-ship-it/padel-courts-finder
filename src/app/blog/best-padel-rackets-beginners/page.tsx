@@ -103,6 +103,7 @@ export default function BeginnerRacketsPage() {
         "position": 1,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Babolat Contact",
           "description": "Best for: Complete beginners and smaller players",
           "offers": { "@type": "Offer", "price": "89.95", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" },
@@ -114,6 +115,7 @@ export default function BeginnerRacketsPage() {
         "position": 2,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Extreme Evo",
           "description": "Best for: Players who want arm protection",
           "offers": { "@type": "Offer", "price": "99.95", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20" },
@@ -125,6 +127,7 @@ export default function BeginnerRacketsPage() {
         "position": 3,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Wilson Optix V1",
           "description": "Best for: Comfort-first players",
           "offers": { "@type": "Offer", "price": "109.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20" },
@@ -136,6 +139,7 @@ export default function BeginnerRacketsPage() {
         "position": 4,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX Pro Cup USPA Edition",
           "description": "Best for: Players who want tour pedigree",
           "offers": { "@type": "Offer", "price": "119.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20" },
@@ -147,6 +151,7 @@ export default function BeginnerRacketsPage() {
         "position": 5,
         "item": {
           "@type": "Product",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Adidas Adipower",
           "description": "Best for: Players who want customizable weight",
           "offers": { "@type": "Offer", "price": "129.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" },

@@ -2,15 +2,13 @@
 User-agent: *
 Allow: /
 
-# Block admin and application pages
-Disallow: /dashboard
-Disallow: /application
+# Block API routes
 Disallow: /api/
 
-# Allow important content
-Allow: /blog
-Allow: /courts
-Allow: /search
+# Block faceted/filtered search URLs — thin duplicate views that waste
+# crawl budget. The real landing content lives on /[state]/[city] and
+# /courts/ pages. The base /search tool stays crawlable.
+Disallow: /search?
 
 # Sitemap location
 Sitemap: https://www.padelcourtsfinder.com/sitemap.xml
