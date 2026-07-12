@@ -169,7 +169,8 @@ const nextConfig: NextConfig = {
       { source: '/courts/fisherislandclub', destination: '/courts/fisher-island-club', permanent: true },
       { source: '/courts/addisonreservecc', destination: '/courts/addison-reserve-country-club', permanent: true },
       { source: '/courts/area.centre', destination: '/courts/area-centre', permanent: true },
-      { source: '/courts/privepadel', destination: '/courts/priv-padel', permanent: true },
+      { source: '/courts/privepadel', destination: '/courts/the-courts-at-montauk-yacht-club', permanent: true },
+      { source: '/courts/priv-padel', destination: '/courts/the-courts-at-montauk-yacht-club', permanent: true }, // rebranded from Privé Padel
       { source: '/courts/theoceanclubkeybiscayne', destination: '/courts/the-ocean-club', permanent: true },
       { source: '/courts/anytimepadel', destination: '/courts/anytime-padel', permanent: true },
       { source: '/courts/cincyopensportingclub', destination: '/courts/cincinnati-open-sporting-club', permanent: true },
