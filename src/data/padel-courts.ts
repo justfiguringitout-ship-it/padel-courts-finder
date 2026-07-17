@@ -12540,6 +12540,13 @@ export const padelCourts: PadelCourt[] = [
     foodAndDrink: true,
     status: "open",
     ogImageUrl: "https://www.padelcourtsfinder.com/images/clubs/the-courts-montauk-yacht-club.jpg",
+    galleryImages: [
+      "https://www.padelcourtsfinder.com/images/clubs/the-courts-montauk-yacht-club-2.jpg",
+      "https://www.padelcourtsfinder.com/images/clubs/the-courts-montauk-yacht-club-3.jpg",
+      "https://www.padelcourtsfinder.com/images/clubs/the-courts-montauk-yacht-club-4.jpg",
+      "https://www.padelcourtsfinder.com/images/clubs/the-courts-montauk-yacht-club-5.jpg",
+      "https://www.padelcourtsfinder.com/images/clubs/the-courts-montauk-yacht-club-6.jpg",
+    ],
     featured: false,
   },
   {

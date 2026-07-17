@@ -258,6 +258,24 @@ export default async function CourtPage({ params }: CourtPageProps) {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
+            {/* Photo gallery — only when the club has supplied more than one real photo */}
+            {court.images.length > 1 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>Photos</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {court.images.slice(1).map((img) => (
+                      <div key={img.url} className="relative aspect-[3/4] rounded-lg overflow-hidden border">
+                        <ClubImage src={img.url} alt={img.alt} className="object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
             {/* Contact & Hours */}
             <Card>
               <CardHeader>

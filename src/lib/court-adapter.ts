@@ -831,6 +831,14 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
           width: 1200,
           height: 800,
         },
+        ...(court.galleryImages || []).map((url, i) => ({
+          url,
+          alt: `${court.name} in ${court.city}, ${stateCode} - photo ${i + 2}`,
+          caption: court.name,
+          isPrimary: false,
+          width: 1200,
+          height: 800,
+        })),
       ]
     : [];
 
