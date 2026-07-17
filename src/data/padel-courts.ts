@@ -12539,6 +12539,7 @@ export const padelCourts: PadelCourt[] = [
     socialArea: true,
     foodAndDrink: true,
     status: "open",
+    ogImageUrl: "https://www.padelcourtsfinder.com/images/clubs/the-courts-montauk-yacht-club.jpg",
     featured: false,
   },
   {
