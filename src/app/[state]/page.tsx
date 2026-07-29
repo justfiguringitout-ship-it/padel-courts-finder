@@ -47,7 +47,15 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
   const stateCourtsMeta = allCourtsForMeta.filter((c) => c.address.stateCode === state.code);
   const totalIndividualCourts = stateCourtsMeta.reduce((sum, c) => sum + c.facility.totalCourts, 0);
 
-  const title = `${state.courtCount} Best Padel Courts in ${state.name} | Find Padel Near Me`;
+  // High-impression states get a guide-shaped title that matches "padel <state>"
+  // intent (not just "padel courts <state>"), while keeping "Courts" in the title
+  // so we don't lose the strong "padel courts nyc"-style queries.
+  const guideTitleStates = ["NY", "CA", "FL", "TX", "IL"];
+  const isGuideState = guideTitleStates.includes(state.code);
+
+  const title = isGuideState
+    ? `Padel in ${state.name}: ${state.courtCount} Clubs & Courts (2026 Guide)`
+    : `${state.courtCount} Best Padel Courts in ${state.name} | Find Padel Near Me`;
   const description = totalIndividualCourts > 0
     ? `Find ${state.courtCount} padel clubs across ${state.cities.length} cities in ${state.name} with ${totalIndividualCourts}+ courts. Compare prices, hours, reviews, and facilities. The complete ${state.name} padel court directory.`
     : `Find ${state.courtCount} padel clubs across ${state.cities.length} cities in ${state.name}. Compare prices, hours, reviews, and facilities. The complete ${state.name} padel court directory.`;

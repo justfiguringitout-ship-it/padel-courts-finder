@@ -213,6 +213,76 @@ export default function IntermediateRacketsPage() {
         {/* Stone-50 Section: When to Upgrade + Top 5 Product Cards */}
         <div className="bg-stone-50">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            {/* Spec comparison table */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-foreground mb-5">Intermediate Padel Rackets Compared</h2>
+              <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+                <table className="w-full text-sm border border-stone-200 rounded-lg bg-white">
+                  <thead>
+                    <tr className="border-b border-stone-200 text-left">
+                      <th className="px-3 py-2.5 font-semibold text-foreground">Racket</th>
+                      <th className="px-3 py-2.5 font-semibold text-foreground">Shape</th>
+                      <th className="px-3 py-2.5 font-semibold text-foreground">Weight</th>
+                      <th className="px-3 py-2.5 font-semibold text-foreground">Core</th>
+                      <th className="px-3 py-2.5 font-semibold text-foreground">Surface</th>
+                      <th className="px-3 py-2.5 font-semibold text-foreground whitespace-nowrap">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-stone-600">
+                    <tr className="border-b border-stone-100">
+                      <td className="px-3 py-2.5 font-medium text-foreground">NOX ML10 Pro Cup</td>
+                      <td className="px-3 py-2.5">Round</td>
+                      <td className="px-3 py-2.5">360&ndash;375g</td>
+                      <td className="px-3 py-2.5">HR3 EVA</td>
+                      <td className="px-3 py-2.5">FG 3K Rough</td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">$169.99</td>
+                    </tr>
+                    <tr className="border-b border-stone-100">
+                      <td className="px-3 py-2.5 font-medium text-foreground">Wilson Blade Elite V2</td>
+                      <td className="px-3 py-2.5">Teardrop</td>
+                      <td className="px-3 py-2.5">360g</td>
+                      <td className="px-3 py-2.5">Soft EVA</td>
+                      <td className="px-3 py-2.5">Carbon/FG Hybrid</td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">$189.00</td>
+                    </tr>
+                    <tr className="border-b border-stone-100">
+                      <td className="px-3 py-2.5 font-medium text-foreground">NOX AT10 Genius Attack 12K</td>
+                      <td className="px-3 py-2.5">Diamond</td>
+                      <td className="px-3 py-2.5">360&ndash;370g</td>
+                      <td className="px-3 py-2.5">MLD Black EVA</td>
+                      <td className="px-3 py-2.5">12K Carbon</td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">$229.99</td>
+                    </tr>
+                    <tr className="border-b border-stone-100">
+                      <td className="px-3 py-2.5 font-medium text-foreground">Bullpadel Neuron 2025</td>
+                      <td className="px-3 py-2.5">Hybrid</td>
+                      <td className="px-3 py-2.5">370g</td>
+                      <td className="px-3 py-2.5">EVA</td>
+                      <td className="px-3 py-2.5">Xtend Carbon 3K</td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">$236.00</td>
+                    </tr>
+                    <tr>
+                      <td className="px-3 py-2.5 font-medium text-foreground">Adidas Metalbone HRD+ 3.3</td>
+                      <td className="px-3 py-2.5">Diamond</td>
+                      <td className="px-3 py-2.5">345&ndash;360g</td>
+                      <td className="px-3 py-2.5">High Memory EVA</td>
+                      <td className="px-3 py-2.5">Carbon Aluminized</td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">$279.99</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            {/* How we picked */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-foreground mb-5">How we picked the best padel racket for intermediate players</h2>
+              <div className="prose prose-lg prose-stone max-w-none">
+                <p className="text-stone-600 leading-[1.75]">Choosing the best padel racket for intermediate players comes down to four things, and we weighted every racket above against them. <strong className="text-foreground">Weight and balance</strong> come first: we kept the range to 360&ndash;375g, heavy enough to add power on smashes but still maneuverable at the net, and we noted where a head-heavy balance (like the diamond-shaped picks) demands cleaner technique. <strong className="text-foreground">Shape</strong> is the next call &mdash; round for forgiveness, teardrop for balance, diamond for power &mdash; and the right one depends on how consistent your contact already is.</p>
+                <p className="text-stone-600 leading-[1.75]"><strong className="text-foreground">Surface and carbon grade</strong> decide how much ball speed and spin you actually get: fiberglass faces are softer and more forgiving, carbon (3K up to 12K) returns energy faster and bites the ball for topspin. Finally, <strong className="text-foreground">price</strong> &mdash; we capped this list at $280, the ceiling where an intermediate racket stops being a smart upgrade and starts being a pro racket you may not be ready for. Every pick below earns its spot on those four criteria, not brand name. New to the sport? Start with our <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">best padel rackets for beginners</Link> guide first, then come back when your beginner racket starts holding you back.</p>
+              </div>
+            </section>
+
             <section className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-5">When to Upgrade</h2>
               <div className="space-y-3">
