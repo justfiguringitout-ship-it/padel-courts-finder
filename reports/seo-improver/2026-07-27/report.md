@@ -13,7 +13,12 @@
 
 But the run was **not** wasted, because the one thing that changed since last week is the thing that mattered most: **`gh` is now installed and authenticated.** Last week's two highest-confidence recommendations — **SEO-STRIKE-001** and **SEO-CTR-001** — had actually been *implemented in the working tree* by the 2026-07-23 loop but were **stranded uncommitted** because `gh` was unavailable to open a PR. They were never shipped and are **not live in production** (confirmed by curl: `/new-york` still serves the old title).
 
-**The single most important action:** review and merge **[PR #3](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/3)**, which this run committed and opened from those drafted changes. Merging deploys the intermediate-racket-guide depth fix (a monetized page) and the guide-shaped state titles. That is the highest-leverage move available and it requires only a human review + merge.
+**The single most important action:** ship those changes. This run committed them, opened **[PR #3](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/3)**, reviewed it, and — on Dito's explicit go-ahead — **squash-merged it to main (`b19f1e5`), deploying to production.** The intermediate-racket-guide depth fix (a monetized page) and the guide-shaped state titles are now live.
+
+**Pre-merge review evidence (recorded for next run's attribution):**
+- Spec-table products/prices cross-checked against the page's existing product cards — identical 5/5, no data drift.
+- New titles are *shorter* than the ones they replace for all 5 states (e.g. New York 75 → 71 chars), with the distinguishing phrase inside Google's ~60-char cutoff.
+- The `padel courts nyc` risk flagged on 2026-07-23 was assessed **low**: the H1 already read "Padel **Clubs** in New York" while the page ranked ~4.8 for that query, so the exact title bigram is demonstrably not load-bearing; the body carries "padel courts" 118× and the domain is padelcourtsfinder.com. Still the #1 thing to verify next run.
 
 ---
 
@@ -39,9 +44,9 @@ Verified by inspecting the repo working tree and live site (not rankings — tha
 
 | ID | Status | Evidence |
 |---|---|---|
-| **SEO-STRIKE-001** (intermediate racket guide: spec table + singular-phrase H2) | **Drafted, not shipped → now in [PR #3](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/3)** | Code was present uncommitted in the working tree; `Link` import present; `npm run build` passes. Not live (curl confirms). This run committed it to branch `seo-improver/2026-07-27` and opened the PR. |
-| **SEO-CTR-001** (guide-shaped titles for NY/CA/FL/TX/IL) | **Drafted, not shipped → now in [PR #3](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/3)** | `generateMetadata` in `[state]/page.tsx` had the `guideTitleStates` special-case uncommitted. `/new-york` still serves the old title in prod. Committed + PR'd this run. |
-| **SEO-CTR-001 risk flag** (protect `padel courts nyc`, pos ~4.8 / 7.1%) | **Cannot verify** | The change keeps "Courts" in the title precisely to protect this query, but with no rankings source we can't confirm the query held. **Re-check first thing once a data source returns.** |
+| **SEO-STRIKE-001** (intermediate racket guide: spec table + singular-phrase H2) | **Shipped 2026-07-27** (was drafted-but-stranded) | Code was present uncommitted in the working tree; `Link` import present; `npm run build` passes; table prices match existing cards 5/5. Committed to `seo-improver/2026-07-27`, PR #3, **squash-merged to main (`b19f1e5`) → deployed.** |
+| **SEO-CTR-001** (guide-shaped titles for NY/CA/FL/TX/IL) | **Shipped 2026-07-27** (was drafted-but-stranded) | `generateMetadata` in `[state]/page.tsx` had the `guideTitleStates` special-case uncommitted. New titles verified shorter than old for all 5 states. **Merged via PR #3 → deployed.** |
+| **SEO-CTR-001 risk flag** (protect `padel courts nyc`, pos ~4.8 / 7.1%) | **Assessed low, now live — must verify** | Risk judged low pre-merge (H1 already said "Clubs" yet ranked 4.8; "Courts" retained in new title; 118 body mentions). But with no rankings source this run, the actual response is **unverified**. **This is the single most important thing to check next run.** |
 | **SEO-CANNIBAL-001** (Chicago/SF/LA blog vs directory titling) | **Not applied** | No title/link changes in the blog-guide or `/[state]/[city]` files; LA still worst-CTR big page. Deliberately deferred — lowest confidence of the four, wanted to verify STRIKE/CTR first. |
 
 **Confounders to keep in mind when STRIKE-001/CTR-001 *do* ship and move:** the badge backlink program (wave 1 = 42 clubs), ongoing club-data enrichment, and new club photo/gallery work all continue in parallel. Any lift after merge must be weighed against those before crediting the on-page change.
@@ -74,4 +79,8 @@ Still logged as a future *new-page* opportunity (court dimensions / cost to buil
 - **Net effect:** zero rankings measurement this week. Per the loop's rule #3, measurement was stopped and this report states the blocker plainly rather than inventing positions.
 - **What was still verifiable (and done):** git working-tree inspection (found last week's stranded changes), `npm run build` (passes), and live-site curl checks (HTTP status, titles, canonical/robots, sitemap) — all healthy, all read-only.
 - **Repo state note for Dito:** the two site-file edits that were sitting **uncommitted** in your working tree since 2026-07-23 are now **committed to branch `seo-improver/2026-07-27` and in [PR #3](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/3)** — not lost, just moved from "uncommitted draft" to "in review." Your other untracked WIP (DATA_ENRICHMENT_REPORT.md, club pictures, scripts, etc.) was left completely untouched. The repo is currently checked out on `main`.
-- **Next run priority:** the moment Ahrefs units reset (2026-08-18) or an interactive GSC session is available, measure whether PR #3 (if merged) moved the intermediate guide and `/new-york` CTR, and explicitly confirm `padel courts nyc` held its ~4.8 position after the title change.
+- **Next run priority:** PR #3 **merged and deployed on 2026-07-27**, so the measurement clock starts now. The moment Ahrefs units reset (2026-08-18) or an interactive GSC session is available:
+  1. Confirm **`padel courts nyc` held ~4.8 / 7.1% CTR** after the state-title change (the one live risk).
+  2. Measure `/new-york` CTR against the 1.8% baseline (target ~3%).
+  3. Measure `best padel racket(s) for intermediate players` against pos 16.0 / 27.7.
+  4. **Attribution warning:** the badge backlink program, club enrichment, and photo work all continued through this window — do not credit the on-page change without weighing them.
