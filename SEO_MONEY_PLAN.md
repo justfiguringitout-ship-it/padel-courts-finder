@@ -80,14 +80,16 @@ Files: src/app/blog/padel-racket-shapes-explained/page.tsx (fix: pos 24.5) + 3 N
 - [ ] Build, verify, commit
 
 ## P4 — Shoes cluster
-Status: IN PROGRESS. Part 1 DONE (2026-07-31): hub upgraded — 3 new FAQs (JSON-LD
-+ visible) targeting verbatim queries "where can I find padel shoes with
-reinforced toes" (177 imp pos 5.24), "best padel shoes for men 2026", "lightest
-shoes for competitive padel"; freshness -> Jul 31. Part 2 PENDING: verification
-agent out for 5-6 shoe ASINs (ASICS/Babolat Jet Premura/Adidas/K-Swiss/Wilson/
-NOX); when results land, write individual shoe reviews (Product+Review schema,
-TrackedLink) + add picks-by-feature sections to hub. If agent results were lost
-to a restart, relaunch: verify shoes on amazon.com, never invent ASINs.
+Status: MOSTLY DONE (2026-07-31). Hub: 3 verbatim-query FAQs + freshness (P4a) +
+"More 2026 Picks, by What You Need" section with 5 VERIFIED padel-specific shoes
+(NOX AT10 PRO B0GRWHSVGW ~$135 all-rounder/reinforced toe+heel; Wilson Rush Pro 5
+Padel B0GVKRS59Q ~$170 premium; Wilson Hurakn Lite B0FC8SDHK5 ~$110 lightweight;
+ASICS Gel-Challenger 15 Padel B0GZRD83KR ~$130 durability; ASICS Gel-Dedicate 8
+Padel B0GLV3J2BH ~$150 comfort) — ItemList Product schema extended, sponsored
+rels. REJECTED: Babolat Jet Premura (no active Amazon buy-box), K-Swiss Express
+Light 3 (thin marketplace stock), adidas Gamecourt (not padel-specific).
+- [ ] OPTIONAL LATER: individual shoe review pages (model-level queries); start
+      with NOX AT10 PRO + Wilson Rush Pro 5.
 Files: src/app/blog/best-padel-shoes/page.tsx + new review pages
 - [ ] Hub: add sections for "reinforced toe" (177 imp query — target snippet),
       lightweight/competitive, men's 2026, beginners

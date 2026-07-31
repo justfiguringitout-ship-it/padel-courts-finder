@@ -44,7 +44,7 @@ export default function BestPadelShoesPage() {
         "name": "Where can I find padel shoes with reinforced toes?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Look for court shoes where the outsole rubber wraps up and over the toe box — on product photos, check the front-on view. Padel-specific lines (HEAD Sprint Pro, Babolat Jet Premura, ASICS padel models) reinforce the toe by default because toe-drag on serves and low volleys is the first place a soft-toed shoe fails. Our picks below all have wrapped toe protection."
+          "text": "Look for court shoes where the outsole rubber wraps up and over the toe box — on product photos, check the front-on view. Padel-specific lines reinforce the toe by default because toe-drag on serves and low volleys is the first place a soft-toed shoe fails — the NOX AT10 PRO even reinforces toe and heel. All our picks below have wrapped toe protection."
         }
       },
       {
@@ -60,7 +60,7 @@ export default function BestPadelShoesPage() {
         "name": "What are the lightest shoes for competitive padel?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Speed-oriented court models like the HEAD Sprint line trade some cushioning for a lower, lighter feel — that's the trade competitive players usually want, since padel points are short and reaction quickness matters more than long-run comfort. Prioritize lateral stability over minimum weight; an ultra-light shoe that tips on hard cuts costs more points than it saves."
+          "text": "The Wilson Hurakn Lite (~$110) is the lightest padel-specific shoe we've verified, and speed-oriented models like the HEAD Sprint line make the same trade: less cushioning, lower and lighter feel. Prioritize lateral stability over minimum weight; an ultra-light shoe that tips on hard cuts costs more points than it saves."
         }
       },
       {
@@ -90,6 +90,56 @@ export default function BestPadelShoesPage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "NOX AT10 PRO Padel Shoes",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
+          "offers": { "@type": "Offer", "price": "135", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0GRWHSVGW?tag=padel02-20" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Product",
+          "name": "Wilson Rush Pro 5 Padel",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
+          "offers": { "@type": "Offer", "price": "170", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0GVKRS59Q?tag=padel02-20" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Product",
+          "name": "Wilson Hurakn Lite Padel",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
+          "offers": { "@type": "Offer", "price": "110", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0FC8SDHK5?tag=padel02-20" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Product",
+          "name": "ASICS Gel-Challenger 15 Padel",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
+          "offers": { "@type": "Offer", "price": "130", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0GZRD83KR?tag=padel02-20" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Product",
+          "name": "ASICS Gel-Dedicate 8 Padel",
+          "image": "https://www.padelcourtsfinder.com/og/default.png",
+          "offers": { "@type": "Offer", "price": "150", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0GLV3J2BH?tag=padel02-20" }
+        }
+      },
       {
         "@type": "ListItem",
         "position": 1,
@@ -311,6 +361,79 @@ export default function BestPadelShoesPage() {
           </section>
 
           {/* Tennis shoes */}
+          {/* 2026 verified picks by feature */}
+          <section>
+            <h2 className="text-2xl font-bold text-foreground mb-2">More 2026 Picks, by What You Need</h2>
+            <p className="text-stone-600 text-sm leading-relaxed mb-5">Beyond our HEAD Sprint Pro default, these five are the padel-specific shoes we&apos;ve verified available in the US right now — each the best at one thing.</p>
+            <div className="space-y-5">
+            <div className="bg-white border border-stone-200 rounded-xl p-5">
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Best padel-specific all-rounder</span>
+                  <h3 className="font-bold text-foreground">NOX AT10 PRO Padel Shoes</h3>
+                </div>
+                <div className="text-padel-green font-bold whitespace-nowrap">~$135</div>
+              </div>
+              <p className="text-stone-600 text-sm leading-relaxed mt-2">Agustín Tapia&apos;s line, and the shoe that checks every padel-specific box: herringbone outsole with micro studs for sand-dressed turf, reinforced toe AND heel for drag, and strong lateral support. If you want one shoe built for exactly this sport, start here.</p>
+              <div className="mt-4">
+                <TrackedLink href="https://www.amazon.com/dp/B0GRWHSVGW?tag=padel02-20" type="affiliate" productName="NOX AT10 PRO Padel Shoes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+              </div>
+            </div>
+            <div className="bg-white border border-stone-200 rounded-xl p-5">
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Premium stability pick</span>
+                  <h3 className="font-bold text-foreground">Wilson Rush Pro 5 Padel</h3>
+                </div>
+                <div className="text-padel-green font-bold whitespace-nowrap">~$170</div>
+              </div>
+              <p className="text-stone-600 text-sm leading-relaxed mt-2">The premium option: EndoFit midfoot wrap, a TPU stability chassis, and Duralast high-abrasion rubber. The most locked-in lateral feel of anything we&apos;ve verified — for aggressive movers who never want to think about their footing.</p>
+              <div className="mt-4">
+                <TrackedLink href="https://www.amazon.com/dp/B0GVKRS59Q?tag=padel02-20" type="affiliate" productName="Wilson Rush Pro 5 Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+              </div>
+            </div>
+            <div className="bg-white border border-stone-200 rounded-xl p-5">
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Lightweight speed pick</span>
+                  <h3 className="font-bold text-foreground">Wilson Hurakn Lite Padel</h3>
+                </div>
+                <div className="text-padel-green font-bold whitespace-nowrap">~$110</div>
+              </div>
+              <p className="text-stone-600 text-sm leading-relaxed mt-2">The light, fast option for competitive players who prioritize reaction quickness — padel-specific rubber in a stripped-down build at a mid-range price. The answer to &apos;lightest shoe that won&apos;t tip on hard cuts.&apos;</p>
+              <div className="mt-4">
+                <TrackedLink href="https://www.amazon.com/dp/B0FC8SDHK5?tag=padel02-20" type="affiliate" productName="Wilson Hurakn Lite Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+              </div>
+            </div>
+            <div className="bg-white border border-stone-200 rounded-xl p-5">
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Durability pick</span>
+                  <h3 className="font-bold text-foreground">ASICS Gel-Challenger 15 Padel</h3>
+                </div>
+                <div className="text-padel-green font-bold whitespace-nowrap">~$130</div>
+              </div>
+              <p className="text-stone-600 text-sm leading-relaxed mt-2">AHARPLUS outsole rubber (~3x more abrasion-resistant) plus WINGWALL lateral support. The pick for toe-draggers and daily players who kill shoes at the toe box — this one is built to take it.</p>
+              <div className="mt-4">
+                <TrackedLink href="https://www.amazon.com/dp/B0GZRD83KR?tag=padel02-20" type="affiliate" productName="ASICS Gel-Challenger 15 Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+              </div>
+            </div>
+            <div className="bg-white border border-stone-200 rounded-xl p-5">
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Cushioned comfort pick</span>
+                  <h3 className="font-bold text-foreground">ASICS Gel-Dedicate 8 Padel</h3>
+                </div>
+                <div className="text-padel-green font-bold whitespace-nowrap">~$150</div>
+              </div>
+              <p className="text-stone-600 text-sm leading-relaxed mt-2">ASICS GEL cushioning and Trusstic midfoot stability in a padel-specific package — the plushest ride of our picks, for players who want comfort across long sessions without giving up court structure.</p>
+              <div className="mt-4">
+                <TrackedLink href="https://www.amazon.com/dp/B0GLV3J2BH?tag=padel02-20" type="affiliate" productName="ASICS Gel-Dedicate 8 Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+              </div>
+            </div>
+            </div>
+          </section>
+
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Can You Play in Tennis Shoes?</h2>
             <p className="text-stone-700 leading-relaxed">
@@ -348,7 +471,7 @@ export default function BestPadelShoesPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Where can I find padel shoes with reinforced toes?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">Check the front-on product photo: you want outsole rubber that wraps up and over the toe box. Padel-specific lines (HEAD Sprint Pro, Babolat Jet Premura, ASICS padel models) reinforce the toe by default — toe-drag on serves and low volleys is the first place a soft-toed shoe fails. Our picks above all have wrapped toe protection.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">Check the front-on product photo: you want outsole rubber that wraps up and over the toe box. Padel-specific lines reinforce the toe by default — toe-drag on serves and low volleys is the first place a soft-toed shoe fails. The NOX AT10 PRO reinforces toe and heel; all our picks have wrapped toe protection.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What are the best padel shoes for men in 2026?</h3>
@@ -356,7 +479,7 @@ export default function BestPadelShoesPage() {
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What are the lightest shoes for competitive padel?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">Speed-oriented models like the HEAD Sprint line trade some cushioning for a lower, lighter feel — the right trade for competitive play, where reaction quickness beats plush comfort. Just never sacrifice lateral stability for weight; a shoe that tips on hard cuts costs more points than it saves.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">The Wilson Hurakn Lite (~$110) is the lightest padel-specific shoe we&apos;ve verified — a stripped-down speed build. The HEAD Sprint line makes the same trade. Just never sacrifice lateral stability for weight; a shoe that tips on hard cuts costs more points than it saves.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Can I play padel in running shoes?</h3>
