@@ -111,10 +111,13 @@ imp pos 9.8) + "for women", TrackedLink sponsored rels verified, registered in
 blog index + sitemap. Build 714->715 pages.
 
 ## P7 — "Buy a padel court" B2B page
-Status: NOT STARTED
-- [ ] NEW purchase-intent page (cost by type, installation, financing, get-quotes
-      CTA -> partnership form). Queries: padel court for sale/buy/cost pos 24-52.
-- [ ] Then: pitch court manufacturers on lead-gen/sponsorship (Dito outreach).
+Status: PAGE DONE (2026-07-31). /buy-a-padel-court live: price table (reuses
+verified figures from padel-court-cost article only), five pre-buy checks, quote
+form (Formspree xaqlweaw, formType=court-buyer-inquiry — captures LEADS for
+future manufacturer lead-gen), FAQ schema targeting buy/for-sale/cost queries,
+linked from cost article + sitemap. Build 715->716.
+- [ ] REMAINING (Dito): pitch court manufacturers on lead-gen/sponsorship once
+      inquiries start arriving; watch Formspree for court-buyer-inquiry entries.
 
 ## Parallel tracks (not this plan, don't drop)
 - Badge outreach wave 1: BADGE_OUTREACH_WAVE1.csv ready, 42 sendable (Dito sends)

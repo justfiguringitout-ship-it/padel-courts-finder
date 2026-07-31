@@ -260,7 +260,7 @@ export default function PadelCourtCostPage() {
                 — it&apos;s how players across 37 states find where to play. And if you&apos;re a manufacturer,
                 installer, or brand serving club owners, check out our{" "}
                 <Link href="/advertise" className="text-padel-green font-semibold hover:underline">partnership options</Link>.
-              </p>
+               Ready to price a build? Start with our <Link href="/buy-a-padel-court" className="text-padel-green hover:underline">buy a padel court</Link> guide and quote form.</p>
             </div>
           </section>
 
