@@ -1,5 +1,10 @@
 # SEO money plan — affiliate/commission growth (started 2026-07-31)
 
+**STATE AS OF 2026-07-31 (end of build session):** P1, P2, P3, P6, P7 DONE and
+deployed; P4 mostly done (only optional shoe reviews remain); P5 is the open
+weekly cadence. Site grew 711 -> 716 pages. Next session: start P5, then check
+Monday's seo-improver report for ranking movement on everything shipped here.
+
 Source: GSC 28-day export analysis (2026-07-02 → 2026-07-29). Full analysis in the
 session that created this file; the plan below is self-contained.
 
@@ -99,10 +104,12 @@ Files: src/app/blog/best-padel-shoes/page.tsx + new review pages
 - [ ] Interlink hub <-> reviews; add to blog index
 - [ ] Build, verify, commit
 
-## P5 — One new racket review/week (ongoing)
-Status: NOT STARTED
+## P5 — One new racket review/week (ongoing cadence — the only open workstream)
+Status: NOT STARTED (deliberately — weekly cadence item, start next session)
 - [ ] Next candidates: Bullpadel (Vertex/Hack), Siux, "most forgiving racket"
-      roundup angle. Verify ASIN in stock first.
+      roundup angle. ALWAYS verify ASIN has active Amazon buy-box first (agent
+      pattern: fetch product page, confirm price + add-to-cart, never guess).
+- [ ] Also queued: individual shoe reviews (see P4), starting NOX AT10 PRO.
 
 ## P6 — Balls rewrite + year-round gifts page
 Status: DONE (2026-07-31). Balls: exact-phrase H2 ("The Best Padel Balls in 2026"),
