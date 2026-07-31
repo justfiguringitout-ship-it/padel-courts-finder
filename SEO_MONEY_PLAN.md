@@ -80,7 +80,14 @@ Files: src/app/blog/padel-racket-shapes-explained/page.tsx (fix: pos 24.5) + 3 N
 - [ ] Build, verify, commit
 
 ## P4 — Shoes cluster
-Status: NOT STARTED
+Status: IN PROGRESS. Part 1 DONE (2026-07-31): hub upgraded — 3 new FAQs (JSON-LD
++ visible) targeting verbatim queries "where can I find padel shoes with
+reinforced toes" (177 imp pos 5.24), "best padel shoes for men 2026", "lightest
+shoes for competitive padel"; freshness -> Jul 31. Part 2 PENDING: verification
+agent out for 5-6 shoe ASINs (ASICS/Babolat Jet Premura/Adidas/K-Swiss/Wilson/
+NOX); when results land, write individual shoe reviews (Product+Review schema,
+TrackedLink) + add picks-by-feature sections to hub. If agent results were lost
+to a restart, relaunch: verify shoes on amazon.com, never invent ASINs.
 Files: src/app/blog/best-padel-shoes/page.tsx + new review pages
 - [ ] Hub: add sections for "reinforced toe" (177 imp query — target snippet),
       lightweight/competitive, men's 2026, beginners

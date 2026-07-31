@@ -29,7 +29,7 @@ export default function BestPadelShoesPage() {
     "headline": "Best Padel Shoes (2026): What to Look For + Our Picks",
     "description": "Running shoes are the #1 gear mistake in padel. What actually makes a padel shoe — outsole, lateral support, durability — plus the two pairs we recommend.",
     "datePublished": "2026-07-04T00:00:00Z",
-    "dateModified": "2026-07-04T00:00:00Z",
+    "dateModified": "2026-07-31T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },
     "publisher": { "@type": "Organization", "name": "Padel Courts Finder", "logo": { "@type": "ImageObject", "url": "https://www.padelcourtsfinder.com/logo.png" } },
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.padelcourtsfinder.com/blog/best-padel-shoes" }
@@ -39,6 +39,30 @@ export default function BestPadelShoesPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where can I find padel shoes with reinforced toes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Look for court shoes where the outsole rubber wraps up and over the toe box — on product photos, check the front-on view. Padel-specific lines (HEAD Sprint Pro, Babolat Jet Premura, ASICS padel models) reinforce the toe by default because toe-drag on serves and low volleys is the first place a soft-toed shoe fails. Our picks below all have wrapped toe protection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the best padel shoes for men in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The HEAD Sprint Pro 4.0 is our current top pick for men — herringbone outsole for sand-dressed turf, firm lateral cage, and a wrapped reinforced toe, usually around $100-130. Clay-court tennis shoes are the closest substitute if you already own them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the lightest shoes for competitive padel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Speed-oriented court models like the HEAD Sprint line trade some cushioning for a lower, lighter feel — that's the trade competitive players usually want, since padel points are short and reaction quickness matters more than long-run comfort. Prioritize lateral stability over minimum weight; an ultra-light shoe that tips on hard cuts costs more points than it saves."
+        }
+      },
       {
         "@type": "Question",
         "name": "Can I play padel in running shoes?",
@@ -111,7 +135,7 @@ export default function BestPadelShoesPage() {
           </h1>
           <p className="text-lg text-stone-400 mt-3">Why running shoes are the #1 gear mistake in padel &mdash; and what to wear instead</p>
           <div className="text-sm text-stone-500 mt-4">
-            <span>July 4, 2026</span>
+            <span>Updated July 31, 2026</span>
             <span className="mx-2">&bull;</span>
             <span>6 min read</span>
           </div>
@@ -322,6 +346,18 @@ export default function BestPadelShoesPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-5">Frequently Asked Questions</h2>
             <div className="space-y-4">
+              <div className="bg-white border border-stone-200 rounded-lg p-5">
+                <h3 className="font-semibold text-foreground mb-2">Where can I find padel shoes with reinforced toes?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">Check the front-on product photo: you want outsole rubber that wraps up and over the toe box. Padel-specific lines (HEAD Sprint Pro, Babolat Jet Premura, ASICS padel models) reinforce the toe by default — toe-drag on serves and low volleys is the first place a soft-toed shoe fails. Our picks above all have wrapped toe protection.</p>
+              </div>
+              <div className="bg-white border border-stone-200 rounded-lg p-5">
+                <h3 className="font-semibold text-foreground mb-2">What are the best padel shoes for men in 2026?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">The HEAD Sprint Pro 4.0 is our current top pick for men — herringbone outsole for sand-dressed turf, firm lateral cage, and a wrapped reinforced toe. Clay-court tennis shoes are the closest substitute if you already own a pair.</p>
+              </div>
+              <div className="bg-white border border-stone-200 rounded-lg p-5">
+                <h3 className="font-semibold text-foreground mb-2">What are the lightest shoes for competitive padel?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">Speed-oriented models like the HEAD Sprint line trade some cushioning for a lower, lighter feel — the right trade for competitive play, where reaction quickness beats plush comfort. Just never sacrifice lateral stability for weight; a shoe that tips on hard cuts costs more points than it saves.</p>
+              </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Can I play padel in running shoes?</h3>
                 <p className="text-stone-600 text-sm leading-relaxed">You shouldn&apos;t. Running shoes are built for straight-line motion with tall, soft foam and no lateral structure. Padel is constant side-to-side movement and sudden stops on sand-dressed turf — running shoes roll over on hard cuts and their smooth outsoles slip on the sand. It&apos;s the most common gear mistake new players make, and the one most likely to end in a twisted ankle.</p>
