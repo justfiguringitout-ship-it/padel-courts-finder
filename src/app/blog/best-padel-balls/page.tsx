@@ -29,7 +29,7 @@ export default function BestPadelBallsPage() {
     "headline": "Best Padel Balls (2026): How to Choose + Our Picks",
     "description": "Padel balls are not tennis balls. How pressure and bounce work, when to replace a dead can, and the two balls we recommend for US club play in 2026.",
     "datePublished": "2026-07-04T00:00:00Z",
-    "dateModified": "2026-07-04T00:00:00Z",
+    "dateModified": "2026-07-31T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },
     "publisher": { "@type": "Organization", "name": "Padel Courts Finder", "logo": { "@type": "ImageObject", "url": "https://www.padelcourtsfinder.com/logo.png" } },
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.padelcourtsfinder.com/blog/best-padel-balls" }
@@ -39,6 +39,14 @@ export default function BestPadelBallsPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the best padel balls in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The HEAD Padel Pro S is the best padel ball for most players in 2026 — it's the ball used at most US clubs and holds pressure consistently. The Dunlop Pro Padel is the slightly livelier alternative. Both cost about $14 for a 3-ball can; buy whichever your club stocks so your practice balls match match play."
+        }
+      },
       {
         "@type": "Question",
         "name": "Are padel balls the same as tennis balls?",
@@ -111,7 +119,7 @@ export default function BestPadelBallsPage() {
           </h1>
           <p className="text-lg text-stone-400 mt-3">Why they&apos;re not tennis balls, when to replace them, and the two cans worth buying</p>
           <div className="text-sm text-stone-500 mt-4">
-            <span>July 4, 2026</span>
+            <span>Updated July 31, 2026</span>
             <span className="mx-2">&bull;</span>
             <span>5 min read</span>
           </div>
@@ -201,7 +209,7 @@ export default function BestPadelBallsPage() {
 
           {/* Our picks */}
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-5">Our picks: the only two balls you need to know</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-5">The Best Padel Balls in 2026: Our Picks</h2>
 
             {/* HEAD Padel Pro S */}
             <div className="relative bg-white border-2 border-padel-green rounded-xl p-6 md:p-8 mb-8 shadow-sm">
@@ -275,6 +283,10 @@ export default function BestPadelBallsPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-5">Frequently Asked Questions</h2>
             <div className="space-y-4">
+              <div className="bg-white border border-stone-200 rounded-lg p-5">
+                <h3 className="font-semibold text-foreground mb-2">What are the best padel balls in 2026?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">The HEAD Padel Pro S for most players — it&apos;s what most US clubs stock, and it holds pressure consistently. The Dunlop Pro Padel is the slightly livelier alternative. Both run about $14 per can; match whatever your club uses so practice feels like match play.</p>
+              </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Are padel balls the same as tennis balls?</h3>
                 <p className="text-stone-600 text-sm leading-relaxed">No. They look nearly identical, but padel balls are slightly smaller and run at lower internal pressure, giving a lower, slower bounce suited to the enclosed court. Tennis balls bounce too high off the glass and make rallies play wrong.</p>
