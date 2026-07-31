@@ -6,14 +6,14 @@ import { StickyPickBar } from "@/components/sticky-pick-bar";
 export const metadata: Metadata = {
   title: "Babolat Contact Review (2026): The Easiest First Padel Racket",
   description:
-    "Hands-on review of the $89.95 Babolat Contact — a 340g round racket with a soft EVA core. Who it suits, who should skip it, and how it scores.",
+    "Babolat Contact tested: 7/10. $89.95. The easiest first padel racket — big round sweet spot, soft feel, under $100. Why it tops our beginner guide and who should pick something else.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/babolat-contact-review",
   },
   openGraph: {
     title: "Babolat Contact Review (2026): The Easiest First Padel Racket",
     description:
-      "Hands-on review of the $89.95 Babolat Contact — a 340g round racket with a soft EVA core. Who it suits, who should skip it, and how it scores.",
+      "Babolat Contact tested: 7/10. $89.95. The easiest first padel racket — big round sweet spot, soft feel, under $100. Why it tops our beginner guide and who should pick something else.",
     url: "https://www.padelcourtsfinder.com/blog/babolat-contact-review",
     siteName: "Padel Courts Finder",
     type: "article",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Babolat Contact Review (2026): The Easiest First Padel Racket",
     description:
-      "Hands-on review of the $89.95 Babolat Contact — a 340g round racket with a soft EVA core. Who it suits, who should skip it, and how it scores.",
+      "Babolat Contact tested: 7/10. $89.95. The easiest first padel racket — big round sweet spot, soft feel, under $100. Why it tops our beginner guide and who should pick something else.",
   },
 };
 

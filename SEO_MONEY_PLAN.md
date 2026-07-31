@@ -49,7 +49,11 @@ Files: src/app/blog/best-padel-rackets-beginners/page.tsx,
 - [ ] Build, verify, commit
 
 ## P2 — CTR/title pass on all reviews + hubs
-Status: NOT STARTED
+Status: DONE (2026-07-31). Titles were already year+verdict pattern (prior work) —
+left alone. Upgraded all 8 review META DESCRIPTIONS to verdict-forward with
+rating + price + tested ("NOX AT10 tested: 7.3/10. ~$272. ..."). Review/Product
+schema confirmed present (Search appearance shows snippets earning clicks). Hub
+titles fine; shoes hub title deferred to P4 overhaul.
 Files: all 8 review pages + racket hubs (control/power/2026) metadata
 - [ ] Titles: year + verdict + price bracket pattern, e.g. "NOX AT10 Genius 18K
       Review (2026): Tested — Who It's For"

@@ -6,7 +6,7 @@ import { StickyPickBar } from "@/components/sticky-pick-bar";
 export const metadata: Metadata = {
   title: "Babolat Technical Viper Review (2026): Pro Power for $249",
   description:
-    "Full review of the Babolat Technical Viper, Juan Lebrón's signature diamond racket. Explosive power scores, honest comfort trade-offs, and who should buy it.",
+    "Babolat Technical Viper tested: 6.7/10. $249. Lebron’s diamond frame brings pro power at a mid price — if your technique can cash the check. Full scores and fit guide.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/babolat-technical-viper-review",
   },

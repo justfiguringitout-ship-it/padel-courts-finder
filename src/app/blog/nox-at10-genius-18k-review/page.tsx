@@ -6,7 +6,7 @@ import { TrackedLink } from "@/components/TrackedLink";
 export const metadata: Metadata = {
   title: "NOX AT10 Genius 18K Review (2026): The Most Versatile Pro Racket",
   description:
-    "Hands-on review of the NOX AT10 Genius 18K Alum — Agustín Tapia's flagship. Power, control, and comfort scores, full specs, and who should (and shouldn't) buy it.",
+    "NOX AT10 Genius 18K tested: 7.3/10. ~$272. Tapia’s racket is the most versatile pro frame we’ve hit — real power without diamond-shape punishment. Full scores, specs, and who it’s for.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/nox-at10-genius-18k-review",
   },

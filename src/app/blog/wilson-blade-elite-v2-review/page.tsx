@@ -6,14 +6,14 @@ import { StickyPickBar } from "@/components/sticky-pick-bar";
 export const metadata: Metadata = {
   title: "Wilson Blade Elite V2 Review (2026): The Balanced Upgrade",
   description:
-    "Full review of the $189 Wilson Blade Elite V2 — a 360g teardrop with a carbon/fiberglass hybrid face. Scores, specs, and who this all-court racket suits.",
+    "Wilson Blade Elite V2 tested: 7/10. $189. The balanced step-up for improving players — even power/control split, forgiving feel. Full scores, specs, and how it compares.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/wilson-blade-elite-v2-review",
   },
   openGraph: {
     title: "Wilson Blade Elite V2 Review (2026): The Balanced Upgrade",
     description:
-      "Full review of the $189 Wilson Blade Elite V2 — a 360g teardrop with a carbon/fiberglass hybrid face. Scores, specs, and who this all-court racket suits.",
+      "Wilson Blade Elite V2 tested: 7/10. $189. The balanced step-up for improving players — even power/control split, forgiving feel. Full scores, specs, and how it compares.",
     url: "https://www.padelcourtsfinder.com/blog/wilson-blade-elite-v2-review",
     siteName: "Padel Courts Finder",
     type: "article",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Wilson Blade Elite V2 Review (2026): The Balanced Upgrade",
     description:
-      "Full review of the $189 Wilson Blade Elite V2 — a 360g teardrop with a carbon/fiberglass hybrid face. Scores, specs, and who this all-court racket suits.",
+      "Wilson Blade Elite V2 tested: 7/10. $189. The balanced step-up for improving players — even power/control split, forgiving feel. Full scores, specs, and how it compares.",
   },
 };
 

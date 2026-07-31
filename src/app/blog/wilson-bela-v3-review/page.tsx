@@ -6,7 +6,7 @@ import { StickyPickBar } from "@/components/sticky-pick-bar";
 export const metadata: Metadata = {
   title: "Wilson Bela V3 Review (2026): Is 24K Carbon Worth $399?",
   description:
-    "Hands-on review of the Wilson Bela V3, Fernando Belasteguín's 24K carbon signature racket. Power, control, and comfort scores — and who should actually buy it.",
+    "Wilson Bela V3 tested: 6.7/10. $399. Bela’s 24K carbon flagship — is it worth double a mid-range frame? Full scores, who it suits, and the cheaper alternative to consider.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/wilson-bela-v3-review",
   },

@@ -6,7 +6,7 @@ import { TrackedLink } from "@/components/TrackedLink";
 export const metadata: Metadata = {
   title: "HEAD Extreme Pro Review (2026): Maximum Power, No Apologies",
   description:
-    "Full review of the HEAD Extreme Pro — the most powerful racket in our 2026 pro lineup. Power, control, and comfort scores, specs, and who this diamond frame really suits.",
+    "HEAD Extreme Pro tested: 6.3/10. $319.95. The most powerful racket in our 2026 lineup — brutal smash speed, punishing on mishits. Who this diamond frame actually suits (and who should skip it).",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/head-extreme-pro-review",
   },

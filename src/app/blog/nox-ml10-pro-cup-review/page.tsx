@@ -6,7 +6,7 @@ import { StickyPickBar } from '@/components/sticky-pick-bar';
 export const metadata: Metadata = {
   title: 'NOX ML10 Pro Cup Review (2026): The Smartest $170 Upgrade in Padel',
   description:
-    'Hands-on NOX ML10 Pro Cup review: rough 3K surface for topspin, HR3 EVA core, round-shape forgiveness. Who this $169.99 racket is for — and who should skip it.',
+    'NOX ML10 Pro Cup tested: 7.3/10. $169.99. The smartest upgrade in padel — pro-level control at a mid-range price. Why it beats rackets twice its price, and who should buy it.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review',
   },

@@ -6,7 +6,7 @@ import { StickyPickBar } from '@/components/sticky-pick-bar';
 export const metadata: Metadata = {
   title: 'Adidas Metalbone HRD+ 3.3 Review (2026): Maximum Power, Zero Apologies',
   description:
-    'Adidas Metalbone HRD+ 3.3 review: Ale Galán-designed diamond racket with Carbon Aluminized 2:1 surface and hard EVA core. Explosive power — if your technique can handle it.',
+    'Adidas Metalbone HRD+ 3.3 tested: 6.3/10. $279.99. Galan’s power weapon with adjustable weights — huge smashes, unforgiving sweet spot. Who should (and shouldn’t) buy it.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/adidas-metalbone-hrd-review',
   },
