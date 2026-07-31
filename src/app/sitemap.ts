@@ -154,6 +154,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'best-padel-rackets-intermediate',
     'padel-racket-shapes-explained',
     'best-round-padel-rackets',
+    'padel-gifts',
     'best-teardrop-padel-rackets',
     'best-diamond-padel-rackets',
     'best-padel-rackets-power',

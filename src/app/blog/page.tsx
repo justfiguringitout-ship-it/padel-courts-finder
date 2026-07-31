@@ -282,6 +282,16 @@ const blogPosts: BlogPost[] = [
   },
   // Equipment Buying Guides
   {
+    slug: 'padel-gifts',
+    title: 'Padel Gifts (2026): What Players Actually Want, at Every Budget',
+    category: 'equipment',
+    excerpt: 'For her, for him, and under $50 — every pick verified and recommended on this site, from $14 stocking stuffers to flagship rackets.',
+    date: '2026-07-31',
+    readTime: '6 min read',
+    imageAlt: 'Best padel gifts at every budget',
+    courtSlug: ''
+  },
+  {
     slug: 'best-round-padel-rackets',
     title: 'Best Round Padel Rackets (2026): Control & Forgiveness Picks',
     category: 'equipment',

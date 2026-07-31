@@ -103,10 +103,12 @@ Status: NOT STARTED
       roundup angle. Verify ASIN in stock first.
 
 ## P6 — Balls rewrite + year-round gifts page
-Status: NOT STARTED
-- [ ] best-padel-balls: rewrite w/ testing notes, exact-phrase H2s (pos 26-31 now)
-- [ ] NEW: /blog/padel-gifts (year-round; "padel gifts for her" 51 imp pos 9.8;
-      sections for her/him/under-$50; only verified products)
+Status: DONE (2026-07-31). Balls: exact-phrase H2 ("The Best Padel Balls in 2026"),
+verbatim FAQ, freshness. NEW /blog/padel-gifts live: for-her/for-him/under-$50/
+splurge sections, 11 products ALL reused from already-verified seasonal gift +
+accessories pages (no new ASINs), FAQ schema targets "padel gifts for her" (51
+imp pos 9.8) + "for women", TrackedLink sponsored rels verified, registered in
+blog index + sitemap. Build 714->715 pages.
 
 ## P7 — "Buy a padel court" B2B page
 Status: NOT STARTED
