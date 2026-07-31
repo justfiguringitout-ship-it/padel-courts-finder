@@ -177,7 +177,7 @@ export default function ProRacketsPage() {
 
             <div className="prose prose-lg prose-stone max-w-none mb-0">
               <p>These are the flagships — signature editions from the world&apos;s top players, built with the finest materials available in commercial padel. 18K carbon, 24K carbon, aluminized weaves, adjustable weight systems. If your technique is solid and you want the best tool for your game, these are it.</p>
-              <p>Price range: <strong>$250&ndash;400</strong>. At this level, every racket is excellent — the differences come down to your play style, position preference (left vs right side), and how you like the ball to feel off the face. If you&apos;re still developing your game, our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate guide</Link> is a better starting point. Find a club to test these rackets at with our <Link href="/search" className="text-padel-green hover:underline">court finder</Link>.</p>
+              <p>Price range: <strong>$250&ndash;400</strong>. At this level, every racket is excellent — the differences come down to your play style, position preference (left vs right side), and how you like the ball to feel off the face. If you&apos;re still developing your game, our guide to the <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best padel rackets for intermediate players</Link> is a better starting point. Find a club to test these rackets at with our <Link href="/search" className="text-padel-green hover:underline">court finder</Link>.</p>
             </div>
 
             {/* Quick Picks Box */}

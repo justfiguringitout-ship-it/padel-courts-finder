@@ -28,7 +28,12 @@ only (tag padel02-20); TrackedLink for all affiliate links (forces rel=sponsored
   (strategic, slow climb).
 
 ## P1 — Rescue beginners + intermediate hubs
-Status: NOT STARTED
+Status: DONE (2026-07-31). Both hubs: exact-phrase H2 ("The 5 Best Padel Rackets
+for Beginners/Intermediate Players in 2026"), new FAQs targeting money queries
+verbatim (+ "most forgiving padel racket" on beginners, JSON-LD + visible),
+dateModified + visible date -> July 31, exact-phrase anchor from 2026 hub.
+Cross-links from control/2026 hubs already existed. NOTE: both pages already had
+early comparison tables + "how we picked" — deeper restructure not needed.
 Files: src/app/blog/best-padel-rackets-beginners/page.tsx,
        src/app/blog/best-padel-rackets-intermediate/page.tsx
 - [ ] Read both pages, map current structure

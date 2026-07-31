@@ -27,7 +27,7 @@ export default function IntermediateRacketsPage() {
     "description": "Ready to upgrade your padel racket? We compare the 5 best intermediate padel rackets in 2026, from $170 to $280.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-24T00:00:00Z",
-    "dateModified": "2026-07-03T00:00:00Z",
+    "dateModified": "2026-07-31T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },
     "publisher": { "@type": "Organization", "name": "Padel Courts Finder", "logo": { "@type": "ImageObject", "url": "https://www.padelcourtsfinder.com/logo.png" } },
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.padelcourtsfinder.com/blog/best-padel-rackets-intermediate" }
@@ -37,6 +37,14 @@ export default function IntermediateRacketsPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best padel racket for intermediate players in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The NOX ML10 Pro Cup is our top overall pick for intermediate players in 2026 — a control-first round racket that rewards improving technique without punishing mishits. The Bullpadel Neuron is the pick if you want a hybrid shape as a step toward more aggressive play."
+        }
+      },
       {
         "@type": "Question",
         "name": "How do I know I'm ready to upgrade from a beginner racket?",
@@ -160,7 +168,7 @@ export default function IntermediateRacketsPage() {
           <p className="text-lg text-stone-400 mt-3">Top 5 upgrade picks from $170 to $280 &mdash; when your beginner racket stops keeping up</p>
           <p className="text-stone-500 text-sm mt-1">Expert picks for every budget</p>
           <div className="text-sm text-stone-500 mt-4 flex items-center gap-3">
-            <span>Updated July 3, 2026 &middot; 11 min read</span>
+            <span>Updated July 31, 2026 &middot; 11 min read</span>
           </div>
           <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
@@ -299,7 +307,7 @@ export default function IntermediateRacketsPage() {
             </section>
 
             <section className="mb-12">
-              <h2 id="top-5-intermediate" className="text-2xl font-bold text-foreground mb-5">Top 5 Intermediate Padel Rackets</h2>
+              <h2 id="top-5-intermediate" className="text-2xl font-bold text-foreground mb-5">The 5 Best Padel Rackets for Intermediate Players in 2026</h2>
 
               {/* 1. NOX ML10 Pro Cup */}
               <div id="nox-ml10-pro-cup" className="relative bg-white border-2 border-padel-green rounded-xl p-6 md:p-8 mb-8 shadow-sm">
@@ -625,6 +633,10 @@ export default function IntermediateRacketsPage() {
             <section>
               <h2 className="text-2xl font-bold text-foreground mb-5">Frequently Asked Questions</h2>
               <div className="space-y-4">
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">What is the best padel racket for intermediate players in 2026?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">Our top overall pick is the <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup</Link> — a control-first round racket that rewards improving technique without punishing mishits. If you want a step toward more aggressive play, the Bullpadel Neuron&apos;s hybrid shape is the better fit. Full reasoning for all five picks above.</p>
+                </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">How do I know I&apos;m ready to upgrade from a beginner racket?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">The usual signs: you&apos;ve been playing consistently for 6+ months, you&apos;re hitting the sweet spot reliably, and your racket feels like it&apos;s capping your power or spin. A racket that feels &quot;dead&quot; is another signal &mdash; EVA cores degrade after 12&ndash;18 months of regular play. If two or more of those apply, you&apos;re ready.</p>
