@@ -74,7 +74,7 @@ export default function RacketShapesPage() {
     "headline": "Padel Racket Shapes Explained: Round vs Teardrop vs Diamond",
     "description": "What padel racket shape actually does to your game — sweet spot, balance, power, and control — and how to pick the right one for your level.",
     "datePublished": "2026-07-03T00:00:00Z",
-    "dateModified": "2026-07-03T00:00:00Z",
+    "dateModified": "2026-07-31T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },
     "publisher": { "@type": "Organization", "name": "Padel Courts Finder", "logo": { "@type": "ImageObject", "url": "https://www.padelcourtsfinder.com/logo.png" } },
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.padelcourtsfinder.com/blog/padel-racket-shapes-explained" }
@@ -126,7 +126,7 @@ export default function RacketShapesPage() {
           </h1>
           <p className="text-lg text-stone-400 mt-3">The one spec that matters more than price, brand, or carbon count</p>
           <div className="text-sm text-stone-500 mt-4">
-            <span>July 3, 2026</span>
+            <span>Updated July 31, 2026</span>
             <span className="mx-2">&bull;</span>
             <span>7 min read</span>
           </div>
@@ -153,7 +153,7 @@ export default function RacketShapesPage() {
 
           {/* Round */}
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-4">Round: the control shape</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Round head shape padel rackets: the control pick</h2>
             <p className="text-stone-700 leading-relaxed">
               A round racket puts the sweet spot dead center and makes it as large as the geometry allows. The balance
               sits low, toward the handle, so the racket feels lighter than its actual weight and whips through the
@@ -168,13 +168,13 @@ export default function RacketShapesPage() {
             </p>
             <p className="text-stone-600 text-sm leading-relaxed mt-4 bg-white border border-stone-200 rounded-lg p-4">
               <strong className="text-foreground">Pick round if:</strong> you&apos;re in your first 1–2 years, you play a defensive
-              or all-court game, or you&apos;ve ever had tennis elbow.
+              or all-court game, or you&apos;ve ever had tennis elbow. See our <Link href="/blog/best-round-padel-rackets" className="text-padel-green hover:underline">best round padel rackets</Link> for the tested picks.
             </p>
           </section>
 
           {/* Teardrop */}
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-4">Teardrop: the all-rounder</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Teardrop head shape padel rackets: the all-rounder</h2>
             <p className="text-stone-700 leading-relaxed">
               A teardrop shifts the sweet spot up the face and moves the balance toward the head — not all the way,
               but enough that the racket does some of the work on overheads and smashes. You lose a little of the
@@ -189,13 +189,13 @@ export default function RacketShapesPage() {
             </p>
             <p className="text-stone-600 text-sm leading-relaxed mt-4 bg-white border border-stone-200 rounded-lg p-4">
               <strong className="text-foreground">Pick teardrop if:</strong> you play 1–3 times a week, your technique is
-              consistent, and you want more put-away power without a punishing racket.
+              consistent, and you want more put-away power without a punishing racket. See our <Link href="/blog/best-teardrop-padel-rackets" className="text-padel-green hover:underline">best teardrop padel rackets</Link> for the tested picks.
             </p>
           </section>
 
           {/* Diamond */}
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-4">Diamond: the power shape</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Diamond head shape padel rackets: the power pick</h2>
             <p className="text-stone-700 leading-relaxed">
               A diamond racket stacks its mass high in the head. The sweet spot is small and sits near the top of the
               face — exactly where you make contact on a full smash. Hit it clean and the ball explodes off the face;
@@ -210,7 +210,7 @@ export default function RacketShapesPage() {
             </p>
             <p className="text-stone-600 text-sm leading-relaxed mt-4 bg-white border border-stone-200 rounded-lg p-4">
               <strong className="text-foreground">Pick diamond if:</strong> you play aggressively at a high level, you finish
-              points overhead, and forgiveness is no longer what&apos;s holding you back.
+              points overhead, and forgiveness is no longer what&apos;s holding you back. See our <Link href="/blog/best-diamond-padel-rackets" className="text-padel-green hover:underline">best diamond padel rackets</Link> for the ranked picks.
             </p>
           </section>
 

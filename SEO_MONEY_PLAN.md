@@ -62,7 +62,14 @@ Files: all 8 review pages + racket hubs (control/power/2026) metadata
 - [ ] Build, verify, commit
 
 ## P3 — Racket shapes cluster
-Status: NOT STARTED
+Status: DONE (2026-07-31). shapes-explained: exact-phrase H2s ("Round/Teardrop/
+Diamond head shape padel rackets: ..."), freshness -> Jul 31, links to 3 new
+pages. NEW pages live: /blog/best-round-padel-rackets (ML10 + Contact),
+/best-teardrop-padel-rackets (AT10 + Blade Elite V2), /best-diamond-padel-rackets
+(Viper, Bela V3, Extreme Pro, Metalbone — ranked). Each: Article+FAQPage+ItemList
+(Product w/ image+offers+review) schema, TrackedLink affiliate buttons (sponsored
+rel verified), links to full reviews, cross-linked Keep Reading. Registered in
+blog index + sitemap. Build 711->714 pages.
 Files: src/app/blog/padel-racket-shapes-explained/page.tsx (fix: pos 24.5) + 3 NEW pages
 - [ ] Strengthen shapes-explained: exact-phrase sections ("Round head shape padel
       rackets", teardrop, diamond), comparison table, FAQ schema

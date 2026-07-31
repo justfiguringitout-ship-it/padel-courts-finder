@@ -282,6 +282,36 @@ const blogPosts: BlogPost[] = [
   },
   // Equipment Buying Guides
   {
+    slug: 'best-round-padel-rackets',
+    title: 'Best Round Padel Rackets (2026): Control & Forgiveness Picks',
+    category: 'equipment',
+    excerpt: 'The control shape, done right — our tested round picks from $90 to $170, and who the round head shape actually suits.',
+    date: '2026-07-31',
+    readTime: '6 min read',
+    imageAlt: 'Best round padel rackets compared',
+    courtSlug: ''
+  },
+  {
+    slug: 'best-teardrop-padel-rackets',
+    title: 'Best Teardrop Padel Rackets (2026): Power Meets Forgiveness',
+    category: 'equipment',
+    excerpt: 'The all-rounder shape — tested teardrop picks that add real attacking power without diamond punishment, from $189.',
+    date: '2026-07-31',
+    readTime: '6 min read',
+    imageAlt: 'Best teardrop padel rackets compared',
+    courtSlug: ''
+  },
+  {
+    slug: 'best-diamond-padel-rackets',
+    title: 'Best Diamond Padel Rackets (2026): Maximum Power, Ranked',
+    category: 'equipment',
+    excerpt: 'Four tested diamond frames ranked from $249 to $399 — with an honest take on who should actually swing one.',
+    date: '2026-07-31',
+    readTime: '6 min read',
+    imageAlt: 'Best diamond padel rackets compared',
+    courtSlug: ''
+  },
+  {
     slug: 'padel-racket-shapes-explained',
     title: 'Padel Racket Shapes Explained: Round vs Teardrop vs Diamond',
     category: 'equipment',
