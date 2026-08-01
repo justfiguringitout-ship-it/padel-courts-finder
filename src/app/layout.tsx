@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     default: "Find Padel Courts Near Me | Book Padel Courts Across the USA",
     template: "%s | Padel Courts Finder",
   },
-  description: "Discover and book padel courts across the United States. Find courts in your city, compare prices, read reviews, and book online. 45+ verified padel facilities nationwide.",
+  description: "Find padel courts near you anywhere in the US. 331 verified clubs across 39 states with hours, pricing, court counts, and booking links — updated continuously.",
   metadataBase: new URL("https://www.padelcourtsfinder.com"),
   keywords: [
     "padel courts",
