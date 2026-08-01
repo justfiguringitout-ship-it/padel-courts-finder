@@ -129,8 +129,28 @@ linked from cost article + sitemap. Build 715->716.
       inquiries start arriving; watch Formspree for court-buyer-inquiry entries.
 
 ## P8 — Informational cluster rescue + quiz monetization (started 2026-07-31)
-Status: IN PROGRESS
-The three top-of-funnel pages earn ~2,700 imp and 9 clicks combined:
+Status: DONE (2026-07-31) — all 5 pages shipped, build 716->718.
+P8a /rules REBUILT: was an off-brand markdown dump with no schema. Now on-brand
+  court hero, "rules of padel in 60 seconds" answer box (snippet play), Article +
+  FAQPage schema with 6 verbatim-query FAQs, freshness, GearWidget.
+P8b /how-to-play: 3 exact-phrase FAQs ("how do you play padel", "how do i get
+  started playing padel", "is padel good for beginners") JSON-LD + visible,
+  freshness -> Jul 31, GearWidget.
+P8c /blog/padel-vs-pickleball: 3 variant FAQs ("what is the difference between
+  padel and pickleball", "should I play padel or pickleball", "padel court vs
+  pickleball court") JSON-LD + visible, freshness, GearWidget.
+P8d NEW /indoor-padel-courts: live-computed from club data (courtType indoor|both,
+  excludes coming_soon) — 135 clubs / 26 states, verified headline count == sum of
+  state counts == links rendered. FAQ schema. NEW /padel-lessons: guide (cost
+  table, what happens in a clinic, what to bring) + FAQ schema + funnel to /search.
+  NOTE: deliberately NOT a filtered club list — lessonsAvailable is true on 276/301
+  clubs, which looks like a default not verified data, so no count is cited.
+P8e GearWidget (racket quiz + 3 affiliate picks + disclosure) on ALL FIVE pages —
+  verified: quiz button + 3 rel=sponsored links each. This is the monetization
+  bridge from informational traffic to gear affiliate revenue.
+Both new pages registered in sitemap.
+
+ORIGINAL BASELINE — the three top-of-funnel pages earn ~2,700 imp and 9 clicks combined:
   /rules              1,386 imp,  9 clicks, pos 19.03 (but "padel rules" pos 55!)
   /blog/padel-vs-pickleball 825 imp, 0 clicks, pos 17.43
   /how-to-play          471 imp,  0 clicks, pos 34.41

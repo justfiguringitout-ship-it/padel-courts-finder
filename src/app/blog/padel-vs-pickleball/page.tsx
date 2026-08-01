@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { GearWidget } from '@/components/GearWidget';
 
 export const metadata: Metadata = {
   title: 'Padel vs Pickleball: What\u2019s the Difference? (2026 Guide)',
@@ -24,7 +25,7 @@ export default function PadelVsPickleballPage() {
     "description": "Padel vs pickleball \u2014 we compare courts, rules, equipment, cost, fitness, and difficulty. Find out which sport is right for you.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-25T00:00:00Z",
-    "dateModified": "2026-03-25T00:00:00Z",
+    "dateModified": "2026-07-31T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -48,6 +49,30 @@ export default function PadelVsPickleballPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between padel and pickleball?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The three biggest differences: padel is played on an enclosed court where the glass walls are in play, pickleball on an open court with no walls; padel uses a solid perforated racket and a pressurized rubber ball, pickleball a flat paddle and a plastic wiffle ball; and padel is almost always doubles on a 20m x 10m court, while pickleball is played singles or doubles on a much smaller badminton-sized court. Padel scoring copies tennis (15/30/40), pickleball uses rally-style scoring to 11."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I play padel or pickleball?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pick pickleball if you want the lowest possible barrier to entry — courts are everywhere, gear is cheap, and you can play in minutes. Pick padel if you want longer rallies, more athleticism, and a game with more tactical depth; the walls keep the ball alive and reward positioning. Availability often decides it: the US has far more pickleball courts, so check what's actually near you first."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a padel court and a pickleball court?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A padel court is 20m x 10m (about 66 x 33 feet), fully enclosed by glass walls and metal mesh roughly 3-4m high, with artificial turf underfoot. A pickleball court is 44 x 20 feet, open on all sides, on a hard surface, with a 7-foot non-volley 'kitchen' zone at the net. The enclosure is the fundamental difference — it's why padel courts cost tens of thousands to build and pickleball courts can be taped onto existing tennis courts."
+        }
+      },
       {
         "@type": "Question",
         "name": "Is padel the same as pickleball?",
@@ -109,7 +134,7 @@ export default function PadelVsPickleballPage() {
           </h1>
           <p className="text-stone-400 mt-3">Everything you need to know to pick the right sport &mdash; or play both</p>
           <div className="text-sm text-stone-500 mt-4">
-            <span>March 25, 2026</span>
+            <span>Updated July 31, 2026</span>
             <span className="mx-2">&bull;</span>
             <span>11 min read</span>
           </div>
@@ -390,6 +415,18 @@ export default function PadelVsPickleballPage() {
               <h2 className="text-2xl font-bold text-foreground mb-5">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">What is the difference between padel and pickleball?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">Three big ones: padel&apos;s glass walls are in play and pickleball has no walls; padel uses a solid perforated racket and a pressurized rubber ball while pickleball uses a flat paddle and a plastic wiffle ball; and padel is nearly always doubles on a 20m x 10m court versus pickleball&apos;s much smaller badminton-sized court. Scoring differs too — padel copies tennis, pickleball plays rally scoring to 11.</p>
+                </div>
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">Should I play padel or pickleball?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">Pickleball if you want the lowest barrier to entry — courts everywhere, cheap gear, playable in minutes. Padel if you want longer rallies, more movement, and more tactical depth. Honestly, availability usually decides: check <Link href="/search" className="text-padel-green hover:underline">what&apos;s actually near you</Link> first, since the US still has far more pickleball courts.</p>
+                </div>
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">What is the difference between a padel court and a pickleball court?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">A padel court is 20m x 10m (about 66 x 33 ft), fully enclosed by glass and mesh, on artificial turf. A pickleball court is 44 x 20 ft, open on all sides, on hard surface, with a 7-ft &quot;kitchen&quot; at the net. That enclosure is why padel courts <Link href="/buy-a-padel-court" className="text-padel-green hover:underline">cost tens of thousands to build</Link> while pickleball courts can be taped onto a tennis court.</p>
+                </div>
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">Is padel the same as pickleball?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">No &mdash; they&apos;re completely different sports. Padel uses enclosed glass courts with walls in play, pressurized rubber balls, and is always played as doubles. Pickleball uses open courts, plastic wiffle-style balls, and can be played as singles or doubles. The rules, scoring, equipment, and gameplay feel are entirely different.</p>
                 </div>
@@ -407,6 +444,7 @@ export default function PadelVsPickleballPage() {
                 </div>
               </div>
             </section>
+            <GearWidget />
           </div>
         </div>
       </article>

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { GearWidget } from '@/components/GearWidget';
 
 export const metadata: Metadata = {
   title: 'How to Play Padel: Complete Beginner\'s Guide (2026)',
@@ -38,7 +39,7 @@ export default function HowToPlayPage() {
     "headline": "How to Play Padel: Complete Beginner's Guide (2026)",
     "description": "Learn how to play padel in 2026. Complete beginner's guide covering rules, scoring, equipment, court layout, basic shots, and tips for your first match.",
     "datePublished": "2025-01-15T00:00:00Z",
-    "dateModified": "2026-03-26T00:00:00Z",
+    "dateModified": "2026-07-31T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -62,6 +63,30 @@ export default function HowToPlayPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you play padel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Padel is played 2v2 on an enclosed court about a third the size of a tennis court. You serve underhand — bounce the ball and strike it at or below waist height into the diagonal service box. Scoring is exactly like tennis (15, 30, 40, game). The defining rule is the walls: after the ball bounces once on your side you can play it off your own glass walls, and you can hit into your opponents' walls as long as the ball clears the net and lands in their court first. The ball may bounce only once before you return it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started playing padel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Find a club near you and book a beginner clinic or an intro lesson — most US clubs run them, and rackets are usually included so you don't need to buy gear first. Padel is a doubles game, so a clinic also solves the hardest part of starting: finding people to play with. After two or three sessions you'll know whether to buy your own racket."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is padel good for beginners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It's one of the easiest racket sports to start. The enclosed court keeps balls in play, the underhand serve removes the hardest skill in tennis, and the solid short-handled racket is simple to control. Most people rally in their first session — which is exactly why padel is the fastest-growing racket sport in the US."
+        }
+      },
       {
         "@type": "Question",
         "name": "Is padel easy to learn?",
@@ -128,7 +153,7 @@ export default function HowToPlayPage() {
           </h1>
           <p className="text-stone-400 mt-3">Everything you need to know to start playing America&apos;s fastest-growing sport</p>
           <div className="text-sm text-stone-500 mt-4">
-            <span>Updated March 26, 2026</span>
+            <span>Updated July 31, 2026</span>
             <span className="mx-2">&bull;</span>
             <span>15 min read</span>
           </div>
@@ -533,6 +558,18 @@ export default function HowToPlayPage() {
               <h2 className="text-2xl font-bold text-foreground mb-5">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">How do you play padel?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">Two versus two on an enclosed court about a third the size of a tennis court. Serve underhand into the diagonal box, score exactly like tennis, and — the rule that defines the sport — play the ball off the glass walls after it bounces on your side. Full detail in our <Link href="/rules" className="text-sky-600 hover:underline">padel rules guide</Link>.</p>
+                </div>
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">How do I get started playing padel?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">Book a beginner clinic or intro lesson at a club near you — rackets are usually included, so you don&apos;t need to buy gear first, and it solves the hardest part of starting a doubles sport: finding people to play with. <Link href="/padel-lessons" className="text-sky-600 hover:underline">Find clubs offering lessons</Link>, then decide on your own racket after a few sessions.</p>
+                </div>
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-foreground mb-2">Is padel good for beginners?</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">It&apos;s one of the easiest racket sports to pick up. The walls keep balls in play, the underhand serve removes tennis&apos;s hardest skill, and the short solid racket is simple to control. Most people rally in their first session.</p>
+                </div>
+                <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">Is padel easy to learn?</h3>
                   <p className="text-stone-600 text-sm leading-relaxed">Yes. Most beginners rally comfortably within their first session. The enclosed glass court keeps the ball in play much longer than tennis, so you spend more time hitting and less time chasing balls. The underhand serve is also much easier to master than a tennis serve. Within 2&ndash;3 sessions, most people feel competent enough to play real matches.</p>
                 </div>
@@ -554,6 +591,7 @@ export default function HowToPlayPage() {
                 </div>
               </div>
             </section>
+            <GearWidget />
           </div>
         </div>
       </article>
