@@ -80,6 +80,22 @@ those confounders before crediting a recommendation; note plausible alternates i
    Tie every recommendation to the ranking evidence that motivates it.
 6. Verify last run's loop: for each prior recommendation ID, state applied / not applied and
    the ranking response. Keep what worked; drop or revise what did not.
+7. **Indexing hygiene (every run — this site's pages do NOT get indexed on their own).**
+   New and updated pages sit undiscovered for weeks without a manual nudge, so every report
+   must end with a ready-to-paste indexing queue:
+   - Find what shipped since the last run: `git log --since=<last run date> --diff-filter=A
+     --name-only -- 'src/app/**/page.tsx'` for NEW pages, and `--diff-filter=M` for
+     substantially modified ones (ignore trivial diffs).
+   - Confirm each is live and canonical before listing it: `curl -sI` must return 200 on the
+     `https://www.` URL (non-www 301s to www; never list a non-www URL — it wastes a request).
+   - Check whether it's already indexed when a data source allows (Ahrefs GSC pages table, or
+     a `site:` spot-check). Drop anything already indexed.
+   - Output the survivors as a bare copy-paste list of full `https://www.padelcourtsfinder.com/...`
+     URLs, ordered: brand-new pages first, then substantially-updated money pages, then minor
+     updates. Note that GSC allows roughly 10–12 Request Indexing actions per day, so split
+     into day-sized waves and label them.
+   - Always append the reminder to resubmit `https://www.padelcourtsfinder.com/sitemap.xml`
+     when new URLs shipped that week.
 
 ## Output
 
@@ -101,6 +117,9 @@ Write both artifacts under `reports/seo-improver/<YYYY-MM-DD>/`, then commit the
   4. This week's improvements — ordered, each with exact change, target keyword/URL,
      expected effect, evidence. Stable IDs: `SEO-STRIKE-###`, `SEO-CTR-###`,
      `SEO-CANNIBAL-###`, `SEO-DECAY-###` (never reuse an ID for a different issue).
+  4b. **Indexing queue** — the copy-paste URL waves from step 7, plus the sitemap
+     reminder. This section must appear in every report, even if empty ("nothing new
+     shipped this week").
   5. Blockers and data caveats — anything unavailable, rate-limited, or unmeasured.
 
 Keep the action list short and high-conviction (3–7 items). A focused list that gets
