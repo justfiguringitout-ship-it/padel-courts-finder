@@ -128,6 +128,29 @@ linked from cost article + sitemap. Build 715->716.
 - [ ] REMAINING (Dito): pitch court manufacturers on lead-gen/sponsorship once
       inquiries start arriving; watch Formspree for court-buyer-inquiry entries.
 
+## P8 — Informational cluster rescue + quiz monetization (started 2026-07-31)
+Status: IN PROGRESS
+The three top-of-funnel pages earn ~2,700 imp and 9 clicks combined:
+  /rules              1,386 imp,  9 clicks, pos 19.03 (but "padel rules" pos 55!)
+  /blog/padel-vs-pickleball 825 imp, 0 clicks, pos 17.43
+  /how-to-play          471 imp,  0 clicks, pos 34.41
+Query families: rules (~316 imp: "padel rules" 102@55, "how to play padel" 109@36,
+"padel tennis rules" 24@57, "rules of padel" 15@60, "padel rules and scoring"
+14@45, "how do you play padel" 19@40); vs-pickleball (~360 imp: "padel vs
+pickleball" 168@15, "pickleball vs padel" 80@33, "difference between pickleball
+and padel" 22@45, "is pickleball the same as padel" 21@31, "padel or pickleball"
+21@31, "padel court vs pickleball court" 16@37); getting-started ("how do i get
+started playing padel" 116@17 + 74@45, "padel for beginners" 39@48).
+Gaps with NO page: indoor padel courts (~230 imp, pos 12-19), padel lessons/
+classes near me (~200 imp, pos 10-12). Both are data-backed — club records have
+courtType and lessonsAvailable fields, so these can be live-computed, no fabrication.
+- [ ] P8a /rules rebuild (on-brand shell, Article+FAQPage schema, exact-phrase H1/H2s)
+- [ ] P8b /how-to-play (exact-phrase FAQs, freshness)
+- [ ] P8c /blog/padel-vs-pickleball (variant-query FAQs, freshness)
+- [ ] P8d NEW /indoor-padel-courts + /padel-lessons (live-computed from club data)
+- [ ] P8e GearWidget (racket quiz + affiliate picks) on ALL informational pages —
+      this is the monetization bridge: informational traffic -> gear affiliate.
+
 ## Parallel tracks (not this plan, don't drop)
 - Badge outreach wave 1: BADGE_OUTREACH_WAVE1.csv ready, 42 sendable (Dito sends)
 - Weekly SEO loop: scheduled Mondays (padel-seo-improver-weekly), baseline run done
