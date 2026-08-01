@@ -171,6 +171,28 @@ courtType and lessonsAvailable fields, so these can be live-computed, no fabrica
 - [ ] P8e GearWidget (racket quiz + affiliate picks) on ALL informational pages —
       this is the monetization bridge: informational traffic -> gear affiliate.
 
+## P9 — /search rebuild + real "near me" (2026-07-31)
+Status: DONE. /search was a 100%-client page: crawlers saw ZERO club links, H1
+said "Search Padel Clubs" while <title> promised "Find Padel Courts Near Me", and
+it inherited the site-wide stale meta ("45+ verified facilities" — fixed
+separately in layout.tsx to 331 clubs / 39 states). That's why it sat at pos 33
+with 2,141 imp and 4 clicks on the site's BIGGEST query family (~3,400 imp).
+Rebuild:
+- src/app/search/SearchClient.tsx = the interactive tool (moved, unchanged logic:
+  text search, ZIP geocode + 50mi radius, state/city/rating/type filters, sorting)
+- src/app/search/page.tsx = NEW server component: exports metadata (title/desc/
+  canonical/keywords), H1 "Padel Courts Near Me", FAQPage schema, and an SSR
+  directory — browse by state (39 tiles), top 24 cities, featured clubs.
+  HTML 37KB -> 102KB, 0 -> 83+ internal links.
+- REAL GEOLOCATION added ("Use my location"): device coords -> distance-annotates
+  every club -> sorts ascending. NO radius cap (unlike ZIP path) so thin markets
+  still see nearest options. Graceful denied/unsupported states.
+- Counts reconciled: title/hero/tool/state-tiles ALL = 331, tiles sum exactly to
+  331; openNow (300) stated separately so nothing overstates what's playable.
+VERIFIED in browser: typed search -> "7 Clubs Found for Austin"; geolocation
+stubbed to Austin -> distance order 0.2/0.3/0.5/0.7/2.1/11.2/12.9/42.9/55.1 mi.
+robots.txt still blocks only /search? (faceted), not /search itself.
+
 ## Parallel tracks (not this plan, don't drop)
 - Badge outreach wave 1: BADGE_OUTREACH_WAVE1.csv ready, 42 sendable (Dito sends)
 - Weekly SEO loop: scheduled Mondays (padel-seo-improver-weekly), baseline run done
