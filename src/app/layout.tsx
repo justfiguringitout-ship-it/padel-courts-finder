@@ -64,13 +64,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Plausible Analytics — REMOVED 2026-08-01, pending re-add.
-            The old tag (script id pa-hXW20NfPRc_ogxgRkigEC) pointed at a site
-            that isn't in Dito's Plausible account, so this site's traffic was
-            being reported into a dashboard he can't see. Re-adding the site
-            issues a NEW script id — paste the fresh tag here, id and all.
-            Both the src tag and the plausible.init() block below it are
-            required; the script alone records nothing. */}
+        {/* Plausible Analytics — re-added 2026-08-02 with Dito's OWN site tag
+            (pa-2FtSBFWHWLqP40IKDyLVi). The previous tag
+            (pa-hXW20NfPRc_ogxgRkigEC) belonged to a different account and was
+            removed the same day — do not restore it. Both the src tag and the
+            plausible.init() block are required; the script alone records
+            nothing. */}
+        <script async src="https://plausible.io/js/pa-2FtSBFWHWLqP40IKDyLVi.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+              plausible.init()
+            `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`}
