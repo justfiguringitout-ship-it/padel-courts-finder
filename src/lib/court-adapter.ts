@@ -798,6 +798,14 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
   }
   // else: unknown courtType — leave both at 0
 
+  // "both" was being printed raw into meta descriptions ("4 both courts")
+  const courtTypeLabel =
+    court.courtType === "both"
+      ? "indoor & outdoor"
+      : court.courtType === "indoor" || court.courtType === "outdoor"
+        ? court.courtType
+        : "";
+
   // Generate features array
   const features: string[] = [];
   if (court.courtType === "indoor") features.push("Indoor");
@@ -945,9 +953,16 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
       `book padel ${court.city}`,
     ],
 
-    metaDescription: totalCourts > 0
-      ? `Book padel courts at ${court.name} in ${court.city}, ${stateCode}. ${totalCourts} ${court.courtType || ""} courts. Rated ${court.rating} stars.`
-      : `Book padel courts at ${court.name} in ${court.city}, ${stateCode}. Rated ${court.rating} stars.`,
+    metaDescription: [
+      `Book padel courts at ${court.name} in ${court.city}, ${stateCode}.`,
+      totalCourts > 0 ? `${totalCourts} ${courtTypeLabel} courts.`.replace(/\s+/g, " ") : "",
+      // Never advertise an absent rating — "Rated 0 stars." was shipping on clubs
+      // that simply have no Google reviews yet.
+      court.rating > 0 && court.reviewCount > 0
+        ? `Rated ${court.rating} stars from ${court.reviewCount} reviews.`
+        : "",
+      "Hours, prices and how to book.",
+    ].filter(Boolean).join(" "),
 
     faqs: faqs.length > 0 ? faqs : undefined,
 
