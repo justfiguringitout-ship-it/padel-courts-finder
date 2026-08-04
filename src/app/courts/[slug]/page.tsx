@@ -43,8 +43,18 @@ export async function generateMetadata({ params }: CourtPageProps): Promise<Meta
     return { title: "Club Not Found" };
   }
 
+  // Club pages mostly surface on navigational brand queries where the club's own
+  // site/Instagram/Maps hold the top slots. Restating the brand wins no clicks, so
+  // lead with the brand (protects the name match) then promise what the official
+  // listing does not put in its snippet: court count, hours, prices.
+  const courtCount = court.facility?.totalCourts ?? 0;
+  const title =
+    courtCount > 0
+      ? `${court.name} — ${courtCount} Padel Courts in ${court.address.city}, ${court.address.stateCode} | Hours & Prices`
+      : `${court.name} — Padel Courts in ${court.address.city}, ${court.address.stateCode} | Hours & Prices`;
+
   return {
-    title: `${court.name} | ${court.address.city}, ${court.address.stateCode} | Padel Courts`,
+    title,
     description: court.metaDescription || court.description,
     keywords: court.keywords,
     openGraph: {
