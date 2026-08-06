@@ -211,6 +211,18 @@ on-page change now would make the next reading uninterpretable. **No action. Mea
 
 ## 4b. Indexing queue
 
+> **Execution log (updated 2026-08-03, end of day).** Dito worked the queue the same day.
+> **Wave 1 — all 11 submitted. Wave 2 — all 10 submitted. Wave 3 — 3 of 8 submitted**
+> (`nox-at10-genius-18k-review`, `head-extreme-pro-review`, `wilson-bela-v3-review`), then the
+> daily Request Indexing quota was exhausted. **Sitemap resubmitted.**
+> **Carried to 2026-08-04 — the 5 remaining Wave 3 review pages:**
+> `wilson-blade-elite-v2-review`, `babolat-technical-viper-review`, `babolat-contact-review`,
+> `adidas-metalbone-hrd-review`, `nox-ml10-pro-cup-review`.
+> Note: 24 submissions in one day is well above the ~10–12/account/day cap, so some Wave 2
+> entries may have been throttled rather than accepted — next run should verify indexation of
+> Wave 2 specifically rather than assuming it landed.
+
+
 **A lot shipped since the last run and none of it is likely indexed yet.** Between 2026-07-27 and
 today, **7 brand-new pages** and **21 modified pages** landed (P1–P9, commits `b34458c`…`89bc591`).
 Every URL below was confirmed **HTTP 200 on `https://www.`** today. Indexation status could not be
@@ -317,7 +329,11 @@ Drop the folders anywhere in `~/Downloads` — the loop finds them.
 
 ## 6. Next run checklist
 
-1. Did **PR #4** merge? If yes, note the deploy date — club-page CTR is measured from there.
+0. **PR #4 merged and deployed 2026-08-03** (squash `324d114`), verified live on production the
+   same day: new club titles, `both` → `indoor & outdoor`, no more "Rated 0 stars", homepage at
+   331 clubs / 39 states. Club-page CTR is measured from **2026-08-03**; first fair read ~2026-08-24.
+1. Confirm the 5 carried-over Wave 3 URLs were submitted on 2026-08-04, and check whether Wave 2
+   actually got indexed (quota may have throttled it — see §4b execution log).
 2. Measure `/new-york` CTR against **2.40%** (not 1.8% — see §3).
 3. Measure `padel courts nyc` against **4.54 / 8.09%**.
 4. Measure the racket cluster against the pre-treatment positions in `rankings.csv`
