@@ -329,9 +329,12 @@ Drop the folders anywhere in `~/Downloads` — the loop finds them.
 
 ## 6. Next run checklist
 
-0. **PR #4 merged and deployed 2026-08-03** (squash `324d114`), verified live on production the
-   same day: new club titles, `both` → `indoor & outdoor`, no more "Rated 0 stars", homepage at
-   331 clubs / 39 states. Club-page CTR is measured from **2026-08-03**; first fair read ~2026-08-24.
+0. **PR #4 merged and deployed 2026-08-04** (squash `324d114`), verified live on production:
+   new club titles, `both` → `indoor & outdoor`, no more "Rated 0 stars", homepage at
+   331 clubs / 39 states. Club-page CTR is measured from **2026-08-04**; first fair read ~2026-08-25.
+   The 5 highest-impression/worst-CTR club pages (`padel-39`, `itp-training-academy`,
+   `padel-haus-atlanta`, `mink-padel`, `padel-up-culver-city` — 6,222 imp returning 19 clicks
+   pre-change) were hand-submitted for recrawl on 2026-08-09 to pull that reading forward.
 1. Confirm the 5 carried-over Wave 3 URLs were submitted on 2026-08-04, and check whether Wave 2
    actually got indexed (quota may have throttled it — see §4b execution log).
 2. Measure `/new-york` CTR against **2.40%** (not 1.8% — see §3).
