@@ -174,49 +174,15 @@ export function getCityBySlug(stateSlug: string, citySlug: string): CityInfo | u
 
 /**
  * Get state code from slug
+ *
+ * Derived from getStates() so it can never drift from the state list the rest of
+ * the site is built from. It previously duplicated that mapping by hand, and any
+ * state added to the data but missed here made every city page in that state 404
+ * while the state hub still linked to them (Rhode Island and Washington both hit
+ * this — /washington/kirkland 404'd while "padel kirkland" ranked at position 4.5).
  */
 function getStateCodeFromSlug(slug: string): string | undefined {
-  const slugToCode: Record<string, string> = {
-    florida: "FL",
-    texas: "TX",
-    california: "CA",
-    "new-york": "NY",
-    tennessee: "TN",
-    illinois: "IL",
-    pennsylvania: "PA",
-    "new-jersey": "NJ",
-    arizona: "AZ",
-    arkansas: "AR",
-    missouri: "MO",
-    "north-carolina": "NC",
-    massachusetts: "MA",
-    wisconsin: "WI",
-    colorado: "CO",
-    michigan: "MI",
-    "puerto-rico": "PR",
-    georgia: "GA",
-    idaho: "ID",
-    maryland: "MD",
-    "new-mexico": "NM",
-    utah: "UT",
-    virginia: "VA",
-    connecticut: "CT",
-    nevada: "NV",
-    kansas: "KS",
-    ohio: "OH",
-    "district-of-columbia": "DC",
-    indiana: "IN",
-    kentucky: "KY",
-    louisiana: "LA",
-    maine: "ME",
-    minnesota: "MN",
-    oklahoma: "OK",
-    oregon: "OR",
-    "south-carolina": "SC",
-    vermont: "VT",
-  };
-
-  return slugToCode[slug];
+  return getStates().find((s) => s.slug === slug)?.code;
 }
 
 /**

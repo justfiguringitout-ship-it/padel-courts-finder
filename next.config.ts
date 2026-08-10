@@ -190,6 +190,10 @@ const nextConfig: NextConfig = {
       { source: '/courts/ranchovalencia', destination: '/courts/rancho-valencia', permanent: true },
       { source: '/courts/hamptonracquetclub', destination: '/courts/hampton-racquet', permanent: true },
       { source: '/courts/snowmassclub', destination: '/courts/snowmass-club', permanent: true },
+      { source: '/courts/@newcanaanfieldclub', destination: '/courts/new-canaan-field-club', permanent: true },
+      // === GSC 404 cleanup 2026-08-10: legacy slugs still 404ing in Search Console ===
+      { source: '/blog/best-padel-clubs-new-york', destination: '/blog/best-padel-clubs-nyc', permanent: true },
+      { source: '/puerto-rico/bayam%C3%B3n', destination: '/puerto-rico/bayamon', permanent: true },
       // === GSC 404 cleanup: removed-club city pages → state page ===
       { source: '/florida/pembroke-pines', destination: '/florida', permanent: true },
       { source: '/florida/north-miami-beach', destination: '/florida', permanent: true },
