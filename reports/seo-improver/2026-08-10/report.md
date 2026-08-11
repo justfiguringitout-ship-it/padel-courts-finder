@@ -254,3 +254,63 @@ three previously-absent URLs enter it.
    the P8 informational pages convert any of their impressions. **Do not judge them early and do
    not edit those pages before then.**
 6. Once PR #5 is merged, next build hours go to SEO-CONTENT-001, not club-page tuning.
+
+---
+
+## 7. Post-run addendum (same day) — PR #5 merged; the 90 diagnosed
+
+**PR #5 merged and deployed** at 2026-08-11T00:19Z on Dito's instruction. All six URLs verified
+live: the three city pages return 200, the three legacy URLs return 308 (Next.js's permanent
+redirect — Google treats it as 301).
+
+### SEO-INDEX-002 — the 90 "Discovered – currently not indexed" pages
+
+Full list exported by Dito and checked end to end. **Every one of the 90 has `lastCrawled =
+1969-12-31` — Google has never fetched any of them.** Composition: 50 `/courts/*`, 38
+`/[state]/[city]`, 2 `/padel-near/*`.
+
+Everything that would normally explain this checks out fine:
+
+| Check | Result |
+|---|---|
+| Live status | 200 (sampled 12/90) |
+| In `sitemap.xml` | **90 / 90** |
+| Linked from parent hub | Yes (verified for Denver, Phoenix, Stockton, Austin) |
+
+So there is no technical blocker — this is crawl *prioritisation*. Google knows the URLs exist
+and has chosen not to spend budget on them.
+
+**And there is a plausible reason it deprioritises them.** `src/app/sitemap.ts` stamps
+`new Date()` at build time onto every entry:
+
+```
+distinct <lastmod> values: 1  (across 714 URLs)
+2026-08-11T00:19:40.003Z
+```
+
+Every deploy tells Google all 714 pages changed at the same instant. That is the textbook signal
+for "this site's lastmod carries no information," and Google's documented response is to discount
+lastmod entirely for the property — which removes the main lever the site has for telling Google
+*which* pages are worth recrawling. On a site whose new pages already sit undiscovered for weeks,
+this is a live self-inflicted wound.
+
+**Recommended fix (not shipped — awaiting Dito):** derive each URL's `lastModified` from real
+per-entity data (club record's updated date, or the file's git mtime) and fall back to a fixed
+build constant rather than `new Date()`. Static pages should keep a stable date that only changes
+when the page changes.
+
+**Why this matters more than the manual queue:** Request Indexing clears ~10–12 URLs/day against
+a quota shared across all of Dito's properties. At that rate the 90 take over a week and buy
+nothing structural. Fixing lastmod is the change that makes Google crawl the *next* 90 on its own.
+
+**Ranking evidence that these are not low-value pages.** Several never-crawled city pages have
+proven query demand where Google is currently ranking something else:
+
+| Never-crawled page | Query | Imp | Position |
+|---|---|---:|---:|
+| `/ohio/columbus` | `padel columbus ohio` | 86 | **3.7** |
+| `/north-carolina/charlotte` | `padel charlotte nc` | 109 | 7.1 |
+| `/arizona/phoenix` | `padel phoenix` | 95 | 6.2 |
+
+Also never crawled: Denver, Dallas, Boston, Raleigh, Miami Beach — all metros with existing
+demand. This bucket is not the thin long tail; it is unstarted inventory.
