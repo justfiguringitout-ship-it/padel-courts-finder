@@ -312,6 +312,36 @@ const blogPosts: BlogPost[] = [
     courtSlug: ''
   },
   {
+    slug: 'best-padel-rackets-tennis-elbow',
+    title: 'Best Padel Rackets for Tennis Elbow (2026): Ranked by Comfort',
+    category: 'equipment',
+    excerpt: 'The frames that put the least strain on a sore arm, ranked by our tested comfort score — soft cores, fiberglass faces and head-light balance, from $89.95.',
+    date: '2026-08-18',
+    readTime: '7 min read',
+    imageAlt: 'Best padel rackets for tennis elbow compared',
+    courtSlug: ''
+  },
+  {
+    slug: 'best-padel-rackets-women',
+    title: 'Best Padel Rackets for Women (2026): Lightweight Picks, Tested',
+    category: 'equipment',
+    excerpt: "Padel rackets aren't gendered — swingweight and grip size decide fit. Our tested lightweight picks from 340g and $89.95.",
+    date: '2026-08-18',
+    readTime: '7 min read',
+    imageAlt: 'Best lightweight padel rackets for women compared',
+    courtSlug: ''
+  },
+  {
+    slug: 'best-padel-rackets-tennis-players',
+    title: 'Best Padel Rackets for Tennis Players (2026): Tested Picks',
+    category: 'equipment',
+    excerpt: 'Coming from tennis? Your instincts will pick the wrong racket. The frames that suit a tennis swing, tested — and the one shape to avoid.',
+    date: '2026-08-18',
+    readTime: '7 min read',
+    imageAlt: 'Best padel rackets for tennis players compared',
+    courtSlug: ''
+  },
+  {
     slug: 'best-diamond-padel-rackets',
     title: 'Best Diamond Padel Rackets (2026): Maximum Power, Ranked',
     category: 'equipment',
