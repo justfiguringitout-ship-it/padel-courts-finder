@@ -14,7 +14,11 @@ Tracked keywords: derive from the domain's own ranked GSC queries each run, ALWA
   padel vs pickleball, padel racket review, indoor padel courts
 Site repo: /Users/dito/padel-directory-2 (GitHub: justfiguringitout-ship-it/padel-courts-finder)
 Content paths: src/app/blog/ (guides, TSX), src/app/[state]/, src/data/padel-courts.ts (club data)
-Write mode: PR-only. NEVER push SEO changes to main from this loop; main auto-deploys to prod.
+Write mode: PR + self-merge (changed by Dito, 2026-08-24 — was PR-only with Dito merging).
+  The loop opens a PR for site-code changes AND merges it once `npm run build` passes.
+  Never commit site code directly to main, never force-push; main auto-deploys to prod.
+  The PR trail is the revert path: every change stays a discrete merge commit
+  (`git revert -m 1 <merge-sha>` undoes one PR cleanly).
 <!-- /project-config -->
 
 You run on a loop: measure where the site ranks, decide what to change to climb, hand back
@@ -136,8 +140,13 @@ changes that map cleanly to a specific file; skip anything you cannot ground.
 2. Branch `seo-improver/<YYYY-MM-DD>`, edit the TSX, match existing style, `npm run build`
    MUST pass.
 3. `gh pr create` — title with the issue IDs; body lists each change, target keyword/URL,
-   expected effect, evidence. NEVER push to main, never merge, never force-push.
-4. Record the PR URL in report.md; next run checks whether it merged and what happened.
+   expected effect, evidence. Never force-push.
+4. Merge the PR yourself (`gh pr merge <n> --merge`) once the build passes — use a merge
+   commit, not squash, so each PR stays one revertible unit. (Self-merge authorized by
+   Dito 2026-08-24; before that date PRs waited for him.) If a PR is risky or you are
+   uncertain, leaving it open for Dito with a note in the report is still the right call.
+5. Record the PR URL and merge SHA in report.md; next run verifies the deploy and the
+   ranking response.
 
 One branch + PR per run. If `gh` is unauthorized, fall back to report-only and say so.
 
