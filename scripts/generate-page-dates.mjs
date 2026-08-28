@@ -27,7 +27,7 @@
  */
 
 import { execFileSync } from "node:child_process";
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
@@ -72,9 +72,19 @@ const staticRoutes = [
   "/rules", "/equipment", "/faq", "/get-started", "/get-started/glossary", "/about",
 ];
 
-// Shared with sitemap.ts — one list, so the two can never drift apart.
-const blogSlugs = JSON.parse(
-  readFileSync(path.join(repoRoot, "src/data/blog-slugs.json"), "utf8")
+// Blog slugs are DERIVED by scanning src/app/blog/*/page.tsx and WRITTEN to
+// blog-slugs.json for sitemap.ts to consume. The filesystem is the source of
+// truth — reading the JSON back in here would mean a new blog page could never
+// enter the manifest until someone hand-edited the JSON (the drift this script
+// exists to prevent).
+const blogDir = path.join(repoRoot, "src/app/blog");
+const blogSlugs = readdirSync(blogDir, { withFileTypes: true })
+  .filter((e) => e.isDirectory() && existsSync(path.join(blogDir, e.name, "page.tsx")))
+  .map((e) => e.name)
+  .sort();
+writeFileSync(
+  path.join(repoRoot, "src/data/blog-slugs.json"),
+  JSON.stringify(blogSlugs, null, 2) + "\n"
 );
 
 for (const route of staticRoutes) {

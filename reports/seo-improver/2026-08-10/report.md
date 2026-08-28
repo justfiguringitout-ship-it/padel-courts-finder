@@ -314,3 +314,30 @@ proven query demand where Google is currently ranking something else:
 
 Also never crawled: Denver, Dallas, Boston, Raleigh, Miami Beach — all metros with existing
 demand. This bucket is not the thin long tail; it is unstarted inventory.
+
+### SEO-INDEX-002 — sitemap `lastmod` fix **(PR #6, open — awaiting merge)**
+
+[PR #6](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/6) implements the
+fix proposed above. `lastmod` now derives from git history via a committed manifest
+(`src/data/page-dates.json`, regenerated with `npm run sitemap:dates`) instead of `new Date()`.
+
+| | Before | After |
+|---|---|---|
+| Distinct `lastmod` across 714 URLs | **1** | **12** |
+| Two independent builds | different every time | **byte-identical** |
+
+Static and blog routes get true per-file dates. Data-driven routes take the newest of their
+template, the libs that decide which routes exist, and the club dataset — the libs matter, because
+`site-structure.ts` is what created the three new city pages today, so they correctly report
+`2026-08-10` rather than inheriting a stale `2026-07-16` template date.
+
+Blog slugs moved to `src/data/blog-slugs.json` so `sitemap.ts` and the generator read one list,
+closing the same duplicate-source-of-truth pattern that caused the PR #5 404s.
+
+**Caveat:** this restores a working crawl-priority signal; it is not an instant reindex. Google
+must re-fetch the sitemap and rebuild trust in it — weeks, not days. Court pages still share one
+date (the dataset's); per-club granularity is a possible later refinement.
+
+**Wave 1 of the indexing queue was submitted by Dito on 2026-08-10** (10 URLs: the 3 fixed city
+pages + 7 never-crawled metros). Next run should check whether they moved from "Discovered" to
+indexed.
