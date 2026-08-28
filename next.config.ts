@@ -28,6 +28,7 @@ const nextConfig: NextConfig = {
       { source: '/courts/slice-padel-co-llc', destination: '/courts/slice-padel-co', permanent: true },
       { source: '/courts/padel-highway-llc', destination: '/courts/padel-highway', permanent: true },
       { source: '/courts/nicol-nj', destination: '/courts/nicol-rackets', permanent: true },
+      { source: '/courts/wakit-rakit-titusville', destination: '/courts/wakit-rakit-space-coast', permanent: true }, // owner rebrand 2026-08-28
 
       // === Duplicate merges with different slugs (70) ===
       { source: '/courts/pepper-padel-miami', destination: '/courts/pulse-padel-hub', permanent: true },
