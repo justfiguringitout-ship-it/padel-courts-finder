@@ -5,6 +5,7 @@ import { generateSlug } from "@/lib/court-adapter";
 import { getStates } from "@/lib/site-structure";
 import { SearchClient } from "./SearchClient";
 import { HeroVideo } from "@/components/hero-video";
+import { CityPhotoGrid } from "@/components/city-photo-grid";
 
 const CLUB_COUNT = padelCourts.length;
 const TITLE = `Padel Courts Near Me: Find & Compare ${CLUB_COUNT} US Clubs`;
@@ -175,11 +176,12 @@ export default function SearchPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-2">Padel courts by city</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-2">Explore top padel cities</h2>
             <p className="text-stone-600 text-sm mb-5">
-              The US cities with the most padel clubs right now.
+              America&apos;s biggest padel metros — tap a city for every club, compared side by side.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+            <CityPhotoGrid />
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 mt-6">
               {topCities.map((c) => (
                 <Link
                   key={`${c.city}-${c.stateCode}`}

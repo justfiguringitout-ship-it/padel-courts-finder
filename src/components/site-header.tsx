@@ -86,6 +86,14 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link href="/state-of-us-padel-2026" className={cn("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50", pathname.startsWith("/state-of-us-padel-2026") ? "text-primary font-semibold" : "bg-background font-medium")}>
+                      2026 Report
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
                   <NavigationMenuTrigger>Equipment</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[280px] gap-2 p-4">
@@ -217,6 +225,13 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                     onClick={() => setIsOpen(false)}
                   >
                     Blog
+                  </Link>
+                  <Link
+                    href="/state-of-us-padel-2026"
+                    className="text-base font-medium hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    2026 Report
                   </Link>
 
                   <div className="space-y-2">

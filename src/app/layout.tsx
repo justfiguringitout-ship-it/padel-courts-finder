@@ -140,6 +140,7 @@ export default function RootLayout({
                 <Link href="/privacy" className="hover:text-white/70 transition-colors">Privacy Policy</Link>
                 <Link href="/terms" className="hover:text-white/70 transition-colors">Terms of Service</Link>
                 <Link href="/sitemap.xml" className="hover:text-white/70 transition-colors">Sitemap</Link>
+                <Link href="/photo-credits" className="hover:text-white/70 transition-colors">Photo Credits</Link>
               </div>
             </div>
           </div>
