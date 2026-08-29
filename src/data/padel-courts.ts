@@ -2926,7 +2926,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "none reported",
     instagram: "https://www.instagram.com/padel.social.us/",
     facebook: "https://www.facebook.com/p/Padel-Social-61560079678777/",
-    status: "temporarily_closed",
+    status: "open",
     ogImageUrl: "/images/courts/padel-social-bethesda.jpg",
   },
     {
