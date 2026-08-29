@@ -75,6 +75,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Westchester's padel pioneer and family-friendly multi-sport facility offering indoor padel courts for beginners and suburban players with easy access and free parking. Listed in padel directories but lacks official website or verified primary sources.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "Multi-sport facility",
@@ -155,6 +156,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Padel Club in Coconut Creek offers 4 quality padel courts (2 indoor, 2 outdoor) in a friendly atmosphere suitable for all skill levels. Guests can book courts, take lessons with certified coaches, and rent equipment.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: [
       "Certified coaching",
@@ -241,6 +243,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-21h"
     },
     description: "PlayPadel Coral Gables offers excellent padel facilities with professional coaching and events.",
+    courtSurface: "Synthetic turf (artificial grass)",
     ogImageUrl: "/images/courts/playpadel-coral-gables.jpg",
   },
     {
@@ -446,6 +449,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "SouthPadel is a premier padel facility in South Miami with excellent courts and community. Book courts by calling ahead, especially during peak hours.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: ["Certified coaching", "equipment rental"],
     membersOnly: false,
     lessonsAvailable: true,
@@ -520,6 +524,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Society Las Olas Padel brings world-class padel to downtown Fort Lauderdale at the Society Las Olas apartment complex. Players can rent equipment and book courts by phone, with coaching available.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: ["Padel racket/ball rentals", "certified coaching/lessons"],
     instagram: "@society.lasolas",
     facebook: "https://www.facebook.com/p/Society-Las-Olas-100089163650738/",
@@ -927,6 +932,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Premium indoor padel facility in South Charlotte with 2 climate-controlled courts for year-round play, pro shop, rentals, coaching, events, and lounge area with coffee/bar. NC's leading padel community hub open to all levels.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "pro shop",
@@ -973,6 +979,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Padel Country Club is listed as a padel facility in Miami, FL offering court bookings, lessons, and rentals, but lacks a verifiable address and detailed confirmation across major sources.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: ["Professional courts", "coaching programs"],
     lessonsAvailable: true,
     rentalAvailable: true,
@@ -1000,6 +1007,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-21h"
     },
     description: "PATL provides quality padel courts in Fort Lauderdale.",
+    courtSurface: "Synthetic turf (artificial grass)",
     ogImageUrl: "/images/courts/patl.jpg",
   },
     {
@@ -2460,6 +2468,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "PadelAZ is Tucson's community-focused indoor padel club at Maracana Indoor Sports Arena, Arizona's first indoor padel destination with two courts. It offers court rentals, open play, lessons, leagues, and free intro clinics in a 30,000 sq ft facility.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "30",
@@ -2871,6 +2880,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Public tennis center in Rock Creek Park with clay and hard courts, indoor bubble, lessons, and professional tournament hosting. Listed as padel venue but specific details unavailable.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Indoor bubble",
@@ -3035,6 +3045,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Mink Padel is Harlem's premier padel club featuring panoramic glass courts in a stunning courtyard surrounded by 200-year-old buildings. Rooted in local culture, it offers memberships, lessons, and community events for players of all levels.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "pro-grade lighting",
@@ -3459,6 +3470,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Golden Padel is a USPA-affiliated community for padel players aged 50+, based at a private residence in Sun City Palm Desert. It organizes interclub matches and social play, with possible private courts or access to nearby facilities.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Community for 50+",
@@ -3594,6 +3606,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Tucson Racquet & Fitness Club is a longstanding community racquet and fitness center featuring 2 new lighted padel courts, alongside tennis, pickleball, pools, gym, classes, lessons, and a public restaurant. It offers year-round access in a welcoming, family-oriented environment.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "2 heated pools",
@@ -3733,6 +3746,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Denver Racquets Club is a premier racquet sports facility offering 4 brand new outdoor padel courts added in 2025, alongside indoor tennis, pickleball, platform tennis, and fitness center. It provides a welcoming environment for players of all levels with leagues, drills, lessons, tournaments, and membership perks.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "indoor fitness center",
@@ -3772,6 +3786,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Padel Ranch is El Paso's premier padel destination offering outdoor courts in a vibrant community setting. Reservations via WhatsApp, with invite-only access and professional amenities.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["Equipment rental", "coaching/lessons", "late night play"],
     verified: true,
@@ -4134,6 +4149,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Reimagined private club in North Dallas (not New Braunfels) offering padel, tennis, pickleball, wellness, pool, dining, and events on former T Bar M site. Premier padel facility in North Texas with 4 courts.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: [
       "resort pool & cabanas",
@@ -4179,6 +4195,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Racket Social Club Alpharetta offers four professional outdoor padel courts at Windward Lake in Alpharetta, GA. It provides lessons, clinics, and a social atmosphere for players of all levels.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "part of Windward Lake Club with tennis",
@@ -4269,6 +4286,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-21h",
     },
     description: "Marcos del Pilar is a prominent padel coach and consultant known as the Godfather of Padel in the USA, offering certifications and training in Atlanta area like Alpharetta. No specific dedicated padel club or courts owned/operated under this name with verified physical location found.",
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["Padel coaching and certification programs"],
     verified: true,
@@ -4347,6 +4365,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Epic Padel Inc operates 5 brand-new outdoor padel courts at Prosperity Athletic Club in north Charlotte. This flagship multi-sport facility offers a premium padel experience with community events and access to tennis, pickleball, gym, and pools.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "pro shop",
@@ -4418,6 +4437,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Drop Club is a premier padel and pickleball facility in San Juan, Puerto Rico, offering indoor and outdoor courts with modern amenities including pro shop and coaching. Associated with USA Padel, it provides a welcoming environment for players of all levels.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: [
       "pro shop (Bullpadel/Oxdog/Dropshot)",
@@ -4463,6 +4483,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Eco's Sports Park is a multi-sport complex in San Juan's Parque Luis Muñoz Marín featuring 2 padel courts among other facilities like soccer fields and beach tennis. It offers a vibrant atmosphere with food, drinks, and entertainment for all ages.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "rooftop bar",
@@ -4509,6 +4530,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Riviera Tennis Center is a multi-sport facility in Bayamón, PR offering tennis, beach tennis, padel, and pickleball courts with professional coaching and a social clubhouse. It features 3 padel courts and is open to the public for rentals and lessons.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["Pro shop", "bar & grill", "multiple sport courts"],
     verified: true,
@@ -4685,6 +4707,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Taktika Padel - Palm Desert offers a single outdoor padel court at the scenic Shadow Mountain Resort, providing lessons, clinics, and access to extensive resort amenities including pools, tennis, and upcoming dining options.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "resort pools",
@@ -4731,6 +4754,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Located within the luxurious Fairmont Grand Del Mar resort in San Diego, Taktika Padel offers a premier padel and pickleball experience in a world-class setting. Guests can enjoy coaching from certified instructors and various amenities amid stunning surroundings.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lockers",
@@ -4995,6 +5019,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "North Texas Racquet Club is a multi-sport facility in Frisco, TX offering tennis, pickleball, and padel with 4 LED-lit padel courts, expert coaching, clinics, and a pro shop. It welcomes players of all levels with reservations available to members and non-members alike.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Pro shop",
@@ -5159,6 +5184,7 @@ export const padelCourts: PadelCourt[] = [
     rating: 4.8,
     reviewCount: 45,
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["Hamptons Location", "Outdoor Courts", "Luxury Amenities", "Members & Public"],
     openingHours: {
@@ -5277,6 +5303,7 @@ export const padelCourts: PadelCourt[] = [
     rating: 5.0,
     reviewCount: 103,
     numberOfCourts: 7,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: ["Indoor & Outdoor", "Premium Facility", "Bar & Restaurant", "Events", "Coaching"],
     openingHours: {
@@ -5315,6 +5342,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "6 Love Sports is the largest women's padel community in the USA and a USPA-certified premier community offering tournaments, leagues, and networking events. It features 4 outdoor padel courts located minutes from the ocean in Miami Beach.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "pro shop",
@@ -5345,6 +5373,7 @@ export const padelCourts: PadelCourt[] = [
     rating: 5.0,
     reviewCount: 127,
     numberOfCourts: 6,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: ["All Indoor Courts", "Climate Controlled", "National Chain", "Bar & Lounge", "Coaching"],
     openingHours: {
@@ -5432,6 +5461,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Club Pickle & Padel is the largest indoor pickleball and padel facility on Chicago's North Shore, featuring 4 world-class padel courts and 10 pickleball courts in a 50,000 sq ft domed venue. Opened in September 2025, it offers year-round play, leagues, lessons, rentals, and a welcoming lounge for all skill levels.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "climate control",
@@ -5557,6 +5587,7 @@ export const padelCourts: PadelCourt[] = [
     rating: 4.9,
     reviewCount: 84,
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["Outdoor Courts", "Charlotte Area", "Family Friendly", "Coaching", "Leagues"],
     openingHours: {
@@ -5584,6 +5615,7 @@ export const padelCourts: PadelCourt[] = [
     rating: 4.5,
     reviewCount: 0,
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["Clubhouse", "Coaching", "Tournaments"],
     openingHours: {
@@ -5707,6 +5739,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Padel Up Club is an indoor padel facility in Los Angeles dedicated to promoting padel and its community, with 4 courts across locations including a flagship with 3 courts, high ceilings, and a bar/lounge area. Members enjoy exclusive amenities like locker rooms with showers, sauna, and cold plunge.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "locker rooms",
@@ -5750,6 +5783,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Flyte Racquet Club is Marin's premier racquet sports destination with 4 padel courts, extensive pickleball and tennis facilities, lessons, and wellness amenities including spa and gym. Open to members and the public, it hosts clinics, tournaments, and social events in a modern clubhouse setting.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "fitness center",
@@ -5834,6 +5868,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Aspen Padel Club features one padel court at the private Smuggler Racquet Club. It is listed as the first padel court in Aspen with ongoing development indicated.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Tennis courts (6)",
@@ -6044,6 +6079,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Private family-oriented racquet and swim club in New Canaan, CT offering tennis, platform paddle, padel, pickleball, aquatics, and social events. Features 1 padel court among other amenities like pool and pro shop on a 12-acre site.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: [
       "pool",
       "tennis pro shop",
@@ -6565,6 +6601,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Private members club featuring 3 outdoor padel courts, 12 Har-Tru tennis courts, fitness facility, pool, and full-service Padel Grille restaurant. Offers professional instruction and programs for tennis and padel.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "pool",
@@ -6839,6 +6876,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Prestigious private country club established in 1887 featuring a newly constructed outdoor padel court alongside tennis, squash, an Olympic-sized pool, fitness centers, and fine dining options. Situated in Midtown Atlanta next to Piedmont Park, it offers members comprehensive recreational and social facilities.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Olympic-sized swimming pool",
@@ -6879,6 +6917,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Proximo Padel is a premium indoor padel facility in Chicago's Logan Square with 4 panoramic courts featuring 40 ft ceilings and competition lighting, plus 3 pickleball courts. It offers lessons, clinics, rentals, memberships, open play, pro shop, showers, parking, and a social hub.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "pro shop",
@@ -6923,6 +6962,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "9h-21h",
     },
     description: "Private country club in Deerfield, IL featuring golf, racquet sports including tennis on 4 outdoor clay courts, pool, and dining. Paddle tennis/padel listed on some directories but specific details unavailable; racquet sports director and pro on staff indicate programs available.",
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: [
       "golf course",
       "tennis courts",
@@ -6961,6 +7001,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "H-F Racquet & Fitness Club is an indoor sports facility offering tennis, pickleball, racquetball, fitness center, group classes, lap pool, and personal training. A facility of the Homewood-Flossmoor Park District, it provides programs for all ages with pro shop and locker rooms.",
     numberOfCourts: 0,
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: [
       "10 indoor tennis courts",
       "lap pool",
@@ -7309,6 +7350,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-17h",
     },
     description: "Midcoast Recreation Center is a nonprofit sports facility in Rockport, ME featuring indoor tennis courts, ice arena, pickleball, fitness center, and more. It serves as a community hub for various athletic programs and private rentals.",
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: [
       "ice arena",
       "fitness center",
@@ -7351,6 +7393,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Heights Racquet and Social Club is Minnesota's premier multi-racquet facility offering 3 indoor padel courts alongside pickleball and squash. It features a social club atmosphere with amenities like gym, locker rooms with saunas, coworking space, and member events.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "gym",
@@ -7529,6 +7572,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Premium facility offering padel and pickleball on 4 outdoor courts, plus wellness, fitness, coworking, and community events at the ArenaLife campus in East Hanover, NJ. Features high-energy environment with coaching and tournaments for all levels.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "free/private parking",
@@ -7668,6 +7712,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Multi-sport indoor facility specializing in badminton (3 courts), pickleball (2 courts), and ping pong (1 table) at 189 Brunswick St. No padel courts despite listing on padel sites; likely an error.",
     numberOfCourts: 0,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "pro shop",
@@ -7877,6 +7922,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "9h-21h",
     },
     description: "Las Vegas-based USPA-sanctioned Premier Community dedicated to growing padel through inclusive events, organized play, international retreats, and empowering women in the sport. Hosts events like round robins and women's days.",
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: [
       "Organized events and retreats; USPA affiliation",
     ],
@@ -8002,6 +8048,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Elite Sports Club at 111 West 57th Street features Manhattan's only indoor residential padel court as part of a luxury residential tower's amenities. Exclusive to residents, it complements facilities like an 82-foot pool, spa, fitness center, and golf simulator.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "82-foot pool with cabanas",
@@ -8043,6 +8090,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Long Island's premier indoor padel club featuring 4 world-class courts with 25-foot ceilings, located on the second floor of Long Island Sports Hub. Offers coaching, pro shop, locker rooms, sauna, cold plunge, and lounge for a premium playing experience.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "pro shop",
@@ -8082,6 +8130,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Part of the historic Tuxedo Club offering two new Padel Lux padel courts in a scenic lakeside setting amid other racquet sports. Private facility for members and guests with beautiful mountain views.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "historic club setting",
@@ -8125,6 +8174,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Cleveland Premier Padel is the only indoor padel court in Northern Ohio, located within the Cleveland Premier Pickleball facility. It offers a professional playing environment as part of a larger racquet sports venue with 15 pickleball courts.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "pro shop",
@@ -8210,6 +8260,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-23h",
     },
     description: "Private swim, tennis, and platform tennis club on 9 acres in Upper Arlington/Columbus OH area with pools, tennis courts, pro shop, and clubhouse. No padel courts found despite Playtomic listing (page unavailable).",
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: [
       "swimming pool",
       "tennis courts (clay/hard per snippets)",
@@ -8382,6 +8433,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Portland's first indoor padel club featuring 4 enclosed glass courts in a 13,800 sq ft warehouse with 40 ft ceilings next to Cathedral Park. Includes a 5,000 sq ft two-story social area with café serving local wine and beer, plus retail and coaching.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "free parking",
@@ -8512,6 +8564,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "RCW Athletic Club is a premier racquet sports facility in Lancaster, PA, featuring two outdoor padel courts along with tennis, pickleball, and fitness options. Formerly Racquet Club West, it offers a vibrant social atmosphere with a covered lounge and renovated lobby for players of all levels.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "6 indoor tennis courts",
@@ -8645,6 +8698,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Amarillo National Tennis Center features 2 lighted outdoor padel courts alongside tennis and pickleball facilities. Managed by city parks, it offers affordable court time and amenities like a pro shop and concessions.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "pro shop",
@@ -8683,6 +8737,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Austin Padel Center Pop-Up is a temporary premium padel facility offering 3 indoor climate-controlled courts and 2 outdoor courts. It features recovery areas with cold plunge and sauna, F&B options, events, and various amenities like parking, store, and WiFi.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: [
       "recovery area (cold plunge",
@@ -8727,6 +8782,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Padel Quattro is a premier padel club in Brownsville, Texas, offering 5 courts near the Mexican border. One of the southernmost padel facilities in the US with an active tournament and league scene.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "pro shop/equipment store",
@@ -8813,6 +8869,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-20h",
     },
     description: "State-of-the-art facility at Southern Methodist University featuring 6 indoor and 6 outdoor tennis courts for year-round training and hosting professional events like the Dallas Open. Includes premium spectator amenities, training center with fitness rooms, locker rooms, and club areas.",
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: [
       "club suite",
       "grand viewing terrace",
@@ -8894,6 +8951,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Serve El Paso is El Paso's premier venue for padel and pickleball, featuring indoor and outdoor courts alongside a restaurant and bar with locally-inspired menu. It's an all-ages spot perfect for playing, eating, drinking, and socializing with friends and family.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: [
       "restaurant",
@@ -9051,6 +9109,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Private luxury fitness club on 27-acre oasis with 2 outdoor lighted padel courts, extensive racquet sports including tennis and pickleball, pools, and 185k sq ft gym. Offers lessons and programs for all levels.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "gym",
@@ -9094,6 +9153,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Racket Social Club Willowbrook is a premier outdoor padel and pickleball facility in northwest Houston featuring 4 full-panoramic padel courts. It offers expert coaching, equipment rentals, a snack bar, and community events under the lights in a welcoming environment for all levels.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "free parking",
@@ -9136,6 +9196,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Premier outdoor padel facility in Houston founded by US #1 female padel player Belen Salcedo and USPA President Mike May. Offers courts, lessons, tournaments, and clinics in a welcoming environment for all levels.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Free parking",
@@ -9169,6 +9230,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Punto Azul Padel Club is bringing 8 premium outdoor courts to Houston's Oak Forest area, with an Academy planned to provide coaching from beginner to advanced levels, plus leagues, tournaments, and community nights.",
     numberOfCourts: 8,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Academy",
@@ -9211,6 +9273,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Padel Country Club Memorial offers two climate-controlled indoor padel courts in West Houston with premium amenities like a full bar and pro shop. It provides coaching, rentals, and public booking via platforms like Playtomic.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "pro shop",
@@ -9258,6 +9321,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "West43 Padel is Houston's premier indoor padel lounge in The Heights, offering state-of-the-art courts, memberships, events, leagues, and a vibrant community atmosphere. It provides food, coffee, gear rentals, lessons, and social play for all levels.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "coffee/snack bar",
@@ -9437,6 +9501,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Woodcourt Padel and Pickleball is an outdoor facility in Magnolia, TX featuring 3 padel courts and 3 pickleball courts with equipment rentals available. It offers high-quality courts open to the public with extended evening hours enabled by lighting.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Free parking",
@@ -9476,6 +9541,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "IMGN Park is a family-friendly sports entertainment venue in Mission, TX featuring 3 outdoor padel courts, soccer field, pickleball, and food options. It promotes social integration through recreational activities including padel, soccer, and cultural events.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Free parking",
@@ -9829,6 +9895,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Forest Lakes Swim & Tennis Club is part of the Forest Lakes community association in Charlottesville, VA, featuring tennis, pickleball, swim facilities, and one outdoor padel court. Courts are reserved via Playtomic for residents and guests, with a pro shop and lessons available.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Tennis pro shop",
@@ -10168,6 +10235,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "A sport and wellness ecosystem built around premium indoor padel, luxury amenities, and a community rooted in healthy living. World-class courts, wellness & spa services, and an organic café, all under one roof in the heart of West Palm Beach.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "luxury spa (saunas",
@@ -10210,6 +10278,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "0h-24h",
     },
     description: "New padel club coming soon to Columbus, GA, featuring exceptional padel courts, outdoor lounges, and landscaped surroundings as Phase 1, with a future clubhouse including cafe, pro shop, and more. Part of the 2nd Avenue revitalization, aiming to introduce the fast-growing sport of padel to the community.",
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Free parking",
@@ -10251,6 +10320,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "State-of-the-art panoramic four-court outdoor padel recreation center owned by Armando and Caitlin Suarez. Planned opening around April 2026 with tournaments and events for all skill levels.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "Free parking",
@@ -10324,6 +10394,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Greater Cincinnati’s first dedicated outdoor padel facility featuring 4 courts, pro shop, food & beverage, and lounge areas. Scheduled to open late Spring 2026 at 3804 Church St. in Newtown.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "pro shop",
@@ -10363,6 +10434,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "6h-21h",
     },
     description: "OH! Padel is the first elite indoor padel club on the Main Line in Malvern, PA. It is a locally-owned, community-focused facility offering a premium padel experience.",
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "fitness and training spaces",
@@ -10444,6 +10516,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "varies",
     },
     description: "Upscale padel and wellness club featuring indoor and outdoor courts, sauna, cold plunge, coffee bar, and cafe.",
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: [
       "sauna",
@@ -10477,6 +10550,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Premium indoor padel club with 6 courts, built around lifestyle, wellness, and community. Features gym, recovery amenities, golf simulator, co-working, pro shop, saunas, showers, physical therapy, and central bar.",
     numberOfCourts: 6,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "full gym",
@@ -10518,6 +10592,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Lobb's Padel is an upcoming indoor padel club in The Woodlands featuring 5 premium courts, coaching, clinics, leagues, social events, recovery amenities like sauna and cold bath, merchandise shop, and a coffee shop/bar/eatery. It aims to be a community hub for beginners and experienced players alike, opening late May or early summer 2026.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "sauna",
@@ -10561,6 +10636,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Matrix Club is a premier racquet and fitness facility in Lowell, Arkansas, notable for being the only club in the state to offer padel courts. Founded by former Razorback student-athletes, the club provides a high-performance atmosphere across its 42-court campus, which includes tennis, pickleball, and specialized boutique fitness studios.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -10610,6 +10686,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "La Valle Coastal Club is a premier SoCal escape featuring a 27-hole championship golf course and a comprehensive racquet sports facility with LED-lit tennis, pickleball, and premium padel courts. The club offers a warm and welcoming atmosphere that functions as a home away from home for its members and resort guests.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -10803,6 +10880,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Cascades Tennis is a premier racquet sports facility located at the Aspen Meadows Resort, featuring 40 acres of Bauhaus-inspired grounds with mountain views. The club offers a comprehensive range of programming for tennis, pickleball, and padel, including professional instruction, clinics, and social events.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -10851,6 +10929,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Colorado Springs' first padel facility, located inside The Farm at 2660 Vickers Dr. Three indoor courts with very high ceilings in a community-driven, social-by-design atmosphere. Coach Matthew Kiser on staff with 30+ years of racquet sports coaching experience. No experience required — beginner clinics run regularly.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "indoor courts",
@@ -10886,6 +10965,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 19,
     description: "The Snowmass Club is a premier private four-season retreat set against the backdrop of Mount Daly and the Roaring Fork Valley, offering a refined yet welcoming atmosphere for residents and visitors. The facility features a fully renovated 19,000-square-foot athletic center, a championship golf course, and a comprehensive racquet sports complex.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -10938,6 +11018,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Field Club of Greenwich is a private sports club that features a comprehensive padel and squash program led by experienced professionals. The facility offers a variety of organized play including clinics, open play sessions, and social events in a friendly atmosphere.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -10981,6 +11062,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Padel America is an indoor padel facility located within Pickleball America, one of the largest indoor racket sports venues in the U.S. situated in the Stamford Town Center mall. It features a state-of-the-art padel court in a premium sportstainment setting that combines athletics with social and community events.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "lessons",
@@ -11022,6 +11104,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Boca Grove is a prestigious, members-only golf and country club community that features a boutique-style residential setting and a nationally recognized racquet sports program. The facility is notable for being the first in South Florida to introduce padel courts, offering a vibrant and welcoming atmosphere for its approximately 450 member families.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -11113,6 +11196,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Kinetic Indoor Racquet Club is an elite, first-of-its-kind training facility in Boynton Beach that specializes in squash but also features a competition-grade indoor padel court. The club provides a state-of-the-art environment for athletes of all levels, including a structured program for juniors.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "indoor squash courts",
@@ -11159,6 +11243,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Dixson Padel and Pickleball Club is a premier indoor facility in Deerfield Beach, Florida, offering dedicated courts for both padel and pickleball. The club is known for its community-focused atmosphere, hosting various leagues, tournaments, and social events for players of all skill levels.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "lessons",
@@ -11299,6 +11384,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "AREA CENTRE is a unique hybrid facility that combines professional coworking spaces, elite padel courts, and a wellness center under one roof. Designed for makers and creators, the club offers a modern atmosphere focused on productivity, physical activity, and community connection.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "lessons",
@@ -11347,6 +11433,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Ocean Club is an exclusive private residential community and resort spanning 52 acres on the southern end of Key Biscayne. It features a world-class Tennis Center that serves as a hub for both tennis and padel, offering a luxurious and family-focused atmosphere.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -11397,6 +11484,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Eko Padel and Pickle is a vibrant 20,000-square-foot indoor facility located within the Dolphin Mall, featuring professional-grade courts in a repurposed cinema space. The club offers a welcoming, community-focused atmosphere with a dedicated cafe and social events for players of all skill levels.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "lessons",
@@ -11443,6 +11531,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Located within the expansive 247-acre Tamiami Park, this facility is a key location for the Canas Racket network, offering a professional yet community-focused atmosphere. It serves as a multi-sport hub featuring a specialized padel court alongside extensive tennis and pickleball facilities.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -11533,6 +11622,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Brickell Soccer and Padel is a vibrant multi-sport facility located in the heart of Miami's urban core, offering a unique experience of playing padel and soccer against the backdrop of the city skyline. The club features high-quality turf for soccer and professional padel courts.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -11617,6 +11707,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Pepper Padel is a welcoming outdoor padel facility located within Claude Pepper Park, featuring courts set behind an art-decorated wall next to basketball courts. The club is known for its friendly community atmosphere and professional coaching.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -11660,6 +11751,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Lake Padel Orlando is a premier indoor padel facility in Central Florida featuring five full panoramic courts designed for year-round play. The club offers a modern, community-focused atmosphere with a social lounge, mezzanine viewing area, and a bar.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "panoramic indoor courts",
@@ -11711,6 +11803,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Anytime Padel is a facility located at the Palm Aire Country Club in Sarasota, offering court rentals and professional instruction for players of all skill levels. The club features outdoor glass courts and provides a welcoming atmosphere for both beginners and advanced players.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -11756,6 +11849,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "St. Pete Athletic is a premier indoor paddle and social club located in the Warehouse Arts District of St. Petersburg. The 40,000-square-foot facility functions as an urban country club, featuring professional-grade pickleball, padel, and table tennis courts alongside a full restaurant and multiple cocktail bars.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "indoor pickleball courts",
@@ -11861,6 +11955,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "SH19 is a premier private racquet, social, and wellness facility in Tampa, designed as an extension of The Stovall House. It offers a luxury atmosphere focused on racquets, social connection, and wellness, featuring high-end amenities like a sauna and cold plunge.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -11954,6 +12049,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Mondo Padel is an exclusive padel facility in West Palm Beach that serves as both a private club and a showcase for its world-class court manufacturing. It features a single, high-performance panoramic court designed for competitive matches and casual play.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "parking",
@@ -11992,6 +12088,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Isleworth is a premier private golf club community spanning 600 acres along Central Florida's Butler Chain of Lakes, recognized as one of the most prestigious in the world. The club features an 89,000-square-foot Mediterranean-style clubhouse with world-class amenities.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "championship golf course",
@@ -12040,6 +12137,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Let's Go Pickleball & Padel is a premier 53,000+ square foot indoor facility designed for players of all levels, featuring state-of-the-art CushionX courts and a community-centric atmosphere. Co-founded by Joe Paletta and pro tennis player Donald Young.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "lessons",
@@ -12081,6 +12179,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Gozzer Ranch is a private, members-only luxury community and club perched on basalt bluffs overlooking Lake Coeur d'Alene. The facility offers a rustic, relaxed atmosphere with world-class amenities including a Tom Fazio-designed golf course.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "padel",
@@ -12133,6 +12232,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Founded in 1895, the Saddle & Cycle Club is a historic and distinguished private country club located on the shores of Lake Michigan in Chicago's Edgewater neighborhood. The facility offers an emerald oasis atmosphere with an extensive array of amenities.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "golf",
@@ -12178,6 +12278,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Pickle N Pins is a premier indoor entertainment destination in Metairie co-founded by Drew Brees, offering a vibrant and social atmosphere for families and adults. The facility features climate-controlled courts for padel and pickleball alongside unique attractions like duckpin bowling and digital axe throwing.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "padel",
@@ -12227,6 +12328,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Ballers Boston Seaport is an urban social sports facility that brings a country club atmosphere to the city's waterfront. It features high-quality outdoor padel and pickleball courts, a vibrant social scene with food and drink offerings, and seasonal transitions such as a synthetic ice rink in winter.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -12277,6 +12379,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Maryland Sportsplex is a premier indoor multi-sport training facility located in a historic former factory building in Glen Arm. The facility features a variety of athletic spaces including turf fields, basketball courts, and the first padel court in the area.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "indoor courts",
@@ -12324,6 +12427,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8:00am-8:00pm",
     },
     description: "NAOA is an exclusive luxury wellness and racquet club in the Hamptons that integrates sports, holistic health, and social networking. The eight-acre facility features contemporary design inspired by Blue Zones and offers a vibrant, high-end atmosphere.",
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "padel",
@@ -12377,6 +12481,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Hampton Racquet is a premier racquet and wellness club in East Hampton, set in a stunning natural environment. The facility offers a unique blend of high-performance racquet sports, wellness amenities like cold plunges, and a French-Asian fusion dining experience.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -12418,6 +12523,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 173,
     description: "Pine Hollow Club is a historic, high-end private country club set on a 133-acre Gold Coast estate originally built in 1934. The facility is notable for its storied legacy as a former Vanderbilt mansion and the first padel court on Long Island.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -12469,6 +12575,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Seawane Club is a premier private members' club and luxury country club located on the South Shore of Long Island. Notable for being the first private club in Long Island to add padel courts in 2022, the facility offers an 18-hole championship golf course and extensive racquet center.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "championship golf course",
@@ -12522,6 +12629,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Courts at Montauk Yacht Club is a fully renovated racquet center for padel and tennis — the only property in Montauk with dedicated padel courts. Two world-class padel courts and a Har-Tru clay tennis court sit on the waterfront, with lessons, clinics, junior programs (ages 7-12), tournaments, and court rentals across all levels led by ITF- and PTR-certified pros. Seasonal and monthly passes offer priority access, equipment, and resort benefits. Open daily 8 AM-8 PM, June through the end of October.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -12571,6 +12679,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Reserve Padel Upper East Side is an exclusive members-only facility located in one of Manhattan's most iconic neighborhoods. The club features two world-class indoor padel courts and a variety of premium wellness amenities designed to blend sport with a luxury lifestyle.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "indoor padel courts",
@@ -12617,6 +12726,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "SPORTIME Padel at Randall's Island is a premier indoor facility featuring three dedicated MejorSet courts with 40-foot ceilings and professional-grade lighting. It serves as a flagship hub for racket sports in New York City.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "lessons",
@@ -12652,6 +12762,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "The Racquet Lounge is a premier private members-only sanctuary in the Hamptons dedicated to racquet sports, including tennis, pickleball, and padel. Founded in 2023 by former athletes, the club offers a luxurious atmosphere with high-end amenities.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -12696,6 +12807,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Triangle Tennis Club is a cozy little club in the heart of Southampton Village that features the first padel court open to the public in the Hamptons. The facility offers a welcoming atmosphere with high-quality Har-Tru hydrocourts and a professional-grade artificial turf padel court.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -12740,6 +12852,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Established in 2026 at the Lindner Family Tennis Center, this premier sporting club is part of a $260 million campus transformation. It offers a world-class athletic environment for tennis, pickleball, and padel, with an upscale-casual public restaurant.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -12791,6 +12904,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Northwood Racquet & Fitness is a premier racquet sports destination in the Lehigh Valley that has served as a community hub for over 50 years. The recently remodeled facility is notable for being the first in the region to offer indoor padel courts.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: [
       "indoor and outdoor tennis courts",
@@ -12886,6 +13000,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Merion Cricket Club is a prestigious, private family-oriented club established in 1865, renowned for its historic Frank Furness-designed clubhouse and extensive racquet sports facilities. It serves as a social and athletic hub on Philadelphia's Main Line.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: [
       "lessons",
@@ -12936,6 +13051,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Portres Sports Club is a premier fitness and social destination in Philadelphia's Fishtown and Northern Liberties neighborhoods, blending padel, pickleball, and Pilates in a thoughtfully designed urban space. The facility features a vibrant community-driven atmosphere.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: [
       "lessons",
@@ -12985,6 +13101,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Dorado Beach Sports Hub is a vibrant, tropical multi-sport facility located within the exclusive Dorado Beach Resort & Residences. Designed as an extension of the resort's Fitness & Wellness Center, it offers outdoor padel, pickleball, and beach tennis in a luxury atmosphere.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -13023,6 +13140,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Founded in 2015 on the site of a former private school, the Columbia Racquet Club is a grassroots facility that features South Carolina's first padel court. The club is known for its intimate, community-driven atmosphere and operates primarily on a reservation-only basis.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "squash court",
@@ -13066,6 +13184,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "LTP Daniel Island is a premier racquet sports facility featuring the first public padel court in South Carolina. Operated by Charleston Tennis LLC at the Daniel Island Tennis Center, the club offers a world-class training environment for tennis, pickleball, and padel.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -13113,6 +13232,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Roy Barth Tennis Center is a world-renowned racquet sports facility located within the Kiawah Island Golf Resort, consistently ranked as a top tennis destination. The center features a newly renovated clubhouse surrounded by pine trees and lush coastal flora.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -13152,6 +13272,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "The Cliffs at Mountain Park is a private luxury mountain community featuring the Sports Pavilion, a state-of-the-art facility opened in 2025. It offers a rustic yet refined atmosphere with a Gary Player links-style golf course and multiple racquet sports.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "padel courts",
@@ -13205,6 +13326,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Traditions Club is a premier private golf club and residential community featuring a Jack Nicklaus championship golf course. The newly completed Racquet Center provides a high-end playing experience with lighted outdoor courts for tennis, pickleball, and padel.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -13257,6 +13379,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Preston Playhouse is a premier indoor pickleball and padel facility located in the heart of Dallas, featuring a family-friendly atmosphere with a funky and retro design. The club offers a comprehensive social experience with dedicated lounge and bar areas, on-site dining, and arcade games.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "lessons",
@@ -13304,6 +13427,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Net Racquet Club, also known as North Texas Racquet Club, is a premier racquet sports facility in Farmers Branch featuring indoor padel courts. The club offers a vibrant community atmosphere with expert coaching for tennis, pickleball, and padel.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: [
       "lessons",
@@ -13398,6 +13522,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Point Padel Club is the first indoor padel facility in the Rio Grande Valley, offering a premium environment for players to connect and compete. The club features a modern architectural design with a mix of indoor and covered outdoor courts.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     amenities: [
       "equipment rental",
@@ -13542,6 +13667,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 87,
     description: "The Greencroft Club is a premier private dining and social club set in a charming 1965 country estate at the base of the Blue Ridge Mountains. It offers a comfortable, home-like atmosphere with the distinction of having the first padel court in the Mid-Atlantic region.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -13580,6 +13706,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Stowe Racquets is a premier padel facility located in Stowe, Vermont, featuring state-of-the-art Adidas courts nestled in a scenic mountain setting. The club offers a vibrant community atmosphere with opportunities for both members and guests to play.",
     numberOfCourts: 1,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: [
       "lessons",
@@ -13679,6 +13806,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Laredo Padel Club is a community-focused, Latino-owned outdoor padel facility in north Laredo with 5 courts, opened in December 2025. Bookings run through Playtomic, with drop-in sessions, monthly memberships, and a full bar and restaurant on site.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["equipment rental", "free parking", "pro shop", "restaurant & bar", "cafeteria", "WiFi"],
     coordinates: { lat: 27.5806, lng: -99.4739 }, // coordinates estimated
@@ -13705,6 +13833,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Padel Den USA is Utah County's first dedicated padel facility — a climate-controlled indoor club in Orem with 5 courts, a pro shop, lessons, and open play, opened in early 2026.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: ["pro shop", "coaching", "open play", "equipment rental"],
     coordinates: { lat: 40.3096, lng: -111.7128 }, // coordinates estimated
@@ -13733,6 +13862,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "The Hive Padel Club is a five-court padel facility on Salt Lake City's west side — four indoor courts plus Utah's first outdoor court — with a gym, sauna, cafe, mezzanine lounge, kids corner, and pro shop.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     indoorCourts: 4,
     outdoorCourts: 1,
@@ -13759,6 +13889,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Utah City Racquet Club is a multi-racquet club in Vineyard operated by LVBL, with 4 padel courts alongside 6 pickleball and 2 tennis courts. It opened June 13, 2026 with founding memberships and per-hour court bookings via the LVBL app.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: ["pickleball courts", "tennis courts", "coaching", "app booking (LVBL)"],
     coordinates: { lat: 40.2977, lng: -111.7466 }, // coordinates estimated
     instagram: "@utahcityracquetclub",
@@ -13813,6 +13944,7 @@ export const padelCourts: PadelCourt[] = [
       friday: "7h-22h", saturday: "7h-22h", sunday: "7h-22h",
     },
     description: "Padel X Summer Club is a seasonal outdoor pop-up on Lincoln Road, presented by NOX and powered by Playtomic — open daily June 20 through September 15, 2026. A rare chance to play padel in the middle of Miami Beach's pedestrian promenade.",
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["Playtomic booking", "NOX demo rackets"],
     coordinates: { lat: 25.7907, lng: -80.1400 }, // coordinates estimated
@@ -13834,6 +13966,7 @@ export const padelCourts: PadelCourt[] = [
     rating: 0,
     reviewCount: 0,
     description: "Roslyn Padel is bringing boutique padel to Long Island's North Shore, inside Christopher Morley Park, with bookings via Playtomic and a larger facility planned for 2027.",
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: ["Playtomic booking", "park setting"],
     coordinates: { lat: 40.7799, lng: -73.6465 }, // coordinates estimated
     membersOnly: false,
@@ -13852,6 +13985,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Ace Padel is converting the former Great Divide Brewing taproom in Denver's RiNo district into an 8-court padel club — 5 indoor and 3 outdoor — targeting a fall 2026 opening. It's the Miami-based operator's second US location.",
     numberOfCourts: 8,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     indoorCourts: 5,
     outdoorCourts: 3,
@@ -13872,6 +14006,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Newport Pickleball Club is adding Aquidneck Island's first outdoor padel courts — 2 courts alongside its 11 indoor pickleball courts in Middletown, opening in 2026. Rhode Island's first padel listing.",
     numberOfCourts: 2,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["indoor pickleball courts"],
     coordinates: { lat: 41.5195, lng: -71.2870 }, // coordinates estimated
@@ -13892,6 +14027,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "NewGen Racquet Club, an established multi-sport facility north of Columbus with tennis, pickleball, and badminton, is adding 5 padel courts — bringing padel to the Columbus suburbs.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     amenities: ["tennis courts", "pickleball courts", "badminton"],
     coordinates: { lat: 40.1984, lng: -83.0091 }, // coordinates estimated
     membersOnly: false,
@@ -13910,6 +14046,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Conquer Padel is building Northeast Florida's first dedicated padel club in Jacksonville Beach — 5 indoor courts plus a lounge, bar, sauna, and cold plunge, currently under construction.",
     numberOfCourts: 5,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: ["lounge", "bar", "sauna", "cold plunge"],
     coordinates: { lat: 30.2911, lng: -81.3931 }, // coordinates estimated
@@ -13935,6 +14072,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Jam Padel (formerly Pacific Padel Project) brought the Seattle metro its first padel courts — a 3-court outdoor seasonal venue in Bellevue's Spring District, open June through the end of September 2026, one rail stop from downtown Bellevue. Rackets included with bookings, guided open play, and founding memberships, with a permanent Seattle home planned to follow.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["rackets included", "pro shop", "guided open play"],
     coordinates: { lat: 47.6229, lng: -122.1802 }, // city-center estimate
@@ -13958,6 +14096,7 @@ export const padelCourts: PadelCourt[] = [
     rating: 0,
     reviewCount: 0,
     description: "Cascadia Padel is building an indoor padel club in Kirkland with a clubhouse, pro shop, and cafe — targeting a fall 2026 opening, with pre-launch memberships available now.",
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     coordinates: { lat: 47.6769, lng: -122.2060 }, // city-center estimate
     membersOnly: false,
@@ -13981,6 +14120,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Park Padel West Sacramento is a 4-court outdoor panoramic padel club in the Bridge District next to Sutter Health Park, opened in April 2025 — with a lounge, pro shop, riverfront views, and sister clubs in San Francisco.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["pro shop", "lounge", "food & drink (Drake's The Barn)", "equipment rental"],
     coordinates: { lat: 38.5804, lng: -121.5133 }, // city-center estimate
@@ -14007,6 +14147,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Matt's Pickle and Padel is the Pittsburgh metro's first padel facility — 4 indoor padel courts alongside indoor pickleball in Sewickley, with leagues, lessons, youth camps, and open play.",
     numberOfCourts: 4,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: ["indoor pickleball", "leagues & tournaments", "youth camps", "pro shop"],
     coordinates: { lat: 40.5362, lng: -80.1845 }, // city-center estimate
@@ -14027,6 +14168,7 @@ export const padelCourts: PadelCourt[] = [
     rating: 0,
     reviewCount: 0,
     description: "Epic Padel — the Arlington, VA operator with clubs in Charlotte and Tysons — is developing a roughly 31,000 sq ft indoor padel complex on Milwaukee's far northwest side.",
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     coordinates: { lat: 43.1770, lng: -88.0640 }, // city-center estimate
     membersOnly: false,
@@ -14044,6 +14186,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Padel KC is under construction in downtown Overland Park — a roughly 20,000 sq ft facility planned for 4 indoor and 2 outdoor padel courts with a small upstairs restaurant, approved by the city council in 2024.",
     numberOfCourts: 6,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "both",
     indoorCourts: 4,
     outdoorCourts: 2,
@@ -14063,6 +14206,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Padel Foundry is redeveloping the former Beach Cinema Alehouse into Hampton Roads' first indoor padel venue — 7 indoor padel courts plus a pickleball court, targeting an early 2027 opening after the $6.3M building purchase in April 2026.",
     numberOfCourts: 7,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "indoor",
     amenities: ["pickleball court"],
     coordinates: { lat: 36.8529, lng: -75.9958 }, // city-center estimate
@@ -14087,6 +14231,7 @@ export const padelCourts: PadelCourt[] = [
     },
     description: "Forked Lightning Racquet Club is a 27-court private racquet facility in Santa Fe with New Mexico's first padel courts — 3 outdoor turf courts, one glass-enclosed panoramic — opened in October 2025 alongside 12 tennis and 12 pickleball courts. Padel bookings are complimentary with membership.",
     numberOfCourts: 3,
+    courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["tennis courts", "pickleball courts", "member portal booking"],
     coordinates: { lat: 35.6398, lng: -106.0210 }, // city-center estimate
@@ -14108,6 +14253,7 @@ export const padelCourts: PadelCourt[] = [
     rating: 0,
     reviewCount: 0,
     description: "Vamos Padel is in pre-opening in Jacksonville, selling founding memberships ahead of launch — one of two padel clubs racing to end Jacksonville's padel-desert status.",
+    courtSurface: "Synthetic turf (artificial grass)",
     coordinates: { lat: 30.2394, lng: -81.5515 }, // city-center estimate
     membersOnly: false,
     status: "coming_soon",

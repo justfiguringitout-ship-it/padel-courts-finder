@@ -17,6 +17,7 @@ import { getAllAdaptedCourts } from "@/lib/court-adapter";
 import { stateIntros, stateBlogSlugs } from "@/data/page-content";
 import { ClubsMapClient } from "@/components/clubs-map-client";
 import type { Metadata } from "next";
+import { HeroVideo } from "@/components/hero-video";
 
 interface StatePageProps {
   params: Promise<{
@@ -180,23 +181,24 @@ export default async function StatePage({ params }: StatePageProps) {
       </div>
 
       {/* Header */}
-      <section className="bg-gradient-to-b from-primary/10 to-background py-12 md:py-16">
-        <div className="container mx-auto px-4">
+      <section className="grain bg-court relative overflow-hidden py-14 md:py-24">
+        <HeroVideo />
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
-              <MapPin className="w-8 h-8 text-primary" />
-              <h1 className="text-4xl md:text-5xl font-bold">
+              <MapPin className="w-8 h-8 text-turf" />
+              <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
                 Padel Clubs in {state.name}
               </h1>
             </div>
-            <p className="text-xl text-muted-foreground mb-6">
+            <p className="text-xl text-stone-300 mb-6">
               {customIntro || (
                 <>
                   {state.name} has {state.courtCount} padel {state.courtCount === 1 ? 'club' : 'clubs'} across {state.cities.length} {state.cities.length === 1 ? 'city' : 'cities'}
                   {totalCourts > 0 ? ` with ${totalCourts}+ total courts` : ''}.
                   {bigMarkets.includes(state.code) ? " One of America's largest padel markets." : ""}
                   {" "}Browse clubs by city below, or use our{" "}
-                  <Link href="/search" className="text-primary hover:underline">search</Link>
+                  <Link href="/search" className="text-turf hover:underline">search</Link>
                   {" "}to find courts near you.
                 </>
               )}

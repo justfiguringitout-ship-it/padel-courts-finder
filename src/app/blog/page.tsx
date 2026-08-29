@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { getAdaptedCourtBySlug } from '@/lib/court-adapter';
 import BlogContent, { BlogPostWithImage } from './BlogContent';
+import { HeroVideo } from "@/components/hero-video";
 
 export const metadata: Metadata = {
   title: 'Padel Blog | Expert Guides, Club Reviews & Tips',
@@ -678,8 +679,9 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Editorial Header */}
-      <header className="grain bg-court">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+      <header className="grain bg-court relative overflow-hidden">
+        <HeroVideo />
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
           <p className="font-mono text-sm text-turf mb-4">the padel blog</p>
           <h1 className="font-display text-4xl md:text-6xl font-bold text-white tracking-tight mb-4">
             Read the game.

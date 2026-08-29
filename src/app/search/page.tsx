@@ -4,6 +4,7 @@ import { padelCourts } from "@/data/padel-courts";
 import { generateSlug } from "@/lib/court-adapter";
 import { getStates } from "@/lib/site-structure";
 import { SearchClient } from "./SearchClient";
+import { HeroVideo } from "@/components/hero-video";
 
 const CLUB_COUNT = padelCourts.length;
 const TITLE = `Padel Courts Near Me: Find & Compare ${CLUB_COUNT} US Clubs`;
@@ -133,20 +134,8 @@ export default function SearchPage() {
           plays behind it on desktop; mobile and reduced-motion users get the
           poster frame via the same bg-court fallback (no LCP penalty). */}
       <header className="grain bg-court relative overflow-hidden">
-        <video
-          className="hero-bg-video absolute inset-0 h-full w-full object-cover opacity-40 hidden md:block"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/video/hero-padel-poster.jpg"
-          aria-hidden="true"
-        >
-          <source src="/video/hero-padel.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-court/60 via-transparent to-court/80 pointer-events-none" aria-hidden="true" />
-        <div className="container mx-auto px-4 py-10 md:py-14 relative">
+        <HeroVideo />
+        <div className="container mx-auto px-4 py-16 md:py-32 relative">
           <div className="max-w-4xl">
             <span className="inline-block bg-padel-green text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Court Finder</span>
             <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
