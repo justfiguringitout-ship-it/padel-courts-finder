@@ -17,6 +17,7 @@ import { getAllAdaptedCourts } from "@/lib/court-adapter";
 import { cityIntros, cityBlogSlugs } from "@/data/page-content";
 import { ClubsMapClient } from "@/components/clubs-map-client";
 import type { Metadata } from "next";
+import { HeroVideo } from "@/components/hero-video";
 
 interface CityPageProps {
   params: Promise<{
@@ -228,16 +229,17 @@ export default async function CityPage({ params }: CityPageProps) {
       </div>
 
       {/* Header */}
-      <section className="bg-gradient-to-b from-primary/10 to-background py-12 md:py-16">
-        <div className="container mx-auto px-4">
+      <section className="grain bg-court relative overflow-hidden py-14 md:py-24">
+        <HeroVideo />
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
-              <MapPin className="w-8 h-8 text-primary" />
-              <h1 className="text-4xl md:text-5xl font-bold">
+              <MapPin className="w-8 h-8 text-turf" />
+              <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
                 Padel Clubs in {city.name}
               </h1>
             </div>
-            <p className="text-xl text-muted-foreground mb-6">
+            <p className="text-xl text-stone-300 mb-6">
               {customIntro || (
                 <>
                   {city.name} is home to {openClubs.length} padel {openClubs.length === 1 ? 'club' : 'clubs'}
@@ -270,6 +272,57 @@ export default async function CityPage({ params }: CityPageProps) {
           description={`Explore all padel clubs in ${city.name}, ${state.name} on the map`}
         />
       </section>
+
+      {/* Venue comparison — real fields only, renders with 2+ open clubs */}
+      {openClubs.length >= 2 && (
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-2">How do {city.name} padel venues compare?</h2>
+            <p className="text-muted-foreground text-sm mb-5">
+              Every open club in {city.name}{" "}side by side — court counts and details verified against each club&apos;s own published information.
+            </p>
+            <div className="overflow-x-auto rounded-xl border">
+              <table className="w-full text-sm bg-background">
+                <thead>
+                  <tr className="bg-muted/50 text-left">
+                    <th className="p-3 font-semibold">Venue</th>
+                    <th className="p-3 font-semibold">Courts</th>
+                    <th className="p-3 font-semibold">Indoor / Outdoor</th>
+                    <th className="p-3 font-semibold">Access</th>
+                    {openClubs.some((c) => c.courtSurface) && <th className="p-3 font-semibold">Surface</th>}
+                  </tr>
+                </thead>
+                <tbody>
+                  {openClubs
+                    .slice()
+                    .sort((a, b) => b.facility.totalCourts - a.facility.totalCourts)
+                    .map((c) => {
+                      const feats = c.features.map((f) => f.toLowerCase());
+                      const io = feats.includes("indoor") && feats.includes("outdoor")
+                        ? "Indoor & outdoor"
+                        : feats.includes("indoor")
+                          ? "Indoor"
+                          : feats.includes("outdoor")
+                            ? "Outdoor"
+                            : "—";
+                      return (
+                        <tr key={c.slug} className="border-t">
+                          <td className="p-3 font-medium">
+                            <Link href={`/courts/${c.slug}`} className="text-primary hover:underline">{c.name}</Link>
+                          </td>
+                          <td className="p-3 tabular-nums">{c.facility.totalCourts > 0 ? c.facility.totalCourts : "—"}</td>
+                          <td className="p-3">{io}</td>
+                          <td className="p-3">{c.membersOnly ? "Members only" : "Open to public"}</td>
+                          {openClubs.some((cc) => cc.courtSurface) && <td className="p-3">{c.courtSurface || "—"}</td>}
+                        </tr>
+                      );
+                    })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Courts Grid */}
       <section className="container mx-auto px-4 py-12 bg-muted/40">
@@ -360,57 +413,6 @@ export default async function CityPage({ params }: CityPageProps) {
           ))}
         </div>
       </section>
-
-      {/* Venue comparison — real fields only, renders with 2+ open clubs */}
-      {openClubs.length >= 2 && (
-        <section className="container mx-auto px-4 py-12">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-2">How do {city.name} padel venues compare?</h2>
-            <p className="text-muted-foreground text-sm mb-5">
-              Every open club in {city.name}{" "}side by side — court counts and details verified against each club&apos;s own published information.
-            </p>
-            <div className="overflow-x-auto rounded-xl border">
-              <table className="w-full text-sm bg-background">
-                <thead>
-                  <tr className="bg-muted/50 text-left">
-                    <th className="p-3 font-semibold">Venue</th>
-                    <th className="p-3 font-semibold">Courts</th>
-                    <th className="p-3 font-semibold">Indoor / Outdoor</th>
-                    <th className="p-3 font-semibold">Access</th>
-                    <th className="p-3 font-semibold">Surface</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {openClubs
-                    .slice()
-                    .sort((a, b) => b.facility.totalCourts - a.facility.totalCourts)
-                    .map((c) => {
-                      const feats = c.features.map((f) => f.toLowerCase());
-                      const io = feats.includes("indoor") && feats.includes("outdoor")
-                        ? "Indoor & outdoor"
-                        : feats.includes("indoor")
-                          ? "Indoor"
-                          : feats.includes("outdoor")
-                            ? "Outdoor"
-                            : "—";
-                      return (
-                        <tr key={c.slug} className="border-t">
-                          <td className="p-3 font-medium">
-                            <Link href={`/courts/${c.slug}`} className="text-primary hover:underline">{c.name}</Link>
-                          </td>
-                          <td className="p-3 tabular-nums">{c.facility.totalCourts > 0 ? c.facility.totalCourts : "—"}</td>
-                          <td className="p-3">{io}</td>
-                          <td className="p-3">{c.membersOnly ? "Members only" : "Open to public"}</td>
-                          <td className="p-3">{c.courtSurface || "—"}</td>
-                        </tr>
-                      );
-                    })}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Nearby Cities */}
       {nearbyCities.length > 0 && (

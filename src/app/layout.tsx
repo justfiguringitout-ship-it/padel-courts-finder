@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -70,15 +71,10 @@ export default function RootLayout({
             removed the same day — do not restore it. Both the src tag and the
             plausible.init() block are required; the script alone records
             nothing. */}
-        <script async src="https://plausible.io/js/pa-2FtSBFWHWLqP40IKDyLVi.js"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-              plausible.init()
-            `,
-          }}
-        />
+        <Script src="https://plausible.io/js/pa-2FtSBFWHWLqP40IKDyLVi.js" strategy="afterInteractive" />
+        <Script id="plausible-init" strategy="afterInteractive">
+          {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`}
