@@ -282,3 +282,85 @@ Miami Beach were named last run). This is a stopgap; PR #6 is the actual fix.
 5. **Racket cluster** — re-read teardrop/round/diamond/gifts. If the compounding continues, the
    next build slot goes to more of the same pattern, not to club-page tuning.
 6. **Ahrefs** — re-check units once; if still zero, stop checking and remove it from the loop.
+
+
+---
+
+## 8. Post-run addendum (2026-08-29) — merges executed, new pages already indexed, wave 2+3 submitted
+
+Dito's instruction (2026-08-24): the loop handles its own PRs from now on. Actions taken, in
+order, with revert paths.
+
+### 8.1 Policy change — write mode is now PR + self-merge
+
+- Repo skill file `.claude/skills/seo-improver/SKILL.md`: "PR-only, Dito merges" → the loop
+  merges its own PR after a passing build (merge commit, not squash, so each PR reverts as one
+  unit via `git revert -m 1 <merge-sha>`). Landed on main as `2d291e9`.
+  **Revert:** `git revert 2d291e9`.
+- Scheduled-task file `~/.claude/scheduled-tasks/padel-seo-improver-weekly/SKILL.md` (outside
+  the repo): rule 6 updated to match; rule 2 now marks Ahrefs dead (trial = hard 0-unit limit;
+  Dito is not paying the $100/mo upgrade yet); the 2026-08-10 build-priority section marked
+  DONE so future runs do not rebuild the pages.
+  **Revert:** restore `SKILL.md.bak-2026-08-29` saved alongside it.
+- This commit adds the same Ahrefs note to the repo skill file's data-source list.
+
+### 8.2 PRs — both merged while the session was paused
+
+[PR #7](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/7) (three racket
+pages) merged 2026-08-19 as `3702de3`; [PR #6](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/6)
+(sitemap lastmod) merged as `0149c86`. Post-merge integrity verified live 2026-08-29 — the risk
+flagged at merge time (PR #6's `blog-slugs.json` predating PR #7's pages, which would have
+dropped them from the sitemap) did NOT materialize:
+
+| Check | Result |
+|---|---|
+| 3 new blog URLs | all **200** |
+| Present in live sitemap.xml | **3/3** (718 URLs total) |
+| Distinct `lastmod` values in sitemap | **12** (was 1 pre-PR #6) |
+
+### 8.3 The headline result — all three new pages indexed with zero manual submissions
+
+URL Inspection on 2026-08-29: `best-padel-rackets-tennis-elbow`, `-women` and
+`-tennis-players` all return **"URL is on Google — page is indexed."** Nobody submitted them.
+Compare: before PR #6, new pages sat in "Discovered – currently not indexed" for weeks (90
+pages at the Aug-10 diagnosis). Indexed-page count is 612 → **631** and the discovered bucket
+is 90 → **73** (GSC data through 8/20). SEO-INDEX-002 is doing exactly what it promised —
+**wave 2 cost 0 quota.**
+
+### 8.4 Request Indexing — 7 submitted, quota exhausted, 2 rolled over
+
+Full day's quota went to the never-crawled backlog (all verified 200 first, all confirmed
+"Indexing requested" in the UI):
+
+```
+https://www.padelcourtsfinder.com/courts/padel-n9ne
+https://www.padelcourtsfinder.com/courts/padel-haus-dumbo
+https://www.padelcourtsfinder.com/courts/reserve-padel-hudson-yards
+https://www.padelcourtsfinder.com/courts/padel-boston
+https://www.padelcourtsfinder.com/courts/charlotte-padel-club
+https://www.padelcourtsfinder.com/courts/orlando-padel-club-indoor
+https://www.padelcourtsfinder.com/courts/p1-padel-las-vegas
+```
+
+The 8th submission returned **"Quota Exceeded"** — the daily cap is shared across all of
+Dito's properties and other loops had drawn from it. Rolled to tomorrow (already 200-verified):
+
+```
+https://www.padelcourtsfinder.com/courts/padel-x-miami
+https://www.padelcourtsfinder.com/arizona/tempe
+```
+
+Then continue at ~10/day from the remaining discovered-not-indexed list (66 left of 73;
+next best: casas-padel-club-aventura, glassbox-padel-club, padel-mke, patl-louisville,
+new-rochelle-indoor-sports, open-padel-club-by-lasaigues, then the state/city pages —
+tempe, oceanside, colorado-springs, alpharetta, dedham).
+
+Notable: the Aug-10 high-demand metros (Denver, Dallas, Boston, Raleigh, Miami Beach) have
+all LEFT the discovered bucket — cleared by wave 1 + the lastmod fix.
+
+### 8.5 Data-source ruling (Dito, 2026-08-24)
+
+Ahrefs trial has a hard 0-unit limit; upgrading costs $100/mo and Dito is not paying yet.
+Ahrefs is formally out of the loop — GSC-via-Chrome is the primary source, Google
+autocomplete the demand-shape substitute. This closes the "wait for the unit reset" thread
+after six dry runs.

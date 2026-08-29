@@ -28,8 +28,10 @@ say so and why you think it happened.
 
 ## Data sources (try in this order; never fabricate)
 
-1. **Ahrefs MCP (`mcp__*ahrefs*` / gsc-* tools)** — if connected AND has API units
-   (check `subscription-info-limits-and-usage` first). Gives GSC keywords/pages/history +
+1. **Ahrefs MCP (`mcp__*ahrefs*` / gsc-* tools)** — DEAD until further notice: the trial
+   workspace has a hard 0-unit limit and Dito decided (2026-08-24) not to pay the $100/mo
+   upgrade yet. Do not spend run time re-checking it; skip straight to source 2. If Dito
+   later upgrades, restore the old check (`subscription-info-limits-and-usage` first). Gives GSC keywords/pages/history +
    competitive SERP (`serp-overview`, `site-explorer-organic-keywords`, `keywords-explorer-*`).
    This is the preferred, fully-headless path.
 2. **Google Search Console via the user's Chrome** (`mcp__claude-in-chrome__*`) — drive
