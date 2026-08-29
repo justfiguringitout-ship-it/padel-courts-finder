@@ -5,9 +5,10 @@ import { generateSlug } from "@/lib/court-adapter";
 import { getStates } from "@/lib/site-structure";
 import { SearchClient } from "./SearchClient";
 
-const TITLE = "Padel Courts Near Me: Find & Compare 331 US Clubs";
+const CLUB_COUNT = padelCourts.length;
+const TITLE = `Padel Courts Near Me: Find & Compare ${CLUB_COUNT} US Clubs`;
 const DESC =
-  "Find padel courts near you. Search 331 verified US padel clubs across 39 states by city, state, or ZIP — with hours, pricing, court counts, and booking links.";
+  `Find padel courts near you. Search ${CLUB_COUNT} verified US padel clubs across 39 states by city, state, or ZIP — with hours, pricing, court counts, and booking links.`;
 const URL = "https://www.padelcourtsfinder.com/search";
 
 export const metadata: Metadata = {
@@ -128,9 +129,24 @@ export default function SearchPage() {
 
       <div className="h-1 bg-padel-green" />
 
-      {/* Hero — the H1 now matches what the page ranks for */}
-      <header className="grain bg-court">
-        <div className="container mx-auto px-4 py-10 md:py-14">
+      {/* Hero — the H1 now matches what the page ranks for. Aerial padel B-roll
+          plays behind it on desktop; mobile and reduced-motion users get the
+          poster frame via the same bg-court fallback (no LCP penalty). */}
+      <header className="grain bg-court relative overflow-hidden">
+        <video
+          className="hero-bg-video absolute inset-0 h-full w-full object-cover opacity-40 hidden md:block"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/video/hero-padel-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/video/hero-padel.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-court/60 via-transparent to-court/80 pointer-events-none" aria-hidden="true" />
+        <div className="container mx-auto px-4 py-10 md:py-14 relative">
           <div className="max-w-4xl">
             <span className="inline-block bg-padel-green text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Court Finder</span>
             <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">

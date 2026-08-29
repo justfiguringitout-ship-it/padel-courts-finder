@@ -316,3 +316,10 @@
     .prose-lg p, .prose-lg li { @apply text-lg; }
   }
 }
+
+/* Hero background video: never animate for users who asked not to */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-video {
+    display: none !important;
+  }
+}
