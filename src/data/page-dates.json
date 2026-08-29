@@ -1,7 +1,7 @@
 {
   "/": "2026-08-04",
-  "/search": "2026-08-01",
-  "/blog": "2026-07-31",
+  "/search": "2026-08-29",
+  "/blog": "2026-08-29",
   "/advertise": "2026-07-05",
   "/indoor-padel-courts": "2026-08-01",
   "/padel-lessons": "2026-08-01",
@@ -49,13 +49,19 @@
   "/blog/best-padel-rackets-control": "2026-07-10",
   "/blog/best-padel-rackets-intermediate": "2026-07-31",
   "/blog/best-padel-rackets-power": "2026-07-10",
+  "/blog/best-padel-rackets-tennis-elbow": "2026-08-28",
+  "/blog/best-padel-rackets-tennis-players": "2026-08-28",
+  "/blog/best-padel-rackets-women": "2026-08-28",
   "/blog/best-padel-shoes": "2026-07-31",
   "/blog/best-round-padel-rackets": "2026-07-31",
   "/blog/best-teardrop-padel-rackets": "2026-07-31",
+  "/blog/bullpadel-neuron-review": "2026-08-29",
+  "/blog/head-extreme-evo-review": "2026-08-29",
   "/blog/head-extreme-pro-review": "2026-07-31",
   "/blog/how-to-choose-padel-club": "2026-07-04",
   "/blog/new-padel-clubs-july-2026": "2026-07-05",
   "/blog/nox-at10-genius-18k-review": "2026-07-31",
+  "/blog/nox-at10-genius-attack-review": "2026-08-29",
   "/blog/nox-ml10-pro-cup-review": "2026-07-31",
   "/blog/padel-accessories": "2026-07-10",
   "/blog/padel-bandeja-explained": "2026-07-04",
@@ -70,10 +76,10 @@
   "/blog/wilson-bela-v3-review": "2026-07-31",
   "/blog/wilson-blade-elite-v2-review": "2026-07-31",
   "__templates__": {
-    "court": "2026-08-04",
-    "state": "2026-08-10",
-    "city": "2026-08-10",
-    "padelNear": "2026-07-16"
+    "court": "2026-08-28",
+    "state": "2026-08-28",
+    "city": "2026-08-29",
+    "padelNear": "2026-08-28"
   },
-  "__fallback__": "2026-08-10"
+  "__fallback__": "2026-08-29"
 }

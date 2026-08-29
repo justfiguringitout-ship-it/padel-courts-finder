@@ -428,6 +428,39 @@ const blogPosts: BlogPost[] = [
     priceRange: '$13–$27'
   },
   {
+    slug: 'nox-at10-genius-attack-review',
+    title: 'NOX AT10 Genius Attack 12K Review (2026)',
+    category: 'equipment',
+    excerpt: 'The $230 diamond in Tapia’s line, scored 6.7/10 — and how it differs from the Genius 18K.',
+    date: '2026-08-29',
+    readTime: '4 min read',
+    imageAlt: 'NOX AT10 Genius Attack 12K padel racket review',
+    courtSlug: '',
+    priceRange: '$230'
+  },
+  {
+    slug: 'head-extreme-evo-review',
+    title: 'HEAD Extreme Evo Review (2026)',
+    category: 'equipment',
+    excerpt: 'A 511cm² head, Innegra shock reduction and 9/10 comfort for under $100.',
+    date: '2026-08-29',
+    readTime: '4 min read',
+    imageAlt: 'HEAD Extreme Evo padel racket review',
+    courtSlug: '',
+    priceRange: '$100'
+  },
+  {
+    slug: 'bullpadel-neuron-review',
+    title: 'Bullpadel Neuron Review (2026)',
+    category: 'equipment',
+    excerpt: 'Chingotto’s hybrid scored 7.3/10 — round-shape forgiveness with enough power to finish.',
+    date: '2026-08-29',
+    readTime: '4 min read',
+    imageAlt: 'Bullpadel Neuron 2025 padel racket review',
+    courtSlug: '',
+    priceRange: '$236'
+  },
+  {
     slug: 'nox-at10-genius-18k-review',
     title: 'NOX AT10 Genius 18K Review (2026)',
     category: 'equipment',
