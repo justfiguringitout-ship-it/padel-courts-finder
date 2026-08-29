@@ -361,6 +361,57 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </section>
 
+      {/* Venue comparison — real fields only, renders with 2+ open clubs */}
+      {openClubs.length >= 2 && (
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-2">How do {city.name} padel venues compare?</h2>
+            <p className="text-muted-foreground text-sm mb-5">
+              Every open club in {city.name} side by side — court counts and details verified against each club&apos;s own published information.
+            </p>
+            <div className="overflow-x-auto rounded-xl border">
+              <table className="w-full text-sm bg-background">
+                <thead>
+                  <tr className="bg-muted/50 text-left">
+                    <th className="p-3 font-semibold">Venue</th>
+                    <th className="p-3 font-semibold">Courts</th>
+                    <th className="p-3 font-semibold">Indoor / Outdoor</th>
+                    <th className="p-3 font-semibold">Access</th>
+                    <th className="p-3 font-semibold">Surface</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {openClubs
+                    .slice()
+                    .sort((a, b) => b.facility.totalCourts - a.facility.totalCourts)
+                    .map((c) => {
+                      const feats = c.features.map((f) => f.toLowerCase());
+                      const io = feats.includes("indoor") && feats.includes("outdoor")
+                        ? "Indoor & outdoor"
+                        : feats.includes("indoor")
+                          ? "Indoor"
+                          : feats.includes("outdoor")
+                            ? "Outdoor"
+                            : "—";
+                      return (
+                        <tr key={c.slug} className="border-t">
+                          <td className="p-3 font-medium">
+                            <Link href={`/courts/${c.slug}`} className="text-primary hover:underline">{c.name}</Link>
+                          </td>
+                          <td className="p-3 tabular-nums">{c.facility.totalCourts > 0 ? c.facility.totalCourts : "—"}</td>
+                          <td className="p-3">{io}</td>
+                          <td className="p-3">{c.membersOnly ? "Members only" : "Open to public"}</td>
+                          <td className="p-3">{c.courtSurface || "—"}</td>
+                        </tr>
+                      );
+                    })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Nearby Cities */}
       {nearbyCities.length > 0 && (
         <section className="container mx-auto px-4 py-12 bg-muted/40">
