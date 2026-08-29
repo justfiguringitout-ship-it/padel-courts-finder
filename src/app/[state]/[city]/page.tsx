@@ -367,7 +367,7 @@ export default async function CityPage({ params }: CityPageProps) {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-2">How do {city.name} padel venues compare?</h2>
             <p className="text-muted-foreground text-sm mb-5">
-              Every open club in {city.name} side by side — court counts and details verified against each club&apos;s own published information.
+              Every open club in {city.name}{" "}side by side — court counts and details verified against each club&apos;s own published information.
             </p>
             <div className="overflow-x-auto rounded-xl border">
               <table className="w-full text-sm bg-background">
