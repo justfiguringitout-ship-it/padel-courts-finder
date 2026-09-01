@@ -252,11 +252,11 @@ export default async function CityPage({ params }: CityPageProps) {
               )}
             </p>
             <div className="flex flex-wrap gap-2">
-              <Badge variant="secondary" className="text-base px-4 py-2">
-                <Navigation className="w-4 h-4 mr-2" />
+              <Badge className="text-base px-4 py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
+                <Navigation className="w-4 h-4 mr-2 text-turf" />
                 {city.courtCount} {city.courtCount === 1 ? 'Club' : 'Clubs'}
               </Badge>
-              <Badge variant="outline" className="text-base px-4 py-2">
+              <Badge className="text-base px-4 py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
                 {city.name}, {state.code}
               </Badge>
             </div>

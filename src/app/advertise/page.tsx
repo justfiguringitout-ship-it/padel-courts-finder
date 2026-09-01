@@ -109,17 +109,25 @@ export default async function AdvertisePage({
             <div className="grain relative bg-court text-white rounded-2xl p-7 flex flex-col overflow-hidden">
               <div className="relative flex flex-col h-full">
                 <h3 className="font-display text-xl font-semibold mb-1">Featured listing</h3>
-                <p className="text-sm text-white/50 mb-5">For clubs that want to fill courts and grow programs.</p>
+                <p className="text-sm text-white/50 mb-4">For clubs that want to fill courts and grow programs.</p>
+                <div className="mb-5">
+                  <span className="font-display text-4xl font-bold">$49</span>
+                  <span className="text-white/50 text-sm">/month</span>
+                  <span className="text-white/40 text-sm ml-3">or $490/year (2 months free)</span>
+                </div>
                 <ul className="space-y-2.5 text-sm text-white/70 mb-7">
                   <li className="flex gap-2.5"><Check className="w-4 h-4 text-turf shrink-0 mt-0.5" /> Priority placement on the homepage showcase</li>
                   <li className="flex gap-2.5"><Check className="w-4 h-4 text-turf shrink-0 mt-0.5" /> Highlighted, ringed light on the map — on top of the cluster</li>
                   <li className="flex gap-2.5"><Check className="w-4 h-4 text-turf shrink-0 mt-0.5" /> Top of your state and city pages</li>
+                  <li className="flex gap-2.5"><Check className="w-4 h-4 text-turf shrink-0 mt-0.5" /> Featured badge on your club page</li>
+                  <li className="flex gap-2.5"><Check className="w-4 h-4 text-turf shrink-0 mt-0.5" /> Same-day listing updates, priority support</li>
                 </ul>
+                <p className="text-xs text-white/40 mb-4">No competitor ads on your listing — free or featured. Cancel anytime.</p>
                 <a
                   href="#partner-form"
                   className="mt-auto inline-flex items-center justify-center gap-2 rounded-xl bg-padel-green hover:bg-padel-green-dark text-white font-semibold px-6 py-3 transition-all shadow-lg shadow-padel-green/25"
                 >
-                  Ask about featured
+                  Get featured
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

@@ -204,16 +204,16 @@ export default async function StatePage({ params }: StatePageProps) {
               )}
             </p>
             <div className="flex flex-wrap gap-2">
-              <Badge variant="secondary" className="text-base px-4 py-2">
-                <Building2 className="w-4 h-4 mr-2" />
+              <Badge className="text-base px-4 py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
+                <Building2 className="w-4 h-4 mr-2 text-turf" />
                 {state.courtCount} Clubs
               </Badge>
               {totalCourts > 0 && (
-                <Badge variant="secondary" className="text-base px-4 py-2">
+                <Badge className="text-base px-4 py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
                   {totalCourts}+ Courts
                 </Badge>
               )}
-              <Badge variant="outline" className="text-base px-4 py-2">
+              <Badge className="text-base px-4 py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
                 {state.cities.length} {state.cities.length === 1 ? 'City' : 'Cities'}
               </Badge>
             </div>
