@@ -283,16 +283,19 @@ export default function ControlRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Power ceiling is low — hard drives are all on your swing</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fast improvers chasing pace may outgrow it within a season or two</p>
                 </div>
-                <TrackedLink
-                  href="https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20"
-                  type="affiliate"
-                  productName="Wilson Optix V1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                >
-                  Check Price on Amazon &rarr;
-                </TrackedLink>
+                <div className="flex flex-wrap items-center gap-3">
+                  <TrackedLink
+                    href="https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20"
+                    type="affiliate"
+                    productName="Wilson Optix V1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
+                  >
+                    Check Price on Amazon &rarr;
+                  </TrackedLink>
+                  <Link href="/blog/wilson-optix-v1-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
+                </div>
               </div>
 
               {/* 2. NOX ML10 Pro Cup Rough Surface */}
@@ -484,16 +487,19 @@ export default function ControlRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Noticeably firmer feel than the fiberglass options on this list</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Pro-signature price for what is still a control-oriented racket</p>
                 </div>
-                <TrackedLink
-                  href="https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20"
-                  type="affiliate"
-                  productName="Bullpadel Neuron"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                >
-                  Check Price on Amazon &rarr;
-                </TrackedLink>
+                <div className="flex flex-wrap items-center gap-3">
+                  <TrackedLink
+                    href="https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20"
+                    type="affiliate"
+                    productName="Bullpadel Neuron"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
+                  >
+                    Check Price on Amazon &rarr;
+                  </TrackedLink>
+                  <Link href="/blog/bullpadel-neuron-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
+                </div>
               </div>
 
               {/* 5. Babolat Contact */}

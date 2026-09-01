@@ -432,16 +432,19 @@ export default function BeginnerRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Slightly firmer than pure fiberglass options</p>
                 </div>
 
-                <TrackedLink
-                  href="https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20"
-                  type="affiliate"
-                  productName="HEAD Extreme Evo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
-                >
-                  Check Price on Amazon &rarr;
-                </TrackedLink>
+                <div className="flex flex-wrap items-center gap-3">
+                  <TrackedLink
+                    href="https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20"
+                    type="affiliate"
+                    productName="HEAD Extreme Evo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
+                  >
+                    Check Price on Amazon &rarr;
+                  </TrackedLink>
+                  <Link href="/blog/head-extreme-evo-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
+                </div>
               </div>
 
               {/* 3. Wilson Optix V1 */}
@@ -503,16 +506,19 @@ export default function BeginnerRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Limited power ceiling — you&apos;ll outgrow it</p>
                 </div>
 
-                <TrackedLink
-                  href="https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20"
-                  type="affiliate"
-                  productName="Wilson Optix V1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
-                >
-                  Check Price on Amazon &rarr;
-                </TrackedLink>
+                <div className="flex flex-wrap items-center gap-3">
+                  <TrackedLink
+                    href="https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20"
+                    type="affiliate"
+                    productName="Wilson Optix V1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
+                  >
+                    Check Price on Amazon &rarr;
+                  </TrackedLink>
+                  <Link href="/blog/wilson-optix-v1-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
+                </div>
               </div>
 
               {/* 4. NOX Pro Cup USPA */}

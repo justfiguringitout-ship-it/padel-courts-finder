@@ -373,7 +373,10 @@ export default function ProRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Weight &amp; Balance adjustable, 16K carbon for all-weather consistency</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Base weight light without inserts, soft EVA gets softer in cold</p>
                 </div>
-                <TrackedLink href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" type="affiliate" productName="Adidas Metalbone 3.4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <div className="flex flex-wrap items-center gap-3">
+                  <TrackedLink href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" type="affiliate" productName="Adidas Metalbone 3.4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                  <Link href="/blog/adidas-metalbone-3-4-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
+                </div>
               </div>
 
               {/* 4. HEAD Extreme Pro */}
