@@ -369,3 +369,126 @@ above.
    (SEO-CTR-007). Both closed.
 9. **Skill-file updates still outstanding from last run:** name `gsc_query.py` as data source #1,
    and replace `git stash` with `git worktree` in the build-verification step.
+
+---
+
+# Addendum — 2026-09-01: PR #9 shipped, and §4's diagnosis was incomplete
+
+**PR: [#9 — SEO-CONTENT-005 + SEO-INDEX-004](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/9) — merged as `ebfb8d4`, deployed, both new pages live and verified.**
+
+Dito's response to the 2026-08-31 report: *"indexing — I'll take your reco. Just don't do me
+dirty. Remember the goal is growth and revenue."* He accepted the recommendation not to submit
+the three URLs. He was right to push on the rest of it, and re-examining the run produced a
+finding that changes §4.
+
+## The orphaning finding — this supersedes part of SEO-INDEX-003
+
+**PR #7's and PR #8's review pages had zero inbound internal links.** They were reachable only
+from `sitemap.xml`:
+
+```
+nox-at10-genius-attack-review     inbound internal links: 0
+head-extreme-evo-review           inbound internal links: 0
+bullpadel-neuron-review           inbound internal links: 0
+best-padel-rackets-tennis-elbow   inbound internal links: 2   <- and this one WAS crawled
+```
+
+The `gsc_query.py` header states the two supported levers for getting a page crawled without the
+UI: **an accurate sitemap with a fresh `<lastmod>`, and internal links.** Only one was in use.
+
+**This is a better explanation than the degraded `lastmod`, and it is the one to act on.**
+Orphaned pages not getting crawled is ordinary, well-understood behaviour; it needs no
+experiment to justify fixing. §4's decision to preserve a clean `lastmod` test was applying
+experimental hygiene to something that did not need it, at the cost of leaving five money pages
+unreachable. **That was the wrong call and PR #9 corrects it.**
+
+SEO-INDEX-003 (the `lastmod` collapse) is still real and still unfixed — and it got worse during
+this run. Regenerating `page-dates.json` on the PR branch showed the `state` and `city` template
+dates rolling to **2026-09-01**, this time from the Featured-listing-pricing commit. A second
+unrelated design change re-dated the whole city and state directory inside four days. But it is
+now the *second* explanation for the non-indexing, not the first.
+
+## SEO-INDEX-004 — un-orphan the five newest review pages *(shipped)*
+
+One "Read our full review" link added from each racket's card in the roundup that already
+features it, using the site's existing button pattern. All 8 verified in the live HTML:
+
+| Review page | Now linked from |
+|---|---|
+| `nox-at10-genius-attack-review` | `-power`, `-intermediate` |
+| `head-extreme-evo-review` | `-beginners`, `-women` |
+| `bullpadel-neuron-review` | `-control` |
+| `wilson-optix-v1-review` | `-control`, `-beginners` |
+| `adidas-metalbone-3-4-review` | `-2026` |
+
+## SEO-CONTENT-005 — two new review pages *(shipped)*
+
+The §4 decision not to build was also too conservative. The "don't stack unread cohorts" argument
+applies to an *unproven* pattern; the review-page pattern is proven across eight pages
+(64 → 133 clicks, 3,731 → 7,769 impressions, every page at position 7.6–12.5, REVIEW_SNIPPET
+rich results at 86 clicks +43). PR #8's three pages are not a test of whether review pages work.
+
+| New page | Target query | Evidence |
+|---|---|---|
+| `/blog/wilson-optix-v1-review` | `wilson optix v1 padel racket review` | 10 clean padel autocomplete variants, two in review form. Greenfield — the site had no page for its own **#1 control pick**. Bare `wilson optix` is contaminated by golf/volleyball, so the page targets the long-tail phrase. |
+| `/blog/adidas-metalbone-3-4-review` | `adidas metalbone 3.4 review` | 10 autocomplete variants, **all** in review form, all padel-specific. |
+
+Built on the existing review template (Product + FAQPage JSON-LD, same sections and classes).
+All specs, scores, prices and ASINs lifted from the site's own roundup data — **nothing
+invented**. **12 Amazon links, 12 tagged `padel02-20`**, verified in the live HTML.
+
+**Deliberately not built, and why:**
+- **Dunlop Pro Padel** — autocomplete demand is for Galactica / Nanomax / Tristorm, which the
+  site holds no data for. Building it would have meant inventing specs.
+- **HEAD Sprint Pro 4.0** — autocomplete dominated by *tennis* shoes. Same contamination rule
+  that ruled out Adipower. This also removes candidate #3 from SEO-CONTENT-004.
+- **NOX Pro Cup USPA** — only 3 autocomplete variants, none in review form. Demand too thin.
+- **A standalone `nox at10 genius 18k vs 12k` page** — the query is real and strong in
+  autocomplete, but `nox-at10-genius-attack-review` already carries that comparison and is titled
+  for it. Building a second page would have cannibalised a 3-day-old page. **Revisit once the
+  Attack page has data.**
+
+## Verification
+
+- `npm run build` passes. Run in an **isolated `git worktree`**, so the second agent's working
+  tree was never touched — the failure mode from the 2026-08-29 run did not repeat.
+- Both pages live, 200, correct titles and canonicals, Product + FAQPage JSON-LD present.
+- Sitemap now 723 URLs (was 721).
+- Revert path: `git revert -m 1 ebfb8d4`.
+
+## Revised indexing-queue position
+
+**Recommendation unchanged: do not submit the three PR #8 URLs.** But the reason has changed, and
+it is now a stronger reason rather than a bet on an experiment:
+
+- Before: *withhold submission to keep the `lastmod` test clean* — which traded revenue for
+  information.
+- Now: *the pages were orphaned, that has been fixed, and the fix should be given a chance to
+  work on its own.* If the internal links do the job, the site regains organic indexing for every
+  future page, which is worth far more than pulling three pages forward by a week.
+
+**Check on 2026-09-05.** If the three are still "unknown to Google" then, submit them and treat
+SEO-INDEX-003 (`lastmod`) as the top-priority fix, because at that point both discovery levers
+will have been shown to be broken.
+
+## Corrections to the 2026-08-31 report
+
+1. §4's "no PR this run" and its three justifications were **too conservative**. The orphaning
+   fix needed no experiment, and the review-page pattern is proven enough to keep building.
+2. §4b's framing of the submission choice as "revenue vs. the `lastmod` test" was a false
+   dichotomy — the actual blocker was internal links, and fixing it costs nothing and forfeits
+   nothing.
+3. SEO-CONTENT-004's candidate #3 (**HEAD Sprint Pro 4.0**) is now **deleted**, not deferred:
+   its autocomplete is tennis-shoe contaminated.
+
+## Next run checklist — amendments
+
+Items 1–9 in §6 stand, with these changes:
+
+- **1 (revised)** — the 2026-09-05 inspection now tests **internal links**, not `lastmod`. Still
+  "unknown to Google" → submit, and escalate SEO-INDEX-003.
+- **6 (revised)** — the next build slot is **NOX Pro Cup USPA** or a `18k vs 12k` comparison, and
+  both are gated on PR #8's pages having data. Dunlop and HEAD Sprint Pro are out.
+- **NEW 10** — verify PR #9's two pages get crawled. They ship with inbound internal links from
+  day one, unlike PR #7's and PR #8's. If they index faster than PR #8's did, that is the
+  cleanest possible confirmation of SEO-INDEX-004.
