@@ -286,6 +286,7 @@ export default function BestPadelRacketsWomen() {
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
                 <TrackedLink href="https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20" type="affiliate" productName="HEAD Extreme Evo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <Link href="/blog/head-extreme-evo-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
                 <Link href="/blog/best-padel-rackets-beginners" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">See our beginner guide</Link>
               </div>
             </div>
