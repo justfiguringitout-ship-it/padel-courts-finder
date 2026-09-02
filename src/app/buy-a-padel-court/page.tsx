@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ScrollScrubVideo } from "@/components/scroll-scrub-video";
 
 export const metadata: Metadata = {
   title: "Buy a Padel Court (2026): Costs, Options & Quotes — US Guide",
@@ -79,6 +80,12 @@ export default function BuyAPadelCourtPage() {
               every opening, every pipeline project — so here&apos;s the straight version.
             </p>
           </section>
+          <ScrollScrubVideo
+            src="/video/court-exploded-scrub.mp4"
+            poster="/video/court-exploded-final.jpg"
+            caption="What you're actually buying: every layer of a padel court, from the compacted subgrade and drainage up through the slab, frame, glass, mesh, net, and lighting."
+          />
+
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-5">Padel court prices at a glance</h2>
             <div className="overflow-x-auto rounded-xl border border-stone-200">
