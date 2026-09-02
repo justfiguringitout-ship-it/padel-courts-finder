@@ -4,7 +4,7 @@ import { GearWidget } from '@/components/GearWidget';
 
 export const metadata: Metadata = {
   title: 'How to Play Padel: Complete Beginner\'s Guide (2026)',
-  description: 'Learn how to play padel in 2026. Complete beginner\'s guide covering rules, scoring, equipment, court layout, basic shots, and tips for your first match.',
+  description: 'New to padel? It\'s like a mix of tennis and ping-pong on a court with glass walls, played in doubles. Our beginner\'s guide covers the rules, scoring, gear, and how to get started this week.',
   keywords: [
     "how to play padel",
     "padel rules",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'How to Play Padel: Complete Beginner\'s Guide (2026)',
-    description: 'Learn how to play padel in 2026. Complete beginner\'s guide covering rules, scoring, equipment, court layout, basic shots, and tips for your first match.',
+    description: 'New to padel? It\'s like a mix of tennis and ping-pong on a court with glass walls, played in doubles. Our beginner\'s guide covers the rules, scoring, gear, and how to get started this week.',
     url: 'https://www.padelcourtsfinder.com/how-to-play',
     siteName: 'Padel Courts Finder',
     type: 'article',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'How to Play Padel: Complete Beginner\'s Guide (2026)',
-    description: 'Learn how to play padel in 2026. Complete beginner\'s guide covering rules, scoring, equipment, court layout, basic shots, and tips for your first match.',
+    description: 'New to padel? It\'s like a mix of tennis and ping-pong on a court with glass walls, played in doubles. Our beginner\'s guide covers the rules, scoring, gear, and how to get started this week.',
   },
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/how-to-play',
@@ -167,7 +167,10 @@ export default function HowToPlayPage() {
             {/* Intro */}
             <div className="prose prose-lg prose-stone max-w-none mb-10">
               <p className="text-stone-600 leading-[1.75]">
-                Padel is the fastest-growing sport in the world &mdash; and for good reason. It&apos;s easier to pick up than tennis, more social (always played in doubles), and addictive from the very first rally. The enclosed glass court keeps the ball in play longer, so beginners get real rallies from day one instead of chasing balls. Whether you&apos;ve never held a racket or you&apos;re a tennis player looking for something new, padel is remarkably easy to start and endlessly rewarding to improve at.
+                <strong>Padel is a racket sport that feels like a mix of tennis and ping-pong, played on a small court with glass walls you can bounce the ball off &mdash; almost always in doubles, with a partner.</strong> The rackets are solid paddles (no strings), the serve is underhand, and scoring works exactly like tennis. If you can rally in ping-pong, you can rally in padel on day one.
+              </p>
+              <p className="text-stone-600 leading-[1.75]">
+                It&apos;s the fastest-growing sport in the world &mdash; and for good reason. It&apos;s easier to pick up than tennis, more social (always played in doubles), and addictive from the very first rally. The enclosed glass court keeps the ball in play longer, so beginners get real rallies from day one instead of chasing balls. Whether you&apos;ve never held a racket or you&apos;re a tennis player looking for something new, padel is remarkably easy to start and endlessly rewarding to improve at.
               </p>
               <p className="text-stone-600 leading-[1.75]">
                 This guide covers everything you need to walk onto a padel court for the first time with confidence &mdash; the court, the rules, the gear, the shots, and practical tips for your first match. Curious how padel stacks up against pickleball? Read our <Link href="/blog/padel-vs-pickleball" className="text-sky-600 hover:underline font-medium">Padel vs Pickleball comparison</Link>.
