@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ScrollScrubVideo } from "@/components/scroll-scrub-video";
+import { ScrollFrameSequence } from "@/components/scroll-frame-sequence";
 
 export const metadata: Metadata = {
   title: "Buy a Padel Court (2026): Costs, Options & Quotes — US Guide",
@@ -80,11 +80,16 @@ export default function BuyAPadelCourtPage() {
               every opening, every pipeline project — so here&apos;s the straight version.
             </p>
           </section>
-          <ScrollScrubVideo
-            src="/video/court-exploded-scrub.mp4"
-            poster="/video/court-exploded-final.jpg"
-            caption="What you're actually buying: every layer of a padel court, from the compacted subgrade and drainage up through the slab, frame, glass, mesh, net, and lighting."
-          />
+          <section aria-label="Padel court exploded view" className="max-w-2xl mx-auto -my-2">
+            <ScrollFrameSequence
+              framePattern="/frames/court-explode/f-{i}.jpg"
+              frameCount={61}
+              width={760}
+              height={508}
+              alt="Padel court exploded view: playing surface, markings, net, glass walls, mesh fencing, structural frame, lighting, gate, drainage, perimeter base, and subgrade"
+            />
+            <p className="text-xs text-stone-400 text-center -mt-2 mb-2">Every layer of a padel court — scroll and it comes apart.</p>
+          </section>
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-5">Padel court prices at a glance</h2>
