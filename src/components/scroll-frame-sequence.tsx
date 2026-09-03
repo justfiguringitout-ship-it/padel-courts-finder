@@ -66,9 +66,11 @@ export function ScrollFrameSequence({
       raf = 0;
       const rect = canvas.getBoundingClientRect();
       const vh = window.innerHeight || 1;
-      // play while the element rises from 95% of the viewport to 30%
-      const start = vh * 0.95;
-      const end = vh * 0.3;
+      // play while the element rises from 85% of the viewport to 4% — starts
+      // a beat after it appears, and the longer window (~81vh of scroll vs the
+      // original 65vh) makes the explosion unfold ~25% slower
+      const start = vh * 0.85;
+      const end = vh * 0.04;
       const progress = Math.min(1, Math.max(0, (start - rect.top) / (start - end)));
       draw(Math.min(frameCount - 1, Math.round(progress * (frameCount - 1))));
     };
