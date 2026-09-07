@@ -417,3 +417,12 @@ shared across all properties.
    replace `git stash` with `git worktree` in the build step. Also worth recording: a worktree
    needs `cp -Rl` of `node_modules`, because Turbopack rejects a symlink pointing outside the
    project root.
+
+---
+
+# Addendum — 2026-09-07: Dito's decision
+
+- **Sitemap resubmitted** in Search Console by Dito, same day PR #10 deployed.
+- **Wave 1 hold accepted.** The five review URLs are NOT submitted. Next run (2026-09-14 or later)
+  inspects them first: crawled → SEO-INDEX-003 confirmed; still "Discovered - currently not
+  indexed" → submit all five immediately and stop treating indexing as a mechanics problem.
