@@ -35,8 +35,42 @@ function dateFor(route: string, template?: TemplateKey): Date {
   return new Date(pageDates.__fallback__);
 }
 
+/**
+ * State, city and metro pages are club LISTINGS — what they say changes when one
+ * of the clubs they list changes, and not otherwise. generate-page-dates.mjs now
+ * emits a per-club date for every /courts/<slug>, so a listing page's lastmod is
+ * simply the newest of its own clubs' dates, floored by the structural template
+ * date (which covers a route that lists no clubs yet).
+ *
+ * Before 2026-09-07 all three families shared a single date derived from the whole
+ * of padel-courts.ts plus the template's own page.tsx. A hero-video commit on
+ * 2026-08-28 therefore told Google that 653 of 721 URLs had changed at once — the
+ * precise signal that makes Google discount lastmod for a property, which is what
+ * this whole mechanism exists to avoid.
+ */
+function listingDate(courtSlugs: string[], template: TemplateKey): Date {
+  let newest = pageDates.__templates__[template] ?? pageDates.__fallback__;
+  for (const slug of courtSlugs) {
+    const d = pageDates[`/courts/${slug}`];
+    if (typeof d === 'string' && d > newest) newest = d;
+  }
+  return new Date(newest);
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.padelcourtsfinder.com';
+
+  const cities = getAllCities();
+
+  // stateCode -> every club slug in that state, used by listingDate() above.
+  // Built here rather than beside the state pages because the /padel-near/ URLs
+  // in staticPages need it too.
+  const courtSlugsByState = new Map<string, string[]>();
+  for (const city of cities) {
+    const list = courtSlugsByState.get(city.stateCode);
+    if (list) list.push(...city.courts);
+    else courtSlugsByState.set(city.stateCode, [...city.courts]);
+  }
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
@@ -96,7 +130,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...getPadelNearMetros().map((mm) => ({
       url: `${baseUrl}/padel-near/${mm.slug}`,
-      lastModified: dateFor(`/padel-near/${mm.slug}`, 'padelNear'),
+      lastModified: listingDate(courtSlugsByState.get(mm.stateCode) ?? [], 'padelNear'),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),
@@ -148,13 +182,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const states = getStates();
   const statePages: MetadataRoute.Sitemap = states.map((state) => ({
     url: `${baseUrl}/${state.slug}`,
-    lastModified: dateFor(`/${state.slug}`, 'state'),
+    lastModified: listingDate(courtSlugsByState.get(state.code) ?? [], 'state'),
     changeFrequency: 'weekly',
     priority: 0.8,
   }));
 
   // City pages
-  const cities = getAllCities();
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => {
     // Get state slug from state code
     const state = states.find(s => s.code === city.stateCode);
@@ -162,7 +195,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return {
       url: `${baseUrl}/${stateSlug}/${city.slug}`,
-      lastModified: dateFor(`/${stateSlug}/${city.slug}`, 'city'),
+      lastModified: listingDate(city.courts, 'city'),
       changeFrequency: 'weekly',
       priority: 0.8,
     };

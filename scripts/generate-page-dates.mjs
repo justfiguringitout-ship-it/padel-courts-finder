@@ -63,7 +63,6 @@ function routeFile(route) {
 }
 
 const manifest = {};
-const courtDataDate = gitDate(COURT_DATA);
 
 // --- Static + blog routes: one page.tsx each, so git gives a true per-page date.
 const staticRoutes = [
@@ -98,43 +97,142 @@ for (const slug of blogSlugs) {
 
 // --- Data-driven routes have no file of their own: each is produced by a
 // template plus the libs that decide which routes exist and what they contain.
-// So a route's real last-modified date is the newest of ALL of those inputs.
 //
-// Listing the libs matters, not just the template. site-structure.ts is what
-// determines which city pages exist at all — when PR #5 fixed it on 2026-08-10,
-// three city pages came into existence. Keying off the template alone would have
-// dated those brand-new pages 2026-07-16 and told Google not to bother, which is
-// the exact opposite of what we want.
+// STRUCTURAL vs PRESENTATIONAL (added 2026-09-07, SEO-INDEX-003)
+// --------------------------------------------------------------
+// This used to key template dates off `newest(<template page.tsx>, <lib>,
+// padel-courts.ts)`. That was wrong, and it re-broke the exact problem this
+// script exists to solve: on 2026-08-28 a purely presentational commit (video
+// heroes) touched all four template page.tsx files, and 653 of 721 sitemap URLs
+// jumped to the same lastmod. A second design commit on 2026-09-01 did it again.
+// 91% of the sitemap was claiming it had changed within three days, and five new
+// review pages sat in "Discovered - currently not indexed".
+//
+// A route's <lastmod> must answer "did what this URL SAYS change?", not "did any
+// file that renders it change?". Adding a hero video changes neither a club's
+// address nor a city's club list. So template dates now come ONLY from structural
+// inputs — the libs that determine which routes exist and what data they carry.
+// The template's own page.tsx is excluded.
+//
+// When a template edit really is a content change (adding an FAQ section to every
+// club page, say), record it in TEMPLATE_CONTENT_CHANGES below. That keeps the
+// honest case expressible without making every CSS tweak look like a rewrite.
 const templates = {
-  court: [
-    "src/app/courts/[slug]/page.tsx",
-    "src/lib/court-adapter.ts",
-  ],
-  state: [
-    "src/app/[state]/page.tsx",
-    "src/lib/site-structure.ts",
-  ],
-  city: [
-    "src/app/[state]/[city]/page.tsx",
-    "src/lib/site-structure.ts",
-  ],
-  padelNear: [
-    "src/app/padel-near/[city]/page.tsx",
-    "src/lib/metros.ts",
-  ],
+  court: ["src/lib/court-adapter.ts"],
+  state: ["src/lib/site-structure.ts"],
+  city: ["src/lib/site-structure.ts"],
+  padelNear: ["src/lib/metros.ts"],
 };
+
+// Deliberate, dated overrides: a template change that genuinely altered what the
+// pages say. Format: key -> "YYYY-MM-DD". Add an entry only when the rendered
+// *content* changed for every route in that family; never for styling, layout,
+// imagery or animation.
+const TEMPLATE_CONTENT_CHANGES = {
+  // court: "2026-06-14",  // example: added the FAQ block to every club page
+};
+
+// --- Per-club dates: each /courts/<slug> gets its OWN date.
+//
+// Even with the structural split, keying all 332 club pages off the whole of
+// padel-courts.ts means one club's phone-number fix re-dates the entire
+// directory. So walk that file's git history and diff it record by record: a
+// club's date is the last commit in which THAT club's record actually changed.
+//
+// Records are split on their `name:` line, not their opening brace: the braces
+// are inconsistently indented in this file (115 at four spaces, 217 at two)
+// whereas every one of the 332 `name:` lines sits at exactly four.
+const COURT_RECORD_RE = /\n(?=    name: ")/;
+
+function slugify(name) {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+/** name -> record body, for one revision of padel-courts.ts. */
+function parseRecords(content) {
+  const out = new Map();
+  for (const chunk of content.split(COURT_RECORD_RE)) {
+    const m = chunk.match(/^    name: "(.*?)",$/m);
+    if (!m) continue;
+    // Trim at the record's own closing brace so the NEXT club's `id:` line does
+    // not leak in — otherwise inserting one club anywhere would renumber the
+    // tail of the file and re-date every club after it.
+    const lines = chunk.split("\n");
+    const end = lines.findIndex((l) => /^\s{2,4}\},?$/.test(l));
+    out.set(m[1], (end === -1 ? lines : lines.slice(0, end)).join("\n"));
+  }
+  return out;
+}
+
+/** Every commit that touched the club data, oldest first: [sha, date]. */
+const courtCommits = execFileSync(
+  "git",
+  ["log", "--reverse", "--format=%H %cI", "--", COURT_DATA],
+  { cwd: repoRoot, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 }
+)
+  .trim()
+  .split("\n")
+  .filter(Boolean)
+  .map((line) => {
+    const [sha, iso] = line.split(" ");
+    return [sha, iso.slice(0, 10)];
+  });
+
+// Walk forward, stamping each club with the date its own record last changed.
+const courtRecordDates = new Map();
+let prevRecords = new Map();
+for (const [sha, date] of courtCommits) {
+  let content;
+  try {
+    content = execFileSync("git", ["show", `${sha}:${COURT_DATA}`], {
+      cwd: repoRoot,
+      encoding: "utf8",
+      maxBuffer: 64 * 1024 * 1024,
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+  } catch {
+    continue; // file absent or renamed at this revision
+  }
+  const records = parseRecords(content);
+  for (const [name, body] of records) {
+    if (prevRecords.get(name) !== body) courtRecordDates.set(name, date);
+  }
+  prevRecords = records;
+}
+
+// Clubs present in HEAD get an explicit route date; anything since removed is
+// simply not emitted.
+const headRecords = parseRecords(readFileSync(path.join(repoRoot, COURT_DATA), "utf8"));
+const courtStructuralDate = newest(
+  ...templates.court.map(gitDate),
+  TEMPLATE_CONTENT_CHANGES.court
+);
+const courtDatesBySlug = new Map();
+for (const name of headRecords.keys()) {
+  const d = newest(courtRecordDates.get(name), courtStructuralDate);
+  if (!d) continue;
+  const slug = slugify(name);
+  courtDatesBySlug.set(slug, d);
+  manifest[`/courts/${slug}`] = d;
+}
 
 manifest["__templates__"] = Object.fromEntries(
   Object.entries(templates).map(([key, files]) => [
     key,
-    newest(...files.map(gitDate), courtDataDate),
+    newest(...files.map(gitDate), TEMPLATE_CONTENT_CHANGES[key]),
   ])
 );
 
-// Fallback for anything not covered. A fixed date beats `new Date()`: it is at
-// least honest and, critically, identical across deploys.
+// State, city and metro pages are club LISTINGS: sitemap.ts dates each from the
+// newest of its own clubs' dates. This fallback is the floor for a route that has
+// no clubs yet.
 manifest["__fallback__"] =
-  newest(courtDataDate, ...Object.values(manifest["__templates__"])) ??
+  newest(...Object.values(manifest["__templates__"]), ...courtDatesBySlug.values()) ??
   new Date().toISOString().slice(0, 10);
 
 writeFileSync(OUT, JSON.stringify(manifest, null, 2) + "\n");
@@ -146,5 +244,6 @@ const distinct = new Set(
     .map(([, v]) => v)
 ).size;
 console.log(`page-dates.json: ${pageCount} explicit routes, ${distinct} distinct dates`);
+console.log(`club pages with their own date: ${courtDatesBySlug.size}`);
 console.log(`templates:`, manifest["__templates__"]);
 console.log(`fallback: ${manifest["__fallback__"]}`);
