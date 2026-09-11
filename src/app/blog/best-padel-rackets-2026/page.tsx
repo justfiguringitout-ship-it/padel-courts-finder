@@ -150,8 +150,9 @@ export default function ProRacketsPage() {
       <div className="h-1 bg-padel-green" />
 
       {/* Dark Hero */}
-      <header className="grain bg-court">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+      <header className="grain bg-court relative overflow-hidden">
+        <HeroVideo />
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
           <div className="mb-5"><Link href="/blog" className="text-stone-400 hover:text-turf text-sm">&larr; Back to Blog</Link></div>
           <span className="inline-block bg-padel-green text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Equipment</span>
           <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Best Padel Rackets 2026 — Top 5 Pro Picks</h1>
@@ -203,9 +204,6 @@ export default function ProRacketsPage() {
             </div>
           </div>
 
-          <div className="mt-6">
-            <HeroVideo />
-          </div>
         </div>
 
         {/* Stone-50 Section: Top 5 Product Cards */}

@@ -158,8 +158,9 @@ export default function IntermediateRacketsPage() {
       <div className="h-1 bg-padel-green" />
 
       {/* Dark Hero */}
-      <header className="grain bg-court">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+      <header className="grain bg-court relative overflow-hidden">
+        <HeroVideo />
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
           <div className="mb-5">
             <Link href="/blog" className="text-stone-400 hover:text-turf text-sm">&larr; Back to Blog</Link>
           </div>
@@ -212,9 +213,6 @@ export default function IntermediateRacketsPage() {
               <a href="#top-5-intermediate" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
             </div>
 
-            <div className="mt-6">
-              <HeroVideo />
-            </div>
           </div>
         </div>
 
