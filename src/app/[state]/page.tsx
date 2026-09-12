@@ -424,7 +424,7 @@ export default async function StatePage({ params }: StatePageProps) {
                     {court.pricing.offPeakHourlyRate > 0 ? (
                       <div>
                         <div className="text-2xl font-bold text-primary">
-                          ${court.pricing.offPeakHourlyRate}
+                          {court.pricing.priceRange ? 'from ' : ''}${court.pricing.offPeakHourlyRate}
                         </div>
                         <div className="text-xs text-muted-foreground">per hour</div>
                       </div>
