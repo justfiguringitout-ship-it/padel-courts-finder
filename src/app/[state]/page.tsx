@@ -14,7 +14,7 @@ import {
 import { MapPin, Star, Clock, ChevronRight, Building2, BookOpen, TrendingUp } from "lucide-react";
 import { getStates, getStateBySlug } from "@/lib/site-structure";
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
-import { stateIntros, stateBlogSlugs } from "@/data/page-content";
+import { stateIntros, stateBlogSlugs, stateMetroSections } from "@/data/page-content";
 import { ClubsMapClient } from "@/components/clubs-map-client";
 import type { Metadata } from "next";
 import { HeroVideo } from "@/components/hero-video";
@@ -57,15 +57,23 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
   const title = isGuideState
     ? `Padel in ${state.name}: ${state.courtCount} Clubs & Courts (2026 Guide)`
     : `${state.courtCount} Best Padel Courts in ${state.name} | Find Padel Near Me`;
-  const description = totalIndividualCourts > 0
+  const metroMeta = stateMetroSections[state.code];
+  const baseDescription = totalIndividualCourts > 0
     ? `Find ${state.courtCount} padel clubs across ${state.cities.length} cities in ${state.name} with ${totalIndividualCourts}+ courts. Compare prices, hours, reviews, and facilities. The complete ${state.name} padel court directory.`
     : `Find ${state.courtCount} padel clubs across ${state.cities.length} cities in ${state.name}. Compare prices, hours, reviews, and facilities. The complete ${state.name} padel court directory.`;
+  const description = metroMeta
+    ? `${baseDescription} Includes every club in ${metroMeta.name}, grouped by borough.`
+    : baseDescription;
   const canonicalUrl = `https://www.padelcourtsfinder.com/${state.slug}`;
+  const metroKeywords = metroMeta
+    ? [`padel ${metroMeta.shortName.toLowerCase()}`, `padel courts ${metroMeta.shortName.toLowerCase()}`, `padel ${metroMeta.name.toLowerCase()}`]
+    : [];
 
   return {
     title,
     description,
     keywords: [
+      ...metroKeywords,
       `${state.name} padel courts`,
       `padel ${state.name}`,
       `${state.code} padel`,
@@ -129,6 +137,28 @@ export default async function StatePage({ params }: StatePageProps) {
   const customIntro = stateIntros[state.code];
   const blogSlugs = stateBlogSlugs[state.code] || [];
   const bigMarkets = ["FL", "TX", "CA"];
+
+  // Metro block (NY only today). Resolve each group's clubs and city-page links
+  // here so the JSX stays declarative; groups with no clubs simply don't render.
+  const metro = stateMetroSections[state.code];
+  const cityBySlugName = new Map(state.cities.map((c) => [c.name, c]));
+  const metroGroups = metro
+    ? metro.groups
+        .map((g) => ({
+          label: g.label,
+          clubs: sortedCourts.filter((c) => g.cities.includes(c.address.city)),
+        }))
+        .filter((g) => g.clubs.length > 0)
+    : [];
+  const metroClubCount = metroGroups.reduce((n, g) => n + g.clubs.length, 0);
+  const metroBeyond = metro
+    ? metro.beyond
+        .map((b) => ({
+          label: b.label,
+          cities: b.cities.map((n) => cityBySlugName.get(n)).filter((c): c is NonNullable<typeof c> => !!c),
+        }))
+        .filter((b) => b.cities.length > 0)
+    : [];
 
   return (
     <div className="min-h-screen">
@@ -220,6 +250,86 @@ export default async function StatePage({ params }: StatePageProps) {
           </div>
         </div>
       </section>
+
+      {/* Metro block — the state page is the metro page for "padel nyc" (see page-content.ts) */}
+      {metro && metroClubCount > 0 && (
+        <section className="container mx-auto px-4 py-12" id={metro.shortName.toLowerCase()}>
+          <div className="max-w-3xl mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
+              Padel Courts in {metro.name}: {metroClubCount} {metroClubCount === 1 ? 'Club' : 'Clubs'}
+            </h2>
+            <p className="text-muted-foreground">{metro.intro}</p>
+          </div>
+
+          <div className="space-y-10">
+            {metroGroups.map((group) => (
+              <div key={group.label}>
+                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  {group.label}{' '}
+                  <span className="text-sm font-normal text-muted-foreground">
+                    · {group.clubs.length} {group.clubs.length === 1 ? 'club' : 'clubs'}
+                  </span>
+                </h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {group.clubs.map((court) => (
+                    <Link key={court.id} href={`/courts/${court.slug}`} className="group">
+                      <Card className="hover:border-primary hover:shadow-md transition-all h-full">
+                        <CardHeader className="p-4">
+                          <CardTitle className="text-base group-hover:text-primary transition-colors line-clamp-1 flex items-center justify-between gap-2">
+                            <span className="line-clamp-1">{court.name}</span>
+                            {court.featured && (
+                              <Badge className="bg-amber-500 hover:bg-amber-600 text-xs flex-shrink-0">Featured</Badge>
+                            )}
+                          </CardTitle>
+                          <CardDescription className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+                            {court.facility.totalCourts > 0 && (
+                              <span className="flex items-center gap-1">
+                                <Clock className="w-4 h-4" />
+                                {court.facility.totalCourts} {court.facility.totalCourts === 1 ? 'court' : 'courts'}
+                              </span>
+                            )}
+                            {(court.rating.ratingValue > 0) && (
+                              <span className="flex items-center gap-1">
+                                <Star className="w-4 h-4 fill-primary text-primary" />
+                                {court.rating.ratingValue}
+                              </span>
+                            )}
+                            {court.pricing.offPeakHourlyRate > 0 && (
+                              <span className="font-medium text-foreground">from ${court.pricing.offPeakHourlyRate}/hr</span>
+                            )}
+                          </CardDescription>
+                        </CardHeader>
+                      </Card>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {metroBeyond.length > 0 && (
+            <div className="mt-10 rounded-lg border bg-muted/40 p-5">
+              <p className="font-medium mb-2">Beyond {metro.shortName}</p>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                {metroBeyond.map((b) => (
+                  <span key={b.label} className="flex flex-wrap items-center gap-x-2">
+                    <span className="text-muted-foreground">{b.label}:</span>
+                    {b.cities.map((c, i) => (
+                      <span key={c.slug}>
+                        <Link href={`/${state.slug}/${c.slug}`} className="text-primary hover:underline">
+                          {c.name}
+                        </Link>
+                        {i < b.cities.length - 1 ? ',' : ''}
+                      </span>
+                    ))}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+      )}
 
       {/* Cities Grid */}
       <section className="container mx-auto px-4 py-12">
