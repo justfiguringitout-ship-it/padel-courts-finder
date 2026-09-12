@@ -163,6 +163,8 @@ export default function StateOfPadelPage() {
             <ul className="text-white/70 leading-relaxed max-w-2xl mb-8 space-y-2 text-sm">
               <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">State rankings</strong> — every state&apos;s club count, from Florida&apos;s lead to the newest one-club markets</span></li>
               <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">The facility profile</strong> — average courts per club, the indoor/outdoor split, and the largest facility in America</span></li>
+              <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">The top padel metros</strong> — the 12 US cities ranked by open courts, and why the map is really a map of greater Miami</span></li>
+              <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">Padel as a business</strong> — median court-hour pricing from 80+ clubs, club-size distribution, the multi-location operators, and the members-only share</span></li>
               <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">The construction pipeline</strong> — every announced club we track, mapped to the states where the next wave lands</span></li>
               <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">The padel deserts</strong> — the top-40 US metros still without a court within 25 miles, with the nearest option for each</span></li>
             </ul>

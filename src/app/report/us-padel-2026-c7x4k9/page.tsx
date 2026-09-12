@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
 import { getStates, getSiteStats } from "@/lib/site-structure";
 import { CourtsConstellation } from "@/components/courts-constellation";
+import { getStateOfPadelStats } from "@/lib/state-of-padel-stats";
 import type { Metadata } from "next";
 
 /**
@@ -124,6 +125,7 @@ export default function FullReportPage() {
     .filter((m) => m.nearest > 25)
     .sort((a, b) => b.nearest - a.nearest);
 
+  const biz = getStateOfPadelStats();
   const updated = "September 2026";
 
   return (
@@ -279,6 +281,164 @@ export default function FullReportPage() {
                   construction cost data
                 </Link>{" "}
                 shows the building, not the court kit, dominating indoor budgets.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Top metros */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-2">
+            Where America plays: the top padel metros
+          </h2>
+          <div className="space-y-4 text-stone-700 leading-relaxed max-w-3xl mb-8">
+            <p>
+              Ranked by open courts rather than club count, the map of American padel is
+              really a map of greater Miami: the city proper has {biz.topCities[0]?.courts} courts across{" "}
+              {biz.topCities[0]?.clubs} open clubs, and Doral and North Miami add{" "}
+              {(biz.topCities.find((c) => c.city === "Doral")?.courts ?? 0) + (biz.topCities.find((c) => c.city === "North Miami")?.courts ?? 0)} more
+              within a 20-minute drive. Below Miami, Texas&apos;s big three (Austin, Houston, San
+              Antonio) and San Diego form the second tier, each at roughly 20 open courts —
+              a fifth of Miami&apos;s supply in metros with two to four times its population.
+            </p>
+          </div>
+          <div className="overflow-x-auto rounded-xl border border-stone-200">
+            <table className="w-full text-sm bg-white">
+              <thead>
+                <tr className="bg-stone-50 text-left">
+                  <th className="p-3 font-semibold">#</th>
+                  <th className="p-3 font-semibold">Metro</th>
+                  <th className="p-3 font-semibold text-right">Open clubs</th>
+                  <th className="p-3 font-semibold text-right">Courts</th>
+                </tr>
+              </thead>
+              <tbody>
+                {biz.topCities.map((c, i) => (
+                  <tr key={`${c.city}-${c.state}`} className="border-t border-stone-100">
+                    <td className="p-3 tabular-nums text-stone-400">{i + 1}</td>
+                    <td className="p-3 font-medium">{c.city}, {c.state}</td>
+                    <td className="p-3 tabular-nums text-right text-stone-600">{c.clubs}</td>
+                    <td className="p-3 tabular-nums text-right font-semibold">{c.courts}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-stone-400 mt-3">
+            Open clubs only; court totals count every court a club reports. Suburbs are listed
+            under their own city (Doral and North Miami are separate rows, not folded into Miami).
+          </p>
+        </section>
+
+        {/* Padel as a business */}
+        <section className="border-y bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-8">
+              Padel as a business
+            </h2>
+            <div className="grid sm:grid-cols-3 gap-5 mb-10">
+              <div className="border border-stone-200 rounded-2xl p-6">
+                <div className="font-display text-3xl font-bold text-padel-green tabular-nums">
+                  ${biz.pricing.median}
+                </div>
+                <p className="text-sm text-stone-600 mt-1">
+                  median court-hour price (middle half: ${biz.pricing.p25}–${biz.pricing.p75}), from{" "}
+                  {biz.pricing.sample} clubs with published pricing
+                </p>
+              </div>
+              <div className="border border-stone-200 rounded-2xl p-6">
+                <div className="font-display text-3xl font-bold text-padel-green tabular-nums">
+                  {biz.amenities.membersOnly.pct}%
+                </div>
+                <p className="text-sm text-stone-600 mt-1">
+                  of clubs are members-only; the rest are pay-and-play (of {biz.amenities.membersOnly.n} with a known access model)
+                </p>
+              </div>
+              <div className="border border-stone-200 rounded-2xl p-6">
+                <div className="font-display text-3xl font-bold text-padel-green tabular-nums">
+                  {biz.demand.totalReviews.toLocaleString()}
+                </div>
+                <p className="text-sm text-stone-600 mt-1">
+                  public Google reviews across {biz.demand.clubsWithRating} clubs — averaging {biz.demand.avgRating}★ where a club has 10+ reviews
+                </p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-10">
+              <div>
+                <h3 className="font-semibold text-lg mb-3">Club size</h3>
+                <p className="text-sm text-stone-600 leading-relaxed mb-4">
+                  Most American padel is small-format: over half of clubs run three to five
+                  courts, and only a handful have hit the 10+ court scale common in Spain.
+                  Of {biz.sizeSample} open clubs reporting court counts:
+                </p>
+                <div className="space-y-2">
+                  {biz.sizeBuckets.map((b) => (
+                    <div key={b.label} className="flex items-center gap-3">
+                      <div className="w-24 shrink-0 text-sm text-stone-700">{b.label}</div>
+                      <div className="flex-1 h-6 bg-stone-100 rounded-md overflow-hidden">
+                        <div
+                          className="h-full bg-padel-green rounded-md"
+                          style={{ width: `${Math.max(3, (b.count / biz.sizeSample) * 100)}%` }}
+                        />
+                      </div>
+                      <div className="w-16 text-right text-sm tabular-nums text-stone-600">
+                        {Math.round((b.count / biz.sizeSample) * 100)}%
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-3">The chains</h3>
+                <p className="text-sm text-stone-600 leading-relaxed mb-4">
+                  {biz.chains.length} operators now run two or more locations, together{" "}
+                  {biz.chainClubs} clubs — {Math.round((biz.chainClubs / biz.totalClubs) * 100)}% of the
+                  directory. That is the market&apos;s clearest maturity signal: proven club models
+                  being replicated regionally.
+                </p>
+                <div className="overflow-x-auto rounded-xl border border-stone-200">
+                  <table className="w-full text-sm bg-white">
+                    <thead>
+                      <tr className="bg-stone-50 text-left">
+                        <th className="p-2.5 font-semibold">Operator</th>
+                        <th className="p-2.5 font-semibold text-right">Clubs</th>
+                        <th className="p-2.5 font-semibold text-right">Courts</th>
+                        <th className="p-2.5 font-semibold">States</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {biz.chains.slice(0, 8).map((ch) => (
+                        <tr key={ch.name} className="border-t border-stone-100">
+                          <td className="p-2.5 font-medium">{ch.name}</td>
+                          <td className="p-2.5 tabular-nums text-right">{ch.locations}</td>
+                          <td className="p-2.5 tabular-nums text-right text-stone-600">{ch.courts}</td>
+                          <td className="p-2.5 text-stone-600">{ch.states.join(", ")}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4 text-stone-600 leading-relaxed max-w-3xl mt-10">
+              <p>
+                The unit economics explain the format. At the median ${biz.pricing.median} court-hour
+                split four ways, padel costs a player about ${Math.round(biz.pricing.median / 4)} an
+                hour — boutique-fitness-class money — while
+                a four-court club booking 8 paid hours a day per court grosses roughly{" "}
+                ${(biz.pricing.median * 4 * 8 * 30).toLocaleString()} a month on court time alone before
+                lessons, leagues, memberships, and food and drink. Our{" "}
+                <Link href="/blog/padel-court-cost" className="text-padel-green hover:underline">
+                  construction cost guide
+                </Link>{" "}
+                and{" "}
+                <Link href="/buy-a-padel-court" className="text-padel-green hover:underline">
+                  court buyer&apos;s guide
+                </Link>{" "}
+                cover the capital side: $20–30k for an outdoor court kit, $40–75k installed, with
+                the building dominating any indoor budget.
               </p>
             </div>
           </div>
