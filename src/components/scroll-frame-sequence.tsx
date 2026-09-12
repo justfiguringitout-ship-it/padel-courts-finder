@@ -69,8 +69,14 @@ export function ScrollFrameSequence({
       // play while the element rises from 85% of the viewport to 4% — starts
       // a beat after it appears, and the longer window (~81vh of scroll vs the
       // original 65vh) makes the explosion unfold ~25% slower
-      const start = vh * 0.85;
       const end = vh * 0.04;
+      // If the element sits high on the page, its top can never get back
+      // down to the 85% line — scrolling up would leave the court stuck
+      // half-exploded. Clamp the start line to the highest position the
+      // element can actually reach (its resting spot at scrollY 0), so the
+      // sequence always rewinds fully closed at the top of the page.
+      const topAtPageTop = rect.top + window.scrollY;
+      const start = Math.max(end + 1, Math.min(vh * 0.85, topAtPageTop));
       const progress = Math.min(1, Math.max(0, (start - rect.top) / (start - end)));
       draw(Math.min(frameCount - 1, Math.round(progress * (frameCount - 1))));
     };
