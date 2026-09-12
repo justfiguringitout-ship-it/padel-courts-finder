@@ -198,8 +198,8 @@ export default function FullReportPage() {
               The more interesting story is the long tail: {stats.totalStates} states now have
               at least one club, and the fastest relative growth is happening in places with no
               padel heritage at all — Utah, Ohio, the Carolinas — where a single ambitious
-              operator can own an entire metro. That&apos;s the American pattern: the sport
-              spreads club by club, not federation-down.
+              operator can own an entire metro. That&apos;s the pattern we&apos;re seeing in
+              America: the sport spreads club by club, not federation-down.
             </p>
           </div>
           <div className="space-y-3">
@@ -250,7 +250,9 @@ export default function FullReportPage() {
                   {Math.round((indoorOnly / (indoorOnly + outdoorOnly + mixed)) * 100)}%
                 </div>
                 <p className="text-sm text-stone-600 mt-1">
-                  of clubs with known court types are fully indoor ({mixed} run both indoor and outdoor)
+                  of the {indoorOnly + outdoorOnly + mixed} clubs with a known court type are fully indoor.{" "}
+                  {Math.round((outdoorOnly / (indoorOnly + outdoorOnly + mixed)) * 100)}% are outdoor-only, and{" "}
+                  {mixed} clubs ({Math.round((mixed / (indoorOnly + outdoorOnly + mixed)) * 100)}%) run both indoor and outdoor courts
                 </p>
               </div>
               <div className="border border-stone-200 rounded-2xl p-6">
