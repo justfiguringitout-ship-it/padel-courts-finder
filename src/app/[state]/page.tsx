@@ -296,7 +296,9 @@ export default async function StatePage({ params }: StatePageProps) {
                               </span>
                             )}
                             {court.pricing.offPeakHourlyRate > 0 && (
-                              <span className="font-medium text-foreground">from ${court.pricing.offPeakHourlyRate}/hr</span>
+                              <span className="font-medium text-foreground">
+                                {court.pricing.priceRange ? 'from ' : ''}${court.pricing.offPeakHourlyRate}/hr
+                              </span>
                             )}
                           </CardDescription>
                         </CardHeader>
