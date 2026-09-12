@@ -80,13 +80,23 @@ export function ScrollFrameSequence({
       const progress = Math.min(1, Math.max(0, (start - rect.top) / (start - end)));
       draw(Math.min(frameCount - 1, Math.round(progress * (frameCount - 1))));
     };
-    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
+    // Trailing settle pass: momentum scrolling can land on its final resting
+    // position after the last rAF-throttled draw, leaving the sequence one
+    // frame shy of closed/open. One debounced update after scrolling stops
+    // guarantees the drawn frame matches where the page actually rests.
+    let settle: ReturnType<typeof setTimeout> | undefined;
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+      if (settle) clearTimeout(settle);
+      settle = setTimeout(update, 150);
+    };
     window.addEventListener("scroll", onScroll, { passive: true, capture: true });
     (window as unknown as Record<string, unknown>).__frameSeq = { update, canvas };
     update();
     return () => {
       window.removeEventListener("scroll", onScroll, { capture: true } as EventListenerOptions);
       if (raf) cancelAnimationFrame(raf);
+      if (settle) clearTimeout(settle);
     };
   }, [frameCount, framePattern]);
 
