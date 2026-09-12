@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The State of US Padel 2026 — Full Report",
   description:
-    "The complete State of US Padel 2026 report: state rankings, facility profile, the construction pipeline, and the padel deserts analysis.",
+    "The complete State of US Padel 2026 report: state rankings, top metros, pricing and business data, the construction pipeline, the padel deserts analysis, and a sourced view of US participation and investment.",
   robots: { index: false, follow: false },
 };
 
@@ -496,8 +496,8 @@ export default function FullReportPage() {
                 and we&apos;ll verify and update this analysis.
               </p>
               <p>
-                If the USPA&apos;s 30,000-courts-by-2030 projection is even half right, most of
-                these cities get their first club within a couple of years — and in every market
+                If the USPA&apos;s own 10,000-courts-by-2030 projection is even half right, most
+                of these cities get their first club within a couple of years — and in every market
                 the sport has entered so far, the first mover became the community&apos;s default
                 home court.
               </p>
@@ -562,6 +562,120 @@ export default function FullReportPage() {
                 listing a new club is free
               </Link>.
             </p>
+          </div>
+        </section>
+
+        {/* External context */}
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-2">
+            Padel in context: what the outside numbers say
+          </h2>
+          <div className="space-y-4 text-stone-700 leading-relaxed max-w-3xl mb-8">
+            <p>
+              Our directory is the supply side. Three independent sources describe the demand
+              side and the money — and they agree on the direction, if not the exact count.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-5 mb-10">
+            <div className="border border-stone-200 rounded-2xl p-6">
+              <div className="font-display text-3xl font-bold text-padel-green tabular-nums">1.07M</div>
+              <p className="text-sm text-stone-600 mt-1">
+                Americans played padel in 2025, 238,000 of them eight or more times — the first
+                year the sport was large enough for the Sports &amp; Fitness Industry Association
+                to track it (SFIA, 2026).
+              </p>
+            </div>
+            <div className="border border-stone-200 rounded-2xl p-6">
+              <div className="font-display text-3xl font-bold text-padel-green tabular-nums">{totalCourts.toLocaleString()} vs ~1,000</div>
+              <p className="text-sm text-stone-600 mt-1">
+                Our verified court count against the US Padel Association&apos;s &quot;just over
+                1,000 courts across 31 states&quot; (April 2026). We track {stats.totalStates} states;
+                the gap is coverage, not disagreement — our directory includes clubs outside the
+                USPA membership.
+              </p>
+            </div>
+            <div className="border border-stone-200 rounded-2xl p-6">
+              <div className="font-display text-3xl font-bold text-padel-green tabular-nums">250 / 330</div>
+              <p className="text-sm text-stone-600 mt-1">
+                new US clubs and courts added in 2025, per the Playtomic × PwC Strategy&amp; Global
+                Padel Report 2026, which classes the US as a &quot;Diamond in the Rough&quot; market
+                with growth concentrated in Florida, Texas, California, and select East Coast cities.
+              </p>
+            </div>
+            <div className="border border-stone-200 rounded-2xl p-6">
+              <div className="font-display text-3xl font-bold text-padel-green tabular-nums">{(1.07 / 24.3 * 100).toFixed(1)}%</div>
+              <p className="text-sm text-stone-600 mt-1">
+                padel&apos;s US participation as a share of pickleball&apos;s 24.3 million players
+                (SFIA, 2026) — and our {totalCourts.toLocaleString()} padel courts are{" "}
+                {(totalCourts / 82613 * 100).toFixed(1)}% of USA Pickleball&apos;s 82,613 known courts.
+                That ratio is the whole investment thesis.
+              </p>
+            </div>
+          </div>
+          <div className="space-y-4 text-stone-700 leading-relaxed max-w-3xl">
+            <p>
+              <strong>The money.</strong> The Pro Padel League raised a $15 million Series A in
+              March 2026 led by Charlotte Hornets co-chairman Rick Schnall — $25 million in twelve
+              months across ten franchises in the US, Canada, and Mexico, with a five-event 2026
+              season that includes the league&apos;s first Los Angeles stop (SportsPro; PPL).
+              Operators are raising too: Epic Padel closed a $10 million seed round in September
+              2025 to open four to six clubs (GlobeNewswire), Racquet 360 closed $9 million in
+              early 2026 (Athletech News), and Padel Haus — a $7.5 million Series A behind it —
+              opened Denver in June 2026 with Dallas to follow as its seventh club (Padel Nation).
+            </p>
+            <p>
+              <strong>The pro game arrived.</strong> Premier Padel, the FIP-sanctioned world tour,
+              played its first-ever US event at the Miami Beach Convention Center in March 2025 and
+              returned in March 2026 with €479,068 in prize money — the FIP World Padel Report 2025
+              counts 35 million players and 77,300 courts across 150 nations, on a broader
+              federation methodology than Playtomic&apos;s 19.4 million and 58,300.
+            </p>
+            <p>
+              <strong>The health case, honestly.</strong> Padel is high-intensity intermittent
+              exercise, and the peer-reviewed literature is catching up: a 2025 survey of 457
+              recreational players in <em>Physical Therapy in Sport</em> found 36.5% sustained an
+              injury in the prior year (2.81 per 1,000 playing hours, over half to the lower
+              limb — age over 30 and less experience were risk factors), while an eight-week
+              programme in untrained children improved strength and power measures
+              (<em>Journal of Functional Morphology and Kinesiology</em>, 2025). We do not repeat
+              the &quot;59% lower cardiovascular mortality&quot; line that circulates in padel
+              marketing: it comes from racket-sport cohort studies that predate padel&apos;s rise.
+            </p>
+          </div>
+        </section>
+
+        {/* Sources */}
+        <section className="border-y bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+            <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">
+              Sources &amp; further reading
+            </h2>
+            <p className="text-sm text-stone-600 leading-relaxed mb-6 max-w-3xl">
+              Every external figure in this report was checked against the page listed here on
+              September 12, 2026. Market-size estimates from paid research vendors are deliberately
+              excluded — the ones we found disagree with each other by more than tenfold.
+            </p>
+            <ol className="list-decimal pl-5 space-y-2 text-sm text-stone-600 leading-relaxed">
+                <li>Sports &amp; Fitness Industry Association — 2026 Topline Participation Report (padel tracked for the first time) and &quot;What Is Padel?&quot; single-sport summary — <a href="https://sfia.org/resources/what-is-padel/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">sfia.org/resources/what-is-padel/</a></li>
+                <li>United States Padel Association — &quot;Padel Surpasses One Million Players in the United States&quot; (April 13, 2026) — <a href="https://padelusa.org/padel-surpasses-one-million-players-in-the-united-states/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">padelusa.org/padel-surpasses-one-million-players-in-the-unit…</a></li>
+                <li>United States Padel Association — 2025 Annual Report (January 21, 2026) — <a href="https://padelusa.org/uspa-releases-2025-annual-report-a-record-breaking-year-for-padel-in-america/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">padelusa.org/uspa-releases-2025-annual-report-a-record-break…</a></li>
+                <li>Playtomic × PwC Strategy&amp; — Global Padel Report 2026 (May 28, 2026) — <a href="https://playtomic.com/global-padel-report" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">playtomic.com/global-padel-report</a></li>
+                <li>Playtomic / Padel 22 — press release: &quot;2026 Global Padel Report identifies US as one of the sport&apos;s biggest long-term growth markets&quot; — <a href="https://padel-22.prowly.com/459723-2026-playtomic-global-padel-report-identifies-us-as-one-of-the-sports-biggest-long-term-growth-markets" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">padel-22.prowly.com/459723-2026-playtomic-global-padel-repor…</a></li>
+                <li>International Padel Federation — FIP World Padel Report 2025 (December 2, 2025) — <a href="https://www.padelfip.com/2025/12/online-the-fip-world-padel-report-2025-a-comprehensive-analysis-of-a-sport-in-constant-growth/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">www.padelfip.com/2025/12/online-the-fip-world-padel-report-2…</a></li>
+                <li>FIP — Miami Premier Padel P1 2026 event page — <a href="https://www.padelfip.com/events/miami-p1-2026/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">www.padelfip.com/events/miami-p1-2026/</a></li>
+                <li>SportsPro — &quot;Pro Padel League raises US$15m to fund growth&quot; (March 25, 2026) — <a href="https://www.sportspro.com/finance-investment/investment/pro-padel-league-raises-us15m-to-fund-growth/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">www.sportspro.com/finance-investment/investment/pro-padel-le…</a></li>
+                <li>Pro Padel League — 2026 season schedule (January 9, 2026) — <a href="https://propadelleague.com/news/pro-padel-league-announces-2026-season-schedule-featuring-five-events-across-north-america/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">propadelleague.com/news/pro-padel-league-announces-2026-seas…</a></li>
+                <li>Syracuse University Newhouse School × Padel 22 — &quot;The racket about padel&quot; (July 11, 2025) — <a href="https://news.syr.edu/2025/07/11/the-racket-about-padel-newhouse-students-partner-with-global-media-firm-to-track-rise-of-sport/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">news.syr.edu/2025/07/11/the-racket-about-padel-newhouse-stud…</a></li>
+                <li>Epic Padel — $10M seed round announcement, GlobeNewswire (September 24, 2025) — <a href="https://www.globenewswire.com/news-release/2025/09/24/3155552/0/en/Epic-Padel-secures-10M-to-turn-the-U-S-into-the-next-padel-powerhouse.html" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">www.globenewswire.com/news-release/2025/09/24/3155552/0/en/E…</a></li>
+                <li>Athletech News — &quot;Racquet 360 closes $9 million round to expand padel in the US&quot; (March 10, 2026) — <a href="https://athletechnews.com/racquet-360-closes-9-million-round-expand-padel-in-the-us/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">athletechnews.com/racquet-360-closes-9-million-round-expand-…</a></li>
+                <li>Padel Nation — &quot;Padel Haus expands its US empire&quot; (May 7, 2026) — <a href="https://www.padelnation.io/p/padel-haus-expands-its-us-empire" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">www.padelnation.io/p/padel-haus-expands-its-us-empire</a></li>
+                <li>USA Pickleball — Annual Growth Report (updated January 30, 2026) — <a href="https://usapickleball.org/about/annual-growth-report/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">usapickleball.org/about/annual-growth-report/</a></li>
+                <li>SFIA — US pickleball participation research — <a href="https://sfia.org/research/u-s-pickleball-participation/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">sfia.org/research/u-s-pickleball-participation/</a></li>
+                <li>Cushman &amp; Wakefield — Padel Chicago industrial conversion (July 2024) — <a href="https://www.cushmanwakefield.com/en/united-states/news/2024/07/represents-padel-chicago-llc-in-securing-first-padel-location-in-the-city-of-chicago" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">www.cushmanwakefield.com/en/united-states/news/2024/07/repre…</a></li>
+                <li>Physical Therapy in Sport (2025) — &quot;Prevalence and injury profiles for recreational padel players&quot; — <a href="https://pubmed.ncbi.nlm.nih.gov/40644841/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">pubmed.ncbi.nlm.nih.gov/40644841/</a></li>
+                <li>Journal of Functional Morphology and Kinesiology (2025) — eight-week padel programme in untrained children — <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12193966/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">pmc.ncbi.nlm.nih.gov/articles/PMC12193966/</a></li>
+                <li>Frontiers in Psychology (2025) — &quot;Padel, pickleball and wellbeing: a systematic review&quot; — <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12341226/" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline break-all">pmc.ncbi.nlm.nih.gov/articles/PMC12341226/</a></li>
+            </ol>
           </div>
         </section>
 

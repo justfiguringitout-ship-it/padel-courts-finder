@@ -115,24 +115,28 @@ export default function StateOfPadelPage() {
               fastest-growing sport.
             </p>
             <p>
-              The same report projects <strong>91,000 courts globally by 2028</strong> and
-              singles out the United States as one of the sport&apos;s biggest long-term growth
-              markets. The money agrees: the global padel equipment market has grown at a
-              roughly 34% compound annual rate since 2019 per Playtomic&apos;s data, and the
-              US-based Pro Padel League raised $15 million this year to build out its league
-              calendar. Clubs themselves are evolving past courts-in-a-warehouse into what the
-              industry calls &quot;third spaces&quot; — social clubs with coaching, cafes,
-              recovery rooms, and leagues attached to the glass.
+              The same report projects <strong>91,000 courts globally by 2028</strong>, and
+              its 2026 edition singles out the United States as one of the sport&apos;s biggest
+              long-term growth markets — a &quot;Diamond in the Rough,&quot; in its taxonomy —
+              after the country added roughly 250 clubs and 330 courts in 2025. The money
+              agrees: the Pro Padel League closed a $15 million Series A in March 2026, bringing
+              its total to $25 million raised in twelve months across ten franchises. Clubs
+              themselves are evolving past courts-in-a-warehouse into what the industry calls
+              &quot;third spaces&quot; — social clubs with coaching, cafes, recovery rooms, and
+              leagues attached to the glass.
             </p>
             <p>
               Here&apos;s the runway math that makes operators salivate: our directory counts{" "}
               <strong>{totalCourts.toLocaleString()} padel courts in the continental US</strong> —
               about 2% of the world&apos;s supply, in the country with the world&apos;s largest
-              sports economy. Industry estimates put American players around half a million by
-              the end of 2025, up from fewer than 100,000 in 2023, and the US Padel Association
-              projects 30,000 courts and 10 million players by 2030. Whether or not that
-              projection lands, the direction is unambiguous — and the full report shows
-              exactly where it&apos;s happening, state by state.
+              sports economy. 2025 was also the first year padel was large enough to be tracked
+              by the Sports &amp; Fitness Industry Association, which counts roughly{" "}
+              <strong>1.07 million Americans who played</strong>, 238,000 of them eight or more
+              times. The US Padel Association projects 10,000 courts and 10 million players by
+              2030; an industry report from Syracuse&apos;s Newhouse School and Padel 22 goes as
+              far as 30,000 courts. Whether or not either projection lands, the direction is
+              unambiguous — and the full report shows exactly where it&apos;s happening, state by
+              state.
             </p>
           </div>
         </section>
@@ -166,6 +170,7 @@ export default function StateOfPadelPage() {
               <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">The top padel metros</strong> — the 12 US cities ranked by open courts, and why the map is really a map of greater Miami</span></li>
               <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">Padel as a business</strong> — median court-hour pricing from 80+ clubs, club-size distribution, the multi-location operators, and the members-only share</span></li>
               <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">The construction pipeline</strong> — every announced club we track, mapped to the states where the next wave lands</span></li>
+              <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">Padel in context</strong> — US participation (SFIA), the investment rounds, the pro tour&apos;s arrival, the pickleball ratio, and what peer-reviewed studies actually say, all sourced</span></li>
               <li className="flex gap-2"><span className="text-turf">→</span> <span><strong className="text-white">The padel deserts</strong> — the top-40 US metros still without a court within 25 miles, with the nearest option for each</span></li>
             </ul>
             <ReportGate />
@@ -194,6 +199,17 @@ export default function StateOfPadelPage() {
                 turn press requests around same-day. Republishing the report or the
                 underlying dataset without permission isn&apos;t cool, and we do check.
               </p>
+              <details className="mb-8 max-w-3xl">
+                <summary className="cursor-pointer text-sm text-white/70 hover:text-white">Sources for the external figures on this page</summary>
+                <ol className="list-decimal pl-5 mt-3 space-y-1.5 text-xs text-white/50 leading-relaxed">
+                <li>Sports &amp; Fitness Industry Association — 2026 Topline Participation Report (padel tracked for the first time) and &quot;What Is Padel?&quot; single-sport summary — <a href="https://sfia.org/resources/what-is-padel/" target="_blank" rel="noopener noreferrer" className="text-turf hover:underline break-all">sfia.org/resources/what-is-padel/</a></li>
+                <li>United States Padel Association — &quot;Padel Surpasses One Million Players in the United States&quot; (April 13, 2026) — <a href="https://padelusa.org/padel-surpasses-one-million-players-in-the-united-states/" target="_blank" rel="noopener noreferrer" className="text-turf hover:underline break-all">padelusa.org/padel-surpasses-one-million-players-in-the-unit…</a></li>
+                <li>Playtomic × PwC Strategy&amp; — Global Padel Report 2026 (May 28, 2026) — <a href="https://playtomic.com/global-padel-report" target="_blank" rel="noopener noreferrer" className="text-turf hover:underline break-all">playtomic.com/global-padel-report</a></li>
+                <li>Playtomic / Padel 22 — press release: &quot;2026 Global Padel Report identifies US as one of the sport&apos;s biggest long-term growth markets&quot; — <a href="https://padel-22.prowly.com/459723-2026-playtomic-global-padel-report-identifies-us-as-one-of-the-sports-biggest-long-term-growth-markets" target="_blank" rel="noopener noreferrer" className="text-turf hover:underline break-all">padel-22.prowly.com/459723-2026-playtomic-global-padel-repor…</a></li>
+                <li>SportsPro — &quot;Pro Padel League raises US$15m to fund growth&quot; (March 25, 2026) — <a href="https://www.sportspro.com/finance-investment/investment/pro-padel-league-raises-us15m-to-fund-growth/" target="_blank" rel="noopener noreferrer" className="text-turf hover:underline break-all">www.sportspro.com/finance-investment/investment/pro-padel-le…</a></li>
+                <li>Syracuse University Newhouse School × Padel 22 — &quot;The racket about padel&quot; (July 11, 2025) — <a href="https://news.syr.edu/2025/07/11/the-racket-about-padel-newhouse-students-partner-with-global-media-firm-to-track-rise-of-sport/" target="_blank" rel="noopener noreferrer" className="text-turf hover:underline break-all">news.syr.edu/2025/07/11/the-racket-about-padel-newhouse-stud…</a></li>
+                </ol>
+              </details>
               <Link
                 href="/advertise#partner-form"
                 className="inline-flex items-center gap-2 rounded-xl bg-padel-green hover:bg-padel-green-dark active:scale-[0.98] text-white font-semibold px-7 py-3.5 transition-all shadow-lg shadow-padel-green/25"
