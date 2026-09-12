@@ -73,7 +73,7 @@ Founder, Padel Courts Finder
 
 Subject: `Re: [original subject]`
 
-Hi [First name] — bumping this once in case it got buried. One number that tends to land: [pick the stat closest to their beat — e.g. "there is no padel court within 25 miles of downtown [their city]" / "Miami has more padel courts than the next four metros combined"]. Happy to send the cut that fits a story you're already working on.
+Hi [First name] — bumping this once in case it got buried. One number that tends to land: [pick the stat closest to their beat — e.g. "there is no padel court within 25 miles of downtown [their city]" / "Miami has more padel courts than the next three metros combined"]. Happy to send the cut that fits a story you're already working on.
 
 Dito
 
