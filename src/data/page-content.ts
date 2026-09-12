@@ -62,3 +62,50 @@ export const stateBlogSlugs: Record<string, string[]> = {
   OH: ["ohio"],
   NJ: ["new-jersey"],
 };
+
+/**
+ * Metro sections on state pages.
+ *
+ * Some state pages ARE the metro page in practice. `/new-york` ranks #5 for
+ * "padel nyc" with a 6% CTR (2026-09-12: 173 clicks on NYC/New York queries,
+ * vs. 0 for /new-york/new-york, which is Manhattan-only and sits at position
+ * 58). Google routes the metro query to the state page because the state page
+ * is the only URL that lists the whole metro — the data splits NYC into
+ * Manhattan / Brooklyn / Queens by the `city` field.
+ *
+ * Rather than fight that, the state page serves the metro intent explicitly:
+ * a block at the top that groups the metro's clubs by borough, then points to
+ * the suburbs. Keyed by state code; states without an entry render nothing.
+ *
+ * `cities` values must match the `city` field in padel-courts.ts exactly.
+ */
+export interface StateMetroSection {
+  /** Heading name, e.g. "New York City" */
+  name: string;
+  /** Short name for copy, e.g. "NYC" */
+  shortName: string;
+  intro: string;
+  /** Metro sub-areas, rendered in order, each listing its clubs */
+  groups: { label: string; cities: string[] }[];
+  /** Areas outside the metro, rendered as a link row to their city pages */
+  beyond: { label: string; cities: string[] }[];
+}
+
+export const stateMetroSections: Record<string, StateMetroSection> = {
+  NY: {
+    name: "New York City",
+    shortName: "NYC",
+    intro:
+      "Every padel club inside the five boroughs, grouped by area. Manhattan and Brooklyn have the densest clusters; Queens has one club so far. All NYC clubs are indoor, so they run year-round.",
+    groups: [
+      { label: "Manhattan", cities: ["New York"] },
+      { label: "Brooklyn", cities: ["Brooklyn"] },
+      { label: "Queens", cities: ["Long Island City"] },
+    ],
+    beyond: [
+      { label: "The Hamptons", cities: ["East Hampton", "Southampton", "Montauk"] },
+      { label: "Westchester", cities: ["New Rochelle", "Mamaroneck", "Tuxedo Park"] },
+      { label: "Long Island", cities: ["Roslyn", "Syosset", "East Norwich", "Hewlett Harbor", "Setauket-East Setauket"] },
+    ],
+  },
+};
