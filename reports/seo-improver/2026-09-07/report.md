@@ -426,3 +426,47 @@ shared across all properties.
 - **Wave 1 hold accepted.** The five review URLs are NOT submitted. Next run (2026-09-14 or later)
   inspects them first: crawled → SEO-INDEX-003 confirmed; still "Discovered - currently not
   indexed" → submit all five immediately and stop treating indexing as a mechanics problem.
+
+---
+
+# Addendum — 2026-09-12: early submit, Day-1 done, NYC block shipped
+
+**Wave-1 hold ended early.** Re-inspection on 09-12, five days after PR #10 deployed: zero of
+five review pages crawled, and two (`nox-at10-genius-attack-review`, `bullpadel-neuron-review`)
+**regressed from "Discovered" back to "URL is unknown to Google"** — Google dropped them from its
+queue. The sitemap fix is not pulling them in on its own. Demand is confirmed elsewhere (queries
+containing "attack" 61 impr / pos 10, "optix" 23 / 6.4, "metalbone 3.4" 21 / 6.8, all served by
+the roundups that link to the reviews). One organic win for the fix: `/courts/patl-louisville`
+indexed 09-07 with no submission.
+
+**Dito submitted Day 1 (9 URLs) on 09-12, quota exhausted after Tempe:**
+5 review pages, `/how-to-play`, `/buy-a-padel-court`, `/courts/padel-x-miami`, `/arizona/tempe`.
+
+**Day 2 — for Dito, 2026-09-13 (10 URLs, never earned an impression in 90 days):**
+```
+https://www.padelcourtsfinder.com/colorado/colorado-springs
+https://www.padelcourtsfinder.com/texas/the-woodlands
+https://www.padelcourtsfinder.com/georgia/alpharetta
+https://www.padelcourtsfinder.com/arizona/mesa
+https://www.padelcourtsfinder.com/michigan/sterling-heights
+https://www.padelcourtsfinder.com/california/stockton
+https://www.padelcourtsfinder.com/california/oceanside
+https://www.padelcourtsfinder.com/texas/brownsville
+https://www.padelcourtsfinder.com/texas/new-braunfels
+https://www.padelcourtsfinder.com/south-carolina/daniel-island
+```
+81 sitemap URLs have never shown in 90 days (43 club, 5 blog, 33 city/state). The other ~40
+club pages have 0–1 branded impressions each — not worth quota; let the sitemap fix work on them.
+
+**SEO-STRIKE-003 — NYC metro block, shipped.** [PR #11](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/11).
+Dito asked whether `padel nyc` should land on `/new-york` (state) or the city page. Data: state
+page 173 clicks / pos 5.0–5.4 / 6% CTR on NYC queries; `/new-york/new-york` is Manhattan-only,
+0 clicks, pos 58.5. Decision: keep the state page and make it serve the intent — new
+"Padel Courts in New York City: 11 Clubs" block under the hero (Manhattan 5 / Brooklyn 5 /
+Queens 1) plus a Hamptons/Westchester/Long Island link row. Config-driven
+(`stateMetroSections`), NY only. Title/H1 untouched. **Watch:** `padel nyc` (51 clicks, pos 5.1)
+and `padel courts nyc` (19, pos 2.9) — success is CTR up at flat position.
+
+**Next-run checklist amendments:** item 1 now reads "were the five submitted on 09-12 indexed?"
+(a submitted page typically indexes in 1–3 days; still missing on 09-14 is a real signal). Add
+item 11: first read on the NYC block.
