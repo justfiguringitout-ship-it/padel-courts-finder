@@ -470,3 +470,12 @@ and `padel courts nyc` (19, pos 2.9) — success is CTR up at flat position.
 **Next-run checklist amendments:** item 1 now reads "were the five submitted on 09-12 indexed?"
 (a submitted page typically indexes in 1–3 days; still missing on 09-14 is a real signal). Add
 item 11: first read on the NYC block.
+
+**Same day, later — court prices on cards.** [PR #12](https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/12),
+merged `f600da9`. The NYC block (and every state/city card site-wide) had no prices because the
+adapter hard-coded the hourly rate to 0. All 11 NYC club sites were fetched — none publish court
+rates outside their booking apps — so `src/lib/court-pricing.ts` now parses the researched
+`pricingText` conservatively (clause-scoped; skips other-sport, per-person, lesson and member
+figures; "unknown/TBD" yields nothing). **100 of 332 clubs get a rate; 8 of 11 NYC.** Mink,
+CityView and Elite 111W57 stay priceless because their text says the rate is unknown or
+members-only. Watch alongside the NYC block: `padel nyc` CTR at flat position.
