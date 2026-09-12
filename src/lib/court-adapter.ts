@@ -6,6 +6,7 @@
 
 import { PadelCourt as ExistingCourt } from "@/types/padel-court";
 import { padelCourts } from "@/data/padel-courts";
+import { parseCourtPricing } from "@/lib/court-pricing";
 
 /**
  * Normalize an Instagram field value into a valid URL.
@@ -779,6 +780,7 @@ export interface AdaptedCourt {
  */
 export function adaptCourt(court: ExistingCourt): AdaptedCourt {
   const slug = generateSlug(court.name);
+  const parsedPricing = parseCourtPricing(court.pricingText);
   const stateCode = getStateCode(court.state);
   const stateName = getStateName(stateCode);
 
@@ -923,9 +925,14 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
 
     features,
 
+    // Derived from the researched pricingText; 0 when the club publishes no
+    // court rate (memberships-only, private club, or genuinely unknown).
     pricing: {
-      peakHourlyRate: 0,
-      offPeakHourlyRate: 0,
+      peakHourlyRate: parsedPricing?.peakHourlyRate ?? 0,
+      offPeakHourlyRate: parsedPricing?.offPeakHourlyRate ?? 0,
+      priceRange: parsedPricing?.isRange
+        ? `$${parsedPricing.offPeakHourlyRate}–$${parsedPricing.peakHourlyRate}/hr`
+        : undefined,
     },
 
     hours: convertOpeningHours(court.openingHours),
