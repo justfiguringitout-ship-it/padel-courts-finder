@@ -13911,7 +13911,7 @@ export const padelCourts: PadelCourt[] = [
     website: "https://wakitrakit.com/spacecoast",
     rating: 0,
     reviewCount: 0,
-    description: "Wakit Rakit Space Coast is the first padel club on Florida's Space Coast — two lit outdoor courts (with more planned) inside La Cita Country Club in Titusville, alongside four Har-Tru clay tennis courts and two racquetball courts. The calendar runs daily: Intro to Padel clinics, Padel & Pints socials, Americanos, open plays, tournaments, leagues, and junior programs, plus private lessons and group clinics with club coaches. There's a pro shop on site, food and drink by arrangement or BYO, and corporate/event hosting up to full facility buyouts. Courts and activities book through the Wakit app.",
+    description: "Wakit Rakit Space Coast is the first padel club on Florida's Space Coast — two lit outdoor courts (with more planned) in Titusville, alongside Har-Tru clay tennis courts and two racquetball courts. The calendar runs daily: Intro to Padel clinics, Padel & Pints socials, Americanos, open plays, tournaments, leagues, and junior programs, plus private lessons and group clinics with club coaches. There's a pro shop on site, food and drink by arrangement or BYO, and corporate/event hosting up to full facility buyouts. Courts and activities book through the Wakit app.",
     numberOfCourts: 2,
     courtType: "outdoor",
     outdoorCourts: 2,
