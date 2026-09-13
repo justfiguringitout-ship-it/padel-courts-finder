@@ -479,3 +479,8 @@ rates outside their booking apps — so `src/lib/court-pricing.ts` now parses th
 figures; "unknown/TBD" yields nothing). **100 of 332 clubs get a rate; 8 of 11 NYC.** Mink,
 CityView and Elite 111W57 stay priceless because their text says the rate is unknown or
 members-only. Watch alongside the NYC block: `padel nyc` CTR at flat position.
+
+**2026-09-13 — Day 2 partial.** Dito submitted 7 of 10 (through `/california/oceanside`); quota
+ran out. Carried to Day 3: `/texas/brownsville`, `/texas/new-braunfels`,
+`/south-carolina/daniel-island`, plus 7 more never-shown city pages (Sterling VA, Englewood CO,
+College Park MD, Coconut Creek FL, Midland TX, Bayamón PR, Carson CA).
