@@ -118,7 +118,14 @@ for (const slug of blogSlugs) {
 // club page, say), record it in TEMPLATE_CONTENT_CHANGES below. That keeps the
 // honest case expressible without making every CSS tweak look like a rewrite.
 const templates = {
-  court: ["src/lib/court-adapter.ts"],
+  // court-adapter.ts is deliberately NOT here (2026-09-14). It shapes the fields a
+  // club record exposes, and on 2026-09-12 a price-parsing change to it re-dated
+  // all 328 club pages (and, via the listings floor, 634 of 723 sitemap URLs) to
+  // one day — the exact regression this split exists to prevent. Club routes and
+  // their data come from padel-courts.ts, which is already diffed per record
+  // below; an adapter change that truly alters what club pages SAY belongs in
+  // TEMPLATE_CONTENT_CHANGES.court with a date.
+  court: [],
   state: ["src/lib/site-structure.ts"],
   city: ["src/lib/site-structure.ts"],
   padelNear: ["src/lib/metros.ts"],
@@ -130,6 +137,9 @@ const templates = {
 // imagery or animation.
 const TEMPLATE_CONTENT_CHANGES = {
   // court: "2026-06-14",  // example: added the FAQ block to every club page
+  court: "2026-08-04", // SEO-CTR-002/003/004 club-page snippets (324d114) — the floor club pages already carried
+  state: "2026-09-12", // court prices rendered on every listing card (b4be06b) + NYC block on /new-york (2e13945)
+  city: "2026-09-12",  // court prices rendered on every listing card (b4be06b)
 };
 
 // --- Per-club dates: each /courts/<slug> gets its OWN date.
