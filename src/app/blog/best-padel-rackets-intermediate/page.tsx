@@ -285,7 +285,7 @@ export default function IntermediateRacketsPage() {
               <h2 className="text-2xl font-bold text-foreground mb-5">How we picked the best padel racket for intermediate players</h2>
               <div className="prose prose-lg prose-stone max-w-none">
                 <p className="text-stone-600 leading-[1.75]">Choosing the best padel racket for intermediate players comes down to four things, and we weighted every racket above against them. <strong className="text-foreground">Weight and balance</strong> come first: we kept the range to 360&ndash;375g, heavy enough to add power on smashes but still maneuverable at the net, and we noted where a head-heavy balance (like the diamond-shaped picks) demands cleaner technique. <strong className="text-foreground">Shape</strong> is the next call &mdash; round for forgiveness, teardrop for balance, diamond for power &mdash; and the right one depends on how consistent your contact already is.</p>
-                <p className="text-stone-600 leading-[1.75]"><strong className="text-foreground">Surface and carbon grade</strong> decide how much ball speed and spin you actually get: fiberglass faces are softer and more forgiving, carbon (3K up to 12K) returns energy faster and bites the ball for topspin. Finally, <strong className="text-foreground">price</strong> &mdash; we capped this list at $280, the ceiling where an intermediate racket stops being a smart upgrade and starts being a pro racket you may not be ready for. Every pick below earns its spot on those four criteria, not brand name. New to the sport? Start with our <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">best padel rackets for beginners</Link> guide first, then come back when your beginner racket starts holding you back.</p>
+                <p className="text-stone-600 leading-[1.75]"><strong className="text-foreground">Surface and carbon grade</strong> decide how much ball speed and spin you actually get: fiberglass faces are softer and more forgiving, carbon (3K up to 12K) returns energy faster and bites the ball for topspin. Finally, <strong className="text-foreground">price</strong> &mdash; we capped this list at $280, the ceiling where an intermediate racket stops being a smart upgrade and starts being a pro racket you may not be ready for. Every pick below earns its spot on those four criteria, not brand name. New to the sport? Start with our <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">best padel rackets for beginners</Link> guide first, then come back when your beginner racket starts holding you back. Already finishing points overhead on purpose? You may have outgrown this list &mdash; see our <Link href="/blog/best-padel-rackets-advanced" className="text-padel-green hover:underline">best padel rackets for advanced players</Link>.</p>
               </div>
             </section>
 
@@ -669,6 +669,11 @@ export default function IntermediateRacketsPage() {
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Beginner Rackets (2026)</h3>
               <p className="text-sm text-stone-400 mt-1">Just starting out? 5 rackets from $90&ndash;$130 &rarr;</p>
+            </Link>
+            <Link href="/blog/best-padel-rackets-advanced" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
+              <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
+              <h3 className="font-semibold text-white mt-1">Best Advanced Rackets (2026)</h3>
+              <p className="text-sm text-stone-400 mt-1">Outgrown forgiveness? 5 frames from $249&ndash;$399 &rarr;</p>
             </Link>
             <Link href="/blog/best-padel-rackets-2026" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>

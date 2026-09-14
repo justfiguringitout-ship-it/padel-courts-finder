@@ -248,7 +248,7 @@ export default function RacketShapesPage() {
                     <td className="p-3">High, small</td>
                     <td className="p-3">High (head)</td>
                     <td className="p-3">Maximum power</td>
-                    <td className="p-3"><Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">Advanced</Link>, attacking players</td>
+                    <td className="p-3"><Link href="/blog/best-padel-rackets-advanced" className="text-padel-green hover:underline">Advanced</Link>, attacking players</td>
                   </tr>
                 </tbody>
               </table>

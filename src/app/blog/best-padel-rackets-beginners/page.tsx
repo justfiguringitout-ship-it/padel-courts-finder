@@ -790,6 +790,11 @@ export default function BeginnerRacketsPage() {
               <h3 className="font-semibold text-white mt-1">Best Intermediate Rackets (2026)</h3>
               <p className="text-sm text-stone-400 mt-1">Ready to upgrade? 5 rackets from $170–$280 &rarr;</p>
             </Link>
+            <Link href="/blog/best-padel-rackets-advanced" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
+              <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
+              <h3 className="font-semibold text-white mt-1">Best Advanced Rackets (2026)</h3>
+              <p className="text-sm text-stone-400 mt-1">Outgrown forgiveness? 5 frames from $249&ndash;$399 &rarr;</p>
+            </Link>
             <Link href="/blog/best-padel-rackets-2026" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Pro Rackets (2026)</h3>

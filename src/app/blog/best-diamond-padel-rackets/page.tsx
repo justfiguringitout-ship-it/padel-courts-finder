@@ -375,6 +375,10 @@ export default function BestDiamondRacketsPage() {
                 <div className="font-semibold text-white">Best Pro Rackets 2026</div>
                 <p className="text-stone-400 text-sm mt-1">The full flagship lineup reviewed</p>
               </Link>
+              <Link href="/blog/best-padel-rackets-advanced" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Best Rackets for Advanced Players</div>
+                <p className="text-stone-400 text-sm mt-1">Diamonds and hard teardrops ranked by control under pressure</p>
+              </Link>
               <Link href="/blog/best-padel-rackets-power" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Power Rackets</div>
                 <p className="text-stone-400 text-sm mt-1">Attacking picks across all shapes</p>
