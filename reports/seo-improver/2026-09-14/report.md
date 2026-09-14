@@ -231,3 +231,29 @@ All seven verified **200** on `https://www.`. Dropped from the Day-3 list becaus
 8. **Do not touch:** intermediate (SEO-DECAY-001 — it just proved the point), club titles (SEO-CTR-002/007), `/padel-near/*` (SEO-DECAY-002), `/blog/best-padel-shoes` (SEO-CTR-006), `padel court` theory.
 9. **`/blog/best-padel-bags`:** if position stays above 10 for a second week, open SEO-DECAY-003 and diagnose.
 10. **Skill-file updates** (item in §5) — pending Dito's go-ahead to include them in a PR.
+
+---
+
+# Addendum — 2026-09-14: quota ran out; Day 4 list
+
+Dito's Request Indexing quota was exhausted this morning before Wave 1. Re-inspected at
+midday: the advanced page is still "URL is unknown to Google" and none of the seven Wave-2 city
+pages were crawled, so everything carries over. Per Dito, the new page and the sitemap go to the
+top of the next wave.
+
+**Day 4 — for Dito, 2026-09-15 (8 requests + sitemap, in this order):**
+```
+https://www.padelcourtsfinder.com/blog/best-padel-rackets-advanced
+https://www.padelcourtsfinder.com/virginia/sterling
+https://www.padelcourtsfinder.com/colorado/englewood
+https://www.padelcourtsfinder.com/maryland/college-park
+https://www.padelcourtsfinder.com/florida/coconut-creek
+https://www.padelcourtsfinder.com/texas/midland
+https://www.padelcourtsfinder.com/puerto-rico/bayamon
+https://www.padelcourtsfinder.com/california/carson
+```
+Then **Sitemaps → resubmit `https://www.padelcourtsfinder.com/sitemap.xml`** (does not count
+against the URL quota; PR #15 deployed, live file now reads 327 on 08-04 / 232 on 09-12).
+
+If quota runs short again, the first line is the only one that matters today; the seven city
+pages have never earned an impression and can wait.
