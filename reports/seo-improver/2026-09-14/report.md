@@ -257,3 +257,83 @@ against the URL quota; PR #15 deployed, live file now reads 327 on 08-04 / 232 o
 
 If quota runs short again, the first line is the only one that matters today; the seven city
 pages have never earned an impression and can wait.
+
+---
+
+# Addendum — 2026-09-16: Day 4 confirmed indexed; the remaining waves
+
+Dito submitted all eight Day-4 URLs on 09-15 and resubmitted the sitemap. Re-inspected 09-16: **8 of 8 indexed** — `/blog/best-padel-rackets-advanced` crawled 2026-09-14, the seven city pages crawled 09-15. Third wave in a row where every submitted URL indexed within a day.
+
+**What is left.** Live sitemap (720 URLs) diffed against 90 days of GSC page data: 67 URLs have never earned an impression and 18 more have ≤2. All 85 inspected: 37 are indexed (Google just never shows them), **48 are not indexed** — 9 city/state pages, 1 metro page, 38 club pages. All 48 verified 200 on `https://www.`. Three of the 48 (`/florida/hallandale-beach`, `/courts/piedmont-driving-club`, `/courts/snowmass-club`) are "Crawled - currently not indexed" from May/June — Google saw them and declined; they go last, and if they stay out after resubmission that is a thin-content signal, not a crawl one.
+
+**Order of value:** city/state pages first (they can rank for generic `padel <city>` queries), clubs after (their branded queries go to the club's own site, so indexing them is hygiene, not traffic). At ~10 requests/day this is five days; after Day 9 the sitemap has nothing unindexed left that the loop knows about.
+
+**Day 5 — 2026-09-16 (10): every remaining not-indexed city/state page**
+```
+https://www.padelcourtsfinder.com/california/murrieta
+https://www.padelcourtsfinder.com/california/south-san-francisco
+https://www.padelcourtsfinder.com/florida/hallandale-beach
+https://www.padelcourtsfinder.com/illinois/glenview
+https://www.padelcourtsfinder.com/illinois/highland-park
+https://www.padelcourtsfinder.com/illinois/mundelein
+https://www.padelcourtsfinder.com/maryland/rosedale
+https://www.padelcourtsfinder.com/massachusetts/dedham
+https://www.padelcourtsfinder.com/new-jersey/oceanport
+https://www.padelcourtsfinder.com/padel-near/grand-prairie
+```
+
+**Day 6 — 2026-09-17 (10): clubs, A–C**
+```
+https://www.padelcourtsfinder.com/courts/10by20-padel-fort-lauderdale
+https://www.padelcourtsfinder.com/courts/bay-padel-dogpatch
+https://www.padelcourtsfinder.com/courts/bay-padel-sunnyvale
+https://www.padelcourtsfinder.com/courts/bay-padel-treasure-island
+https://www.padelcourtsfinder.com/courts/brisas
+https://www.padelcourtsfinder.com/courts/brisas-east-hampton
+https://www.padelcourtsfinder.com/courts/bush-tennis-center-texas-padel
+https://www.padelcourtsfinder.com/courts/canas-racket-padel
+https://www.padelcourtsfinder.com/courts/casas-padel-club-aventura
+https://www.padelcourtsfinder.com/courts/charlotte-padel-club-matthews
+```
+
+**Day 7 — 2026-09-18 (10): clubs, D–P**
+```
+https://www.padelcourtsfinder.com/courts/club-pickle-padel
+https://www.padelcourtsfinder.com/courts/dripping-springs-racquet-club
+https://www.padelcourtsfinder.com/courts/glassbox-padel-club
+https://www.padelcourtsfinder.com/courts/kingdom-of-padel
+https://www.padelcourtsfinder.com/courts/lets-go-pickleball-padel
+https://www.padelcourtsfinder.com/courts/marcos-del-pilar-padel-usa
+https://www.padelcourtsfinder.com/courts/matts-pickle-and-padel
+https://www.padelcourtsfinder.com/courts/new-rochelle-indoor-sports
+https://www.padelcourtsfinder.com/courts/north-texas-racquet-club
+https://www.padelcourtsfinder.com/courts/one-indoor-club
+```
+
+**Day 8 — 2026-09-19 (10): clubs, P–T**
+```
+https://www.padelcourtsfinder.com/courts/paddles-up-east-setauket
+https://www.padelcourtsfinder.com/courts/padel-club-el-paso
+https://www.padelcourtsfinder.com/courts/padel-point-miami
+https://www.padelcourtsfinder.com/courts/padel-world-play
+https://www.padelcourtsfinder.com/courts/patl
+https://www.padelcourtsfinder.com/courts/reserve-padel-design-district
+https://www.padelcourtsfinder.com/courts/riviera-tennis-center
+https://www.padelcourtsfinder.com/courts/rock-creek-tennis-center
+https://www.padelcourtsfinder.com/courts/rxpadel
+https://www.padelcourtsfinder.com/courts/sensa-padel-boston
+```
+
+**Day 9 — 2026-09-20 (8): clubs, T–W + the two Google already crawled and declined**
+```
+https://www.padelcourtsfinder.com/courts/taktika-padel-san-diego
+https://www.padelcourtsfinder.com/courts/taktika-padel-stockton
+https://www.padelcourtsfinder.com/courts/tempo-padel-pickleball-club
+https://www.padelcourtsfinder.com/courts/the-sports-haus
+https://www.padelcourtsfinder.com/courts/u-padel-club-san-antonio
+https://www.padelcourtsfinder.com/courts/woodlands-padel
+https://www.padelcourtsfinder.com/courts/piedmont-driving-club
+https://www.padelcourtsfinder.com/courts/snowmass-club
+```
+
+No sitemap resubmission needed this week unless a PR changes `page-dates.json` again.
