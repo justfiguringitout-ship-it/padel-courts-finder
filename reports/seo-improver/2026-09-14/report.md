@@ -264,7 +264,7 @@ pages have never earned an impression and can wait.
 
 Dito submitted all eight Day-4 URLs on 09-15 and resubmitted the sitemap. Re-inspected 09-16: **8 of 8 indexed** — `/blog/best-padel-rackets-advanced` crawled 2026-09-14, the seven city pages crawled 09-15. Third wave in a row where every submitted URL indexed within a day.
 
-**What is left.** Live sitemap (720 URLs) diffed against 90 days of GSC page data: 67 URLs have never earned an impression and 18 more have ≤2. All 85 inspected: 37 are indexed (Google just never shows them), **48 are not indexed** — 9 city/state pages, 1 metro page, 38 club pages. All 48 verified 200 on `https://www.`. Three of the 48 (`/florida/hallandale-beach`, `/courts/piedmont-driving-club`, `/courts/snowmass-club`) are "Crawled - currently not indexed" from May/June — Google saw them and declined; they go last, and if they stay out after resubmission that is a thin-content signal, not a crawl one.
+**What is left.** Live sitemap (720 URLs) diffed against 90 days of GSC page data: 67 URLs have never earned an impression and 18 more have ≤2. All 85 inspected: 37 are indexed (Google just never shows them), **48 are not indexed** — 9 city/state pages, 1 metro page, 38 club pages. 46 of the 48 verified 200 on `https://www.`; **two are 308 redirects and were dropped from the waves** (`/courts/lets-go-pickleball-padel`, `/courts/patl` — legacy slugs that still appear in the sitemap; submitting a redirect wastes a request). Removing redirecting slugs from the sitemap is a small site-code fix for next run (SEO-INDEX-006, recorded). Three of the 48 (`/florida/hallandale-beach`, `/courts/piedmont-driving-club`, `/courts/snowmass-club`) are "Crawled - currently not indexed" from May/June — Google saw them and declined; they go last, and if they stay out after resubmission that is a thin-content signal, not a crawl one.
 
 **Order of value:** city/state pages first (they can rank for generic `padel <city>` queries), clubs after (their branded queries go to the club's own site, so indexing them is hygiene, not traffic). At ~10 requests/day this is five days; after Day 9 the sitemap has nothing unindexed left that the loop knows about.
 
@@ -296,13 +296,12 @@ https://www.padelcourtsfinder.com/courts/casas-padel-club-aventura
 https://www.padelcourtsfinder.com/courts/charlotte-padel-club-matthews
 ```
 
-**Day 7 — 2026-09-18 (10): clubs, D–P**
+**Day 7 — 2026-09-18 (9): clubs, D–P**
 ```
 https://www.padelcourtsfinder.com/courts/club-pickle-padel
 https://www.padelcourtsfinder.com/courts/dripping-springs-racquet-club
 https://www.padelcourtsfinder.com/courts/glassbox-padel-club
 https://www.padelcourtsfinder.com/courts/kingdom-of-padel
-https://www.padelcourtsfinder.com/courts/lets-go-pickleball-padel
 https://www.padelcourtsfinder.com/courts/marcos-del-pilar-padel-usa
 https://www.padelcourtsfinder.com/courts/matts-pickle-and-padel
 https://www.padelcourtsfinder.com/courts/new-rochelle-indoor-sports
@@ -310,13 +309,12 @@ https://www.padelcourtsfinder.com/courts/north-texas-racquet-club
 https://www.padelcourtsfinder.com/courts/one-indoor-club
 ```
 
-**Day 8 — 2026-09-19 (10): clubs, P–T**
+**Day 8 — 2026-09-19 (9): clubs, P–T**
 ```
 https://www.padelcourtsfinder.com/courts/paddles-up-east-setauket
 https://www.padelcourtsfinder.com/courts/padel-club-el-paso
 https://www.padelcourtsfinder.com/courts/padel-point-miami
 https://www.padelcourtsfinder.com/courts/padel-world-play
-https://www.padelcourtsfinder.com/courts/patl
 https://www.padelcourtsfinder.com/courts/reserve-padel-design-district
 https://www.padelcourtsfinder.com/courts/riviera-tennis-center
 https://www.padelcourtsfinder.com/courts/rock-creek-tennis-center
