@@ -335,3 +335,18 @@ https://www.padelcourtsfinder.com/courts/snowmass-club
 ```
 
 No sitemap resubmission needed this week unless a PR changes `page-dates.json` again.
+
+---
+
+# Addendum — 2026-09-19: Day 5 result, and where the queue stands
+
+Re-inspected the 46-URL pool: **8 of the 10 Day-5 URLs indexed, all crawled 2026-09-17.** Still
+"Discovered": `/new-jersey/oceanport`, `/padel-near/grand-prairie`.
+
+**Submitted by Dito 2026-09-19 (5):** `/new-jersey/oceanport`, `/padel-near/grand-prairie`,
+`/courts/10by20-padel-fort-lauderdale`, `/courts/bay-padel-dogpatch`, `/courts/bay-padel-sunnyvale`.
+Quota ran out there.
+
+**Next list starts at `/courts/bay-padel-treasure-island`** and continues in the 09-16 addendum's
+order. 33 club pages remain after today. Re-inspect the pool before handing over a list: drop
+anything indexed, and put any of the five above that is still not indexed back at the top.
