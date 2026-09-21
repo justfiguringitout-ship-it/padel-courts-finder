@@ -72,7 +72,7 @@
 | **SEO-STRIKE-003** (NYC block + prices, PR #11–#13) | First full week | **Modest yes.** `padel nyc` position 4.3 → **3.9**, CTR 6.3% (pre-block baseline 4.7%; last week 7.3%). `padel courts nyc` 8 clicks / 35 impr / **22.9%** at 2.1; `padel new york` 4.7 → 4.0. Meets the success test set on 09-14 (CTR above 4.7% with position no worse). Closed as worked |
 | **SEO-INDEX-005** (sitemap lastmod fix, PR #15) | Live | **Holding.** Live sitemap: 724 URLs, busiest date 327 on 08-04 (45%, the long-standing club floor), 232 on 09-12 (32%). After PR #16: exactly one URL on 09-21. The regeneration rule was followed this run |
 | **SEO-STRIKE-004** (court-cost) | Was "recorded" | **Acted this run** — §4 |
-| SEO-STRIKE-002 (beginners, off-page) | Standing | `best padel racket for beginners` 28d 17.3 → ~16; 7d 14.3 (13.4). Flat on page 2. Still off-page |
+| SEO-STRIKE-002 (beginners, off-page) | Standing | `best padel racket for beginners` 28d 17.3 → 16.4; 7d 14.3 (13.4). Flat on page 2. Still off-page |
 | SEO-DECAY-001 (intermediate) | Standing | Step held. Order stays |
 | SEO-DECAY-002, SEO-CTR-006, SEO-CTR-002/007 | Closed | Untouched. `best padel shoes` head term came back to 16.5 from 22.5 on its own |
 
