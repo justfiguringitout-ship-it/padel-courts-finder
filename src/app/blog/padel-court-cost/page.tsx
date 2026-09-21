@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "How Much Does It Cost to Build a Padel Court? (2026)",
-  description: "How much does it cost to build a padel court in 2026? Realistic US ranges for the court kit, concrete slab, lighting, indoor builds, and ongoing costs.",
+  description: "Building a padel court in the US costs roughly $40,000–$75,000 outdoors and $70,000–$100,000+ indoors. Line-by-line breakdown: kit, slab, lighting, installation, permits.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/padel-court-cost",
   },
@@ -28,7 +28,7 @@ export default function PadelCourtCostPage() {
     "headline": "How Much Does It Cost to Build a Padel Court? (2026)",
     "description": "Realistic US cost ranges for building a padel court — the court kit, concrete slab, lighting, indoor vs outdoor builds, shipping, and ongoing operating costs.",
     "datePublished": "2026-07-04T00:00:00Z",
-    "dateModified": "2026-07-04T00:00:00Z",
+    "dateModified": "2026-09-21T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },
     "publisher": { "@type": "Organization", "name": "Padel Courts Finder", "logo": { "@type": "ImageObject", "url": "https://www.padelcourtsfinder.com/logo.png" } },
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.padelcourtsfinder.com/blog/padel-court-cost" }
@@ -42,6 +42,16 @@ export default function PadelCourtCostPage() {
         "@type": "Question",
         "name": "How much does one padel court cost?",
         "acceptedAnswer": { "@type": "Answer", "text": "For an outdoor court in the US, realistic all-in budgets typically land between roughly $40,000 and $75,000 per court once you include the court kit ($20,000–$30,000), concrete slab, lighting, shipping, and installation. Indoor courts run far higher — often $70,000–$100,000+ per court before the building itself — because the enclosure dominates the budget." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does padel court installation cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Professional installation typically adds about 15% of total project cost and takes 3–4 days per court once the concrete slab has cured. Freight is separate: under 5% of project cost for US-stocked courts, but 10–15% for imported kits. Multi-court projects are meaningfully cheaper per court because one slab pour, one crew mobilization, and one freight container are shared." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is an outdoor padel court cheaper than an indoor one?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, by a wide margin. A single outdoor padel court typically lands between $40,000 and $75,000 all-in. Indoor builds run $70,000–$100,000+ per court before the building, HVAC, and fit-out. A canopy or fabric structure over an outdoor court is the middle path at roughly $50,000–$85,000 per court." }
       },
       {
         "@type": "Question",
@@ -80,7 +90,7 @@ export default function PadelCourtCostPage() {
           </h1>
           <p className="text-lg text-stone-400 mt-3">Real numbers for entrepreneurs and club owners — and why quotes vary so much</p>
           <div className="text-sm text-stone-500 mt-4">
-            <span>July 4, 2026</span>
+            <span>Updated September 21, 2026</span>
             <span className="mx-2">&bull;</span>
             <span>8 min read</span>
           </div>
@@ -108,9 +118,75 @@ export default function PadelCourtCostPage() {
             </p>
           </section>
 
+          {/* Cost breakdown table */}
+          <section>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Padel court cost breakdown (single court, US, 2026)</h2>
+            <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+              <table className="w-full text-sm border border-stone-200 rounded-lg bg-white">
+                <thead>
+                  <tr className="border-b border-stone-200 text-left">
+                    <th className="px-3 py-2.5 font-semibold text-foreground">Line item</th>
+                    <th className="px-3 py-2.5 font-semibold text-foreground whitespace-nowrap">Typical cost</th>
+                    <th className="px-3 py-2.5 font-semibold text-foreground">What moves it</th>
+                  </tr>
+                </thead>
+                <tbody className="text-stone-600">
+                  <tr className="border-b border-stone-100">
+                    <td className="px-3 py-2.5 font-medium text-foreground">Court kit (steel, glass, turf)</td>
+                    <td className="px-3 py-2.5 whitespace-nowrap">$20,000&ndash;$30,000</td>
+                    <td className="px-3 py-2.5">Panoramic vs standard glass, coastal coatings, import vs US-stocked</td>
+                  </tr>
+                  <tr className="border-b border-stone-100">
+                    <td className="px-3 py-2.5 font-medium text-foreground">Concrete slab and site prep</td>
+                    <td className="px-3 py-2.5 whitespace-nowrap">$5,000&ndash;$20,000+</td>
+                    <td className="px-3 py-2.5">Slope, drainage, excavation &mdash; one published build topped $30,000</td>
+                  </tr>
+                  <tr className="border-b border-stone-100">
+                    <td className="px-3 py-2.5 font-medium text-foreground">LED lighting</td>
+                    <td className="px-3 py-2.5 whitespace-nowrap">$2,000&ndash;$15,000</td>
+                    <td className="px-3 py-2.5">Basic pole-mounted vs competition standard with trenching and controls</td>
+                  </tr>
+                  <tr className="border-b border-stone-100">
+                    <td className="px-3 py-2.5 font-medium text-foreground">Shipping</td>
+                    <td className="px-3 py-2.5 whitespace-nowrap">Under 5% to 10&ndash;15%</td>
+                    <td className="px-3 py-2.5">US-stocked kits at the low end, imported kits at the high end</td>
+                  </tr>
+                  <tr className="border-b border-stone-100">
+                    <td className="px-3 py-2.5 font-medium text-foreground">Installation labor</td>
+                    <td className="px-3 py-2.5 whitespace-nowrap">About 15% of project</td>
+                    <td className="px-3 py-2.5">3&ndash;4 days per court after the slab cures; cheaper per court on multi-court jobs</td>
+                  </tr>
+                  <tr className="border-b border-stone-100">
+                    <td className="px-3 py-2.5 font-medium text-foreground">Permits, design, fees</td>
+                    <td className="px-3 py-2.5 whitespace-nowrap">About 5% of project</td>
+                    <td className="px-3 py-2.5">Local zoning familiarity with padel; geotechnical study adds $1,000&ndash;$3,000</td>
+                  </tr>
+                  <tr className="border-b border-stone-200 bg-stone-50">
+                    <td className="px-3 py-2.5 font-semibold text-foreground">Outdoor court, all-in</td>
+                    <td className="px-3 py-2.5 font-semibold text-foreground whitespace-nowrap">$40,000&ndash;$75,000</td>
+                    <td className="px-3 py-2.5">Everything above, one court</td>
+                  </tr>
+                  <tr className="border-b border-stone-100">
+                    <td className="px-3 py-2.5 font-medium text-foreground">Canopy or fabric cover</td>
+                    <td className="px-3 py-2.5 whitespace-nowrap">$50,000&ndash;$85,000</td>
+                    <td className="px-3 py-2.5">Per court, for full weather protection over an outdoor court</td>
+                  </tr>
+                  <tr>
+                    <td className="px-3 py-2.5 font-medium text-foreground">Indoor court</td>
+                    <td className="px-3 py-2.5 whitespace-nowrap">$70,000&ndash;$100,000+</td>
+                    <td className="px-3 py-2.5">Per court, before the building, HVAC, and fit-out</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-stone-500 text-sm mt-3">
+              Ranges come from published manufacturer pricing and installer project breakdowns; each line is explained below.
+            </p>
+          </section>
+
           {/* Court structure */}
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-4">The court structure itself: glass, steel, turf</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Padel court construction cost: the kit (glass, steel, turf)</h2>
             <p className="text-stone-700 leading-relaxed">
               The kit is the visible part: a galvanized steel frame, 12mm tempered glass walls, mesh panels, and
               an artificial turf playing surface. Published manufacturer pricing for a quality outdoor kit runs
@@ -159,7 +235,7 @@ export default function PadelCourtCostPage() {
 
           {/* Indoor vs outdoor */}
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-4">Indoor vs outdoor: the building dominates</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Indoor vs outdoor padel court cost: the building dominates</h2>
             <p className="text-stone-700 leading-relaxed">
               Go indoor and the math changes completely. Industry guides put indoor builds at
               <strong> $70,000–$100,000+ per court</strong> — several times the outdoor figure — and that&apos;s before
@@ -189,7 +265,7 @@ export default function PadelCourtCostPage() {
 
           {/* Shipping & installation */}
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-4">Shipping and installation</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Padel court installation cost: shipping, crew, and timeline</h2>
             <p className="text-stone-700 leading-relaxed">
               A padel court arrives as several tons of steel and glass. Installer breakdowns put freight at
               under 5% of project cost for US-stocked courts but <strong>10–15% for imported kits</strong> — one
@@ -273,6 +349,14 @@ export default function PadelCourtCostPage() {
                 <p className="text-stone-600 text-sm leading-relaxed">For an outdoor court in the US, realistic all-in budgets typically land between roughly $40,000 and $75,000 once you include the court kit ($20,000–$30,000), concrete slab, lighting, shipping, and installation. Indoor courts run far higher — often $70,000–$100,000+ per court before the building itself — because the enclosure dominates the budget.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
+                <h3 className="font-semibold text-foreground mb-2">How much does padel court installation cost?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">Professional installation typically adds about 15% of total project cost and takes 3&ndash;4 days per court once the concrete slab has cured. Freight is separate: under 5% of project cost for US-stocked courts, but 10&ndash;15% for imported kits. Multi-court projects are meaningfully cheaper per court because one slab pour, one crew mobilization, and one freight container are shared.</p>
+              </div>
+              <div className="bg-white border border-stone-200 rounded-lg p-5">
+                <h3 className="font-semibold text-foreground mb-2">Is an outdoor padel court cheaper than an indoor one?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">Yes, by a wide margin. A single outdoor padel court typically lands between $40,000 and $75,000 all-in. Indoor builds run $70,000&ndash;$100,000+ per court before the building, HVAC, and fit-out. A canopy or fabric structure over an outdoor court is the middle path at roughly $50,000&ndash;$85,000 per court.</p>
+              </div>
+              <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">How much land do you need for a padel court?</h3>
                 <p className="text-stone-600 text-sm leading-relaxed">The playing area is fixed at 20m &times; 10m (about 66ft &times; 33ft), but the total footprint is larger once you add structural clearance, walkways, and access around the enclosure. Plan on a pad meaningfully bigger than the court itself, and multi-court layouts need circulation space between courts.</p>
               </div>
@@ -305,9 +389,9 @@ export default function PadelCourtCostPage() {
                 <div className="font-semibold text-white">Browse 312+ Clubs</div>
                 <p className="text-stone-400 text-sm mt-1">Every padel club we track across 37 states</p>
               </Link>
-              <Link href="/about" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
-                <div className="font-semibold text-white">About Padel Courts Finder</div>
-                <p className="text-stone-400 text-sm mt-1">Why we built the US padel directory</p>
+              <Link href="/buy-a-padel-court" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Buy a Padel Court</div>
+                <p className="text-stone-400 text-sm mt-1">Compare options and request quotes for your build</p>
               </Link>
             </div>
           </div>
