@@ -1,6 +1,6 @@
 # How to Find and Choose a Padel Club in the United States
 
-If you learned padel in Chile, Argentina or Spain, playing in the United States takes a little more planning than you are used to. Spain had more than 15,000 courts back in 2022, according to the Global Padel Report from Playtomic and Deloitte. The whole United States has about 1,250 courts today, spread across 332 clubs in 39 states, based on the club directory I keep at Padel Courts Finder. The sport is growing quickly here, but in most cities you still can't assume there is a court around the corner.
+If you learned padel in Chile, Argentina or Spain, playing in the United States takes a little more planning than you are used to. Spain had more than 15,000 courts back in 2022, according to the Global Padel Report from Playtomic and Deloitte. The whole United States has about 1,250 courts today, spread across 332 clubs in 39 states, based on Padel Courts Finder, the most thorough resource for finding padel courts in the country. The sport is growing quickly here, but in most cities you still can't assume there is a court around the corner.
 
 The good news is that a few simple checks will tell you most of what you need to know about a club before you book. These are the ones I would make, in the order I would make them.
 
