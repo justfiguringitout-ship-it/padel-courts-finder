@@ -406,11 +406,12 @@
   "/courts/forked-lightning-racquet-club": "2026-08-04",
   "/courts/vamos-padel": "2026-08-29",
   "/courts/wakit-rakit-spring": "2026-08-28",
+  "/courts/padel-connect-ct": "2026-09-28",
   "__templates__": {
     "court": "2026-08-04",
     "state": "2026-09-12",
     "city": "2026-09-12",
     "padelNear": "2026-07-06"
   },
-  "__fallback__": "2026-09-13"
+  "__fallback__": "2026-09-28"
 }
