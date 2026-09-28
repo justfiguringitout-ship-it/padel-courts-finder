@@ -263,6 +263,10 @@ export default function BestRoundRacketsPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h2 className="text-2xl font-bold text-white mb-6">Keep Reading</h2>
             <div className="grid sm:grid-cols-2 gap-4">
+              <Link href="/blog/best-budget-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Best Budget Padel Rackets (2026)</div>
+                <p className="text-stone-400 text-sm mt-1">6 picks from $90 to $170, ranked by value</p>
+              </Link>
               <Link href="/blog/padel-racket-shapes-explained" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Padel Racket Shapes Explained</div>
                 <p className="text-stone-400 text-sm mt-1">Round vs teardrop vs diamond — the full guide</p>

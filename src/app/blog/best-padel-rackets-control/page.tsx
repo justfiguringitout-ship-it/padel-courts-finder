@@ -664,6 +664,11 @@ export default function ControlRacketsPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <h2 className="text-lg font-bold text-white mb-4">Keep Reading</h2>
           <div className="grid sm:grid-cols-2 gap-4">
+            <Link href="/blog/best-budget-padel-rackets" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
+              <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
+              <h3 className="font-semibold text-white mt-1">Best Budget Padel Rackets (2026)</h3>
+              <p className="text-sm text-stone-400 mt-1">6 picks from $90 to $170, ranked by value &rarr;</p>
+            </Link>
             <Link href="/blog/padel-racket-shapes-explained" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Racket Shapes Explained</h3>
