@@ -14290,6 +14290,27 @@ export const padelCourts: PadelCourt[] = [
     verified: true,
     verificationDate: "2026-08-28",
   },
+  {
+    id: 465,
+    name: "Padel Connect CT",
+    address: "Bristol (location TBA)",
+    city: "Bristol",
+    state: "CT",
+    zipCode: "06010",
+    website: "https://www.padelconnectct.com",
+    rating: 0,
+    reviewCount: 0,
+    description: "Padel Connect CT is a padel club in development in Bristol, Connecticut, and bills itself as Greater Hartford's first dedicated padel club. The club plans seven indoor courts built to international specifications alongside a clubhouse with a lounge and bar, workspace with Wi-Fi, and a calendar of leagues, junior clinics, beginner intros and private coaching. It is finalizing its site and targeting a Q1 2027 opening; the exact location and founding-member details are being shared with people who register interest on the club's website.",
+    numberOfCourts: 7,
+    courtType: "indoor",
+    indoorCourts: 7,
+    coordinates: { lat: 41.6718, lng: -72.9493 }, // city-center estimate — TODO: replace once the club announces its address
+    instagram: "https://www.instagram.com/padelconnectct",
+    facebook: "https://www.facebook.com/padelconnectct",
+    status: "coming_soon",
+    verified: false,
+    verificationDate: "2026-09-27",
+  },
 ];
 
 
