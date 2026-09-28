@@ -644,6 +644,17 @@ const blogPosts: BlogPost[] = [
     priceRange: '$170\u2013$280'
   },
   {
+    slug: 'best-budget-padel-rackets',
+    title: 'Best Budget Padel Rackets (2026)',
+    category: 'equipment',
+    excerpt: 'Six rackets from $89.95 to $169.99, ranked by what you get per dollar \u2014 with the best cheap picks for beginners and for intermediate players.',
+    date: '2026-09-28',
+    readTime: '8 min read',
+    imageAlt: 'Best budget padel rackets 2026',
+    courtSlug: '',
+    priceRange: '$90\u2013$170'
+  },
+  {
     slug: 'best-padel-rackets-advanced',
     title: 'Best Padel Rackets for Advanced Players (2026)',
     category: 'equipment',

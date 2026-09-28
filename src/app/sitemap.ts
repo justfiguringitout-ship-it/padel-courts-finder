@@ -202,7 +202,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   // Court detail pages
-  const courtSlugs = getAllAdaptedCourtSlugs();
+  // Slugs that next.config.ts 308-redirects elsewhere. Listing them wastes crawl
+  // budget on URLs that can never be indexed; keep in sync with the redirects.
+  const redirectedCourtSlugs = new Set(['patl', 'lets-go-pickleball-padel']);
+  const courtSlugs = getAllAdaptedCourtSlugs().filter((slug) => !redirectedCourtSlugs.has(slug));
   const courtPages: MetadataRoute.Sitemap = courtSlugs.map((slug) => ({
     url: `${baseUrl}/courts/${slug}`,
     lastModified: dateFor(`/courts/${slug}`, 'court'),
