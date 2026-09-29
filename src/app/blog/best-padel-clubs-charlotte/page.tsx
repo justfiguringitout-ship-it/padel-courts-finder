@@ -4,13 +4,13 @@ import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Charlotte (2026) | Complete QC Padel Guide',
-  description: 'Discover Charlotte\'s 2 best padel clubs in 2026. Charlotte Padel Club & Epic Padel Inc. Rankings, pricing & Queen City padel guide.',
+  description: 'Discover Charlotte\'s 2 best padel clubs in 2026. Charlotte Padel Club & Epic Padel. Rankings, pricing & Queen City padel guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-charlotte',
   },
   openGraph: {
     title: 'Best Padel Clubs in Charlotte (2026) | Complete QC Padel Guide',
-    description: 'Discover Charlotte\'s 2 best padel clubs in 2026. Charlotte Padel Club & Epic Padel Inc. Rankings, pricing & Queen City padel guide.',
+    description: 'Discover Charlotte\'s 2 best padel clubs in 2026. Charlotte Padel Club & Epic Padel. Rankings, pricing & Queen City padel guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-charlotte',
     type: 'article',
     images: [{ url: 'https://charlottepadelclub.com/og-image.png' }],
@@ -71,13 +71,13 @@ const clubs: Club[] = [
   },
   {
     rank: 2,
-    name: 'Epic Padel Inc',
-    slug: 'epic-padel-inc',
+    name: 'Epic Padel',
+    slug: 'epic-padel-charlotte',
     score: 90,
     location: 'Prosperity Athletic Club, North Charlotte, NC',
     courts: '5 outdoor courts',
     price: '$$$',
-    description: 'Epic Padel Inc operates 5 brand-new outdoor padel courts at Prosperity Athletic Club in north Charlotte. Members enjoy access to the full athletic club including gym, pools, tennis and pickleball courts, and locker rooms with sauna and cold plunge. Phase 2 plans include canopies and food and beverage service.',
+    description: 'Epic Padel operates 5 brand-new outdoor padel courts at Prosperity Athletic Club in north Charlotte. Members enjoy access to the full athletic club including gym, pools, tennis and pickleball courts, and locker rooms with sauna and cold plunge. Phase 2 plans include canopies and food and beverage service.',
     highlights: [
       '5 brand-new outdoor padel courts',
       'Part of Prosperity Athletic Club',
@@ -108,7 +108,7 @@ export default function CharlotteBestClubsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in Charlotte (2026) | Complete QC Padel Guide",
-    "description": "Discover Charlotte's 2 best padel clubs in 2026. Charlotte Padel Club & Epic Padel Inc. Rankings, pricing & Queen City padel guide.",
+    "description": "Discover Charlotte's 2 best padel clubs in 2026. Charlotte Padel Club & Epic Padel. Rankings, pricing & Queen City padel guide.",
     "image": "https://charlottepadelclub.com/og-image.png",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
@@ -195,7 +195,7 @@ export default function CharlotteBestClubsPage() {
             Queen City Embraces Padel in 2026
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Charlotte&apos;s padel scene has doubled. The Queen City now has 2 distinct clubs offering 7 courts across indoor and outdoor settings. <Link href="/courts/charlotte-padel-club-south-charlotte" className="text-padel-green hover:underline">Charlotte Padel Club</Link> continues to lead with its premium indoor facility in South Charlotte and a stellar 4.9 Google rating, while newcomer <Link href="/courts/epic-padel-inc" className="text-padel-green hover:underline">Epic Padel Inc</Link> brings 5 brand-new outdoor courts at Prosperity Athletic Club in north Charlotte.
+            Charlotte now has three padel venues run by two operators, with 14 courts between them across indoor, covered and outdoor settings. <Link href="/courts/charlotte-padel-club-south-charlotte" className="text-padel-green hover:underline">Charlotte Padel Club</Link> continues to lead with its premium indoor facility in South Charlotte and a stellar 4.9 Google rating, while newcomer <Link href="/courts/epic-padel-charlotte" className="text-padel-green hover:underline">Epic Padel</Link> brings 5 brand-new outdoor courts at Prosperity Athletic Club in north Charlotte.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             As one of America&apos;s fastest-growing metros, Charlotte attracts transplants from padel-strong cities like Miami, New York, and Dallas. The city&apos;s banking wealth, mild year-round climate, and active sports culture position it for significant padel growth in the coming years.
@@ -209,9 +209,9 @@ export default function CharlotteBestClubsPage() {
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/charlotte-padel-club-south-charlotte" className="text-padel-green hover:underline">Charlotte Padel Club</Link> (indoor, 4.9 rating, pro shop & bar)</p>
-            <p><strong>Most Courts:</strong> <Link href="/courts/epic-padel-inc" className="text-padel-green hover:underline">Epic Padel Inc</Link> (5 outdoor courts at athletic club)</p>
+            <p><strong>Most Courts:</strong> <Link href="/courts/epic-padel-charlotte" className="text-padel-green hover:underline">Epic Padel</Link> (5 outdoor courts at athletic club)</p>
             <p><strong>Best for Beginners:</strong> <Link href="/courts/charlotte-padel-club-south-charlotte" className="text-padel-green hover:underline">Charlotte Padel Club</Link> (clinics, rentals, day pass $25)</p>
-            <p><strong>Best Multi-Sport:</strong> <Link href="/courts/epic-padel-inc" className="text-padel-green hover:underline">Epic Padel Inc</Link> (gym, pools, sauna, cold plunge)</p>
+            <p><strong>Best Multi-Sport:</strong> <Link href="/courts/epic-padel-charlotte" className="text-padel-green hover:underline">Epic Padel</Link> (gym, pools, sauna, cold plunge)</p>
           </div>
         </div>
 
