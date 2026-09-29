@@ -72,6 +72,7 @@
   "/blog/padel-gifts": "2026-07-31",
   "/blog/padel-gifts-fathers-day-2026": "2026-07-10",
   "/blog/padel-gifts-mothers-day-2026": "2026-09-11",
+  "/blog/padel-injuries-prevention-tips": "2026-09-29",
   "/blog/padel-patterns-beginners": "2026-07-04",
   "/blog/padel-positioning-guide": "2026-07-04",
   "/blog/padel-racket-shapes-explained": "2026-09-14",
@@ -194,7 +195,7 @@
   "/courts/north-texas-racquet-club": "2026-08-04",
   "/courts/bush-tennis-center-texas-padel": "2026-08-04",
   "/courts/reserve-padel-hudson-yards": "2026-08-04",
-  "/courts/padel-haus-williamsburg": "2026-08-04",
+  "/courts/padel-haus-williamsburg": "2026-09-29",
   "/courts/brisas": "2026-08-29",
   "/courts/usta-national-campus": "2026-08-04",
   "/courts/orlando-padel-club-indoor": "2026-08-04",
@@ -314,7 +315,7 @@
   "/courts/dus-padel": "2026-08-04",
   "/courts/columbus-padel-club": "2026-08-04",
   "/courts/padel-highway": "2026-08-04",
-  "/courts/padel-haus-greenpoint": "2026-08-04",
+  "/courts/padel-haus-greenpoint": "2026-09-29",
   "/courts/club-padel-newtown": "2026-08-04",
   "/courts/oh-padel": "2026-08-04",
   "/courts/padel39-east-austin": "2026-08-04",
@@ -408,11 +409,13 @@
   "/courts/vamos-padel": "2026-08-29",
   "/courts/wakit-rakit-spring": "2026-08-28",
   "/courts/padel-connect-ct": "2026-09-28",
+  "/courts/padel-haus-denver": "2026-09-29",
+  "/courts/padel-haus-dallas": "2026-09-29",
   "__templates__": {
     "court": "2026-08-04",
     "state": "2026-09-12",
     "city": "2026-09-12",
     "padelNear": "2026-07-06"
   },
-  "__fallback__": "2026-09-28"
+  "__fallback__": "2026-09-29"
 }
