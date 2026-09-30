@@ -33,6 +33,7 @@ const nextConfig: NextConfig = {
       { source: '/courts/epic-padel-inc', destination: '/courts/epic-padel-charlotte', permanent: true }, // renamed 2026-09-29
       { source: '/courts/dallas-padel-club', destination: '/courts/padel39-north-dallas', permanent: true }, // rebranded, 2026-09-29
       { source: '/courts/woodlands-padel', destination: '/courts/wakit-rakit-spring', permanent: true }, // same venue, duplicate removed 2026-09-29
+      { source: '/courts/houston-padel-indoor', destination: '/texas/houston', permanent: true }, // removed 2026-09-29, no verifiable data
       { source: '/courts/mouratoglou-academy-zephyrhills', destination: '/courts/svb-tennis-wellness-center', permanent: true }, // listed under the venue's own name, 2026-09-29
       { source: '/courts/padel-39', destination: '/courts/padel39-north-austin', permanent: true }, // renamed 2026-09-29
       { source: '/courts/austin-padel-center-pop-up', destination: '/courts/austin-padel-center', permanent: true }, // permanent club opened 2026-08
@@ -82,7 +83,7 @@ const nextConfig: NextConfig = {
       { source: '/courts/caribe-royale-orlando-sport-court', destination: '/courts/padel-in-orlando', permanent: true },
       { source: '/courts/xcel-padel-west-palm-beach', destination: '/courts/xcel-padel', permanent: true },
       { source: '/courts/priv-padel-at-thesis-the-gables-padel', destination: '/courts/the-gables-padel', permanent: true },
-      { source: '/courts/patl', destination: '/courts/itp-training-academy', permanent: true },
+      { source: '/courts/patl', destination: '/florida/fort-lauderdale', permanent: true },
       { source: '/courts/sensa-padel', destination: '/courts/sensa-padel-nashville', permanent: true },
       { source: '/courts/padel-social', destination: '/courts/padel-social-bethesda', permanent: true },
       { source: '/courts/padel-garten-by-glassbox-padel-club', destination: '/courts/glassbox-padel-club', permanent: true },
