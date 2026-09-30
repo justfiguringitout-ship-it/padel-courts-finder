@@ -193,11 +193,11 @@ const blogPosts: BlogPost[] = [
     slug: 'best-padel-clubs-dallas',
     title: 'Best Padel Clubs in Dallas (2026)',
     category: 'best-clubs',
-    excerpt: 'Dallas-Fort Worth padel with 2 facilities. Banner House at T Bar M\'s private club courts and SMU\'s Styslinger complex. DFW\'s scene is early but growing.',
+    excerpt: 'The six padel clubs open in Dallas-Fort Worth, with 20 courts between them. Court counts, prices and which clubs take public bookings.',
     date: '2026-03-21',
     readTime: '6 min read',
     imageAlt: 'Dallas padel courts',
-    courtSlug: 'dallas-padel-club'
+    courtSlug: 'padel39-north-dallas'
   },
   {
     slug: 'best-padel-clubs-denver',

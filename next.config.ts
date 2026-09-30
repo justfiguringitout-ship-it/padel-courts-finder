@@ -31,6 +31,9 @@ const nextConfig: NextConfig = {
       { source: '/courts/wakit-rakit-titusville', destination: '/courts/wakit-rakit-space-coast', permanent: true }, // owner rebrand 2026-08-28
       { source: '/courts/charlotte-padel-club', destination: '/courts/charlotte-padel-club-matthews', permanent: true }, // duplicate listing removed 2026-09-29
       { source: '/courts/epic-padel-inc', destination: '/courts/epic-padel-charlotte', permanent: true }, // renamed 2026-09-29
+      { source: '/courts/dallas-padel-club', destination: '/courts/padel39-north-dallas', permanent: true }, // rebranded, 2026-09-29
+      { source: '/courts/net-racquet-club', destination: '/texas/farmers-branch', permanent: true }, // club closed, 2026-09-29
+      { source: '/courts/styslinger-altec-tennis-complex', destination: '/texas/dallas', permanent: true }, // no padel at this venue, 2026-09-29
 
       // === Duplicate merges with different slugs (70) ===
       { source: '/courts/pepper-padel-miami', destination: '/courts/pulse-padel-hub', permanent: true },

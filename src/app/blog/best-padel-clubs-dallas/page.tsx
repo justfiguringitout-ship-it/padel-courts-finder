@@ -4,13 +4,13 @@ import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Dallas (2026) | Complete DFW Guide',
-  description: 'Dallas padel clubs ranked for 2026. Banner House at T Bar M\'s private club with 4 courts, plus Styslinger/Altec Tennis Complex. DFW padel guide.',
+  description: 'The six padel clubs open in Dallas-Fort Worth in 2026, with court counts, prices and who can book: Kraken, Padel39 North Dallas, North Texas Racquet Club, Banner House and more.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-dallas',
   },
   openGraph: {
     title: 'Best Padel Clubs in Dallas (2026) | Complete DFW Guide',
-    description: 'Dallas padel clubs ranked for 2026. Banner House at T Bar M\'s private club with 4 courts, plus Styslinger/Altec Tennis Complex. DFW padel guide.',
+    description: 'The six padel clubs open in Dallas-Fort Worth in 2026, with court counts, prices and who can book: Kraken, Padel39 North Dallas, North Texas Racquet Club, Banner House and more.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-dallas',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
@@ -21,7 +21,6 @@ interface Club {
   rank: number;
   name: string;
   slug: string;
-  score: number;
   location: string;
   courts: string;
   price: string;
@@ -38,66 +37,91 @@ interface Club {
 const clubs: Club[] = [
   {
     rank: 1,
-    name: 'Banner House at T Bar M',
-    slug: 'banner-house-at-t-bar-m',
-    score: 91,
-    location: 'North Dallas, TX',
-    courts: '4 courts (indoor & outdoor)',
-    price: '$$$$',
-    description: 'Dallas\'s premier padel destination is Banner House at T Bar M, a reimagined private club in North Dallas built on the former T Bar M site. The club features 4 padel courts across indoor and outdoor settings, alongside tennis, pickleball, a resort-style pool with cabanas, a fitness center, chiropractic services, and multiple dining options. This is a full lifestyle membership club where padel is a centerpiece of a much larger experience.',
-    highlights: [
-      '4 padel courts (indoor & outdoor)',
-      'Resort pool & cabanas',
-      'Full fitness center',
-      'Chiropractic & wellness services',
-      'Multiple dining venues',
-      'Professional coaching team'
-    ],
-    programs: [
-      'Membership-based access',
-      'Professional padel coaching',
-      'Tennis & pickleball programs',
-      'Fitness & wellness programs',
-      'Social events & dining',
-      'Youth development'
-    ],
-    bestFor: [
-      'Private club members',
-      'Families seeking full-service club',
-      'North Dallas residents',
-      'Multi-sport athletes'
-    ]
+    name: 'Kraken Padel Club',
+    slug: 'kraken-padel-club',
+    location: 'Farmers Branch, TX',
+    courts: '4 indoor courts',
+    price: 'From $25',
+    phone: '(469) 232-7021',
+    website: 'www.krakenpadelclub.com',
+    email: 'hello@krakenpadelclub.com',
+    hours: 'Every day, 7:30am to midnight',
+    description: 'Kraken is the easiest place in the metroplex to walk in and play. It has four indoor, climate-controlled courts in Farmers Branch, it is open until midnight every day, and you can book without a membership. Pay-to-play sessions cost $25 off-peak and $40 at peak times, and memberships start at $80 a month with lower per-player rates.',
+    highlights: ['4 indoor, climate-controlled courts', 'Open until midnight every day', 'Pay to play with no membership', 'Gym, juice bar and pro shop', 'Video recording on court', 'Racket rental'],
+    programs: ['Pay to play', 'Memberships from $80 a month', 'Private lessons', 'Private events'],
+    bestFor: ['First-time players', 'Late-night games', 'Playing without a membership']
   },
   {
     rank: 2,
-    name: 'Styslinger / Altec Tennis Complex',
-    slug: 'styslinger-altec-tennis-complex',
-    score: 80,
-    location: 'Southern Methodist University, Dallas, TX',
-    courts: '12 tennis courts (6 indoor, 6 outdoor)',
-    price: 'N/A',
-    description: 'The Styslinger/Altec Tennis Complex at Southern Methodist University is primarily a world-class tennis facility, hosting professional events like the Dallas Open. While its focus is tennis rather than dedicated padel, the state-of-the-art infrastructure, stadium seating, fitness rooms, and grand viewing terrace make it a notable venue in the DFW racquet sports landscape. Check directly with SMU Athletics for any padel programming or court availability.',
-    highlights: [
-      'State-of-the-art SMU facility',
-      '6 indoor + 6 outdoor tennis courts',
-      'Hosts Dallas Open (professional events)',
-      'Club suite & grand viewing terrace',
-      'Fitness & training rooms',
-      'Stadium seating for spectators'
-    ],
-    programs: [
-      'SMU Athletics programs',
-      'Professional event hosting',
-      'Fitness & training facilities',
-      'Locker room access',
-      'Spectator viewing areas'
-    ],
-    bestFor: [
-      'SMU students & faculty',
-      'Tennis players exploring padel',
-      'Professional event spectators',
-      'University Park residents'
-    ]
+    name: 'North Texas Racquet Club',
+    slug: 'north-texas-racquet-club',
+    location: 'Frisco, TX',
+    courts: '4 outdoor courts, lit',
+    price: 'From $20',
+    phone: '(469) 430-9399',
+    hours: 'Mon-Fri 7am to 10pm, Sat 7am to 8pm, Sun 7am to 6pm',
+    description: 'North Texas Racquet Club has four lit outdoor courts in Frisco and is open to both members and the public. Non-members pay $20 for 90 minutes off-peak and $35 at peak times, and members get discounted rates and priority booking. The club runs clinics, leagues and Americano socials, which makes it a good place to meet other players.',
+    highlights: ['4 lit outdoor courts', 'Open to the public', 'Pro shop on site', 'Priority booking for members'],
+    programs: ['Clinics', 'Americano socials', 'Leagues', 'Private lessons'],
+    bestFor: ['Players in Frisco and the northern suburbs', 'Social play', 'Evening games outdoors']
+  },
+  {
+    rank: 3,
+    name: 'Padel39 North Dallas',
+    slug: 'padel39-north-dallas',
+    location: 'Carrollton, TX',
+    courts: '3 indoor courts, 7 outdoor under construction',
+    price: '$30 to $35',
+    phone: '(469) 568-3060',
+    email: 'northdallas@padel39.com',
+    hours: 'Mon-Fri 6:30am to 11pm, Sat-Sun 7am to 9pm',
+    description: 'This is the club that used to be called Dallas Padel Club, now run by Padel39, the operator behind two clubs in Austin. Three indoor, climate-controlled courts are open today, and the club has broken ground on seven more outdoor courts. Non-members pay $30 to $35 per player for a 90-minute booking, and the club is staying open during the renovation.',
+    highlights: ['3 indoor, climate-controlled courts', '7 outdoor courts under construction', 'Open to the public', 'Part of the Padel39 group'],
+    programs: ['Public court booking', 'Memberships with peak and off-peak discounts'],
+    bestFor: ['Early-morning games', 'Players who also visit Austin', 'Carrollton and North Dallas']
+  },
+  {
+    rank: 4,
+    name: 'Banner House at T Bar M',
+    slug: 'banner-house-at-t-bar-m',
+    location: 'North Dallas, TX',
+    courts: '5 courts, indoor and outdoor',
+    price: 'Members only',
+    phone: '(972) 233-4444',
+    hours: 'Court hours Mon-Thu 6am to 9:30pm, Fri-Sun 6am to 9pm',
+    description: 'Banner House is a private club on the former T Bar M site in North Dallas, and it has the most padel courts of any club in the area, with five indoor and outdoor courts and three padel pros on staff. Courts are reserved for members, and membership is by application.',
+    highlights: ['5 padel courts, the most in DFW', 'Indoor and outdoor courts', '3 padel pros', 'Full private club with dining and fitness'],
+    programs: ['Membership by application', 'Coaching with club pros'],
+    bestFor: ['Families who want a full-service club', 'North Dallas residents', 'Players who want coaching']
+  },
+  {
+    rank: 5,
+    name: 'Preston Playhouse',
+    slug: 'preston-playhouse',
+    location: 'North Dallas, TX',
+    courts: '2 indoor courts',
+    price: 'Ask the club',
+    phone: '(972) 385-3641',
+    website: 'www.prestonpickleball.com',
+    email: 'info.prestonplayhouse@gmail.com',
+    hours: 'Mon-Thu 8am to 10pm, Fri-Sun 8am to 8pm',
+    description: 'Preston Playhouse is mainly a pickleball club, with nine indoor pickleball courts, but it also has two indoor padel courts and a lounge and bar. It does not publish padel prices, so call or check the booking page before you go.',
+    highlights: ['2 indoor padel courts', '9 indoor pickleball courts', 'Lounge and bar'],
+    programs: ['Online court booking'],
+    bestFor: ['Groups that play both padel and pickleball', 'Indoor play in summer']
+  },
+  {
+    rank: 6,
+    name: 'Brookhaven Country Club',
+    slug: 'brookhaven-country-club',
+    location: 'Farmers Branch, TX',
+    courts: '2 courts',
+    price: 'Members only',
+    phone: '(972) 243-6151',
+    description: 'Brookhaven is a private country club that added two padel courts to its racquet program. Padel here is for club members, so it is an option mainly if you already belong or are considering a country club membership.',
+    highlights: ['2 padel courts', 'Large racquet sports program', 'Private country club'],
+    programs: ['Club membership'],
+    bestFor: ['Existing Brookhaven members', 'Families looking at country clubs']
   }
 ];
 
@@ -106,10 +130,10 @@ export default function DallasBestClubsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in Dallas (2026) | Complete DFW Guide",
-    "description": "Dallas padel clubs ranked for 2026. Banner House at T Bar M's private club with 4 courts, plus Styslinger/Altec Tennis Complex.",
+    "description": "The six padel clubs open in Dallas-Fort Worth in 2026, with court counts, prices and who can book: Kraken, Padel39 North Dallas, North Texas Racquet Club, Banner House and more.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-21T00:00:00Z",
-    "dateModified": "2026-03-21T00:00:00Z",
+    "dateModified": "2026-09-29T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -157,7 +181,7 @@ export default function DallasBestClubsPage() {
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
-              <span>Updated March 2026</span>
+              <span>Updated September 2026</span>
             </div>
           </div>
           <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
@@ -168,11 +192,11 @@ export default function DallasBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-padel-green">2</div>
-              <div className="text-sm text-stone-600">Facilities</div>
+              <div className="text-3xl font-bold text-padel-green">6</div>
+              <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">4</div>
+              <div className="text-3xl font-bold text-padel-green">20</div>
               <div className="text-sm text-stone-600">Padel Courts</div>
             </div>
             <div>
@@ -180,8 +204,8 @@ export default function DallasBestClubsPage() {
               <div className="text-sm text-stone-600">Metro Population</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">Growing</div>
-              <div className="text-sm text-stone-600">Rapid Expansion</div>
+              <div className="text-3xl font-bold text-padel-green">2</div>
+              <div className="text-sm text-stone-600">Clubs Announced</div>
             </div>
           </div>
         </div>
@@ -193,10 +217,10 @@ export default function DallasBestClubsPage() {
             Dallas-Fort Worth: Padel Arrives in the Metroplex
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            The Dallas-Fort Worth metroplex, home to 7.5 million residents and one of the fastest-growing metros in the country, is in the early stages of its padel journey. While the scene is still developing compared to cities like Miami, Houston, or Austin, the foundations are being laid by <Link href="/courts/banner-house-at-t-bar-m" className="text-padel-green hover:underline">Banner House at T Bar M</Link>, which has made padel a cornerstone of its reimagined private club in North Dallas.
+            Dallas-Fort Worth has six padel clubs open today with 20 courts between them, and every one of them is in the northern half of the metroplex, in Farmers Branch, Carrollton, North Dallas and Frisco. We have not found a padel court yet in Fort Worth, Plano, Arlington or Irving.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            DFW has all the ingredients for explosive padel growth: a massive population, strong sports culture, business-friendly environment, wealthy suburbs like Plano, Frisco, and Southlake ready for premium facilities, and a large Latin American community already familiar with the sport. Expect significant expansion throughout 2026 and 2027.
+            Four of the six clubs take bookings from the public, and two are private. More courts are on the way. Padel39 is building seven outdoor courts at its Carrollton club, Padel Haus has announced a six-court club in the Design District for late 2026, and Padel Square has announced an indoor club in Farmers Branch.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
             Browse current options on our <Link href="/texas/dallas" className="text-padel-green hover:underline">Dallas courts page</Link> or explore the full <Link href="/texas" className="text-padel-green hover:underline">Texas padel directory</Link> to see what else the Lone Star State offers.
@@ -206,9 +230,10 @@ export default function DallasBestClubsPage() {
         <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/banner-house-at-t-bar-m" className="text-padel-green hover:underline">Banner House at T Bar M</Link> (4 courts, full private club)</p>
-            <p><strong>Best for Tennis Crossover:</strong> <Link href="/courts/styslinger-altec-tennis-complex" className="text-padel-green hover:underline">Styslinger/Altec Tennis Complex</Link> (SMU, professional events)</p>
-            <p><strong>Best for Families:</strong> Banner House at T Bar M (pool, dining, youth programs)</p>
+            <p><strong>Easiest to book:</strong> <Link href="/courts/kraken-padel-club" className="text-padel-green hover:underline">Kraken Padel Club</Link> (4 indoor courts, no membership needed, open until midnight)</p>
+            <p><strong>Best for outdoor play:</strong> <Link href="/courts/north-texas-racquet-club" className="text-padel-green hover:underline">North Texas Racquet Club</Link> (4 lit courts in Frisco, from $20)</p>
+            <p><strong>Most courts:</strong> <Link href="/courts/banner-house-at-t-bar-m" className="text-padel-green hover:underline">Banner House at T Bar M</Link> (5 courts, members only)</p>
+            <p><strong>Coming soon:</strong> <Link href="/courts/padel-haus-dallas" className="text-padel-green hover:underline">Padel Haus Dallas</Link> and <Link href="/courts/padel-square" className="text-padel-green hover:underline">Padel Square</Link></p>
             <p><strong>Nearest Major Padel Hub:</strong> <Link href="/blog/best-padel-clubs-austin" className="text-padel-green hover:underline">Austin</Link> &amp; <Link href="/blog/best-padel-clubs-houston" className="text-padel-green hover:underline">Houston</Link> (3-4 hours)</p>
           </div>
         </div>
@@ -225,18 +250,10 @@ export default function DallasBestClubsPage() {
                         {club.name}
                       </Link>
                     </h3>
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="flex items-center gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-5 h-5 ${i < Math.floor(club.score / 20) ? 'fill-yellow-400 text-yellow-400' : 'text-stone-600'}`} />
-                        ))}
-                      </div>
-                      <span className="text-xl font-bold">{club.score}/100</span>
-                    </div>
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold">{club.price}</div>
-                    <div className="text-sm text-stone-400">Price Range</div>
+                    <div className="text-sm text-stone-400">Court price</div>
                   </div>
                 </div>
               </div>
@@ -319,13 +336,6 @@ export default function DallasBestClubsPage() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6 mt-12 mb-12">
-          <h3 className="text-xl font-bold mb-3">Note on Styslinger/Altec Tennis Complex</h3>
-          <p className="text-stone-700">
-            The Styslinger/Altec Tennis Complex at SMU is primarily a tennis facility and hosts professional events like the Dallas Open. While it is included in our directory for its racquet sports infrastructure, players looking for dedicated padel courts and programming should contact SMU Athletics directly to confirm current padel availability. For a guaranteed padel experience in DFW, Banner House at T Bar M is the recommended choice.
-          </p>
         </div>
 
         <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
