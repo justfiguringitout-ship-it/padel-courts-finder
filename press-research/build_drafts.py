@@ -31,12 +31,10 @@ FACTS = {
               "Florida and Texas account for 43 percent of all US clubs."],
 }
 
-CLOSE = (f"You can read the full report here:\n{REPORT}\n\n"
-         "It is a private reader link, so I would ask that you not publish the URL itself.\n\n"
-         "You are welcome to use any of the numbers. If you do, I would appreciate a credit to Padel Courts Finder "
-         f"with a link to {PUBLIC}.\n\n"
-         "If it would help to have the data cut a different way, such as by city or by state, please let me know "
-         "and I will send it over.\n\n"
+CLOSE = (f"The report page is here, and it is the page to link to if you use any of the numbers:\n{PUBLIC}\n\n"
+         "The full report with every table is available to press. Reply and I will send it over as a PDF, along with "
+         "the data cut any way that helps your story, by city, by state or by region.\n\n"
+         "If you use the figures, a credit to Padel Courts Finder with a link to that page is all I ask.\n\n"
          "Thank you,\nDito Calderón\nPadel Courts Finder\ninfo@padelcourtsfinder.com")
 
 def full(greet, opening, local, facts, subject, to, cc=None):
@@ -55,10 +53,10 @@ def short(greet, opening, subject, to, extra=""):
             "of those clubs are open, and 36 more have been announced or are under construction. The report also covers the top cities by court count, court prices from 81 "
             "clubs, the operators with more than one location, and the large cities that still have no court."
             + (" " + extra if extra else "") + "\n\n"
-            f"You can read the full report here:\n{REPORT}\n\n"
-            "It is a private reader link, so I would ask that you not publish the URL itself. You are welcome to use any of "
-            f"the numbers with a credit to Padel Courts Finder and a link to {PUBLIC}.\n\n"
-            "If a different cut of the data would be useful to you, please let me know and I will send it over.\n\n"
+            f"The report page is here, and it is the page to link to if you use any of the numbers:\n{PUBLIC}\n\n"
+            "The full report with every table is available to press. Reply and I will send it over as a PDF, along with "
+            "the data cut any way that helps, by city, by state or by region.\n\n"
+            "If you use the figures, a credit to Padel Courts Finder with a link to that page is all I ask.\n\n"
             "Thank you,\nDito Calderón\nPadel Courts Finder\ninfo@padelcourtsfinder.com")
     return {"to": to, "cc": [], "subject": subject, "body": body}
 
