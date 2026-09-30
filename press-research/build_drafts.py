@@ -6,28 +6,29 @@ REPORT = "https://www.padelcourtsfinder.com/report/us-padel-2026-c7x4k9"
 PUBLIC = "https://www.padelcourtsfinder.com/state-of-us-padel-2026"
 
 INTRO = ("I run Padel Courts Finder, a directory of padel clubs in the United States. We keep a verified list of "
-         "every club we can find, and this month we updated our State of US Padel report with the latest figures. "
-         "As of today we count 332 clubs and 1,250 courts across 39 states, with 29 more clubs announced or under "
-         "construction. That is a little higher than the 1,000 courts the USPA reported in April, mostly because we "
-         "include clubs that are not USPA members.")
+         "every club we can find, and this week we finished a fresh check of our listings in the largest markets. "
+         "The figures feed our State of US Padel report. As of today we list 346 clubs with 1,327 courts across 39 "
+         "states. Of those, 308 clubs are open and 36 have been announced or are under construction. We count 1,177 "
+         "courts at the clubs that are open today, compared with the just over 1,000 the USPA reported in April, and "
+         "the difference is mostly clubs that are not USPA members.")
 
 FACTS = {
- "national": ["Florida and Texas account for 42 percent of all US clubs, and Miami alone has 100 courts.",
-              "The typical court costs $60 an hour, based on the 82 clubs that publish their prices.",
-              "Eleven operators now run two or more locations.",
+ "national": ["Florida and Texas account for 43 percent of all US clubs, and Miami alone has 100 courts.",
+              "The typical court costs $60 an hour, based on the 81 clubs that publish their prices.",
+              "Twelve operators now run two or more locations.",
               "There is a table of large US cities that still have no court within 25 miles."],
- "business": ["The typical court costs $60 an hour, based on the 82 clubs that publish their prices, and half of them charge between $40 and $80.",
-              "Eleven operators now run two or more locations, which together make up about 9 percent of all clubs.",
-              "More than half of US clubs have between three and five courts, and only ten clubs have ten or more.",
+ "business": ["The typical court costs $60 an hour, based on the 81 clubs that publish their prices, and half of them charge between $40 and $80.",
+              "Twelve operators now run two or more locations, which together make up about 11 percent of all clubs.",
+              "About half of US clubs have between three and five courts, and only eleven clubs have ten or more.",
               "There is a table of large US cities that still have no court within 25 miles."],
  "realestate": ["Of the open clubs where we know the court type, 38 percent are indoor only and 53 percent are outdoor only.",
-              "More than half of US clubs have between three and five courts, and only ten clubs have ten or more.",
-              "Eleven operators now run two or more locations.",
+              "About half of US clubs have between three and five courts, and only eleven clubs have ten or more.",
+              "Twelve operators now run two or more locations.",
               "There is a table of large US cities that still have no court within 25 miles, along with the clubs already announced for each one."],
  "clubs": ["About one in five US padel clubs is members only, and the rest sell court time to the public.",
-              "The typical court costs $60 an hour, based on the 82 clubs that publish their prices.",
-              "More than half of US clubs have between three and five courts.",
-              "Florida and Texas account for 42 percent of all US clubs."],
+              "The typical court costs $60 an hour, based on the 81 clubs that publish their prices.",
+              "About half of US clubs have between three and five courts.",
+              "Florida and Texas account for 43 percent of all US clubs."],
 }
 
 CLOSE = (f"You can read the full report here:\n{REPORT}\n\n"
@@ -40,7 +41,9 @@ CLOSE = (f"You can read the full report here:\n{REPORT}\n\n"
 
 def full(greet, opening, local, facts, subject, to, cc=None):
     parts = [f"Hi {greet},", opening]
-    parts.append(INTRO + (" " + local if local else ""))
+    parts.append(INTRO)
+    if local:
+        parts.append(local)
     parts.append("A few other figures from the report that may be useful:\n\n" + "\n".join("- " + f for f in FACTS[facts]))
     parts.append(CLOSE)
     return {"to": to, "cc": cc or [], "subject": subject, "body": "\n\n".join(parts)}
@@ -48,8 +51,8 @@ def full(greet, opening, local, facts, subject, to, cc=None):
 def short(greet, opening, subject, to, extra=""):
     body = (f"Hi {greet},\n\n{opening}\n\n"
             "I run Padel Courts Finder, a directory of padel clubs in the United States, and this month we updated our "
-            "State of US Padel report. As of today we count 332 clubs and 1,250 courts across 39 states, with 29 more clubs "
-            "announced or under construction. The report also covers the top cities by court count, court prices from 82 "
+            "State of US Padel report. As of today we list 346 clubs with 1,327 courts across 39 states. Of those, 308 clubs "
+            "are open and 36 have been announced or are under construction. The report also covers the top cities by court count, court prices from 81 "
             "clubs, the operators with more than one location, and the large cities that still have no court."
             + (" " + extra if extra else "") + "\n\n"
             f"You can read the full report here:\n{REPORT}\n\n"
@@ -62,19 +65,19 @@ def short(greet, opening, subject, to, extra=""):
 D = []
 D.append(full("Kurt", "I read your piece on Eva Longoria and David Beckham earlier this month, and I thought you might find some current court numbers useful for your next padel story.", "", "national", "Current US padel court numbers", ["kbadenhausen@sportico.com"]))
 D.append(full("Eric", "I read your story in March about Rick Schnall leading the Pro Padel League round, and I thought the numbers on where the courts actually are might be useful for your next padel piece.", "", "business", "US padel court numbers for your next story", ["eric@frontofficesports.com"]))
-D.append(full("Nicole", "I enjoyed your June story on padel in Austin, and I thought some current local numbers might be useful if you write about it again.", "In the city of Austin we count four open clubs with 23 courts, and three more clubs have been announced. Our Austin count is lower than the Playtomic figure in your story because we only include clubs inside the city that are open today, and I am happy to walk through the differences. Texas as a whole has 57 clubs and 234 courts, which puts it second to Florida.", "national", "Padel court numbers for Austin and Texas", ["nicole.cobler@axios.com"]))
+D.append(full("Nicole", "I enjoyed your June story on padel in Austin, and I thought some current local numbers might be useful if you write about it again.", "In the city of Austin we now count five open clubs with 45 courts, which makes it the second largest padel city in the country after Miami, and that lines up with the Playtomic ranking in your story. Three more clubs have been announced, and two of them, The Padel Collective and Padel Society, say they will open in October. Texas as a whole has 63 clubs and 281 courts, which puts it second to Florida.", "national", "Padel court numbers for Austin and Texas", ["nicole.cobler@axios.com"]))
 D.append(full("Sommer", "I read your story last year on the Ultra club planned for Midtown, and I thought an updated picture of padel in Miami might be useful to you.", "In the city of Miami we count 18 open clubs with 100 courts, which is more than any other city in the country. Doral and North Miami add another 66 courts between them.", "realestate", "Padel court numbers for Miami", ["sommer.brugal@axios.com"]))
 D.append(full("Martin", "I read your story last year on the Padel X proposal for the Lincoln Road garage, and I thought an updated picture of padel in Miami might be useful to you.", "In the city of Miami we count 18 open clubs with 100 courts, which is more than any other city in the country. Doral and North Miami add another 66 courts between them.", "realestate", "Padel court numbers for Miami and Miami Beach", ["martin.vassolo@axios.com"]))
-D.append(full("Jessica and Maxwell", "I read your story last fall on Phoenix getting ready for the national padel league, and I thought some current local numbers might be useful if you return to the subject.", "In the Phoenix area we count three open clubs with 13 courts across Phoenix, Scottsdale, Tempe and Mesa, and two more clubs have been announced. Arizona as a whole has nine clubs and 44 courts, and Tucson has four of those clubs.", "national", "Padel court numbers for Phoenix and Arizona", ["jessica.boehm@axios.com"], ["maxwell.millington@axios.com"]))
-D.append(full("Kate", "I read your story last October on padel in San Diego, and I thought some current local numbers might be useful if you write about it again.", "In San Diego County we count eight open clubs with 32 courts, and four of those clubs are in the city itself. California as a whole has 31 clubs and 119 courts, which puts it third behind Florida and Texas.", "national", "Padel court numbers for San Diego", ["kate.murphy@axios.com"]))
-D.append(full("Nadia", "I read your story last September on padel in San Francisco, and I thought some current local numbers might be useful if you write about it again.", "In the Bay Area we count six open clubs with 25 courts, and three of those clubs are in San Francisco itself. California as a whole has 31 clubs and 119 courts, which puts it third behind Florida and Texas.", "national", "Padel court numbers for San Francisco and the Bay Area", ["nadia.lopez@axios.com"]))
-D.append(full("Kathryn", "I read your story in May on Tampa Bay joining the Florida padel boom, and I thought some statewide numbers might be useful if you return to the subject.", "Florida has 83 clubs and 387 courts, more than any other state. For Tampa and St. Petersburg we currently list two open clubs, and I suspect your reporting has turned up newer ones that we still need to add, so I would welcome any corrections.", "national", "Padel court numbers for Tampa Bay and Florida", ["kathryn.varn@axios.com"]))
-D.append(full("Anna", "I read your story last summer on padel arriving in the DMV, and I thought some current local numbers might be useful if you write about it again.", "In the Washington area we count four open clubs with 12 courts, in Washington, Bethesda, College Park and Sterling. Maryland and Virginia each have six clubs statewide.", "national", "Padel court numbers for the DC area", ["anna.spiegel@axios.com"]))
-D.append(full("Sami", "I read your story in April on home padel courts in the DC area, and I thought some numbers on the public side of the sport might be a useful companion to it.", "In the Washington area we count four open clubs with 12 courts, in Washington, Bethesda, College Park and Sterling. Maryland and Virginia each have six clubs statewide.", "clubs", "Padel club numbers for the DC area", ["sami.sparber@axios.com"]))
-D.append(full("Ashley", "I read your story last year on Epic Padel opening in Charlotte with five courts, and I thought some current local numbers might be useful if you return to the subject.", "In the Charlotte area we count four open clubs with at least 12 courts, including one in Matthews. North Carolina as a whole has five clubs.", "national", "Padel court numbers for Charlotte", ["ashley.mahoney@axios.com"]))
-D.append(full("Sarah", "I read your story last October on Padel Haus coming to Dallas-Fort Worth, and I thought some current local numbers might be useful if you write about it again.", "In the Dallas-Fort Worth area we count eight open clubs with at least 22 courts, across Dallas, Carrollton, Farmers Branch and Frisco. Texas as a whole has 57 clubs and 234 courts, which puts it second to Florida.", "national", "Padel court numbers for Dallas-Fort Worth", ["sblaskovich@dallasnews.com"]))
-D.append(full("Sondra", "I read your story last December on the padel and pickleball complex planned for Montgomery County, and I thought some current local numbers might be useful if you return to the subject.", "In the Houston area we count 14 open clubs with at least 49 courts, including clubs in The Woodlands, Spring and Katy, and three more clubs have been announced. Texas as a whole has 57 clubs and 234 courts, which puts it second to Florida.", "national", "Padel court numbers for the Houston area", ["shernandez@houstonchronicle.com"]))
-D.append(full("Sonia", "I read your story last year on the padel and pickleball lounge opening in Midtown, and I thought some current local numbers might be useful if you write about padel again.", "In the Houston area we count 14 open clubs with at least 49 courts, including clubs in The Woodlands, Spring and Katy, and three more clubs have been announced. Texas as a whole has 57 clubs and 234 courts, which puts it second to Florida.", "national", "Padel court numbers for Houston", ["sonia.garza@houstonchronicle.com"]))
+D.append(full("Jessica and Maxwell", "I read your story last fall on Phoenix getting ready for the national padel league, and I thought some current local numbers might be useful if you return to the subject.", "In the Phoenix area we count five open clubs with about 20 courts across Phoenix, Tempe, Mesa and Chandler. Mesa Padel Club opened downtown in April, and a large indoor club in Scottsdale has announced an opening for 2027. Arizona as a whole has ten clubs, and four of them are in Tucson.", "national", "Padel court numbers for Phoenix and Arizona", ["jessica.boehm@axios.com"], ["maxwell.millington@axios.com"]))
+D.append(full("Kate", "I read your story last October on padel in San Diego, and I thought some current local numbers might be useful if you write about it again.", "In San Diego County we count eight open clubs with 32 courts, and four of those clubs are in the city itself. California as a whole has 32 clubs and 121 courts, which puts it third behind Florida and Texas.", "national", "Padel court numbers for San Diego", ["kate.murphy@axios.com"]))
+D.append(full("Nadia", "I read your story last September on padel in San Francisco, and I thought some current local numbers might be useful if you write about it again.", "In the Bay Area we count seven open clubs with 31 courts, including Bay Padel's new club in San Jose, which opened this summer. Three of the seven are in San Francisco itself. California as a whole has 32 clubs and 121 courts, which puts it third behind Florida and Texas.", "national", "Padel court numbers for San Francisco and the Bay Area", ["nadia.lopez@axios.com"]))
+D.append(full("Kathryn", "I read your story in May on Tampa Bay joining the Florida padel boom, and I thought some statewide numbers might be useful if you return to the subject.", "Florida has 86 clubs and 389 courts, more than any other state. In the Tampa Bay area we list three open clubs with nine courts, which are St. Pete Athletic, SH19 in Tampa and the SVB center in Zephyrhills. We also list two clubs that have been announced for Tampa, Bath & Racquet House and Conquer Padel Club. If you know of a court we are missing, I would be glad to hear about it.", "national", "Padel court numbers for Tampa Bay and Florida", ["kathryn.varn@axios.com"]))
+D.append(full("Anna", "I read your story last summer on padel arriving in the DMV, and I thought some current local numbers might be useful if you write about it again.", "In the Washington area we count three open clubs with 11 courts, in Bethesda, College Park and Sterling. We have not found an open padel court inside the District itself, now that the Rock Creek Tennis Center has closed. Two more clubs have been announced, at East Potomac Park and in Tysons.", "national", "Padel court numbers for the DC area", ["anna.spiegel@axios.com"]))
+D.append(full("Sami", "I read your story in April on home padel courts in the DC area, and I thought some numbers on the public side of the sport might be a useful companion to it.", "In the Washington area we count three open clubs with 11 courts, in Bethesda, College Park and Sterling. We have not found an open padel court inside the District itself, now that the Rock Creek Tennis Center has closed. Two more clubs have been announced, at East Potomac Park and in Tysons.", "clubs", "Padel club numbers for the DC area", ["sami.sparber@axios.com"]))
+D.append(full("Ashley", "I read your story last year on Epic Padel opening in Charlotte with five courts, and I thought some current local numbers might be useful if you return to the subject.", "In the Charlotte area we count three open venues with 14 courts, run by two operators, Charlotte Padel Club and Epic Padel. Charlotte Padel Club also lists a third location as coming soon.", "national", "Padel court numbers for Charlotte", ["ashley.mahoney@axios.com"]))
+D.append(full("Sarah", "I read your story last October on Padel Haus coming to Dallas-Fort Worth, and I thought some current local numbers might be useful if you write about it again.", "In the Dallas-Fort Worth area we count six open clubs with 20 courts, all of them in North Dallas, Farmers Branch, Carrollton and Frisco, and we have not found a court in Fort Worth, Plano or Arlington yet. Padel Haus is still listed as coming soon at 1500 Dragon Street, and Padel39 is building seven outdoor courts at its Carrollton club. Texas as a whole has 63 clubs and 281 courts, which puts it second to Florida.", "national", "Padel court numbers for Dallas-Fort Worth", ["sblaskovich@dallasnews.com"]))
+D.append(full("Sondra", "I read your story last December on the padel and pickleball complex planned for Montgomery County, and I thought some current local numbers might be useful if you return to the subject.", "In the Houston area we count 17 open clubs with 66 courts. Lobb's Padel, which is part of the Montgomery County complex in your story, opened in August with five indoor courts, and SWIP opened in Magnolia in July with six. Texas as a whole has 63 clubs and 281 courts, which puts it second to Florida.", "national", "Padel court numbers for the Houston area", ["shernandez@houstonchronicle.com"]))
+D.append(full("Sonia", "I read your story last year on the padel and pickleball lounge opening in Midtown, and I thought some current local numbers might be useful if you write about padel again.", "In the Houston area we count 17 open clubs with 66 courts, including clubs in Katy, Spring, Magnolia and The Woodlands. Two of them, Lobb's Padel and SWIP, opened this summer. Texas as a whole has 63 clubs and 281 courts, which puts it second to Florida.", "national", "Padel court numbers for Houston", ["sonia.garza@houstonchronicle.com"]))
 D.append(full("Lidia", "I read your lease roundup last year that included Ultra Padel in Midtown Miami, and I thought some numbers on padel clubs as tenants might be useful for your coverage.", "In the city of Miami we count 18 open clubs with 100 courts, which is more than any other city in the country. Doral and North Miami add another 66 courts between them.", "realestate", "Padel club numbers for South Florida", ["Lidia.Dinkova@TheRealDeal.com"]))
 D.append(full("Josh", "I read Elizabeth Ostertag's piece in March on the business of padel in the US, and I thought some current numbers on clubs and pricing might be useful for your team.", "", "business", "US padel club and pricing data for Athletech News", ["josh@athletechnews.com"]))
 D.append(full("Joanna", "I read your piece in May on the Playtomic report, and I thought some US numbers at the club level might be useful for your readers who are deciding whether to add courts.", "", "clubs", "US padel club data for Club + Resort Business", ["jdechellis@arrowfly.com"]))
@@ -99,5 +102,5 @@ for d in D:
     if "CLEAN" not in r.stdout:
         bad += 1; print("FLAG:", d["to"], r.stdout.strip()[:400])
     assert "—" not in d["body"] and "–" not in d["body"] and "—" not in d["subject"]
-json.dump(D, open("press-research/drafts-2026-09-28.json", "w"), indent=1, ensure_ascii=False)
+json.dump(D, open("press-research/drafts-2026-09-29.json", "w"), indent=1, ensure_ascii=False)
 print(len(D), "drafts built;", bad, "flagged")

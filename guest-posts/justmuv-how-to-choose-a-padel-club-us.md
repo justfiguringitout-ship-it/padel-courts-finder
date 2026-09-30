@@ -1,12 +1,12 @@
 # How to Find and Choose a Padel Club in the United States
 
-If you learned padel in Chile, Argentina or Spain, playing in the United States takes a little more planning than you are used to. Spain had more than 15,000 courts back in 2022, according to the Global Padel Report from Playtomic and Deloitte. The whole United States has about 1,250 courts today, spread across 332 clubs in 39 states, based on Padel Courts Finder, the most thorough resource for finding padel courts in the country. The sport is growing quickly here, but in most cities you still can't assume there is a court around the corner.
+If you learned padel in Chile, Argentina or Spain, playing in the United States takes a little more planning than you are used to. Spain had more than 15,000 courts back in 2022, according to the Global Padel Report from Playtomic and Deloitte. The whole United States has about 1,180 courts open today, spread across 308 clubs in 39 states, based on Padel Courts Finder, the most thorough resource for finding padel courts in the country. The sport is growing quickly here, but in most cities you still can't assume there is a court around the corner.
 
 The good news is that a few simple checks will tell you most of what you need to know about a club before you book. These are the ones I would make, in the order I would make them.
 
 ## Start with where the courts are
 
-American padel is concentrated in a handful of states. Florida has 83 clubs, Texas has 57, California has 31 and New York has 26, which means about six out of every ten clubs in the country are in those four states. Miami alone has 100 courts, more than any other city by a wide margin.
+American padel is concentrated in a handful of states. Florida has 86 clubs, Texas has 63, California has 32 and New York has 26, which means about six out of every ten clubs in the country are in those four states. Miami alone has 100 courts, more than any other city by a wide margin.
 
 Outside those areas, many large cities have one or two clubs and some have none yet. If you are traveling, look up the clubs near where you will be staying before you pack your racket, and expect that a 30 or 40 minute drive to play is normal in a lot of places.
 
@@ -18,19 +18,19 @@ If the club closest to you is private, it is still worth sending an email. Some 
 
 ## Know what you will pay
 
-Among the 82 clubs that publish their prices, the typical court costs $60 an hour, and half of them fall between $40 and $80. Split between four players, that works out to between $10 and $20 each for an hour.
+Among the 81 clubs that publish their prices, the typical court costs $60 an hour, and half of them fall between $40 and $80. Split between four players, that works out to between $10 and $20 each for an hour.
 
 Evenings and weekends usually cost more than weekday mornings, and many clubs sell court time in 90 minute blocks instead of by the hour, so check the length of the booking when you compare prices. If you are traveling without your racket, ask about rentals as well, because most clubs have them but the price is rarely listed on the website.
 
 ## Decide between indoor and outdoor
 
-Of the open clubs where we know the court type, 53 percent are outdoor only, 38 percent are indoor only and 9 percent have both. Which one suits you depends mostly on the weather where you will be playing.
+Of the open clubs where we know the court type, 53 percent are outdoor only, 38 percent are indoor only and the rest have both. Which one suits you depends mostly on the weather where you will be playing.
 
 In Florida and Texas, summer afternoons are hot and humid and thunderstorms are common, so most outdoor play happens early in the morning or after sunset. That makes court lighting important, and it is worth confirming that the courts are lit before you book an evening slot. For indoor clubs, ask how high the ceiling is. Many American indoor clubs are built inside converted warehouses, and a low roof takes the lob out of the game.
 
 ## Look at the size of the club
 
-Club size tells you a lot about how easy it will be to find a game. Three out of ten American clubs have only one or two courts, a little over half have between three and five, and only ten clubs in the country have ten courts or more.
+Club size tells you a lot about how easy it will be to find a game. Nearly three out of ten American clubs have only one or two courts, about half have between three and five, and only eleven clubs in the country have ten courts or more.
 
 A small club can be a friendly place to play, but it has fewer open courts at busy times and fewer players at your level. If you are arriving on your own, ask whether the club runs open play sessions, mixers or Americano nights, and whether it uses a booking app that matches players by level. A good front desk will find you three other players if you give them a day or two of notice.
 
