@@ -39,7 +39,7 @@ const clubs: Club[] = [
   {
     rank: 1,
     name: 'Padel 39',
-    slug: 'padel-39',
+    slug: 'padel39-north-austin',
     score: 96,
     location: 'North Austin, TX (Near The Domain & Q2 Stadium)',
     courts: '6 outdoor lighted courts',
@@ -105,7 +105,7 @@ const clubs: Club[] = [
   {
     rank: 3,
     name: 'Austin Padel Center Pop-Up',
-    slug: 'austin-padel-center-pop-up',
+    slug: 'austin-padel-center',
     score: 90,
     location: 'Austin, TX',
     courts: '5 courts (3 indoor, 2 outdoor)',
@@ -262,7 +262,7 @@ export default function AustinBestClubsPage() {
             Austin has cemented itself as one of America&apos;s top padel cities. With 4 open clubs totaling 23+ courts and 3 more facilities on the way, the Texas capital&apos;s padel scene is booming in 2026. Tech money, year-round outdoor weather, and an active lifestyle culture have fueled explosive growth from zero clubs in 2023 to a thriving ecosystem today.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            The headliners are <Link href="/courts/padel-39" className="text-padel-green hover:underline">Padel 39</Link> with its luxury wellness-focused experience and a perfect 5.0 Google rating, and <Link href="/courts/padel-club-austin" className="text-padel-green hover:underline">Padel Club Austin</Link> with 9 Wilson courts and student memberships starting at just $20/month. Meanwhile, three new clubs are set to dramatically expand capacity with up to 18 additional courts.
+            The headliners are <Link href="/courts/padel39-north-austin" className="text-padel-green hover:underline">Padel 39</Link> with its luxury wellness-focused experience and a perfect 5.0 Google rating, and <Link href="/courts/padel-club-austin" className="text-padel-green hover:underline">Padel Club Austin</Link> with 9 Wilson courts and student memberships starting at just $20/month. Meanwhile, three new clubs are set to dramatically expand capacity with up to 18 additional courts.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
             Whether you&apos;re a seasoned player or picking up a racquet for the first time, Austin has options for every level and budget. Browse all courts on our <Link href="/texas/austin" className="text-padel-green hover:underline">Austin courts page</Link> or explore the full <Link href="/texas" className="text-padel-green hover:underline">Texas padel directory</Link>.
@@ -272,9 +272,9 @@ export default function AustinBestClubsPage() {
         <div className="bg-padel-green-light border-2 border-padel-green/30 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/padel-39" className="text-padel-green hover:underline">Padel 39</Link> (6 courts, sauna, cold plunge, 5.0 rating)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/padel39-north-austin" className="text-padel-green hover:underline">Padel 39</Link> (6 courts, sauna, cold plunge, 5.0 rating)</p>
             <p><strong>Best for Beginners:</strong> <Link href="/courts/padel-club-austin" className="text-padel-green hover:underline">Padel Club Austin</Link> (9 Wilson courts, $20/mo students)</p>
-            <p><strong>Best Indoor Option:</strong> <Link href="/courts/austin-padel-center-pop-up" className="text-padel-green hover:underline">Austin Padel Center Pop-Up</Link> (3 indoor + 2 outdoor)</p>
+            <p><strong>Best Indoor Option:</strong> <Link href="/courts/austin-padel-center" className="text-padel-green hover:underline">Austin Padel Center Pop-Up</Link> (3 indoor + 2 outdoor)</p>
             <p><strong>Best Multi-Sport:</strong> <Link href="/courts/dripping-springs-racquet-club" className="text-padel-green hover:underline">Dripping Springs Racquet Club</Link> (pool, gym, tennis)</p>
             <p><strong>Most Anticipated:</strong> Padel39 East Austin (12 courts opening 2026)</p>
           </div>

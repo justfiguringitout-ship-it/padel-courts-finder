@@ -67,7 +67,7 @@ const blogPosts: BlogPost[] = [
     date: '2026-03-21',
     readTime: '8 min read',
     imageAlt: 'Austin padel facilities',
-    courtSlug: 'padel-39'
+    courtSlug: 'padel39-north-austin'
   },
   {
     slug: 'best-padel-clubs-los-angeles',

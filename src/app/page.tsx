@@ -401,7 +401,7 @@ export default function HomePage() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             { href: '/blog/best-padel-clubs-miami', courtSlug: 'ultra-padel-club', title: 'Best clubs in Miami', desc: '14+ clubs reviewed — Reserve Padel, Ultra Padel, and more', alt: 'Miami padel courts' },
-            { href: '/blog/best-padel-clubs-austin', courtSlug: 'padel-39', title: 'Best clubs in Austin', desc: "America's padel capital — Padel39, Padel Club Austin & more", alt: 'Austin padel courts' },
+            { href: '/blog/best-padel-clubs-austin', courtSlug: 'padel39-north-austin', title: 'Best clubs in Austin', desc: "America's padel capital — Padel39, Padel Club Austin & more", alt: 'Austin padel courts' },
             { href: '/blog/best-padel-clubs-los-angeles', courtSlug: 'los-angeles-padel-club', title: 'Best clubs in Los Angeles', desc: '8+ LA clubs from Santa Monica to Pasadena', alt: 'Los Angeles padel courts' },
           ].map((item) => {
             const court = getAdaptedCourtBySlug(item.courtSlug);
