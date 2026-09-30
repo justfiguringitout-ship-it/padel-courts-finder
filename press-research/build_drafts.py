@@ -7,10 +7,10 @@ PUBLIC = "https://www.padelcourtsfinder.com/state-of-us-padel-2026"
 
 INTRO = ("I run Padel Courts Finder, a directory of padel clubs in the United States. We keep a verified list of "
          "every club we can find, and this week we finished a fresh check of our listings in the largest markets. "
-         "The figures feed our State of US Padel report. As of today we list 346 clubs with 1,327 courts across 39 "
-         "states. Of those, 308 clubs are open and 36 have been announced or are under construction. We count 1,177 "
-         "courts at the clubs that are open today, compared with the just over 1,000 the USPA reported in April, and "
-         "the difference is mostly clubs that are not USPA members.")
+         "The figures feed our State of US Padel report. We now list about 345 clubs with more than 1,300 courts across "
+         "39 states. Just over 300 of those clubs are open, and 36 more have been announced or are under construction. "
+         "We count about 1,170 courts at the clubs that are open today, compared with the just over 1,000 the USPA "
+         "reported in April, and the difference is mostly clubs that are not USPA members.")
 
 FACTS = {
  "national": ["Florida and Texas account for 43 percent of all US clubs, and Miami alone has 100 courts.",
@@ -21,7 +21,7 @@ FACTS = {
               "Twelve operators now run two or more locations, which together make up about 11 percent of all clubs.",
               "About half of US clubs have between three and five courts, and only eleven clubs have ten or more.",
               "There is a table of large US cities that still have no court within 25 miles."],
- "realestate": ["Of the open clubs where we know the court type, 38 percent are indoor only and 53 percent are outdoor only.",
+ "realestate": ["Of the open clubs where we know the court type, a little over a third are indoor only and about half are outdoor only.",
               "About half of US clubs have between three and five courts, and only eleven clubs have ten or more.",
               "Twelve operators now run two or more locations.",
               "There is a table of large US cities that still have no court within 25 miles, along with the clubs already announced for each one."],
@@ -51,8 +51,8 @@ def full(greet, opening, local, facts, subject, to, cc=None):
 def short(greet, opening, subject, to, extra=""):
     body = (f"Hi {greet},\n\n{opening}\n\n"
             "I run Padel Courts Finder, a directory of padel clubs in the United States, and this month we updated our "
-            "State of US Padel report. As of today we list 346 clubs with 1,327 courts across 39 states. Of those, 308 clubs "
-            "are open and 36 have been announced or are under construction. The report also covers the top cities by court count, court prices from 81 "
+            "State of US Padel report. We now list about 345 clubs with more than 1,300 courts across 39 states. Just over 300 "
+            "of those clubs are open, and 36 more have been announced or are under construction. The report also covers the top cities by court count, court prices from 81 "
             "clubs, the operators with more than one location, and the large cities that still have no court."
             + (" " + extra if extra else "") + "\n\n"
             f"You can read the full report here:\n{REPORT}\n\n"
@@ -102,5 +102,5 @@ for d in D:
     if "CLEAN" not in r.stdout:
         bad += 1; print("FLAG:", d["to"], r.stdout.strip()[:400])
     assert "—" not in d["body"] and "–" not in d["body"] and "—" not in d["subject"]
-json.dump(D, open("press-research/drafts-2026-09-29.json", "w"), indent=1, ensure_ascii=False)
+json.dump(D, open("press-research/drafts-final.json", "w"), indent=1, ensure_ascii=False)
 print(len(D), "drafts built;", bad, "flagged")
