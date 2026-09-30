@@ -293,38 +293,6 @@ const clubs: Club[] = [
       'Galleria / River Oaks residents'
     ]
   },
-  {
-    rank: 9,
-    name: 'Houston Padel Indoor',
-    slug: 'houston-padel-indoor',
-    score: 85,
-    location: 'Northwest Houston, TX',
-    courts: 'Indoor courts',
-    price: '$$',
-    description: 'Dedicated indoor padel facility in northwest Houston offering climate-controlled courts for all skill levels. A solid, no-frills option with accessible pricing and wheelchair accessibility.',
-    highlights: [
-      'Dedicated indoor padel facility',
-      'Climate-controlled courts',
-      'Wheelchair accessible',
-      'Pro shop available',
-      'Accessible pricing',
-      'All skill levels welcome'
-    ],
-    programs: [
-      'Court rental ($20-$40/hour)',
-      'Open play sessions',
-      'Beginner introductions',
-      'Equipment available',
-      'Walk-in friendly',
-      'Community events'
-    ],
-    bestFor: [
-      'Northwest Houston residents',
-      'Budget-conscious players',
-      'Beginners trying padel',
-      'Casual recreational players'
-    ]
-  }
 ];
 
 export default function HoustonBestClubsPage() {
@@ -438,7 +406,6 @@ export default function HoustonBestClubsPage() {
             <p><strong>Best Social Scene:</strong> <Link href="/courts/racket-social-club" className="text-padel-green hover:underline">Racket Social Club</Link> (panoramic courts, 5.0 rating)</p>
             <p><strong>Best Luxury:</strong> <Link href="/courts/the-houstonian-club" className="text-padel-green hover:underline">The Houstonian Club</Link> (27-acre private campus)</p>
             <p><strong>Best Coaching:</strong> <Link href="/courts/ipadel-houston" className="text-padel-green hover:underline">iPadel Houston</Link> (founded by US #1 female player)</p>
-            <p><strong>Best Value:</strong> <Link href="/courts/houston-padel-indoor" className="text-padel-green hover:underline">Houston Padel Indoor</Link> (from $20/hour)</p>
           </div>
         </div>
 
