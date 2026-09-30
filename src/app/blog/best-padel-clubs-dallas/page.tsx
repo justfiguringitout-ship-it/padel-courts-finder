@@ -233,7 +233,7 @@ export default function DallasBestClubsPage() {
             <p><strong>Easiest to book:</strong> <Link href="/courts/kraken-padel-club" className="text-padel-green hover:underline">Kraken Padel Club</Link> (4 indoor courts, no membership needed, open until midnight)</p>
             <p><strong>Best for outdoor play:</strong> <Link href="/courts/north-texas-racquet-club" className="text-padel-green hover:underline">North Texas Racquet Club</Link> (4 lit courts in Frisco, from $20)</p>
             <p><strong>Most courts:</strong> <Link href="/courts/banner-house-at-t-bar-m" className="text-padel-green hover:underline">Banner House at T Bar M</Link> (5 courts, members only)</p>
-            <p><strong>Coming soon:</strong> <Link href="/courts/padel-haus-dallas" className="text-padel-green hover:underline">Padel Haus Dallas</Link> and <Link href="/courts/padel-square" className="text-padel-green hover:underline">Padel Square</Link></p>
+            <p><strong>Coming soon:</strong> <Link href="/courts/padel-haus-dallas" className="text-padel-green hover:underline">Padel Haus Dallas</Link> and <Link href="/courts/padel-square-dallas" className="text-padel-green hover:underline">Padel Square</Link></p>
             <p><strong>Nearest Major Padel Hub:</strong> <Link href="/blog/best-padel-clubs-austin" className="text-padel-green hover:underline">Austin</Link> &amp; <Link href="/blog/best-padel-clubs-houston" className="text-padel-green hover:underline">Houston</Link> (3-4 hours)</p>
           </div>
         </div>
