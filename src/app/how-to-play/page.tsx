@@ -355,7 +355,7 @@ export default function HowToPlayPage() {
                 </div>
               </div>
               <p className="text-stone-600 leading-[1.75]">
-                Most clubs offer racket and ball rentals ($5&ndash;15) so you can try before you buy. See our <Link href="/blog/best-padel-rackets-beginners" className="text-sky-600 hover:underline font-medium">Best Padel Rackets for Beginners (2026)</Link> guide for specific recommendations when you&apos;re ready to invest.
+                Most clubs offer racket and ball rentals ($5&ndash;15) so you can try before you buy. See our <Link href="/blog/best-padel-rackets-beginners" className="text-sky-600 hover:underline font-medium">Best Padel Rackets for Beginners (2026)</Link> guide for specific recommendations when you&apos;re ready to invest. And before you ramp up to several matches a week, read a sports physical therapist&apos;s <Link href="/blog/padel-injuries-prevention-tips" className="text-sky-600 hover:underline font-medium">six tips for preventing padel injuries</Link>.
               </p>
             </section>
 

@@ -22,9 +22,23 @@ interface BlogPost {
   courtSlug: string;
   featured?: boolean;
   priceRange?: string;
+  /** direct image for posts that are not tied to a club (guest articles) */
+  imageUrl?: string;
 }
 
 const blogPosts: BlogPost[] = [
+  // Guest articles
+  {
+    slug: 'padel-injuries-prevention-tips',
+    title: 'Padel Injuries: 6 Tips to Stay on Court Longer',
+    category: 'how-to',
+    excerpt: 'A sports physical therapist explains why tennis elbow, shoulder pain and lower back pain keep coming back in padel, and six ways to prevent them. Guest article by Isabel Rencoret of Just Muv.',
+    date: '2026-10-01',
+    readTime: '4 min read',
+    imageAlt: 'A padel player reaching for a low ball on a blue court',
+    courtSlug: '',
+    imageUrl: '/images/guest/justmuv-train-beyond-the-court.jpg'
+  },
   // Best Clubs Listicles
   {
     slug: 'best-padel-clubs-miami',
@@ -693,7 +707,7 @@ export default function BlogPage() {
     date: post.date,
     readTime: post.readTime,
     imageAlt: post.imageAlt,
-    imageUrl: getPostImage(post.courtSlug),
+    imageUrl: post.imageUrl ?? getPostImage(post.courtSlug),
     featured: post.featured,
     priceRange: post.priceRange,
   }));

@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 // and links are ours. PREVIEW: unlisted + noindex until Dito approves. To go
 // live, set INDEXED to true and add the slug to src/data/blog-slugs.json,
 // src/data/page-dates.json and the index in src/app/blog/page.tsx.
-const INDEXED = false;
+const INDEXED = true;
 
 const URL = "https://www.padelcourtsfinder.com/blog/padel-injuries-prevention-tips";
 const TITLE = "Padel Injuries: 6 Tips to Stay on Court Longer (From a Sports Physical Therapist)";
