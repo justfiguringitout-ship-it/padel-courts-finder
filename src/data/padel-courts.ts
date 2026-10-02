@@ -14447,6 +14447,27 @@ export const padelCourts: PadelCourt[] = [
     verified: false,
     verificationDate: "2026-09-29",
   },
+  {
+    id: 485,
+    name: "Emerald Padel Club",
+    address: "Seattle (location TBA)",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+    email: "hello@emeraldpadelclub.com",
+    website: "https://emeraldpadelclub.com",
+    rating: 0,
+    reviewCount: 0,
+    description: "Emerald Padel Club is a padel club planned for Seattle, with an opening set for June 2027. The club describes itself as community first and social first, with every level welcome and a premium feel without the exclusivity. Three courts are planned, and the location has not been announced yet. Membership tiers and pricing are still being finalized, and the club is taking names on its website for people who want to hear when memberships and founding-member offers open.",
+    numberOfCourts: 3,
+    coordinates: { lat: 47.6062, lng: -122.3321 }, // city-center estimate until the club announces its address
+    instagram: "@emerald.padel.club",
+    membersOnly: false,
+    status: "coming_soon",
+    ogImageUrl: "https://emeraldpadelclub.com/opengraph-image.jpg",
+    verified: true, // owner-submitted via intake form 2026-10-02
+    verificationDate: "2026-10-02",
+  },
 ];
 
 
