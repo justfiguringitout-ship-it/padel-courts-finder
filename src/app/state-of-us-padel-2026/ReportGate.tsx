@@ -34,6 +34,17 @@ export function ReportGate() {
         headers: { Accept: "application/json" },
       });
       if (!res.ok) throw new Error("formspree rejected");
+      // Email the report link as well. Best effort: the on-page unlock below
+      // still happens if this call fails.
+      fetch("/api/report-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: String(data.get("email") ?? ""),
+          role: String(data.get("role") ?? ""),
+          website: String(data.get("website") ?? ""),
+        }),
+      }).catch(() => {});
       try {
         localStorage.setItem(LS_KEY, "1");
       } catch {}
@@ -48,9 +59,9 @@ export function ReportGate() {
       <div className="rounded-2xl border border-padel-green/40 bg-padel-green/10 p-6 md:p-8">
         <h3 className="font-display text-xl font-bold text-white mb-2">You&apos;re in.</h3>
         <p className="text-white/60 text-sm leading-relaxed mb-5 max-w-xl">
-          The full report is yours — state rankings, the facility profile, every pipeline
-          club, and the padel deserts table. Bookmark it; the numbers update as the
-          directory grows.
+          The full report is yours, and we have emailed you the link as well. It covers
+          the state rankings, the facility profile, every announced club and the padel
+          deserts table, and the numbers update as the directory grows.
         </p>
         <a
           href={REPORT_URL}
@@ -66,6 +77,7 @@ export function ReportGate() {
   return (
     <form onSubmit={onSubmit} className="space-y-4 max-w-xl">
       <input type="hidden" name="formType" value="state-of-padel-full-report" />
+      <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
       <div className="grid sm:grid-cols-2 gap-4">
         <input
           type="email"
