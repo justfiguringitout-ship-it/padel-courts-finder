@@ -64,6 +64,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--only", help="comma-separated draft indexes")
+    ap.add_argument("--login", help="Gmail account to log in to (default: GMAIL_ADDRESS)")
+    ap.add_argument("--sender", default="info@padelcourtsfinder.com", help="From address (must be a send-as alias on the login account)")
     a = ap.parse_args()
 
     drafts = json.load(open(DRAFTS))
@@ -79,15 +81,16 @@ def main():
 
     cfg = load_env()
     box = imaplib.IMAP4_SSL("imap.gmail.com")
-    box.login(cfg["GMAIL_ADDRESS"], cfg["GMAIL_APP_PASSWORD"])
+    login = a.login or cfg["GMAIL_ADDRESS"]
+    box.login(login, cfg["GMAIL_APP_PASSWORD"])
     ok = 0
     for i in idx:
-        m = build(drafts[i], cfg["GMAIL_ADDRESS"])
+        m = build(drafts[i], a.sender)
         typ, _ = box.append("[Gmail]/Drafts", "(\\Draft)", imaplib.Time2Internaldate(time.time()), bytes(m))
         print(("ok  " if typ == "OK" else "FAIL"), i, drafts[i]["to"][0], "|", drafts[i]["subject"])
         ok += typ == "OK"
     box.logout()
-    print(f"{ok}/{len(idx)} drafts appended to {cfg['GMAIL_ADDRESS']} Drafts")
+    print(f"{ok}/{len(idx)} drafts appended to {login} Drafts, From {a.sender}")
 
 
 if __name__ == "__main__":
