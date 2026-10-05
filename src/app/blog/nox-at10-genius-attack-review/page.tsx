@@ -270,6 +270,10 @@ export default function NoxAT10GeniusAttackReviewPage() {
                 <div className="font-semibold text-white">Best Diamond Rackets</div>
                 <p className="text-stone-400 text-sm mt-1">Every diamond frame we&apos;ve scored</p>
               </Link>
+              <Link href="/blog/best-nox-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Best NOX Padel Rackets</div>
+                <p className="text-stone-400 text-sm mt-1">All four NOX rackets we rate, by playing level</p>
+              </Link>
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Find a Court Near You</div>
                 <p className="text-stone-400 text-sm mt-1">312+ clubs across 37 states</p>

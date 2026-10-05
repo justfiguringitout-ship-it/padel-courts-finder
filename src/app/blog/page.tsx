@@ -658,6 +658,17 @@ const blogPosts: BlogPost[] = [
     priceRange: '$170\u2013$280'
   },
   {
+    slug: 'best-nox-padel-rackets',
+    title: 'Best NOX Padel Rackets (2026)',
+    category: 'equipment',
+    excerpt: 'Four NOX rackets from $119 to $272, matched to your level: the best NOX for beginners, intermediate players, control and power.',
+    date: '2026-10-05',
+    readTime: '7 min read',
+    imageAlt: 'Best NOX padel rackets 2026',
+    courtSlug: '',
+    priceRange: '$119\u2013$272'
+  },
+  {
     slug: 'best-budget-padel-rackets',
     title: 'Best Budget Padel Rackets (2026)',
     category: 'equipment',
