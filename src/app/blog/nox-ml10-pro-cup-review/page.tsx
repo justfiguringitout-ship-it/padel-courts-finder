@@ -262,6 +262,10 @@ export default function NoxMl10ProCupReviewPage() {
                 <div className="font-semibold text-white">Racket Shapes Explained</div>
                 <p className="text-stone-400 text-sm mt-1">Round vs teardrop vs diamond &mdash; what shape does to your game</p>
               </Link>
+              <Link href="/blog/best-nox-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Best NOX Padel Rackets</div>
+                <p className="text-stone-400 text-sm mt-1">All four NOX rackets we rate, by playing level</p>
+              </Link>
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Find a Court Near You</div>
                 <p className="text-stone-400 text-sm mt-1">Test your new racket at a club nearby</p>
