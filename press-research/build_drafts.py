@@ -32,8 +32,9 @@ FACTS = {
 }
 
 CLOSE = (f"The report page is here, and it is the page to link to if you use any of the numbers:\n{PUBLIC}\n\n"
-         "The full report with every table is available to press. Reply and I will send it over as a PDF, along with "
-         "the data cut any way that helps your story, by city, by state or by region.\n\n"
+         "The full report with every table is free on that page. Enter your email there and it is sent to you "
+         "right away. If it would help to have the data cut a different way, by city, by state or by region, reply "
+         "and I will send it over.\n\n"
          "If you use the figures, a credit to Padel Courts Finder with a link to that page is all I ask.\n\n"
          "Thank you,\nDito Calderón\nPadel Courts Finder\ninfo@padelcourtsfinder.com")
 
@@ -54,8 +55,9 @@ def short(greet, opening, subject, to, extra=""):
             "clubs, the operators with more than one location, and the large cities that still have no court."
             + (" " + extra if extra else "") + "\n\n"
             f"The report page is here, and it is the page to link to if you use any of the numbers:\n{PUBLIC}\n\n"
-            "The full report with every table is available to press. Reply and I will send it over as a PDF, along with "
-            "the data cut any way that helps, by city, by state or by region.\n\n"
+            "The full report with every table is free on that page. Enter your email there and it is sent to you "
+            "right away. If it would help to have the data cut a different way, by city, by state or by region, reply "
+            "and I will send it over.\n\n"
             "If you use the figures, a credit to Padel Courts Finder with a link to that page is all I ask.\n\n"
             "Thank you,\nDito Calderón\nPadel Courts Finder\ninfo@padelcourtsfinder.com")
     return {"to": to, "cc": [], "subject": subject, "body": body}
