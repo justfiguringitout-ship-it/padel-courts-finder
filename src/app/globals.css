@@ -388,6 +388,8 @@
   .pcf-gear-lineup-card:hover .pcf-gear-lineup-art svg {
     transform: rotate(-7deg);
   }
+}
+
 /* ==========================================================================
    Club page (src/app/courts/[slug]) — namespaced: .club-* and .cd-* only
    ========================================================================== */
