@@ -14,6 +14,7 @@ import {
 import { MapPin, Star, Clock, Phone, Globe, Navigation, TrendingUp, BookOpen } from "lucide-react";
 import { getStates, getStateBySlug, getCityBySlug } from "@/lib/site-structure";
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
+import { sortByWeightedRating } from "@/lib/rating-rank";
 import { cityIntros, cityBlogSlugs } from "@/data/page-content";
 import { ClubsMapClient } from "@/components/clubs-map-client";
 import type { Metadata } from "next";
@@ -125,12 +126,10 @@ export default async function CityPage({ params }: CityPageProps) {
       court.address.city === city.name
   );
 
-  // Sort courts: featured first, then by rating
-  const sortedCourts = cityCourts.sort((a, b) => {
-    if (a.featured && !b.featured) return -1;
-    if (!a.featured && b.featured) return 1;
-    return b.rating.ratingValue - a.rating.ratingValue;
-  });
+  // Sort courts: featured first, then by Bayesian weighted rating (prior from
+  // the whole directory) so a handful of 5-star reviews cannot outrank a club
+  // rated 4.8 by hundreds of players.
+  const sortedCourts = sortByWeightedRating(cityCourts, { pool: allCourts, featuredFirst: true });
 
   // Get nearby cities (same state, different city)
   const nearbyCities = state.cities
