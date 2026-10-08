@@ -20,6 +20,8 @@ import { stateIntros, stateBlogSlugs, stateMetroSections } from "@/data/page-con
 import { ClubsMapClient } from "@/components/clubs-map-client";
 import type { Metadata } from "next";
 import { HeroVideo } from "@/components/hero-video";
+import { PlayerPriceInline, PlayerPriceSummaryLine, PlayerPriceTag } from "@/components/player-price";
+import { getClubPlayerPrice, summarizePlayerPrices } from "@/lib/player-price";
 
 interface StatePageProps {
   params: Promise<{
@@ -137,6 +139,8 @@ export default async function StatePage({ params }: StatePageProps) {
   const customIntro = stateIntros[state.code];
   const blogSlugs = stateBlogSlugs[state.code] || [];
   const bigMarkets = ["FL", "TX", "CA"];
+  // Price per player per hour across the state's open clubs (src/lib/player-price.ts).
+  const priceSummary = summarizePlayerPrices(stateCourts);
 
   // Metro block (NY only today). Resolve each group's clubs and city-page links
   // here so the JSX stays declarative; groups with no clubs simply don't render.
@@ -233,6 +237,9 @@ export default async function StatePage({ params }: StatePageProps) {
                 </>
               )}
             </p>
+            {priceSummary && (
+              <PlayerPriceSummaryLine summary={priceSummary} place={state.name} tone="dark" className="mb-6" />
+            )}
             <div className="flex flex-wrap gap-2">
               <Badge className="text-base px-4 py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
                 <Building2 className="w-4 h-4 mr-2 text-turf" />
@@ -251,7 +258,7 @@ export default async function StatePage({ params }: StatePageProps) {
         </div>
       </section>
 
-      {/* Metro block — the state page is the metro page for "padel nyc" (see page-content.ts) */}
+      {/* Metro block: the state page is the metro page for "padel nyc" (see page-content.ts) */}
       {metro && metroClubCount > 0 && (
         <section className="container mx-auto px-4 py-12" id={metro.shortName.toLowerCase()}>
           <div className="max-w-3xl mb-8">
@@ -295,11 +302,7 @@ export default async function StatePage({ params }: StatePageProps) {
                                 {court.rating.ratingValue}
                               </span>
                             )}
-                            {court.pricing.offPeakHourlyRate > 0 && (
-                              <span className="font-medium text-foreground">
-                                {court.pricing.priceRange ? 'from ' : ''}${court.pricing.offPeakHourlyRate}/hr
-                              </span>
-                            )}
+                            <PlayerPriceInline price={getClubPlayerPrice(court)} />
                           </CardDescription>
                         </CardHeader>
                       </Card>
@@ -424,16 +427,7 @@ export default async function StatePage({ params }: StatePageProps) {
                 </CardHeader>
                 <CardContent className="mt-auto">
                   <div className="flex items-center justify-between">
-                    {court.pricing.offPeakHourlyRate > 0 ? (
-                      <div>
-                        <div className="text-2xl font-bold text-primary">
-                          {court.pricing.priceRange ? 'from ' : ''}${court.pricing.offPeakHourlyRate}
-                        </div>
-                        <div className="text-xs text-muted-foreground">per hour</div>
-                      </div>
-                    ) : (
-                      <div />
-                    )}
+                    <PlayerPriceTag price={getClubPlayerPrice(court)} comingSoon={court.status === "coming_soon"} />
                     <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
                       View Details
                     </Button>

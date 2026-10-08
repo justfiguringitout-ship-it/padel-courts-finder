@@ -20,6 +20,8 @@ import { cityIntros, cityBlogSlugs } from "@/data/page-content";
 import { ClubsMapClient } from "@/components/clubs-map-client";
 import type { Metadata } from "next";
 import { HeroVideo } from "@/components/hero-video";
+import { PlayerPriceSummaryLine, PlayerPriceTag } from "@/components/player-price";
+import { getClubPlayerPrice, summarizePlayerPrices } from "@/lib/player-price";
 
 interface CityPageProps {
   params: Promise<{
@@ -146,18 +148,9 @@ export default async function CityPage({ params }: CityPageProps) {
   const comingSoon = cityCourts.filter((c) => c.status === "coming_soon");
   const openClubs = cityCourts.filter((c) => c.status !== "coming_soon" && c.status !== "temporarily_closed");
 
-  // Extract price range from pricingText
-  const prices: number[] = [];
-  cityCourts.forEach((c) => {
-    if (c.pricingText) {
-      const matches = c.pricingText.match(/\$(\d+)/g);
-      if (matches) {
-        matches.forEach((m) => prices.push(parseInt(m.replace("$", ""), 10)));
-      }
-    }
-  });
-  const minPrice = prices.length > 0 ? Math.min(...prices) : 0;
-  const maxPrice = prices.length > 0 ? Math.max(...prices) : 0;
+  // Price per player per hour, only where the club's published rate parses
+  // with confidence (src/lib/player-price.ts). Unknown stays unknown.
+  const priceSummary = summarizePlayerPrices(cityCourts);
 
   // Custom or dynamic intro
   const customIntro = cityIntros[`${state.code}-${city.name}`];
@@ -251,6 +244,9 @@ export default async function CityPage({ params }: CityPageProps) {
                 </>
               )}
             </p>
+            {priceSummary && (
+              <PlayerPriceSummaryLine summary={priceSummary} place={city.name} tone="dark" className="mb-6" />
+            )}
             <div className="flex flex-wrap gap-2">
               <Badge className="text-base px-4 py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
                 <Navigation className="w-4 h-4 mr-2 text-turf" />
@@ -279,7 +275,7 @@ export default async function CityPage({ params }: CityPageProps) {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-2">How do {city.name} padel venues compare?</h2>
             <p className="text-muted-foreground text-sm mb-5">
-              Every open club in {city.name}{" "}side by side — court counts and details verified against each club&apos;s own published information.
+              Every open club in {city.name}{" "}side by side: court counts and details verified against each club&apos;s own published information.
             </p>
             <div className="overflow-x-auto rounded-xl border">
               <table className="w-full text-sm bg-background">
@@ -290,6 +286,7 @@ export default async function CityPage({ params }: CityPageProps) {
                     <th className="p-3 font-semibold">Indoor / Outdoor</th>
                     <th className="p-3 font-semibold">Access</th>
                     {openClubs.some((c) => c.courtSurface) && <th className="p-3 font-semibold">Surface</th>}
+                    {priceSummary && <th className="p-3 font-semibold whitespace-nowrap">Per player / hr</th>}
                   </tr>
                 </thead>
                 <tbody>
@@ -304,16 +301,24 @@ export default async function CityPage({ params }: CityPageProps) {
                           ? "Indoor"
                           : feats.includes("outdoor")
                             ? "Outdoor"
-                            : "—";
+                            : "Unknown";
                       return (
                         <tr key={c.slug} className="border-t">
                           <td className="p-3 font-medium">
                             <Link href={`/courts/${c.slug}`} className="text-primary hover:underline">{c.name}</Link>
                           </td>
-                          <td className="p-3 tabular-nums">{c.facility.totalCourts > 0 ? c.facility.totalCourts : "—"}</td>
+                          <td className="p-3 tabular-nums">{c.facility.totalCourts > 0 ? c.facility.totalCourts : "Unknown"}</td>
                           <td className="p-3">{io}</td>
                           <td className="p-3">{c.membersOnly ? "Members only" : "Open to public"}</td>
-                          {openClubs.some((cc) => cc.courtSurface) && <td className="p-3">{c.courtSurface || "—"}</td>}
+                          {openClubs.some((cc) => cc.courtSurface) && <td className="p-3">{c.courtSurface || "Unknown"}</td>}
+                          {priceSummary && (
+                            <td className="p-3 tabular-nums whitespace-nowrap">
+                              {(() => {
+                                const p = getClubPlayerPrice(c);
+                                return p ? `${p.isFrom ? "from " : ""}$${p.perPlayer}${p.basis === "peak" ? " peak" : ""}` : "Not published";
+                              })()}
+                            </td>
+                          )}
                         </tr>
                       );
                     })}
@@ -382,16 +387,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 </CardHeader>
                 <CardContent className="mt-auto space-y-3">
                   <div className="flex items-center justify-between">
-                    {court.pricing.offPeakHourlyRate > 0 ? (
-                      <div>
-                        <div className="text-2xl font-bold text-primary">
-                          {court.pricing.priceRange ? 'from ' : ''}${court.pricing.offPeakHourlyRate}
-                        </div>
-                        <div className="text-xs text-muted-foreground">per hour</div>
-                      </div>
-                    ) : (
-                      <div />
-                    )}
+                    <PlayerPriceTag price={getClubPlayerPrice(court)} comingSoon={court.status === "coming_soon"} />
                     <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
                       View Details
                     </Button>
@@ -443,18 +439,22 @@ export default async function CityPage({ params }: CityPageProps) {
       )}
 
       {/* What to Know Section */}
-      {(totalCourts > 0 || lessonsCount > 0 || rentalCount > 0 || prices.length > 0 || comingSoon.length > 0) && (
+      {(totalCourts > 0 || lessonsCount > 0 || rentalCount > 0 || priceSummary || comingSoon.length > 0) && (
         <section className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-4">What to Know About Padel in {city.name}</h2>
             <div className="grid sm:grid-cols-2 gap-4">
-              {minPrice > 0 && maxPrice > 0 && (
+              {priceSummary && (
                 <div className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
                   <span className="text-2xl">💰</span>
                   <div>
-                    <p className="font-medium text-sm">Pricing</p>
+                    <p className="font-medium text-sm">Price per player</p>
                     <p className="text-sm text-muted-foreground">
-                      Courts typically cost ${minPrice}–${maxPrice}/hour
+                      {priceSummary.low === priceSummary.high
+                        ? `$${priceSummary.low}`
+                        : `$${priceSummary.low} to $${priceSummary.high}`}{" "}
+                      per player per hour, with four players sharing a court ({priceSummary.count}{" "}
+                      {priceSummary.count === 1 ? "club publishes" : "clubs publish"} prices)
                     </p>
                   </div>
                 </div>
