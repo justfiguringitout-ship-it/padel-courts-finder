@@ -44,7 +44,7 @@ const clubs: Club[] = [
     location: 'Dumbo, Brooklyn, NY',
     courts: '4 indoor courts',
     price: '$$$$',
-    website: 'padelhaus.com',
+    website: 'padel.haus/dumbo',
     description: 'NYC\'s premier padel destination on the Brooklyn waterfront. Padel Haus Dumbo features 4 state-of-the-art indoor courts with spa-like amenities including Malin + Goetz locker rooms, fitness equipment, and social lounges. The facility that put New York padel on the map continues to set the standard.',
     highlights: [
       '4 state-of-the-art indoor courts',
@@ -175,7 +175,7 @@ const clubs: Club[] = [
     location: 'Williamsburg, Brooklyn, NY',
     courts: '5 indoor courts',
     price: '$$-$$$$',
-    website: 'padelhaus.com',
+    website: 'padel.haus/locations/williamsburg',
     description: 'Padel Haus brings its premium padel experience to Brooklyn\'s trendiest neighborhood with 5 indoor courts, a bar, and event hosting. Part of the growing Padel Haus network, the Williamsburg location combines quality courts with the neighborhood\'s signature social energy.',
     highlights: [
       '5 indoor courts',

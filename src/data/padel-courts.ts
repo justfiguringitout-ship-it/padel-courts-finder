@@ -52,7 +52,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Court bookings start at $28/90min outdoor; clinics $60/90min; private lessons $150/60min",
     status: 'open',
     ogImageUrl: "https://framerusercontent.com/images/4OYRFRKGm1qkSAL18PZsZ8cSs.jpg",
-    featured: true,
+    featured: false,
   },
     {
     id: 2,
@@ -172,7 +172,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "$65 per hour",
     status: 'open',
     ogImageUrl: "/images/courts/the-padel-club.jpg",
-    featured: true,
+    featured: false,
   },
     {
     id: 5,
@@ -221,7 +221,7 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "occasional minor court defects",
     status: 'open',
     ogImageUrl: "https://cdn.prod.website-files.com/661525f50a5ecbcf790108d4/66a355e9bad39cc346d16a60_miami%20padel%20court.webp",
-    featured: true,
+    featured: false,
   },
   {
     id: 6,
@@ -291,7 +291,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "120 min court rental: Off-peak Mon-Fri 11AM-4PM & 10-11:30PM $51 +tax; Early 7-8:30AM $100 +tax; Regular $128 +tax",
     status: 'open',
     ogImageUrl: "https://framerusercontent.com/images/j7FcF14p5x9LFrDdmlBFmwcWeR4.png",
-    featured: true,
+    featured: false,
   },
     {
     id: 8,
@@ -337,7 +337,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Padel from $12/player/60min (non-member), Pickleball $9/player/60min; premium members 40% off",
     status: 'open',
     ogImageUrl: "/images/courts/tempo-padel-pickleball-club.jpg",
-    featured: true,
+    featured: false,
   },
     {
     id: 9,
@@ -382,7 +382,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Memberships $200-450/month; courts $20-40/hr; drop-in $15",
     status: 'open',
     ogImageUrl: "https://replayclub.com/wp-content/uploads/2025/11/membership_0003_Padel-pickleball.jpg",
-    featured: true,
+    featured: false,
   },
     {
     id: 10,
@@ -5101,7 +5101,7 @@ export const padelCourts: PadelCourt[] = [
       sunday: "8h-22h"
     },
     description: "Padel Haus Williamsburg is the original Padel Haus club, at 307 Kent Avenue on the Brooklyn waterfront. It has seven courts, four indoor and three on the rooftop, along with a bar and a regular calendar of leagues and social events. Court booking is open to the public, and membership is optional.",
-    website: "https://www.padel.haus/williamsburg",
+    website: "https://www.padel.haus/locations/williamsburg",
     chainName: "Padel Haus",
     locationName: "Williamsburg",
     verified: true,

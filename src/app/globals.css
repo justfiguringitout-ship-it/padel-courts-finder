@@ -317,9 +317,24 @@
   }
 }
 
-/* Hero background video: never animate for users who asked not to */
+/* Hero still frame: very slow Ken Burns zoom (the video only mounts on desktop) */
+@keyframes hero-ken-burns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+.hero-still-zoom {
+  transform-origin: 50% 50%;
+  animation: hero-ken-burns 20s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Hero background: never animate for users who asked not to */
 @media (prefers-reduced-motion: reduce) {
   .hero-bg-video {
     display: none !important;
+  }
+  .hero-still-zoom {
+    animation: none;
+    will-change: auto;
   }
 }
