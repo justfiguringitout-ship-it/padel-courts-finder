@@ -1,10 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { CheckCircle2, PlayCircle, Calendar, DollarSign, Users, BookOpen, MapPin } from 'lucide-react';
+import { getAllCities, getSiteStats, getStates } from '@/lib/site-structure';
+
+const siteStats = getSiteStats();
+const clubsInState = (code: string) => getStates().find((s) => s.code === code)?.courtCount ?? 0;
+const clubsInCity = (city: string, state: string) =>
+  getAllCities().find((c) => c.name === city && c.stateCode === state)?.courtCount ?? 0;
 
 export const metadata: Metadata = {
   title: 'Start Playing Padel in 30 Days | Complete Beginner\'s Guide',
-  description: 'Learn how to start playing padel from scratch. Find beginner clinics at 313+ clubs nationwide, calculate costs, and join America\'s fastest-growing sport.',
+  description: `Learn how to start playing padel from scratch. Find beginner clinics at ${siteStats.totalCourts} clubs nationwide, calculate costs, and join America's fastest-growing sport.`,
 };
 
 export default function GetStartedPage() {
@@ -361,24 +367,24 @@ export default function GetStartedPage() {
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-4">Where to Play</h2>
         <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
-          We&apos;ve mapped 313+ clubs across America
+          We&apos;ve mapped {siteStats.totalCourts} clubs across America
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           <Link href="/florida" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            Florida (79 clubs)
+            Florida ({clubsInState('FL')} clubs)
           </Link>
           <Link href="/texas" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            Texas (55 clubs)
+            Texas ({clubsInState('TX')} clubs)
           </Link>
           <Link href="/california" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            California (30 clubs)
+            California ({clubsInState('CA')} clubs)
           </Link>
           <Link href="/new-york" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            New York (25 clubs)
+            New York ({clubsInState('NY')} clubs)
           </Link>
           <Link href="/arizona" className="px-4 py-2 bg-green-100 text-green-800 rounded-lg hover:bg-green-200 transition">
-            Arizona (9 clubs)
+            Arizona ({clubsInState('AZ')} clubs)
           </Link>
           <Link href="/search" className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-medium">
             View All States →
@@ -387,7 +393,7 @@ export default function GetStartedPage() {
 
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
           <p className="text-lg mb-2">
-            <strong>Top padel cities:</strong> Miami (19 clubs), Houston (10 clubs), Austin (8 clubs), Orlando (7 clubs), Los Angeles (5 clubs), Brooklyn (5 clubs)
+            <strong>Top padel cities:</strong> Miami ({clubsInCity('Miami', 'FL')} clubs), Houston ({clubsInCity('Houston', 'TX')} clubs), Austin ({clubsInCity('Austin', 'TX')} clubs), Orlando ({clubsInCity('Orlando', 'FL')} clubs), Los Angeles ({clubsInCity('Los Angeles', 'CA')} clubs), Brooklyn ({clubsInCity('Brooklyn', 'NY')} clubs)
           </p>
         </div>
       </section>
@@ -399,7 +405,7 @@ export default function GetStartedPage() {
             Ready to Start?
           </h2>
           <p className="text-xl mb-8 text-green-100">
-            313+ clubs nationwide. One of them has your name on it.
+            {siteStats.totalCourts} clubs nationwide. One of them has your name on it.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

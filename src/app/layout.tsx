@@ -5,7 +5,7 @@ import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SiteHeader } from "@/components/site-header";
 import { CursorGlow } from "@/components/cursor-glow";
-import { getStates } from "@/lib/site-structure";
+import { getSiteStats, getStates } from "@/lib/site-structure";
 import "./globals.css";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-85F1NDMHLH";
@@ -26,12 +26,14 @@ const outfit = Outfit({
   weight: ["500", "600", "700", "800"],
 });
 
+const siteStats = getSiteStats();
+
 export const metadata: Metadata = {
   title: {
     default: "Find Padel Courts Near Me | Book Padel Courts Across the USA",
     template: "%s | Padel Courts Finder",
   },
-  description: "Find padel courts near you anywhere in the US. 331 verified clubs across 39 states with hours, pricing, court counts, and booking links — updated continuously.",
+  description: `Find padel courts near you anywhere in the US. ${siteStats.totalCourts} verified clubs across ${siteStats.totalStates} states with hours, pricing, court counts, and booking links — updated continuously.`,
   metadataBase: new URL("https://www.padelcourtsfinder.com"),
   keywords: [
     "padel courts",

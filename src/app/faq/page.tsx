@@ -4,6 +4,7 @@ import path from 'path';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
+import { getSiteStats } from '@/lib/site-structure';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -54,7 +55,7 @@ export default function FAQPage() {
     },
     {
       question: "How do I find padel courts near me?",
-      answer: "Use our search feature to find padel courts by city, state, or zip code. We have listings for over 135 clubs across 23 states in the USA."
+      answer: `Use our search feature to find padel courts by city, state, or zip code. We have listings for ${getSiteStats().totalCourts} clubs across ${getSiteStats().totalStates} states in the USA.`
     },
     {
       question: "How much does it cost to play padel?",

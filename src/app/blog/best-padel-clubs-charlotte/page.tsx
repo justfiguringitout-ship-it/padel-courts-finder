@@ -357,7 +357,7 @@ export default function CharlotteBestClubsPage() {
             </Link>
             <Link href="/blog/best-padel-clubs-miami" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Miami</h4>
-              <p className="text-sm text-stone-600">29+ clubs, America&apos;s padel capital</p>
+              <p className="text-sm text-stone-600">39 clubs, America&apos;s padel capital</p>
             </Link>
             <Link href="/blog/best-padel-rackets-beginners" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-stone-900 mb-2">Best Beginner Rackets (2026)</h4>

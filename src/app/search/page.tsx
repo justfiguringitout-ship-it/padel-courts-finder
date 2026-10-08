@@ -8,9 +8,10 @@ import { HeroVideo } from "@/components/hero-video";
 import { CityPhotoGrid } from "@/components/city-photo-grid";
 
 const CLUB_COUNT = padelCourts.length;
+const STATE_COUNT = new Set(padelCourts.map((c) => c.state)).size;
 const TITLE = `Padel Courts Near Me: Find & Compare ${CLUB_COUNT} US Clubs`;
 const DESC =
-  `Find padel courts near you. Search ${CLUB_COUNT} verified US padel clubs across 39 states by city, state, or ZIP — with hours, pricing, court counts, and booking links.`;
+  `Find padel courts near you. Search ${CLUB_COUNT} verified US padel clubs across ${STATE_COUNT} states by city, state, or ZIP — with hours, pricing, court counts, and booking links.`;
 const URL = "https://www.padelcourtsfinder.com/search";
 
 export const metadata: Metadata = {

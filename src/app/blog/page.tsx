@@ -44,7 +44,7 @@ const blogPosts: BlogPost[] = [
     slug: 'best-padel-clubs-miami',
     title: 'Best Padel Clubs in Miami (2026)',
     category: 'best-clubs',
-    excerpt: 'Miami leads America\'s padel revolution with 29+ clubs and 170+ courts. Ultra Padel Club\'s 29-court flagship, Urban Padel\'s indoor paradise, and the full South Florida scene.',
+    excerpt: 'Miami leads America\'s padel revolution with 39 clubs and 200+ courts. Ultra Padel Club\'s 29-court flagship, Urban Padel\'s indoor paradise, and the full South Florida scene.',
     date: '2026-03-21',
     readTime: '10 min read',
     imageAlt: 'Miami padel courts with ocean views',

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, MapPin } from "lucide-react";
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
+import { getSiteStats } from "@/lib/site-structure";
 import { GearStrip } from "@/components/gear-strip";
 import type { Metadata } from "next";
 
@@ -262,7 +263,7 @@ export default async function PadelNearPage({ params }: { params: Promise<{ city
             <div className="font-display font-semibold group-hover:text-padel-green transition-colors">
               Browse all clubs
             </div>
-            <p className="text-sm text-stone-500 mt-1">330+ clubs across 39 states</p>
+            <p className="text-sm text-stone-500 mt-1">{getSiteStats().totalCourts} clubs across {getSiteStats().totalStates} states</p>
             <span className="inline-flex items-center gap-2 text-sm text-padel-green mt-3 group-hover:gap-3 transition-all">
               Search the directory <ArrowRight className="w-4 h-4" />
             </span>
