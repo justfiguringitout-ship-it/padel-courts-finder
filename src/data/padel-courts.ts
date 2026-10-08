@@ -3515,7 +3515,6 @@ export const padelCourts: PadelCourt[] = [
     negativeReviewThemes: "Gets hot, some courts smaller/tighter, low water pressure (prior)",
     pricingText: "Pay-to-play: $60/hour, $90/1.5 hours prime time indoor; Memberships from $49/month to $500 all-you-can-play",
     status: 'open',
-    ogImageUrl: "/images/courts/kingdom-of-padel.webp",
   },
     {
     id: 100,
@@ -5113,7 +5112,6 @@ export const padelCourts: PadelCourt[] = [
     instagram: "@padelhaus",
     phone: "(917) 970-0036",
     status: 'open',
-    ogImageUrl: "/images/courts/padel-haus-williamsburg.webp",
   },
   {
     id: 151,
@@ -11685,7 +11683,6 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Lessons (90 min): 2 person $150, 3 person $175, 4 person $200; Private: $125/hour; Paddle rental: $5",
     status: "open",
     featured: false,
-    ogImageUrl: "/images/courts/anytime-padel.webp",
   },
   {
     id: 402,
