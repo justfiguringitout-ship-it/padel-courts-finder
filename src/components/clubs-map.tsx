@@ -1,11 +1,12 @@
 "use client";
 
-import { APIProvider, Map, AdvancedMarker, Pin, InfoWindow } from "@vis.gl/react-google-maps";
+import { APIProvider, Map, AdvancedMarker, Pin, InfoWindow, useMap } from "@vis.gl/react-google-maps";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Star } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { isPlausibleUSCoordinate } from "@/lib/map-coordinates";
 
 interface Club {
   id: string;
@@ -33,6 +34,37 @@ interface Club {
   };
 }
 
+// Padding (px) kept between the outermost pins and the map edge.
+const FIT_PADDING = 48;
+// Never open closer than this, so one club (or a tight cluster) does not land
+// at street level. Users can still zoom in further themselves.
+const MAX_FIT_ZOOM = 13;
+
+/**
+ * After the initial fit, pull the camera back to MAX_FIT_ZOOM if fitBounds
+ * zoomed in tighter than that. Runs once per map load.
+ */
+function CapInitialZoom({ maxZoom }: { maxZoom: number }) {
+  const map = useMap();
+  useEffect(() => {
+    if (!map) return;
+    let done = false;
+    const cap = () => {
+      if (done) return;
+      const zoom = map.getZoom();
+      if (zoom === undefined) return;
+      done = true;
+      if (zoom > maxZoom) map.setZoom(maxZoom);
+    };
+    const listener = map.addListener("idle", () => {
+      cap();
+      listener.remove();
+    });
+    return () => listener.remove();
+  }, [map, maxZoom]);
+  return null;
+}
+
 interface ClubsMapProps {
   clubs: Club[];
   title?: string;
@@ -43,12 +75,14 @@ export function ClubsMap({ clubs, title = "Club Locations", description }: Clubs
   const [selectedClub, setSelectedClub] = useState<Club | null>(null);
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-  // Filter out clubs with invalid coordinates to prevent map crashes
-  const validClubs = clubs.filter(
-    (club) =>
-      Number.isFinite(club.coordinates?.latitude) &&
-      Number.isFinite(club.coordinates?.longitude)
-  );
+  // Drop clubs with missing, (0, 0) or non-US coordinates: they would crash
+  // the map or drag the fitted bounds out to the whole world. Keep each club's
+  // position in the original list so pin numbers still match the page order.
+  const validClubs = clubs
+    .map((club, index) => ({ club, number: index + 1 }))
+    .filter(({ club }) =>
+      isPlausibleUSCoordinate(club.coordinates?.latitude, club.coordinates?.longitude)
+    );
 
   if (!apiKey || apiKey === "YOUR_API_KEY_HERE" || validClubs.length === 0) {
     return (
@@ -73,9 +107,20 @@ export function ClubsMap({ clubs, title = "Club Locations", description }: Clubs
     );
   }
 
-  // Calculate center point of all valid clubs
-  const centerLat = validClubs.reduce((sum, club) => sum + club.coordinates.latitude, 0) / validClubs.length;
-  const centerLng = validClubs.reduce((sum, club) => sum + club.coordinates.longitude, 0) / validClubs.length;
+  // Open the map on the box that contains every valid club. A single club (or
+  // several at the same spot) has no area to fit, so center on it instead.
+  const lats = validClubs.map(({ club }) => club.coordinates.latitude);
+  const lngs = validClubs.map(({ club }) => club.coordinates.longitude);
+  const bounds = {
+    north: Math.max(...lats),
+    south: Math.min(...lats),
+    east: Math.max(...lngs),
+    west: Math.min(...lngs),
+  };
+  const isSinglePoint = bounds.north === bounds.south && bounds.east === bounds.west;
+  const cameraProps = isSinglePoint
+    ? { defaultCenter: { lat: bounds.north, lng: bounds.east }, defaultZoom: MAX_FIT_ZOOM }
+    : { defaultBounds: { ...bounds, padding: FIT_PADDING } };
 
   return (
     <Card>
@@ -90,13 +135,13 @@ export function ClubsMap({ clubs, title = "Club Locations", description }: Clubs
         <div className="rounded-lg overflow-hidden border" style={{ height: "500px" }}>
           <APIProvider apiKey={apiKey}>
             <Map
-              defaultCenter={{ lat: centerLat, lng: centerLng }}
-              defaultZoom={validClubs.length === 1 ? 15 : 10}
+              {...cameraProps}
               mapId="padel-clubs-map"
               gestureHandling="cooperative"
               disableDefaultUI={false}
             >
-              {validClubs.map((club, index) => (
+              {!isSinglePoint && <CapInitialZoom maxZoom={MAX_FIT_ZOOM} />}
+              {validClubs.map(({ club, number }) => (
                 <AdvancedMarker
                   key={club.id}
                   position={{ lat: club.coordinates.latitude, lng: club.coordinates.longitude }}
@@ -107,7 +152,7 @@ export function ClubsMap({ clubs, title = "Club Locations", description }: Clubs
                     background={"#2563eb"}
                     borderColor={"#1e40af"}
                     glyphColor={"#ffffff"}
-                    glyph={`${index + 1}`}
+                    glyph={`${number}`}
                   />
                 </AdvancedMarker>
               ))}

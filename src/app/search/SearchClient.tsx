@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, Star, Clock, Search, SlidersHorizontal, Navigation } from "lucide-react";
 import { getAllAdaptedCourts, calculateDistance } from "@/lib/court-adapter";
+import { sortByWeightedRating } from "@/lib/rating-rank";
 import { geocodeZipCode, isZipCode } from "@/lib/zip-geocoder";
 
 function SearchPageContent() {
@@ -194,11 +195,9 @@ function SearchPageContent() {
         });
         break;
       case "rating":
-        results.sort((a, b) => {
-          if (a.featured && !b.featured) return -1;
-          if (!a.featured && b.featured) return 1;
-          return b.rating.ratingValue - a.rating.ratingValue;
-        });
+        // Featured first, then Bayesian weighted rating against the whole
+        // directory, so 2 five-star reviews cannot outrank 4.8 from 300.
+        results = sortByWeightedRating(results, { pool: allCourts, featuredFirst: true });
         break;
       case "price-low":
         results.sort((a, b) => a.pricing.offPeakHourlyRate - b.pricing.offPeakHourlyRate);

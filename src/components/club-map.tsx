@@ -4,6 +4,7 @@ import { APIProvider, Map, AdvancedMarker, Pin } from "@vis.gl/react-google-maps
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Navigation } from "lucide-react";
+import { isPlausibleUSCoordinate } from "@/lib/map-coordinates";
 
 interface ClubMapProps {
   name: string;
@@ -23,7 +24,7 @@ interface ClubMapProps {
 export function ClubMap({ name, address, coordinates, googleMapsUrl }: ClubMapProps) {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-  const hasValidCoords = Number.isFinite(coordinates?.latitude) && Number.isFinite(coordinates?.longitude);
+  const hasValidCoords = isPlausibleUSCoordinate(coordinates?.latitude, coordinates?.longitude);
 
   if (!apiKey || apiKey === "YOUR_API_KEY_HERE" || !hasValidCoords) {
     return (

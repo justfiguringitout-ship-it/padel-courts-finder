@@ -14,6 +14,7 @@ import {
 import { MapPin, Star, Clock, ChevronRight, Building2, BookOpen, TrendingUp } from "lucide-react";
 import { getStates, getStateBySlug } from "@/lib/site-structure";
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
+import { sortByWeightedRating } from "@/lib/rating-rank";
 import { stateIntros, stateBlogSlugs, stateMetroSections } from "@/data/page-content";
 import { ClubsMapClient } from "@/components/clubs-map-client";
 import type { Metadata } from "next";
@@ -125,12 +126,10 @@ export default async function StatePage({ params }: StatePageProps) {
     (court) => court.address.stateCode === state.code
   );
 
-  // Sort courts: featured first, then by rating
-  const sortedCourts = stateCourts.sort((a, b) => {
-    if (a.featured && !b.featured) return -1;
-    if (!a.featured && b.featured) return 1;
-    return b.rating.ratingValue - a.rating.ratingValue;
-  });
+  // Sort courts: featured first, then by Bayesian weighted rating (prior from
+  // the whole directory) so a handful of 5-star reviews cannot outrank a club
+  // rated 4.8 by hundreds of players.
+  const sortedCourts = sortByWeightedRating(stateCourts, { pool: allCourts, featuredFirst: true });
 
   // Compute stats for content
   const totalCourts = stateCourts.reduce((sum, c) => sum + c.facility.totalCourts, 0);
