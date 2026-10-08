@@ -591,7 +591,7 @@ export default function HowToPlayPage() {
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">How much does it cost to play padel?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Court rental typically costs $30&ndash;75 per hour, split between 4 players &mdash; so $8&ndash;19 per person per session. Some clubs charge per person instead. Equipment rental (racket + balls) is usually $5&ndash;15 if you don&apos;t have your own gear. Many clubs offer membership plans that bring the cost down for regular players. <Link href="/search" className="text-sky-600 hover:underline">Compare prices across 350+ clubs</Link>.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">Court rental typically costs $30&ndash;75 per hour, split between 4 players &mdash; so $8&ndash;19 per person per session. Some clubs charge per person instead. Equipment rental (racket + balls) is usually $5&ndash;15 if you don&apos;t have your own gear. Many clubs offer membership plans that bring the cost down for regular players. <Link href="/search" className="text-sky-600 hover:underline">Compare prices across 300+ open clubs</Link>.</p>
                 </div>
               </div>
             </section>

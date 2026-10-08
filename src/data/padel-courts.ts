@@ -391,7 +391,7 @@ export const padelCourts: PadelCourt[] = [
     state: "FL",
     zipCode: "33179",
     phone: "(786) 613-8675",
-    website: "https://canasracket.com, https://www.canastennisivesestatespark.com",
+    website: "https://canasracket.com",
     rating: 4.5,
     reviewCount: 576,
     openingHours: {
@@ -511,7 +511,7 @@ export const padelCourts: PadelCourt[] = [
     state: "FL",
     zipCode: "33301",
     phone: "+1 954-530-9330",
-    website: "https://www.societylasolas.com/ (site currently unavailable",
+    website: "https://www.societylasolas.com",
     rating: 4.2,
     reviewCount: 45,
     openingHours: {
@@ -1237,7 +1237,6 @@ export const padelCourts: PadelCourt[] = [
     state: "FL",
     zipCode: "33161",
     phone: "(305) 848-2489",
-    website: "https://www.platinumpadelclub.com",
     rating: 5,
     reviewCount: 6,
     openingHours: {
@@ -1547,7 +1546,6 @@ export const padelCourts: PadelCourt[] = [
     state: "TX",
     zipCode: "77055",
     phone: "+1 (713) 303-4449",
-    website: "https://playtomic.com/clubs/sb-houston",
     rating: 4.5,
     reviewCount: 8,
     openingHours: {
@@ -1681,7 +1679,6 @@ export const padelCourts: PadelCourt[] = [
     state: "FL",
     zipCode: "33167",
     phone: "(786) 381-8163",
-    website: "https://www.pulsepadelhub.com/",
     rating: 5,
     reviewCount: 40,
     openingHours: {
@@ -2579,7 +2576,6 @@ export const padelCourts: PadelCourt[] = [
     state: "CA",
     zipCode: "92563",
     phone: "(323) 440-7863",
-    website: "https://radpadelsocal.com",
     rating: 5,
     reviewCount: 12,
     openingHours: {
@@ -3398,7 +3394,6 @@ export const padelCourts: PadelCourt[] = [
     state: "CA",
     zipCode: "92211",
     phone: "310-279-7706",
-    website: "https://www.golden-padel.com",
     rating: 4.6,
     reviewCount: 8,
     openingHours: {
@@ -3933,7 +3928,7 @@ export const padelCourts: PadelCourt[] = [
     state: "TX",
     zipCode: "78202",
     phone: "(210) 310-3228",
-    website: "https://www.thekingofpadel.com, booking https://book.thekingofpadel.com",
+    website: "https://www.thekingofpadel.com",
     rating: 4.7,
     reviewCount: 3,
     openingHours: {
@@ -4257,7 +4252,6 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "34746",
     coordinates: { lat: 28.2585, lng: -81.46412 }, // US Census geocoder 2026-10-08 (was 34.9 km off)
     phone: "(727) 618-8589, (321) 900-2568",
-    website: "https://www.padelworldplay.com",
     rating: 4.9,
     reviewCount: 10,
     openingHours: {
@@ -4605,7 +4599,7 @@ export const padelCourts: PadelCourt[] = [
     state: "CA",
     zipCode: "95204",
     phone: "(209) 251-2327",
-    website: "https://www.taktikapadel.com, https://taktikapadestockton.taykus.com, https://playtomic.com/clubs/taktika",
+    website: "https://www.taktikapadel.com",
     rating: 4.6,
     reviewCount: 8,
     openingHours: {
@@ -4743,7 +4737,6 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "85018",
     coordinates: { lat: 33.50985, lng: -111.99371 }, // US Census geocoder 2026-10-08 (was 3.3 km off)
     phone: "480-606-2300",
-    website: "https://camelbackpadelclub.com",
     rating: 4,
     reviewCount: 8,
     openingHours: {
@@ -5059,7 +5052,7 @@ export const padelCourts: PadelCourt[] = [
     state: "NY",
     zipCode: "10001",
     phone: "(917) 599-1545",
-    website: "https://nyc.reservepadel.com, https://www.reservepadel.com/hudson-yards",
+    website: "https://www.reservepadel.com/hudson-yards",
     rating: 3.5,
     reviewCount: 156,
     openingHours: {
@@ -5175,7 +5168,7 @@ export const padelCourts: PadelCourt[] = [
     state: "FL",
     zipCode: "32827",
     phone: "(407) 675-2500",
-    website: "https://www.ustanationalcampus.com/en/home/play/padel.html",
+    website: "https://www.ustanationalcampus.com",
     rating: 4.8,
     reviewCount: 215,
     openingHours: {
@@ -5416,7 +5409,7 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "60035",
     coordinates: { lat: 42.1914, lng: -87.82697 }, // US Census geocoder 2026-10-08 (was 2.0 km off)
     phone: "847-579-4125",
-    website: "https://clubpicklepadel.com, https://www.pdhp.org",
+    website: "https://clubpicklepadel.com",
     rating: 5,
     reviewCount: 64,
     openingHours: {
@@ -6055,7 +6048,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Newington",
     state: "CT",
     zipCode: "06111",
-    website: "https://www.padelsmashacademy.com/collections/padel-club-ct",
+    website: "https://www.padelsmashacademy.com",
     reviewCount: 0,
     openingHours: {
       monday: "9h-21h",
@@ -6321,7 +6314,7 @@ export const padelCourts: PadelCourt[] = [
     state: "FL",
     zipCode: "33149",
     phone: "305-365-4300",
-    website: "https://www.rckbracquetgarden.com/ | https://www.cliffdrysdale.com/locations-the-ritz-carlton-miami",
+    website: "https://www.rckbracquetgarden.com",
     reviewCount: 16,
     rating: 4.4,
     openingHours: {
@@ -7146,7 +7139,7 @@ export const padelCourts: PadelCourt[] = [
     state: "MD",
     zipCode: "21208",
     phone: "410-296-0601",
-    website: "https://www.bmorepadel.com/; https://playtomic.com/clubs/bmorepadel",
+    website: "https://www.bmorepadel.com",
     reviewCount: 9,
     rating: 5,
     openingHours: {
@@ -7501,7 +7494,6 @@ export const padelCourts: PadelCourt[] = [
     state: "NJ",
     zipCode: "07936",
     phone: "929-310-7006",
-    website: "https://www.vamosracquets.com",
     reviewCount: 2,
     rating: 5,
     openingHours: {
@@ -8927,7 +8919,6 @@ export const padelCourts: PadelCourt[] = [
     city: "Hidalgo",
     state: "TX",
     zipCode: "78557",
-    website: "https://padelprotech.com",
     reviewCount: 0,
     openingHours: {
       monday: "8:30-18h",
@@ -9097,7 +9088,6 @@ export const padelCourts: PadelCourt[] = [
     city: "Houston",
     state: "TX",
     zipCode: "77092",
-    website: "https://puntoazul.club",
     reviewCount: 0,
     description: "Punto Azul Padel Club is bringing 8 premium outdoor courts to Houston's Oak Forest area, with an Academy planned to provide coaching from beginner to advanced levels, plus leagues, tournaments, and community nights.",
     numberOfCourts: 8,
@@ -10276,7 +10266,6 @@ export const padelCourts: PadelCourt[] = [
     state: "OH",
     zipCode: "45244",
     phone: "(513) 600-2074",
-    website: "https://www.cincyrackets.com",
     reviewCount: 0,
     openingHours: {
       monday: "7h-23h",
@@ -10770,7 +10759,6 @@ export const padelCourts: PadelCourt[] = [
     state: "CO",
     zipCode: "",
     phone: "(855) 744-1994",
-    website: "https://cascadestennis.com",
     reviewCount: 0,
     openingHours: {
       monday: "8:00am-6:00pm",
@@ -11133,7 +11121,6 @@ export const padelCourts: PadelCourt[] = [
     state: "FL",
     zipCode: "",
     phone: "(754) 216-9665",
-    website: "https://dixsonpadelclub.com",
     reviewCount: 0,
     openingHours: {
       monday: "8:00am-11:30pm",
@@ -11596,7 +11583,6 @@ export const padelCourts: PadelCourt[] = [
     state: "FL",
     zipCode: "",
     phone: "(786) 836-8459",
-    website: "https://pepperpadel.com",
     rating: 5.0,
     reviewCount: 21,
     openingHours: {
@@ -11846,7 +11832,6 @@ export const padelCourts: PadelCourt[] = [
     state: "FL",
     zipCode: "33616",
     phone: "(813) 436-3620",
-    website: "https://thestovallhouse.com/pages/sh19-tampa",
     reviewCount: 0,
     openingHours: {
       monday: "7:00am-9:00pm",
@@ -12319,7 +12304,6 @@ export const padelCourts: PadelCourt[] = [
     city: "East Hampton",
     state: "NY",
     zipCode: "",
-    website: "https://naoalife.com",
     rating: 3.8,
     reviewCount: 9,
     openingHours: {
@@ -13470,7 +13454,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Charlottesville",
     state: "VA",
     zipCode: "",
-    website: "https://boarsheadresort.com/padel",
+    website: "https://boarsheadresort.com",
     rating: 4.4,
     reviewCount: 1500,
     openingHours: {
@@ -13954,7 +13938,6 @@ export const padelCourts: PadelCourt[] = [
     state: "WA",
     zipCode: "98033",
     email: "hello@cascadiapadel.com",
-    website: "https://www.cascadiapadel.com",
     rating: 0,
     reviewCount: 0,
     description: "Cascadia Padel is building an indoor padel club in Kirkland with a clubhouse, pro shop, and cafe — targeting a fall 2026 opening, with pre-launch memberships available now.",

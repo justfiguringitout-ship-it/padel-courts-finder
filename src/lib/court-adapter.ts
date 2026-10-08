@@ -247,61 +247,51 @@ export function generateSlug(name: string): string {
     .replace(/^-|-$/g, ""); // Remove leading/trailing hyphens
 }
 
-// Helper to convert opening hours format
+// Helper to convert opening hours format.
+// Returns [] when the club's hours are missing or can't be read with confidence,
+// so pages show "Hours not published" instead of invented times.
+function parseClock(raw: string): string | null {
+  if (/^midnight$/i.test(raw.trim())) return "00:00";
+  if (/^noon$/i.test(raw.trim())) return "12:00";
+  const m = raw.trim().toLowerCase().match(/^(\d{1,2})(?:[:.h](\d{2}))?\s*h?\s*(am|pm|a\.m\.|p\.m\.)?$/);
+  if (!m) return null;
+  let hour = Number(m[1]);
+  const min = Number(m[2] || "0");
+  const period = m[3]?.replace(/\./g, "");
+  if (period === "pm" && hour < 12) hour += 12;
+  if (period === "am" && hour === 12) hour = 0;
+  if (hour === 24) hour = 0;
+  if (hour > 23 || min > 59) return null;
+  return `${String(hour).padStart(2, "0")}:${String(min).padStart(2, "0")}`;
+}
+
 function convertOpeningHours(hours: ExistingCourt["openingHours"]) {
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   const hourKeys = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
-  if (!hours) {
-    return days.map((day) => ({
-      dayOfWeek: day,
-      opens: "07:00",
-      closes: "22:00",
-      closed: false,
-    }));
-  }
+  if (!hours) return [];
 
-  return days.map((day, index) => {
-    const hourString = hours[hourKeys[index] as keyof typeof hours];
-
-    if (!hourString || hourString === "Closed") {
-      return {
-        dayOfWeek: day,
-        opens: "00:00",
-        closes: "00:00",
-        closed: true,
-      };
+  const parsed = days.map((day, index) => {
+    const raw = (hours[hourKeys[index] as keyof typeof hours] ?? "").toString().trim();
+    if (/^closed$/i.test(raw)) {
+      return { dayOfWeek: day, opens: "00:00", closes: "00:00", closed: true };
     }
-
-    if (hourString === "varies" || hourString === "24h") {
-      return {
-        dayOfWeek: day,
-        opens: "06:00",
-        closes: "22:00",
-        closed: false,
-      };
+    if (/^(24h|24 hours|open 24 hours)$/i.test(raw)) {
+      return { dayOfWeek: day, opens: "00:00", closes: "23:59", closed: false };
     }
-
-    // Parse format like "7h-23h", "8h-21:30", "8:30-23:30", or "8-21"
-    const match = hourString.match(/(\d+)h?:?(\d*)-(\d+)h?:?(\d*)/);
-    if (match) {
-      const [, openHour, openMin = "00", closeHour, closeMin = "00"] = match;
-      return {
-        dayOfWeek: day,
-        opens: `${openHour.padStart(2, "0")}:${openMin.padStart(2, "0")}`,
-        closes: `${closeHour.padStart(2, "0")}:${closeMin.padStart(2, "0")}`,
-        closed: false,
-      };
-    }
-
-    // Default hours
-    return {
-      dayOfWeek: day,
-      opens: "07:00",
-      closes: "22:00",
-      closed: false,
-    };
+    // "7h-23h", "8:30-23:30", "7:00am-10:00pm", "6:00 AM - 11:00 PM", "7h-0h"
+    const parts = raw.split(/\s*(?:-|–|—|to)\s*/i);
+    if (parts.length !== 2) return null;
+    const opens = parseClock(parts[0]);
+    let closes = parseClock(parts[1]);
+    if (!opens || !closes) return null;
+    if (closes === "00:00") closes = "23:59";
+    return { dayOfWeek: day, opens, closes, closed: false };
   });
+
+  // Unknown, "TBA", "varies" or unreadable on any day: publish nothing rather than guess.
+  if (parsed.some((d) => d === null)) return [];
+  return parsed as Array<{ dayOfWeek: string; opens: string; closes: string; closed: boolean }>;
 }
 
 // Helper to extract state code from state name or return as-is
@@ -1050,7 +1040,7 @@ export function getTodayHours(court: AdaptedCourt): string {
   const today = days[new Date().getDay()];
   const todayHours = court.hours.find((h) => h.dayOfWeek === today);
 
-  if (!todayHours) return "Hours not available";
+  if (!todayHours) return "Hours not published";
   if (todayHours.closed) return "Closed today";
 
   const formatTime = (time: string) => {
@@ -1077,6 +1067,8 @@ export function isCurrentlyOpen(court: AdaptedCourt): boolean {
   const openTime = openHour * 60 + openMin;
   const closeTime = closeHour * 60 + closeMin;
 
+  // Clubs that close after midnight (e.g. 14:00 to 05:30)
+  if (closeTime <= openTime) return currentTime >= openTime || currentTime < closeTime;
   return currentTime >= openTime && currentTime < closeTime;
 }
 

@@ -123,12 +123,14 @@ export default async function CourtPage({ params }: CourtPageProps) {
               },
             } : {}),
             ...(court.pricingText ? { priceRange: court.pricingText } : {}),
-            openingHoursSpecification: court.hours.map((h) => ({
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: h.dayOfWeek,
-              opens: h.opens,
-              closes: h.closes,
-            })),
+            ...(court.hours.length > 0 ? {
+              openingHoursSpecification: court.hours.map((h) => ({
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: h.dayOfWeek,
+                opens: h.opens,
+                closes: h.closes,
+              })),
+            } : {}),
           }),
         }}
       />
@@ -542,6 +544,13 @@ export default async function CourtPage({ params }: CourtPageProps) {
                 <CardTitle>Hours of Operation</CardTitle>
               </CardHeader>
               <CardContent>
+                {court.hours.length === 0 ? (
+                  <p className="text-sm text-muted-foreground">
+                    {court.status === "coming_soon"
+                      ? "Hours will be posted when the club opens."
+                      : "This club hasn't published its hours yet. Check its website or booking page before you go."}
+                  </p>
+                ) : (
                 <div className="space-y-2">
                   {court.hours.map((hour) => (
                     <div key={hour.dayOfWeek} className="flex justify-between text-sm">
@@ -552,6 +561,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
                     </div>
                   ))}
                 </div>
+                )}
               </CardContent>
             </Card>
           </div>
