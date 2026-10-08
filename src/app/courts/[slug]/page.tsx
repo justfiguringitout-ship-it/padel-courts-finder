@@ -150,7 +150,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
     ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(fullAddress)}`
     : court.googleMapsUrl;
 
-  const citySlug = court.address.city.toLowerCase().replace(/\s+/g, "-");
+  const citySlug = court.address.city.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-");
   const blogSlug = cityBlogSlugs[citySlug];
   const stateInfo = getStates().find((s) => s.code === court.address.stateCode);
 

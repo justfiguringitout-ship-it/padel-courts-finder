@@ -1429,7 +1429,7 @@ We'll show you **exact addresses, phone numbers, and booking info** for every cl
 
 **Contact us!** We're constantly updating based on what players actually want to know.
 
-[Submit a question](/contact) and we'll add it to the FAQ.
+[Submit a question](/advertise#partner-form) and we'll add it to the FAQ.
 
 ---
 
@@ -1480,6 +1480,6 @@ Here's why we're so confident:
 
 ---
 
-*FAQ updated monthly based on player questions. Last updated: October 2025. Have a question not listed? [Contact us](/contact)*
+*FAQ updated monthly based on player questions. Last updated: October 2025. Have a question not listed? [Contact us](/advertise#partner-form)*
 
 

@@ -1262,7 +1262,7 @@ Wynwood Padel (#3) - arts district location, aesthetic courts.
 **Clubs Verified:** All 10 clubs verified through official sources  
 **Next Update:** Monthly (we track new openings and changes)
 
-**Found an error or have an update?** [Contact us](/contact) - We update this guide monthly.
+**Found an error or have an update?** [Contact us](/advertise#partner-form) - We update this guide monthly.
 
 ---
 
