@@ -520,7 +520,7 @@ export default function BestPadelShoesPage() {
               </Link>
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Find a Court Near You</div>
-                <p className="text-stone-400 text-sm mt-1">312+ clubs across 37 states</p>
+                <p className="text-stone-400 text-sm mt-1">340+ clubs across 39 states</p>
               </Link>
             </div>
           </div>

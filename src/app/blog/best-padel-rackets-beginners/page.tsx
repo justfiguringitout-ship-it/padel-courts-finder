@@ -104,7 +104,7 @@ export default function BeginnerRacketsPage() {
         "name": "Where can I play padel near me?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Padel Courts Finder lists 300+ padel clubs across the US with hours, pricing, and reviews — search by city, state, or ZIP code at padelcourtsfinder.com/search."
+          "text": "Padel Courts Finder lists 340+ padel clubs across the US with hours, pricing, and reviews — search by city, state, or ZIP code at padelcourtsfinder.com/search."
         }
       }
     ]
@@ -772,7 +772,7 @@ export default function BeginnerRacketsPage() {
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">Where can I play padel near me?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Check our <Link href="/search" className="text-padel-green hover:underline">court finder</Link> — we list 350+ padel clubs across the US. If you&apos;re in South Florida, don&apos;t miss our <Link href="/blog/best-padel-clubs-miami" className="text-padel-green hover:underline">Miami padel guide</Link>.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">Check our <Link href="/search" className="text-padel-green hover:underline">court finder</Link> — we list 340+ padel clubs across the US. If you&apos;re in South Florida, don&apos;t miss our <Link href="/blog/best-padel-clubs-miami" className="text-padel-green hover:underline">Miami padel guide</Link>.</p>
                 </div>
               </div>
             </section>
@@ -813,7 +813,7 @@ export default function BeginnerRacketsPage() {
             <Link href="/search" className="block border border-stone-700 rounded-lg p-4 hover:border-padel-green/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-stone-500">DIRECTORY</span>
               <h3 className="font-semibold text-white mt-1">Find a Court Near You</h3>
-              <p className="text-sm text-stone-400 mt-1">Search 350+ padel clubs across the US &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">Search 340+ padel clubs across the US &rarr;</p>
             </Link>
             <Link href="/how-to-play" className="block border border-stone-700 rounded-lg p-4 hover:border-padel-green/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-stone-500">GUIDE</span>

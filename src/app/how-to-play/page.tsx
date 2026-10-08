@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { GearWidget } from '@/components/GearWidget';
+import { getSiteStats } from '@/lib/site-structure';
 
 export const metadata: Metadata = {
   title: 'How to Play Padel: Complete Beginner\'s Guide (2026)',
@@ -527,7 +528,7 @@ export default function HowToPlayPage() {
               <h2 className="text-2xl font-bold text-foreground mb-5">Where to Play</h2>
               <div className="border border-stone-200 rounded-xl p-6 md:p-8">
                 <p className="text-stone-600 leading-[1.75] mb-4">
-                  Ready to try it? Padel is available in 34 states across the US, with new clubs opening every month. The sport has exploded from a handful of facilities to <Link href="/search" className="text-sky-600 hover:underline font-medium">350+ clubs nationwide</Link>, and that number is growing fast.
+                  Ready to try it? Padel is available in {getSiteStats().totalStates} states across the US, with new clubs opening every month. The sport has exploded from a handful of facilities to <Link href="/search" className="text-sky-600 hover:underline font-medium">{getSiteStats().totalCourts} clubs nationwide</Link>, and that number is growing fast.
                 </p>
                 <p className="text-stone-600 leading-[1.75] mb-4">
                   Most clubs offer walk-in court bookings, equipment rental, and beginner lessons &mdash; so you can show up with nothing and start playing. Many also run social &ldquo;mix-in&rdquo; sessions where you&apos;re paired with other players, which is a great way to meet people and get started without needing to find 3 friends first.
@@ -536,7 +537,7 @@ export default function HowToPlayPage() {
                   <Link href="/blog/best-padel-clubs-miami" className="border border-stone-200 rounded-lg p-4 hover:border-sky-300 hover:shadow-sm transition-all text-center">
                     <span className="text-xs text-stone-400 uppercase tracking-wider">City Guide</span>
                     <h4 className="font-semibold text-foreground mt-1 text-sm">Miami &rarr;</h4>
-                    <p className="text-xs text-stone-500 mt-0.5">29+ clubs, 170+ courts</p>
+                    <p className="text-xs text-stone-500 mt-0.5">39 clubs, 200+ courts</p>
                   </Link>
                   <Link href="/blog/best-padel-clubs-houston" className="border border-stone-200 rounded-lg p-4 hover:border-sky-300 hover:shadow-sm transition-all text-center">
                     <span className="text-xs text-stone-400 uppercase tracking-wider">City Guide</span>
@@ -607,7 +608,7 @@ export default function HowToPlayPage() {
           <div className="grid sm:grid-cols-3 gap-4">
             <Link href="/search" className="block border border-stone-700 rounded-lg p-5 hover:border-sky-500/50 transition-colors text-center">
               <h3 className="font-semibold text-white mb-1">Find a Court</h3>
-              <p className="text-sm text-stone-400">350+ padel clubs across the US &rarr;</p>
+              <p className="text-sm text-stone-400">{getSiteStats().totalCourts} padel clubs across the US &rarr;</p>
             </Link>
             <Link href="/blog/best-padel-rackets-beginners" className="block border border-stone-700 rounded-lg p-5 hover:border-amber-500/50 transition-colors text-center">
               <h3 className="font-semibold text-white mb-1">Get Your Gear</h3>

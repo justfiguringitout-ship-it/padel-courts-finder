@@ -483,7 +483,7 @@ They're not interchangeable. But the good news? Padel rackets start at $50 and c
 
 ### Where can I find padel courts?
 
-Use our [comprehensive directory](/search)! We've verified **120+ clubs** across the United States:
+Use our [comprehensive directory](/search)! We list **340+ clubs** across the United States:
 
 **Search by:**
 - State or city
@@ -494,7 +494,7 @@ Use our [comprehensive directory](/search)! We've verified **120+ clubs** across
 
 **Top padel cities:**
 - Austin, TX (6 facilities)
-- Miami, FL (10+ facilities)
+- Miami, FL (19 clubs)
 - San Francisco Bay Area (6 facilities)
 - Phoenix, AZ (5 facilities)
 - Los Angeles, CA (8+ facilities)

@@ -457,7 +457,7 @@ export default function PadelVsPickleballPage() {
           <div className="grid sm:grid-cols-3 gap-4">
             <Link href="/search" className="block border border-stone-700 rounded-lg p-5 hover:border-emerald-500/50 transition-colors text-center">
               <h3 className="font-semibold text-white mb-1">Find Courts Near You</h3>
-              <p className="text-sm text-stone-400">350+ padel clubs across the US &rarr;</p>
+              <p className="text-sm text-stone-400">340+ padel clubs across the US &rarr;</p>
             </Link>
             <Link href="/how-to-play" className="block border border-stone-700 rounded-lg p-5 hover:border-emerald-500/50 transition-colors text-center">
               <h3 className="font-semibold text-white mb-1">How to Play Padel</h3>

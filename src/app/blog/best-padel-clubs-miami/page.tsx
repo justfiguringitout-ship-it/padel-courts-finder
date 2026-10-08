@@ -4,13 +4,13 @@ import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Miami (2026) | Complete South Florida Guide',
-  description: 'Explore Miami\'s top 29+ padel clubs in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
+  description: 'Explore Miami\'s 39 padel clubs in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-miami',
   },
   openGraph: {
     title: 'Best Padel Clubs in Miami (2026) | Complete South Florida Guide',
-    description: 'Explore Miami\'s top 29+ padel clubs in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
+    description: 'Explore Miami\'s 39 padel clubs in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-miami',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/images/courts/ultra-padel-club.webp' }],
@@ -366,7 +366,7 @@ export default function MiamiBestClubsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in Miami (2026) | Complete South Florida Guide",
-    "description": "Explore Miami's top 29+ padel clubs in 2026. Ultra Padel's 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.",
+    "description": "Explore Miami's 39 padel clubs in 2026. Ultra Padel's 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.",
     "image": "https://www.padelcourtsfinder.com/images/courts/ultra-padel-club.webp",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
@@ -453,7 +453,7 @@ export default function MiamiBestClubsPage() {
             Miami: America&apos;s Undisputed Padel Capital
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            No city in the United States can match Miami&apos;s padel scene. With 29 open clubs, over 170 courts, and 2 more facilities on the way, Miami and its surrounding metro area have built the densest concentration of padel infrastructure in the country. The Latin American influence, year-round outdoor weather, and a fitness-obsessed culture have made South Florida the epicenter of padel in America.
+            No city in the United States can match Miami&apos;s padel scene. With 39 open clubs, over 200 courts, and 1 more facility on the way, Miami and its surrounding metro area have built the densest concentration of padel infrastructure in the country. The Latin American influence, year-round outdoor weather, and a fitness-obsessed culture have made South Florida the epicenter of padel in America.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             The scale is staggering. <Link href="/courts/ultra-padel-club" className="text-padel-green hover:underline">Ultra Padel Club</Link> alone operates 29 courts in Little Haiti -- the single largest padel facility in the US. <Link href="/courts/urban-padel" className="text-padel-green hover:underline">Urban Padel</Link> in Doral claims the largest indoor padel facility with 12 climate-controlled courts. From luxury members-only clubs like <Link href="/courts/sunset-padel" className="text-padel-green hover:underline">Sunset Padel</Link> in Miami Beach to budget-friendly options at <Link href="/courts/champions-padel-club" className="text-padel-green hover:underline">Champions Padel Club</Link> starting at $25/hour, there is a padel club for every player and every budget.

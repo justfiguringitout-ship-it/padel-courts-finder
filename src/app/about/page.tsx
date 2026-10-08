@@ -4,6 +4,7 @@ import path from 'path';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
+import { getSiteStats } from '@/lib/site-structure';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,9 +14,12 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
+const siteStats = getSiteStats();
+const ABOUT_DESCRIPTION = `Learn about the most comprehensive padel court directory in the United States with ${siteStats.totalCourts} verified clubs across ${siteStats.totalStates} states mapped nationwide.`;
+
 export const metadata: Metadata = {
   title: "About Us - America's Complete Padel Directory | Padel Courts Finder",
-  description: "Learn about the most comprehensive padel court directory in the United States with 311+ verified clubs across 37 states mapped nationwide.",
+  description: ABOUT_DESCRIPTION,
   keywords: [
     "about padel directory",
     "padel court finder",
@@ -25,7 +29,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "About Us - America's Complete Padel Directory",
-    description: "Learn about the most comprehensive padel court directory in the United States with 311+ verified clubs across 37 states mapped nationwide.",
+    description: ABOUT_DESCRIPTION,
     url: "https://www.padelcourtsfinder.com/about",
     siteName: "Padel Courts Finder",
     type: "website",
@@ -33,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About Us - America's Complete Padel Directory",
-    description: "Learn about the most comprehensive padel court directory in the United States with 311+ verified clubs across 37 states mapped nationwide.",
+    description: ABOUT_DESCRIPTION,
   },
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/about",
@@ -73,7 +77,7 @@ export default function AboutPage() {
               About Padel Courts Finder
             </h1>
             <p className="text-xl text-muted-foreground">
-              America&apos;s most comprehensive padel court directory — 311+ clubs across 37 states
+              America&apos;s most comprehensive padel court directory — {siteStats.totalCourts} clubs across {siteStats.totalStates} states
             </p>
           </div>
         </div>

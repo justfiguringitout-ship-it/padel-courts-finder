@@ -313,7 +313,7 @@ export default function PadelCourtCostPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">The US market in 2026: still early</h2>
             <p className="text-stone-700 leading-relaxed">
-              Our directory currently tracks <strong>312+ clubs across 37 states</strong> — a number that keeps
+              Our directory currently tracks <strong>340+ clubs across 39 states</strong> — a number that keeps
               climbing but remains tiny against padel&apos;s footprint in Spain or Argentina, where a single city
               can out-court entire US regions. Franchise groups and venture-backed chains are moving fastest in
               Florida, Texas, California, and the Northeast metros, often signing multi-site deals.
@@ -333,7 +333,7 @@ export default function PadelCourtCostPage() {
               <p className="text-stone-700 leading-relaxed">
                 Get in front of players searching for courts in your area.{" "}
                 <Link href="/list-your-court" className="text-padel-green font-semibold hover:underline">List your club on Padel Courts Finder</Link>{" "}
-                — it&apos;s how players across 37 states find where to play. And if you&apos;re a manufacturer,
+                — it&apos;s how players across 39 states find where to play. And if you&apos;re a manufacturer,
                 installer, or brand serving club owners, check out our{" "}
                 <Link href="/advertise" className="text-padel-green font-semibold hover:underline">partnership options</Link>.
                Ready to price a build? Start with our <Link href="/buy-a-padel-court" className="text-padel-green hover:underline">buy a padel court</Link> guide and quote form.</p>
@@ -386,8 +386,8 @@ export default function PadelCourtCostPage() {
                 <p className="text-stone-400 text-sm mt-1">What separates a great club from a mediocre one</p>
               </Link>
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
-                <div className="font-semibold text-white">Browse 312+ Clubs</div>
-                <p className="text-stone-400 text-sm mt-1">Every padel club we track across 37 states</p>
+                <div className="font-semibold text-white">Browse 340+ Clubs</div>
+                <p className="text-stone-400 text-sm mt-1">Every padel club we track across 39 states</p>
               </Link>
               <Link href="/buy-a-padel-court" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Buy a Padel Court</div>
