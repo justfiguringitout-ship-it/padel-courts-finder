@@ -1,6 +1,9 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
+import { ShoeCompare, SolePlate } from "@/components/gear/gear-compare";
+import { ShoeSole } from "@/components/gear/shoe-sole";
+import type { GearShoe } from "@/components/gear/types";
 
 export const metadata: Metadata = {
   title: "Best Padel Shoes (2026): What to Look For + Our Picks",
@@ -21,6 +24,25 @@ export const metadata: Metadata = {
     description: "What actually makes a padel shoe — outsole, lateral support, durability — plus the two pairs we recommend.",
   },
 };
+
+/** Presentation data for the compare table and sole diagrams. Every value is
+ *  copied from this page; outsole patterns are drawn only where the page states one. */
+const SHOES: GearShoe[] = [
+  { id: "head-sprint-pro-4-mens", name: "HEAD Men's Sprint Pro 4.0", productName: "HEAD Sprint Pro 4.0 Mens", price: "$129.00", href: "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20", pattern: "herringbone", patternLabel: "Omni-style", bestFor: "Our men's pick for padel turf", standout: "Lightweight, breathable mesh, reinforced toe" },
+  { id: "head-sprint-pro-4-womens", name: "HEAD Women's Sprint Pro 4.0", productName: "HEAD Sprint Pro 4.0 Womens", price: "$89.00", href: "https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20", pattern: "herringbone", patternLabel: "Omni-style", bestFor: "Our women's pick for padel turf", standout: "Lightweight, breathable mesh, women's last" },
+  { id: "nox-at10-pro-shoes", name: "NOX AT10 PRO Padel Shoes", productName: "NOX AT10 PRO Padel Shoes", price: "~$135", href: "https://www.amazon.com/dp/B0GRWHSVGW?tag=padel02-20", pattern: "herringbone-studs", patternLabel: "Herringbone with micro studs", bestFor: "Best padel-specific all-rounder", standout: "Reinforced toe and heel, strong lateral support" },
+  { id: "wilson-rush-pro-5", name: "Wilson Rush Pro 5 Padel", productName: "Wilson Rush Pro 5 Padel", price: "~$170", href: "https://www.amazon.com/dp/B0GVKRS59Q?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Premium stability pick", standout: "EndoFit midfoot wrap, TPU stability chassis, Duralast high-abrasion rubber" },
+  { id: "wilson-hurakn-lite", name: "Wilson Hurakn Lite Padel", productName: "Wilson Hurakn Lite Padel", price: "~$110", href: "https://www.amazon.com/dp/B0FC8SDHK5?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Lightweight speed pick", standout: "Padel-specific rubber in a stripped-down build" },
+  { id: "asics-gel-challenger-15", name: "ASICS Gel-Challenger 15 Padel", productName: "ASICS Gel-Challenger 15 Padel", price: "~$130", href: "https://www.amazon.com/dp/B0GZRD83KR?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Durability pick", standout: "AHARPLUS outsole rubber, WINGWALL lateral support" },
+  { id: "asics-gel-dedicate-8", name: "ASICS Gel-Dedicate 8 Padel", productName: "ASICS Gel-Dedicate 8 Padel", price: "~$150", href: "https://www.amazon.com/dp/B0GLV3J2BH?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Cushioned comfort pick", standout: "GEL cushioning, Trusstic midfoot stability" },
+];
+
+/** The three outsole types this guide describes, drawn for comparison. */
+const SOLE_TYPES = [
+  { pattern: "herringbone" as const, title: "Clay / omni herringbone", note: "Zigzag tread that bites through the sand layer" },
+  { pattern: "hybrid" as const, title: "Hybrid", note: "Herringbone forefoot, flatter zone for pivoting" },
+  { pattern: "running" as const, title: "Running shoe (avoid)", note: "Smooth or lugged rubber slips or catches on sandy turf" },
+];
 
 export default function BestPadelShoesPage() {
   const articleData = {
@@ -222,6 +244,13 @@ export default function BestPadelShoesPage() {
             </p>
           </section>
 
+          {/* Compare view */}
+          <section aria-labelledby="compare-shoes">
+            <h2 id="compare-shoes" className="text-2xl font-bold text-foreground mb-2">All 7 picks side by side</h2>
+            <p className="text-sm text-stone-500 mb-5">Each sole diagram shows the outsole as we describe it below. Where we have not confirmed a tread pattern, the diagram stays blank rather than guessing.</p>
+            <ShoeCompare shoes={SHOES} uidPrefix="shoe" caption="Padel shoes compared: price, outsole, best for and standout feature" />
+          </section>
+
           {/* Outsole */}
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Outsole Pattern: Herringbone or Hybrid</h2>
@@ -233,6 +262,17 @@ export default function BestPadelShoesPage() {
               Both grip padel turf well; either is a fine choice. What you&apos;re avoiding is the smooth, lugged, or
               wavy rubber of running and gym shoes, which either slips on the sand or catches unpredictably mid-slide.
             </p>
+            <div className="grid grid-cols-3 gap-3 sm:gap-5 mt-6">
+              {SOLE_TYPES.map((t) => (
+                <figure key={t.pattern} className="pcf-gear-plate rounded-xl border border-stone-200 p-3 sm:p-4 text-center">
+                  <ShoeSole uid={`explainer-${t.pattern}`} pattern={t.pattern} className="mx-auto h-28 sm:h-36 w-auto" />
+                  <figcaption className="mt-2">
+                    <span className={`block text-xs sm:text-sm font-semibold ${t.pattern === "running" ? "text-stone-500" : "text-foreground"}`}>{t.title}</span>
+                    <span className="block text-[11px] sm:text-xs text-stone-500 mt-0.5 leading-snug">{t.note}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </section>
 
           {/* Lateral support */}
@@ -293,12 +333,13 @@ export default function BestPadelShoesPage() {
             </p>
 
             {/* Men's */}
-            <div className="bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
+            <div id="head-sprint-pro-4-mens" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
               <div className="flex items-start justify-between gap-4 mb-1">
                 <h3 className="text-xl font-bold text-foreground">HEAD Men&apos;s Sprint Pro 4.0</h3>
                 <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$129.00</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Our men&apos;s pick for padel turf</p>
+              <SolePlate shoe={SHOES[0]} uidPrefix="shoe" />
               <div className="flex flex-wrap gap-1.5 mb-5">
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Omni-style grip</span>
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Lightweight</span>
@@ -326,12 +367,13 @@ export default function BestPadelShoesPage() {
             </div>
 
             {/* Women's */}
-            <div className="bg-white border border-stone-200 rounded-xl p-6 md:p-8">
+            <div id="head-sprint-pro-4-womens" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-6 md:p-8">
               <div className="flex items-start justify-between gap-4 mb-1">
                 <h3 className="text-xl font-bold text-foreground">HEAD Women&apos;s Sprint Pro 4.0</h3>
                 <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$89.00</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Our women&apos;s pick for padel turf</p>
+              <SolePlate shoe={SHOES[1]} uidPrefix="shoe" />
               <div className="flex flex-wrap gap-1.5 mb-5">
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Omni-style grip</span>
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Lightweight</span>
@@ -366,7 +408,7 @@ export default function BestPadelShoesPage() {
             <h2 className="text-2xl font-bold text-foreground mb-2">More 2026 Picks, by What You Need</h2>
             <p className="text-stone-600 text-sm leading-relaxed mb-5">Beyond our HEAD Sprint Pro default, these five are the padel-specific shoes we&apos;ve verified available in the US right now — each the best at one thing.</p>
             <div className="space-y-5">
-            <div className="bg-white border border-stone-200 rounded-xl p-5">
+            <div id="nox-at10-pro-shoes" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-5">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
                   <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Best padel-specific all-rounder</span>
@@ -374,12 +416,13 @@ export default function BestPadelShoesPage() {
                 </div>
                 <div className="text-padel-green font-bold whitespace-nowrap">~$135</div>
               </div>
+              <div className="mt-3 -mb-2"><SolePlate shoe={SHOES[2]} uidPrefix="shoe" /></div>
               <p className="text-stone-600 text-sm leading-relaxed mt-2">Agustín Tapia&apos;s line, and the shoe that checks every padel-specific box: herringbone outsole with micro studs for sand-dressed turf, reinforced toe AND heel for drag, and strong lateral support. If you want one shoe built for exactly this sport, start here.</p>
               <div className="mt-4">
                 <TrackedLink href="https://www.amazon.com/dp/B0GRWHSVGW?tag=padel02-20" type="affiliate" productName="NOX AT10 PRO Padel Shoes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
               </div>
             </div>
-            <div className="bg-white border border-stone-200 rounded-xl p-5">
+            <div id="wilson-rush-pro-5" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-5">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
                   <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Premium stability pick</span>
@@ -387,12 +430,13 @@ export default function BestPadelShoesPage() {
                 </div>
                 <div className="text-padel-green font-bold whitespace-nowrap">~$170</div>
               </div>
+              <div className="mt-3 -mb-2"><SolePlate shoe={SHOES[3]} uidPrefix="shoe" /></div>
               <p className="text-stone-600 text-sm leading-relaxed mt-2">The premium option: EndoFit midfoot wrap, a TPU stability chassis, and Duralast high-abrasion rubber. The most locked-in lateral feel of anything we&apos;ve verified — for aggressive movers who never want to think about their footing.</p>
               <div className="mt-4">
                 <TrackedLink href="https://www.amazon.com/dp/B0GVKRS59Q?tag=padel02-20" type="affiliate" productName="Wilson Rush Pro 5 Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
               </div>
             </div>
-            <div className="bg-white border border-stone-200 rounded-xl p-5">
+            <div id="wilson-hurakn-lite" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-5">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
                   <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Lightweight speed pick</span>
@@ -400,12 +444,13 @@ export default function BestPadelShoesPage() {
                 </div>
                 <div className="text-padel-green font-bold whitespace-nowrap">~$110</div>
               </div>
+              <div className="mt-3 -mb-2"><SolePlate shoe={SHOES[4]} uidPrefix="shoe" /></div>
               <p className="text-stone-600 text-sm leading-relaxed mt-2">The light, fast option for competitive players who prioritize reaction quickness — padel-specific rubber in a stripped-down build at a mid-range price. The answer to &apos;lightest shoe that won&apos;t tip on hard cuts.&apos;</p>
               <div className="mt-4">
                 <TrackedLink href="https://www.amazon.com/dp/B0FC8SDHK5?tag=padel02-20" type="affiliate" productName="Wilson Hurakn Lite Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
               </div>
             </div>
-            <div className="bg-white border border-stone-200 rounded-xl p-5">
+            <div id="asics-gel-challenger-15" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-5">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
                   <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Durability pick</span>
@@ -413,12 +458,13 @@ export default function BestPadelShoesPage() {
                 </div>
                 <div className="text-padel-green font-bold whitespace-nowrap">~$130</div>
               </div>
+              <div className="mt-3 -mb-2"><SolePlate shoe={SHOES[5]} uidPrefix="shoe" /></div>
               <p className="text-stone-600 text-sm leading-relaxed mt-2">AHARPLUS outsole rubber (~3x more abrasion-resistant) plus WINGWALL lateral support. The pick for toe-draggers and daily players who kill shoes at the toe box — this one is built to take it.</p>
               <div className="mt-4">
                 <TrackedLink href="https://www.amazon.com/dp/B0GZRD83KR?tag=padel02-20" type="affiliate" productName="ASICS Gel-Challenger 15 Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
               </div>
             </div>
-            <div className="bg-white border border-stone-200 rounded-xl p-5">
+            <div id="asics-gel-dedicate-8" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-5">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
                   <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Cushioned comfort pick</span>
@@ -426,6 +472,7 @@ export default function BestPadelShoesPage() {
                 </div>
                 <div className="text-padel-green font-bold whitespace-nowrap">~$150</div>
               </div>
+              <div className="mt-3 -mb-2"><SolePlate shoe={SHOES[6]} uidPrefix="shoe" /></div>
               <p className="text-stone-600 text-sm leading-relaxed mt-2">ASICS GEL cushioning and Trusstic midfoot stability in a padel-specific package — the plushest ride of our picks, for players who want comfort across long sessions without giving up court structure.</p>
               <div className="mt-4">
                 <TrackedLink href="https://www.amazon.com/dp/B0GLV3J2BH?tag=padel02-20" type="affiliate" productName="ASICS Gel-Dedicate 8 Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
