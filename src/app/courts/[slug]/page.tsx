@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
@@ -12,14 +10,36 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import {
-  MapPin, Star, Clock, Phone, Globe, Mail, Users,
-  Calendar, CheckCircle, UtensilsCrossed, Dumbbell, Armchair, GraduationCap
+  MapPin, Star, Phone, Globe, Mail, Calendar, CheckCircle, UtensilsCrossed, Dumbbell, Armchair,
+  GraduationCap, Navigation, BadgeCheck, History, Hourglass, ArrowRight,
 } from "lucide-react";
-import { getAllAdaptedCourtSlugs, getAdaptedCourtBySlug, getAdaptedRelatedCourts, getTodayHours, isCurrentlyOpen } from "@/lib/court-adapter";
+import {
+  getAllAdaptedCourtSlugs,
+  getAdaptedCourtBySlug,
+  getAdaptedRelatedCourts,
+  getAllAdaptedCourts,
+  calculateDistance,
+  type AdaptedCourt,
+} from "@/lib/court-adapter";
+import {
+  getClubHours,
+  getClubTimeZone,
+  timeZoneLabel,
+  getTrustStamp,
+  getPriceSummary,
+  getBookingPlatform,
+  getCourtLayout,
+  noEmDash,
+} from "@/lib/club-page";
+import { isPlausibleUSCoordinate } from "@/lib/map-coordinates";
 import { ClubMapClient } from "@/components/club-map-client";
 import { TrackedLink } from "@/components/TrackedLink";
 import { ClubImage } from "@/components/club-image";
 import { GearWidget } from "@/components/GearWidget";
+import { CourtDiagram } from "@/components/club-page/court-diagram";
+import { ClubHours } from "@/components/club-page/club-hours";
+import { ClubCorrectionForm } from "@/components/club-page/club-correction-form";
+import { MapBoundary } from "@/components/club-page/map-boundary";
 import { cityBlogSlugs } from "@/data/page-content";
 import { getStates } from "@/lib/site-structure";
 import type { Metadata } from "next";
@@ -71,6 +91,37 @@ export async function generateMetadata({ params }: CourtPageProps): Promise<Meta
   };
 }
 
+function hasCoords(c: AdaptedCourt) {
+  return isPlausibleUSCoordinate(c.coordinates?.latitude, c.coordinates?.longitude);
+}
+
+/** Closest clubs by straight-line distance; falls back to same city/state. */
+function getNearbyClubs(court: AdaptedCourt, limit: number): Array<{ club: AdaptedCourt; miles?: number }> {
+  if (hasCoords(court)) {
+    const near = getAllAdaptedCourts()
+      .filter((c) => c.slug !== court.slug && hasCoords(c))
+      .map((c) => ({
+        club: c,
+        miles: calculateDistance(
+          court.coordinates.latitude,
+          court.coordinates.longitude,
+          c.coordinates.latitude,
+          c.coordinates.longitude
+        ),
+      }))
+      .sort((a, b) => a.miles - b.miles)
+      .slice(0, limit);
+    if (near.length) return near;
+  }
+  return getAdaptedRelatedCourts(court, limit).map((club) => ({ club }));
+}
+
+function formatMiles(miles: number) {
+  if (miles < 0.2) return "Next door";
+  if (miles < 10) return `${miles.toFixed(1)} mi away`;
+  return `${Math.round(miles)} mi away`;
+}
+
 export default async function CourtPage({ params }: CourtPageProps) {
   const { slug } = await params;
   const court = getAdaptedCourtBySlug(slug);
@@ -79,12 +130,100 @@ export default async function CourtPage({ params }: CourtPageProps) {
     notFound();
   }
 
-  const relatedCourts = getAdaptedRelatedCourts(court, 3);
-  const todayHours = getTodayHours(court);
-  const isOpen = isCurrentlyOpen(court);
+  const nearby = getNearbyClubs(court, 4);
+  const hours = getClubHours(court);
+  const timeZone = getClubTimeZone(court);
+  const tzLabel = timeZoneLabel(timeZone);
+  const stamp = getTrustStamp(court);
+  const price = getPriceSummary(court);
+  const platform = getBookingPlatform(court);
+  const layout = getCourtLayout(court);
+
+  const comingSoon = court.status === "coming_soon";
+  const tempClosed = court.status === "temporarily_closed";
+  const isOpenClub = court.status === "open";
+
+  const fullAddress = [court.address.streetAddress, court.address.city, `${court.address.stateCode} ${court.address.zipCode}`.trim()]
+    .filter(Boolean)
+    .join(", ");
+  const directionsUrl = court.address.streetAddress
+    ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(fullAddress)}`
+    : court.googleMapsUrl;
+
+  const citySlug = court.address.city.toLowerCase().replace(/\s+/g, "-");
+  const blogSlug = cityBlogSlugs[citySlug];
+  const stateInfo = getStates().find((s) => s.code === court.address.stateCode);
+
+  const pricingItems = court.pricingText
+    ? court.pricingText.split(";").map((item) => noEmDash(item.trim())).filter(Boolean)
+    : [];
+  // "Verified" is shown as the trust stamp, not as a chip.
+  const featureChips = court.features.filter((f) => f !== "Verified");
+
+  // Opening hours for structured data: only days with real, published hours.
+  const toHHMM = (m: number) => `${String(Math.floor(m / 60)).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
+  const openingHoursSpecification = hours.days.flatMap((d) => {
+    if (d.kind === "range") return [{ "@type": "OpeningHoursSpecification", dayOfWeek: d.day, opens: toHHMM(d.open), closes: toHHMM(d.close % 1440) }];
+    if (d.kind === "allday") return [{ "@type": "OpeningHoursSpecification", dayOfWeek: d.day, opens: "00:00", closes: "23:59" }];
+    if (d.kind === "closed") return [{ "@type": "OpeningHoursSpecification", dayOfWeek: d.day, opens: "00:00", closes: "00:00" }];
+    return [];
+  });
+
+  type Action = { key: string; label: string; href: string; icon: React.ReactNode; kind: "website" | "phone"; external: boolean };
+  const actions: Action[] = [];
+  if (court.bookingUrl) actions.push({ key: "book", label: "Book", href: court.bookingUrl, icon: <Calendar />, kind: "website", external: true });
+  if (court.website) actions.push({ key: "web", label: "Website", href: court.website, icon: <Globe />, kind: "website", external: true });
+  if (directionsUrl) actions.push({ key: "dir", label: "Directions", href: directionsUrl, icon: <Navigation />, kind: "website", external: true });
+  if (court.phone) actions.push({ key: "call", label: "Call", href: `tel:${court.phone}`, icon: <Phone />, kind: "phone", external: false });
+
+  const onSite: Array<{ label: string; icon: React.ReactNode }> = [];
+  if (court.lessonsAvailable) onSite.push({ label: "Lessons", icon: <GraduationCap /> });
+  if (court.rentalAvailable) onSite.push({ label: "Equipment rental", icon: <Dumbbell /> });
+  if (court.foodAndDrink) onSite.push({ label: "Food & drink", icon: <UtensilsCrossed /> });
+  if (court.socialArea) onSite.push({ label: "Social lounge", icon: <Armchair /> });
+
+  // Key facts strip
+  const settingValue =
+    layout.setting === "indoor" ? "Indoor" : layout.setting === "outdoor" ? "Outdoor" : layout.setting === "both" ? "Indoor + outdoor" : "Not confirmed";
+  const settingSub =
+    layout.indoor !== null && layout.outdoor !== null && layout.indoor > 0 && layout.outdoor > 0
+      ? `${layout.indoor} in · ${layout.outdoor} out`
+      : layout.setting === "both"
+        ? "split not confirmed"
+        : layout.setting === "unknown"
+          ? "indoor or outdoor"
+          : layout.setting === "indoor"
+            ? "under a roof"
+            : "open air";
+  const priceFact = price
+    ? { value: price.perCourtHour, sub: "per court hour", sub2: `${price.perPlayer} per player` }
+    : court.pricingText
+      ? { value: "See prices", sub: court.membersOnly ? "membership details below" : "details below" }
+      : comingSoon
+        ? { value: "Not announced", sub: "no prices yet" }
+        : { value: "Not published", sub: "ask the club" };
+  const accessFact =
+    court.membersOnly === true
+      ? { value: "Members only", sub: "membership needed" }
+      : court.membersOnly === false
+        ? { value: "Open to public", sub: comingSoon ? "once it opens" : "no membership needed" }
+        : { value: "Not confirmed", sub: "ask about guest play" };
+  const facts = [
+    {
+      label: "Courts",
+      value: layout.total > 0 ? String(layout.total) : "Not confirmed",
+      sub: layout.total > 0 ? `${layout.total === 1 ? "court" : "courts"}${comingSoon ? " planned" : ""}` : "court count",
+      mono: layout.total > 0,
+    },
+    { label: "Setting", value: settingValue, sub: settingSub, mono: false },
+    { label: "Price", value: priceFact.value, sub: priceFact.sub, sub2: "sub2" in priceFact ? priceFact.sub2 : undefined, mono: !!price, href: court.pricingText ? "#prices" : undefined },
+    { label: "Access", value: accessFact.value, sub: accessFact.sub, mono: false },
+  ];
+
+  const hasReviews = court.rating.ratingValue > 0 && court.rating.reviewCount > 0;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen club-page">
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -104,8 +243,8 @@ export default async function CourtPage({ params }: CourtPageProps) {
             },
             geo: {
               "@type": "GeoCoordinates",
-              latitude: court.coordinates.latitude,
-              longitude: court.coordinates.longitude,
+              latitude: court.coordinates?.latitude,
+              longitude: court.coordinates?.longitude,
             },
             telephone: court.phone,
             email: court.email,
@@ -123,12 +262,8 @@ export default async function CourtPage({ params }: CourtPageProps) {
               },
             } : {}),
             ...(court.pricingText ? { priceRange: court.pricingText } : {}),
-            openingHoursSpecification: court.hours.map((h) => ({
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: h.dayOfWeek,
-              opens: h.opens,
-              closes: h.closes,
-            })),
+            // Only days the club actually publishes; never the adapter's 7-22 default.
+            ...(openingHoursSpecification.length ? { openingHoursSpecification } : {}),
           }),
         }}
       />
@@ -156,7 +291,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
 
       {/* Breadcrumbs */}
       <div className="border-b bg-muted/40">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-3">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -168,100 +303,150 @@ export default async function CourtPage({ params }: CourtPageProps) {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>{court.name}</BreadcrumbPage>
+                <BreadcrumbPage className="line-clamp-1">{court.name}</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-primary/10 to-background py-8">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Left: Club Info */}
-            <div>
-              <div className="flex items-start gap-3 mb-4 flex-wrap">
+      {/* Hero: who, where, can I play, how much, how to book */}
+      <section className="club-hero">
+        <div className="container mx-auto px-4 pt-6 pb-8 lg:pt-10 lg:pb-12">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-10 lg:items-start">
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-2 mb-3">
+                {isOpenClub && (
+                  <span className="club-chip club-chip-open">
+                    <span className="club-chip-dot" aria-hidden="true" />
+                    Open
+                  </span>
+                )}
+                {comingSoon && (
+                  <span className="club-chip club-chip-soon">
+                    <Hourglass aria-hidden="true" />
+                    Coming soon
+                  </span>
+                )}
+                {tempClosed && <span className="club-chip club-chip-closed">Temporarily closed</span>}
                 {court.featured && (
                   <Badge className="bg-amber-500 hover:bg-amber-600 text-white">Featured Club</Badge>
                 )}
-                {court.isActive && isOpen && (
-                  <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
-                    <CheckCircle className="w-3 h-3 mr-1" />
-                    Open Now
-                  </Badge>
-                )}
-                {court.status === "coming_soon" && (
-                  <Badge variant="outline" className="bg-amber-50 text-amber-700 border-amber-200">Coming Soon</Badge>
-                )}
-                {court.status === "temporarily_closed" && (
-                  <Badge variant="outline" className="bg-red-50 text-red-700 border-red-200">Temporarily Closed</Badge>
-                )}
-                {court.membersOnly && (
-                  <Badge variant="outline" className="bg-purple-50 text-purple-700 border-purple-200">Private Club</Badge>
+                {court.membersOnly && <span className="club-chip club-chip-private">Private club</span>}
+                {stamp && (
+                  <span
+                    className={`club-stamp ${stamp.kind === "verified" ? "is-verified" : "is-updated"}`}
+                    title={stamp.kind === "verified" ? "A person checked these details against the club's own sources" : undefined}
+                  >
+                    {stamp.kind === "verified" ? <BadgeCheck aria-hidden="true" /> : <History aria-hidden="true" />}
+                    <span>
+                      {stamp.kind === "verified" && <span className="sr-only">Verified. </span>}
+                      <time dateTime={stamp.date}>{stamp.text}</time>
+                    </span>
+                  </span>
                 )}
               </div>
 
-              <h1 className="text-4xl font-bold mb-4">{court.name}</h1>
+              <h1 className="font-display text-[2rem] leading-[1.08] sm:text-4xl lg:text-5xl font-bold tracking-tight">
+                {court.name}
+              </h1>
 
-              <div className="flex items-center gap-1 text-lg mb-4">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">
-                  {court.address.city}, {court.address.stateCode}
+              <p className="mt-2.5 flex items-start gap-1.5 text-[15px] text-muted-foreground">
+                <MapPin className="w-4 h-4 mt-[3px] shrink-0 text-padel-green" aria-hidden="true" />
+                <span>
+                  {court.address.streetAddress ? `${court.address.streetAddress}, ` : ""}
+                  {stateInfo ? (
+                    <Link href={`/${stateInfo.slug}/${citySlug}`} className="text-foreground/80 underline decoration-border underline-offset-4 hover:text-padel-green-dark hover:decoration-padel-green">
+                      {court.address.city}, {court.address.stateCode}
+                    </Link>
+                  ) : (
+                    <>{court.address.city}, {court.address.stateCode}</>
+                  )}
                 </span>
-              </div>
+              </p>
 
-              {court.rating.ratingValue > 0 && court.rating.reviewCount > 0 && (
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center gap-1">
-                  <Star className="w-5 h-5 fill-primary text-primary" />
-                  <span className="text-xl font-bold">{court.rating.ratingValue}</span>
+              {hasReviews && (
+                <p className="mt-2 flex items-center gap-1.5 text-sm">
+                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" aria-hidden="true" />
+                  <span className="font-semibold">{court.rating.ratingValue}</span>
                   <span className="text-muted-foreground">({court.rating.reviewCount} reviews)</span>
+                </p>
+              )}
+
+              {comingSoon && (
+                <div className="club-soon-note" role="note">
+                  <Hourglass aria-hidden="true" />
+                  <p>
+                    <strong>Not open yet.</strong> You cannot book courts here today. What follows is what the club
+                    has announced so far, and we update it as opening gets closer.
+                  </p>
                 </div>
-              </div>
+              )}
+              {tempClosed && (
+                <div className="club-soon-note is-closed" role="note">
+                  <p>
+                    <strong>Temporarily closed.</strong> Check with the club before you go.
+                  </p>
+                </div>
               )}
 
-              {court.description && (
-                <p className="text-lg text-muted-foreground mb-6">{court.description}</p>
-              )}
-
-              <div className="flex flex-wrap gap-2 mb-6">
-                {court.features.map((feature) => (
-                  <Badge key={feature} variant="secondary">{feature}</Badge>
-                ))}
-                {court.lessonsAvailable && (
-                  <Badge variant="outline" className="gap-1"><GraduationCap className="w-3 h-3" />Lessons</Badge>
-                )}
-                {court.rentalAvailable && (
-                  <Badge variant="outline" className="gap-1"><Dumbbell className="w-3 h-3" />Equipment Rental</Badge>
-                )}
-                {court.foodAndDrink && (
-                  <Badge variant="outline" className="gap-1"><UtensilsCrossed className="w-3 h-3" />Food &amp; Drink</Badge>
-                )}
-                {court.socialArea && (
-                  <Badge variant="outline" className="gap-1"><Armchair className="w-3 h-3" />Social Lounge</Badge>
-                )}
-              </div>
-
-              {court.facility.totalCourts > 0 && (
-                <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5 text-primary" />
-                  <div>
-                    <div className="text-sm text-muted-foreground">Courts</div>
-                    <div className="font-semibold">{court.facility.totalCourts} courts</div>
+              {/* Key facts */}
+              <dl className="club-facts">
+                {facts.map((f) => (
+                  <div key={f.label} className="club-fact">
+                    <dt>{f.label}</dt>
+                    <dd>
+                      {f.href ? (
+                        <a href={f.href} className={`club-fact-value hover:text-padel-green-dark ${f.mono ? "font-mono tracking-tight" : ""}`}>
+                          {f.value}
+                        </a>
+                      ) : (
+                        <span className={`club-fact-value ${f.mono ? "font-mono tracking-tight" : ""}`}>{f.value}</span>
+                      )}
+                      <span className="club-fact-sub">{f.sub}</span>
+                      {"sub2" in f && f.sub2 ? <span className="club-fact-sub font-medium text-foreground/70">{f.sub2}</span> : null}
+                    </dd>
                   </div>
+                ))}
+              </dl>
+
+              {/* Primary actions: only the ones that exist */}
+              {actions.length > 0 && (
+                <div
+                  className="club-actions"
+                  style={{ ["--club-actions" as string]: actions.length }}
+                >
+                  {actions.map((a, i) => (
+                    <TrackedLink
+                      key={a.key}
+                      href={a.href}
+                      type={a.kind}
+                      clubName={court.name}
+                      className={`club-action ${i === 0 ? "is-primary" : ""}`}
+                      {...(a.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    >
+                      {a.icon}
+                      <span>{a.label}</span>
+                    </TrackedLink>
+                  ))}
                 </div>
+              )}
+              {!court.bookingUrl && platform && !comingSoon && (
+                <p className="mt-3 text-sm text-muted-foreground">
+                  Courts are booked on <span className="font-medium text-foreground">{platform}</span>. Search
+                  for the club in the app, or start from its website.
+                </p>
               )}
             </div>
 
-            {/* Right: Hero Image — branded fallback when the club has no photo */}
-            <div className="relative aspect-video rounded-xl overflow-hidden border">
+            {/* Photo, or the designed court placeholder when there is none */}
+            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border bg-court shadow-sm">
               <ClubImage
                 src={court.heroImage || court.images[0]?.url}
                 alt={court.name}
                 courts={court.facility.totalCourts}
                 className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 45vw, 100vw"
                 priority
               />
             </div>
@@ -269,340 +454,349 @@ export default async function CourtPage({ params }: CourtPageProps) {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Photo gallery — only when the club has supplied more than one real photo */}
-            {court.images.length > 1 && (
-              <Card>
-                <CardHeader>
-                  <CardTitle>Photos</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {court.images.slice(1).map((img) => (
-                      <div key={img.url} className="relative aspect-[3/4] rounded-lg overflow-hidden border">
-                        <ClubImage src={img.url} alt={img.alt} className="object-cover" sizes="(min-width: 768px) 22vw, 50vw" />
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+      <div className="container mx-auto px-4 pb-12">
+        <div className="club-layout">
+          {/* The courts */}
+          <section className="club-area-courts club-card" aria-labelledby="club-courts">
+            <div className="club-section-head">
+              <h2 id="club-courts" className="club-h2">The courts</h2>
+              <span className="club-kicker">Plan view, to scale</span>
+            </div>
+            <div className="grain rounded-xl bg-court p-3 sm:p-5">
+              <CourtDiagram layout={layout} clubName={court.name} planned={comingSoon} />
+            </div>
+            {(court.facility.totalCourts > 0 || court.facility.courtSurface || court.facility.lighting || featureChips.length > 0) && (
+              <dl className="club-specs">
+                {court.facility.totalCourts > 0 && (
+                  <div><dt>Total courts</dt><dd className="font-mono">{court.facility.totalCourts}</dd></div>
+                )}
+                {court.facility.indoorCourts > 0 && (
+                  <div><dt>Indoor courts</dt><dd className="font-mono">{court.facility.indoorCourts}</dd></div>
+                )}
+                {court.facility.outdoorCourts > 0 && (
+                  <div><dt>Outdoor courts</dt><dd className="font-mono">{court.facility.outdoorCourts}</dd></div>
+                )}
+                {court.facility.courtSurface && (
+                  <div><dt>Court surface</dt><dd>{noEmDash(court.facility.courtSurface)}</dd></div>
+                )}
+                {court.facility.lighting && (
+                  <div><dt>Lighting</dt><dd>{court.facility.lighting}</dd></div>
+                )}
+                {featureChips.length > 0 && (
+                  <div><dt>Format</dt><dd>{featureChips.join(" · ")}</dd></div>
+                )}
+              </dl>
             )}
+          </section>
 
-            {/* Contact & Hours */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Contact & Hours</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {court.phone && (
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-primary" />
-                    <div>
-                      <div className="text-sm text-muted-foreground">Phone</div>
-                      <TrackedLink href={`tel:${court.phone}`} type="phone" clubName={court.name} className="font-medium hover:text-primary">{court.phone}</TrackedLink>
+          {/* Side column: hours, prices, contact (sticky on desktop) */}
+          <aside className="club-area-side">
+            <div className="club-side-inner">
+              <section className="club-card" aria-labelledby="club-hours">
+                {hours.published ? (
+                  <ClubHours
+                    heading="Hours"
+                    headingId="club-hours"
+                    days={hours.days}
+                    timeZone={timeZone}
+                    showLive={isOpenClub}
+                  >
+                    {hours.summary && <p className="club-hours-summary">{hours.summary}</p>}
+                    {comingSoon && (
+                      <p className="text-sm text-muted-foreground mb-2">Planned hours, before opening.</p>
+                    )}
+                    {tzLabel && <p className="sr-only">Times are in {tzLabel}.</p>}
+                  </ClubHours>
+                ) : (
+                  <>
+                    <div className="club-section-head">
+                      <h2 id="club-hours" className="club-h2">Hours</h2>
                     </div>
-                  </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {comingSoon
+                        ? "Not open yet. Opening hours will appear here once the club publishes them."
+                        : "The club does not publish its hours. Call or check the website before you go."}
+                    </p>
+                  </>
                 )}
-                {court.email && (
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-primary" />
-                    <div>
-                      <div className="text-sm text-muted-foreground">Email</div>
-                      <a href={`mailto:${court.email}`} className="font-medium hover:text-primary">{court.email}</a>
-                    </div>
-                  </div>
+                {hours.published && tzLabel && (
+                  <p className="mt-3 text-xs text-muted-foreground font-mono" aria-hidden="true">Local {tzLabel.toLowerCase()}</p>
                 )}
-                {court.website && (
-                  <div className="flex items-center gap-3">
-                    <Globe className="w-5 h-5 text-primary" />
-                    <div>
-                      <div className="text-sm text-muted-foreground">Website</div>
-                      <TrackedLink href={court.website} type="website" clubName={court.name} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary">
-                        Visit website
-                      </TrackedLink>
-                    </div>
-                  </div>
-                )}
-                {court.instagram && (
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                    <div>
-                      <div className="text-sm text-muted-foreground">Instagram</div>
-                      <TrackedLink href={court.instagram} type="social" clubName={court.name} platform="instagram" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary">
-                        Follow on Instagram
-                      </TrackedLink>
-                    </div>
-                  </div>
-                )}
-                {court.facebook && (
-                  <div className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    <div>
-                      <div className="text-sm text-muted-foreground">Facebook</div>
-                      <TrackedLink href={court.facebook} type="social" clubName={court.name} platform="facebook" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary">
-                        Follow on Facebook
-                      </TrackedLink>
-                    </div>
-                  </div>
-                )}
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-primary" />
-                  <div>
-                    <div className="text-sm text-muted-foreground">Today&apos;s Hours</div>
-                    <div className="font-medium">{todayHours}</div>
-                  </div>
+              </section>
+
+              <section id="prices" className="club-card scroll-mt-24" aria-labelledby="club-prices">
+                <div className="club-section-head">
+                  <h2 id="club-prices" className="club-h2">Prices</h2>
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* Map */}
-            <ClubMapClient
-              name={court.name}
-              address={court.address}
-              coordinates={court.coordinates}
-              googleMapsUrl={court.googleMapsUrl}
-            />
-
-            {/* Facility Details — only when real data exists */}
-            {(court.facility.totalCourts > 0 || court.facility.courtSurface || court.facility.lighting) && (
-              <Card>
-                <CardHeader>
-                  <CardTitle>Facility Details</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {court.facility.totalCourts > 0 && (
-                      <div>
-                        <div className="text-sm text-muted-foreground mb-1">Total Courts</div>
-                        <div className="font-medium">{court.facility.totalCourts}</div>
-                      </div>
-                    )}
-                    {court.facility.indoorCourts > 0 && (
-                      <div>
-                        <div className="text-sm text-muted-foreground mb-1">Indoor Courts</div>
-                        <div className="font-medium">{court.facility.indoorCourts}</div>
-                      </div>
-                    )}
-                    {court.facility.outdoorCourts > 0 && (
-                      <div>
-                        <div className="text-sm text-muted-foreground mb-1">Outdoor Courts</div>
-                        <div className="font-medium">{court.facility.outdoorCourts}</div>
-                      </div>
-                    )}
-                    {court.facility.courtSurface && (
-                      <div>
-                        <div className="text-sm text-muted-foreground mb-1">Court Surface</div>
-                        <div className="font-medium">{court.facility.courtSurface}</div>
-                      </div>
-                    )}
-                    {court.facility.lighting && (
-                      <div>
-                        <div className="text-sm text-muted-foreground mb-1">Lighting</div>
-                        <div className="font-medium">{court.facility.lighting}</div>
-                      </div>
-                    )}
+                {price && (
+                  <div className="club-price-hero">
+                    <p>
+                      <span className="font-mono text-2xl font-semibold tracking-tight">{price.perCourtHour}</span>
+                      <span className="text-sm text-muted-foreground"> per court hour</span>
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      About <span className="font-mono text-foreground">{price.perPlayer}</span> each when four players split it.
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
+                )}
+                {pricingItems.length > 0 ? (
+                  <>
+                    <p className="club-kicker mb-2">From the club</p>
+                    <ul className="space-y-2">
+                      {pricingItems.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm leading-relaxed">
+                          <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-padel-green" aria-hidden="true" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {comingSoon
+                      ? "Prices have not been announced yet."
+                      : "The club does not publish court prices. Call or check the website before you go."}
+                  </p>
+                )}
+                {!comingSoon && (court.bookingUrl || court.phone) && (
+                  <div className="mt-4">
+                    {court.bookingUrl ? (
+                      <TrackedLink href={court.bookingUrl} type="website" clubName={court.name} target="_blank" rel="noopener noreferrer" className="club-btn">
+                        <Calendar aria-hidden="true" />
+                        Book Now
+                      </TrackedLink>
+                    ) : court.phone ? (
+                      <TrackedLink href={`tel:${court.phone}`} type="phone" clubName={court.name} className="club-btn">
+                        <Phone aria-hidden="true" />
+                        Call to Book
+                      </TrackedLink>
+                    ) : null}
+                  </div>
+                )}
+              </section>
+
+              <section className="club-card" aria-labelledby="club-contact">
+                <div className="club-section-head">
+                  <h2 id="club-contact" className="club-h2">Contact</h2>
+                </div>
+                <ul className="club-contact">
+                  {court.phone && (
+                    <li>
+                      <Phone aria-hidden="true" />
+                      <div>
+                        <span className="club-contact-label">Phone</span>
+                        <TrackedLink href={`tel:${court.phone}`} type="phone" clubName={court.name} className="club-contact-link">{court.phone}</TrackedLink>
+                      </div>
+                    </li>
+                  )}
+                  {court.email && (
+                    <li>
+                      <Mail aria-hidden="true" />
+                      <div>
+                        <span className="club-contact-label">Email</span>
+                        <a href={`mailto:${court.email}`} className="club-contact-link break-all">{court.email}</a>
+                      </div>
+                    </li>
+                  )}
+                  {court.website && (
+                    <li>
+                      <Globe aria-hidden="true" />
+                      <div>
+                        <span className="club-contact-label">Website</span>
+                        <TrackedLink href={court.website} type="website" clubName={court.name} target="_blank" rel="noopener noreferrer" className="club-contact-link">
+                          Visit website
+                        </TrackedLink>
+                      </div>
+                    </li>
+                  )}
+                  {court.instagram && (
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                      <div>
+                        <span className="club-contact-label">Instagram</span>
+                        <TrackedLink href={court.instagram} type="social" clubName={court.name} platform="instagram" target="_blank" rel="noopener noreferrer" className="club-contact-link">
+                          Follow on Instagram
+                        </TrackedLink>
+                      </div>
+                    </li>
+                  )}
+                  {court.facebook && (
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                      <div>
+                        <span className="club-contact-label">Facebook</span>
+                        <TrackedLink href={court.facebook} type="social" clubName={court.name} platform="facebook" target="_blank" rel="noopener noreferrer" className="club-contact-link">
+                          Follow on Facebook
+                        </TrackedLink>
+                      </div>
+                    </li>
+                  )}
+                  {fullAddress && (
+                    <li>
+                      <MapPin aria-hidden="true" />
+                      <div>
+                        <span className="club-contact-label">Address</span>
+                        <span className="text-sm">{fullAddress}</span>
+                      </div>
+                    </li>
+                  )}
+                </ul>
+              </section>
+            </div>
+          </aside>
+
+          {/* Main column */}
+          <div className="club-area-main space-y-6 min-w-0">
+            {court.description && (
+              <section className="club-card" aria-labelledby="club-about">
+                <div className="club-section-head">
+                  <h2 id="club-about" className="club-h2">About {court.name}</h2>
+                </div>
+                <p className="text-[15px] leading-relaxed text-foreground/85">{noEmDash(court.description)}</p>
+              </section>
             )}
 
-            {/* Amenities — only when data exists */}
-            {court.amenities.length > 0 && (
-              <Card>
-                <CardHeader>
-                  <CardTitle>Amenities</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-3">
-                    {court.amenities.map((amenity) => (
-                      <div key={amenity} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-primary" />
-                        <span>{amenity}</span>
-                      </div>
+            {(court.amenities.length > 0 || onSite.length > 0) && (
+              <section className="club-card" aria-labelledby="club-amenities">
+                <div className="club-section-head">
+                  <h2 id="club-amenities" className="club-h2">Amenities</h2>
+                </div>
+                {onSite.length > 0 && (
+                  <ul className="club-chips mb-3">
+                    {onSite.map((o) => (
+                      <li key={o.label} className="club-amenity is-key">{o.icon}{o.label}</li>
                     ))}
-                  </div>
-                </CardContent>
-              </Card>
+                  </ul>
+                )}
+                {court.amenities.length > 0 && (
+                  <ul className="club-chips">
+                    {court.amenities.map((amenity) => (
+                      <li key={amenity} className="club-amenity">
+                        <CheckCircle aria-hidden="true" />
+                        {noEmDash(amenity.charAt(0).toUpperCase() + amenity.slice(1))}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
             )}
 
             {/* What Players Say — review themes */}
             {((court.positiveReviewThemes && court.positiveReviewThemes.length > 0) || (court.negativeReviewThemes && court.negativeReviewThemes.length > 0)) && (
-              <Card>
-                <CardHeader>
-                  <CardTitle>What Players Say</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
+              <section className="club-card" aria-labelledby="club-players">
+                <div className="club-section-head">
+                  <h2 id="club-players" className="club-h2">What players say</h2>
+                </div>
+                <div className="space-y-4">
                   {court.positiveReviewThemes && court.positiveReviewThemes.length > 0 && (
                     <div>
-                      <div className="text-sm text-muted-foreground mb-2">Players love</div>
-                      <div className="flex flex-wrap gap-2">
+                      <p className="club-kicker mb-2">Players love</p>
+                      <ul className="club-chips">
                         {court.positiveReviewThemes.map((theme) => (
-                          <Badge key={theme} variant="outline" className="bg-green-50 text-green-700 border-green-200">{theme}</Badge>
+                          <li key={theme} className="club-amenity is-good">{noEmDash(theme)}</li>
                         ))}
-                      </div>
+                      </ul>
                     </div>
                   )}
                   {court.negativeReviewThemes && court.negativeReviewThemes.length > 0 && (
                     <div>
-                      <div className="text-sm text-muted-foreground mb-2">Could improve</div>
-                      <div className="flex flex-wrap gap-2">
+                      <p className="club-kicker mb-2">Could improve</p>
+                      <ul className="club-chips">
                         {court.negativeReviewThemes.map((theme) => (
-                          <Badge key={theme} variant="outline" className="bg-amber-50 text-amber-700 border-amber-200">{theme}</Badge>
+                          <li key={theme} className="club-amenity is-meh">{noEmDash(theme)}</li>
                         ))}
-                      </div>
+                      </ul>
                     </div>
                   )}
-                </CardContent>
-              </Card>
+                </div>
+              </section>
             )}
 
-            {/* FAQs */}
-            {court.faqs && court.faqs.length > 0 && (
-              <Card>
-                <CardHeader>
-                  <CardTitle>Frequently Asked Questions</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {court.faqs.map((faq, index) => (
-                    <div key={index}>
-                      <h3 className="font-semibold mb-2">{faq.question}</h3>
-                      <p className="text-muted-foreground">{faq.answer}</p>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-            )}
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Pricing Card — only when pricingText exists */}
-            {court.pricingText && (
-              <Card>
-                <CardHeader>
-                  <CardTitle>Pricing</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-2">
-                    {court.pricingText.split(";").map((item) => item.trim()).filter(Boolean).map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm">
-                        <span className="text-primary mt-1">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {court.bookingUrl ? (
-                    <Button className="w-full" asChild>
-                      <TrackedLink href={court.bookingUrl} type="website" clubName={court.name} target="_blank" rel="noopener noreferrer">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        Book Now
-                      </TrackedLink>
-                    </Button>
-                  ) : court.phone ? (
-                    <Button className="w-full" asChild>
-                      <TrackedLink href={`tel:${court.phone}`} type="phone" clubName={court.name}>
-                        <Phone className="w-4 h-4 mr-2" />
-                        Call to Book
-                      </TrackedLink>
-                    </Button>
-                  ) : null}
-                </CardContent>
-              </Card>
-            )}
-
-            {/* Book button when no pricing but has contact */}
-            {!court.pricingText && (court.bookingUrl || court.phone) && (
-              <Card>
-                <CardContent className="pt-6">
-                  {court.bookingUrl ? (
-                    <Button className="w-full" asChild>
-                      <TrackedLink href={court.bookingUrl} type="website" clubName={court.name} target="_blank" rel="noopener noreferrer">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        Book Now
-                      </TrackedLink>
-                    </Button>
-                  ) : court.phone ? (
-                    <Button className="w-full" asChild>
-                      <TrackedLink href={`tel:${court.phone}`} type="phone" clubName={court.name}>
-                        <Phone className="w-4 h-4 mr-2" />
-                        Call to Book
-                      </TrackedLink>
-                    </Button>
-                  ) : null}
-                </CardContent>
-              </Card>
-            )}
-
-            {/* Hours Card */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Hours of Operation</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  {court.hours.map((hour) => (
-                    <div key={hour.dayOfWeek} className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">{hour.dayOfWeek}</span>
-                      <span className="font-medium">
-                        {hour.closed ? "Closed" : `${hour.opens} - ${hour.closes}`}
-                      </span>
+            {/* Photo gallery — only when the club has supplied more than one real photo */}
+            {court.images.length > 1 && (
+              <section className="club-card" aria-labelledby="club-photos">
+                <div className="club-section-head">
+                  <h2 id="club-photos" className="club-h2">Photos</h2>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  {court.images.slice(1).map((img) => (
+                    <div key={img.url} className="relative aspect-[3/4] rounded-lg overflow-hidden border">
+                      <ClubImage src={img.url} alt={img.alt} className="object-cover" sizes="(min-width: 768px) 22vw, 50vw" />
                     </div>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
+              </section>
+            )}
+
+            {/* Map */}
+            <MapBoundary address={fullAddress} mapsUrl={court.googleMapsUrl}>
+              <ClubMapClient
+                name={court.name}
+                address={court.address}
+                coordinates={court.coordinates}
+                googleMapsUrl={court.googleMapsUrl}
+              />
+            </MapBoundary>
+
+            {/* FAQs */}
+            {court.faqs && court.faqs.length > 0 && (
+              <section className="club-card" aria-labelledby="club-faq">
+                <div className="club-section-head">
+                  <h2 id="club-faq" className="club-h2">Frequently asked questions</h2>
+                </div>
+                <div className="divide-y">
+                  {court.faqs.map((faq, index) => (
+                    <div key={index} className="py-3 first:pt-0 last:pb-0">
+                      <h3 className="font-semibold mb-1.5 text-[15px]">{noEmDash(faq.question)}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{noEmDash(faq.answer)}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
         </div>
 
-        {/* Related Courts */}
-        {relatedCourts.length > 0 && (
-          <section className="mt-12">
-            <h2 className="text-2xl font-bold mb-6">Nearby Clubs</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {relatedCourts.map((relatedCourt) => (
-                <Link
-                  key={relatedCourt.id}
-                  href={`/courts/${relatedCourt.slug}`}
-                  className="group"
-                >
-                  <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden">
-                    <div className="aspect-video relative overflow-hidden">
-                      <ClubImage
-                        src={relatedCourt.heroImage}
-                        alt={relatedCourt.name}
-                        courts={relatedCourt.facility.totalCourts}
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-1">
-                        {relatedCourt.name}
-                      </CardTitle>
-                      <CardDescription className="space-y-2">
-                        <div className="flex items-center gap-1 text-sm">
-                          <MapPin className="w-4 h-4" />
-                          {relatedCourt.address.city}, {relatedCourt.address.stateCode}
-                        </div>
-                        <div className="flex items-center gap-4 text-sm">
-                          {relatedCourt.rating.ratingValue > 0 && (
-                            <div className="flex items-center gap-1">
-                              <Star className="w-4 h-4 fill-primary text-primary" />
-                              <span className="font-medium">{relatedCourt.rating.ratingValue}</span>
-                            </div>
-                          )}
-                          {relatedCourt.facility.totalCourts > 0 && (
-                            <div className="flex items-center gap-1">
-                              <Clock className="w-4 h-4" />
-                              {relatedCourt.facility.totalCourts} {relatedCourt.facility.totalCourts === 1 ? 'court' : 'courts'}
-                            </div>
-                          )}
-                        </div>
-                      </CardDescription>
-                    </CardHeader>
-                  </Card>
+        {/* Nearby clubs */}
+        {nearby.length > 0 && (
+          <section className="mt-12" aria-labelledby="club-nearby">
+            <div className="flex items-end justify-between gap-4 mb-5">
+              <h2 id="club-nearby" className="font-display text-2xl font-bold">Nearby clubs</h2>
+              {stateInfo && (
+                <Link href={`/${stateInfo.slug}/${citySlug}`} className="hidden sm:inline-flex items-center gap-1 text-sm text-padel-green-dark hover:underline">
+                  All in {court.address.city} <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                </Link>
+              )}
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {nearby.map(({ club, miles }) => (
+                <Link key={club.id} href={`/courts/${club.slug}`} className="group club-near">
+                  <div className="aspect-video relative overflow-hidden bg-court">
+                    <ClubImage
+                      src={club.heroImage}
+                      alt={club.name}
+                      courts={club.facility.totalCourts}
+                      className="object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-105"
+                      sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 100vw"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <p className="font-display font-semibold leading-snug line-clamp-1 group-hover:text-padel-green-dark">{club.name}</p>
+                    <p className="mt-1 flex items-center gap-1 text-sm text-muted-foreground">
+                      <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
+                      {club.address.city}, {club.address.stateCode}
+                    </p>
+                    <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-muted-foreground">
+                      {typeof miles === "number" && <span>{formatMiles(miles)}</span>}
+                      {club.facility.totalCourts > 0 && (
+                        <span>{club.facility.totalCourts} {club.facility.totalCourts === 1 ? "court" : "courts"}</span>
+                      )}
+                      {club.rating.ratingValue > 0 && (
+                        <span className="inline-flex items-center gap-0.5"><Star className="w-3 h-3 fill-amber-400 text-amber-400" aria-hidden="true" />{club.rating.ratingValue}</span>
+                      )}
+                      {club.status === "coming_soon" && <span className="text-amber-700">coming soon</span>}
+                    </p>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -610,39 +804,46 @@ export default async function CourtPage({ params }: CourtPageProps) {
         )}
 
         {/* Explore More */}
-        {(() => {
-          const citySlug = court.address.city.toLowerCase().replace(/\s+/g, "-");
-          const blogSlug = cityBlogSlugs[citySlug];
-          const stateInfo = getStates().find(s => s.code === court.address.stateCode);
-          return (
-            <section className="mt-12 border-t pt-8">
-              <h2 className="text-lg font-semibold mb-4">Explore More</h2>
-              <div className="flex flex-wrap gap-x-6 gap-y-2">
-                {stateInfo && (
-                  <Link href={`/${stateInfo.slug}/${citySlug}`} className="text-primary hover:underline">
-                    All padel clubs in {court.address.city} &rarr;
-                  </Link>
-                )}
-                {blogSlug && (
-                  <Link href={`/blog/best-padel-clubs-${blogSlug}`} className="text-primary hover:underline">
-                    Best Padel Clubs in {court.address.city} (2026) &rarr;
-                  </Link>
-                )}
-                {stateInfo && (
-                  <Link href={`/${stateInfo.slug}`} className="text-primary hover:underline">
-                    Browse all {stateInfo.name} padel clubs &rarr;
-                  </Link>
-                )}
-                <Link href="/blog/best-padel-rackets-beginners" className="text-primary hover:underline">
-                  Best Beginner Rackets (2026) &rarr;
-                </Link>
-                <Link href="/rules" className="text-primary hover:underline">
-                  Learn the Rules &rarr;
-                </Link>
-              </div>
-            </section>
-          );
-        })()}
+        <section className="mt-12 border-t pt-8">
+          <h2 className="text-lg font-semibold mb-4">Explore More</h2>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {stateInfo && (
+              <Link href={`/${stateInfo.slug}/${citySlug}`} className="text-primary hover:underline">
+                All padel clubs in {court.address.city}{" "}&rarr;
+              </Link>
+            )}
+            {blogSlug && (
+              <Link href={`/blog/best-padel-clubs-${blogSlug}`} className="text-primary hover:underline">
+                Best Padel Clubs in {court.address.city}{" "}(2026) &rarr;
+              </Link>
+            )}
+            {stateInfo && (
+              <Link href={`/${stateInfo.slug}`} className="text-primary hover:underline">
+                Browse all {stateInfo.name}{" "}padel clubs &rarr;
+              </Link>
+            )}
+            <Link href="/blog/best-padel-rackets-beginners" className="text-primary hover:underline">
+              Best Beginner Rackets (2026) &rarr;
+            </Link>
+            <Link href="/rules" className="text-primary hover:underline">
+              Learn the Rules &rarr;
+            </Link>
+          </div>
+        </section>
+
+        {/* Tell us what changed */}
+        <section className="mt-12 club-card club-correction" aria-labelledby="club-correction">
+          <div className="grid gap-6 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] md:gap-10">
+            <div>
+              <h2 id="club-correction" className="club-h2">Tell us what changed</h2>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                Clubs change prices, hours and courts all the time. If you play at {court.name} or run it and something
+                here is out of date, tell us and we will fix it. No account needed.
+              </p>
+            </div>
+            <ClubCorrectionForm slug={court.slug} name={court.name} />
+          </div>
+        </section>
 
         {/* Gear Widget */}
         <GearWidget />
