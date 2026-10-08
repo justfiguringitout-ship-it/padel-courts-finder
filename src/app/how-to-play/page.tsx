@@ -1,11 +1,30 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { GearWidget } from '@/components/GearWidget';
-import { getSiteStats } from '@/lib/site-structure';
+import { getSiteStats, getStates, getAllCities } from '@/lib/site-structure';
+import { padelCourts } from '@/data/padel-courts';
+import { CourtDiagram } from './_components/court-diagram';
+import { WallSequence } from './_components/wall-sequence';
+import {
+  LearnHero,
+  Toc,
+  Section,
+  Prose,
+  Steps,
+  Callout,
+  FaqList,
+  Sources,
+  faqJsonLd,
+  type Faq,
+} from './_components/learn-ui';
+
+const TITLE = "How to Play Padel: Complete Beginner's Guide (2026)";
+const DESC =
+  "New to padel? A plain-English beginner's guide: how a point works, the underhand serve, playing the ball off the glass, the first shots to learn, what to wear, and how to find a game in the US.";
 
 export const metadata: Metadata = {
-  title: 'How to Play Padel: Complete Beginner\'s Guide (2026)',
-  description: 'New to padel? It\'s like a mix of tennis and ping-pong on a court with glass walls, played in doubles. Our beginner\'s guide covers the rules, scoring, gear, and how to get started this week.',
+  title: TITLE,
+  description: DESC,
   keywords: [
     "how to play padel",
     "padel rules",
@@ -15,612 +34,530 @@ export const metadata: Metadata = {
     "padel scoring",
     "padel techniques",
     "padel court",
+    "how to start playing padel",
   ],
   openGraph: {
-    title: 'How to Play Padel: Complete Beginner\'s Guide (2026)',
-    description: 'New to padel? It\'s like a mix of tennis and ping-pong on a court with glass walls, played in doubles. Our beginner\'s guide covers the rules, scoring, gear, and how to get started this week.',
+    title: TITLE,
+    description: DESC,
     url: 'https://www.padelcourtsfinder.com/how-to-play',
     siteName: 'Padel Courts Finder',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Play Padel: Complete Beginner\'s Guide (2026)',
-    description: 'New to padel? It\'s like a mix of tennis and ping-pong on a court with glass walls, played in doubles. Our beginner\'s guide covers the rules, scoring, gear, and how to get started this week.',
+    title: TITLE,
+    description: DESC,
   },
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/how-to-play',
   },
 };
 
-export default function HowToPlayPage() {
-  const articleData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "How to Play Padel: Complete Beginner's Guide (2026)",
-    "description": "Learn how to play padel in 2026. Complete beginner's guide covering rules, scoring, equipment, court layout, basic shots, and tips for your first match.",
-    "datePublished": "2025-01-15T00:00:00Z",
-    "dateModified": "2026-07-31T00:00:00Z",
-    "author": {
-      "@type": "Organization",
-      "name": "Padel Courts Finder",
-      "url": "https://www.padelcourtsfinder.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Padel Courts Finder",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.padelcourtsfinder.com/logo.png"
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.padelcourtsfinder.com/how-to-play"
-    }
-  };
+const faqs: Faq[] = [
+  {
+    q: "How do I get started playing padel?",
+    a: "Find a club near you and book a beginner clinic or an intro lesson. Most clubs rent rackets at the front desk, so all you need to bring is court shoes and sports clothes. A clinic also pairs you with players at your level, which matters because padel is played two against two. After a few sessions you will know whether you want to buy your own racket.",
+  },
+  {
+    q: "How do you play padel?",
+    a: "Two teams of two play on an enclosed court 20 metres long and 10 metres wide. You serve underhand into the diagonal service box, keep score like tennis, and let the ball bounce no more than once on your side before you hit it back. After that bounce the ball can come off your walls and you can still play it. Your own shot has to land on the other team's floor before it touches their walls.",
+  },
+  {
+    q: "Is padel easy to learn?",
+    a: "It is one of the easier racket sports to start. The serve is underhand, the court is small, the racket is short and solid, and the walls keep the ball in play, so most beginners get proper rallies going in their first session. Reading the ball as it comes off the glass takes longer and is the skill most new players spend their first weeks on.",
+  },
+  {
+    q: "Can you play padel singles?",
+    a: "Yes, although the official FIP rules are written for doubles and almost every game in the US is two against two. Some clubs build narrower singles courts, about 6 metres wide, for one against one. Two people can also book a regular court to practise rallies and serves.",
+  },
+  {
+    q: "How long is a game of padel?",
+    a: "There is no clock in padel. A match is usually the best of three sets, and how long it takes depends on how close the games are. US clubs sell court time in fixed slots, commonly 60 or 90 minutes, and social groups play as many games as fit in their booking.",
+  },
+  {
+    q: "Do I need my own padel racket?",
+    a: "Not at first. Most clubs rent rackets, so you can play a few sessions before you buy. When you do buy, a round-shaped racket is the usual choice for beginners because its sweet spot sits in the middle of the face and it forgives off-centre hits.",
+  },
+  {
+    q: "How is padel different from tennis?",
+    a: "The scoring is the same as tennis. The court is about a third of the size and enclosed by walls you are allowed to use, the serve is underhand, the racket is solid with no strings, and the game is almost always played as doubles.",
+  },
+  {
+    q: "How is padel different from pickleball?",
+    a: "Both have small courts and an underhand serve. Padel uses a pressurised ball like a tennis ball, a perforated foam racket, tennis scoring and glass walls that stay in play. Pickleball uses a plastic ball with holes, a flat paddle, an open court with a non-volley zone next to the net, and its own scoring.",
+  },
+];
 
-  const faqData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do you play padel?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Padel is played 2v2 on an enclosed court about a third the size of a tennis court. You serve underhand — bounce the ball and strike it at or below waist height into the diagonal service box. Scoring is exactly like tennis (15, 30, 40, game). The defining rule is the walls: after the ball bounces once on your side you can play it off your own glass walls, and you can hit into your opponents' walls as long as the ball clears the net and lands in their court first. The ball may bounce only once before you return it."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I get started playing padel?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Find a club near you and book a beginner clinic or an intro lesson — most US clubs run them, and rackets are usually included so you don't need to buy gear first. Padel is a doubles game, so a clinic also solves the hardest part of starting: finding people to play with. After two or three sessions you'll know whether to buy your own racket."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is padel good for beginners?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It's one of the easiest racket sports to start. The enclosed court keeps balls in play, the underhand serve removes the hardest skill in tennis, and the solid short-handled racket is simple to control. Most people rally in their first session — which is exactly why padel is the fastest-growing racket sport in the US."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is padel easy to learn?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Most beginners rally comfortably within their first session. The enclosed glass court keeps the ball in play much longer than tennis, so you spend more time hitting and less time chasing balls. The underhand serve is also much easier to master than a tennis serve. Within 2–3 sessions, most people feel competent enough to play real matches."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What equipment do I need to play padel?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You need a padel racket ($80–130 for beginners), padel balls (~$14 for a can of 3), and non-marking court shoes ($80–130). Many clubs offer racket and ball rentals so you can try before you buy. Standard athletic clothing works fine — there's nothing padel-specific required."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I play padel as singles?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Technically yes, but padel is designed for and almost always played as doubles (2 vs 2). The court dimensions, rules, and strategy are all built around 4 players. Some clubs offer singles play on smaller courts, but doubles is the standard format worldwide."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is padel different from tennis?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Padel is played on a smaller enclosed court with glass walls that are in play — you can hit the ball off the walls like squash. The racket is solid with no strings, the serve is underhand, and it's always played as doubles. The scoring system is the same as tennis (15-30-40-game), but the gameplay feels completely different because of the walls, which create longer rallies and unique angles."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does it cost to play padel?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Court rental typically costs $30–75 per hour, split between 4 players — so $8–19 per person per session. Some clubs charge per person instead. Many clubs also offer membership plans that bring the per-session cost down. Equipment rental (racket + balls) is usually $5–15 if you don't have your own gear."
-        }
-      }
-    ]
-  };
+const articleData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": TITLE,
+  "description": DESC,
+  "datePublished": "2025-01-15T00:00:00Z",
+  "dateModified": "2026-10-08T00:00:00Z",
+  "author": {
+    "@type": "Organization",
+    "name": "Padel Courts Finder",
+    "url": "https://www.padelcourtsfinder.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Padel Courts Finder",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.padelcourtsfinder.com/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.padelcourtsfinder.com/how-to-play"
+  }
+};
+
+const toc = [
+  { id: "first-game", label: "Your first game" },
+  { id: "court", label: "The court" },
+  { id: "gear", label: "What to bring" },
+  { id: "point", label: "How a point works" },
+  { id: "serve", label: "The serve" },
+  { id: "walls", label: "Using the walls" },
+  { id: "shots", label: "Basic shots" },
+  { id: "etiquette", label: "Etiquette" },
+  { id: "find-a-game", label: "Find a game" },
+  { id: "faq", label: "FAQ" },
+];
+
+const link = "font-medium text-padel-green-dark underline decoration-padel-green/40 underline-offset-2 hover:decoration-padel-green";
+
+export default function HowToPlayPage() {
+  const stats = getSiteStats();
+  const lessonClubs = padelCourts.filter((c) => c.lessonsAvailable).length;
+  const states = getStates();
+  const stateSlug = new Map(states.map((s) => [s.code, s.slug]));
+  const topStates = states.slice(0, 8);
+  const topCities = getAllCities()
+    .filter((c) => stateSlug.has(c.stateCode))
+    .slice(0, 8);
 
   return (
-    <div className="min-h-screen bg-stone-50">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
-      />
+    <div className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }} />
 
-      {/* Sky-Blue Accent Stripe */}
-      <div className="h-1 bg-sky-500" />
+      <div className="h-1 bg-padel-green" />
 
-      {/* Dark Hero */}
-      <header className="bg-stone-900">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
-          <span className="inline-block bg-sky-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">How-To Guide</span>
-          <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-            How to Play Padel: Complete Beginner&apos;s Guide
-          </h1>
-          <p className="text-stone-400 mt-3">Everything you need to know to start playing America&apos;s fastest-growing sport</p>
-          <div className="text-sm text-stone-500 mt-4">
-            <span>Updated July 31, 2026</span>
-            <span className="mx-2">&bull;</span>
-            <span>15 min read</span>
-          </div>
-        </div>
-      </header>
+      <LearnHero
+        kicker="Beginner's guide"
+        title="How to Play Padel: A Beginner's Guide"
+        sub="The court, the serve, the walls and the first shots to learn, written for someone who has never stepped onto a padel court."
+        updated="October 8, 2026"
+        readTime="12 min read"
+      >
+        <dl className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {[
+            ["Players", "2 against 2"],
+            ["Court", "20 m x 10 m"],
+            ["Serve", "Underhand"],
+            ["Scoring", "Same as tennis"],
+          ].map(([k, v]) => (
+            <div key={k} className="glass-panel rounded-xl px-4 py-3">
+              <dt className="text-xs uppercase tracking-wider text-stone-400">{k}</dt>
+              <dd className="font-display mt-1 font-semibold text-white">{v}</dd>
+            </div>
+          ))}
+        </dl>
+      </LearnHero>
 
       <article>
-        {/* White Section: Intro + Quick Start */}
-        <div className="bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            {/* Intro */}
-            <div className="prose prose-lg prose-stone max-w-none mb-10">
-              <p className="text-stone-600 leading-[1.75]">
-                <strong>Padel is a racket sport that feels like a mix of tennis and ping-pong, played on a small court with glass walls you can bounce the ball off &mdash; almost always in doubles, with a partner.</strong> The rackets are solid paddles (no strings), the serve is underhand, and scoring works exactly like tennis. If you can rally in ping-pong, you can rally in padel on day one.
+        {/* Intro: what padel is */}
+        <div className="mx-auto max-w-4xl px-4 pt-10 sm:px-6 lg:px-8">
+          <Prose>
+            <p className="text-lg leading-[1.7] text-stone-800">
+              Padel is a racket sport for four people, played two against two on a glass-walled court about a third the
+              size of a tennis court. You keep score like tennis and serve underhand, and once the ball has bounced on your
+              side you are allowed to play it off the walls, which is why the rallies last so long.
+            </p>
+            <p>
+              The game was invented in Acapulco, Mexico, in 1969 by Enrique Corcuera, grew up in Spain and Argentina, and
+              has spread quickly in the US over the last few years. Our directory now lists {stats.totalCourts} padel clubs
+              in {stats.totalStates} states. This guide covers what you need for a first game, in the order you will need
+              it. When you want the full rulebook, our{" "}
+              <Link href="/rules" className={link}>padel rules guide</Link> has every detail.
+            </p>
+          </Prose>
+        </div>
+
+        <Toc items={toc} />
+
+        <Section id="first-game" eyebrow="Start here" title="How to get started: your first game in five steps">
+          <Steps
+            items={[
+              <>
+                Find a club near you. Search the{" "}
+                <Link href="/search" className={link}>Padel Courts Finder directory</Link> by city or state. {lessonClubs} of
+                the {stats.totalCourts} clubs we list say they offer lessons or clinics.
+              </>,
+              <>
+                Book a beginner clinic or an intro lesson for your first visit. A coach
+                runs the session and groups you with players at your level, which also solves the hardest part of a doubles
+                sport, finding three other people. Our list of{" "}
+                <Link href="/padel-lessons" className={link}>clubs that offer padel lessons</Link> is a good place to start.
+              </>,
+              <>
+                Rent a racket. Most clubs rent rackets and sell balls at the front
+                desk, so you can wait to buy until you know you enjoy the game.
+              </>,
+              <>
+                Wear court shoes and sports clothes. Padel means short sprints and
+                quick stops, and running shoes give little support when you change direction.
+              </>,
+              <>
+                Learn two rules before you go. Serve underhand after bouncing the
+                ball, and let a ball bounce no more than once on your side, after which you can play it off the glass. You
+                can pick up the rest on court.
+              </>,
+            ]}
+          />
+        </Section>
+
+        <Section id="court" eyebrow="The basics" title="The padel court" tone="stone">
+          <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
+            <Prose>
+              <p>
+                A padel court is 20 metres long and 10 metres wide, about 66 by 33 feet, with a net across the middle that
+                stands 88 cm high in the centre and 92 cm at the posts. The whole court is enclosed. Each back wall is 3
+                metres of glass (or another solid surface) with a metre of metal mesh on top, and each side wall has glass at
+                both ends with mesh in the middle, where the doors are.
               </p>
-              <p className="text-stone-600 leading-[1.75]">
-                It&apos;s the fastest-growing sport in the world &mdash; and for good reason. It&apos;s easier to pick up than tennis, more social (always played in doubles), and addictive from the very first rally. The enclosed glass court keeps the ball in play longer, so beginners get real rallies from day one instead of chasing balls. Whether you&apos;ve never held a racket or you&apos;re a tennis player looking for something new, padel is remarkably easy to start and endlessly rewarding to improve at.
+              <p>
+                The only lines on the floor are for serving. A service line crosses each half 6.95 metres from the net, and a
+                centre line splits the area between the net and the service line into two service boxes. Once the serve is in,
+                the lines stop mattering and the walls decide what happens next.
               </p>
-              <p className="text-stone-600 leading-[1.75]">
-                This guide covers everything you need to walk onto a padel court for the first time with confidence &mdash; the court, the rules, the gear, the shots, and practical tips for your first match. Curious how padel stacks up against pickleball? Read our <Link href="/blog/padel-vs-pickleball" className="text-sky-600 hover:underline font-medium">Padel vs Pickleball comparison</Link>.
+              <ul className="space-y-3 pt-1">
+                <li className="flex gap-3">
+                  <span aria-hidden="true" className="mt-2 h-2.5 w-2.5 flex-none rounded-full bg-sky-300" />
+                  <span>The glass gives a true bounce. After the ball has bounced on your floor, you can let it come off your glass and still hit it.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span aria-hidden="true" className="mt-2 h-2.5 w-2.5 flex-none rounded-full bg-slate-400" />
+                  <span>The metal mesh is still in play after a bounce, but the ball comes off it at odd angles. Your own shot may never touch your own mesh.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span aria-hidden="true" className="mt-2 h-2.5 w-2.5 flex-none rounded-full bg-padel-green" />
+                  <span>The doors are openings in the side walls. On courts with enough space outside, advanced players may run out through them to chase a ball, which the rules guide explains.</span>
+                </li>
+              </ul>
+            </Prose>
+            <CourtDiagram />
+          </div>
+        </Section>
+
+        <Section id="gear" eyebrow="Before you go" title="What to bring and wear">
+          <Prose>
+            <p>
+              For a first session you need less than you might think, and the club can usually cover the rest. Here is what
+              each item does and when it is worth buying your own.
+            </p>
+          </Prose>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                h: "Racket",
+                p: "Padel rackets are solid and perforated, with no strings, and no longer than 45.5 cm under FIP rules. Rent one for your first few sessions. When you buy, a round shape is the usual beginner pick because the sweet spot sits in the middle of the face.",
+              },
+              {
+                h: "Balls",
+                p: "Padel balls look like tennis balls and are close in size, but they are made to padel's own specification, so buy padel balls. Clubs usually sell cans at the front desk.",
+              },
+              {
+                h: "Shoes",
+                p: "Wear court shoes with a herringbone or clay-court sole, which grips the sand-filled artificial grass found on most courts. Some clubs require non-marking soles, so check before you go.",
+              },
+              {
+                h: "Clothes and the wrist cord",
+                p: "Ordinary sports clothes are fine. Every padel racket has a cord on the handle; slip it over your wrist, because the FIP makes it compulsory and it stops a slipping racket from hitting your partner.",
+              },
+            ].map((c) => (
+              <div key={c.h} className="rounded-xl border border-stone-200 bg-white p-5">
+                <h3 className="font-display font-bold text-court">{c.h}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-stone-600">{c.p}</p>
+              </div>
+            ))}
+          </div>
+          <Prose className="mt-6">
+            <p>
+              When you are ready to buy, our guide to the{" "}
+              <Link href="/blog/best-padel-rackets-beginners" className={link}>best padel rackets for beginners</Link>{" "}
+              compares the ones we tested. If you are coming back to sport after a long break, read a physical therapist&apos;s{" "}
+              <Link href="/blog/padel-injuries-prevention-tips" className={link}>six tips for preventing padel injuries</Link>{" "}
+              before you book three games a week.
+            </p>
+          </Prose>
+        </Section>
+
+        <Section id="point" eyebrow="Step by step" title="How a point works" tone="stone">
+          <Steps
+            items={[
+              <>One player serves from behind the service line, diagonally across the net into the opposite service box.</>,
+              <>
+                The receiver lets the serve bounce in the box and then hits it back. The return of serve is the one shot in
+                padel you may not volley.
+              </>,
+              <>
+                From then on the ball goes back and forth, and either player on a team can take it. You can hit it before it
+                bounces (a volley) or after one bounce on your floor.
+              </>,
+              <>
+                After that one bounce, the ball may hit your walls as many times as it likes, and you can still play it as long
+                as it has not touched the floor a second time.
+              </>,
+              <>
+                Your shot has to cross the net and land on the other team&apos;s floor before it touches their walls or mesh. On
+                its way over, it is allowed to come off your own glass.
+              </>,
+              <>
+                The point ends when someone misses: the ball bounces twice, goes into the net, hits the other team&apos;s walls
+                before their floor, or hits a player. A ball that bounces in your opponents&apos; half and then flies out of the
+                court wins you the point, unless the court is set up for playing outside.
+              </>,
+            ]}
+          />
+          <div className="mt-8">
+            <Callout title="Keeping score">
+              Points go 15, 30, 40 and game, exactly like tennis, and six games win a set. At 40-40 there are three official
+              ways to finish the game (advantage, golden point and star point), and clubs differ, so agree on one before you
+              start. The <Link href="/rules#scoring" className={link}>scoring section of our rules guide</Link> explains all
+              three.
+            </Callout>
+          </div>
+        </Section>
+
+        <Section id="serve" eyebrow="Starting the point" title="The padel serve">
+          <Prose>
+            <p>
+              The serve is underhand and gentle by design, and for most beginners it is the easiest shot to get right on day
+              one. These are the official requirements from the FIP rules.
+            </p>
+          </Prose>
+          <ul className="mt-5 max-w-[65ch] space-y-3 text-stone-700">
+            {[
+              "Stand behind the service line, between the centre line and the side wall, without touching either line. The first point of each game is served from the right side.",
+              "Bounce the ball once on the floor in your own serving area, behind the service line, then hit it.",
+              "Make contact at or below waist height, with at least one foot on the ground.",
+              "Send it diagonally over the net so it bounces in the receiver's service box. The lines count as in.",
+              "After that bounce it may hit the glass and stays in play. If it touches the metal mesh before bouncing a second time, it is a fault.",
+              "You get two tries. A serve that clips the net and still lands in the box is replayed.",
+              "Switch sides after every point. One player serves the whole game, then the serve passes to the other team.",
+            ].map((t) => (
+              <li key={t} className="flex gap-3 leading-relaxed">
+                <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-padel-green" />
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+        </Section>
+
+        <Section id="walls" eyebrow="Wall play" title="Using the walls" tone="stone">
+          <Prose>
+            <p>
+              The walls are the part of padel that feels strangest at first. The key rule is simple: once the ball has
+              bounced on your floor, you can let it come off the glass and still play it, which gives you a second chance
+              at balls you would have lost in tennis. Here is the most common wall shot, a ball played off the back glass.
+            </p>
+          </Prose>
+          <div className="mt-6 grid items-start gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+            <WallSequence />
+            <ol className="space-y-3 text-sm leading-relaxed text-stone-700">
+              {[
+                "Your opponent's shot clears the net and heads deep into your half.",
+                "It bounces once on your floor. From this moment your walls are in play.",
+                "It hits your back glass and starts travelling back toward the net.",
+                "You hit it as it comes off the glass, before it touches the floor again, and send it back over the net.",
+              ].map((t, i) => (
+                <li key={t} className="flex gap-3">
+                  <span
+                    aria-hidden="true"
+                    className="font-display flex h-6 w-6 flex-none items-center justify-center rounded-full bg-yellow-300 text-xs font-bold text-court"
+                  >
+                    {i + 1}
+                  </span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <Prose className="mt-8">
+            <p>
+              The hardest habit to break, especially for tennis players, is rushing back to hit the ball before it reaches
+              the glass. Let it go past you, turn side-on to the wall, and wait for it to come out. Watch where the ball
+              strikes the glass, because a ball that hits high tends to come back high and a ball that hits low comes back
+              low and fast.
+            </p>
+            <p>
+              The side glass works the same way, and so does a corner, where the ball hits the side and back glass one after
+              the other and usually loses pace. Give yourself space from the wall and you will have time to read it.
+            </p>
+          </Prose>
+        </Section>
+
+        <Section id="shots" eyebrow="What to practise" title="Basic padel shots for beginners">
+          <Prose>
+            <p>
+              You will hit forehands and backhands from the back of the court as in any racket sport, with a shorter swing
+              because the racket is solid and the court is small. Four more shots come up in every game, and it helps to
+              know their names before a coach uses them.
+            </p>
+          </Prose>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-stone-200 bg-white p-5">
+              <h3 className="font-display font-bold text-court">The volley</h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-600">
+                A volley is any shot you hit before the ball bounces, usually from close to the net. Keep the racket up in
+                front of you and use a short punch with almost no backswing. The pair that holds the net usually controls
+                the point, so much of the game is about getting there together with your partner.
               </p>
             </div>
-
-            {/* Quick Start Box */}
-            <div className="border-l-4 border-amber-500 bg-amber-50/80 rounded-r-lg p-5 sm:p-6">
-              <h3 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                <span className="text-amber-500">&#9889;</span> Quick Start
-              </h3>
-              <div className="space-y-2">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-sm font-semibold text-stone-700 whitespace-nowrap">Courts:</span>
-                  <span className="text-sm text-stone-600">Enclosed glass walls, smaller than tennis</span>
-                </div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-sm font-semibold text-stone-700 whitespace-nowrap">Players:</span>
-                  <span className="text-sm text-stone-600">Always doubles (4 players)</span>
-                </div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-sm font-semibold text-stone-700 whitespace-nowrap">Scoring:</span>
-                  <span className="text-sm text-stone-600">Same as tennis (15-30-40-game)</span>
-                </div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-sm font-semibold text-stone-700 whitespace-nowrap">Serve:</span>
-                  <span className="text-sm text-stone-600">Underhand, must bounce first</span>
-                </div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-sm font-semibold text-stone-700 whitespace-nowrap">Walls:</span>
-                  <span className="text-sm text-stone-600">In play &mdash; you can hit the ball off them</span>
-                </div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-sm font-semibold text-stone-700 whitespace-nowrap">Gear:</span>
-                  <span className="text-sm text-stone-600">Padel racket + balls + court shoes</span>
-                </div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-sm font-semibold text-stone-700 whitespace-nowrap">Cost:</span>
-                  <span className="text-sm text-stone-600">$8&ndash;20 per person per session</span>
-                </div>
-              </div>
+            <div className="rounded-xl border border-stone-200 bg-white p-5">
+              <h3 className="font-display font-bold text-court">The lob</h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-600">
+                A high, deep ball over the heads of the players at the net. It is the main way to push a team back, and if
+                it lands deep enough they have to turn and play it off their glass while you and your partner move forward.
+                A lob that falls short gets smashed, so aim higher than feels natural.
+              </p>
+            </div>
+            <div className="rounded-xl border border-stone-200 bg-white p-5">
+              <h3 className="font-display font-bold text-court">The bandeja</h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-600">
+                A controlled overhead with slice, hit deep so the ball stays low after it bounces. Players use it to answer a
+                lob without giving up their place at the net, and it is the overhead most coaches teach first. Our{" "}
+                <Link href="/blog/padel-bandeja-explained" className={link}>bandeja explainer</Link> breaks down the
+                technique.
+              </p>
+            </div>
+            <div className="rounded-xl border border-stone-200 bg-white p-5">
+              <h3 className="font-display font-bold text-court">The víbora</h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-600">
+                The name is Spanish for viper. It is a more aggressive overhead than the bandeja, hit with more pace and side
+                spin, usually diagonally downward so the ball skids low off the side glass. Learn the bandeja first and the
+                víbora will make more sense.
+              </p>
             </div>
           </div>
-        </div>
+          <Prose className="mt-6">
+            <p>
+              The <Link href="/get-started/glossary" className={link}>padel glossary</Link> covers the rest of the
+              vocabulary you will hear on court, from chiquita to contrapared.
+            </p>
+          </Prose>
+        </Section>
 
-        {/* Stone-50 Section: What Is Padel + The Court */}
-        <div className="bg-stone-50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            {/* What Is Padel? */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-foreground mb-5">What Is Padel?</h2>
-              <div className="bg-white border border-stone-200 rounded-xl p-6 md:p-8">
-                <p className="text-stone-600 leading-[1.75] mb-4">
-                  Padel is a racket sport that blends elements of tennis and squash. It was invented in Acapulco, Mexico in 1969 by Enrique Corcuera, who built the first court in his backyard. Today, over 35 million people play across 150+ countries, making it one of the most popular sports in Spain, Argentina, Sweden, and Mexico &mdash; and the fastest-growing sport in the United States.
-                </p>
-                <p className="text-stone-600 leading-[1.75] mb-4">
-                  Padel is always played as doubles (2 vs 2) on an enclosed court surrounded by glass walls and metal mesh. The defining feature: <strong>the walls are in play</strong>. After the ball bounces on your side of the court, it can hit the back or side wall &mdash; and you play it off the rebound, just like squash. This creates unique angles, spectacular saves, and rallies that last much longer than tennis.
-                </p>
-                <p className="text-stone-600 leading-[1.75]">
-                  The racket is solid (no strings) with a perforated face, the serve is underhand, and the scoring is identical to tennis. It&apos;s social by design &mdash; four people on a small court means constant interaction, and most clubs have a bar or lounge for the post-match socializing that&apos;s become part of the culture.
-                </p>
-              </div>
-            </section>
+        <Section id="etiquette" eyebrow="Fitting in" title="Padel etiquette" tone="stone">
+          <Prose>
+            <p>
+              Most of this is custom and goes unwritten, and the points that come from the rulebook are marked. It is how
+              games run at clubs, and following it makes it easier to get invited back.
+            </p>
+          </Prose>
+          <ul className="mt-5 max-w-[65ch] space-y-3 text-stone-700">
+            {[
+              "Arrive a few minutes early. Courts are booked in fixed slots and the next group will be waiting at the door when yours ends.",
+              "Warm up together by rallying gently across the net. In tournaments the FIP gives players a three-minute warm-up.",
+              "Settle who serves first with a coin toss or a racket spin, and agree how you will score 40-40 before the first game.",
+              "If a ball from the next court rolls onto yours, stop and replay the point. The rules call this a let, and you have to call it straight away.",
+              "Wait for a point to finish before you walk behind a court or open a door onto it.",
+              "Gather the balls on your side between points and send them to the server.",
+              "Keep your racket and body off the net. Touching it during a point loses the point under the rules.",
+              "Settle the court fee the way your club does it. Some charge each player, and some charge the person who booked, who then collects from the group.",
+              "Finish with a handshake or a racket tap at the net.",
+            ].map((t) => (
+              <li key={t} className="flex gap-3 leading-relaxed">
+                <span aria-hidden="true" className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-padel-green" />
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+        </Section>
 
-            {/* The Court */}
-            <section>
-              <h2 className="text-2xl font-bold text-foreground mb-5">The Court</h2>
-              <div className="bg-white border border-stone-200 rounded-xl p-6 md:p-8">
-                <p className="text-stone-600 leading-[1.75] mb-5">
-                  A padel court is 20 meters long and 10 meters wide &mdash; about one-third smaller than a tennis court. It&apos;s divided by a net that sits slightly lower than tennis (88cm at the center, 92cm at the sides). The court is enclosed on all sides by a combination of glass walls and metal mesh fencing.
-                </p>
-
-                {/* Court Diagram */}
-                <div className="bg-stone-50 border border-stone-200 rounded-lg p-4 sm:p-6 mb-5 font-mono text-xs sm:text-sm overflow-x-auto">
-                  <div className="text-center text-stone-500 mb-2">&larr; 10m wide &rarr;</div>
-                  <div className="border-2 border-stone-400 rounded relative mx-auto max-w-md">
-                    <div className="grid grid-cols-2">
-                      {/* Back wall label */}
-                      <div className="col-span-2 text-center text-stone-400 text-xs py-1 bg-sky-50 border-b border-stone-300">Glass wall (3m high)</div>
-
-                      {/* Service boxes - top half */}
-                      <div className="border-r border-b border-stone-300 p-3 sm:p-4 text-center">
-                        <div className="text-stone-400">Service</div>
-                        <div className="text-stone-400">Box</div>
-                      </div>
-                      <div className="border-b border-stone-300 p-3 sm:p-4 text-center">
-                        <div className="text-stone-400">Service</div>
-                        <div className="text-stone-400">Box</div>
-                      </div>
-
-                      {/* Service line */}
-                      <div className="col-span-2 text-center text-stone-400 text-xs py-0.5 border-b border-stone-300 bg-stone-50">Service line (6.95m from net)</div>
-
-                      {/* Back court */}
-                      <div className="border-r border-b border-stone-300 p-2 sm:p-3 text-center">
-                        <div className="text-stone-300 text-xs">Back court</div>
-                      </div>
-                      <div className="border-b border-stone-300 p-2 sm:p-3 text-center">
-                        <div className="text-stone-300 text-xs">Back court</div>
-                      </div>
-
-                      {/* NET */}
-                      <div className="col-span-2 text-center font-bold text-sky-600 py-1.5 bg-sky-100 border-b-2 border-sky-400">&#9552;&#9552;&#9552; NET (88cm center) &#9552;&#9552;&#9552;</div>
-
-                      {/* Back court - other side */}
-                      <div className="border-r border-b border-stone-300 p-2 sm:p-3 text-center">
-                        <div className="text-stone-300 text-xs">Back court</div>
-                      </div>
-                      <div className="border-b border-stone-300 p-2 sm:p-3 text-center">
-                        <div className="text-stone-300 text-xs">Back court</div>
-                      </div>
-
-                      {/* Service line */}
-                      <div className="col-span-2 text-center text-stone-400 text-xs py-0.5 border-b border-stone-300 bg-stone-50">Service line</div>
-
-                      {/* Service boxes - bottom half */}
-                      <div className="border-r border-b border-stone-300 p-3 sm:p-4 text-center">
-                        <div className="text-stone-400">Service</div>
-                        <div className="text-stone-400">Box</div>
-                      </div>
-                      <div className="border-b border-stone-300 p-3 sm:p-4 text-center">
-                        <div className="text-stone-400">Service</div>
-                        <div className="text-stone-400">Box</div>
-                      </div>
-
-                      {/* Back wall label */}
-                      <div className="col-span-2 text-center text-stone-400 text-xs py-1 bg-sky-50">Glass wall (3m high)</div>
-                    </div>
-                  </div>
-                  <div className="text-center text-stone-400 mt-2 text-xs">Side walls: glass (3m) + metal mesh above &bull; Door openings on each side</div>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <span className="text-sky-500 font-bold mt-0.5">&#9654;</span>
-                    <p className="text-stone-600 text-sm leading-relaxed"><strong>Glass back walls (3m high):</strong> The ball rebounds off these during play. Learning to read these rebounds is the signature padel skill.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-sky-500 font-bold mt-0.5">&#9654;</span>
-                    <p className="text-stone-600 text-sm leading-relaxed"><strong>Side walls:</strong> Glass at the bottom (3m) with metal mesh above. The ball can hit the glass and come back into play.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-sky-500 font-bold mt-0.5">&#9654;</span>
-                    <p className="text-stone-600 text-sm leading-relaxed"><strong>Metal mesh fencing:</strong> Above the glass on the sides and back. If the ball hits the mesh on the full (without bouncing first), it&apos;s out.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-sky-500 font-bold mt-0.5">&#9654;</span>
-                    <p className="text-stone-600 text-sm leading-relaxed"><strong>Door openings:</strong> On both sides of the court. In advanced play, you can actually leave the court through these doors to retrieve a ball that bounced out &mdash; one of the most spectacular plays in padel.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
+        <Section id="find-a-game" eyebrow="Where to play" title="How to find a padel game in the US">
+          <Prose>
+            <p>
+              The Padel Courts Finder directory lists {stats.totalCourts} padel clubs in {stats.totalStates} states, and{" "}
+              {lessonClubs} of them say they offer lessons or clinics, which is the easiest first step. Many clubs also run
+              open play, social mixers and round robins sorted by level, where you sign up on your own and get matched with
+              three other players.
+            </p>
+            <p>
+              Search by city, then open each club&apos;s page for its prices, court count and booking link. Start with{" "}
+              <Link href="/search" className={link}>the full club search</Link> or the list of{" "}
+              <Link href="/padel-lessons" className={link}>clubs with padel lessons</Link>.
+            </p>
+          </Prose>
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
+            <div>
+              <h3 className="font-display mb-3 font-bold text-court">States with the most clubs</h3>
+              <ul className="flex flex-wrap gap-2">
+                {topStates.map((s) => (
+                  <li key={s.code}>
+                    <Link
+                      href={`/${s.slug}`}
+                      className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 hover:border-padel-green hover:text-padel-green-dark"
+                    >
+                      {s.name}
+                      <span className="tabular-nums text-xs text-stone-400">{s.courtCount}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-display mb-3 font-bold text-court">Cities with the most clubs</h3>
+              <ul className="flex flex-wrap gap-2">
+                {topCities.map((c) => (
+                  <li key={`${c.stateCode}-${c.slug}`}>
+                    <Link
+                      href={`/${stateSlug.get(c.stateCode)}/${c.slug}`}
+                      className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-3 py-1.5 text-sm text-stone-700 hover:border-padel-green hover:text-padel-green-dark"
+                    >
+                      {c.name}, {c.stateCode}
+                      <span className="tabular-nums text-xs text-stone-400">{c.courtCount}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
+          <p className="mt-4 text-xs text-stone-500">Club counts come from the Padel Courts Finder directory and update as clubs are added.</p>
+        </Section>
 
-        {/* White Section: Equipment + Basic Rules */}
-        <div className="bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            {/* Equipment You Need */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-foreground mb-5">Equipment You Need</h2>
-              <div className="grid sm:grid-cols-2 gap-4 mb-5">
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Padel Racket</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed mb-3">Solid face with drilled holes (no strings). Made of carbon fiber or fiberglass with an EVA foam core. Beginners should choose a <strong>round shape</strong> for the largest sweet spot and most forgiveness. Weighs 340&ndash;370g.</p>
-                  <p className="text-sm text-stone-500">Starter cost: <strong className="text-foreground">$80&ndash;130</strong></p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Padel Balls</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed mb-3">Look like tennis balls but are slightly less pressurized, which makes them slower and easier to control. Most clubs provide balls, but having your own is handy for practice sessions.</p>
-                  <p className="text-sm text-stone-500">Cost: <strong className="text-foreground">~$14 for 3</strong></p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Court Shoes</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed mb-3">Non-marking soles required on court. Tennis shoes or padel-specific shoes with herringbone tread work best. You need lateral support &mdash; don&apos;t wear running shoes.</p>
-                  <p className="text-sm text-stone-500">Cost: <strong className="text-foreground">$80&ndash;130</strong></p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Clothing</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed mb-3">Standard athletic wear. Shorts/skirt, t-shirt or polo, and a sweatband if you run hot. Nothing padel-specific needed &mdash; wear whatever you&apos;d wear to play tennis or gym.</p>
-                  <p className="text-sm text-stone-500">Cost: <strong className="text-foreground">What you already own</strong></p>
-                </div>
-              </div>
-              <p className="text-stone-600 leading-[1.75]">
-                Most clubs offer racket and ball rentals ($5&ndash;15) so you can try before you buy. See our <Link href="/blog/best-padel-rackets-beginners" className="text-sky-600 hover:underline font-medium">Best Padel Rackets for Beginners (2026)</Link> guide for specific recommendations when you&apos;re ready to invest. And before you ramp up to several matches a week, read a sports physical therapist&apos;s <Link href="/blog/padel-injuries-prevention-tips" className="text-sky-600 hover:underline font-medium">six tips for preventing padel injuries</Link>.
-              </p>
-            </section>
+        <Section id="faq" eyebrow="Questions" title="Padel for beginners: FAQ" tone="stone">
+          <FaqList faqs={faqs} />
+        </Section>
 
-            {/* Basic Rules */}
-            <section>
-              <h2 className="text-2xl font-bold text-foreground mb-5">Basic Rules</h2>
-              <div className="space-y-4">
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Always Doubles</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Padel is designed for 4 players &mdash; two on each side. One player stands near the net, the other covers the back. Teamwork and communication are essential. You&apos;ll switch sides with your partner throughout the match based on the score.</p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">The Serve</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">The serve must be <strong>underhand</strong>. Bounce the ball on the ground, then strike it at or below waist height. The serve goes diagonally into the opposite service box. You get two attempts (like tennis). The ball can hit the back wall after bouncing in the service box &mdash; that&apos;s in play. But if it hits the side wall after the bounce, it&apos;s a fault.</p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Walls Are in Play</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">This is what makes padel unique. After the ball bounces on your side of the court, it can hit the back glass wall or side walls &mdash; and you play it off the rebound. However, a shot from your opponent must land on your side of the court <strong>before</strong> hitting any wall. If it hits the wall first (without bouncing), it&apos;s out.</p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">One Bounce Maximum</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Like tennis, the ball can only bounce once on the ground before you must return it. After that single bounce, it can hit any number of walls and you can still play it. If it bounces twice on the ground, the point is over. You can also volley (hit before it bounces) at any time.</p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">The Mesh Rule</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">If a ball hits the metal mesh fencing on the full (without bouncing in the court first), it&apos;s out. The mesh is only above the glass, so this mainly affects high lobs that fly over the back wall. The glass walls below are always in play after a bounce.</p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Leaving the Court</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">In advanced play, if the ball bounces on your side and then flies over the back wall or through a door opening, you can leave the court to retrieve it. This creates some of the most dramatic points in padel &mdash; but don&apos;t worry about it as a beginner.</p>
-                </div>
-              </div>
-              <p className="text-stone-600 leading-[1.75] mt-5">
-                For a deeper dive into the official rules, see our complete <Link href="/rules" className="text-sky-600 hover:underline font-medium">Padel Rules &amp; Regulations</Link> guide.
-              </p>
-            </section>
-          </div>
-        </div>
-
-        {/* Stone-50 Section: Scoring + Basic Shots */}
-        <div className="bg-stone-50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            {/* Scoring */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-foreground mb-5">Scoring</h2>
-              <div className="bg-white border border-stone-200 rounded-xl p-6 md:p-8">
-                <p className="text-stone-600 leading-[1.75] mb-5">
-                  Padel uses exactly the same scoring system as tennis. If you already know tennis scoring, you know padel scoring. If not, here&apos;s how it works:
-                </p>
-                <div className="space-y-4 mb-5">
-                  <div className="flex items-start gap-3">
-                    <span className="bg-sky-100 text-sky-700 text-xs font-bold px-2 py-1 rounded mt-0.5">POINTS</span>
-                    <p className="text-stone-600 text-sm leading-relaxed">Points count as 15, 30, 40, then game. So a game goes: 0-0 (called &ldquo;love&rdquo;), then 15, 30, 40, game. If both sides reach 40, it&apos;s &ldquo;deuce&rdquo; &mdash; you need to win two consecutive points (advantage, then game) to close out.</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="bg-sky-100 text-sky-700 text-xs font-bold px-2 py-1 rounded mt-0.5">GAMES</span>
-                    <p className="text-stone-600 text-sm leading-relaxed">First team to win 6 games takes the set. You must lead by 2 games. If it reaches 6-6, a tiebreak is played (first to 7 points, win by 2).</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="bg-sky-100 text-sky-700 text-xs font-bold px-2 py-1 rounded mt-0.5">SETS</span>
-                    <p className="text-stone-600 text-sm leading-relaxed">A match is best of 3 sets. Win 2 sets to win the match. Most casual games play a single set or a timed session (60&ndash;90 minutes).</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="bg-sky-100 text-sky-700 text-xs font-bold px-2 py-1 rounded mt-0.5">SERVE</span>
-                    <p className="text-stone-600 text-sm leading-relaxed">The serving team alternates each game. The same player serves an entire game, then the other team serves. Players on the serving team alternate which side they serve from each point.</p>
-                  </div>
-                </div>
-                <div className="border-l-4 border-sky-500 bg-sky-50/80 rounded-r-lg p-4">
-                  <p className="text-stone-700 text-sm leading-relaxed">
-                    <strong>Tip:</strong> Don&apos;t stress about the scoring system. It becomes second nature after a few games. Many beginners just count to 4 points per game until the &ldquo;15-30-40&rdquo; pattern clicks.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Basic Shots for Beginners */}
-            <section>
-              <h2 className="text-2xl font-bold text-foreground mb-5">Basic Shots for Beginners</h2>
-              <p className="text-stone-600 leading-[1.75] mb-5">
-                You don&apos;t need a huge arsenal to start playing. These six shots will cover 90% of situations in your first few months. Master these, and you&apos;ll be competitive in casual games.
-              </p>
-              <div className="space-y-4">
-                <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <div className="flex items-baseline gap-3 mb-2">
-                    <span className="bg-stone-900 text-white text-xs font-bold px-2 py-1 rounded">1</span>
-                    <h3 className="font-bold text-foreground">The Serve</h3>
-                  </div>
-                  <p className="text-stone-600 text-sm leading-relaxed">Bounce the ball, strike it underhand at or below waist height, and aim diagonally into the opposite service box. Don&apos;t try to blast it &mdash; focus on consistency and placement. A reliable serve that lands deep in the box is far more effective than a hard one that misses. The underhand motion is natural and much easier to learn than a tennis serve.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <div className="flex items-baseline gap-3 mb-2">
-                    <span className="bg-stone-900 text-white text-xs font-bold px-2 py-1 rounded">2</span>
-                    <h3 className="font-bold text-foreground">Forehand &amp; Backhand</h3>
-                  </div>
-                  <p className="text-stone-600 text-sm leading-relaxed">Similar to tennis groundstrokes but with a shorter, more compact swing. The padel racket is shorter than a tennis racket and has no strings, so the contact feel is different &mdash; more like a solid &ldquo;thud&rdquo; than a springy bounce. Keep your wrist firm and swing through the ball. Focus on directing the ball to open spaces rather than hitting hard.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <div className="flex items-baseline gap-3 mb-2">
-                    <span className="bg-stone-900 text-white text-xs font-bold px-2 py-1 rounded">3</span>
-                    <h3 className="font-bold text-foreground">The Volley</h3>
-                  </div>
-                  <p className="text-stone-600 text-sm leading-relaxed">Hitting the ball before it bounces, typically near the net. This is the most important position in padel &mdash; the team that controls the net wins. Use short, punchy strokes. No big backswing needed. Angle the ball down into the court or toward the side walls. At the net, you&apos;re cutting off angles and putting pressure on your opponents.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <div className="flex items-baseline gap-3 mb-2">
-                    <span className="bg-stone-900 text-white text-xs font-bold px-2 py-1 rounded">4</span>
-                    <h3 className="font-bold text-foreground">The Lob</h3>
-                  </div>
-                  <p className="text-stone-600 text-sm leading-relaxed">A high shot over your opponents&apos; heads that forces them away from the net and back toward the glass wall. This is your essential defensive weapon. When you&apos;re under pressure, a well-placed lob resets the point and gives you time to move forward. Aim for height and depth &mdash; too short and they&apos;ll smash it back at you.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <div className="flex items-baseline gap-3 mb-2">
-                    <span className="bg-stone-900 text-white text-xs font-bold px-2 py-1 rounded">5</span>
-                    <h3 className="font-bold text-foreground">Playing Off the Wall</h3>
-                  </div>
-                  <p className="text-stone-600 text-sm leading-relaxed">This is <em>the</em> signature padel skill. When the ball bounces on the court and then hits the back glass wall, you let it rebound and play it off the wall. It takes a few sessions to judge the angles and timing, but once it clicks, it transforms your game. The key is patience &mdash; don&apos;t rush the ball. Wait for the rebound, set your feet, and play it calmly. For more on padel-specific terminology, see our <Link href="/get-started/glossary" className="text-sky-600 hover:underline">padel glossary</Link>.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-xl p-6">
-                  <div className="flex items-baseline gap-3 mb-2">
-                    <span className="bg-stone-900 text-white text-xs font-bold px-2 py-1 rounded">6</span>
-                    <h3 className="font-bold text-foreground">La Bandeja</h3>
-                  </div>
-                  <p className="text-stone-600 text-sm leading-relaxed">The &ldquo;bread and butter&rdquo; overhead of padel. Instead of smashing the ball hard (which often sets up your opponents off the rebound), <Link href="/get-started/glossary" className="text-sky-600 hover:underline">la bandeja</Link> is a controlled overhead slice with backspin. Hit from above your head, the slice keeps the ball low after it bounces, making it much harder for your opponents to attack. It&apos;s the shot that separates intermediate players from beginners &mdash; work on it early.</p>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-
-        {/* White Section: Tips + Where to Play */}
-        <div className="bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            {/* Tips for Your First Match */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-foreground mb-5">Tips for Your First Match</h2>
-              <p className="text-stone-600 leading-[1.75] mb-5">
-                You&apos;ve got the rules and shots down in theory. Here&apos;s what actually matters when you step on court for the first time.
-              </p>
-              <div className="space-y-4">
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Communicate With Your Partner</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Padel is a doubles sport. Talk constantly. Call &ldquo;mine&rdquo; or &ldquo;yours&rdquo; on every ball. Signal which side you&apos;re covering. Good communication between partners beats individual skill almost every time &mdash; it&apos;s what makes padel uniquely social.</p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Control the Net</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">The team at the net wins in padel. After every opportunity &mdash; a good return, a lob that pushes opponents back &mdash; move forward together. Both players should advance as a unit. If you&apos;re stuck at the back wall, use a lob to buy time and look for chances to move up.</p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Let the Walls Help You</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Beginners often panic when the ball heads toward the back wall. Don&apos;t chase it &mdash; let it bounce on the court, hit the wall, and then play the rebound. The wall is your friend. It gives you a second chance at balls that would be winners in tennis. Relax, watch the trajectory, and wait.</p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Consistency Over Power</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">The player who keeps the ball in play wins more points than the player who hits hard. Padel rewards placement and patience. Aim for the middle of the court when in doubt, keep the ball low over the net, and wait for your opponents to make mistakes. Power comes later when your technique is solid.</p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Watch the Walls</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Learning to read wall rebounds is the biggest learning curve in padel. Watch where the ball hits the glass, observe the angle it comes back, and start predicting where it&apos;ll go. It takes 2&ndash;3 sessions before this becomes natural. Once it clicks, you&apos;ll feel like you unlocked a new dimension of the sport.</p>
-                </div>
-                <div className="border border-stone-200 rounded-xl p-6">
-                  <h3 className="font-bold text-foreground mb-2">Have Fun</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Padel is inherently social and fun. Don&apos;t stress about mistakes &mdash; everyone mishits, everyone misjudges wall rebounds, everyone serves into the net. Most clubs have a lounge, caf&eacute;, or bar area because the post-match socializing is part of the culture. Enjoy the game and the people.</p>
-                </div>
-              </div>
-            </section>
-
-            {/* Where to Play */}
-            <section>
-              <h2 className="text-2xl font-bold text-foreground mb-5">Where to Play</h2>
-              <div className="border border-stone-200 rounded-xl p-6 md:p-8">
-                <p className="text-stone-600 leading-[1.75] mb-4">
-                  Ready to try it? Padel is available in {getSiteStats().totalStates} states across the US, with new clubs opening every month. The sport has exploded from a handful of facilities to <Link href="/search" className="text-sky-600 hover:underline font-medium">{getSiteStats().totalCourts} clubs nationwide</Link>, and that number is growing fast.
-                </p>
-                <p className="text-stone-600 leading-[1.75] mb-4">
-                  Most clubs offer walk-in court bookings, equipment rental, and beginner lessons &mdash; so you can show up with nothing and start playing. Many also run social &ldquo;mix-in&rdquo; sessions where you&apos;re paired with other players, which is a great way to meet people and get started without needing to find 3 friends first.
-                </p>
-                <div className="grid sm:grid-cols-3 gap-3 mt-5">
-                  <Link href="/blog/best-padel-clubs-miami" className="border border-stone-200 rounded-lg p-4 hover:border-sky-300 hover:shadow-sm transition-all text-center">
-                    <span className="text-xs text-stone-400 uppercase tracking-wider">City Guide</span>
-                    <h4 className="font-semibold text-foreground mt-1 text-sm">Miami &rarr;</h4>
-                    <p className="text-xs text-stone-500 mt-0.5">39 clubs, 200+ courts</p>
-                  </Link>
-                  <Link href="/blog/best-padel-clubs-houston" className="border border-stone-200 rounded-lg p-4 hover:border-sky-300 hover:shadow-sm transition-all text-center">
-                    <span className="text-xs text-stone-400 uppercase tracking-wider">City Guide</span>
-                    <h4 className="font-semibold text-foreground mt-1 text-sm">Houston &rarr;</h4>
-                    <p className="text-xs text-stone-500 mt-0.5">10 clubs, 30+ courts</p>
-                  </Link>
-                  <Link href="/blog/best-padel-clubs-austin" className="border border-stone-200 rounded-lg p-4 hover:border-sky-300 hover:shadow-sm transition-all text-center">
-                    <span className="text-xs text-stone-400 uppercase tracking-wider">City Guide</span>
-                    <h4 className="font-semibold text-foreground mt-1 text-sm">Austin &rarr;</h4>
-                    <p className="text-xs text-stone-500 mt-0.5">7 clubs, growing fast</p>
-                  </Link>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-
-        {/* Stone-50 Section: FAQ */}
-        <div className="bg-stone-50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            <section>
-              <h2 className="text-2xl font-bold text-foreground mb-5">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-foreground mb-2">How do you play padel?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Two versus two on an enclosed court about a third the size of a tennis court. Serve underhand into the diagonal box, score exactly like tennis, and — the rule that defines the sport — play the ball off the glass walls after it bounces on your side. Full detail in our <Link href="/rules" className="text-sky-600 hover:underline">padel rules guide</Link>.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-foreground mb-2">How do I get started playing padel?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Book a beginner clinic or intro lesson at a club near you — rackets are usually included, so you don&apos;t need to buy gear first, and it solves the hardest part of starting a doubles sport: finding people to play with. <Link href="/padel-lessons" className="text-sky-600 hover:underline">Find clubs offering lessons</Link>, then decide on your own racket after a few sessions.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-foreground mb-2">Is padel good for beginners?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">It&apos;s one of the easiest racket sports to pick up. The walls keep balls in play, the underhand serve removes tennis&apos;s hardest skill, and the short solid racket is simple to control. Most people rally in their first session.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-foreground mb-2">Is padel easy to learn?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Yes. Most beginners rally comfortably within their first session. The enclosed glass court keeps the ball in play much longer than tennis, so you spend more time hitting and less time chasing balls. The underhand serve is also much easier to master than a tennis serve. Within 2&ndash;3 sessions, most people feel competent enough to play real matches.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-foreground mb-2">What equipment do I need?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">A padel racket ($80&ndash;130 for beginners), padel balls (~$14 for a can of 3), and non-marking court shoes ($80&ndash;130). Many clubs offer rentals so you can try before you buy. Standard athletic clothing works fine. See our <Link href="/blog/best-padel-rackets-beginners" className="text-sky-600 hover:underline">beginner rackets guide</Link> for specific picks.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-foreground mb-2">Can I play padel as singles?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Technically yes, but padel is designed for and almost always played as doubles (2 vs 2). The court dimensions, rules, and strategy are all built around 4 players. Some clubs offer singles play on smaller courts, but doubles is the standard format worldwide.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-foreground mb-2">How is padel different from tennis?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Padel uses a smaller enclosed court with glass walls in play (like squash), a solid racket with no strings, an underhand serve, and is always played as doubles. The scoring is the same as tennis (15-30-40-game), but the gameplay feels completely different because the walls create longer rallies and unique angles. It&apos;s generally easier to start than tennis.</p>
-                </div>
-                <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <h3 className="font-semibold text-foreground mb-2">How much does it cost to play padel?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Court rental typically costs $30&ndash;75 per hour, split between 4 players &mdash; so $8&ndash;19 per person per session. Some clubs charge per person instead. Equipment rental (racket + balls) is usually $5&ndash;15 if you don&apos;t have your own gear. Many clubs offer membership plans that bring the cost down for regular players. <Link href="/search" className="text-sky-600 hover:underline">Compare prices across 350+ clubs</Link>.</p>
-                </div>
-              </div>
-            </section>
+        <section className="bg-white">
+          <div className="mx-auto max-w-4xl space-y-10 px-4 py-12 sm:px-6 lg:px-8">
             <GearWidget />
+            <div className="border-t border-stone-200 pt-8">
+              <h2 className="font-display mb-4 text-lg font-semibold text-court">Keep learning</h2>
+              <div className="flex flex-wrap gap-x-6 gap-y-2">
+                <Link href="/rules" className="text-padel-green-dark hover:underline">Padel rules, in full</Link>
+                <Link href="/blog/padel-vs-pickleball" className="text-padel-green-dark hover:underline">Padel vs pickleball</Link>
+                <Link href="/get-started/glossary" className="text-padel-green-dark hover:underline">Padel glossary</Link>
+                <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green-dark hover:underline">Best beginner rackets (2026)</Link>
+                <Link href="/blog/padel-injuries-prevention-tips" className="text-padel-green-dark hover:underline">Preventing padel injuries</Link>
+                <Link href="/search" className="text-padel-green-dark hover:underline">Find courts near you</Link>
+              </div>
+            </div>
+            <Sources
+              items={[
+                { label: "International Padel Federation, Rules of Padel (review of application 1 January 2026)", href: "https://www.padelfip.com/wp-content/uploads/2025/12/FIP_Rules-of-Padel.pdf" },
+                { label: "United States Padel Association, Rules and Regulations, Edition 8.11 (June 1, 2026)", href: "https://padelusa.org/wp-content/uploads/2026/06/USPA-Rules-and-Regulations.-June-1-2026.docx.pdf" },
+                { label: "Wikipedia, Padel (history and singles courts)", href: "https://en.wikipedia.org/wiki/Padel" },
+              ]}
+            />
           </div>
-        </div>
+        </section>
       </article>
-
-      {/* Dark CTA Section */}
-      <div className="bg-stone-900">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-2xl font-bold text-white mb-2">Ready to Play?</h2>
-          <p className="text-stone-400 mb-6">Find a court, grab a racket, and get your first rallies in.</p>
-          <div className="grid sm:grid-cols-3 gap-4">
-            <Link href="/search" className="block border border-stone-700 rounded-lg p-5 hover:border-sky-500/50 transition-colors text-center">
-              <h3 className="font-semibold text-white mb-1">Find a Court</h3>
-              <p className="text-sm text-stone-400">{getSiteStats().totalCourts} padel clubs across the US &rarr;</p>
-            </Link>
-            <Link href="/blog/best-padel-rackets-beginners" className="block border border-stone-700 rounded-lg p-5 hover:border-amber-500/50 transition-colors text-center">
-              <h3 className="font-semibold text-white mb-1">Get Your Gear</h3>
-              <p className="text-sm text-stone-400">Top 5 beginner rackets from $90 &rarr;</p>
-            </Link>
-            <Link href="/blog/padel-vs-pickleball" className="block border border-stone-700 rounded-lg p-5 hover:border-emerald-500/50 transition-colors text-center">
-              <h3 className="font-semibold text-white mb-1">Padel vs Pickleball</h3>
-              <p className="text-sm text-stone-400">How they compare &rarr;</p>
-            </Link>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
