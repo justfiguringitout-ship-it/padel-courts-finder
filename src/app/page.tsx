@@ -9,9 +9,11 @@ import { StatCounter } from "@/components/stat-counter";
 import { CourtsConstellation } from "@/components/courts-constellation";
 import type { Metadata } from "next";
 
+const siteStats = getSiteStats();
+
 export const metadata: Metadata = {
-  title: "Padel Courts Near Me | Find & Book 331 Padel Clubs in the USA",
-  description: "Find padel courts near you. Browse 331 padel clubs across 39 states. Compare prices, read reviews, check hours, and book courts online. The #1 US padel court directory.",
+  title: `Padel Courts Near Me | Find & Book ${siteStats.totalCourts} Padel Clubs in the USA`,
+  description: `Find padel courts near you. Browse ${siteStats.totalCourts} padel clubs across ${siteStats.totalStates} states. Compare prices, read reviews, check hours, and book courts online. The #1 US padel court directory.`,
   keywords: [
     "padel courts near me",
     "padel near me",
@@ -24,8 +26,8 @@ export const metadata: Metadata = {
     "outdoor padel courts",
   ],
   openGraph: {
-    title: "Padel Courts Near Me | Find & Book 331 Padel Clubs in the USA",
-    description: "Find padel courts near you. Browse 331 padel clubs across 39 states. Compare prices, read reviews, check hours, and book courts online.",
+    title: `Padel Courts Near Me | Find & Book ${siteStats.totalCourts} Padel Clubs in the USA`,
+    description: `Find padel courts near you. Browse ${siteStats.totalCourts} padel clubs across ${siteStats.totalStates} states. Compare prices, read reviews, check hours, and book courts online.`,
     url: "https://www.padelcourtsfinder.com",
     siteName: "Padel Courts Finder",
     type: "website",
@@ -40,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Padel Courts Near Me | Find & Book 331 Padel Clubs in the USA",
-    description: "Find padel courts near you. Browse 331 padel clubs across 39 states. Compare prices, read reviews, and book courts online.",
+    title: `Padel Courts Near Me | Find & Book ${siteStats.totalCourts} Padel Clubs in the USA`,
+    description: `Find padel courts near you. Browse ${siteStats.totalCourts} padel clubs across ${siteStats.totalStates} states. Compare prices, read reviews, and book courts online.`,
     images: ["https://www.padelcourtsfinder.com/og/default.png"],
   },
   alternates: {

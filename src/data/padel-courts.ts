@@ -14468,6 +14468,44 @@ export const padelCourts: PadelCourt[] = [
     verified: true, // owner-submitted via intake form 2026-10-02
     verificationDate: "2026-10-02",
   },
+  {
+    id: 486,
+    name: "The Club at Marlboro",
+    address: "414 Texas Road",
+    city: "Morganville",
+    state: "NJ",
+    zipCode: "07751",
+    description: "The Club at Marlboro is a padel and pickleball venue planned for Morganville in Marlboro Township, the second New Jersey location from the team behind The Club at Monroe. The building is planned with two regulation padel courts, nine pickleball courts and three golf simulators, plus a recovery suite with red light therapy, cryotherapy, compression therapy and an infrared sauna. The club is taking pre-registrations for founding memberships and grand-opening events, with court booking through CourtReserve. Sources give a Q4 2026 or November 2026 opening.",
+    numberOfCourts: 2,
+    courtType: "indoor",
+    amenities: ["recovery suite", "cryotherapy", "infrared sauna", "free parking", "equipment rental", "event rooms"],
+    rentalAvailable: true,
+    membersOnly: false,
+    coordinates: { lat: 40.3248, lng: -74.2465 }, // TODO: approximate Marlboro Township center; replace with exact geocode of 414 Texas Rd
+    openingHours: { monday: "TBA", tuesday: "TBA", wednesday: "TBA", thursday: "TBA", friday: "TBA", saturday: "TBA", sunday: "TBA" },
+    rating: 0,
+    reviewCount: 0,
+    status: "coming_soon",
+    verified: false,
+    verificationDate: "2026-10-08",
+  },
+  {
+    id: 487,
+    name: "Society Park Orlando",
+    address: "8001 International Drive", // TODO: street number from PadelBrowser only; verify before publishing
+    city: "Orlando",
+    state: "FL",
+    zipCode: "32819",
+    description: "Society Park is a mixed dining, shopping and sports complex on International Drive in Orlando, with padel and pickleball courts. Press reports place it on a former Wyndham resort site near International Drive and West Sand Lake Road. The opening date has not been confirmed, and no court count is listed until the operator publishes one.",
+    amenities: ["dining", "shopping", "pickleball courts", "children's courts"],
+    coordinates: { lat: 28.4663, lng: -81.4699 }, // TODO: approximate International Drive area; replace with exact geocode of 8001 International Dr
+    openingHours: { monday: "TBA", tuesday: "TBA", wednesday: "TBA", thursday: "TBA", friday: "TBA", saturday: "TBA", sunday: "TBA" },
+    rating: 0,
+    reviewCount: 0,
+    status: "coming_soon",
+    verified: false,
+    verificationDate: "2026-10-08",
+  },
 ];
 
 
