@@ -34,7 +34,7 @@ const cases = [
   ["Prime Time: Members $20/hour, Non-members $50/hour", 13, false],
   ["Padel: $60/hour (non-members), $30/hour (members)", 15, false],
   ["Padel: $15/person for 1 hour, $20/person for 1.5 hours; Pickleball: $30/hour", 13, true],
-  ["Soccer: $130-$150/hour; Padel: approx. $12-$28/hour per player", 12, true],
+  ["Soccer: $130-$150/hour; Padel: approx. $12-$28/hour per player", null, null], // approximate figures stay unknown
   ["Court: 60min $45, 90min $65", 11, false], // $45/hr and $43/hr both round to $11
   ["Court rental $60 for 90 minutes", 10, false],
   ["Padel: $100 per court for 1.5 hours; Pickleball: $40 per court per hour", 17, false],
@@ -46,8 +46,8 @@ const cases = [
   ["Membership $100/mo + $300 initiation; padel $25/pp/hr, pickleball $12.50/pp/hr (members)", null, null],
   ["$40+ per hour; lessons $40–$80/hr", 10, true],
   ["$20–$40 per hour (varies by time/membership)", null, null], // court or person? unknown
-  ["Peak: ~$50-65/hour; Off-peak: ~$30-55/hour", 8, true], // the $50+ figure settles the unit
-  ["Court rentals ~$30-60/hr non-members", 8, true],
+  ["Peak: ~$50-65/hour; Off-peak: ~$30-55/hour", null, null], // approximate figures stay unknown
+  ["Court rentals ~$30-60/hr non-members", null, null], // approximate figures stay unknown
   ["Peak: $35/hour/person; Memberships from $160/month", 35, false],
 ];
 let failures = 0;

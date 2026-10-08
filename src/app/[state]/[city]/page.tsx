@@ -285,7 +285,7 @@ export default async function CityPage({ params }: CityPageProps) {
                     <th className="p-3 font-semibold">Courts</th>
                     <th className="p-3 font-semibold">Indoor / Outdoor</th>
                     <th className="p-3 font-semibold">Access</th>
-                    {openClubs.some((c) => c.courtSurface) && <th className="p-3 font-semibold">Surface</th>}
+                    {openClubs.some((c) => c.facility.courtSurface) && <th className="p-3 font-semibold">Surface</th>}
                     {priceSummary && <th className="p-3 font-semibold whitespace-nowrap">Per player / hr</th>}
                   </tr>
                 </thead>
@@ -310,7 +310,7 @@ export default async function CityPage({ params }: CityPageProps) {
                           <td className="p-3 tabular-nums">{c.facility.totalCourts > 0 ? c.facility.totalCourts : "Unknown"}</td>
                           <td className="p-3">{io}</td>
                           <td className="p-3">{c.membersOnly ? "Members only" : "Open to public"}</td>
-                          {openClubs.some((cc) => cc.courtSurface) && <td className="p-3">{c.courtSurface || "Unknown"}</td>}
+                          {openClubs.some((cc) => cc.facility.courtSurface) && <td className="p-3">{c.facility.courtSurface || "Unknown"}</td>}
                           {priceSummary && (
                             <td className="p-3 tabular-nums whitespace-nowrap">
                               {(() => {

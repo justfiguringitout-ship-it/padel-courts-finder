@@ -61,7 +61,7 @@ export interface PlayerPrice {
 const OTHER_SPORT = /pickle\s?ball|tennis|soccer|squash|rink|basketball|volleyball|badminton|golf|bowling/i;
 const PADEL_WORD = /padel|paddle/i;
 const CLAUSE_SKIP =
-  /unknown|not (?:publicly )?listed|\btbd\b|\bn\/a\b|coming soon|members?[- ]only|\b(?:est\.?|estimated?|estimates?|typical(?:ly)?|roughly|per sources|based on other)(?![a-z])/i;
+  /unknown|not (?:publicly )?listed|\btbd\b|\bn\/a\b|coming soon|members?[- ]only|\b(?:est\.?|estimated?|estimates?|typical(?:ly)?|roughly|per sources|based on other|approx\.?|directory listings|varies by source)(?![a-z])|~\s*\$/i;
 const EXCLUDE_NEAR =
   /lesson|clinic|coach|private|class|camp|academy|open play|drop[- ]?in|league|event|corporate|party|racket|racquet|\bballs?\b|example|guest fee|day pass|social|americano|initiation|membership|program/i;
 const PRICE_RE = /~?\$(\d{1,3}(?:\.\d\d)?)(\+)?(?:\s*(?:[-–]|to)\s*\$?(\d{1,3}(?:\.\d\d)?)|\/\$?(\d{2,3})(?=\s+per\b))?\+?/gi;
@@ -319,8 +319,14 @@ export function parsePlayerPrice(text: string | undefined | null): PlayerPrice |
 }
 
 /** Per-player price for a club record (raw or adapted, anything with pricingText). */
+/** Below this per-player figure a parse is almost always a misread (a per-person
+ *  rate taken as a court rate, or a stale directory figure), so we show nothing. */
+const MIN_PLAUSIBLE_PER_PLAYER = 6;
+
 export function getClubPlayerPrice(club: { pricingText?: string | null }): PlayerPrice | null {
-  return parsePlayerPrice(club.pricingText);
+  const p = parsePlayerPrice(club.pricingText);
+  if (!p || p.perPlayer < MIN_PLAUSIBLE_PER_PLAYER) return null;
+  return p;
 }
 
 /** Short card label: "$20", "from $15". */
@@ -350,7 +356,8 @@ export function summarizePlayerPrices(clubs: PricedClub[]): PlayerPriceSummary |
     .map((c) => getClubPlayerPrice(c)?.perPlayer)
     .filter((v): v is number => typeof v === "number")
     .sort((a, b) => a - b);
-  if (!values.length) return null;
+  // A summary from one to four clubs reads as a market price when it is not one.
+  if (values.length < 5) return null;
   const n = values.length;
   if (n >= 5) {
     return {

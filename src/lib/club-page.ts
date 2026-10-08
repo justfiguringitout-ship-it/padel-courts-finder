@@ -8,6 +8,7 @@
  */
 
 import type { AdaptedCourt } from "@/lib/court-adapter";
+import { getClubPlayerPrice } from "@/lib/player-price";
 
 export const WEEK_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] as const;
 const DAY_KEYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"] as const;
@@ -190,15 +191,20 @@ export interface PriceSummary {
   perPlayer: string;
 }
 
-/** Court-hour price from the parsed pricing text; undefined when none was published. */
+/**
+ * Price facts for the club page, from the same parser the city and state pages
+ * use (src/lib/player-price.ts), so a club never shows two different prices.
+ * Undefined when the club does not publish a price we can read with confidence.
+ */
 export function getPriceSummary(court: AdaptedCourt): PriceSummary | undefined {
-  const lo = court.pricing.offPeakHourlyRate;
-  const hi = court.pricing.peakHourlyRate;
-  if (!lo || !hi) return undefined;
+  const p = getClubPlayerPrice(court);
+  if (!p) return undefined;
   const fmt = (a: number, b: number) => (a === b ? `$${a}` : `$${a} to $${b}`);
+  const courtLo = p.source === "court" && p.courtHourly ? p.courtHourly : p.perPlayer * 4;
+  const courtHi = Math.max(courtLo, p.perPlayerHigh * 4);
   return {
-    perCourtHour: fmt(lo, hi),
-    perPlayer: fmt(Math.round(lo / 4), Math.round(hi / 4)),
+    perCourtHour: fmt(courtLo, courtHi),
+    perPlayer: fmt(p.perPlayer, p.perPlayerHigh),
   };
 }
 
