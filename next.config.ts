@@ -38,6 +38,14 @@ const nextConfig: NextConfig = {
       { source: '/courts/padel-39', destination: '/courts/padel39-north-austin', permanent: true }, // renamed 2026-09-29
       { source: '/courts/the-king-of-padel', destination: '/courts/the-king-of-padel-san-antonio', permanent: true }, // duplicate removed 2026-10-08
       { source: '/courts/padel-greenpoint', destination: '/new-york/brooklyn', permanent: true }, // closed May 31 2026 (building sold)
+      { source: '/courts/pepper-padel', destination: '/florida/north-miami', permanent: true }, // closed (last activity 2023), audit 2026-10-08
+      { source: '/courts/naoa', destination: '/new-york/east-hampton', permanent: true }, // permanently closed per Google, audit 2026-10-08
+      { source: '/courts/dixson-padel-and-pickleball-club', destination: '/florida', permanent: true }, // now pickleball only, audit 2026-10-08
+      { source: '/courts/punto-azul-padel-club', destination: '/texas/houston', permanent: true }, // never opened, audit 2026-10-08
+      { source: '/courts/padel-protech', destination: '/texas', permanent: true }, // no evidence of a club, audit 2026-10-08
+      { source: '/courts/golden-padel', destination: '/california/palm-desert', permanent: true }, // no evidence of a club, audit 2026-10-08
+      { source: '/florida/deerfield-beach', destination: '/florida', permanent: false },
+      { source: '/texas/hidalgo', destination: '/texas', permanent: false },
       { source: '/courts/austin-padel-center-pop-up', destination: '/courts/austin-padel-center', permanent: true }, // permanent club opened 2026-08
       { source: '/courts/woodcourt-padel-and-pickleball', destination: '/courts/wepadel', permanent: true }, // rebranded, 2026-09-29
       { source: '/courts/net-racquet-club', destination: '/texas/farmers-branch', permanent: true }, // club closed, 2026-09-29
