@@ -435,6 +435,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Miami",
     state: "FL",
     zipCode: "33196",
+    coordinates: { lat: 25.64055, lng: -80.42868 }, // US Census geocoder 2026-10-08 (was 7.1 km off)
     phone: "+1 305-256-5757",
     rating: 4.8,
     reviewCount: 89,
@@ -589,6 +590,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Doral",
     state: "FL",
     zipCode: "33166",
+    coordinates: { lat: 25.83163, lng: -80.33497 }, // US Census geocoder 2026-10-08 (was 5.3 km off)
     phone: "(561) 519-7832",
     website: "https://www.smartpadelhouse.com",
     rating: 4.7,
@@ -687,6 +689,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Houston",
     state: "TX",
     zipCode: "77064",
+    coordinates: { lat: 29.89913, lng: -95.50473 }, // US Census geocoder 2026-10-08 (was 6.9 km off)
     phone: "(346) 201-6570",
     website: "https://cubepadel.com",
     rating: 4.9,
@@ -952,6 +955,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Nashville",
     state: "TN",
     zipCode: "37211",
+    coordinates: { lat: 36.1124, lng: -86.7475 }, // US Census geocoder 2026-10-08 (was 1291.8 km off)
     phone: "615-813-2300",
     website: "https://www.padel.haus/nashville",
     rating: 5,
@@ -1045,6 +1049,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Miami",
     state: "FL",
     zipCode: "33179",
+    coordinates: { lat: 25.94285, lng: -80.19602 }, // US Census geocoder 2026-10-08 (was 11.5 km off)
     phone: "+1 305-332-5893",
     email: "sebastian@lavitamina.cl",
     website: "https://onepadel.us",
@@ -2292,6 +2297,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Los Angeles",
     state: "CA",
     zipCode: "90027",
+    coordinates: { lat: 34.09818, lng: -118.30108 }, // US Census geocoder 2026-10-08 (was 3.7 km off)
     phone: "+1 (510) 770-6138",
     website: "https://thepadelcourts.com",
     rating: 5,
@@ -2340,6 +2346,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Las Vegas",
     state: "NV",
     zipCode: "89117",
+    coordinates: { lat: 36.15073, lng: -115.26149 }, // US Census geocoder 2026-10-08 (was 12.5 km off)
     phone: "(702) 575-1700",
     website: "https://p1padel.com",
     rating: 4.9,
@@ -2798,6 +2805,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Washington",
     state: "DC",
     zipCode: "20011",
+    coordinates: { lat: 38.9533, lng: -77.03648 }, // US Census geocoder 2026-10-08 (was 8.0 km off)
     phone: "(202) 722-5949",
     website: "https://rockcreektennis.com",
     rating: 4.4,
@@ -2925,6 +2933,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Brooklyn",
     state: "NY",
     zipCode: "11223",
+    coordinates: { lat: 40.58437, lng: -73.97445 }, // US Census geocoder 2026-10-08 (was 3.1 km off)
     phone: "+13474698890",
     website: "https://book.goldenpointnyc.com/",
     rating: 4.7,
@@ -3663,6 +3672,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Lakewood",
     state: "CO",
     zipCode: "80214",
+    coordinates: { lat: 39.72589, lng: -105.06678 }, // US Census geocoder 2026-10-08 (was 6.5 km off)
     phone: "303-232-6272",
     website: "https://www.denverrc.com",
     rating: 4.5,
@@ -3704,6 +3714,7 @@ export const padelCourts: PadelCourt[] = [
     city: "El Paso",
     state: "TX",
     zipCode: "79932",
+    coordinates: { lat: 31.85751, lng: -106.6256 }, // US Census geocoder 2026-10-08 (was 875.9 km off)
     phone: "(915) 345-7363",
     rating: 4.5,
     reviewCount: 4,
@@ -3740,6 +3751,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Sunland Park",
     state: "NM",
     zipCode: "88063",
+    coordinates: { lat: 31.80332, lng: -106.55835 }, // US Census geocoder 2026-10-08 (was 6.2 km off)
     phone: "915-730-0880",
     website: "https://padelclubep.com",
     rating: 5,
@@ -3822,6 +3834,7 @@ export const padelCourts: PadelCourt[] = [
     city: "McAllen",
     state: "TX",
     zipCode: "78501",
+    coordinates: { lat: 26.22257, lng: -98.24238 }, // US Census geocoder 2026-10-08 (was 70.9 km off)
     phone: "+1 956-680-9602",
     website: "https://rgvpadelclub.com",
     rating: 4.7,
@@ -3870,6 +3883,7 @@ export const padelCourts: PadelCourt[] = [
     city: "San Antonio",
     state: "TX",
     zipCode: "78233",
+    coordinates: { lat: 29.57318, lng: -98.36921 }, // US Census geocoder 2026-10-08 (was 19.2 km off)
     phone: "(210) 464-7044",
     website: "https://upadel.us/san-antonio/",
     rating: 5,
@@ -3969,6 +3983,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Austin",
     state: "TX",
     zipCode: "78745",
+    coordinates: { lat: 30.21762, lng: -97.76 }, // US Census geocoder 2026-10-08 (was 3.2 km off)
     phone: "(737) 376-0605",
     website: "https://padelclubaustin.com",
     rating: 4.9,
@@ -4016,6 +4031,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Austin",
     state: "TX",
     zipCode: "78758",
+    coordinates: { lat: 30.38302, lng: -97.72266 }, // US Census geocoder 2026-10-08 (was 28.0 km off)
     phone: "(512) 220-6296",
     website: "https://www.padel39.com",
     rating: 5,
@@ -4067,6 +4083,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Dallas",
     state: "TX",
     zipCode: "75240",
+    coordinates: { lat: 32.92991, lng: -96.8023 }, // US Census geocoder 2026-10-08 (was 373.6 km off)
     phone: "(972) 233-4444",
     website: "https://www.thebannerhouse.com",
     rating: 4.6,
@@ -4113,6 +4130,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Alpharetta",
     state: "GA",
     zipCode: "30005",
+    coordinates: { lat: 34.0836, lng: -84.23718 }, // US Census geocoder 2026-10-08 (was 6.6 km off)
     phone: "770-442-5783",
     website: "https://www.racketsocialclub.us/alpharetta-1",
     rating: 4.9,
@@ -4156,6 +4174,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Atlanta",
     state: "GA",
     zipCode: "30340",
+    coordinates: { lat: 33.88685, lng: -84.26137 }, // US Census geocoder 2026-10-08 (was 20.1 km off)
     phone: "(470) 421-2402",
     website: "https://itpta.com",
     rating: 4.9,
@@ -4236,6 +4255,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Kissimmee",
     state: "FL",
     zipCode: "34746",
+    coordinates: { lat: 28.2585, lng: -81.46412 }, // US Census geocoder 2026-10-08 (was 34.9 km off)
     phone: "(727) 618-8589, (321) 900-2568",
     website: "https://www.padelworldplay.com",
     rating: 4.9,
@@ -4283,6 +4303,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Charlotte",
     state: "NC",
     zipCode: "28269",
+    coordinates: { lat: 35.36671, lng: -80.805 }, // US Census geocoder 2026-10-08 (was 15.4 km off)
     phone: "(704) 947-7770",
     website: "https://www.epic-padel.com/locations/charlotte",
     rating: 4.6,
@@ -4358,6 +4379,7 @@ export const padelCourts: PadelCourt[] = [
     city: "San Juan",
     state: "PR",
     zipCode: "00926",
+    coordinates: { lat: 18.3694, lng: -66.0659 }, // US Census geocoder 2026-10-08 (was 11.9 km off)
     phone: "939-337-1250, 939-337-1203, (787) 467-1545",
     rating: 4.6,
     reviewCount: 14,
@@ -4487,6 +4509,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Atlanta",
     state: "GA",
     zipCode: "30318",
+    coordinates: { lat: 33.77691, lng: -84.40804 }, // US Census geocoder 2026-10-08 (was 3.3 km off)
     phone: "(678) 919-2312",
     website: "https://www.padel.haus/atlanta",
     rating: 4.7,
@@ -4718,6 +4741,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Phoenix",
     state: "AZ",
     zipCode: "85018",
+    coordinates: { lat: 33.50985, lng: -111.99371 }, // US Census geocoder 2026-10-08 (was 3.3 km off)
     phone: "480-606-2300",
     website: "https://camelbackpadelclub.com",
     rating: 4,
@@ -4847,6 +4871,7 @@ export const padelCourts: PadelCourt[] = [
     state: "TX",
     chainName: "Padel39",
     zipCode: "75006",
+    coordinates: { lat: 32.98057, lng: -96.84947 }, // US Census geocoder 2026-10-08 (was 6.4 km off)
     phone: "(469) 568-3060",
     email: "northdallas@padel39.com",
     website: "https://www.padel39.com/clubs/north-dallas-tx",
@@ -4895,6 +4920,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Farmers Branch",
     state: "TX",
     zipCode: "75234",
+    coordinates: { lat: 32.9447, lng: -96.89022 }, // US Census geocoder 2026-10-08 (was 6.1 km off)
     phone: "(469) 232-7021",
     email: "hello@krakenpadelclub.com",
     website: "https://www.krakenpadelclub.com",
@@ -4942,6 +4968,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Frisco",
     state: "TX",
     zipCode: "75033",
+    coordinates: { lat: 33.16361, lng: -96.82686 }, // US Census geocoder 2026-10-08 (was 4.6 km off)
     phone: "(469) 430-9399",
     website: "https://northtexasracquetclub.com",
     rating: 4.7,
@@ -5193,6 +5220,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Orlando",
     state: "FL",
     zipCode: "32824",
+    coordinates: { lat: 28.43617, lng: -81.37118 }, // US Census geocoder 2026-10-08 (was 10.0 km off)
     phone: "(689) 326-5256",
     website: "https://playtomic.io/orlando-padel-club/021f6ec2-362b-4604-a697-0ed98e1c2de6",
     rating: 5,
@@ -5266,6 +5294,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Miami Beach",
     state: "FL",
     zipCode: "33139",
+    coordinates: { lat: 25.79009, lng: -80.17535 }, // US Census geocoder 2026-10-08 (was 4.1 km off)
     phone: "858-353-0519",
     website: "https://6lovesports.com",
     rating: 4.7,
@@ -5385,6 +5414,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Highland Park",
     state: "IL",
     zipCode: "60035",
+    coordinates: { lat: 42.1914, lng: -87.82697 }, // US Census geocoder 2026-10-08 (was 2.0 km off)
     phone: "847-579-4125",
     website: "https://clubpicklepadel.com, https://www.pdhp.org",
     rating: 5,
@@ -5428,6 +5458,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Boston",
     state: "MA",
     zipCode: "02136",
+    coordinates: { lat: 42.24443, lng: -71.13354 }, // US Census geocoder 2026-10-08 (was 15.3 km off)
     phone: "(617) 675-2004",
     website: "https://sensapadel.com",
     rating: 5,
@@ -5578,7 +5609,7 @@ export const padelCourts: PadelCourt[] = [
       "free/private parking",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 32.6499, lng: -117.0744 }, // coordinates estimated
+    coordinates: { lat: 32.62111, lng: -116.96697 }, // US Census geocoder 2026-10-08 (was 10.6 km off)
     instagram: "@eslpadel",
     membersOnly: false,
     lessonsAvailable: true,
@@ -5618,7 +5649,7 @@ export const padelCourts: PadelCourt[] = [
       "gym/wellness",
       "outdoor terrace",
     ],
-    coordinates: { lat: 34.0607, lng: -118.2352 }, // coordinates estimated
+    coordinates: { lat: 34.01799, lng: -118.37552 }, // US Census geocoder 2026-10-08 (was 13.8 km off)
     instagram: "@thelapadelclub",
     facebook: "https://www.facebook.com/thelapadelclub",
     membersOnly: true,
@@ -5663,7 +5694,7 @@ export const padelCourts: PadelCourt[] = [
       "Wi-Fi",
       "weights (members only)",
     ],
-    coordinates: { lat: 34.0607, lng: -118.2352 }, // coordinates estimated
+    coordinates: { lat: 34.02601, lng: -118.36539 }, // US Census geocoder 2026-10-08 (was 12.6 km off)
     instagram: "@padelupclub",
     facebook: "https://www.facebook.com/p/Padel-Up-Club-61567173176853/",
     membersOnly: false,
@@ -5706,7 +5737,7 @@ export const padelCourts: PadelCourt[] = [
       "locker rooms",
       "event spaces",
     ],
-    coordinates: { lat: 37.9765, lng: -122.5341 }, // city-center estimate
+    coordinates: { lat: 38.02192, lng: -122.52421 }, // US Census geocoder 2026-10-08 (was 5.1 km off)
     instagram: "https://www.instagram.com/flyteracquetclub",
     facebook: "https://www.facebook.com/p/Flyte-Racquet-Club-61567269492328/",
     membersOnly: false,
@@ -5828,7 +5859,7 @@ export const padelCourts: PadelCourt[] = [
       "usage analytics",
     ],
     courtSurface: "synthetic turf with glass walls",
-    coordinates: { lat: 40.0164, lng: -105.2691 }, // coordinates estimated
+    coordinates: { lat: 40.06726, lng: -105.20383 }, // US Census geocoder 2026-10-08 (was 7.9 km off)
     instagram: "@smashpadelusa",
     facebook: "https://www.facebook.com/p/Smash-Padel-Usa-61573459886440/",
     membersOnly: false,
@@ -5873,7 +5904,7 @@ export const padelCourts: PadelCourt[] = [
       "nearby dining",
     ],
     courtSurface: "low-pile synthetic turf",
-    coordinates: { lat: 39.7422, lng: -104.9873 },
+    coordinates: { lat: 39.73097, lng: -104.93989 }, // US Census geocoder 2026-10-08 (was 4.2 km off)
     instagram: "9codenver",
     facebook: "https://www.facebook.com/9CODenver/",
     membersOnly: false,
@@ -5960,7 +5991,7 @@ export const padelCourts: PadelCourt[] = [
       "youth camps",
     ],
     courtSurface: "professional (unknown specific type)",
-    coordinates: { lat: 41.2735, lng: -72.8151 }, // city-center estimate
+    coordinates: { lat: 41.29789, lng: -72.75671 }, // US Census geocoder 2026-10-08 (was 5.6 km off)
     facebook: "https://www.facebook.com/Serveandsmashpadel/",
     membersOnly: false,
     lessonsAvailable: true,
@@ -6004,7 +6035,7 @@ export const padelCourts: PadelCourt[] = [
       "pickleball courts (4)",
       "platform tennis courts (5)",
     ],
-    coordinates: { lat: 41.1438, lng: -73.4918 }, // city-center estimate
+    coordinates: { lat: 41.15999, lng: -73.49437 }, // US Census geocoder 2026-10-08 (was 1.8 km off)
     instagram: "@newcanaanfieldclub",
     facebook: "https://www.facebook.com/ncfieldclub/",
     membersOnly: true,
@@ -6133,7 +6164,7 @@ export const padelCourts: PadelCourt[] = [
       "tournaments/events",
     ],
     courtSurface: "artificial turf / synthetic",
-    coordinates: { lat: 26.3772, lng: -80.12 }, // coordinates estimated
+    coordinates: { lat: 26.35318, lng: -80.18725 }, // US Census geocoder 2026-10-08 (was 7.2 km off)
     instagram: "@legiopadel, @legiogp_world",
     facebook: "https://www.facebook.com/p/LEGIO-GP-PADEL-WORLD-61573719550701/",
     membersOnly: false,
@@ -6180,7 +6211,7 @@ export const padelCourts: PadelCourt[] = [
       "bar/lounge",
     ],
     courtSurface: "artificial turf (10mm textured, silica sand-filled)",
-    coordinates: { lat: 26.3709, lng: -80.1263 }, // coordinates estimated
+    coordinates: { lat: 26.40676, lng: -80.10959 }, // US Census geocoder 2026-10-08 (was 4.3 km off)
     instagram: "https://www.instagram.com/padelx.bocaraton/",
     facebook: "https://www.facebook.com/padelx.us/",
     membersOnly: false,
@@ -6227,7 +6258,7 @@ export const padelCourts: PadelCourt[] = [
       "changing rooms",
       "cafeteria",
     ],
-    coordinates: { lat: 25.8214, lng: -80.3534 }, // coordinates estimated
+    coordinates: { lat: 25.79082, lng: -80.37101 }, // US Census geocoder 2026-10-08 (was 3.8 km off)
     instagram: "@thesetpadelhaus",
     membersOnly: false,
     lessonsAvailable: true,
@@ -6270,7 +6301,7 @@ export const padelCourts: PadelCourt[] = [
       "restrooms",
     ],
     courtSurface: "turf",
-    coordinates: { lat: 25.8602, lng: -80.2755 }, // coordinates estimated
+    coordinates: { lat: 25.89612, lng: -80.33752 }, // US Census geocoder 2026-10-08 (was 7.4 km off)
     instagram: "@arenasportsus",
     facebook: "https://www.facebook.com/arenasportsus/",
     membersOnly: false,
@@ -6354,7 +6385,7 @@ export const padelCourts: PadelCourt[] = [
       "BBQ areas",
       "free parking",
     ],
-    coordinates: { lat: 25.7654, lng: -80.1881 }, // coordinates estimated
+    coordinates: { lat: 25.84218, lng: -80.20543 }, // US Census geocoder 2026-10-08 (was 8.7 km off)
     instagram: "https://www.instagram.com/stadiosoccermiami/",
     facebook: "https://www.facebook.com/p/Stadio-Soccer-100063540225141/",
     membersOnly: false,
@@ -6396,7 +6427,7 @@ export const padelCourts: PadelCourt[] = [
       "restrooms/lockers",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 25.9936, lng: -80.3259 }, // coordinates estimated
+    coordinates: { lat: 25.97907, lng: -80.31433 }, // US Census geocoder 2026-10-08 (was 2.0 km off)
     instagram: "https://www.instagram.com/padelbp/",
     facebook: "https://www.facebook.com/564846183368068/",
     membersOnly: false,
@@ -6440,7 +6471,7 @@ export const padelCourts: PadelCourt[] = [
       "Juan Valdez Café",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 28.5469, lng: -81.3706 }, // coordinates estimated
+    coordinates: { lat: 28.42335, lng: -81.41534 }, // US Census geocoder 2026-10-08 (was 14.4 km off)
     instagram: "@padelplususa",
     facebook: "https://www.facebook.com/p/Padel-Plus-Indoor-Racquet-Club-61565070245142/",
     membersOnly: false,
@@ -6575,7 +6606,7 @@ export const padelCourts: PadelCourt[] = [
       "WiFi",
       "restaurant",
     ],
-    coordinates: { lat: 26.7238, lng: -80.0449 }, // coordinates estimated
+    coordinates: { lat: 26.68008, lng: -80.1843 }, // US Census geocoder 2026-10-08 (was 14.7 km off)
     instagram: "@xcelpadel",
     facebook: "https://www.facebook.com/xcelpadel/",
     membersOnly: false,
@@ -6666,7 +6697,7 @@ export const padelCourts: PadelCourt[] = [
       "AI cameras",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 26.7221, lng: -80.0466 }, // coordinates estimated
+    coordinates: { lat: 26.70039, lng: -80.07413 }, // US Census geocoder 2026-10-08 (was 3.6 km off)
     instagram: "@palmbeachpadel",
     facebook: "https://www.facebook.com/palmbeachpadel",
     membersOnly: false,
@@ -6798,7 +6829,7 @@ export const padelCourts: PadelCourt[] = [
       "men's and women's fitness centers",
       "casual and fine dining",
     ],
-    coordinates: { lat: 33.7578, lng: -84.3792 }, // coordinates estimated
+    coordinates: { lat: 33.78727, lng: -84.37807 }, // US Census geocoder 2026-10-08 (was 3.3 km off)
     facebook: "https://www.facebook.com/PiedmontDrivingClub/",
     membersOnly: true,
     socialArea: true,
@@ -6841,7 +6872,7 @@ export const padelCourts: PadelCourt[] = [
       "events",
       "pickleball",
     ],
-    coordinates: { lat: 41.8857, lng: -87.6222 }, // coordinates estimated
+    coordinates: { lat: 41.93602, lng: -87.74305 }, // US Census geocoder 2026-10-08 (was 11.5 km off)
     instagram: "@proximopadel",
     facebook: "https://www.facebook.com/profile.php?id=61581454686518",
     membersOnly: false,
@@ -6924,7 +6955,7 @@ export const padelCourts: PadelCourt[] = [
       "boxing studio",
       "group fitness classes",
     ],
-    coordinates: { lat: 41.5638, lng: -87.6716 }, // city-center estimate
+    coordinates: { lat: 41.55724, lng: -87.68747 }, // US Census geocoder 2026-10-08 (was 1.5 km off)
     instagram: "@hfracquetandfitness",
     facebook: "https://www.facebook.com/hfracquetandfitnessclub",
     membersOnly: false,
@@ -7008,7 +7039,7 @@ export const padelCourts: PadelCourt[] = [
       "equipment rentals",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 38.2467, lng: -85.7555 }, // city-center estimate
+    coordinates: { lat: 38.26452, lng: -85.72752 }, // US Census geocoder 2026-10-08 (was 3.1 km off)
     instagram: "@playpatl",
     facebook: "https://www.facebook.com/p/PATL-Louisville-61576365762518/",
     membersOnly: false,
@@ -7054,7 +7085,7 @@ export const padelCourts: PadelCourt[] = [
       "pickleball courts (2)",
     ],
     courtSurface: "Synthetic turf (artificial grass)",
-    coordinates: { lat: 42.3655, lng: -71.0535 }, // coordinates estimated
+    coordinates: { lat: 42.34121, lng: -71.03568 }, // US Census geocoder 2026-10-08 (was 3.1 km off)
     instagram: "@padelhubusa",
     facebook: "https://www.facebook.com/p/PadelHub-USA-61571818306647/",
     membersOnly: false,
@@ -7096,7 +7127,7 @@ export const padelCourts: PadelCourt[] = [
       "online store",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 42.3351, lng: -71.1179 }, // coordinates estimated
+    coordinates: { lat: 42.32223, lng: -71.15648 }, // US Census geocoder 2026-10-08 (was 3.5 km off)
     instagram: "@brooklinepaddleclub",
     facebook: "https://www.facebook.com/BrooklinePaddleClub/",
     membersOnly: true,
@@ -7183,7 +7214,7 @@ export const padelCourts: PadelCourt[] = [
       "yoga studio",
     ],
     courtSurface: "sand-filled artificial turf with glass walls",
-    coordinates: { lat: 39.3141, lng: -76.5218 }, // city-center estimate
+    coordinates: { lat: 39.37909, lng: -76.49036 }, // US Census geocoder 2026-10-08 (was 7.7 km off)
     facebook: "https://www.facebook.com/pvstc",
     membersOnly: false,
     lessonsAvailable: true,
@@ -7226,7 +7257,7 @@ export const padelCourts: PadelCourt[] = [
       "bowling",
       "summer camp",
     ],
-    coordinates: { lat: 39.3985, lng: -76.6049 }, // city-center estimate
+    coordinates: { lat: 39.39646, lng: -76.6464 }, // US Census geocoder 2026-10-08 (was 3.6 km off)
     instagram: "@lhirondelleclubofficial",
     facebook: "https://www.facebook.com/pages/LHirondelle-Club/137605309595345",
     membersOnly: true,
@@ -7270,7 +7301,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop services (racket restringing)",
       "video game room",
     ],
-    coordinates: { lat: 44.1834, lng: -69.0726 }, // city-center estimate
+    coordinates: { lat: 44.18382, lng: -69.12593 }, // US Census geocoder 2026-10-08 (was 4.3 km off)
     instagram: "@midcoastrec",
     facebook: "https://www.facebook.com/midcoastrecreation",
     membersOnly: false,
@@ -7314,7 +7345,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop (likely)",
       "court cameras",
     ],
-    coordinates: { lat: 44.8865, lng: -93.1358 }, // city-center estimate
+    coordinates: { lat: 44.86562, lng: -93.16797 }, // US Census geocoder 2026-10-08 (was 3.4 km off)
     instagram: "@heightsracquetclub",
     facebook: "https://www.facebook.com/heightsracquetclub",
     membersOnly: true,
@@ -7401,7 +7432,7 @@ export const padelCourts: PadelCourt[] = [
       "bars",
       "ballroom",
     ],
-    coordinates: { lat: 35.786, lng: -78.6318 }, // coordinates estimated
+    coordinates: { lat: 35.84741, lng: -78.65171 }, // US Census geocoder 2026-10-08 (was 7.1 km off)
     instagram: "@northhillsclub",
     facebook: "https://www.facebook.com/northhillsclub",
     membersOnly: true,
@@ -7589,7 +7620,7 @@ export const padelCourts: PadelCourt[] = [
       "WiFi",
     ],
     courtSurface: "artificial grass",
-    coordinates: { lat: 40.4676, lng: -74.6372 }, // city-center estimate
+    coordinates: { lat: 40.53563, lng: -74.64049 }, // US Census geocoder 2026-10-08 (was 7.6 km off)
     instagram: "@accesspadel.us",
     facebook: "https://www.facebook.com/p/Access-Padel-Somerset-61580886097950/",
     membersOnly: false,
@@ -7758,7 +7789,7 @@ export const padelCourts: PadelCourt[] = [
       "gym",
     ],
     courtSurface: "turf-style",
-    coordinates: { lat: 40.8041, lng: -74.4742 }, // coordinates estimated
+    coordinates: { lat: 40.7951, lng: -74.45087 }, // US Census geocoder 2026-10-08 (was 2.2 km off)
     instagram: "@centercourtpadelnj",
     facebook: "https://www.facebook.com/p/Centercourt-Padel-61558277883240/",
     membersOnly: false,
@@ -7800,7 +7831,7 @@ export const padelCourts: PadelCourt[] = [
       "free intro clinics",
       "pizza & padel nights",
     ],
-    coordinates: { lat: 41.0102, lng: -74.2703 }, // city-center estimate
+    coordinates: { lat: 41.00686, lng: -74.24372 }, // US Census geocoder 2026-10-08 (was 2.3 km off)
     instagram: "https://www.instagram.com/raxnj_padel/",
     membersOnly: false,
     lessonsAvailable: true,
@@ -7925,7 +7956,7 @@ export const padelCourts: PadelCourt[] = [
       "dining clubhouse",
     ],
     courtSurface: "platform (platform tennis/padel)",
-    coordinates: { lat: 40.9545, lng: -73.7386 }, // city-center estimate
+    coordinates: { lat: 40.93578, lng: -73.72525 }, // US Census geocoder 2026-10-08 (was 2.4 km off)
     instagram: "@orientabeachclub (location-tagged)",
     facebook: "https://www.facebook.com/orientabeachclub",
     membersOnly: true,
@@ -7968,7 +7999,7 @@ export const padelCourts: PadelCourt[] = [
       "double-height fitness center w/ mezzanine terrace",
       "golf simulator",
     ],
-    coordinates: { lat: 40.7149, lng: -74.0039 }, // coordinates estimated
+    coordinates: { lat: 40.76452, lng: -73.9775 }, // US Census geocoder 2026-10-08 (was 5.9 km off)
     instagram: "@111west57st",
     facebook: "https://www.facebook.com/111West57st",
     membersOnly: true,
@@ -8010,7 +8041,7 @@ export const padelCourts: PadelCourt[] = [
       "sauna",
       "cold plunge",
     ],
-    coordinates: { lat: 40.8232, lng: -73.4961 }, // city-center estimate
+    coordinates: { lat: 40.80314, lng: -73.51909 }, // US Census geocoder 2026-10-08 (was 3.0 km off)
     instagram: "@padelandsyosset",
     facebook: "https://www.facebook.com/61581853927452",
     membersOnly: false,
@@ -8097,7 +8128,7 @@ export const padelCourts: PadelCourt[] = [
       "restrooms",
       "spectator seating",
     ],
-    coordinates: { lat: 41.5083, lng: -82.0312 }, // city-center estimate
+    coordinates: { lat: 41.48121, lng: -82.04343 }, // US Census geocoder 2026-10-08 (was 3.2 km off)
     instagram: "https://www.instagram.com/cleveland_premier_pickleball/",
     facebook: "https://www.facebook.com/p/Cleveland-Premier-Pickleball-100094945802900/",
     membersOnly: false,
@@ -8140,7 +8171,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop",
     ],
     courtSurface: "Synthetic turf (artificial grass)",
-    coordinates: { lat: 39.1077, lng: -84.5074 }, // coordinates estimated
+    coordinates: { lat: 39.18075, lng: -84.46554 }, // US Census geocoder 2026-10-08 (was 8.9 km off)
     instagram: "@maketewah",
     facebook: "https://www.facebook.com/Maketewah",
     membersOnly: true,
@@ -8182,7 +8213,7 @@ export const padelCourts: PadelCourt[] = [
       "grill",
       "warming hut",
     ],
-    coordinates: { lat: 39.9675, lng: -82.9925 }, // coordinates estimated
+    coordinates: { lat: 40.02867, lng: -83.04738 }, // US Census geocoder 2026-10-08 (was 8.3 km off)
     instagram: "@swimandracquetclub",
     facebook: "https://www.facebook.com/swimandracquetclubua/",
     membersOnly: true,
@@ -8355,7 +8386,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop/retail",
       "two-story viewing lounge",
     ],
-    coordinates: { lat: 45.5159, lng: -122.6777 }, // coordinates estimated
+    coordinates: { lat: 45.58598, lng: -122.7581 }, // US Census geocoder 2026-10-08 (was 10.0 km off)
     instagram: "@foundrypadel",
     facebook: "https://www.facebook.com/people/Foundry-Padel/61585971781582/",
     membersOnly: false,
@@ -8485,7 +8516,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop implied",
       "event space",
     ],
-    coordinates: { lat: 40.0289, lng: -76.3085 }, // city-center estimate
+    coordinates: { lat: 40.04434, lng: -76.37071 }, // US Census geocoder 2026-10-08 (was 5.6 km off)
     instagram: "@rcwathleticclub",
     facebook: "https://www.facebook.com/RCWathleticclub/",
     membersOnly: false,
@@ -8531,7 +8562,7 @@ export const padelCourts: PadelCourt[] = [
       "soccer turf",
     ],
     courtSurface: "artificial turf",
-    coordinates: { lat: 39.9546, lng: -75.1632 }, // coordinates estimated
+    coordinates: { lat: 39.96718, lng: -75.12815 }, // US Census geocoder 2026-10-08 (was 3.3 km off)
     instagram: "@ballers.social.sports",
     facebook: "https://www.facebook.com/p/BallersSocialSports-61563096990701/",
     membersOnly: false,
@@ -8619,7 +8650,7 @@ export const padelCourts: PadelCourt[] = [
       "ball machine rental",
       "ADA accessible",
     ],
-    coordinates: { lat: 35.2280, lng: -101.8343 }, // city-center estimate
+    coordinates: { lat: 35.15517, lng: -101.90218 }, // US Census geocoder 2026-10-08 (was 10.2 km off)
     facebook: "https://www.facebook.com/aobtf",
     membersOnly: false,
     lessonsAvailable: true,
@@ -8664,7 +8695,7 @@ export const padelCourts: PadelCourt[] = [
       "free parking",
       "equipment rental",
     ],
-    coordinates: { lat: 30.269, lng: -97.7413 }, // coordinates estimated
+    coordinates: { lat: 30.34466, lng: -97.68532 }, // US Census geocoder 2026-10-08 (was 10.0 km off)
     instagram: "@austinpadelcenter",
     membersOnly: false,
     rentalAvailable: true,
@@ -8706,7 +8737,7 @@ export const padelCourts: PadelCourt[] = [
       "WiFi",
       "disabled access",
     ],
-    coordinates: { lat: 25.9017, lng: -97.4975 },
+    coordinates: { lat: 25.92243, lng: -97.49494 }, // US Census geocoder 2026-10-08 (was 2.3 km off)
     instagram: "@padel.quattro",
     facebook: "https://www.facebook.com/p/Padel-Quattro-61562417977888/",
     membersOnly: false,
@@ -8748,7 +8779,7 @@ export const padelCourts: PadelCourt[] = [
       "parking",
     ],
     courtSurface: "sports-grade synthetic turf",
-    coordinates: { lat: 29.7523, lng: -98.4471 }, // city-center estimate
+    coordinates: { lat: 29.74486, lng: -98.48651 }, // US Census geocoder 2026-10-08 (was 3.9 km off)
     instagram: "@pick_and_padel",
     facebook: "https://www.facebook.com/p/Pickandpadel-61556778485946/",
     membersOnly: false,
@@ -8793,7 +8824,7 @@ export const padelCourts: PadelCourt[] = [
       "store",
     ],
     courtSurface: "artificial turf",
-    coordinates: { lat: 28.7151, lng: -100.5055 }, // city-center estimate
+    coordinates: { lat: 28.71039, lng: -100.47648 }, // US Census geocoder 2026-10-08 (was 2.9 km off)
     instagram: "https://www.instagram.com/theonepadelclub/",
     membersOnly: false,
     lessonsAvailable: true,
@@ -8959,7 +8990,7 @@ export const padelCourts: PadelCourt[] = [
       "pickleball complex (8 courts)",
       "tennis courts (indoor/outdoor)",
     ],
-    coordinates: { lat: 29.7691, lng: -95.3611 }, // coordinates estimated
+    coordinates: { lat: 29.76699, lng: -95.45756 }, // US Census geocoder 2026-10-08 (was 9.3 km off)
     instagram: "@houstonianclub",
     facebook: "https://www.facebook.com/HoustonianClub",
     membersOnly: true,
@@ -9002,7 +9033,7 @@ export const padelCourts: PadelCourt[] = [
       "WiFi",
       "disabled access",
     ],
-    coordinates: { lat: 29.7613, lng: -95.3689 }, // coordinates estimated
+    coordinates: { lat: 29.96423, lng: -95.53074 }, // US Census geocoder 2026-10-08 (was 27.4 km off)
     instagram: "https://www.instagram.com/racketsocialclub/",
     facebook: "https://www.facebook.com/p/Racket-Social-Club-61570265414203/",
     membersOnly: false,
@@ -9046,7 +9077,7 @@ export const padelCourts: PadelCourt[] = [
       "balls)",
       "hosts tournaments",
     ],
-    coordinates: { lat: 29.7685, lng: -95.3617 }, // coordinates estimated
+    coordinates: { lat: 29.79818, lng: -95.35701 }, // US Census geocoder 2026-10-08 (was 3.3 km off)
     instagram: "@ipadelhouston",
     facebook: "https://www.facebook.com/ipadelhouston",
     membersOnly: false,
@@ -9081,7 +9112,7 @@ export const padelCourts: PadelCourt[] = [
       "lockers",
       "changing rooms",
     ],
-    coordinates: { lat: 29.7623, lng: -95.3679 }, // coordinates estimated
+    coordinates: { lat: 29.81951, lng: -95.4627 }, // US Census geocoder 2026-10-08 (was 11.1 km off)
     membersOnly: false,
     lessonsAvailable: true,
     rentalAvailable: true,
@@ -9125,7 +9156,7 @@ export const padelCourts: PadelCourt[] = [
       "parking",
       "air conditioning",
     ],
-    coordinates: { lat: 29.7636, lng: -95.3666 }, // coordinates estimated
+    coordinates: { lat: 29.80062, lng: -95.5631 }, // US Census geocoder 2026-10-08 (was 19.4 km off)
     instagram: "@padelcountryclubmemorial",
     facebook: "https://www.facebook.com/p/Padel-Country-Club-61552917694248/",
     membersOnly: false,
@@ -9169,7 +9200,7 @@ export const padelCourts: PadelCourt[] = [
       "merchandise discounts",
       "climate controlled",
     ],
-    coordinates: { lat: 29.7679, lng: -95.3623 }, // coordinates estimated
+    coordinates: { lat: 29.80171, lng: -95.38459 }, // US Census geocoder 2026-10-08 (was 4.3 km off)
     instagram: "https://www.instagram.com/west43padel",
     membersOnly: false,
     lessonsAvailable: true,
@@ -9260,7 +9291,7 @@ export const padelCourts: PadelCourt[] = [
       "WiFi",
     ],
     courtSurface: "professional padel surfaces",
-    coordinates: { lat: 27.5328, lng: -99.4781 }, // coordinates estimated
+    coordinates: { lat: 27.56073, lng: -99.4537 }, // US Census geocoder 2026-10-08 (was 3.9 km off)
     instagram: "@deucespadelclub",
     facebook: "https://www.facebook.com/deucespadelclub/",
     membersOnly: false,
@@ -9304,7 +9335,7 @@ export const padelCourts: PadelCourt[] = [
       "yoga/fitness/wellness",
     ],
     courtSurface: "artificial turf/sand",
-    coordinates: { lat: 30.2154, lng: -95.7448 }, // city-center estimate
+    coordinates: { lat: 30.17095, lng: -95.57197 }, // US Census geocoder 2026-10-08 (was 17.3 km off)
     instagram: "@upadelclub.us",
     facebook: "https://www.facebook.com/upadelclub.us/",
     membersOnly: false,
@@ -9349,7 +9380,7 @@ export const padelCourts: PadelCourt[] = [
       "Free parking",
       "equipment rental",
     ],
-    coordinates: { lat: 30.2184, lng: -95.7568 }, // city-center estimate
+    coordinates: { lat: 30.21417, lng: -95.58438 }, // US Census geocoder 2026-10-08 (was 16.6 km off)
     instagram: "@woodcourtpadel",
     facebook: "https://www.facebook.com/p/Woodcourt-Padel-61559960946358/",
     membersOnly: false,
@@ -9394,7 +9425,7 @@ export const padelCourts: PadelCourt[] = [
       "kitchen ( pickleball",
       "football 7",
     ],
-    coordinates: { lat: 26.2099, lng: -98.3253 }, // city-center estimate
+    coordinates: { lat: 26.20926, lng: -98.29169 }, // US Census geocoder 2026-10-08 (was 3.4 km off)
     instagram: "@imgnpark",
     facebook: "https://www.facebook.com/imgnpark",
     membersOnly: false,
@@ -9436,7 +9467,7 @@ export const padelCourts: PadelCourt[] = [
       "batting cages",
       "climbing tower",
     ],
-    coordinates: { lat: 26.2129, lng: -98.3223 }, // city-center estimate
+    coordinates: { lat: 26.21074, lng: -98.28988 }, // US Census geocoder 2026-10-08 (was 3.2 km off)
     instagram: "@pickle.and.padel, @incredibowl",
     facebook: "https://www.facebook.com/MissionIncredibowl",
     membersOnly: false,
@@ -9483,7 +9514,7 @@ export const padelCourts: PadelCourt[] = [
       "changing rooms",
     ],
     courtSurface: "Synthetic turf (artificial grass)",
-    coordinates: { lat: 26.2159, lng: -98.3193 }, // city-center estimate
+    coordinates: { lat: 26.19909, lng: -98.28679 }, // US Census geocoder 2026-10-08 (was 3.7 km off)
     instagram: "@rgvpadelclub",
     facebook: "https://www.facebook.com/rgvpadelclub/",
     membersOnly: false,
@@ -9567,7 +9598,7 @@ export const padelCourts: PadelCourt[] = [
       "ample parking",
       "multiple sports courts/fields",
     ],
-    coordinates: { lat: 29.4283, lng: -98.4894 }, // coordinates estimated
+    coordinates: { lat: 29.51294, lng: -98.63603 }, // US Census geocoder 2026-10-08 (was 17.0 km off)
     instagram: "@mainlandsportscomplex",
     facebook: "https://www.facebook.com/MainlandSportsComplex/",
     membersOnly: false,
@@ -9654,7 +9685,7 @@ export const padelCourts: PadelCourt[] = [
       "tennis courts",
       "fitness",
     ],
-    coordinates: { lat: 30.0829, lng: -95.4172 }, // city-center estimate
+    coordinates: { lat: 30.01925, lng: -95.51329 }, // US Census geocoder 2026-10-08 (was 11.6 km off)
     instagram: "@giammalvarc",
     facebook: "https://www.facebook.com/GiammalvaRacquetClub",
     membersOnly: true,
@@ -9701,7 +9732,7 @@ export const padelCourts: PadelCourt[] = [
       "PT/massage room",
       "exercise studio",
     ],
-    coordinates: { lat: 40.6007, lng: -111.9451 }, // city-center estimate
+    coordinates: { lat: 40.58193, lng: -112.03825 }, // US Census geocoder 2026-10-08 (was 8.1 km off)
     instagram: "@padelparkut",
     facebook: "https://www.facebook.com/p/Padel-Park-Utah-61567836585591/",
     membersOnly: false,
@@ -9746,7 +9777,7 @@ export const padelCourts: PadelCourt[] = [
       "trails",
       "athletic fields",
     ],
-    coordinates: { lat: 38.0233, lng: -78.4797 }, // city-center estimate
+    coordinates: { lat: 38.12561, lng: -78.43645 }, // US Census geocoder 2026-10-08 (was 12.0 km off)
     membersOnly: true,
     lessonsAvailable: true,
     positiveReviewThemes: "Well-maintained lighted courts; friendly staff; family-friendly pools/playground",
@@ -9786,7 +9817,7 @@ export const padelCourts: PadelCourt[] = [
       "private events",
     ],
     courtSurface: "Synthetic turf (artificial grass)",
-    coordinates: { lat: 37.5491, lng: -77.4276 }, // coordinates estimated
+    coordinates: { lat: 37.53356, lng: -77.43749 }, // US Census geocoder 2026-10-08 (was 1.9 km off)
     instagram: "@padelplant",
     facebook: "https://www.facebook.com/padelplant/",
     membersOnly: false,
@@ -9832,7 +9863,7 @@ export const padelCourts: PadelCourt[] = [
       "fire pit",
     ],
     courtSurface: "artificial turf",
-    coordinates: { lat: 42.8736, lng: -72.8778 }, // city-center estimate
+    coordinates: { lat: 42.91792, lng: -72.88316 }, // US Census geocoder 2026-10-08 (was 4.9 km off)
     instagram: "@brookboundinnvt",
     facebook: "https://www.facebook.com/p/Brook-Bound-in-Wilmington-Vermont-100057354853768/",
     membersOnly: false,
@@ -10108,7 +10139,7 @@ export const padelCourts: PadelCourt[] = [
       "WiFi",
       "disabled access",
     ],
-    coordinates: { lat: 26.7209, lng: -80.0478 }, // coordinates estimated
+    coordinates: { lat: 26.70631, lng: -80.08158 }, // US Census geocoder 2026-10-08 (was 3.7 km off)
     instagram: "@duspadel",
     membersOnly: false,
     rentalAvailable: true,
@@ -10149,7 +10180,7 @@ export const padelCourts: PadelCourt[] = [
       "pro shop (planned)",
       "co-working lounges (planned)",
     ],
-    coordinates: { lat: 32.4636, lng: -84.985 }, // coordinates estimated
+    coordinates: { lat: 32.48197, lng: -84.98905 }, // US Census geocoder 2026-10-08 (was 2.1 km off)
     instagram: "https://www.instagram.com/columbuspadelclub",
     membersOnly: true,
     lessonsAvailable: true,
@@ -10187,7 +10218,7 @@ export const padelCourts: PadelCourt[] = [
       "changing room",
       "WiFi",
     ],
-    coordinates: { lat: 33.8601, lng: -84.2124 }, // coordinates estimated
+    coordinates: { lat: 33.84775, lng: -84.22688 }, // US Census geocoder 2026-10-08 (was 1.9 km off)
     instagram: "@padelhwy",
     membersOnly: false,
     status: "coming_soon",
@@ -10268,7 +10299,7 @@ export const padelCourts: PadelCourt[] = [
       "free parking",
       "LED lighting",
     ],
-    coordinates: { lat: 39.1106, lng: -84.5045 }, // coordinates estimated
+    coordinates: { lat: 39.13097, lng: -84.35719 }, // US Census geocoder 2026-10-08 (was 12.9 km off)
     instagram: "@clubpadelnewtown",
     facebook: "https://www.facebook.com/p/Club-Padel-Newtown-61584586082874/",
     membersOnly: false,
@@ -10304,7 +10335,7 @@ export const padelCourts: PadelCourt[] = [
       "fitness and training spaces",
       "locker rooms",
     ],
-    coordinates: { lat: 40.0399, lng: -75.5098 }, // coordinates estimated
+    coordinates: { lat: 40.03982, lng: -75.54548 }, // US Census geocoder 2026-10-08 (was 3.0 km off)
     instagram: "@ohpadelclub",
     facebook: "https://www.facebook.com/ohpadel/",
     membersOnly: false,
@@ -10349,7 +10380,7 @@ export const padelCourts: PadelCourt[] = [
       "covered terrace",
       "recovery/wellness area",
     ],
-    coordinates: { lat: 30.2751, lng: -97.7352 }, // coordinates estimated
+    coordinates: { lat: 30.25291, lng: -97.70028 }, // US Census geocoder 2026-10-08 (was 4.2 km off)
     instagram: "@padel.39",
     facebook: "https://www.facebook.com/padel39club/",
     membersOnly: false,
@@ -10392,7 +10423,7 @@ export const padelCourts: PadelCourt[] = [
       "coffee bar",
       "cafe",
     ],
-    coordinates: { lat: 30.2727, lng: -97.7376 }, // coordinates estimated
+    coordinates: { lat: 30.35137, lng: -97.67303 }, // US Census geocoder 2026-10-08 (was 10.7 km off)
     socialArea: true,
     foodAndDrink: true,
     status: "coming_soon",
@@ -10431,7 +10462,7 @@ export const padelCourts: PadelCourt[] = [
       "physical therapy station",
       "full bar",
     ],
-    coordinates: { lat: 30.271, lng: -97.7393 }, // coordinates estimated
+    coordinates: { lat: 30.20268, lng: -97.71952 }, // US Census geocoder 2026-10-08 (was 7.8 km off)
     instagram: "@padelsocietyatx",
     socialArea: true,
     foodAndDrink: true,
@@ -10472,7 +10503,7 @@ export const padelCourts: PadelCourt[] = [
       "coffee shop",
       "bar",
     ],
-    coordinates: { lat: 30.1692, lng: -95.4579 }, // coordinates estimated
+    coordinates: { lat: 30.23006, lng: -95.50688 }, // US Census geocoder 2026-10-08 (was 8.2 km off)
     instagram: "@lobbspadel",
     membersOnly: false,
     lessonsAvailable: true,
@@ -10572,7 +10603,7 @@ export const padelCourts: PadelCourt[] = [
       "leagues",
       "parking",
     ],
-    coordinates: { lat: 32.9595, lng: -117.2653 }, // coordinates estimated
+    coordinates: { lat: 32.99105, lng: -117.21021 }, // US Census geocoder 2026-10-08 (was 6.2 km off)
     instagram: "lavallecoastalclub",
     facebook: "https://www.facebook.com/LaValleCoastalClub",
     membersOnly: true,
@@ -10613,7 +10644,7 @@ export const padelCourts: PadelCourt[] = [
       "showers",
       "parking",
     ],
-    coordinates: { lat: 33.0203, lng: -117.2042 }, // coordinates estimated
+    coordinates: { lat: 32.9911, lng: -117.18796 }, // US Census geocoder 2026-10-08 (was 3.6 km off)
     instagram: "ranchovalencia",
     facebook: "https://www.facebook.com/RanchoValencia",
     membersOnly: false,
@@ -10812,7 +10843,7 @@ export const padelCourts: PadelCourt[] = [
       "open play",
       "booking app",
     ],
-    coordinates: { lat: 38.8339, lng: -104.8214 }, // coordinates estimated
+    coordinates: { lat: 38.91487, lng: -104.77885 }, // US Census geocoder 2026-10-08 (was 9.7 km off)
     instagram: "olympuspadel",
     facebook: "https://www.facebook.com/p/Olympus-Padel-Colorado-Springs-61581155235495/",
     membersOnly: false,
@@ -12514,7 +12545,7 @@ export const padelCourts: PadelCourt[] = [
       "on-site parking",
       "membership perks",
     ],
-    coordinates: { lat: 41.0462, lng: -71.9431 }, // coordinates estimated
+    coordinates: { lat: 41.06781, lng: -71.93396 }, // US Census geocoder 2026-10-08 (was 2.5 km off)
     membersOnly: false,
     lessonsAvailable: true,
     rentalAvailable: true,
@@ -13319,7 +13350,7 @@ export const padelCourts: PadelCourt[] = [
       "dining",
       "kids club",
     ],
-    coordinates: { lat: 32.9330, lng: -96.8830 }, // approximate, 3333 Golfing Green Dr
+    coordinates: { lat: 32.9338, lng: -96.86383 }, // US Census geocoder 2026-10-08 (was 1.8 km off)
     instagram: "brookhaven_country_club",
     facebook: "https://www.facebook.com/BrookhavenClub",
     membersOnly: true,
@@ -13640,7 +13671,7 @@ export const padelCourts: PadelCourt[] = [
     courtSurface: "Synthetic turf (artificial grass)",
     courtType: "outdoor",
     amenities: ["equipment rental", "free parking", "pro shop", "restaurant & bar", "cafeteria", "WiFi"],
-    coordinates: { lat: 27.5806, lng: -99.4739 }, // coordinates estimated
+    coordinates: { lat: 27.58818, lng: -99.44358 }, // US Census geocoder 2026-10-08 (was 3.1 km off)
     instagram: "@laredopadelclub",
     facebook: "https://www.facebook.com/people/Laredo-Padel-Club/61586721975141/",
     membersOnly: false,
@@ -13698,7 +13729,7 @@ export const padelCourts: PadelCourt[] = [
     indoorCourts: 4,
     outdoorCourts: 1,
     amenities: ["gym", "sauna", "cafe", "lounge", "kids corner", "pro shop", "showers"],
-    coordinates: { lat: 40.7330, lng: -111.9870 }, // coordinates estimated
+    coordinates: { lat: 40.7283, lng: -112.00572 }, // US Census geocoder 2026-10-08 (was 1.7 km off)
     instagram: "@thehivepadelclub",
     membersOnly: false,
     lessonsAvailable: true,
@@ -13750,7 +13781,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Activities $15-25 (member/non-member rates): Intro to Padel $15/$20, Open Play $20/$25, Americano $20/$25; court booking via the Wakit app",
     chainName: "Wakit Rakit",
     amenities: ["pro shop", "clay tennis courts", "racquetball", "clinics", "social nights", "leagues", "junior programs", "corporate events", "food & drink by arrangement", "app booking"],
-    coordinates: { lat: 28.5686, lng: -80.8250 }, // coordinates estimated
+    coordinates: { lat: 28.57903, lng: -80.81241 }, // US Census geocoder 2026-10-08 (was 1.7 km off)
     membersOnly: false,
     lessonsAvailable: true,
     socialArea: true,
@@ -13799,7 +13830,7 @@ export const padelCourts: PadelCourt[] = [
     description: "Roslyn Padel is bringing boutique padel to Long Island's North Shore, inside Christopher Morley Park, with bookings via Playtomic and a larger facility planned for 2027.",
     courtSurface: "Synthetic turf (artificial grass)",
     amenities: ["Playtomic booking", "park setting"],
-    coordinates: { lat: 40.7799, lng: -73.6465 }, // coordinates estimated
+    coordinates: { lat: 40.78936, lng: -73.66627 }, // US Census geocoder 2026-10-08 (was 2.0 km off)
     membersOnly: false,
     status: "coming_soon",
     verified: false,
@@ -14058,7 +14089,7 @@ export const padelCourts: PadelCourt[] = [
     pricingText: "Americano sessions $25 per person; activity and court booking via the Wakit app",
     chainName: "Wakit Rakit",
     amenities: ["pro shop", "clinics", "social nights", "leagues", "junior programs", "corporate events", "food & drink by arrangement", "app booking"],
-    coordinates: { lat: 30.0799, lng: -95.4172 }, // coordinates estimated (city center)
+    coordinates: { lat: 30.09764, lng: -95.50222 }, // US Census geocoder 2026-10-08 (was 8.4 km off)
     membersOnly: false,
     lessonsAvailable: true,
     socialArea: true,
@@ -14208,7 +14239,7 @@ export const padelCourts: PadelCourt[] = [
     reviewCount: 0,
     description: "Bath & Racquet House is a private members club planned for South Tampa, with padel and pickleball courts, a restaurant and bar, a spa and fitness studios. The club has not announced an opening date or said how many padel courts it will have. Membership is by application.",
     courtType: "both",
-    coordinates: { lat: 27.9430, lng: -82.4900 }, // approximate, South Tampa
+    coordinates: { lat: 27.94378, lng: -82.50684 }, // US Census geocoder 2026-10-08 (was 1.7 km off)
     instagram: "@bathracquethouse",
     membersOnly: true,
     status: "coming_soon",
@@ -14367,7 +14398,7 @@ export const padelCourts: PadelCourt[] = [
     phone: "(713) 566-0608",
     indoorCourts: 6,
     membersOnly: false,
-    coordinates: { lat: 30.165, lng: -95.59 }, // approximate
+    coordinates: { lat: 30.1965, lng: -95.59012 }, // US Census geocoder 2026-10-08 (was 3.5 km off)
     status: "open",
     verified: true,
     verificationDate: "2026-09-29",
@@ -14409,7 +14440,7 @@ export const padelCourts: PadelCourt[] = [
     outdoorCourts: 2,
     membersOnly: true,
     pricingText: "Founding membership $99.99 a month",
-    coordinates: { lat: 29.729, lng: -95.818 }, // approximate
+    coordinates: { lat: 29.75727, lng: -95.80675 }, // US Census geocoder 2026-10-08 (was 3.3 km off)
     status: "open",
     verified: true,
     verificationDate: "2026-09-29",
