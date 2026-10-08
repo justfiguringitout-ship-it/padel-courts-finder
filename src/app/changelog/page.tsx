@@ -45,31 +45,27 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const TYPE_META: Record<ChangeType, { label: string; plural: string; Icon: typeof PlusCircle; badge: string; dot: string }> = {
+const TYPE_META: Record<ChangeType, { label: string; Icon: typeof PlusCircle; badge: string; dot: string }> = {
   added: {
     label: "Added",
-    plural: "added",
     Icon: PlusCircle,
     badge: "bg-padel-green-light text-padel-green-dark ring-padel-green/30",
     dot: "bg-padel-green",
   },
   verified: {
     label: "Verified",
-    plural: "verified",
     Icon: CheckCircle2,
     badge: "bg-sky-50 text-sky-800 ring-sky-200",
     dot: "bg-sky-600",
   },
   updated: {
     label: "Updated",
-    plural: "updated",
     Icon: PencilLine,
     badge: "bg-amber-50 text-amber-800 ring-amber-200",
     dot: "bg-amber-500",
   },
   removed: {
     label: "Removed",
-    plural: "removed",
     Icon: MinusCircle,
     badge: "bg-rose-50 text-rose-800 ring-rose-200",
     dot: "bg-rose-500",
@@ -77,7 +73,10 @@ const TYPE_META: Record<ChangeType, { label: string; plural: string; Icon: typeo
 };
 const TYPE_ORDER: ChangeType[] = ["added", "verified", "updated", "removed"];
 
-function clubsTouched(e: ChangelogEntry) {
+// Changes an entry stands for: its count, else the clubs it names, else one.
+// Month totals add these up, so a club in two entries counts twice. That is
+// why the chips say "changes", not clubs.
+function changeCount(e: ChangelogEntry) {
   return e.count ?? e.clubs?.length ?? 1;
 }
 
@@ -175,7 +174,7 @@ export default function ChangelogPage() {
             {months.map((month) => {
               const counts = TYPE_ORDER.map((t) => ({
                 type: t,
-                n: month.entries.filter((e) => e.type === t).reduce((s, e) => s + clubsTouched(e), 0),
+                n: month.entries.filter((e) => e.type === t).reduce((s, e) => s + changeCount(e), 0),
               })).filter((c) => c.n > 0);
               return (
                 <section key={month.key} aria-labelledby={`m-${month.key}`}>
@@ -183,13 +182,13 @@ export default function ChangelogPage() {
                     <h2 id={`m-${month.key}`} className="text-2xl font-bold tracking-tight">
                       {monthLabel(month.key)}
                     </h2>
-                    <ul className="flex flex-wrap gap-2 text-xs" aria-label="Clubs touched this month">
+                    <ul className="flex flex-wrap gap-2 text-xs" aria-label="Changes this month">
                       {counts.map(({ type, n }) => (
                         <li
                           key={type}
                           className={`rounded-full px-2.5 py-0.5 font-medium ring-1 ring-inset tabular-nums ${TYPE_META[type].badge}`}
                         >
-                          {n} {TYPE_META[type].plural}
+                          {TYPE_META[type].label}: {n} {n === 1 ? "change" : "changes"}
                         </li>
                       ))}
                     </ul>

@@ -13,7 +13,9 @@
  * prints it as plain text when it does not (removed clubs, old names).
  *
  * `count` is how many clubs the change touched when that is more than the
- * clubs named (e.g. 116 map pins, with four named examples).
+ * clubs named (e.g. 116 map pins, with four named examples). The month
+ * summary on the page adds these up as "changes", not distinct clubs: one
+ * club can appear in several entries.
  *
  * Add new entries at the top. Keep one entry per date and type where you can.
  */
@@ -43,7 +45,7 @@ export const changelog: ChangelogEntry[] = [
     type: "verified",
     title: "The Gables Padel is open: 8 outdoor courts",
     note:
-      "Checked against the club's website and its Playtomic booking page. Status moved from coming soon to open, with corrected phone number, hours (7am to midnight daily), court prices and street address.",
+      "Checked against the club's website and its Playtomic booking page. Status moved from coming soon to open. The listing now shows 8 outdoor courts (it said indoor), the correct phone number, hours of 7am to midnight daily and court prices, which were not listed before. The map pin moved from downtown Miami to the club's address on NW 42nd Avenue.",
     clubs: ["The Gables Padel"],
     commit: "fef7cf9",
   },
@@ -62,8 +64,8 @@ export const changelog: ChangelogEntry[] = [
     type: "updated",
     title: "Club photos are now hosted by us",
     note:
-      "111 club photos that loaded from other websites now live on our own server as fast WebP files. Five broken photo links were dropped, three photos that showed another club's logo were removed, and clubs without a photo now show a drawn court with their court count.",
-    count: 111,
+      "106 club photos that loaded from other websites were moved to our own server as fast WebP files. Five photo links that no longer worked were dropped. Three of the moved photos were later removed because they showed another club's logo. Clubs without a photo now show a drawn court with their court count.",
+    count: 106,
     commit: "a6f01d8, 1fdfb50",
   },
   {
@@ -73,14 +75,40 @@ export const changelog: ChangelogEntry[] = [
     note:
       "Padeland now links to padelandaz.com (padeland.com is an unrelated parked page), and the Padel Haus Williamsburg link no longer leads to a missing page.",
     clubs: ["Padeland", "Padel Haus - Williamsburg"],
-    commit: "9af839b, 6597e6c",
+    commit: "91f6e02, 9af839b, 6597e6c",
+  },
+  {
+    date: "2026-10-08",
+    type: "updated",
+    title: "Dead and hijacked website links removed from 17 club pages",
+    note:
+      "The links led to sites that no longer exist, parked domain pages or, for two clubs, gambling sites. Eleven more website fields were cleaned up: seven held two web addresses, one held a note, and three deep links now point to the club's home page.",
+    count: 28,
+    commit: "cfd8e10",
+  },
+  {
+    date: "2026-10-08",
+    type: "updated",
+    title: "Clubs with unknown hours no longer show default hours",
+    note:
+      "When a club's hours were missing or could not be read, its page showed 7:00 to 22:00 by default. Those pages now say the club has not published its hours yet.",
+    commit: "cfd8e10",
+  },
+  {
+    date: "2026-10-08",
+    type: "removed",
+    title: "Duplicate King of Padel listing removed",
+    note:
+      "A listing named The King of Padel had the same address, 314 Nolan St in San Antonio, as The King of Padel - San Antonio. The duplicate was removed and its old page now redirects to the remaining listing.",
+    clubs: ["The King of Padel - San Antonio"],
+    commit: "e437a71",
   },
   {
     date: "2026-10-07",
     type: "added",
     title: "Two clubs added as coming soon",
     note:
-      "The Club at Marlboro in Morganville, NJ, and Society Park Orlando. Society Park's opening date and address are not confirmed yet.",
+      "The Club at Marlboro in Morganville, NJ, and Society Park Orlando. Society Park's opening date is not confirmed, and its address on International Drive comes from press reports, not from the club.",
     clubs: ["The Club at Marlboro", "Society Park Orlando"],
     commit: "8e5fc72, f69e7cc",
   },
@@ -100,14 +128,14 @@ export const changelog: ChangelogEntry[] = [
     title: "Court counts confirmed for three clubs",
     note: "Padeland has 5 courts, Charlotte Padel Club Matthews has 6 and Padel39 North Austin has 6.",
     clubs: ["Padeland", "Charlotte Padel Club - Matthews", "Padel39 North Austin"],
-    commit: "183f464",
+    commit: "183f464, d3a0be3",
   },
   {
     date: "2026-09-29",
     type: "added",
-    title: "Nine open clubs added after our city audits",
+    title: "Eight open clubs added after our city audits",
     note:
-      "Found while re-checking Austin, Houston, the Bay Area, Phoenix and Tampa Bay club by club, plus the new Padel Haus in Denver (5 indoor courts).",
+      "Found while re-checking Austin, Houston, the Bay Area and Phoenix club by club, plus the new Padel Haus in Denver (5 indoor courts).",
     clubs: [
       "Legacy Padel & Pickleball",
       "Racket Social Club - Katy",
@@ -116,7 +144,6 @@ export const changelog: ChangelogEntry[] = [
       "TERRA Padel",
       "Bay Padel - San Jose",
       "Padeland",
-      "SVB Tennis & Wellness Center",
       "Padel Haus Denver",
     ],
     commit: "f557121, d3a0be3, 4265884",
@@ -161,13 +188,12 @@ export const changelog: ChangelogEntry[] = [
     type: "updated",
     title: "Addresses, court counts and details corrected",
     note:
-      "Padel Haus Williamsburg is at 307 Kent Ave with 7 courts (4 indoor, 3 rooftop). Banner House has 5 courts, Charlotte Padel Club South Charlotte has 3, TEMPO's courts are outdoor, Camelback Padel Club is private, and The Padel Collective's website and court count are fixed. Street addresses added for PURE, Preston Playhouse, St. Pete Athletic, SH19 and Anytime Padel.",
+      "Padel Haus Williamsburg is at 307 Kent Ave with 7 courts (4 indoor, 3 rooftop). Banner House has 5 courts, Charlotte Padel Club South Charlotte has 3, TEMPO's courts are outdoor, and The Padel Collective's website and court count are fixed. Street addresses added for Preston Playhouse, St. Pete Athletic, SH19 and Anytime Padel, and PURE's location corrected.",
     clubs: [
       "Padel Haus - Williamsburg",
       "Banner House at T Bar M",
       "Charlotte Padel Club - South Charlotte",
       "TEMPO Padel & Pickleball Club",
-      "Camelback Padel Club",
       "The Padel Collective",
       "PURE Pickleball & Padel",
       "Preston Playhouse",
@@ -207,7 +233,7 @@ export const changelog: ChangelogEntry[] = [
     type: "removed",
     title: "Five duplicate listings merged",
     note:
-      "These clubs were listed twice. Each now has a single page: the Zephyrhills venue (also listed as Mouratoglou Academy Zephyrhills), Park Padel West Sacramento, Matt's Pickle and Padel, Charlotte Padel Club Matthews, and Woodlands Padel, which is the same club as Wakit Rakit Spring.",
+      "These clubs were listed twice. Each now has a single page: the Zephyrhills venue (added that day as SVB Tennis & Wellness Center but already listed as Mouratoglou Academy Zephyrhills), Park Padel West Sacramento, Matt's Pickle and Padel, Charlotte Padel Club Matthews, and Woodlands Padel, which is the same club as Wakit Rakit Spring.",
     clubs: [
       "SVB Tennis & Wellness Center",
       "Park Padel - West Sacramento",
@@ -245,7 +271,9 @@ export const changelog: ChangelogEntry[] = [
   {
     date: "2026-08-29",
     type: "updated",
-    title: "Court surface added to 146 club pages",
+    title: "Court surface set to synthetic turf on 146 club pages",
+    note:
+      "Padel is normally played on synthetic turf, so we filled in that standard surface on 146 pages that had none. It was not confirmed club by club.",
     count: 146,
     commit: "e2a5467",
   },
@@ -305,12 +333,12 @@ export const changelog: ChangelogEntry[] = [
     type: "updated",
     title: "49 club pages filled in with verified details",
     note:
-      "Phone numbers, hours, court surface, Instagram, published prices and review themes, taken from each club's own site and real reviews. Where a detail could not be confirmed we left it blank. Among them: Boar's Head, Rancho Valencia, Wynwood Padel Club, Cube Padel Chicago, Union Padel Club and PADEL PARK.",
+      "Phone numbers, hours, court surface, Instagram, published prices and review themes, taken from each club's own site and real reviews. Where a detail could not be confirmed we left it blank. Among them: Boar's Head, Rancho Valencia, Wynwood Padel Club, Cube Padel in Chicago, Union Padel Club and PADEL PARK.",
     clubs: [
       "Boar's Head Sports Club",
       "Rancho Valencia",
       "Wynwood Padel Club",
-      "Cube Padel Chicago Bridgeport",
+      "Cube Padel - Chicago",
       "Union Padel Club",
       "PADEL PARK, INC.",
     ],
@@ -322,7 +350,7 @@ export const changelog: ChangelogEntry[] = [
     type: "updated",
     title: "The King of Padel moved to San Antonio, TX",
     note: "It had been listed in San Diego by mistake. Its San Diego location has closed, so only San Antonio is listed.",
-    clubs: ["The King of Padel"],
+    clubs: ["The King of Padel - San Antonio"],
     commit: "7ce0c0a, 0b1f341",
   },
   {
@@ -330,7 +358,7 @@ export const changelog: ChangelogEntry[] = [
     type: "updated",
     title: "Two clubs moved back to coming soon",
     note: "Primary sources showed they had not opened yet.",
-    clubs: ["LA Padel Club", "10by20 Padel Wellington"],
+    clubs: ["Los Angeles Padel Club", "10by20 Padel Wellington"],
     commit: "1a586be",
   },
   {
@@ -344,7 +372,7 @@ export const changelog: ChangelogEntry[] = [
   {
     date: "2026-07-06",
     type: "added",
-    title: "New Mexico's first padel club, plus two clubs coming soon",
+    title: "A new club in Santa Fe, New Mexico, plus two clubs coming soon",
     note:
       "Forked Lightning Racquet Club in Santa Fe (3 outdoor courts, members only). Coming soon: Vamos Padel in Jacksonville and Padel Foundry in Virginia Beach (7 indoor courts).",
     clubs: ["Forked Lightning Racquet Club", "Vamos Padel", "Padel Foundry"],
@@ -353,9 +381,9 @@ export const changelog: ChangelogEntry[] = [
   {
     date: "2026-07-05",
     type: "added",
-    title: "17 clubs added, including the first in Rhode Island and Washington",
+    title: "15 clubs added, including the first in Rhode Island and Washington",
     note:
-      "Open: Laredo Padel Club, Padel Den USA, The Hive, Utah City Racquet Club, Wakit Rakit Titusville (now Space Coast) and the Padel X summer pop-up on Lincoln Road. Coming soon: Roslyn Padel, Ace Padel Denver, Newport Pickleball Club, NewGen Racquet Club and Conquer Padel Jacksonville. Also added after metro research: Jam Padel, Cascadia Padel, Park Padel West Sacramento, Matt's Pickle and Padel, Epic Padel Milwaukee and Padel KC.",
+      "Open: Laredo Padel Club, Padel Den USA, The Hive, Utah City Racquet Club, Wakit Rakit Titusville (now Space Coast) and the Padel X summer pop-up on Lincoln Road. Coming soon: Roslyn Padel, Ace Padel Denver, Newport Pickleball Club, NewGen Racquet Club and Conquer Padel Jacksonville. Also added after metro research: Jam Padel, Cascadia Padel, Epic Padel Milwaukee and Padel KC. Park Padel West Sacramento and Matt's Pickle and Padel were added the same day but were already listed; the duplicates were merged in September.",
     clubs: [
       "Laredo Padel Club",
       "Padel Den USA",
@@ -370,8 +398,6 @@ export const changelog: ChangelogEntry[] = [
       "Conquer Padel Jacksonville",
       "Jam Padel",
       "Cascadia Padel",
-      "Park Padel - West Sacramento",
-      "Matt's Pickle and Padel",
       "Epic Padel Milwaukee",
       "Padel KC",
     ],
