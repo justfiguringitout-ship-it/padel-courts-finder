@@ -221,7 +221,7 @@ const blogPosts: BlogPost[] = [
     date: '2026-03-21',
     readTime: '6 min read',
     imageAlt: 'Denver padel facilities',
-    courtSlug: 'cloud-9-park-padel'
+    courtSlug: '9co-padel-at-cloud-9-park'
   },
   {
     slug: 'best-padel-clubs-charlotte',

@@ -39,7 +39,7 @@ const clubs: Club[] = [
   {
     rank: 1,
     name: 'Cloud 9 Park Padel',
-    slug: 'cloud-9-park-padel',
+    slug: '9co-padel-at-cloud-9-park',
     score: 85,
     location: 'Cloud 9 Park, Denver, CO',
     courts: '1 outdoor court',
