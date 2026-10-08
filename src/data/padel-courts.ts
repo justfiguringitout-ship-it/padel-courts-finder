@@ -14475,36 +14475,37 @@ export const padelCourts: PadelCourt[] = [
     city: "Morganville",
     state: "NJ",
     zipCode: "07751",
-    description: "The Club at Marlboro is a padel and pickleball venue planned for Morganville in Marlboro Township, the second New Jersey location from the team behind The Club at Monroe. The building is planned with two regulation padel courts, nine pickleball courts and three golf simulators, plus a recovery suite with red light therapy, cryotherapy, compression therapy and an infrared sauna. The club is taking pre-registrations for founding memberships and grand-opening events, with court booking through CourtReserve. Sources give a Q4 2026 or November 2026 opening.",
+    description: "The Club at Marlboro is a padel and pickleball venue planned for Morganville in Marlboro Township, the second New Jersey location from the team behind The Club at Monroe. The building is planned with two regulation padel courts, nine pickleball courts and three golf simulators, plus a recovery suite with red light therapy, cryotherapy, compression therapy and an infrared sauna. The club is taking pre-registrations for founding memberships and grand-opening events, with court booking through CourtReserve. The club says it opens in November 2026.",
     numberOfCourts: 2,
     courtType: "indoor",
     amenities: ["recovery suite", "cryotherapy", "infrared sauna", "free parking", "equipment rental", "event rooms"],
     rentalAvailable: true,
     membersOnly: false,
-    coordinates: { lat: 40.3248, lng: -74.2465 }, // TODO: approximate Marlboro Township center; replace with exact geocode of 414 Texas Rd
+    coordinates: { lat: 40.3765, lng: -74.2443 }, // from theclubnj.com/marlboro schema
+    website: "https://theclubnj.com/marlboro/",
     openingHours: { monday: "TBA", tuesday: "TBA", wednesday: "TBA", thursday: "TBA", friday: "TBA", saturday: "TBA", sunday: "TBA" },
     rating: 0,
     reviewCount: 0,
     status: "coming_soon",
     verified: false,
-    verificationDate: "2026-10-08",
+    verificationDate: "2026-10-07",
   },
   {
     id: 487,
     name: "Society Park Orlando",
-    address: "8001 International Drive", // TODO: street number from PadelBrowser only; verify before publishing
+    address: "8001 International Drive", // per Hoodline 2026-03 and Unicorp redevelopment filings
     city: "Orlando",
     state: "FL",
     zipCode: "32819",
     description: "Society Park is a mixed dining, shopping and sports complex on International Drive in Orlando, with padel and pickleball courts. Press reports place it on a former Wyndham resort site near International Drive and West Sand Lake Road. The opening date has not been confirmed, and no court count is listed until the operator publishes one.",
     amenities: ["dining", "shopping", "pickleball courts", "children's courts"],
-    coordinates: { lat: 28.4663, lng: -81.4699 }, // TODO: approximate International Drive area; replace with exact geocode of 8001 International Dr
+    coordinates: { lat: 28.4481, lng: -81.4677 }, // geocoded 8001 International Dr (former Wyndham Orlando Resort)
     openingHours: { monday: "TBA", tuesday: "TBA", wednesday: "TBA", thursday: "TBA", friday: "TBA", saturday: "TBA", sunday: "TBA" },
     rating: 0,
     reviewCount: 0,
     status: "coming_soon",
     verified: false,
-    verificationDate: "2026-10-08",
+    verificationDate: "2026-10-07",
   },
 ];
 
