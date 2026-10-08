@@ -4,13 +4,13 @@ import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in NYC (2026) | Brooklyn, Manhattan & Beyond',
-  description: 'Discover NYC\'s 7 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.',
+  description: 'Discover NYC\'s 6 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-nyc',
   },
   openGraph: {
     title: 'Best Padel Clubs in NYC (2026) | Brooklyn, Manhattan & Beyond',
-    description: 'Discover NYC\'s 7 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.',
+    description: 'Discover NYC\'s 6 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-nyc',
     type: 'article',
     images: [{ url: 'https://static.wixstatic.com/media/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png/v1/fit/w_2500,h_1330,al_c/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png' }],
@@ -71,39 +71,6 @@ const clubs: Club[] = [
   },
   {
     rank: 2,
-    name: 'Padel& Greenpoint',
-    slug: 'padel-greenpoint',
-    score: 95,
-    location: 'Greenpoint, Brooklyn, NY',
-    courts: '6 indoor courts',
-    price: '$$$',
-    website: 'padeland.us',
-    description: 'Brooklyn\'s largest padel club features 6 courts under a soaring 36-foot ceiling in Greenpoint. Padel& combines premium court quality with wellness amenities like cold plunges and recovery areas, plus a well-stocked pro shop and comfortable locker rooms.',
-    highlights: [
-      '6 courts under 36-foot ceilings',
-      'Cold plunges & recovery areas',
-      'Pro shop with premium gear',
-      'Locker rooms with showers',
-      'Lounge & social space',
-      'Google rating: 4.8 stars'
-    ],
-    programs: [
-      'Peak: $75/hour',
-      'Off-peak: $65/hour',
-      'Memberships from $75/month',
-      'Off-peak membership (50% off bookings)',
-      'Professional coaching',
-      'League play'
-    ],
-    bestFor: [
-      'North Brooklyn residents',
-      'Players wanting most courts',
-      'Wellness-focused players',
-      'All skill levels'
-    ]
-  },
-  {
-    rank: 3,
     name: 'Golden Point Padel',
     slug: 'golden-point-padel',
     score: 93,
@@ -135,7 +102,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 4,
+    rank: 3,
     name: 'Mink Padel',
     slug: 'mink-padel',
     score: 91,
@@ -168,7 +135,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 5,
+    rank: 4,
     name: 'Padel Haus - Williamsburg',
     slug: 'padel-haus-williamsburg',
     score: 90,
@@ -201,7 +168,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 6,
+    rank: 5,
     name: 'Reserve Padel - Hudson Yards',
     slug: 'reserve-padel-hudson-yards',
     score: 88,
@@ -233,7 +200,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 7,
+    rank: 6,
     name: 'Elite Sports Club at 111 West 57th Street',
     slug: 'elite-sports-club-at-111-west-57th-street',
     score: 85,
@@ -269,10 +236,10 @@ export default function NYCBestClubsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in NYC (2026) | Brooklyn, Manhattan & Beyond",
-    "description": "Discover NYC's 7 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.",
+    "description": "Discover NYC's 6 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.",
     "image": "https://static.wixstatic.com/media/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png/v1/fit/w_2500,h_1330,al_c/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png",
     "datePublished": "2026-03-21T00:00:00Z",
-    "dateModified": "2026-03-21T00:00:00Z",
+    "dateModified": "2026-10-08T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -316,11 +283,11 @@ export default function NYCBestClubsPage() {
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5" />
-              <span>7 Clubs Ranked</span>
+              <span>6 Clubs Ranked</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
-              <span>Updated March 2026</span>
+              <span>Updated October 2026</span>
             </div>
           </div>
           <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
@@ -331,11 +298,11 @@ export default function NYCBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-padel-green">7</div>
+              <div className="text-3xl font-bold text-padel-green">6</div>
               <div className="text-sm text-stone-600">Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">25</div>
+              <div className="text-3xl font-bold text-padel-green">19</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
@@ -356,10 +323,10 @@ export default function NYCBestClubsPage() {
             NYC&apos;s Padel Scene Explodes in 2026
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            New York City&apos;s padel revolution is in full swing. From Brooklyn&apos;s waterfront to Manhattan&apos;s Hudson Yards, the city now boasts 7 open clubs with 25 courts and another facility on the way. Led by <Link href="/courts/padel-haus-dumbo" className="text-padel-green hover:underline">Padel Haus Dumbo</Link> and the massive 6-court <Link href="/courts/padel-greenpoint" className="text-padel-green hover:underline">Padel& Greenpoint</Link>, NYC has become one of America&apos;s most exciting padel markets.
+            New York City&apos;s padel revolution is in full swing. From Brooklyn&apos;s waterfront to Manhattan&apos;s Hudson Yards, the city now boasts 6 open clubs with 19 courts and another facility on the way. Led by <Link href="/courts/padel-haus-dumbo" className="text-padel-green hover:underline">Padel Haus Dumbo</Link>, NYC has become one of America&apos;s most exciting padel markets. Padel&amp; Greenpoint, which was #2 in earlier versions of this guide, closed on May 31, 2026 when its building was sold, so it is no longer ranked here.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Brooklyn dominates the scene with five clubs, while Manhattan contributes three unique venues: <Link href="/courts/mink-padel" className="text-padel-green hover:underline">Mink Padel</Link>&apos;s historic Harlem courtyard, <Link href="/courts/reserve-padel-hudson-yards" className="text-padel-green hover:underline">Reserve Padel</Link>&apos;s bubble-enclosed Hudson Yards courts, and the ultra-exclusive <Link href="/courts/elite-sports-club-at-111-west-57th-street" className="text-padel-green hover:underline">Elite Sports Club</Link> at 111 West 57th Street.
+            Brooklyn dominates the scene with four clubs, while Manhattan contributes three unique venues: <Link href="/courts/mink-padel" className="text-padel-green hover:underline">Mink Padel</Link>&apos;s historic Harlem courtyard, <Link href="/courts/reserve-padel-hudson-yards" className="text-padel-green hover:underline">Reserve Padel</Link>&apos;s bubble-enclosed Hudson Yards courts, and the ultra-exclusive <Link href="/courts/elite-sports-club-at-111-west-57th-street" className="text-padel-green hover:underline">Elite Sports Club</Link> at 111 West 57th Street.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
             Whether you&apos;re a Brooklyn local, a Manhattan commuter, or visiting the city, this guide covers every padel option in the five boroughs. Browse all courts on our <Link href="/new-york/new-york" className="text-padel-green hover:underline">New York City courts page</Link> or explore the full <Link href="/new-york" className="text-padel-green hover:underline">New York state directory</Link>.
@@ -370,7 +337,7 @@ export default function NYCBestClubsPage() {
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/padel-haus-dumbo" className="text-padel-green hover:underline">Padel Haus Dumbo</Link> (premium Brooklyn waterfront)</p>
-            <p><strong>Most Courts:</strong> <Link href="/courts/padel-greenpoint" className="text-padel-green hover:underline">Padel& Greenpoint</Link> (6 courts, 36-ft ceilings)</p>
+            <p><strong>Most Courts:</strong> <Link href="/courts/padel-haus-williamsburg" className="text-padel-green hover:underline">Padel Haus Williamsburg</Link> (the most courts of any club on this list)</p>
             <p><strong>Best Manhattan:</strong> <Link href="/courts/mink-padel" className="text-padel-green hover:underline">Mink Padel</Link> (historic Harlem courtyard)</p>
             <p><strong>Best Value:</strong> <Link href="/courts/golden-point-padel" className="text-padel-green hover:underline">Golden Point Padel</Link> (from $25/hr)</p>
             <p><strong>Best Wellness:</strong> <Link href="/courts/reserve-padel-hudson-yards" className="text-padel-green hover:underline">Reserve Padel</Link> (cold plunges, yoga, pilates)</p>
