@@ -77,7 +77,7 @@ const clubs: Club[] = [
     location: 'Greenpoint, Brooklyn, NY',
     courts: '6 indoor courts',
     price: '$$$',
-    website: 'padeland.com',
+    website: 'padeland.us',
     description: 'Brooklyn\'s largest padel club features 6 courts under a soaring 36-foot ceiling in Greenpoint. Padel& combines premium court quality with wellness amenities like cold plunges and recovery areas, plus a well-stocked pro shop and comfortable locker rooms.',
     highlights: [
       '6 courts under 36-foot ceilings',

@@ -14138,7 +14138,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Chandler",
     state: "AZ",
     zipCode: "85225",
-    website: "https://padeland.com",
+    website: "https://www.padeland.us",
     rating: 0,
     reviewCount: 0,
     description: "Padeland is an indoor padel and pickleball club at 1 West Chandler Boulevard in Chandler, and it opened in the summer of 2026. It has five padel courts and five pickleball courts. Membership costs $129 a month, and members pay $15 per player for padel court time.",
