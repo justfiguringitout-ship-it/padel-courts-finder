@@ -4,6 +4,7 @@ import { getAllAdaptedCourtSlugs } from '@/lib/court-adapter';
 import { getPadelNearMetros } from '@/lib/metros';
 import pageDatesRaw from '@/data/page-dates.json';
 import blogSlugs from '@/data/blog-slugs.json';
+import { changelog } from '@/data/changelog';
 
 /**
  * <lastmod> comes from git history via src/data/page-dates.json, NOT from
@@ -175,6 +176,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: dateFor('/about'),
       changeFrequency: 'monthly',
       priority: 0.5,
+    },
+    {
+      // lastmod = the newest changelog entry, so it moves only when the page does.
+      url: `${baseUrl}/changelog`,
+      lastModified: new Date(changelog.reduce((d, e) => (e.date > d ? e.date : d), '') || pageDates.__fallback__),
+      changeFrequency: 'weekly',
+      priority: 0.4,
     },
   ];
 
