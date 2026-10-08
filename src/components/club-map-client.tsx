@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
+import { MapErrorBoundary } from "@/components/map-error-boundary";
 
 // Dynamic import to avoid SSR issues with Google Maps
 const ClubMap = dynamic(() => import("@/components/club-map").then(mod => ({ default: mod.ClubMap })), {
@@ -40,5 +41,9 @@ interface ClubMapClientProps {
 }
 
 export function ClubMapClient({ name, address, coordinates, googleMapsUrl }: ClubMapClientProps) {
-  return <ClubMap name={name} address={address} coordinates={coordinates} googleMapsUrl={googleMapsUrl} />;
+  return (
+    <MapErrorBoundary>
+      <ClubMap name={name} address={address} coordinates={coordinates} googleMapsUrl={googleMapsUrl} />
+    </MapErrorBoundary>
+  );
 }

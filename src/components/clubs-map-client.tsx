@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { Card } from "@/components/ui/card";
+import { MapErrorBoundary } from "@/components/map-error-boundary";
 
 // Dynamic import to avoid SSR issues with Google Maps
 const ClubsMap = dynamic(() => import("@/components/clubs-map").then(mod => ({ default: mod.ClubsMap })), {
@@ -46,5 +47,5 @@ interface ClubsMapClientProps {
 }
 
 export function ClubsMapClient({ clubs, title, description }: ClubsMapClientProps) {
-  return <ClubsMap clubs={clubs} title={title} description={description} />;
+  return <MapErrorBoundary height={500}><ClubsMap clubs={clubs} title={title} description={description} /></MapErrorBoundary>;
 }
