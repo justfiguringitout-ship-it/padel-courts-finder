@@ -42,7 +42,7 @@ We understand the difference between a casual drop-in facility and a luxury club
 
 **We're Comprehensive**
 
-Other directories list 20-30 clubs. We've documented 346. Why? Because that small outdoor court in Bulverde, Texas (Pick and Paddle) deserves to be found just as much as the massive Bay Padel Treasure Island with the "world's highest ceilings."
+Other directories list 20-30 clubs. We've documented more than 340. Why? Because that small outdoor court in Bulverde, Texas (Pick and Paddle) deserves to be found just as much as the massive Bay Padel Treasure Island with the "world's highest ceilings."
 
 **We're Accurate**
 
@@ -51,7 +51,7 @@ We caught mistakes in existing directories (hello, Hialeah vs. Doral confusion w
 ## The Numbers Don't Lie
 
 Since launching our verification project, we've:
-- ✅ Mapped **346 clubs** across **39 states** and **200+ cities**
+- ✅ Mapped **340+ clubs** across **39 states** and **200+ cities**
 - ✅ Verified **every padel facility** from official sources
 - ✅ Documented **23+ multi-location chains** (from Reserve Padel to Padel Haus)
 - ✅ Identified **20+ facilities opening soon** (with actual dates)
