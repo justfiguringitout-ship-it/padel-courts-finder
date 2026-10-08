@@ -288,6 +288,7 @@ export default function HomePage() {
                 <ClubImage
                   src={heroClub.heroImage}
                   alt={heroClub.name}
+                  courts={heroClub.facility.totalCourts}
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   sizes="(min-width: 768px) 60vw, 100vw"
                 />
@@ -342,6 +343,7 @@ export default function HomePage() {
                   <ClubImage
                     src={court.heroImage}
                     alt={court.name}
+                    courts={court.facility.totalCourts}
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   />
@@ -410,16 +412,12 @@ export default function HomePage() {
             const imageUrl = court?.heroImage;
             return (
               <Link key={item.href} href={item.href} className="reveal-up group relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-[3/4] block">
-                {imageUrl ? (
-                  <ClubImage
-                    src={imageUrl}
-                    alt={item.alt}
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                    sizes="(min-width: 768px) 33vw, 100vw"
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-court" />
-                )}
+                <ClubImage
+                  src={imageUrl}
+                  alt={item.alt}
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-court via-court/30 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <h3 className="font-display text-2xl font-bold text-white mb-1.5">

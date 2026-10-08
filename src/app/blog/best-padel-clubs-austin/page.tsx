@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'Discover Austin\'s 7 best padel clubs in 2026. From Padel 39\'s luxury courts to 3 coming soon. Rankings, pricing & complete Texas guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-austin',
     type: 'article',
-    images: [{ url: 'https://cdn.prod.website-files.com/65d108bc26bc0f5d9c9ea6ae/68d32d1b1603664a9e8ec178_Drone_Share_1200_630.avif' }],
+    images: [{ url: 'https://www.padelcourtsfinder.com/images/courts/padel39-north-austin.webp' }],
   },
 };
 
@@ -173,7 +173,7 @@ export default function AustinBestClubsPage() {
     "@type": "Article",
     "headline": "Best Padel Clubs in Austin, Texas (2026) | 7 Clubs Ranked & Reviewed",
     "description": "Discover Austin's 7 best padel clubs in 2026. From Padel 39's luxury courts to 3 coming soon. Rankings, pricing & complete Texas guide.",
-    "image": "https://cdn.prod.website-files.com/65d108bc26bc0f5d9c9ea6ae/68d32d1b1603664a9e8ec178_Drone_Share_1200_630.avif",
+    "image": "https://www.padelcourtsfinder.com/images/courts/padel39-north-austin.webp",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
     "author": {

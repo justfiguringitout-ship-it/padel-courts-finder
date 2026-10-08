@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { ClubImage } from '@/components/club-image';
 import { RacketQuiz } from '@/components/racket-quiz';
 
 export interface BlogPostWithImage {
@@ -60,16 +61,12 @@ function CityCard({ post }: { post: BlogPostWithImage }) {
       className="reveal-up group block bg-white border border-stone-200 rounded-2xl overflow-hidden hover:border-padel-green hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
     >
       <div className="aspect-[16/10] bg-stone-100 relative overflow-hidden">
-        {post.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={post.imageUrl}
-            alt={post.imageAlt}
-            className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
-          />
-        ) : (
-          <div className="absolute inset-0 grain bg-court" />
-        )}
+        <ClubImage
+          src={post.imageUrl}
+          alt={post.imageAlt}
+          className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+        />
       </div>
       <div className="p-5">
         <div className="flex items-center gap-2 mb-2.5 text-xs text-stone-400">

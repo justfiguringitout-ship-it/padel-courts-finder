@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ClubImage } from "@/components/club-image";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -406,10 +407,11 @@ function SearchPageContent() {
                   >
                     <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
                       <div className="aspect-video relative overflow-hidden">
-                        <img
+                        <ClubImage
                           src={court.heroImage}
                           alt={court.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          courts={court.facility.totalCourts}
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         {court.featured && (
                           <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600">
