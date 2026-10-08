@@ -201,10 +201,11 @@ function SearchPageContent() {
         results = sortByWeightedRating(results, { pool: allCourts, featuredFirst: true });
         break;
       case "price-low":
-        results.sort((a, b) => a.pricing.offPeakHourlyRate - b.pricing.offPeakHourlyRate);
+        // Clubs without a published price go last in both directions.
+        results.sort((a, b) => (a.pricing.offPeakHourlyRate || Infinity) - (b.pricing.offPeakHourlyRate || Infinity));
         break;
       case "price-high":
-        results.sort((a, b) => b.pricing.offPeakHourlyRate - a.pricing.offPeakHourlyRate);
+        results.sort((a, b) => (b.pricing.offPeakHourlyRate || -1) - (a.pricing.offPeakHourlyRate || -1));
         break;
       case "name":
         results.sort((a, b) => a.name.localeCompare(b.name));

@@ -621,7 +621,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
 
         {/* Explore More */}
         {(() => {
-          const citySlug = court.address.city.toLowerCase().replace(/\s+/g, "-");
+          const citySlug = court.address.city.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-");
           const blogSlug = cityBlogSlugs[citySlug];
           const stateInfo = getStates().find(s => s.code === court.address.stateCode);
           return (

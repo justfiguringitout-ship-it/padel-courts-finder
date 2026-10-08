@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 const siteStats = getSiteStats();
-const ABOUT_DESCRIPTION = `Learn about the most comprehensive padel court directory in the United States with ${siteStats.totalCourts} verified clubs across ${siteStats.totalStates} states mapped nationwide.`;
+const ABOUT_DESCRIPTION = `Learn about the most comprehensive padel court directory in the United States with ${siteStats.totalCourts} clubs across ${siteStats.totalStates} states mapped nationwide.`;
 
 export const metadata: Metadata = {
   title: "About Us - America's Complete Padel Directory | Padel Courts Finder",

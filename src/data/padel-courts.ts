@@ -7968,7 +7968,6 @@ export const padelCourts: PadelCourt[] = [
     city: "New York",
     state: "NY",
     zipCode: "10019",
-    phone: "https://111w57.com/contact",
     website: "https://111w57.com",
     reviewCount: 144,
     rating: 4.6,

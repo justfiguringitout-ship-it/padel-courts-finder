@@ -383,7 +383,7 @@ Thinking of adding padel to your facility? Here's what you need to know:
 - Installation included
 - Local support for maintenance
 
-*Interested in partnership opportunities? [Contact us](/contact) about featuring your equipment in our directory.*
+*Interested in partnership opportunities? [Contact us](/advertise#partner-form) about featuring your equipment in our directory.*
 
 ---
 
@@ -614,7 +614,7 @@ Thinking of adding padel to your facility? Here's what you need to know:
 
 **Typical Investment:** $10,000-25,000 initial inventory
 
-*Interested in becoming an equipment partner? [Contact us](/contact) about promotional opportunities.*
+*Interested in becoming an equipment partner? [Contact us](/advertise#partner-form) about promotional opportunities.*
 
 ---
 
@@ -781,7 +781,7 @@ We're connecting clubs with quality equipment suppliers. Benefits include:
 - **Tournament sponsorships**
 - **Pro shop inventory support**
 
-**Interested?** [Contact us](/contact) about equipment partnerships.
+**Interested?** [Contact us](/advertise#partner-form) about equipment partnerships.
 
 ### For Equipment Brands
 
@@ -791,7 +791,7 @@ Get your products in front of **120+ verified clubs** and thousands of players t
 - **Review programs** with real players
 - **Tournament partnerships**
 
-**Let's grow padel together.** [Partnership inquiries](/contact)
+**Let's grow padel together.** [Partnership inquiries](/advertise#partner-form)
 
 ---
 

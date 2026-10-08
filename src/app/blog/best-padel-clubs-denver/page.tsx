@@ -162,7 +162,7 @@ export default function DenverBestClubsPage() {
             Denver: Padel Arrives in the Mile High City
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Denver&apos;s padel scene is in its earliest chapter, but the foundation is being laid. <Link href="/courts/cloud-9-park-padel" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> is the city&apos;s first dedicated padel court, offering free daytime public play and floodlit evening sessions in a community-focused park setting. For a city with 300 days of sunshine, an outdoor-obsessed population, and a growing tech workforce, the conditions for padel to thrive are ideal.
+            Denver&apos;s padel scene is in its earliest chapter, but the foundation is being laid. <Link href="/courts/9co-padel-at-cloud-9-park" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> is the city&apos;s first dedicated padel court, offering free daytime public play and floodlit evening sessions in a community-focused park setting. For a city with 300 days of sunshine, an outdoor-obsessed population, and a growing tech workforce, the conditions for padel to thrive are ideal.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             Colorado&apos;s active lifestyle culture, affluent demographics, and large international community all point to significant growth ahead. Playing padel at 5,280 feet elevation adds a unique twist: the ball flies faster and bounces differently in Denver&apos;s thin air, creating distinct playing conditions that experienced players will notice immediately.
@@ -175,9 +175,9 @@ export default function DenverBestClubsPage() {
         <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best (and Only) Club:</strong> <Link href="/courts/cloud-9-park-padel" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> (free daytime play, coaching available)</p>
-            <p><strong>Best for Beginners:</strong> <Link href="/courts/cloud-9-park-padel" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> (free 10am-4pm, community clinics)</p>
-            <p><strong>Best Value:</strong> <Link href="/courts/cloud-9-park-padel" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> (free daytime, $80/hr peak)</p>
+            <p><strong>Best (and Only) Club:</strong> <Link href="/courts/9co-padel-at-cloud-9-park" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> (free daytime play, coaching available)</p>
+            <p><strong>Best for Beginners:</strong> <Link href="/courts/9co-padel-at-cloud-9-park" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> (free 10am-4pm, community clinics)</p>
+            <p><strong>Best Value:</strong> <Link href="/courts/9co-padel-at-cloud-9-park" className="text-padel-green hover:underline">Cloud 9 Park Padel</Link> (free daytime, $80/hr peak)</p>
           </div>
         </div>
 

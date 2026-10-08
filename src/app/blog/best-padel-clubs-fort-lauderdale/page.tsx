@@ -4,13 +4,13 @@ import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Fort Lauderdale (2026) | Complete Broward County Guide',
-  description: 'Discover Fort Lauderdale\'s 6 best padel clubs in 2026. From 10by20\'s premium courts to Replay Club luxury. Rankings, pricing & Broward County guide.',
+  description: 'Discover Fort Lauderdale\'s 5 best padel clubs in 2026. From 10by20\'s premium courts to Replay Club luxury. Rankings, pricing & Broward County guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-fort-lauderdale',
   },
   openGraph: {
     title: 'Best Padel Clubs in Fort Lauderdale (2026) | Complete Broward County Guide',
-    description: 'Discover Fort Lauderdale\'s 6 best padel clubs in 2026. From 10by20\'s premium courts to Replay Club luxury. Rankings, pricing & Broward County guide.',
+    description: 'Discover Fort Lauderdale\'s 5 best padel clubs in 2026. From 10by20\'s premium courts to Replay Club luxury. Rankings, pricing & Broward County guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-fort-lauderdale',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
@@ -201,32 +201,6 @@ const clubs: Club[] = [
       'Budget-conscious players',
       'South Palm Beach County residents'
     ]
-  },
-  {
-    rank: 6,
-    name: 'PATL',
-    slug: 'patl',
-    score: 82,
-    location: 'Fort Lauderdale, FL',
-    courts: 'Multiple courts',
-    price: '$$',
-    description: 'PATL rounds out Fort Lauderdale\'s padel offering with quality courts in a straightforward, no-frills setting. A solid option for players looking for court time without the premium price tags of larger facilities.',
-    highlights: [
-      'Quality padel courts',
-      'Fort Lauderdale location',
-      'Accessible pricing',
-      'Growing local community'
-    ],
-    programs: [
-      'Court bookings',
-      'Open play',
-      'Community events'
-    ],
-    bestFor: [
-      'Local Fort Lauderdale players',
-      'Budget-friendly court time',
-      'Casual recreational players'
-    ]
   }
 ];
 
@@ -235,7 +209,7 @@ export default function FortLauderdaleBestClubsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in Fort Lauderdale (2026) | Complete Broward County Guide",
-    "description": "Discover Fort Lauderdale's 6 best padel clubs in 2026. From 10by20's premium courts to Replay Club luxury.",
+    "description": "Discover Fort Lauderdale's 5 best padel clubs in 2026. From 10by20's premium courts to Replay Club luxury.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
@@ -322,7 +296,7 @@ export default function FortLauderdaleBestClubsPage() {
             Fort Lauderdale: Broward County&apos;s Padel Scene Takes Shape
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            While Miami grabs the padel headlines, its northern neighbor has been quietly building an impressive padel infrastructure. Fort Lauderdale and Broward County now count 6 clubs with over 27 courts, offering everything from luxury indoor facilities with spa amenities to professional coaching academies and downtown courts.
+            While Miami grabs the padel headlines, its northern neighbor has been quietly building an impressive padel infrastructure. Fort Lauderdale and Broward County now count 5 clubs with more than 20 courts, offering everything from luxury indoor facilities with spa amenities to professional coaching academies and downtown courts.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             The standout story is the <Link href="/courts/10by20-padel-downtown-fort-lauderdale" className="text-padel-green hover:underline">10by20 chain</Link>, which has planted two locations in Fort Lauderdale alone, including a 7-court downtown flagship with bar and restaurant. Meanwhile, <Link href="/courts/replay-club" className="text-padel-green hover:underline">Replay Club</Link> in nearby Boynton Beach has raised the bar with 10 indoor courts inside a full-service wellness facility.
