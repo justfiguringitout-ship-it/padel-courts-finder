@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { RacketCompare } from '@/components/gear/gear-compare';
+import { RacketPlate } from '@/components/gear/racket-plate';
+import type { GearRacket } from '@/components/gear/types';
 import { StickyPickBar } from '@/components/sticky-pick-bar';
 import { HeroVideo } from '@/components/hero-video';
 
@@ -18,6 +21,16 @@ export const metadata: Metadata = {
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
   },
 };
+
+/** Presentation data for the compare view and racket drawings. Every value is
+ *  copied from this page's own cards; nothing here is new. */
+const RACKETS: GearRacket[] = [
+  { id: "nox-at10-18k", rank: 1, name: "NOX AT10 Genius 18K Alum", productName: "NOX AT10 Genius 18K", price: "$272.00", href: "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20", brand: "nox", shape: "teardrop", shapeLabel: "Teardrop", weight: "360–375g", core: "MLD Black EVA", face: "18K Aluminized Carbon", bestFor: "All-court advanced players who want versatility", balance: "Adjustable", level: "Advanced" },
+  { id: "babolat-viper", rank: 2, name: "Babolat Technical Viper Juan Lebrón", productName: "Babolat Technical Viper", price: "$249.00", href: "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20", brand: "babolat", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "Hard EVA", face: "3K Carbon", bestFor: "Aggressive players with strong technique", balance: "High", level: "Advanced" },
+  { id: "adidas-metalbone", rank: 3, name: "Adidas Metalbone 3.4 (Ale Galán)", productName: "Adidas Metalbone 3.4", price: "$304.50", href: "https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20", brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–360g (+12g adjustable)", core: "EVA Soft Performance", face: "Carbon Aluminized 16K", bestFor: "Players who want tunable weight and balance", balance: "Adjustable", level: "Advanced" },
+  { id: "head-extreme-pro", rank: 4, name: "HEAD Extreme Pro", productName: "HEAD Extreme Pro", price: "$319.95", href: "https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20", brand: "head", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "Power Foam", face: "UD Carbon HS", bestFor: "Left-side attackers and tournament competitors", balance: "High", level: "Advanced" },
+  { id: "wilson-bela-v3", rank: 5, name: "Wilson Bela V3", productName: "Wilson Bela V3", price: "$399.00", href: "https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20", brand: "wilson", shape: "diamond", shapeLabel: "Diamond", weight: "366–370g", core: "EVA Firm / Power Foam", face: "24K Carbon", bestFor: "Advanced players who want the finest materials", balance: "Head-heavy", level: "Advanced" },
+];
 
 export default function ProRacketsPage() {
   const articleData = {
@@ -202,6 +215,13 @@ export default function ProRacketsPage() {
               </div>
               <a href="#top-5-pro" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
             </div>
+
+            {/* Compare view: to-scale line-up + spec table */}
+            <section className="mt-10" aria-labelledby="compare-pro">
+              <h2 id="compare-pro" className="text-2xl font-bold text-foreground mb-2">All 5 side by side</h2>
+              <p className="text-sm text-stone-500 mb-5">Every racket is drawn to the same scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
+              <RacketCompare rackets={RACKETS} uidPrefix="pro" caption="Pro padel rackets compared" />
+            </section>
           </div>
 
         </div>
@@ -223,6 +243,7 @@ export default function ProRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$272.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: All-court advanced players who want versatility</p>
+                <RacketPlate racket={RACKETS[0]} uidPrefix="pro" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Teardrop</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">360&ndash;375g</span>
@@ -276,6 +297,7 @@ export default function ProRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$249.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Aggressive players with strong technique</p>
+                <RacketPlate racket={RACKETS[1]} uidPrefix="pro" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Diamond</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">370g</span>
@@ -329,6 +351,7 @@ export default function ProRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$304.50</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want tunable weight and balance</p>
+                <RacketPlate racket={RACKETS[2]} uidPrefix="pro" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Diamond</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">345&ndash;360g (+12g adjustable)</span>
@@ -385,6 +408,7 @@ export default function ProRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$319.95</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Left-side attackers and tournament competitors</p>
+                <RacketPlate racket={RACKETS[3]} uidPrefix="pro" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Diamond</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">370g</span>
@@ -438,6 +462,7 @@ export default function ProRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$399.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Advanced players who want the finest materials</p>
+                <RacketPlate racket={RACKETS[4]} uidPrefix="pro" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Diamond</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">366&ndash;370g</span>

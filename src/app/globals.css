@@ -351,3 +351,41 @@
     will-change: auto;
   }
 }
+
+/* ---------- Gear guides: racket/shoe visuals + compare table (pcf-gear / pcf-compare) ---------- */
+.pcf-gear-plate {
+  background: linear-gradient(135deg, #fafaf9 0%, #ffffff 60%);
+}
+.pcf-gear-lineup {
+  scrollbar-width: thin;
+  scrollbar-color: #d6d3d1 transparent;
+}
+.pcf-gear-lineup-art svg {
+  transform-origin: 50% 85%;
+}
+.pcf-compare {
+  scrollbar-width: thin;
+  scrollbar-color: #d6d3d1 transparent;
+  overscroll-behavior-x: contain;
+}
+.pcf-compare:focus-visible {
+  outline: 2px solid var(--color-padel-green);
+  outline-offset: 2px;
+}
+.pcf-compare .pcf-compare-sticky {
+  box-shadow: 1px 0 0 #e7e5e4, 8px 0 12px -10px rgb(12 10 9 / 0.35);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pcf-gear-lineup-card {
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  }
+  .pcf-gear-lineup-card:hover {
+    transform: translateY(-3px);
+  }
+  .pcf-gear-lineup-art svg {
+    transition: transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .pcf-gear-lineup-card:hover .pcf-gear-lineup-art svg {
+    transform: rotate(-7deg);
+  }
+}

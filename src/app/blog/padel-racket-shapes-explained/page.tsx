@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { RacketFigure } from "@/components/gear/racket-figure";
 
 export const metadata: Metadata = {
   title: "Padel Racket Shapes Explained: Round vs Teardrop vs Diamond (2026)",
@@ -21,28 +22,19 @@ export const metadata: Metadata = {
   },
 };
 
-/* Simplified racket-head diagrams — the shaded zone is the sweet spot */
+/* Racket diagrams: the green glow is the sweet spot */
 function ShapeDiagram() {
   const shapes = [
     {
       name: "Round",
-      head: "M60 10 C95 10 110 40 110 75 C110 115 90 140 60 140 C30 140 10 115 10 75 C10 40 25 10 60 10 Z",
-      spot: { cx: 60, cy: 78, rx: 28, ry: 30 },
-      handleY: 140,
       note: "Sweet spot: center, large",
     },
     {
       name: "Teardrop",
-      head: "M60 8 C100 8 112 45 110 80 C108 118 88 142 60 142 C32 142 12 118 10 80 C8 45 20 8 60 8 Z",
-      spot: { cx: 60, cy: 60, rx: 26, ry: 26 },
-      handleY: 142,
       note: "Sweet spot: mid-high, medium",
     },
     {
       name: "Diamond",
-      head: "M60 6 C98 6 114 38 112 72 C110 112 92 144 60 144 C28 144 10 112 8 72 C6 38 22 6 60 6 Z",
-      spot: { cx: 60, cy: 42, rx: 22, ry: 20 },
-      handleY: 144,
       note: "Sweet spot: high, small",
     },
   ];
@@ -51,12 +43,14 @@ function ShapeDiagram() {
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 my-8">
       {shapes.map((s) => (
         <figure key={s.name} className="bg-white border border-stone-200 rounded-xl p-6 text-center">
-          <svg viewBox="0 0 120 190" className="mx-auto h-44 w-auto" role="img" aria-label={`${s.name} padel racket shape — ${s.note}`}>
-            <path d={s.head} fill="oklch(0.16 0.028 255)" fillOpacity="0.06" stroke="oklch(0.16 0.028 255)" strokeWidth="2.5" />
-            <ellipse cx={s.spot.cx} cy={s.spot.cy} rx={s.spot.rx} ry={s.spot.ry} fill="#16A34A" fillOpacity="0.3" />
-            <ellipse cx={s.spot.cx} cy={s.spot.cy} rx={s.spot.rx * 0.55} ry={s.spot.ry * 0.55} fill="#16A34A" fillOpacity="0.45" />
-            <rect x="52" y={s.handleY} width="16" height="42" rx="5" fill="oklch(0.16 0.028 255)" fillOpacity="0.15" stroke="oklch(0.16 0.028 255)" strokeWidth="2" />
-          </svg>
+          <RacketFigure
+            uid={`shapes-${s.name.toLowerCase()}`}
+            shape={s.name.toLowerCase() as "round" | "teardrop" | "diamond"}
+            brand="other"
+            face="Carbon"
+            label={`${s.name} padel racket shape. ${s.note}`}
+            className="mx-auto h-56 w-auto"
+          />
           <figcaption className="mt-3">
             <div className="font-display font-semibold text-foreground">{s.name}</div>
             <div className="text-sm text-stone-500 mt-1">{s.note}</div>

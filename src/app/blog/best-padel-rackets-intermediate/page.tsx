@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { RacketCompare } from '@/components/gear/gear-compare';
+import { RacketPlate } from '@/components/gear/racket-plate';
+import type { GearRacket } from '@/components/gear/types';
 import { StickyPickBar } from '@/components/sticky-pick-bar';
 import { HeroVideo } from '@/components/hero-video';
 
@@ -18,6 +21,16 @@ export const metadata: Metadata = {
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
   },
 };
+
+/** Presentation data for the compare view and racket drawings. Every value is
+ *  copied from this page's own cards; nothing here is new. */
+const RACKETS: GearRacket[] = [
+  { id: "nox-ml10-pro-cup", rank: 1, name: "NOX ML10 Pro Cup Rough Surface", productName: "NOX ML10 Pro Cup", price: "$169.99", href: "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Spin-focused players upgrading from beginner", balance: "Low", level: "Intermediate" },
+  { id: "wilson-blade-elite", rank: 2, name: "Wilson Blade Elite V2", productName: "Wilson Blade Elite V2", price: "$189.00", href: "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20", brand: "wilson", shape: "teardrop", shapeLabel: "Teardrop", weight: "360g", core: "Soft EVA", face: "Carbon/FG Hybrid Textured", bestFor: "All-court players who want balance", level: "Intermediate" },
+  { id: "nox-at10-attack", rank: 3, name: "NOX AT10 Genius Attack 12K", productName: "NOX AT10 Genius Attack", price: "$229.99", href: "https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20", brand: "nox", shape: "diamond", shapeLabel: "Diamond", weight: "360–370g", core: "MLD Black EVA", face: "12K Carbon Luxury", bestFor: "Aggressive players with clean technique", balance: "Head-heavy", level: "Intermediate" },
+  { id: "bullpadel-neuron", rank: 4, name: "Bullpadel Neuron 2025 (Chingotto)", productName: "Bullpadel Neuron", price: "$236.00", href: "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20", brand: "bullpadel", shape: "hybrid", shapeLabel: "Hybrid (Teardrop-Round)", weight: "370g", core: "EVA", face: "Xtend Carbon 3K", bestFor: "Upper-intermediates transitioning to advanced", level: "Intermediate" },
+  { id: "adidas-metalbone-hrd", rank: 5, name: "Adidas Metalbone HRD+ 3.3", productName: "Adidas Metalbone HRD+", price: "$279.99", href: "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20", brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–360g", core: "High Memory EVA (Hard)", face: "Carbon Aluminized 2:1", bestFor: "Left-side attackers who want firepower", balance: "High", level: "Intermediate" },
+];
 
 export default function IntermediateRacketsPage() {
   const articleData = {
@@ -222,62 +235,8 @@ export default function IntermediateRacketsPage() {
             {/* Spec comparison table */}
             <section className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-5">Intermediate Padel Rackets Compared</h2>
-              <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
-                <table className="w-full text-sm border border-stone-200 rounded-lg bg-white">
-                  <thead>
-                    <tr className="border-b border-stone-200 text-left">
-                      <th className="px-3 py-2.5 font-semibold text-foreground">Racket</th>
-                      <th className="px-3 py-2.5 font-semibold text-foreground">Shape</th>
-                      <th className="px-3 py-2.5 font-semibold text-foreground">Weight</th>
-                      <th className="px-3 py-2.5 font-semibold text-foreground">Core</th>
-                      <th className="px-3 py-2.5 font-semibold text-foreground">Surface</th>
-                      <th className="px-3 py-2.5 font-semibold text-foreground whitespace-nowrap">Price</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-stone-600">
-                    <tr className="border-b border-stone-100">
-                      <td className="px-3 py-2.5 font-medium text-foreground">NOX ML10 Pro Cup</td>
-                      <td className="px-3 py-2.5">Round</td>
-                      <td className="px-3 py-2.5">360&ndash;375g</td>
-                      <td className="px-3 py-2.5">HR3 EVA</td>
-                      <td className="px-3 py-2.5">FG 3K Rough</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$169.99</td>
-                    </tr>
-                    <tr className="border-b border-stone-100">
-                      <td className="px-3 py-2.5 font-medium text-foreground">Wilson Blade Elite V2</td>
-                      <td className="px-3 py-2.5">Teardrop</td>
-                      <td className="px-3 py-2.5">360g</td>
-                      <td className="px-3 py-2.5">Soft EVA</td>
-                      <td className="px-3 py-2.5">Carbon/FG Hybrid</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$189.00</td>
-                    </tr>
-                    <tr className="border-b border-stone-100">
-                      <td className="px-3 py-2.5 font-medium text-foreground">NOX AT10 Genius Attack 12K</td>
-                      <td className="px-3 py-2.5">Diamond</td>
-                      <td className="px-3 py-2.5">360&ndash;370g</td>
-                      <td className="px-3 py-2.5">MLD Black EVA</td>
-                      <td className="px-3 py-2.5">12K Carbon</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$229.99</td>
-                    </tr>
-                    <tr className="border-b border-stone-100">
-                      <td className="px-3 py-2.5 font-medium text-foreground">Bullpadel Neuron 2025</td>
-                      <td className="px-3 py-2.5">Hybrid</td>
-                      <td className="px-3 py-2.5">370g</td>
-                      <td className="px-3 py-2.5">EVA</td>
-                      <td className="px-3 py-2.5">Xtend Carbon 3K</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$236.00</td>
-                    </tr>
-                    <tr>
-                      <td className="px-3 py-2.5 font-medium text-foreground">Adidas Metalbone HRD+ 3.3</td>
-                      <td className="px-3 py-2.5">Diamond</td>
-                      <td className="px-3 py-2.5">345&ndash;360g</td>
-                      <td className="px-3 py-2.5">High Memory EVA</td>
-                      <td className="px-3 py-2.5">Carbon Aluminized</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$279.99</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <p className="text-sm text-stone-500 mb-5 -mt-2">Every racket is drawn to the same scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
+              <RacketCompare rackets={RACKETS} uidPrefix="int" caption="Intermediate padel rackets compared" />
             </section>
 
             {/* How we picked */}
@@ -318,6 +277,7 @@ export default function IntermediateRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$169.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Spin-focused players upgrading from beginner</p>
+                <RacketPlate racket={RACKETS[0]} uidPrefix="int" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Round</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">360&ndash;375g</span>
@@ -371,6 +331,7 @@ export default function IntermediateRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$189.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: All-court players who want balance</p>
+                <RacketPlate racket={RACKETS[1]} uidPrefix="int" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Teardrop</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">360g</span>
@@ -424,6 +385,7 @@ export default function IntermediateRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$229.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Aggressive players with clean technique</p>
+                <RacketPlate racket={RACKETS[2]} uidPrefix="int" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Diamond</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">360&ndash;370g</span>
@@ -480,6 +442,7 @@ export default function IntermediateRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$236.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Upper-intermediates transitioning to advanced</p>
+                <RacketPlate racket={RACKETS[3]} uidPrefix="int" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Hybrid (Teardrop-Round)</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">370g</span>
@@ -533,6 +496,7 @@ export default function IntermediateRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$279.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Left-side attackers who want firepower</p>
+                <RacketPlate racket={RACKETS[4]} uidPrefix="int" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Diamond</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">345&ndash;360g</span>

@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { RacketCompare } from '@/components/gear/gear-compare';
+import { RacketPlate } from '@/components/gear/racket-plate';
+import type { GearRacket } from '@/components/gear/types';
 import { StickyPickBar } from '@/components/sticky-pick-bar';
 import { HeroVideo } from '@/components/hero-video';
 
@@ -18,6 +21,16 @@ export const metadata: Metadata = {
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
   },
 };
+
+/** Presentation data for the compare view and racket drawings. Every value is
+ *  copied from this page's own cards; nothing here is new. */
+const RACKETS: GearRacket[] = [
+  { id: "babolat-contact", rank: 1, name: "Babolat Contact", productName: "Babolat Contact", price: "$89.95", href: "https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20", brand: "babolat", shape: "round", shapeLabel: "Round", weight: "340g", core: "Soft EVA", face: "Fiberglass", bestFor: "Complete beginners and smaller players", level: "Beginner" },
+  { id: "head-extreme-evo", rank: 2, name: "HEAD Extreme Evo", productName: "HEAD Extreme Evo", price: "$99.95", href: "https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20", brand: "head", shape: "round", shapeLabel: "Round (511cm²)", weight: "355–365g", core: "Power Foam", face: "FG/Carbon Hybrid", bestFor: "Players who want arm protection", level: "Beginner" },
+  { id: "wilson-optix-v1", rank: 3, name: "Wilson Optix V1", productName: "Wilson Optix V1", price: "$109.00", href: "https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20", brand: "wilson", shape: "round", shapeLabel: "Round", weight: "355–360g", core: "Soft EVA", face: "Fiberglass Weave", bestFor: "Comfort-first players", level: "Beginner" },
+  { id: "nox-pro-cup-uspa", rank: 4, name: "NOX Pro Cup USPA Edition", productName: "NOX Pro Cup USPA Edition", price: "$119.00", href: "https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–365g", core: "HR3 EVA", face: "FG 3K Silver", bestFor: "Players who want tour pedigree", level: "Beginner" },
+  { id: "adidas-adipower", rank: 5, name: "Adidas Adipower", productName: "Adidas Adipower", price: "$129.00", href: "https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20", brand: "adidas", shape: "round", shapeLabel: "Round", weight: "360–365g (Adjustable)", core: "EVA Soft Performance", face: "FG 3K", bestFor: "Players who want customizable weight", balance: "Adjustable", level: "Beginner" },
+];
 
 export default function BeginnerRacketsPage() {
   const articleData = {
@@ -261,6 +274,13 @@ export default function BeginnerRacketsPage() {
               <a href="#top-5-beginner" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
             </div>
 
+            {/* Compare view: to-scale line-up + spec table */}
+            <section className="mt-10" aria-labelledby="compare-beg">
+              <h2 id="compare-beg" className="text-2xl font-bold text-foreground mb-2">All 5 side by side</h2>
+              <p className="text-sm text-stone-500 mb-5">Every racket is drawn to the same scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
+              <RacketCompare rackets={RACKETS} uidPrefix="beg" caption="Beginner padel rackets compared" />
+            </section>
+
           </div>
         </div>
 
@@ -310,6 +330,7 @@ export default function BeginnerRacketsPage() {
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Complete beginners and smaller players</p>
+                <RacketPlate racket={RACKETS[0]} uidPrefix="beg" />
 
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Round</span>
@@ -381,6 +402,7 @@ export default function BeginnerRacketsPage() {
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want arm protection</p>
+                <RacketPlate racket={RACKETS[1]} uidPrefix="beg" />
 
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Round (511cm&sup2;)</span>
@@ -455,6 +477,7 @@ export default function BeginnerRacketsPage() {
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Comfort-first players</p>
+                <RacketPlate racket={RACKETS[2]} uidPrefix="beg" />
 
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Round</span>
@@ -529,6 +552,7 @@ export default function BeginnerRacketsPage() {
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want tour pedigree</p>
+                <RacketPlate racket={RACKETS[3]} uidPrefix="beg" />
 
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Round</span>
@@ -600,6 +624,7 @@ export default function BeginnerRacketsPage() {
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want customizable weight</p>
+                <RacketPlate racket={RACKETS[4]} uidPrefix="beg" />
 
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Round</span>

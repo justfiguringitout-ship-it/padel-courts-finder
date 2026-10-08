@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { RacketCompare } from '@/components/gear/gear-compare';
+import { RacketPlate } from '@/components/gear/racket-plate';
+import type { GearRacket } from '@/components/gear/types';
 import { StickyPickBar } from '@/components/sticky-pick-bar';
 import { HeroVideo } from '@/components/hero-video';
 import type { ReactNode } from 'react';
@@ -140,6 +143,17 @@ function Tag({ children }: { children: ReactNode }) {
   return <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">{children}</span>;
 }
 
+/** Presentation data for the compare view and racket drawings. Every value is
+ *  copied from this page's own cards; nothing here is new. */
+const RACKETS: GearRacket[] = [
+  { id: "wilson-optix-v1", rank: 1, name: "Wilson Optix V1", productName: "Wilson Optix V1", price: "$109.00", href: AMZ.optix, brand: "wilson", shape: "round", shapeLabel: "Round", weight: "355–360g", core: "Soft EVA", face: "Fiberglass Weave", bestFor: "Anyone who wants the most comfortable, most forgiving racket for about $110", level: "Beginner", score: "7.7/10" },
+  { id: "head-extreme-evo", rank: 2, name: "HEAD Extreme Evo", productName: "HEAD Extreme Evo", price: "$99.95", href: AMZ.evo, brand: "head", shape: "round", shapeLabel: "Round (511cm²)", weight: "355–365g", core: "Power Foam", face: "FG/Carbon Hybrid", bestFor: "Players who want arm protection and a huge sweet spot for under $100", level: "Beginner", score: "7.3/10" },
+  { id: "babolat-contact", rank: 3, name: "Babolat Contact", productName: "Babolat Contact", price: "$89.95", href: AMZ.contact, brand: "babolat", shape: "round", shapeLabel: "Round", weight: "340g", core: "Soft EVA", face: "Fiberglass", bestFor: "Complete beginners, smaller players and anyone spending as little as possible", level: "Beginner", score: "7.0/10" },
+  { id: "nox-pro-cup-uspa", rank: 4, name: "NOX Pro Cup USPA Edition", productName: "NOX Pro Cup USPA Edition", price: "$119.00", href: AMZ.uspa, brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–365g", core: "HR3 EVA", face: "FG 3K Silver", bestFor: "Budget buyers who want a carbon frame and a bit more pace", level: "Beginner", score: "7.3/10" },
+  { id: "nox-ml10-pro-cup", rank: 5, name: "NOX ML10 Pro Cup Rough Surface", productName: "NOX ML10 Pro Cup Rough Surface", price: "$169.99", href: AMZ.ml10, brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Improving players who want a real upgrade without paying $200+", balance: "Low", level: "Intermediate", score: "7.3/10" },
+  { id: "adidas-adipower", rank: 6, name: "Adidas Adipower", productName: "Adidas Adipower", price: "$129.00", href: AMZ.adipower, brand: "adidas", shape: "round", shapeLabel: "Round", weight: "360–365g (Adjustable)", core: "EVA Soft Performance", face: "FG 3K", bestFor: "Players who want one racket they can re-weight as they improve", level: "Beginner", score: "7.0/10" },
+];
+
 export default function BudgetRacketsPage() {
   return (
     <div className="min-h-screen bg-stone-50">
@@ -217,70 +231,8 @@ export default function BudgetRacketsPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <section className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-5">Budget Padel Rackets Compared</h2>
-              <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
-                <table className="w-full text-sm border border-stone-200 rounded-lg bg-white">
-                  <thead>
-                    <tr className="border-b border-stone-200 text-left">
-                      <th className="px-3 py-2.5 font-semibold text-foreground">Racket</th>
-                      <th className="px-3 py-2.5 font-semibold text-foreground">Weight</th>
-                      <th className="px-3 py-2.5 font-semibold text-foreground">Core</th>
-                      <th className="px-3 py-2.5 font-semibold text-foreground">Face</th>
-                      <th className="px-3 py-2.5 font-semibold text-foreground whitespace-nowrap">Score</th>
-                      <th className="px-3 py-2.5 font-semibold text-foreground whitespace-nowrap">Price</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-stone-600">
-                    <tr className="border-b border-stone-100">
-                      <td className="px-3 py-2.5 font-medium text-foreground">Wilson Optix V1</td>
-                      <td className="px-3 py-2.5">355&ndash;360g</td>
-                      <td className="px-3 py-2.5">Soft EVA</td>
-                      <td className="px-3 py-2.5">Fiberglass Weave</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">7.7/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$109.00</td>
-                    </tr>
-                    <tr className="border-b border-stone-100">
-                      <td className="px-3 py-2.5 font-medium text-foreground">HEAD Extreme Evo</td>
-                      <td className="px-3 py-2.5">355&ndash;365g</td>
-                      <td className="px-3 py-2.5">Power Foam</td>
-                      <td className="px-3 py-2.5">FG/Carbon Hybrid</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">7.3/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$99.95</td>
-                    </tr>
-                    <tr className="border-b border-stone-100">
-                      <td className="px-3 py-2.5 font-medium text-foreground">Babolat Contact</td>
-                      <td className="px-3 py-2.5">340g</td>
-                      <td className="px-3 py-2.5">Soft EVA</td>
-                      <td className="px-3 py-2.5">Fiberglass</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">7.0/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$89.95</td>
-                    </tr>
-                    <tr className="border-b border-stone-100">
-                      <td className="px-3 py-2.5 font-medium text-foreground">NOX Pro Cup USPA Edition</td>
-                      <td className="px-3 py-2.5">360&ndash;365g</td>
-                      <td className="px-3 py-2.5">HR3 EVA</td>
-                      <td className="px-3 py-2.5">FG 3K Silver</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">7.3/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$119.00</td>
-                    </tr>
-                    <tr className="border-b border-stone-100">
-                      <td className="px-3 py-2.5 font-medium text-foreground">NOX ML10 Pro Cup Rough Surface</td>
-                      <td className="px-3 py-2.5">360&ndash;375g</td>
-                      <td className="px-3 py-2.5">HR3 EVA</td>
-                      <td className="px-3 py-2.5">FG 3K Rough</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">7.3/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$169.99</td>
-                    </tr>
-                    <tr>
-                      <td className="px-3 py-2.5 font-medium text-foreground">Adidas Adipower</td>
-                      <td className="px-3 py-2.5">360&ndash;365g</td>
-                      <td className="px-3 py-2.5">EVA Soft Performance</td>
-                      <td className="px-3 py-2.5">FG 3K</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">7.0/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$129.00</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <p className="text-sm text-stone-500 mb-5 -mt-2">Every racket is drawn to the same scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
+              <RacketCompare rackets={RACKETS} uidPrefix="bud" caption="Budget padel rackets compared" />
               <p className="text-xs text-stone-500 mt-3">All six are round rackets. Prices are the Amazon prices at the time of our reviews and can change.</p>
             </section>
 
@@ -319,6 +271,7 @@ export default function BudgetRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$109.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Anyone who wants the most comfortable, most forgiving racket for about $110</p>
+                <RacketPlate racket={RACKETS[0]} uidPrefix="bud" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <Tag>Round</Tag><Tag>355&ndash;360g</Tag><Tag>Soft EVA</Tag><Tag>Fiberglass Weave</Tag><Tag>FG Frame</Tag>
                 </div>
@@ -341,6 +294,7 @@ export default function BudgetRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$99.95</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want arm protection and a huge sweet spot for under $100</p>
+                <RacketPlate racket={RACKETS[1]} uidPrefix="bud" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <Tag>Round (511cm&sup2;)</Tag><Tag>355&ndash;365g</Tag><Tag>Power Foam</Tag><Tag>FG/Carbon Hybrid</Tag><Tag>Innegra Frame</Tag>
                 </div>
@@ -363,6 +317,7 @@ export default function BudgetRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$89.95</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Complete beginners, smaller players and anyone spending as little as possible</p>
+                <RacketPlate racket={RACKETS[2]} uidPrefix="bud" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <Tag>Round</Tag><Tag>340g</Tag><Tag>Soft EVA</Tag><Tag>Fiberglass</Tag><Tag>Carbon/FG Hybrid Frame</Tag>
                 </div>
@@ -385,6 +340,7 @@ export default function BudgetRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$119.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Budget buyers who want a carbon frame and a bit more pace</p>
+                <RacketPlate racket={RACKETS[3]} uidPrefix="bud" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <Tag>Round</Tag><Tag>360&ndash;365g</Tag><Tag>HR3 EVA</Tag><Tag>FG 3K Silver</Tag><Tag>Carbon Frame</Tag>
                 </div>
@@ -407,6 +363,7 @@ export default function BudgetRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$169.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Improving players who want a real upgrade without paying $200+</p>
+                <RacketPlate racket={RACKETS[4]} uidPrefix="bud" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <Tag>Round</Tag><Tag>360&ndash;375g</Tag><Tag>HR3 EVA</Tag><Tag>FG 3K Rough</Tag><Tag>Carbon Frame</Tag>
                 </div>
@@ -429,6 +386,7 @@ export default function BudgetRacketsPage() {
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$129.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want one racket they can re-weight as they improve</p>
+                <RacketPlate racket={RACKETS[5]} uidPrefix="bud" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <Tag>Round</Tag><Tag>360&ndash;365g (Adjustable)</Tag><Tag>EVA Soft Performance</Tag><Tag>FG 3K</Tag><Tag>Carbon Frame</Tag>
                 </div>
