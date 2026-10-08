@@ -49,6 +49,7 @@ export function HeroVideo() {
           width={960}
           height={540}
           decoding="async"
+          fetchPriority="high"
           className={`absolute inset-0 h-full w-full object-cover ${showVideo ? "" : "hero-still-zoom"}`}
         />
         {showVideo && (

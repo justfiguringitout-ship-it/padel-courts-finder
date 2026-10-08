@@ -486,7 +486,7 @@ function SearchPageContent() {
 export function SearchClient() {
   return (
     <Suspense fallback={
-      <div className="container mx-auto px-4 py-8 text-muted-foreground">Loading the court finder…</div>
+      <div className="container mx-auto px-4 py-8 min-h-screen text-muted-foreground" aria-busy="true">Loading the court finder…</div>
     }>
       <SearchPageContent />
     </Suspense>
