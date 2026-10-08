@@ -2,32 +2,31 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { ClubPlaceholder } from "@/components/club-placeholder";
 
 interface ClubImageProps {
-  src: string;
+  src?: string | null;
   alt: string;
   sizes?: string;
   className?: string;
+  /** Court count for the placeholder caption when there is no photo. */
+  courts?: number;
+  /** Set only on the first above-the-fold club image of a page. */
+  priority?: boolean;
 }
 
 /**
- * Club photo with a branded fallback — external club sites sometimes
- * block hotlinking or move files, so a broken image becomes a court-navy
- * panel with the club initial instead of an empty gray box.
+ * Club photo that fills its positioned parent. The parent must reserve the
+ * space with an aspect ratio (aspect-video, aspect-[16/10], ...) so nothing
+ * shifts while it loads. Lazy by default. When the club has no photo, or the
+ * file fails to load, it swaps to the designed court placeholder instead of
+ * a broken box.
  */
-export function ClubImage({ src, alt, sizes, className }: ClubImageProps) {
-  const [failed, setFailed] = useState(!src);
+export function ClubImage({ src, alt, sizes, className, courts, priority }: ClubImageProps) {
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
 
-  if (failed) {
-    return (
-      <div className="absolute inset-0">
-        <div className="grain bg-court w-full h-full flex items-center justify-center">
-          <span className="font-display text-6xl font-bold text-turf/40" aria-hidden="true">
-            {alt.charAt(0)}
-          </span>
-        </div>
-      </div>
-    );
+  if (!src || failedSrc === src) {
+    return <ClubPlaceholder label={alt} courts={courts} />;
   }
 
   return (
@@ -35,9 +34,10 @@ export function ClubImage({ src, alt, sizes, className }: ClubImageProps) {
       src={src}
       alt={alt}
       fill
-      sizes={sizes}
+      sizes={sizes ?? "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"}
       className={className}
-      onError={() => setFailed(true)}
+      {...(priority ? { preload: true, fetchPriority: "high" as const } : { loading: "lazy" as const })}
+      onError={() => setFailedSrc(src)}
     />
   );
 }

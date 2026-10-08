@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'Discover Chicago\'s 3 best padel clubs in 2026. Cube Padel, Union Padel Club & Proximo Padel ranked. Pricing, programs & indoor guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-chicago',
     type: 'article',
-    images: [{ url: 'https://cubepadel.com/wp-content/uploads/2024/08/cube-padel-slide.jpg' }],
+    images: [{ url: 'https://www.padelcourtsfinder.com/images/courts/cube-padel-chicago.webp' }],
   },
 };
 
@@ -141,7 +141,7 @@ export default function ChicagoBestClubsPage() {
     "@type": "Article",
     "headline": "Best Padel Clubs in Chicago (2026) | Complete Windy City Guide",
     "description": "Discover Chicago's 3 best padel clubs in 2026. Cube Padel, Union Padel Club & Proximo Padel ranked. Pricing, programs & indoor guide.",
-    "image": "https://cubepadel.com/wp-content/uploads/2024/08/cube-padel-slide.jpg",
+    "image": "https://www.padelcourtsfinder.com/images/courts/cube-padel-chicago.webp",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
     "author": {

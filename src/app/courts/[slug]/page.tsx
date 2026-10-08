@@ -110,7 +110,9 @@ export default async function CourtPage({ params }: CourtPageProps) {
             telephone: court.phone,
             email: court.email,
             url: court.website || `https://www.padelcourtsfinder.com/courts/${court.slug}`,
-            image: court.images.map((img) => img.url),
+            image: court.images.map((img) =>
+              img.url.startsWith("/") ? `https://www.padelcourtsfinder.com${img.url}` : img.url
+            ),
             ...(court.rating.ratingValue > 0 && court.rating.reviewCount > 0 ? {
               aggregateRating: {
                 "@type": "AggregateRating",
@@ -255,9 +257,12 @@ export default async function CourtPage({ params }: CourtPageProps) {
             {/* Right: Hero Image — branded fallback when the club has no photo */}
             <div className="relative aspect-video rounded-xl overflow-hidden border">
               <ClubImage
-                src={court.heroImage || court.images[0]?.url || ""}
+                src={court.heroImage || court.images[0]?.url}
                 alt={court.name}
+                courts={court.facility.totalCourts}
                 className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                priority
               />
             </div>
           </div>
@@ -278,7 +283,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {court.images.slice(1).map((img) => (
                       <div key={img.url} className="relative aspect-[3/4] rounded-lg overflow-hidden border">
-                        <ClubImage src={img.url} alt={img.alt} className="object-cover" />
+                        <ClubImage src={img.url} alt={img.alt} className="object-cover" sizes="(min-width: 768px) 22vw, 50vw" />
                       </div>
                     ))}
                   </div>
@@ -565,10 +570,11 @@ export default async function CourtPage({ params }: CourtPageProps) {
                 >
                   <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden">
                     <div className="aspect-video relative overflow-hidden">
-                      <img
+                      <ClubImage
                         src={relatedCourt.heroImage}
                         alt={relatedCourt.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        courts={relatedCourt.facility.totalCourts}
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     <CardHeader>

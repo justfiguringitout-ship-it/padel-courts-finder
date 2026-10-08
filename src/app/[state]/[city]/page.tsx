@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ClubImage } from "@/components/club-image";
 import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
@@ -337,10 +338,11 @@ export default async function CityPage({ params }: CityPageProps) {
             >
               <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
                 <div className="aspect-video relative overflow-hidden">
-                  <img
+                  <ClubImage
                     src={court.heroImage}
                     alt={court.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    courts={court.facility.totalCourts}
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   {court.featured && (
                     <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600">
