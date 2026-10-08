@@ -42,6 +42,42 @@ export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
     date: "2026-10-08",
+    type: "updated",
+    title: "Court prices checked on live booking pages in Miami, Houston, Austin and Dallas",
+    note:
+      "Non-member court prices for 29 clubs now come from the clubs' live Playtomic and booking pages, checked on October 8. Several old figures were wrong: i95 Padel Club is about $109 an hour, not $65, and Urban Padel and Platinum Padel had outdated ranges. Rates for members-only clubs and figures we could not source were removed. New York clubs keep prices behind a login, so none are shown there yet.",
+    count: 32,
+    commit: "3a4cf00",
+  },
+  {
+    date: "2026-10-08",
+    type: "removed",
+    title: "Padel& Greenpoint closed",
+    note:
+      "The Brooklyn club closed on May 31, 2026 after its building was sold, as reported by Greenpointers and stated on the club's own site. The listing was removed and the New York and Brooklyn guides were updated.",
+    clubs: ["Padel& Greenpoint"],
+    commit: "65cf382, 5c2edbc",
+  },
+  {
+    date: "2026-10-08",
+    type: "removed",
+    title: "Six listings removed after a status check",
+    note:
+      "Pepper Padel (no activity since 2023), Naoa (permanently closed), Dixson (now pickleball only), Punto Azul (never opened), and Padel Protech and Golden Padel (no evidence of an operating club). Each was checked against the club's own Instagram, booking pages, Google Maps and public records.",
+    clubs: ["Pepper Padel", "Naoa", "Dixson Padel and Pickleball Club", "Punto Azul Padel Club", "Padel Protech", "Golden Padel"],
+    commit: "99ffbf0",
+  },
+  {
+    date: "2026-10-08",
+    type: "updated",
+    title: "Three clubs marked temporarily closed, one renamed",
+    note:
+      "Camelback Padel Club, Vamos Racquets and Club Padel Newtown have gone quiet online and their sites are down, so they are marked temporarily closed until we confirm. Cascades Tennis in Aspen is now Aspen Meadows Racquet Club. Pulse Padel Hub, Rad Padel, Platinum Padel and Padel World Play now link to their working booking pages.",
+    clubs: ["Camelback Padel Club", "Vamos Racquets", "Club Padel Newtown", "Aspen Meadows Racquet Club", "Pulse Padel Hub", "Rad Padel", "Platinum Padel Club", "Padel World Play"],
+    commit: "99ffbf0",
+  },
+  {
+    date: "2026-10-08",
     type: "verified",
     title: "The Gables Padel is open: 8 outdoor courts",
     note:
