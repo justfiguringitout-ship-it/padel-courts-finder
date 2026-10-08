@@ -4,13 +4,13 @@ import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Houston (2026) | Complete HTX Guide',
-  description: 'Discover Houston\'s 9 best padel clubs in 2026. TEMPO, Cube Padel, Punto Azul & more. Rankings, pricing & complete Houston padel guide.',
+  description: 'Discover Houston\'s 7 best padel clubs in 2026. TEMPO, Cube Padel, Racket Social Club & more. Rankings, pricing & complete Houston padel guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-houston',
   },
   openGraph: {
     title: 'Best Padel Clubs in Houston (2026) | Complete HTX Guide',
-    description: 'Discover Houston\'s 9 best padel clubs in 2026. TEMPO, Cube Padel, Punto Azul & more. Rankings, pricing & complete Houston padel guide.',
+    description: 'Discover Houston\'s 7 best padel clubs in 2026. TEMPO, Cube Padel, Racket Social Club & more. Rankings, pricing & complete Houston padel guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-houston',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
@@ -71,38 +71,6 @@ const clubs: Club[] = [
   },
   {
     rank: 2,
-    name: 'Punto Azul Padel Club',
-    slug: 'punto-azul-padel-club',
-    score: 95,
-    location: 'Houston, TX',
-    courts: '8 outdoor courts',
-    price: '$$-$$$',
-    description: 'Punto Azul Padel Club is Houston\'s largest dedicated padel facility with 8 premium outdoor courts for social play and high-level training. Their Academy provides coaching from beginner to advanced levels, making it a complete padel destination.',
-    highlights: [
-      '8 premium outdoor padel courts',
-      'Largest court count in Houston',
-      'Full padel academy',
-      'Beginner to advanced coaching',
-      'Wheelchair accessible',
-      'Pro shop & lockers'
-    ],
-    programs: [
-      'Academy coaching (all levels)',
-      'Social play sessions',
-      'Tournament hosting',
-      'Private lessons',
-      'Group clinics',
-      'Equipment available'
-    ],
-    bestFor: [
-      'Players wanting court variety',
-      'Academy-level training',
-      'Tournament competitors',
-      'Large groups & events'
-    ]
-  },
-  {
-    rank: 3,
     name: 'Cube Padel Houston',
     slug: 'cube-padel-houston',
     score: 94,
@@ -134,7 +102,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 4,
+    rank: 3,
     name: 'Racket Social Club',
     slug: 'racket-social-club',
     score: 93,
@@ -166,7 +134,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 5,
+    rank: 4,
     name: 'Padel Country Club Memorial',
     slug: 'padel-country-club-memorial',
     score: 92,
@@ -198,7 +166,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 6,
+    rank: 5,
     name: 'iPadel Houston',
     slug: 'ipadel-houston',
     score: 91,
@@ -230,7 +198,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 7,
+    rank: 6,
     name: 'West43 Padel',
     slug: 'west43-padel',
     score: 90,
@@ -262,7 +230,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 8,
+    rank: 7,
     name: 'The Houstonian Club',
     slug: 'the-houstonian-club',
     score: 88,
@@ -300,10 +268,10 @@ export default function HoustonBestClubsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in Houston (2026) | Complete HTX Guide",
-    "description": "Discover Houston's 9 best padel clubs in 2026. TEMPO, Cube Padel, Punto Azul & more. Rankings, pricing & complete Houston padel guide.",
+    "description": "Discover Houston's 7 best padel clubs in 2026. TEMPO, Cube Padel, Racket Social Club & more. Rankings, pricing & complete Houston padel guide.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-21T00:00:00Z",
-    "dateModified": "2026-03-21T00:00:00Z",
+    "dateModified": "2026-10-08T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -347,11 +315,11 @@ export default function HoustonBestClubsPage() {
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5" />
-              <span>9 Clubs Ranked</span>
+              <span>7 Clubs Ranked</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
-              <span>Updated March 2026</span>
+              <span>Updated October 2026</span>
             </div>
           </div>
           <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
@@ -362,12 +330,12 @@ export default function HoustonBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-padel-green">9</div>
+              <div className="text-3xl font-bold text-padel-green">8</div>
               <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">30+</div>
-              <div className="text-sm text-stone-600">Total Courts</div>
+              <div className="text-3xl font-bold text-padel-green">25</div>
+              <div className="text-sm text-stone-600">Courts at Open Clubs</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-padel-green">$12-65</div>
@@ -387,13 +355,13 @@ export default function HoustonBestClubsPage() {
             Houston: Texas&apos;s Padel Powerhouse in 2026
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Houston&apos;s padel scene has exploded. The nation&apos;s fourth-largest city now counts 9 open padel clubs with over 30 courts spread across the metro, from The Heights to Memorial to northwest suburbs. With a massive Latin American population bringing authentic padel culture and Houston&apos;s energy-sector wealth funding premium facilities, Space City has become one of the strongest padel markets in the United States.
+            Houston&apos;s padel scene has exploded. The nation&apos;s fourth-largest city now has 8 open padel clubs with 25 courts between them in our directory, more clubs than any other city in Texas, spread from The Heights to Memorial to Willowbrook in the northwest. With a massive Latin American population bringing authentic padel culture and Houston&apos;s energy-sector wealth funding premium facilities, Space City has become one of the strongest padel markets in the United States.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            The standout story is the sheer variety. <Link href="/courts/tempo-padel-pickleball-club" className="text-padel-green hover:underline">TEMPO Padel</Link> leads with wellness amenities and a perfect rating, while <Link href="/courts/punto-azul-padel-club" className="text-padel-green hover:underline">Punto Azul</Link> offers Houston&apos;s largest outdoor court complex with 8 courts. Indoor options like <Link href="/courts/cube-padel-houston" className="text-padel-green hover:underline">Cube Padel</Link> and <Link href="/courts/west43-padel" className="text-padel-green hover:underline">West43 Padel</Link> provide climate-controlled relief from Houston summers.
+            The standout story is the sheer variety. <Link href="/courts/tempo-padel-pickleball-club" className="text-padel-green hover:underline">TEMPO Padel</Link> leads with wellness amenities and a perfect rating, and it shares the city&apos;s highest court count, 5 courts, with Cube Padel. Indoor options like <Link href="/courts/cube-padel-houston" className="text-padel-green hover:underline">Cube Padel</Link> and <Link href="/courts/west43-padel" className="text-padel-green hover:underline">West43 Padel</Link> provide climate-controlled relief from Houston summers.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            Whether you&apos;re a competitive player, a social enthusiast, or a complete beginner, Houston has a club for you. Browse all options on our <Link href="/texas/houston" className="text-padel-green hover:underline">Houston courts page</Link> or explore the full <Link href="/texas" className="text-padel-green hover:underline">Texas padel directory</Link>. Note: SB Padel Houston (4 courts in Spring Branch) is temporarily closed but may reopen -- check their status for updates.
+            Whether you&apos;re a competitive player, a social enthusiast, or a complete beginner, Houston has a club for you. Browse all options on our <Link href="/texas/houston" className="text-padel-green hover:underline">Houston courts page</Link> or explore the full <Link href="/texas" className="text-padel-green hover:underline">Texas padel directory</Link>. Note: SB Padel Houston (4 courts in Spring Branch) is temporarily closed but may reopen, so check their status for updates.
           </p>
         </div>
 
@@ -401,7 +369,7 @@ export default function HoustonBestClubsPage() {
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/tempo-padel-pickleball-club" className="text-padel-green hover:underline">TEMPO Padel</Link> (5 indoor courts, sauna & cold plunge)</p>
-            <p><strong>Most Courts:</strong> <Link href="/courts/punto-azul-padel-club" className="text-padel-green hover:underline">Punto Azul Padel</Link> (8 outdoor courts, full academy)</p>
+            <p><strong>Most Courts:</strong> <Link href="/courts/tempo-padel-pickleball-club" className="text-padel-green hover:underline">TEMPO Padel</Link> and <Link href="/courts/cube-padel-houston" className="text-padel-green hover:underline">Cube Padel</Link> (tied at 5 courts each)</p>
             <p><strong>Best Indoor:</strong> <Link href="/courts/cube-padel-houston" className="text-padel-green hover:underline">Cube Padel</Link> (5 AC courts, national network)</p>
             <p><strong>Best Social Scene:</strong> <Link href="/courts/racket-social-club" className="text-padel-green hover:underline">Racket Social Club</Link> (panoramic courts, 5.0 rating)</p>
             <p><strong>Best Luxury:</strong> <Link href="/courts/the-houstonian-club" className="text-padel-green hover:underline">The Houstonian Club</Link> (27-acre private campus)</p>

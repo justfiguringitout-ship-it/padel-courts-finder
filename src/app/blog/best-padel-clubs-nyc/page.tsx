@@ -4,13 +4,13 @@ import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in NYC (2026) | Brooklyn, Manhattan & Beyond',
-  description: 'Discover NYC\'s 6 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.',
+  description: 'Discover NYC\'s 6 best padel clubs in 2026, plus the newly opened Padel Haus Greenpoint. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-nyc',
   },
   openGraph: {
     title: 'Best Padel Clubs in NYC (2026) | Brooklyn, Manhattan & Beyond',
-    description: 'Discover NYC\'s 6 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.',
+    description: 'Discover NYC\'s 6 best padel clubs in 2026, plus the newly opened Padel Haus Greenpoint. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-nyc',
     type: 'article',
     images: [{ url: 'https://static.wixstatic.com/media/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png/v1/fit/w_2500,h_1330,al_c/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png' }],
@@ -139,13 +139,13 @@ const clubs: Club[] = [
     name: 'Padel Haus - Williamsburg',
     slug: 'padel-haus-williamsburg',
     score: 90,
-    location: 'Williamsburg, Brooklyn, NY',
-    courts: '5 indoor courts',
+    location: '307 Kent Ave, Williamsburg, Brooklyn, NY',
+    courts: '7 courts (4 indoor, 3 rooftop)',
     price: '$$-$$$$',
     website: 'padel.haus/locations/williamsburg',
-    description: 'Padel Haus brings its premium padel experience to Brooklyn\'s trendiest neighborhood with 5 indoor courts, a bar, and event hosting. Part of the growing Padel Haus network, the Williamsburg location combines quality courts with the neighborhood\'s signature social energy.',
+    description: 'Padel Haus Williamsburg is the original Padel Haus club, at 307 Kent Avenue on the Brooklyn waterfront, with 7 courts (4 indoor and 3 on the rooftop), a bar, and event hosting. Part of the growing Padel Haus network, the Williamsburg location combines quality courts with the neighborhood\'s signature social energy.',
     highlights: [
-      '5 indoor courts',
+      '4 indoor courts + 3 rooftop courts',
       'Bar & social lounge',
       'Williamsburg neighborhood vibe',
       'Events & leagues hosted',
@@ -236,7 +236,7 @@ export default function NYCBestClubsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in NYC (2026) | Brooklyn, Manhattan & Beyond",
-    "description": "Discover NYC's 6 best padel clubs in 2026. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.",
+    "description": "Discover NYC's 6 best padel clubs in 2026, plus the newly opened Padel Haus Greenpoint. From Padel Haus Dumbo to Reserve Hudson Yards. Rankings, pricing & New York guide.",
     "image": "https://static.wixstatic.com/media/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png/v1/fit/w_2500,h_1330,al_c/f5e84b_55da76b8631948a7b5f8a96f7bfde8a2%7Emv2.png",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-10-08T00:00:00Z",
@@ -298,11 +298,11 @@ export default function NYCBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-padel-green">6</div>
-              <div className="text-sm text-stone-600">Clubs</div>
+              <div className="text-3xl font-bold text-padel-green">7</div>
+              <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">19</div>
+              <div className="text-3xl font-bold text-padel-green">26</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
@@ -310,8 +310,8 @@ export default function NYCBestClubsPage() {
               <div className="text-sm text-stone-600">Per Hour Range</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">1 More</div>
-              <div className="text-sm text-stone-600">Coming Soon</div>
+              <div className="text-3xl font-bold text-padel-green">1</div>
+              <div className="text-sm text-stone-600">Newly Opened</div>
             </div>
           </div>
         </div>
@@ -323,7 +323,7 @@ export default function NYCBestClubsPage() {
             NYC&apos;s Padel Scene Explodes in 2026
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            New York City&apos;s padel revolution is in full swing. From Brooklyn&apos;s waterfront to Manhattan&apos;s Hudson Yards, the city now boasts 6 open clubs with 19 courts and another facility on the way. Led by <Link href="/courts/padel-haus-dumbo" className="text-padel-green hover:underline">Padel Haus Dumbo</Link>, NYC has become one of America&apos;s most exciting padel markets. Padel&amp; Greenpoint, which was #2 in earlier versions of this guide, closed on May 31, 2026 when its building was sold, so it is no longer ranked here.
+            New York City&apos;s padel scene keeps growing. From Brooklyn&apos;s waterfront to Manhattan&apos;s Hudson Yards, the clubs in this guide add up to 7 open clubs with 26 courts, now that <Link href="/courts/padel-haus-greenpoint" className="text-padel-green hover:underline">Padel Haus Greenpoint</Link> has opened. <Link href="/courts/padel-haus-dumbo" className="text-padel-green hover:underline">Padel Haus Dumbo</Link> tops our ranking.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             Brooklyn dominates the scene with four clubs, while Manhattan contributes three unique venues: <Link href="/courts/mink-padel" className="text-padel-green hover:underline">Mink Padel</Link>&apos;s historic Harlem courtyard, <Link href="/courts/reserve-padel-hudson-yards" className="text-padel-green hover:underline">Reserve Padel</Link>&apos;s bubble-enclosed Hudson Yards courts, and the ultra-exclusive <Link href="/courts/elite-sports-club-at-111-west-57th-street" className="text-padel-green hover:underline">Elite Sports Club</Link> at 111 West 57th Street.
@@ -337,7 +337,7 @@ export default function NYCBestClubsPage() {
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/padel-haus-dumbo" className="text-padel-green hover:underline">Padel Haus Dumbo</Link> (premium Brooklyn waterfront)</p>
-            <p><strong>Most Courts:</strong> <Link href="/courts/padel-haus-williamsburg" className="text-padel-green hover:underline">Padel Haus Williamsburg</Link> (the most courts of any club on this list)</p>
+            <p><strong>Most Courts:</strong> <Link href="/courts/padel-haus-williamsburg" className="text-padel-green hover:underline">Padel Haus Williamsburg</Link> (7 courts, 4 indoor and 3 on the rooftop)</p>
             <p><strong>Best Manhattan:</strong> <Link href="/courts/mink-padel" className="text-padel-green hover:underline">Mink Padel</Link> (historic Harlem courtyard)</p>
             <p><strong>Best Value:</strong> <Link href="/courts/golden-point-padel" className="text-padel-green hover:underline">Golden Point Padel</Link> (from $25/hr)</p>
             <p><strong>Best Wellness:</strong> <Link href="/courts/reserve-padel-hudson-yards" className="text-padel-green hover:underline">Reserve Padel</Link> (cold plunges, yoga, pilates)</p>
@@ -453,13 +453,13 @@ export default function NYCBestClubsPage() {
         </div>
 
         <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-6 mt-12">
-          <h3 className="text-2xl font-bold text-stone-900 mb-4">Coming Soon to NYC</h3>
+          <h3 className="text-2xl font-bold text-stone-900 mb-4">Newly Opened in NYC</h3>
           <div className="space-y-4">
             <div className="flex items-start gap-3">
-              <span className="px-2 py-1 bg-amber-200 text-amber-800 rounded text-xs font-semibold whitespace-nowrap">COMING SOON</span>
+              <span className="px-2 py-1 bg-amber-200 text-amber-800 rounded text-xs font-semibold whitespace-nowrap">NOW OPEN</span>
               <div>
-                <h4 className="font-bold text-stone-900">Padel Haus Greenpoint</h4>
-                <p className="text-stone-700">5 indoor courts along the Brooklyn waterfront near McCarren Park. Features state-of-the-art courts, spa-like locker rooms, Juice Haus bar, lounge and co-working space. Court rates expected $30-70/hr.</p>
+                <h4 className="font-bold text-stone-900"><Link href="/courts/padel-haus-greenpoint" className="hover:text-padel-green">Padel Haus Greenpoint</Link></h4>
+                <p className="text-stone-700">12 Berry St, Brooklyn. 5 indoor courts along the Brooklyn waterfront near McCarren Park, with spa-like locker rooms, the Juice Haus bar, and a lounge and co-working space. It is too new to have Google reviews, so we have not ranked it yet. Booking requires a Padel Haus login and public court rates are not published (checked October 2026), so ask the club for current prices.</p>
               </div>
             </div>
           </div>

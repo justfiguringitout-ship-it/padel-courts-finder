@@ -9,7 +9,7 @@ export const cityIntros: Record<string, string> = {
   "CA-Los Angeles":
     "Los Angeles offers year-round outdoor padel across 5 clubs from Santa Monica to Century City. The LA Padel Club's 7-court facility on Sunset Blvd is the largest in the city, while rooftop courts in Century City offer a uniquely LA experience. The Southern California climate makes LA one of the best cities in the US for outdoor padel.",
   "TX-Houston":
-    "Houston is Texas's padel capital with 10 clubs and 30+ courts. TEMPO Padel & Pickleball Club anchors the scene with a perfect 5.0 rating, while Punto Azul's 8-court academy draws serious players. Houston's mix of indoor and outdoor facilities means year-round play despite the Texas heat.",
+    "Houston has 8 open padel clubs with 25 courts, more clubs than any other city in Texas. TEMPO Padel & Pickleball Club anchors the scene with a perfect 5.0 rating, and TEMPO and Cube Padel Houston have the most courts in the city with 5 each. Houston's mix of indoor and outdoor facilities means year-round play despite the Texas heat.",
   "TX-Austin":
     "Austin punches above its weight in padel, with 7 clubs making it one of America's most padel-dense cities per capita. Padel 39's outdoor courts are a local favorite, while Padel Club Austin's 9-court facility is the city's largest. The Hill Country vibe extends to the padel scene — expect friendly communities and post-match socializing.",
 };
@@ -96,7 +96,7 @@ export const stateMetroSections: Record<string, StateMetroSection> = {
     name: "New York City",
     shortName: "NYC",
     intro:
-      "Every padel club inside the five boroughs, grouped by area. Manhattan and Brooklyn have the densest clusters; Queens has one club so far. All NYC clubs are indoor, so they run year-round.",
+      "Every padel club inside the five boroughs, grouped by area. Manhattan and Brooklyn have the densest clusters; Queens has one club so far. Most NYC courts are indoors, so play runs year-round.",
     groups: [
       { label: "Manhattan", cities: ["New York"] },
       { label: "Brooklyn", cities: ["Brooklyn"] },

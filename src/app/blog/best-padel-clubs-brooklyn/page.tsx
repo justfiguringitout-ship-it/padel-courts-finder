@@ -4,13 +4,13 @@ import { MapPin, Star, Clock, Users, GraduationCap } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Brooklyn (2026) | Complete Borough Guide',
-  description: 'Discover Brooklyn\'s 4 padel clubs in 2026. Golden Point Padel, Padel Haus Dumbo & Williamsburg, plus what\'s opening next.',
+  description: 'Discover Brooklyn\'s 4 open padel clubs in 2026: Golden Point Padel and Padel Haus in Dumbo, Williamsburg and Greenpoint, with 20 courts between them.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-brooklyn',
   },
   openGraph: {
     title: 'Best Padel Clubs in Brooklyn (2026) | Complete Borough Guide',
-    description: 'Discover Brooklyn\'s 4 padel clubs in 2026. Golden Point Padel, Padel Haus Dumbo & Williamsburg, plus what\'s opening next.',
+    description: 'Discover Brooklyn\'s 4 open padel clubs in 2026: Golden Point Padel and Padel Haus in Dumbo, Williamsburg and Greenpoint, with 20 courts between them.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-brooklyn',
     type: 'article',
   },
@@ -63,38 +63,37 @@ const clubs: Club[] = [
   {
     name: 'Padel Haus - Williamsburg',
     slug: 'padel-haus-williamsburg',
-    location: 'Grand St, Brooklyn, NY 11249 (Williamsburg)',
-    courts: '5 indoor courts',
+    location: '307 Kent Ave, Brooklyn, NY 11249 (Williamsburg)',
+    courts: '7 courts (4 indoor, 3 rooftop)',
     surface: 'sand-filled artificial turf',
     rating: 4.2,
     reviewCount: 82,
     pricing: 'Court rentals ~$40-70/hr off-peak to $250+/hr peak; memberships from $155/month single-club',
-    amenities: ['Indoor courts', 'Williamsburg vibe', 'Bar', 'Events', 'Leagues'],
-    prose: 'Padel Haus’s Williamsburg outpost brings the chain to Brooklyn’s trendiest neighborhood with 5 indoor courts on sand-filled artificial turf. The social side is the draw here: a vibrant bar scene, regular events, and leagues keep the calendar full beyond open court time. It holds a 4.2 Google rating across 82 reviews, the second-largest review base in the borough.',
+    amenities: ['Indoor courts', 'Rooftop courts', 'Bar', 'Events', 'Leagues'],
+    prose: 'Padel Haus Williamsburg is the original Padel Haus club, at 307 Kent Avenue on the Brooklyn waterfront. It has 7 courts on sand-filled artificial turf, 4 indoors and 3 on the rooftop, which makes it the largest club in the borough and the only Brooklyn club in our directory with outdoor courts. The social side is the draw here: a vibrant bar scene, regular events, and leagues keep the calendar full beyond open court time. It holds a 4.2 Google rating across 82 reviews, the second-largest review base in the borough.',
+    lessons: true,
+    rentals: true,
+  },
+  {
+    name: 'Padel Haus Greenpoint',
+    slug: 'padel-haus-greenpoint',
+    location: '12 Berry St, Brooklyn, NY 11249 (Greenpoint)',
+    courts: '5 indoor courts',
+    surface: 'sand-filled synthetic turf',
+    pricing: 'Booking requires a Padel Haus login; public court rates are not published (checked October 2026). Memberships available.',
+    amenities: ['Pro shop', 'Locker rooms with showers', 'Lounge/co-working space'],
+    prose: 'The newest Padel Haus club in Brooklyn is now open along the waterfront near McCarren Park. It has 5 indoor courts on sand-filled synthetic turf, spa-like locker rooms with showers, a lounge and co-working space, and the Juice Haus bar. It is too new to have Google reviews yet, which is why it sits last on this list.',
     lessons: true,
     rentals: true,
   },
 ];
-
-const comingSoon: Club = {
-  name: 'Padel Haus Greenpoint',
-  slug: 'padel-haus-greenpoint',
-  location: '12 Berry Street, Brooklyn, NY 11249',
-  courts: '5 indoor courts',
-  surface: 'sand-filled synthetic turf',
-  pricing: '$30–$70 per court/hour; memberships available',
-  amenities: ['Pro shop', 'Locker rooms with showers', 'Lounge/co-working space'],
-  prose: 'Padel Haus is doubling down on North Brooklyn with a premium indoor club along the waterfront near McCarren Park. The plan calls for 5 state-of-the-art courts on sand-filled synthetic turf, spa-like locker rooms with showers, a lounge/co-working space, and the Juice Haus bar — a community-focused space to play, compete, and connect in Greenpoint.',
-  lessons: true,
-  rentals: true,
-};
 
 export default function BrooklynBestClubsPage() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in Brooklyn (2026)",
-    "description": "Discover Brooklyn's 4 padel clubs in 2026. Golden Point Padel, Padel Haus Dumbo & Williamsburg, plus what's opening next.",
+    "description": "Discover Brooklyn's 4 open padel clubs in 2026: Golden Point Padel and Padel Haus in Dumbo, Williamsburg and Greenpoint, with 20 courts between them.",
     "datePublished": "2026-07-05T00:00:00Z",
     "dateModified": "2026-10-08T00:00:00Z",
     "author": {
@@ -119,7 +118,7 @@ export default function BrooklynBestClubsPage() {
   const itemListData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": [...clubs, comingSoon].map((club, index) => ({
+    "itemListElement": clubs.map((club, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "item": {
@@ -139,7 +138,7 @@ export default function BrooklynBestClubsPage() {
         "name": "How many padel clubs are in Brooklyn?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Brooklyn has 4 padel clubs in our directory: 3 currently open (Golden Point Padel, Padel Haus Dumbo, and Padel Haus Williamsburg) with 13 indoor courts between them, plus Padel Haus Greenpoint opening soon with 5 more courts. Every Brooklyn club plays indoors. Padel& Greenpoint closed on May 31, 2026."
+          "text": "Brooklyn has 4 padel clubs in our directory, and all of them are open: Golden Point Padel, Padel Haus Dumbo, Padel Haus Williamsburg and Padel Haus Greenpoint. They have 20 courts between them. Of those, 17 are indoors and 3 are on the rooftop at Padel Haus Williamsburg."
         }
       },
       {
@@ -147,7 +146,7 @@ export default function BrooklynBestClubsPage() {
         "name": "Do I need a membership to play padel in Brooklyn?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Mostly no. Both Padel Haus locations offer pay-per-play hourly court bookings, with optional memberships that add discounts and perks. The exception is Golden Point Padel, which operates as a private membership club. Check each listing for current details."
+          "text": "Mostly no. Padel Haus Dumbo and Padel Haus Williamsburg offer pay-per-play hourly court bookings, with optional memberships that add discounts and perks. Padel Haus Greenpoint asks you to log in to a Padel Haus account to book and does not publish public court rates, so check with the club. The exception is Golden Point Padel, which operates as a private membership club. Check each listing for current details."
         }
       },
       {
@@ -155,7 +154,7 @@ export default function BrooklynBestClubsPage() {
         "name": "Where can beginners learn padel in Brooklyn?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "All three open Brooklyn clubs offer lessons: Golden Point Padel, Padel Haus Dumbo, and Padel Haus Williamsburg. All three also rent equipment, so you can try the sport before buying a racket."
+          "text": "All four Brooklyn clubs offer lessons: Golden Point Padel, Padel Haus Dumbo, Padel Haus Williamsburg and Padel Haus Greenpoint. All four also rent equipment, so you can try the sport before buying a racket."
         }
       }
     ]
@@ -208,20 +207,20 @@ export default function BrooklynBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-padel-green">3</div>
+              <div className="text-3xl font-bold text-padel-green">4</div>
               <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">13</div>
+              <div className="text-3xl font-bold text-padel-green">20</div>
               <div className="text-sm text-stone-600">Courts Open Now</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">100%</div>
+              <div className="text-3xl font-bold text-padel-green">17</div>
               <div className="text-sm text-stone-600">Indoor Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">+5</div>
-              <div className="text-sm text-stone-600">Courts Coming Soon</div>
+              <div className="text-3xl font-bold text-padel-green">3</div>
+              <div className="text-sm text-stone-600">Rooftop Courts</div>
             </div>
           </div>
         </div>
@@ -233,10 +232,10 @@ export default function BrooklynBestClubsPage() {
             Brooklyn Is New York&apos;s Padel Borough
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Brooklyn&apos;s padel scene runs entirely indoors &mdash; and that&apos;s by design in a city where winter would otherwise kill half the season. Three clubs are open today with 13 courts between them, two of them on the North Brooklyn waterfront in Williamsburg and Dumbo, with <Link href="/courts/golden-point-padel" className="text-padel-green hover:underline">Golden Point Padel</Link> flying the flag down near Coney Island. A fourth club, Padel Haus Greenpoint, is opening soon and will bring the borough to 18 courts.
+            Almost all of Brooklyn&apos;s padel is played indoors, which makes sense in a city where winter would otherwise cut the season in half. Four clubs are open today with 20 courts between them. Three are Padel Haus clubs on the waterfront in Dumbo, Williamsburg and Greenpoint, and <Link href="/courts/golden-point-padel" className="text-padel-green hover:underline">Golden Point Padel</Link> flies the flag down near Coney Island. The only outdoor courts in the borough are the 3 on the Padel Haus Williamsburg rooftop.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            The Padel Haus chain anchors the market with two open locations and a third on the way, while independent Golden Point Padel currently holds the borough&apos;s highest Google rating (4.7, from a small base of 6 reviews). Padel&amp; Greenpoint at 73 West St used to top this list, but it closed on May 31, 2026 when its building was sold, so we have taken it off. Here&apos;s every open club, ordered by rating.
+            The Padel Haus chain anchors the market with three open locations, while independent Golden Point Padel currently holds the borough&apos;s highest Google rating (4.7, from a small base of 6 reviews). Here&apos;s every open club, ordered by Google rating, with Padel Haus Greenpoint last because it is too new to have reviews.
           </p>
         </div>
 
@@ -303,47 +302,9 @@ export default function BrooklynBestClubsPage() {
         </div>
 
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-stone-900 mb-4">Opening Soon in Brooklyn</h2>
-          <div className="border-t-4 border-amber-400 bg-white shadow-lg rounded-xl overflow-hidden">
-            <div className="grain bg-court text-white p-6">
-              <div className="inline-block px-3 py-1 bg-amber-400 text-stone-900 rounded-full text-sm font-bold mb-2">Coming Soon</div>
-              <h3 className="text-3xl font-bold">
-                <Link href={`/courts/${comingSoon.slug}`} className="hover:text-turf transition-colors">
-                  {comingSoon.name}
-                </Link>
-              </h3>
-            </div>
-            <div className="p-6">
-              <div className="grid md:grid-cols-2 gap-4 mb-6">
-                <div className="flex items-start gap-2 text-stone-700">
-                  <MapPin className="w-5 h-5 text-padel-green flex-shrink-0 mt-0.5" />
-                  <span>{comingSoon.location}</span>
-                </div>
-                <div className="flex items-center gap-2 text-stone-700">
-                  <Users className="w-5 h-5 text-padel-green flex-shrink-0" />
-                  <span>{comingSoon.courts} &middot; {comingSoon.surface}</span>
-                </div>
-              </div>
-              <p className="text-stone-700 text-lg leading-relaxed mb-6">{comingSoon.prose}</p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {comingSoon.amenities.map((amenity, index) => (
-                  <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
-                    {amenity}
-                  </span>
-                ))}
-              </div>
-              <div className="bg-slate-50 border rounded-lg p-4">
-                <h4 className="font-bold text-stone-900 mb-1">Announced pricing:</h4>
-                <p className="text-stone-700">{comingSoon.pricing}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-16">
           <h2 className="text-3xl font-bold text-stone-900 mb-4">Booking + What to Expect</h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Book directly through each club&apos;s website or booking app &mdash; walk-ins are a gamble at popular hours. Weekday evenings and weekend mornings fill up first, so reserve a few days ahead if that&apos;s your window; off-peak daytime slots are both easier to grab and cheaper at clubs with peak/off-peak pricing. All three open Brooklyn clubs rent rackets and balls, so you don&apos;t need gear for your first session.
+            Book directly through each club&apos;s website or booking app, since walk-ins are a gamble at popular hours. Weekday evenings and weekend mornings fill up first, so reserve a few days ahead if that&apos;s your window; off-peak daytime slots are both easier to grab and cheaper at clubs with peak/off-peak pricing. All four Brooklyn clubs rent rackets and balls, so you don&apos;t need gear for your first session.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
             Pricing structures vary from club to club, so confirm current rates before you book. You can compare every Brooklyn club side by side in our <Link href="/search" className="text-padel-green hover:underline">court search</Link>, or browse the full <Link href="/new-york" className="text-padel-green hover:underline">New York padel directory</Link> for courts across the rest of the city and state.
@@ -356,19 +317,19 @@ export default function BrooklynBestClubsPage() {
             <div className="bg-white border rounded-xl p-6">
               <h3 className="text-xl font-bold text-stone-900 mb-2">How many padel clubs are in Brooklyn?</h3>
               <p className="text-stone-700 leading-relaxed">
-                Brooklyn has 4 padel clubs in our directory: 3 currently open (Golden Point Padel, Padel Haus Dumbo, and Padel Haus Williamsburg) with 13 indoor courts between them, plus Padel Haus Greenpoint opening soon with 5 more. Every Brooklyn club plays indoors. Padel&amp; Greenpoint closed on May 31, 2026.
+                Brooklyn has 4 padel clubs in our directory, and all of them are open: Golden Point Padel, Padel Haus Dumbo, Padel Haus Williamsburg and Padel Haus Greenpoint. They have 20 courts between them. Of those, 17 are indoors and 3 are on the rooftop at Padel Haus Williamsburg.
               </p>
             </div>
             <div className="bg-white border rounded-xl p-6">
               <h3 className="text-xl font-bold text-stone-900 mb-2">Do I need a membership to play padel in Brooklyn?</h3>
               <p className="text-stone-700 leading-relaxed">
-                Mostly no. Both Padel Haus locations offer pay-per-play hourly bookings, with optional memberships adding discounts and perks. The exception is Golden Point Padel, which operates as a private membership club. Check each club&apos;s listing for current details.
+                Mostly no. Padel Haus Dumbo and Padel Haus Williamsburg offer pay-per-play hourly bookings, with optional memberships adding discounts and perks. Padel Haus Greenpoint asks you to log in to a Padel Haus account to book and does not publish public court rates, so check with the club. The exception is Golden Point Padel, which operates as a private membership club. Check each club&apos;s listing for current details.
               </p>
             </div>
             <div className="bg-white border rounded-xl p-6">
               <h3 className="text-xl font-bold text-stone-900 mb-2">Where can beginners learn padel in Brooklyn?</h3>
               <p className="text-stone-700 leading-relaxed">
-                All three open clubs offer lessons: Golden Point Padel, Padel Haus Dumbo, and Padel Haus Williamsburg. Each also rents equipment, so you can try the sport before committing to gear &mdash; and when you&apos;re ready to buy, see our guide to the <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">best beginner padel rackets</Link>.
+                All four clubs offer lessons: Golden Point Padel, Padel Haus Dumbo, Padel Haus Williamsburg and Padel Haus Greenpoint. Each also rents equipment, so you can try the sport before committing to gear. When you&apos;re ready to buy, see our guide to the <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">best beginner padel rackets</Link>.
               </p>
             </div>
           </div>
