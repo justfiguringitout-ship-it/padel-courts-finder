@@ -43,8 +43,8 @@ export function RacketPlate({ racket, uidPrefix }: { racket: GearRacket; uidPref
 function PlateRow({ label, value }: { label: string; value?: string }) {
   return (
     <div className="flex items-baseline justify-between gap-2 border-b border-dashed border-stone-200 pb-1 last:border-b-0">
-      <dt className="font-mono text-[10px] uppercase tracking-wider text-stone-400">{label}</dt>
-      <dd className={`text-right font-medium ${value ? 'text-stone-700' : 'text-stone-400 italic font-normal'}`}>{value ?? NOT_STATED}</dd>
+      <dt className="font-mono text-[10px] uppercase tracking-wider text-stone-500">{label}</dt>
+      <dd className={`text-right font-medium ${value ? 'text-stone-700' : 'text-stone-500 italic font-normal'}`}>{value ?? NOT_STATED}</dd>
     </div>
   );
 }

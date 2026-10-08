@@ -16,7 +16,7 @@ import type { GearRacket, GearShoe } from './types';
  */
 
 function Missing() {
-  return <span className="italic text-stone-400">{NOT_STATED}</span>;
+  return <span className="italic text-stone-500">{NOT_STATED}</span>;
 }
 
 function AmazonButton({ href, productName, compact }: { href: string; productName: string; compact?: boolean }) {
@@ -28,7 +28,7 @@ function AmazonButton({ href, productName, compact }: { href: string; productNam
       target="_blank"
       rel="noopener noreferrer"
       className={`pcf-compare-cta inline-flex items-center justify-center whitespace-nowrap rounded-md bg-padel-green font-semibold text-white transition-colors hover:bg-padel-green-dark ${
-        compact ? 'px-2.5 py-1 text-[11px]' : 'px-3 py-1.5 text-xs'
+        compact ? 'min-h-10 px-3 py-2 text-xs' : 'min-h-10 px-3 py-2 text-xs'
       }`}
     >
       Check price <span aria-hidden="true" className="ml-1">&rarr;</span>
@@ -67,7 +67,7 @@ export function RacketCompare({ rackets, uidPrefix, caption, showLineup = true, 
                 className="pcf-gear-lineup-card group flex h-full flex-col rounded-xl border border-stone-200 bg-white p-3 transition-shadow hover:border-padel-green/50 hover:shadow-md"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[11px] font-semibold text-stone-400">#{r.rank}</span>
+                  <span className="font-mono text-[11px] font-semibold text-stone-500">#{r.rank}</span>
                   <span className="text-xs font-bold tabular-nums text-foreground">{r.price}</span>
                 </div>
                 <div className="pcf-gear-lineup-art relative my-2 flex justify-center">
@@ -83,7 +83,7 @@ export function RacketCompare({ rackets, uidPrefix, caption, showLineup = true, 
                 <dl className="mt-2 space-y-0.5 text-[11px] leading-snug text-stone-500">
                   <div className="flex justify-between gap-2"><dt className="sr-only">Shape</dt><dd>{r.shapeLabel}</dd></div>
                   <div className="flex justify-between gap-2"><dt>Weight</dt><dd className="text-right font-medium text-stone-700">{r.weight}</dd></div>
-                  <div className="flex justify-between gap-2"><dt>Balance</dt><dd className={`text-right ${r.balance ? 'font-medium text-stone-700' : 'italic text-stone-400'}`}>{r.balance ?? NOT_STATED}</dd></div>
+                  <div className="flex justify-between gap-2"><dt>Balance</dt><dd className={`text-right ${r.balance ? 'font-medium text-stone-700' : 'italic text-stone-500'}`}>{r.balance ?? NOT_STATED}</dd></div>
                   <div><dt className="sr-only">Core and face</dt><dd className="text-stone-600">{r.core} / {r.face}</dd></div>
                   {r.level && <div className="flex justify-between gap-2"><dt>Level</dt><dd className="text-right font-medium text-stone-700">{r.level}</dd></div>}
                 </dl>
@@ -94,7 +94,7 @@ export function RacketCompare({ rackets, uidPrefix, caption, showLineup = true, 
         </ol>
       )}
 
-      <p className="mb-2 text-xs text-stone-400 sm:hidden" aria-hidden="true">Swipe the table sideways for every spec &rarr;</p>
+      <p className="mb-2 text-xs text-stone-500" aria-hidden="true">Scroll the table sideways for every spec &rarr;</p>
       <div
         className="pcf-compare relative overflow-x-auto rounded-xl border border-stone-200 bg-white"
         role="region"
@@ -132,7 +132,7 @@ export function RacketCompare({ rackets, uidPrefix, caption, showLineup = true, 
                     />
                     <div className="min-w-0">
                       <a href={`#${r.id}`} className="block text-[13px] font-semibold leading-snug text-foreground hover:text-padel-green">
-                        <span className="mr-1 font-mono text-[11px] text-stone-400">#{r.rank}</span>
+                        <span className="mr-1 font-mono text-[11px] text-stone-500">#{r.rank}</span>
                         {r.name}
                       </a>
                       <div className="mt-1.5">
@@ -169,7 +169,7 @@ export interface ShoeCompareProps {
 export function ShoeCompare({ shoes, uidPrefix, caption }: ShoeCompareProps) {
   return (
     <div className="pcf-compare-wrap lg:-mx-32">
-      <p className="mb-2 text-xs text-stone-400 sm:hidden" aria-hidden="true">Swipe the table sideways for every spec &rarr;</p>
+      <p className="mb-2 text-xs text-stone-500" aria-hidden="true">Scroll the table sideways for every spec &rarr;</p>
       <div className="pcf-compare relative overflow-x-auto rounded-xl border border-stone-200 bg-white" role="region" aria-label={caption} tabIndex={0}>
         <table className="w-full min-w-[720px] border-collapse text-sm">
           <caption className="sr-only">{caption}</caption>
@@ -195,7 +195,7 @@ export function ShoeCompare({ shoes, uidPrefix, caption }: ShoeCompareProps) {
                 <td className={TD}>
                   <div className="flex items-center gap-2">
                     <ShoeSole uid={`${uidPrefix}-row-${s.id}`} pattern={s.pattern} className="h-10 w-auto shrink-0" />
-                    <span className={s.pattern === 'unknown' ? 'italic text-stone-400' : ''}>{s.patternLabel}</span>
+                    <span className={s.pattern === 'unknown' ? 'italic text-stone-500' : ''}>{s.patternLabel}</span>
                   </div>
                 </td>
                 <td className={`${TD} text-[13px] leading-snug`}>{s.bestFor}</td>
@@ -215,8 +215,8 @@ export function SolePlate({ shoe, uidPrefix }: { shoe: GearShoe; uidPrefix: stri
     <figure className="pcf-gear-plate mb-5 flex items-center gap-4 rounded-xl border border-stone-200 px-3 py-3 sm:px-4">
       <ShoeSole uid={`${uidPrefix}-plate-${shoe.id}`} pattern={shoe.pattern} orientation="horizontal" className="h-auto w-28 shrink-0 sm:w-36" />
       <figcaption className="min-w-0 flex-1 text-xs">
-        <span className="block font-mono text-[10px] uppercase tracking-wider text-stone-400">Outsole</span>
-        <span className={`mt-0.5 block text-sm font-medium ${shoe.pattern === 'unknown' ? 'italic text-stone-400' : 'text-stone-700'}`}>{shoe.patternLabel}</span>
+        <span className="block font-mono text-[10px] uppercase tracking-wider text-stone-500">Outsole</span>
+        <span className={`mt-0.5 block text-sm font-medium ${shoe.pattern === 'unknown' ? 'italic text-stone-500' : 'text-stone-700'}`}>{shoe.patternLabel}</span>
         <span className="sr-only">{`Diagram of the ${shoe.name} outsole.`}</span>
       </figcaption>
     </figure>

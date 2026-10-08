@@ -37,6 +37,7 @@ const nextConfig: NextConfig = {
       { source: '/courts/mouratoglou-academy-zephyrhills', destination: '/courts/svb-tennis-wellness-center', permanent: true }, // listed under the venue's own name, 2026-09-29
       { source: '/courts/padel-39', destination: '/courts/padel39-north-austin', permanent: true }, // renamed 2026-09-29
       { source: '/courts/the-king-of-padel', destination: '/courts/the-king-of-padel-san-antonio', permanent: true }, // duplicate removed 2026-10-08
+      { source: '/courts/padel-greenpoint', destination: '/new-york/brooklyn', permanent: true }, // closed May 31 2026 (building sold)
       { source: '/courts/austin-padel-center-pop-up', destination: '/courts/austin-padel-center', permanent: true }, // permanent club opened 2026-08
       { source: '/courts/woodcourt-padel-and-pickleball', destination: '/courts/wepadel', permanent: true }, // rebranded, 2026-09-29
       { source: '/courts/net-racquet-club', destination: '/texas/farmers-branch', permanent: true }, // club closed, 2026-09-29

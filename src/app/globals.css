@@ -633,3 +633,8 @@
   .cd-key-mesh { border-top: 2px dashed oklch(1 0 0 / 60%); }
   .cd-key-net { border-color: #4ADE80; }
 }
+
+/* Anchor jumps land below the sticky header (gear "Read review" links, FAQ links). */
+html { scroll-padding-top: 5.5rem; }
+/* Sticky first column in compare tables: edge shadow so scrolled cells read as tucked under it. */
+.pcf-compare .pcf-compare-sticky { box-shadow: 6px 0 8px -6px rgb(0 0 0 / 0.18); }

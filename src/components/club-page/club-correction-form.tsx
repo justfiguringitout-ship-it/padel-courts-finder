@@ -65,6 +65,8 @@ export function ClubCorrectionForm({ slug, name }: { slug: string; name: string 
           name="message"
           required
           minLength={3}
+          pattern=".*\S.*\S.*\S.*"
+          title="Tell us what changed in a few words."
           rows={3}
           placeholder="New prices, different hours, two more courts, a new booking link..."
           className="club-input min-h-[96px] resize-y"

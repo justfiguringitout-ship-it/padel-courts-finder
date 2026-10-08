@@ -319,7 +319,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
                 {isOpenClub && (
                   <span className="club-chip club-chip-open">
                     <span className="club-chip-dot" aria-hidden="true" />
-                    Open
+                    Open for play
                   </span>
                 )}
                 {comingSoon && (
