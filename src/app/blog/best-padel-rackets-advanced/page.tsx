@@ -225,7 +225,7 @@ export default function AdvancedRacketsPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <section className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-5">Advanced Padel Rackets Compared</h2>
-              <p className="text-sm text-stone-500 mb-5 -mt-2">Every racket is drawn to the same scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
+              <p className="text-sm text-stone-500 mb-5 -mt-2">Each racket is drawn as a simple outline of its shape, not to scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
               <RacketCompare rackets={RACKETS} uidPrefix="adv" caption="Advanced padel rackets compared" />
             </section>
 

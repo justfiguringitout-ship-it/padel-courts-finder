@@ -9,10 +9,10 @@ import { cn } from "@/lib/utils";
 
 /** Price block on a club card: "$20 / per player / hour". Renders a quiet
  *  "Price not published" when we could not read a rate with confidence. */
-export function PlayerPriceTag({ price, comingSoon }: { price: PlayerPrice | null; comingSoon?: boolean }) {
+export function PlayerPriceTag({ price, comingSoon, hasPriceText }: { price: PlayerPrice | null; comingSoon?: boolean; hasPriceText?: boolean }) {
   if (!price) {
     if (comingSoon) return <div />;
-    return <div className="pcf-pp-unknown text-xs text-muted-foreground">Price not published</div>;
+    return <div className="pcf-pp-unknown text-xs text-muted-foreground">{hasPriceText ? "See the club for prices" : "Price not published"}</div>;
   }
   const courtNote =
     price.source === "court" && price.courtHourly

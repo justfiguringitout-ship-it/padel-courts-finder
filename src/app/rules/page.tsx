@@ -378,8 +378,10 @@ export default function RulesPage() {
           </Prose>
           <div className="mt-6">
             <Callout title="Mistakes in the serving order">
-              If someone serves out of turn or from the wrong side, fix it as soon as you notice. The points already played
-              stand, and a first-serve fault already made still counts.
+              If someone serves from the wrong side, fix it as soon as you notice. The points already played stand, and a
+              first-serve fault already made still counts. If the wrong player serves, the right player takes over as soon
+              as you notice, the points already played stand, and a single fault made before you noticed is wiped out. If
+              the game has already finished, keep the new serving order until the end of the set.
             </Callout>
           </div>
         </Section>
@@ -434,7 +436,7 @@ export default function RulesPage() {
                 "Your shot hits your own mesh or your own floor.",
                 "You hit the ball twice, or both you and your partner hit it.",
                 "After your shot, the ball touches you or your partner.",
-                "The other team's shot hits your body or clothes before it bounces. Only your racket may touch it.",
+                "The other team's shot hits your body or clothes. Only your racket may touch the ball.",
                 "You throw your racket at the ball, drop it, or break its wrist cord.",
                 "You jump over the net during a point.",
                 "You serve two faults in a row.",

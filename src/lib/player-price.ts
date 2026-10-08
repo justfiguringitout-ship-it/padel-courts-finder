@@ -61,7 +61,7 @@ export interface PlayerPrice {
 const OTHER_SPORT = /pickle\s?ball|tennis|soccer|squash|rink|basketball|volleyball|badminton|golf|bowling/i;
 const PADEL_WORD = /padel|paddle/i;
 const CLAUSE_SKIP =
-  /unknown|not (?:publicly )?listed|\btbd\b|\bn\/a\b|coming soon|members?[- ]only|\b(?:est\.?|estimated?|estimates?|typical(?:ly)?|roughly|per sources|based on other|approx\.?|directory listings|varies by source)(?![a-z])|~\s*\$/i;
+  /unknown|not (?:publicly )?listed|\btbd\b|\bn\/a\b|coming soon|members?[- ]only|\b(?:est\.?|estimated?|estimates?|typical(?:ly)?|roughly|per sources|based on other|approx(?:\.|imately)?|directory listings|varies by source|example|members?\s*(?:&|and)\s*guests)(?![a-z])|~\s*\$/i;
 const EXCLUDE_NEAR =
   /lesson|clinic|coach|private|class|camp|academy|open play|drop[- ]?in|league|event|corporate|party|racket|racquet|\bballs?\b|example|guest fee|day pass|social|americano|initiation|membership|program/i;
 const PRICE_RE = /~?\$(\d{1,3}(?:\.\d\d)?)(\+)?(?:\s*(?:[-–]|to)\s*\$?(\d{1,3}(?:\.\d\d)?)|\/\$?(\d{2,3})(?=\s+per\b))?\+?/gi;
@@ -375,6 +375,6 @@ export function playerPriceSummaryLine(summary: PlayerPriceSummary, place: strin
   const range = summary.low === summary.high ? `$${summary.low}` : `$${summary.low} to $${summary.high}`;
   const lead = summary.isTypical ? `Typical court time in ${place}` : `Court time in ${place}`;
   const from =
-    summary.count === 1 ? "from the 1 club that publishes prices" : `from ${summary.count} clubs that publish prices`;
+    summary.count === 1 ? "based on the 1 club with a price we could confirm" : `based on ${summary.count} clubs with prices we could confirm`;
   return `${lead}: ${range} per player per hour, ${from}.`;
 }

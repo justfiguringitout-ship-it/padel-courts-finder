@@ -196,7 +196,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
             ? "under a roof"
             : "open air";
   const priceFact = price
-    ? { value: price.perCourtHour, sub: "per court hour", sub2: `${price.perPlayer} per player` }
+    ? { value: price.perCourtHour, sub: price.basisNote ? "per court hour, peak" : "per court hour", sub2: `${price.perPlayer} per player` }
     : court.pricingText
       ? { value: "See prices", sub: court.membersOnly ? "membership details below" : "details below" }
       : comingSoon
@@ -515,7 +515,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {comingSoon
                         ? "Not open yet. Opening hours will appear here once the club publishes them."
-                        : "The club does not publish its hours. Call or check the website before you go."}
+                        : "We don't have this club's hours yet. Call or check its website before you go."}
                     </p>
                   </>
                 )}
@@ -537,6 +537,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
                     <p className="text-sm text-muted-foreground">
                       About <span className="font-mono text-foreground">{price.perPlayer}</span> each when four players split it.
                     </p>
+                    {price.basisNote && <p className="text-xs text-muted-foreground">{price.basisNote}</p>}
                   </div>
                 )}
                 {pricingItems.length > 0 ? (

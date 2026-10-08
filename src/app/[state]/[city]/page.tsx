@@ -387,7 +387,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 </CardHeader>
                 <CardContent className="mt-auto space-y-3">
                   <div className="flex items-center justify-between">
-                    <PlayerPriceTag price={getClubPlayerPrice(court)} comingSoon={court.status === "coming_soon"} />
+                    <PlayerPriceTag price={getClubPlayerPrice(court)} comingSoon={court.status === "coming_soon"} hasPriceText={/\$\d/.test(court.pricingText ?? "")} />
                     <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
                       View Details
                     </Button>

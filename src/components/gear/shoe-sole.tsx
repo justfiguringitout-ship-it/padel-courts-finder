@@ -49,7 +49,6 @@ function studs() {
 
 const HERRING = zigzagRows(8, 236, 6.5, 4.2, 9);
 const HYBRID_FORE = zigzagRows(8, 112, 6.5, 4.2, 9);
-const HYBRID_HEEL = zigzagRows(160, 236, 6.5, 4.2, 9);
 const LUGS = lugs();
 const STUDS = studs();
 
@@ -80,7 +79,6 @@ export function ShoeSole({ uid, pattern, orientation = 'vertical', label, classN
         {pattern === 'hybrid' && (
           <>
             <path d={HYBRID_FORE} strokeWidth="1.5" strokeOpacity="0.75" />
-            <path d={HYBRID_HEEL} strokeWidth="1.5" strokeOpacity="0.75" />
             {/* flatter pivot zone at the ball of the foot */}
             <circle cx="50" cy="62" r="19" fill={rubber} stroke="none" />
             <circle cx="50" cy="62" r="17" strokeWidth="1.2" strokeOpacity="0.8" />

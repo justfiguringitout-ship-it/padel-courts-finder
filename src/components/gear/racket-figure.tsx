@@ -136,7 +136,7 @@ export function RacketFigure({
           {kind !== 'fiberglass' && (
             <path d={sil} transform={scaleAbout(0.885, 60, 64)} fill={`url(#${id}-weave)`} opacity={kind === 'carbon' ? 0.55 : 0.3} />
           )}
-          {showSweetSpot && (
+          {(showSweetSpot && shape !== 'hybrid') && (
             <ellipse cx="60" cy={spot.cy} rx={spot.rx} ry={spot.ry} fill={`url(#${id}-spot)`} />
           )}
           {/* glossy sweep */}

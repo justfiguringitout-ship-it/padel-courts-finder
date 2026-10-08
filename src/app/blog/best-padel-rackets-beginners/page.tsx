@@ -277,7 +277,7 @@ export default function BeginnerRacketsPage() {
             {/* Compare view: to-scale line-up + spec table */}
             <section className="mt-10" aria-labelledby="compare-beg">
               <h2 id="compare-beg" className="text-2xl font-bold text-foreground mb-2">All 5 side by side</h2>
-              <p className="text-sm text-stone-500 mb-5">Every racket is drawn to the same scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
+              <p className="text-sm text-stone-500 mb-5">Each racket is drawn as a simple outline of its shape, not to scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
               <RacketCompare rackets={RACKETS} uidPrefix="beg" caption="Beginner padel rackets compared" />
             </section>
 

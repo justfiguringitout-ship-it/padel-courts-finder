@@ -319,7 +319,7 @@ export default function HowToPlayPage() {
               <>
                 The point ends when someone misses: the ball bounces twice, goes into the net, hits the other team&apos;s walls
                 before their floor, or hits a player. A ball that bounces in your opponents&apos; half and then flies out of the
-                court wins you the point, unless the court is set up for playing outside.
+                court wins you the point, although on courts with open side exits your opponents may run out and play it back.
               </>,
             ]}
           />

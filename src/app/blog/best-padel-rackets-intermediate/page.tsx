@@ -27,9 +27,9 @@ export const metadata: Metadata = {
 const RACKETS: GearRacket[] = [
   { id: "nox-ml10-pro-cup", rank: 1, name: "NOX ML10 Pro Cup Rough Surface", productName: "NOX ML10 Pro Cup", price: "$169.99", href: "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Spin-focused players upgrading from beginner", balance: "Low", level: "Intermediate" },
   { id: "wilson-blade-elite", rank: 2, name: "Wilson Blade Elite V2", productName: "Wilson Blade Elite V2", price: "$189.00", href: "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20", brand: "wilson", shape: "teardrop", shapeLabel: "Teardrop", weight: "360g", core: "Soft EVA", face: "Carbon/FG Hybrid Textured", bestFor: "All-court players who want balance", level: "Intermediate" },
-  { id: "nox-at10-attack", rank: 3, name: "NOX AT10 Genius Attack 12K", productName: "NOX AT10 Genius Attack", price: "$229.99", href: "https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20", brand: "nox", shape: "diamond", shapeLabel: "Diamond", weight: "360–370g", core: "MLD Black EVA", face: "12K Carbon Luxury", bestFor: "Aggressive players with clean technique", balance: "Head-heavy", level: "Intermediate" },
-  { id: "bullpadel-neuron", rank: 4, name: "Bullpadel Neuron 2025 (Chingotto)", productName: "Bullpadel Neuron", price: "$236.00", href: "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20", brand: "bullpadel", shape: "hybrid", shapeLabel: "Hybrid (Teardrop-Round)", weight: "370g", core: "EVA", face: "Xtend Carbon 3K", bestFor: "Upper-intermediates transitioning to advanced", level: "Intermediate" },
-  { id: "adidas-metalbone-hrd", rank: 5, name: "Adidas Metalbone HRD+ 3.3", productName: "Adidas Metalbone HRD+", price: "$279.99", href: "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20", brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–360g", core: "High Memory EVA (Hard)", face: "Carbon Aluminized 2:1", bestFor: "Left-side attackers who want firepower", balance: "High", level: "Intermediate" },
+  { id: "nox-at10-attack", rank: 3, name: "NOX AT10 Genius Attack 12K", productName: "NOX AT10 Genius Attack", price: "$229.99", href: "https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20", brand: "nox", shape: "diamond", shapeLabel: "Diamond", weight: "360–370g", core: "MLD Black EVA", face: "12K Carbon Luxury", bestFor: "Aggressive players with clean technique", balance: "Head-heavy", level: "Upper-intermediate" },
+  { id: "bullpadel-neuron", rank: 4, name: "Bullpadel Neuron 2025 (Chingotto)", productName: "Bullpadel Neuron", price: "$236.00", href: "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20", brand: "bullpadel", shape: "hybrid", shapeLabel: "Hybrid (Teardrop-Round)", weight: "370g", core: "EVA", face: "Xtend Carbon 3K", bestFor: "Upper-intermediates transitioning to advanced", level: "Upper-intermediate" },
+  { id: "adidas-metalbone-hrd", rank: 5, name: "Adidas Metalbone HRD+ 3.3", productName: "Adidas Metalbone HRD+", price: "$279.99", href: "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20", brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–360g", core: "High Memory EVA (Hard)", face: "Carbon Aluminized 2:1", bestFor: "Left-side attackers who want firepower", balance: "High", level: "Upper-intermediate" },
 ];
 
 export default function IntermediateRacketsPage() {
@@ -235,7 +235,7 @@ export default function IntermediateRacketsPage() {
             {/* Spec comparison table */}
             <section className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-5">Intermediate Padel Rackets Compared</h2>
-              <p className="text-sm text-stone-500 mb-5 -mt-2">Every racket is drawn to the same scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
+              <p className="text-sm text-stone-500 mb-5 -mt-2">Each racket is drawn as a simple outline of its shape, not to scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
               <RacketCompare rackets={RACKETS} uidPrefix="int" caption="Intermediate padel rackets compared" />
             </section>
 

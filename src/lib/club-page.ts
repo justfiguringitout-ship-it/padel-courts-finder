@@ -185,26 +185,29 @@ export function getTrustStamp(court: AdaptedCourt): TrustStamp | undefined {
 }
 
 export interface PriceSummary {
-  /** "$90" or "$80 to $120" */
+  /** "$90" or "from $80" */
   perCourtHour: string;
-  /** "$23" or "$20 to $30" (court-hour price split four ways, doubles) */
+  /** "$23" or "from $20" (court-hour price split four ways, doubles) */
   perPlayer: string;
+  /** Set when only a peak rate was published. */
+  basisNote?: string;
 }
 
 /**
  * Price facts for the club page, from the same parser the city and state pages
  * use (src/lib/player-price.ts), so a club never shows two different prices.
+ * Shows the lowest standard rate only, never a range built from rounded figures.
  * Undefined when the club does not publish a price we can read with confidence.
  */
 export function getPriceSummary(court: AdaptedCourt): PriceSummary | undefined {
   const p = getClubPlayerPrice(court);
   if (!p) return undefined;
-  const fmt = (a: number, b: number) => (a === b ? `$${a}` : `$${a} to $${b}`);
-  const courtLo = p.source === "court" && p.courtHourly ? p.courtHourly : p.perPlayer * 4;
-  const courtHi = Math.max(courtLo, p.perPlayerHigh * 4);
+  const from = p.isFrom ? "from " : "";
+  const courtHour = p.source === "court" && p.courtHourly ? p.courtHourly : p.perPlayer * 4;
   return {
-    perCourtHour: fmt(courtLo, courtHi),
-    perPlayer: fmt(p.perPlayer, p.perPlayerHigh),
+    perCourtHour: `${from}$${courtHour}`,
+    perPlayer: `${from}$${p.perPlayer}`,
+    basisNote: p.basis === "peak" ? "Peak rate. Off-peak times may cost less." : undefined,
   };
 }
 

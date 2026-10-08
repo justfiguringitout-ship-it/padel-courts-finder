@@ -58,7 +58,7 @@ export function RacketCompare({ rackets, uidPrefix, caption, showLineup = true, 
         <ol
           className="pcf-gear-lineup relative -mx-4 mb-6 flex scroll-px-4 sm:scroll-px-0 snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0 md:grid md:overflow-visible md:pb-0"
           style={{ gridTemplateColumns: `repeat(${rackets.length}, minmax(0, 1fr))` }}
-          aria-label={`${caption}: line-up drawn to the same scale`}
+          aria-label={`${caption}: shape outlines`}
         >
           {rackets.map((r) => (
             <li key={r.id} className="w-[9.5rem] shrink-0 snap-start md:w-auto">
