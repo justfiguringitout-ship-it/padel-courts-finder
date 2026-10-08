@@ -42,12 +42,12 @@ const clubs: Club[] = [
     slug: 'tempo-padel-pickleball-club',
     score: 96,
     location: 'Houston, TX',
-    courts: '5 indoor courts',
+    courts: '5 outdoor courts',
     price: '$$',
     website: 'tempopadel.com',
-    description: 'Houston\'s premier indoor padel and pickleball club with 5 courts, offering lessons, rentals, memberships, and wellness amenities like sauna and cold plunge in a vibrant social atmosphere. A perfect 5.0 Google rating speaks to the quality of the experience.',
+    description: 'A Houston padel and pickleball club with 5 outdoor panoramic courts under LED lighting, offering lessons, rentals, memberships, and wellness amenities like sauna and cold plunge in a vibrant social atmosphere. A perfect 5.0 Google rating speaks to the quality of the experience.',
     highlights: [
-      '5 indoor padel courts',
+      '5 outdoor padel courts with LED lighting',
       'Sauna & cold plunge wellness amenities',
       'Pro shop with premium gear',
       'Free parking on-site',
@@ -368,7 +368,7 @@ export default function HoustonBestClubsPage() {
         <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6 mb-12">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
-            <p><strong>Best Overall:</strong> <Link href="/courts/tempo-padel-pickleball-club" className="text-padel-green hover:underline">TEMPO Padel</Link> (5 indoor courts, sauna & cold plunge)</p>
+            <p><strong>Best Overall:</strong> <Link href="/courts/tempo-padel-pickleball-club" className="text-padel-green hover:underline">TEMPO Padel</Link> (5 outdoor courts, sauna & cold plunge)</p>
             <p><strong>Most Courts:</strong> <Link href="/courts/tempo-padel-pickleball-club" className="text-padel-green hover:underline">TEMPO Padel</Link> and <Link href="/courts/cube-padel-houston" className="text-padel-green hover:underline">Cube Padel</Link> (tied at 5 courts each)</p>
             <p><strong>Best Indoor:</strong> <Link href="/courts/cube-padel-houston" className="text-padel-green hover:underline">Cube Padel</Link> (5 AC courts, national network)</p>
             <p><strong>Best Social Scene:</strong> <Link href="/courts/racket-social-club" className="text-padel-green hover:underline">Racket Social Club</Link> (panoramic courts, 5.0 rating)</p>

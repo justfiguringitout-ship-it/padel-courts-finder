@@ -237,6 +237,9 @@ export default function BrooklynBestClubsPage() {
           <p className="text-stone-700 text-lg leading-relaxed">
             The Padel Haus chain anchors the market with three open locations, while independent Golden Point Padel currently holds the borough&apos;s highest Google rating (4.7, from a small base of 6 reviews). Here&apos;s every open club, ordered by Google rating, with Padel Haus Greenpoint last because it is too new to have reviews.
           </p>
+          <p className="text-sm text-stone-500 mt-4">
+            Padel&amp; Greenpoint closed on May 31, 2026 after its building was sold, so it no longer appears in this guide.
+          </p>
         </div>
 
         <div className="space-y-12">

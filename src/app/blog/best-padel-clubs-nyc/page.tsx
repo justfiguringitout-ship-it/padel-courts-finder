@@ -87,7 +87,7 @@ const clubs: Club[] = [
       'Google rating: 4.7 stars'
     ],
     programs: [
-      'Court rates $25-60/hour',
+      'Court booking for members; no public rate published',
       'Membership packages available',
       'Private lessons',
       'Group clinics',
@@ -329,7 +329,10 @@ export default function NYCBestClubsPage() {
             Brooklyn dominates the scene with four clubs, while Manhattan contributes three unique venues: <Link href="/courts/mink-padel" className="text-padel-green hover:underline">Mink Padel</Link>&apos;s historic Harlem courtyard, <Link href="/courts/reserve-padel-hudson-yards" className="text-padel-green hover:underline">Reserve Padel</Link>&apos;s bubble-enclosed Hudson Yards courts, and the ultra-exclusive <Link href="/courts/elite-sports-club-at-111-west-57th-street" className="text-padel-green hover:underline">Elite Sports Club</Link> at 111 West 57th Street.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            Whether you&apos;re a Brooklyn local, a Manhattan commuter, or visiting the city, this guide covers every padel option in the five boroughs. Browse all courts on our <Link href="/new-york/new-york" className="text-padel-green hover:underline">New York City courts page</Link> or explore the full <Link href="/new-york" className="text-padel-green hover:underline">New York state directory</Link>.
+            Whether you&apos;re a Brooklyn local, a Manhattan commuter, or visiting the city, this guide covers the main padel clubs in the five boroughs. Browse all courts on our <Link href="/new-york/new-york" className="text-padel-green hover:underline">New York City courts page</Link> or explore the full <Link href="/new-york" className="text-padel-green hover:underline">New York state directory</Link>.
+          </p>
+          <p className="text-sm text-stone-500 mt-4">
+            Padel&amp; Greenpoint closed on May 31, 2026 after its building was sold, so it no longer appears in this guide.
           </p>
         </div>
 

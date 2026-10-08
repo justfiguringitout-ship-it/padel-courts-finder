@@ -314,7 +314,7 @@ export const padelCourts: PadelCourt[] = [
       saturday: "7h-11:30 PM]",
       sunday: "7h-11:30 PM]",
     },
-    description: "Houston's premier indoor padel and pickleball club with 5 courts, offering lessons, rentals, memberships, and wellness amenities like sauna and cold plunge in a vibrant social atmosphere.",
+    description: "A Houston padel and pickleball club with 5 outdoor courts under LED lighting, offering lessons, rentals, memberships, and wellness amenities like sauna and cold plunge in a vibrant social atmosphere.",
     numberOfCourts: 5,
     courtType: "outdoor",
     amenities: [
