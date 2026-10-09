@@ -104,7 +104,7 @@ export const stateMetroSections: Record<string, StateMetroSection> = {
     ],
     beyond: [
       { label: "The Hamptons", cities: ["East Hampton", "Southampton", "Montauk"] },
-      { label: "Westchester", cities: ["New Rochelle", "Mamaroneck", "Tuxedo Park"] },
+      { label: "Westchester", cities: ["New Rochelle", "Tuxedo Park"] },
       { label: "Long Island", cities: ["Roslyn", "Syosset", "East Norwich", "Hewlett Harbor", "Setauket-East Setauket"] },
     ],
   },

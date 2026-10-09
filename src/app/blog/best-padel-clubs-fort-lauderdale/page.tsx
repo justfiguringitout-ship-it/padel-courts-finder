@@ -451,7 +451,7 @@ export default function FortLauderdaleBestClubsPage() {
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/best-padel-clubs-miami" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Miami</h4>
-              <p className="text-sm text-stone-600">39 clubs, America&apos;s padel capital</p>
+              <p className="text-sm text-stone-600">36 clubs in Miami-Dade, America&apos;s padel capital</p>
             </Link>
             <Link href="/blog/best-padel-clubs-orlando" className="bg-white border rounded-lg p-4 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-stone-900 mb-2">Best Clubs in Orlando</h4>

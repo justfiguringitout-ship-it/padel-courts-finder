@@ -4,13 +4,13 @@ import { MapPin, Globe, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Ohio (2026) | Cleveland, Cincinnati & Columbus Guide',
-  description: 'Ohio\'s best padel clubs ranked for 2026. Padel Square\'s 6-court facility, Cleveland Premier, Cincinnati clubs & more. Complete OH padel guide.',
+  description: 'Ohio\'s 3 open padel clubs ranked for 2026: Padel Square\'s 6 indoor courts near Cleveland, Cleveland Premier and Cincinnati Open Sporting Club. Complete OH padel guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-ohio',
   },
   openGraph: {
     title: 'Best Padel Clubs in Ohio (2026) | Cleveland, Cincinnati & Columbus Guide',
-    description: 'Ohio\'s best padel clubs ranked for 2026. Padel Square\'s 6-court facility, Cleveland Premier, Cincinnati clubs & more. Complete OH padel guide.',
+    description: 'Ohio\'s 3 open padel clubs ranked for 2026: Padel Square\'s 6 indoor courts near Cleveland, Cleveland Premier and Cincinnati Open Sporting Club. Complete OH padel guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-ohio',
     type: 'article',
     images: [{ url: 'https://padel-square.com/wp-content/uploads/2025/03/padelsquare-sample10-1-e1745460648270.png' }],
@@ -98,95 +98,35 @@ const clubs: Club[] = [
   },
   {
     rank: 3,
-    name: 'Maketewah Country Club',
-    slug: 'maketewah-country-club',
-    score: 86,
-    location: 'Cincinnati, OH',
-    courts: '3 outdoor courts',
-    price: 'Members Only',
-    description: 'A prestigious private country club in Cincinnati that has added padel to its extensive sports offerings. Alongside 3 outdoor padel courts, members enjoy golf, swimming, platform paddle tennis, bowling, and fine dining.',
+    name: 'Cincinnati Open Sporting Club',
+    slug: 'cincinnati-open-sporting-club',
+    score: 85,
+    location: 'Mason, OH (Greater Cincinnati)',
+    courts: '2 outdoor courts',
+    price: '$$',
+    website: 'cincyopensportingclub.com',
+    description: 'Opened in 2026 at the Lindner Family Tennis Center in Mason, as part of a $260 million redevelopment of the campus. The club has 2 outdoor padel courts alongside tennis and pickleball, and it is open to non-members. Members pay $15 to $20 per person per hour and non-members pay $30 to $40, and there is a public restaurant and bar on site.',
     highlights: [
-      '3 outdoor padel courts',
-      'Historic private country club',
-      'Golf course & swimming pool',
-      'Bowling alley & fine dining',
-      'Indoor practice center',
+      '2 outdoor padel courts',
+      'At the Lindner Family Tennis Center',
+      'Open to non-members',
+      'Restaurant, bar and patio',
+      'Locker rooms and showers',
       'Pro shop'
     ],
     programs: [
-      'Member court access',
-      'Golf & multi-sport',
-      'Social events',
-      'Fine dining',
-      'Family programming'
+      'Member rate ($15-20/person/hour)',
+      'Non-member rate ($30-40/person/hour)',
+      'Lessons and clinics',
+      'Leagues',
+      'Tournaments',
+      'Equipment rental'
     ],
     bestFor: [
-      'Cincinnati country club members',
-      'Multi-sport families',
-      'Players seeking exclusive setting',
-      'Social & dining experience'
-    ]
-  },
-  {
-    rank: 4,
-    name: 'The Glendale Lyceum',
-    slug: 'the-glendale-lyceum',
-    score: 84,
-    location: 'Glendale, OH (Greater Cincinnati)',
-    courts: '3 outdoor courts (lighted)',
-    price: 'Members Only',
-    description: 'Historic members-only social and racquet club in Glendale featuring 3 lighted outdoor aluminum courts listed for padel booking on Playtomic. A charming private club setting with swimming pool, clay tennis, and pickleball.',
-    highlights: [
-      '3 lighted outdoor courts',
-      'Bookable via Playtomic',
-      'Historic social & racquet club',
-      'Swimming pool & clay tennis',
-      'Lighted pickleball courts',
-      'Charming private club setting'
-    ],
-    programs: [
-      'Member court bookings',
-      'Playtomic reservations',
-      'Multi-sport access',
-      'Social events',
-      'Family activities'
-    ],
-    bestFor: [
-      'Glendale/Greater Cincinnati residents',
-      'Private club seekers',
-      'Evening players (lighted courts)',
-      'Multi-racquet sport enthusiasts'
-    ]
-  },
-  {
-    rank: 5,
-    name: 'Swim and Racquet Club',
-    slug: 'swim-and-racquet-club',
-    score: 80,
-    location: 'Columbus, OH (Upper Arlington)',
-    courts: 'Platform tennis courts',
-    price: 'Members Only',
-    description: 'A private swim, tennis, and platform tennis club on 9 acres in the Upper Arlington area of Columbus. Family-oriented club with pools, tennis courts, platform tennis courts, pro shop, and clubhouse facilities.',
-    highlights: [
-      '9-acre private club campus',
-      'Swimming pool & tennis courts',
-      '2 platform tennis courts',
-      'Pro shop & clubhouse',
-      'Fire pit & grill area',
-      'Family-oriented atmosphere'
-    ],
-    programs: [
-      'Family membership ($3,750 initiation)',
-      'Annual dues ($1,565)',
-      'Guest fees ($10-15)',
-      'Pro instruction',
-      'Youth programs'
-    ],
-    bestFor: [
-      'Columbus/Upper Arlington families',
-      'Private club lifestyle',
-      'Multi-sport families',
-      'Tennis & platform tennis crossover'
+      'Greater Cincinnati players',
+      'Tennis players trying padel',
+      'Players who want a meal after',
+      'Visitors without a membership'
     ]
   }
 ];
@@ -199,7 +139,7 @@ export default function OhioBestClubsPage() {
     "description": "Ohio's best padel clubs ranked for 2026. Complete guide with pricing and programs.",
     "image": "https://padel-square.com/wp-content/uploads/2025/03/padelsquare-sample10-1-e1745460648270.png",
     "datePublished": "2026-03-21T00:00:00Z",
-    "dateModified": "2026-03-21T00:00:00Z",
+    "dateModified": "2026-10-09T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -241,11 +181,11 @@ export default function OhioBestClubsPage() {
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5" />
-              <span>5 Open + 1 Coming Soon</span>
+              <span>3 Open Clubs</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
-              <span>Updated March 2026</span>
+              <span>Updated October 2026</span>
             </div>
           </div>
           <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
@@ -256,20 +196,20 @@ export default function OhioBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-padel-green">5</div>
+              <div className="text-3xl font-bold text-padel-green">3</div>
               <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">13+</div>
+              <div className="text-3xl font-bold text-padel-green">9</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">3</div>
-              <div className="text-sm text-stone-600">Major Cities</div>
+              <div className="text-3xl font-bold text-padel-green">2</div>
+              <div className="text-sm text-stone-600">Metro Areas</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">$8-45</div>
-              <div className="text-sm text-stone-600">Per Session Range</div>
+              <div className="text-3xl font-bold text-padel-green">$10-40</div>
+              <div className="text-sm text-stone-600">Per Person, Per Hour</div>
             </div>
           </div>
         </div>
@@ -281,10 +221,13 @@ export default function OhioBestClubsPage() {
             Ohio Enters the Padel Game
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Ohio is establishing itself as the Midwest&apos;s emerging padel frontier. With 5 open clubs across Cleveland, Cincinnati, and Columbus, plus <Link href="/courts/club-padel-newtown" className="text-padel-green hover:underline">Club Padel Newtown</Link> coming soon to Greater Cincinnati, the Buckeye State offers more padel options than you might expect.
+            Ohio has 3 open padel clubs with 9 courts between them, two in Greater Cleveland and one in Greater Cincinnati. <Link href="/courts/newgen-racquet-club" className="text-padel-green hover:underline">NewGen Racquet Club</Link> is adding 5 padel courts in Lewis Center, north of Columbus, and <Link href="/courts/club-padel-newtown" className="text-padel-green hover:underline">Club Padel Newtown</Link> in Cincinnati is listed as temporarily closed.
+          </p>
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
+            Some private clubs listed in earlier versions of this guide have platform tennis courts rather than padel, so we removed them.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            The standout is <Link href="/courts/padel-square" className="text-padel-green hover:underline">Padel Square</Link> in Garfield Heights -- Ohio&apos;s first indoor padel club with 6 courts in a 30,000 sq ft facility. Meanwhile, Cincinnati boasts two private club options, and Cleveland Premier offers the most affordable padel in the state at just $8 per session. See all courts on our <Link href="/ohio" className="text-padel-green hover:underline">Ohio page</Link>.
+            The standout is <Link href="/courts/padel-square" className="text-padel-green hover:underline">Padel Square</Link> in Garfield Heights, Ohio&apos;s first indoor padel club, with 6 courts in a 30,000 sq ft facility. Cleveland Premier in Avon Lake has one indoor court at $10 per person per hour, the lowest listed rate in the state, and <Link href="/courts/cincinnati-open-sporting-club" className="text-padel-green hover:underline">Cincinnati Open Sporting Club</Link> opened 2 outdoor courts in Mason in 2026. See all courts on our <Link href="/ohio" className="text-padel-green hover:underline">Ohio page</Link>.
           </p>
         </div>
 
@@ -292,9 +235,8 @@ export default function OhioBestClubsPage() {
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Quick Rankings</h3>
           <div className="space-y-2 text-lg">
             <p><strong>Best Overall:</strong> <Link href="/courts/padel-square" className="text-padel-green hover:underline">Padel Square</Link> (6 courts, largest in OH)</p>
-            <p><strong>Best Value:</strong> <Link href="/courts/cleveland-premier-pickleball-padel" className="text-padel-green hover:underline">Cleveland Premier</Link> ($8 open play!)</p>
-            <p><strong>Best Cincinnati:</strong> <Link href="/courts/maketewah-country-club" className="text-padel-green hover:underline">Maketewah Country Club</Link> (3 outdoor courts)</p>
-            <p><strong>Best Columbus:</strong> <Link href="/courts/swim-and-racquet-club" className="text-padel-green hover:underline">Swim and Racquet Club</Link> (9-acre campus)</p>
+            <p><strong>Best Value:</strong> <Link href="/courts/cleveland-premier-pickleball-padel" className="text-padel-green hover:underline">Cleveland Premier</Link> ($10 per person per hour)</p>
+            <p><strong>Best Cincinnati:</strong> <Link href="/courts/cincinnati-open-sporting-club" className="text-padel-green hover:underline">Cincinnati Open Sporting Club</Link> (2 outdoor courts in Mason)</p>
           </div>
         </div>
 
@@ -382,14 +324,25 @@ export default function OhioBestClubsPage() {
 
         {/* Opening Soon */}
         <div className="bg-amber-50 border-2 border-amber-300 rounded-xl p-6 mt-12">
-          <h3 className="text-2xl font-bold text-amber-900 mb-4">Opening Soon</h3>
-          <div className="flex items-start gap-4">
-            <div className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">Coming Soon</div>
-            <div>
-              <h4 className="font-bold text-stone-900 text-lg">
-                <Link href="/courts/club-padel-newtown" className="text-amber-700 hover:underline">Club Padel Newtown</Link> - Cincinnati, OH
-              </h4>
-              <p className="text-stone-700 mt-1">Greater Cincinnati&apos;s first dedicated outdoor padel facility featuring 4 courts, pro shop, food &amp; beverage, lounge areas, and LED lighting for evening play.</p>
+          <h3 className="text-2xl font-bold text-amber-900 mb-4">On the Way</h3>
+          <div className="space-y-4">
+            <div className="flex items-start gap-4">
+              <div className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">Coming Soon</div>
+              <div>
+                <h4 className="font-bold text-stone-900 text-lg">
+                  <Link href="/courts/newgen-racquet-club" className="text-amber-700 hover:underline">NewGen Racquet Club</Link> - Lewis Center, OH
+                </h4>
+                <p className="text-stone-700 mt-1">An established tennis, pickleball and badminton club north of Columbus that is adding 5 padel courts. When they open, the Columbus area will have its first padel club in our directory.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="bg-stone-200 text-stone-700 px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">Temporarily Closed</div>
+              <div>
+                <h4 className="font-bold text-stone-900 text-lg">
+                  <Link href="/courts/club-padel-newtown" className="text-amber-700 hover:underline">Club Padel Newtown</Link> - Cincinnati, OH
+                </h4>
+                <p className="text-stone-700 mt-1">A planned outdoor club with 4 courts at 3804 Church St in Newtown. It is listed as temporarily closed, so call (513) 600-2074 before you go.</p>
+              </div>
             </div>
           </div>
         </div>

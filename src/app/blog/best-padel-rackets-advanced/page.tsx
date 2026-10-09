@@ -498,7 +498,7 @@ export default function AdvancedRacketsPage() {
             <Link href="/blog/best-padel-clubs-miami" className="block border border-stone-700 rounded-lg p-4 hover:border-padel-green/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-stone-500">CITY GUIDE</span>
               <h3 className="font-semibold text-white mt-1">Best Clubs in Miami</h3>
-              <p className="text-sm text-stone-400 mt-1">39 clubs &mdash; the US padel capital &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">36 clubs in Miami-Dade, the US padel capital &rarr;</p>
             </Link>
           </div>
         </div>

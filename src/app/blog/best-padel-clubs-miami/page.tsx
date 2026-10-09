@@ -4,13 +4,13 @@ import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Miami (2026) | Complete South Florida Guide',
-  description: 'Explore Miami\'s 39 padel clubs in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
+  description: 'Explore Miami-Dade\'s 36 open padel clubs and 198+ courts in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-miami',
   },
   openGraph: {
     title: 'Best Padel Clubs in Miami (2026) | Complete South Florida Guide',
-    description: 'Explore Miami\'s 39 padel clubs in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
+    description: 'Explore Miami-Dade\'s 36 open padel clubs and 198+ courts in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-miami',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/images/courts/ultra-padel-club.webp' }],
@@ -140,11 +140,11 @@ const clubs: Club[] = [
     slug: 'padel-x-miami',
     score: 94,
     location: 'Downtown Miami, FL',
-    courts: '12 outdoor courts',
+    courts: '10 outdoor courts',
     price: '$$$$',
-    description: 'A state-of-the-art outdoor padel club in downtown Miami featuring 12 premium Mejorset courts with Mondo carpet surfaces and LED lighting. Padel X pairs high-end courts with standout amenities like cold plunges, private showers, a Lacoste-stocked pro shop, and valet parking -- making it one of the most premium padel experiences in the US.',
+    description: 'A state-of-the-art outdoor padel club in downtown Miami featuring 10 premium Mejorset courts with Mondo carpet surfaces and LED lighting. Padel X pairs high-end courts with standout amenities like cold plunges, private showers, a Lacoste-stocked pro shop, and valet parking -- making it one of the most premium padel experiences in the US.',
     highlights: [
-      '12 premium Mejorset courts with Mondo surfaces',
+      '10 premium Mejorset courts with Mondo surfaces',
       'LED lighting for evening play',
       'Video technology on courts',
       'Pro shop with Lacoste merchandise',
@@ -366,10 +366,10 @@ export default function MiamiBestClubsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in Miami (2026) | Complete South Florida Guide",
-    "description": "Explore Miami's 39 padel clubs in 2026. Ultra Padel's 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.",
+    "description": "Explore Miami-Dade's 36 open padel clubs and 198+ courts in 2026. Ultra Padel's 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.",
     "image": "https://www.padelcourtsfinder.com/images/courts/ultra-padel-club.webp",
     "datePublished": "2026-03-21T00:00:00Z",
-    "dateModified": "2026-03-21T00:00:00Z",
+    "dateModified": "2026-10-09T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -417,7 +417,7 @@ export default function MiamiBestClubsPage() {
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
-              <span>Updated March 2026</span>
+              <span>Updated October 2026</span>
             </div>
           </div>
           <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
@@ -428,11 +428,11 @@ export default function MiamiBestClubsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-padel-green">29+</div>
-              <div className="text-sm text-stone-600">Clubs</div>
+              <div className="text-3xl font-bold text-padel-green">36</div>
+              <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">170+</div>
+              <div className="text-3xl font-bold text-padel-green">198+</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
@@ -453,7 +453,7 @@ export default function MiamiBestClubsPage() {
             Miami: America&apos;s Undisputed Padel Capital
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            No city in the United States can match Miami&apos;s padel scene. With 39 open clubs, over 200 courts, and 1 more facility on the way, Miami and its surrounding metro area have built the densest concentration of padel infrastructure in the country. The Latin American influence, year-round outdoor weather, and a fitness-obsessed culture have made South Florida the epicenter of padel in America.
+            No city in the United States can match Miami&apos;s padel scene. Miami-Dade County has 36 open padel clubs with at least 198 courts between them (three clubs do not list a court count), and one more club is on the way. Miami itself has 18 of those clubs, and the rest are in Doral, Miami Beach, North Miami, Aventura, Key Biscayne and Hialeah. The Latin American influence, year-round outdoor weather, and a fitness-obsessed culture have made South Florida the epicenter of padel in America.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             The scale is staggering. <Link href="/courts/ultra-padel-club" className="text-padel-green hover:underline">Ultra Padel Club</Link> alone operates 29 courts in Little Haiti -- the single largest padel facility in the US. <Link href="/courts/urban-padel" className="text-padel-green hover:underline">Urban Padel</Link> in Doral claims the largest indoor padel facility with 12 climate-controlled courts. From luxury members-only clubs like <Link href="/courts/sunset-padel" className="text-padel-green hover:underline">Sunset Padel</Link> in Miami Beach to budget-friendly options at <Link href="/courts/champions-padel-club" className="text-padel-green hover:underline">Champions Padel Club</Link> starting at $25/hour, there is a padel club for every player and every budget.
@@ -585,7 +585,7 @@ export default function MiamiBestClubsPage() {
         <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-8 mt-12">
           <h2 className="text-3xl font-bold text-stone-900 mb-6">Coming Soon to Miami</h2>
           <p className="text-stone-700 text-lg mb-6">
-            Miami&apos;s padel scene continues to expand. Two exciting new facilities are on the way:
+            One new club is on the way. <Link href="/courts/the-gables-padel" className="text-padel-green hover:underline">The Gables Padel</Link>, which earlier versions of this guide listed as coming soon, is now open with 8 outdoor courts on LeJeune Road.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6 shadow-sm">
@@ -600,25 +600,13 @@ export default function MiamiBestClubsPage() {
                 Miami&apos;s first covered rooftop luxury padel club above the Aventura skyline. Planned amenities include a Pilates studio, gym, yoga, sauna, cold plunge, organic kitchen, bar, and a 10X Health partnership. Memberships from $350/month.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs font-semibold">COMING SOON</span>
-              </div>
-              <h3 className="text-xl font-bold text-stone-900 mb-2">
-                <Link href="/courts/the-gables-padel" className="text-padel-green hover:underline">The Gables Padel</Link>
-              </h3>
-              <p className="text-stone-600 text-sm mb-2">Coral Gables, Miami, FL -- 8 indoor courts</p>
-              <p className="text-stone-700">
-                An upcoming 8-court indoor padel club in the heart of Coral Gables, blending elite sport with lifestyle amenities. Plans include a wellness center with massages and red light therapy, free private parking, and curated events.
-              </p>
-            </div>
           </div>
         </div>
 
         <div className="grain bg-court text-white rounded-xl p-8 text-center mt-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Play in Miami?</h2>
           <p className="text-xl text-stone-300 mb-6">
-            Find all 29+ Miami padel clubs and book your court today
+            Browse every Miami club in our directory and book your court
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

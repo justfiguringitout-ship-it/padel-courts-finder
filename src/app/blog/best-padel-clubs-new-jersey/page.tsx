@@ -3,14 +3,14 @@ import Link from 'next/link';
 import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Best Padel Clubs in New Jersey (2026) | 8 Clubs Ranked Across the Garden State',
-  description: 'New Jersey\'s 8 best padel clubs ranked for 2026. From Centercourt Morristown to Padel United\'s wellness campus. Complete NJ padel guide with pricing.',
+  title: 'Best Padel Clubs in New Jersey (2026) | 7 Clubs Ranked Across the Garden State',
+  description: 'New Jersey\'s 7 best padel clubs ranked for 2026. From Centercourt Morristown to Padel United\'s wellness campus. Complete NJ padel guide with pricing.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-new-jersey',
   },
   openGraph: {
-    title: 'Best Padel Clubs in New Jersey (2026) | 8 Clubs Ranked Across the Garden State',
-    description: 'New Jersey\'s 8 best padel clubs ranked for 2026. From Centercourt Morristown to Padel United\'s wellness campus. Complete NJ padel guide with pricing.',
+    title: 'Best Padel Clubs in New Jersey (2026) | 7 Clubs Ranked Across the Garden State',
+    description: 'New Jersey\'s 7 best padel clubs ranked for 2026. From Centercourt Morristown to Padel United\'s wellness campus. Complete NJ padel guide with pricing.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-new-jersey',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
@@ -132,37 +132,6 @@ const clubs: Club[] = [
   },
   {
     rank: 4,
-    name: 'Englewood Field Club',
-    slug: 'englewood-field-club',
-    score: 91,
-    location: 'Englewood, NJ',
-    courts: '6 outdoor courts',
-    price: 'Members Only',
-    description: 'A private family-oriented athletic club in Englewood with 6 padel courts bookable via Playtomic. Beyond padel, members enjoy tennis, pickleball, platform tennis, squash, pool, ice rink, and more. The most courts at any single NJ location.',
-    highlights: [
-      '6 outdoor padel courts (most in NJ)',
-      'Private family athletic club',
-      'Bookable via Playtomic',
-      'Pool, ice rink, squash & more',
-      'Restaurant on-site',
-      'Google Rating: 4.7'
-    ],
-    programs: [
-      'Member court bookings',
-      'Family programs',
-      'Multi-sport access',
-      'Youth activities',
-      'Social events'
-    ],
-    bestFor: [
-      'Families seeking multi-sport club',
-      'Bergen County residents',
-      'Private club members',
-      'Multi-sport athletes'
-    ]
-  },
-  {
-    rank: 5,
     name: 'Nicol Rackets',
     slug: 'nicol-rackets',
     score: 90,
@@ -193,12 +162,12 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 6,
+    rank: 5,
     name: 'Vamos Racquets',
     slug: 'vamos-racquets',
     score: 88,
     location: 'East Hanover, NJ (ArenaLife campus)',
-    courts: '4 outdoor courts',
+    courts: '4 outdoor courts (listed as temporarily closed)',
     price: '$$-$$$',
     description: 'Premium facility at the ArenaLife campus in East Hanover offering padel and pickleball on 4 outdoor courts, plus wellness, fitness, coworking, and community events. A unique blend of sport and lifestyle.',
     highlights: [
@@ -225,7 +194,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 7,
+    rank: 6,
     name: 'The Club at Monroe',
     slug: 'the-club-at-monroe',
     score: 86,
@@ -257,7 +226,7 @@ const clubs: Club[] = [
     ]
   },
   {
-    rank: 8,
+    rank: 7,
     name: 'Access Padel',
     slug: 'access-padel',
     score: 84,
@@ -292,11 +261,11 @@ export default function NewJerseyBestClubsPage() {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Best Padel Clubs in New Jersey (2026) | 8 Clubs Ranked",
-    "description": "New Jersey's 8 best padel clubs ranked for 2026. Complete guide with pricing, programs, and insider tips.",
+    "headline": "Best Padel Clubs in New Jersey (2026) | 7 Clubs Ranked",
+    "description": "New Jersey's 7 best padel clubs ranked for 2026. Complete guide with pricing, programs, and insider tips.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-21T00:00:00Z",
-    "dateModified": "2026-03-21T00:00:00Z",
+    "dateModified": "2026-10-09T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -338,11 +307,11 @@ export default function NewJerseyBestClubsPage() {
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5" />
-              <span>8 Clubs Ranked</span>
+              <span>7 Clubs Ranked</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
-              <span>Updated March 2026</span>
+              <span>Updated October 2026</span>
             </div>
           </div>
           <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
@@ -354,14 +323,14 @@ export default function NewJerseyBestClubsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-padel-green">8</div>
-              <div className="text-sm text-stone-600">Clubs</div>
+              <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">32</div>
+              <div className="text-3xl font-bold text-padel-green">30</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">9</div>
+              <div className="text-3xl font-bold text-padel-green">7</div>
               <div className="text-sm text-stone-600">Cities</div>
             </div>
             <div>
@@ -378,7 +347,10 @@ export default function NewJerseyBestClubsPage() {
             The Garden State&apos;s Padel Boom
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            New Jersey has quietly become one of America&apos;s most exciting padel markets. With 8 dedicated padel clubs spread across 9 cities -- from Bergen County luxury to Central Jersey value -- NJ offers more variety than most states and easy access for the massive NYC metro population.
+            New Jersey has 8 open padel clubs with 30 courts across 7 cities, from Bergen County down to Monmouth County, all within reach of the NYC metro area. Two more are listed: Vamos Racquets in East Hanover is temporarily closed, and The Club at Marlboro is coming soon to Morganville.
+          </p>
+          <p className="text-stone-700 text-lg leading-relaxed mb-4">
+            Some private clubs listed in earlier versions of this guide have platform tennis courts rather than padel, so we removed them.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             The standout is the sheer diversity: <Link href="/courts/padel-united-sports-club" className="text-padel-green hover:underline">Padel United</Link> pairs 6 courts with a full wellness spa, <Link href="/courts/rax-new-jersey" className="text-padel-green hover:underline">Rax NJ</Link> boasts 40-foot ceilings (highest in the eastern US), and <Link href="/courts/centercourt-morristown" className="text-padel-green hover:underline">Centercourt Morristown</Link> was the state&apos;s first full-time padel facility with indoor-outdoor play.
@@ -394,7 +366,7 @@ export default function NewJerseyBestClubsPage() {
             <p><strong>Best Overall:</strong> <Link href="/courts/centercourt-morristown" className="text-padel-green hover:underline">Centercourt Morristown</Link> (6 courts, indoor + outdoor)</p>
             <p><strong>Best Wellness:</strong> <Link href="/courts/padel-united-sports-club" className="text-padel-green hover:underline">Padel United</Link> (spa, pool, sauna)</p>
             <p><strong>Best Atmosphere:</strong> <Link href="/courts/rax-new-jersey" className="text-padel-green hover:underline">Rax NJ</Link> (40-ft ceilings, pizza nights)</p>
-            <p><strong>Best for Families:</strong> <Link href="/courts/englewood-field-club" className="text-padel-green hover:underline">Englewood Field Club</Link> (multi-sport private club)</p>
+            <p><strong>Best for Families:</strong> <Link href="/courts/nicol-rackets" className="text-padel-green hover:underline">Nicol Rackets</Link> (kids camps, 7 courts)</p>
             <p><strong>Best Value:</strong> <Link href="/courts/the-club-at-monroe" className="text-padel-green hover:underline">The Club at Monroe</Link> ($400/yr membership)</p>
           </div>
         </div>
