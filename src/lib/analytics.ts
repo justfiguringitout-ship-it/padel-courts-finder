@@ -48,3 +48,13 @@ export function trackListYourCourtSubmit() {
     });
   }
 }
+
+/**
+ * Plausible custom event (the site's live analytics, loaded in layout.tsx).
+ * The event shows up in Plausible once a goal with the same name exists.
+ */
+export function trackPlausibleEvent(name: string, props?: Record<string, string>) {
+  if (typeof window === 'undefined') return;
+  const plausible = (window as unknown as { plausible?: (event: string, options?: { props?: Record<string, string> }) => void }).plausible;
+  if (typeof plausible === 'function') plausible(name, props ? { props } : undefined);
+}

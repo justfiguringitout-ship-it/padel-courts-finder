@@ -1,56 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { DayHours } from "@/lib/club-page";
-import { formatClock } from "@/lib/club-page";
-
-const WEEKDAY_INDEX: Record<string, number> = {
-  Monday: 0, Tuesday: 1, Wednesday: 2, Thursday: 3, Friday: 4, Saturday: 5, Sunday: 6,
-};
-
-interface Now {
-  dayIdx: number;
-  minutes: number;
-}
-
-function nowAt(timeZone?: string): Now | null {
-  try {
-    const parts = new Intl.DateTimeFormat("en-US", {
-      timeZone,
-      weekday: "long",
-      hour: "numeric",
-      minute: "numeric",
-      hourCycle: "h23",
-    }).formatToParts(new Date());
-    const get = (t: string) => parts.find((p) => p.type === t)?.value ?? "";
-    const dayIdx = WEEKDAY_INDEX[get("weekday")];
-    const minutes = Number(get("hour")) * 60 + Number(get("minute"));
-    if (dayIdx === undefined || !Number.isFinite(minutes)) return null;
-    return { dayIdx, minutes };
-  } catch {
-    return null;
-  }
-}
-
-type Live = { tone: "open" | "closed"; text: string } | null;
-
-/** Open/closed right now, or null whenever the published hours cannot say for sure. */
-function liveStatus(days: DayHours[], now: Now): Live {
-  const today = days[now.dayIdx];
-  const yesterday = days[(now.dayIdx + 6) % 7];
-  // A late session that started yesterday and runs past midnight.
-  if (yesterday.kind === "range" && yesterday.close > 1440 && now.minutes < yesterday.close - 1440) {
-    return { tone: "open", text: `Open now · until ${formatClock(yesterday.close)}` };
-  }
-  if (today.kind === "allday") return { tone: "open", text: "Open now · 24 hours" };
-  if (today.kind === "closed") return { tone: "closed", text: "Closed today" };
-  if (today.kind !== "range") return null;
-  if (now.minutes >= today.open && now.minutes < today.close) {
-    return { tone: "open", text: `Open now · until ${formatClock(today.close)}` };
-  }
-  if (now.minutes < today.open) return { tone: "closed", text: `Closed now · opens ${formatClock(today.open)}` };
-  return { tone: "closed", text: "Closed now" };
-}
+import type { DayHours, ZonedNow } from "@/lib/club-page";
+import { liveStatus, nowInTimeZone } from "@/lib/club-page";
 
 /**
  * Weekly hours table. The table is server-rendered; after hydration this
@@ -75,11 +27,11 @@ export function ClubHours({
   /** false for clubs that are not open (coming soon, temporarily closed) */
   showLive: boolean;
 }) {
-  const [now, setNow] = useState<Now | null>(null);
+  const [now, setNow] = useState<ZonedNow | null>(null);
 
   useEffect(() => {
     // Without a reliable club time zone, highlight the visitor's own today only.
-    setNow(nowAt(timeZone));
+    setNow(nowInTimeZone(timeZone));
   }, [timeZone]);
 
   const live = now && showLive && timeZone ? liveStatus(days, now) : null;

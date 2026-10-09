@@ -141,7 +141,128 @@ export function getClubTimeZone(court: AdaptedCourt): string | undefined {
   if (st === "KY") return hasLng ? (lng! < -86.0 ? "America/Chicago" : "America/New_York") : undefined;
   if (st === "IN") return hasLng ? (lng! < -86.9 && (lat ?? 0) > 40.9 ? "America/Chicago" : "America/Indiana/Indianapolis") : undefined;
   if (st === "ID") return typeof lat === "number" ? (lat > 45.5 ? "America/Los_Angeles" : "America/Boise") : undefined;
+  // Western strips on Mountain time (approximate lines, good for city-level placement).
+  if (st === "NE") return hasLng ? (lng! < -101.3 ? "America/Denver" : "America/Chicago") : undefined;
+  if (st === "SD") return hasLng ? (lng! < -100.5 ? "America/Denver" : "America/Chicago") : undefined;
+  if (st === "ND") return hasLng ? (lng! < -101.0 && (lat ?? 99) < 47.0 ? "America/Denver" : "America/Chicago") : undefined;
+  if (st === "OR") return hasLng && lng! > -117.6 && (lat ?? 99) < 44.5 ? "America/Boise" : "America/Los_Angeles";
   return zones[st];
+}
+
+/** Day of week (0 = Monday) and minutes after midnight, right now, in a time zone. */
+export interface ZonedNow {
+  dayIdx: number;
+  minutes: number;
+}
+
+const WEEKDAY_INDEX: Record<string, number> = {
+  Monday: 0, Tuesday: 1, Wednesday: 2, Thursday: 3, Friday: 4, Saturday: 5, Sunday: 6,
+};
+
+/** Browser-side clock read in the club's own time zone (not the visitor's). */
+export function nowInTimeZone(timeZone?: string, date: Date = new Date()): ZonedNow | null {
+  try {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      weekday: "long",
+      hour: "numeric",
+      minute: "numeric",
+      hourCycle: "h23",
+    }).formatToParts(date);
+    const get = (t: string) => parts.find((p) => p.type === t)?.value ?? "";
+    const dayIdx = WEEKDAY_INDEX[get("weekday")];
+    const minutes = Number(get("hour")) * 60 + Number(get("minute"));
+    if (dayIdx === undefined || !Number.isFinite(minutes)) return null;
+    return { dayIdx, minutes };
+  } catch {
+    return null;
+  }
+}
+
+export type LiveStatus = { tone: "open" | "closed"; text: string } | null;
+
+/** Open/closed right now, or null whenever the published hours cannot say for sure. */
+export function liveStatus(days: DayHours[], now: ZonedNow): LiveStatus {
+  const today = days[now.dayIdx];
+  const yesterday = days[(now.dayIdx + 6) % 7];
+  // A late session that started yesterday and runs past midnight.
+  if (yesterday.kind === "range" && yesterday.close > 1440 && now.minutes < yesterday.close - 1440) {
+    return { tone: "open", text: `Open now · until ${formatClock(yesterday.close)}` };
+  }
+  if (today.kind === "allday") return { tone: "open", text: "Open now · 24 hours" };
+  if (today.kind === "closed") return { tone: "closed", text: "Closed today" };
+  if (today.kind !== "range") return null;
+  if (now.minutes >= today.open && now.minutes < today.close) {
+    return { tone: "open", text: `Open now · until ${formatClock(today.close)}` };
+  }
+  if (now.minutes < today.open) return { tone: "closed", text: `Closed now · opens ${formatClock(today.open)}` };
+  return { tone: "closed", text: "Closed now" };
+}
+
+/** "until midnight", "opens noon": lower case mid-sentence */
+function clockInline(minutes: number): string {
+  return formatClock(minutes).replace(/^Midnight$/, "midnight").replace(/^Noon$/, "noon");
+}
+
+/** Evening starts at 6 PM; "late" means the club is still open after 9 PM. */
+export const EVENING_START = 18 * 60;
+export const LATE_START = 21 * 60;
+
+export interface TonightStatus {
+  /** open: playing now. later: opens later today. done: closed for the rest of today.
+   *  closed: closed all day. unknown: today's hours are not published as clock times. */
+  state: "open" | "later" | "done" | "closed" | "unknown";
+  /** Short chip text, e.g. "Open now · until 11 PM" */
+  text: string;
+  /** Today's published hours ("7 AM to 11 PM"), when they are clock times */
+  today?: string;
+  /** Open at some point from 6 PM on, still ahead of (or including) now */
+  tonight: boolean;
+  /** Open after 9 PM, still ahead of (or including) now */
+  late: boolean;
+}
+
+/**
+ * What a player needs for tonight, from the same parsed hours the club page
+ * uses. Only answers when today's hours are real clock times; otherwise
+ * state is "unknown" and every flag is false.
+ */
+export function tonightStatus(days: DayHours[], now: ZonedNow): TonightStatus {
+  const today = days[now.dayIdx];
+  const yesterday = days[(now.dayIdx + 6) % 7];
+  const t = now.minutes;
+  // Still inside yesterday's session that runs past midnight (e.g. 1 AM).
+  const carry = yesterday.kind === "range" && yesterday.close > 1440 && t < yesterday.close - 1440;
+  const todayLabel = today.kind === "range" ? today.label : today.kind === "allday" ? "Open 24 hours" : undefined;
+
+  if (today.kind === "allday") {
+    return { state: "open", text: "Open now · 24 hours", today: todayLabel, tonight: true, late: true };
+  }
+  if (today.kind === "range") {
+    const tonight = today.close > EVENING_START && t < today.close;
+    const late = today.close > LATE_START && t < today.close;
+    if (t >= today.open && t < today.close) {
+      return { state: "open", text: `Open now · until ${clockInline(today.close)}`, today: todayLabel, tonight, late };
+    }
+    if (carry) {
+      return { state: "open", text: `Open now · until ${clockInline(yesterday.close)}`, today: todayLabel, tonight, late };
+    }
+    if (t < today.open) {
+      return {
+        state: "later",
+        text: `Opens ${clockInline(today.open)} · until ${clockInline(today.close)}`,
+        today: todayLabel,
+        tonight,
+        late,
+      };
+    }
+    return { state: "done", text: "Closed for today", today: todayLabel, tonight: false, late: false };
+  }
+  if (carry) {
+    return { state: "open", text: `Open now · until ${clockInline(yesterday.close)}`, tonight: false, late: false };
+  }
+  if (today.kind === "closed") return { state: "closed", text: "Closed today", tonight: false, late: false };
+  return { state: "unknown", text: "Today's hours not published", tonight: false, late: false };
 }
 
 export function timeZoneLabel(tz: string | undefined): string | undefined {

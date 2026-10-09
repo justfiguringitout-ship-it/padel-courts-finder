@@ -22,6 +22,8 @@ import type { Metadata } from "next";
 import { HeroVideo } from "@/components/hero-video";
 import { PlayerPriceSummaryLine, PlayerPriceTag } from "@/components/player-price";
 import { getClubPlayerPrice, summarizePlayerPrices } from "@/lib/player-price";
+import { getTonightData } from "@/lib/play-tonight";
+import { PlayTonight } from "@/components/play-tonight";
 
 interface CityPageProps {
   params: Promise<{
@@ -152,6 +154,10 @@ export default async function CityPage({ params }: CityPageProps) {
   // with confidence (src/lib/player-price.ts). Unknown stays unknown.
   const priceSummary = summarizePlayerPrices(cityCourts);
 
+  // "Can I play tonight?": time-independent club facts, rendered at build time.
+  // The browser adds open/closed (in the club's time zone) and tonight's weather.
+  const tonight = getTonightData(sortedCourts);
+
   // Custom or dynamic intro
   const customIntro = cityIntros[`${state.code}-${city.name}`];
   const blogSlug = cityBlogSlugs[city.slug];
@@ -259,6 +265,18 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Can I play tonight? */}
+      {tonight.clubs.length + tonight.noHours.length > 0 && (
+        <section className="container mx-auto px-4 pt-10 md:pt-12" aria-labelledby="tonight-heading">
+          <div className="max-w-4xl mx-auto">
+            <h2 id="tonight-heading" className="text-2xl font-bold mb-1">
+              Can I play tonight in {city.name}?
+            </h2>
+            <PlayTonight data={tonight} city={city.name} />
+          </div>
+        </section>
+      )}
 
       {/* Map */}
       <section className="container mx-auto px-4 py-12">
