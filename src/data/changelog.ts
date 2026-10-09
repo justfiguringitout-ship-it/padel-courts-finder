@@ -47,7 +47,7 @@ export const changelog: ChangelogEntry[] = [
     note:
       "Hours now come from each club's website, Google Business profile or Playtomic profile, checked on October 9, so the new Can I play tonight? section can show whether they are open. Clubs whose hours are not published stay listed as hours not published.",
     count: 25,
-    commit: "PENDING_HOURS",
+    commit: "a49a9d2",
   },
   {
     date: "2026-10-09",
@@ -56,7 +56,7 @@ export const changelog: ChangelogEntry[] = [
     note:
       "6 Love Sports in Miami Beach runs leagues and is not a venue, and we found no evidence that Padel Country Club in Miami exists outside our own listing. Casa de Padel HTX moved back to coming soon (its site says opening fall 2026), and Taktika Padel Stockton is marked temporarily closed after it dropped off the chain's website and booking page.",
     clubs: ["6 Love Sports", "Padel Country Club", "Casa de Padel HTX", "Taktika Padel - Stockton"],
-    commit: "PENDING_HOURS",
+    commit: "a49a9d2",
   },
   {
     date: "2026-10-08",
