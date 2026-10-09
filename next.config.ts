@@ -37,6 +37,9 @@ const nextConfig: NextConfig = {
       { source: '/courts/mouratoglou-academy-zephyrhills', destination: '/courts/svb-tennis-wellness-center', permanent: true }, // listed under the venue's own name, 2026-09-29
       { source: '/courts/padel-39', destination: '/courts/padel39-north-austin', permanent: true }, // renamed 2026-09-29
       { source: '/courts/the-king-of-padel', destination: '/courts/the-king-of-padel-san-antonio', permanent: true }, // duplicate removed 2026-10-08
+      { source: '/courts/cascades-tennis', destination: '/courts/aspen-meadows-racquet-club', permanent: true }, // renamed 2026-10-08
+      { source: '/courts/6-love-sports', destination: '/florida/miami-beach', permanent: true }, // a league organizer, not a venue; audit 2026-10-09
+      { source: '/courts/padel-country-club', destination: '/florida/miami', permanent: true }, // no evidence the venue exists; audit 2026-10-09
       { source: '/courts/padel-greenpoint', destination: '/new-york/brooklyn', permanent: true }, // closed May 31 2026 (building sold)
       { source: '/courts/pepper-padel', destination: '/florida/north-miami', permanent: true }, // closed (last activity 2023), audit 2026-10-08
       { source: '/courts/naoa', destination: '/new-york/east-hampton', permanent: true }, // permanently closed per Google, audit 2026-10-08
