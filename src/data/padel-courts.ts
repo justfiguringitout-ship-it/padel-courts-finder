@@ -1581,6 +1581,7 @@ export const padelCourts: PadelCourt[] = [
     {
     id: 50,
     name: "Nicol Rackets",
+    ownerConfirmedDate: "2026-07-14",
     address: "850 Oceanport Ave",
     city: "Oceanport",
     state: "NJ",
@@ -2796,6 +2797,7 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 80,
     name: "Padel Social Bethesda",
+    ownerConfirmedDate: "2026-08-28",
     address: "5455 Westbard Ave",
     city: "Bethesda",
     state: "MD",
@@ -9855,6 +9857,7 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 360,
     name: "The Gables Padel",
+    ownerConfirmedDate: "2026-10-08",
     address: "1001 NW 42nd Avenue",
     city: "Miami",
     state: "FL",
@@ -12158,6 +12161,7 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 418,
     name: "The Courts at Montauk Yacht Club",
+    ownerConfirmedDate: "2026-07-16",
     slug: "the-courts-at-montauk-yacht-club",
     address: "32 Star Island Rd",
     city: "Montauk",
@@ -13409,6 +13413,7 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 448,
     name: "Wakit Rakit Space Coast",
+    ownerConfirmedDate: "2026-09-13",
     address: "778 Country Club Dr",
     city: "Titusville",
     state: "FL",
@@ -13717,6 +13722,7 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 464,
     name: "Wakit Rakit Spring",
+    ownerConfirmedDate: "2026-08-28",
     address: "510 Hassler Rd",
     city: "Spring",
     state: "TX",
@@ -14133,6 +14139,7 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 485,
     name: "Emerald Padel Club",
+    ownerConfirmedDate: "2026-10-02",
     address: "Seattle (location TBA)",
     city: "Seattle",
     state: "WA",

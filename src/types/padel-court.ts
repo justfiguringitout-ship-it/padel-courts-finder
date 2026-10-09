@@ -30,6 +30,7 @@ export interface PadelCourt {
   locationName?: string;                        // Specific location name for chains (e.g., "Nashville")
   verified?: boolean;                           // Cross-referenced and verified
   verificationDate?: string;                    // Date of last verification
+  ownerConfirmedDate?: string;                  // YYYY-MM-DD the club's owner or manager last confirmed the details with us
   // New fields from master data research
   instagram?: string;                            // Instagram URL
   facebook?: string;                             // Facebook URL
