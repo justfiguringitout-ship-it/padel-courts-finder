@@ -267,7 +267,7 @@ export default function HowToChoosePadelClubPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Find a Court Near You</div>
-                <p className="text-stone-400 text-sm mt-1">Start your shortlist — 340+ clubs across 39 states</p>
+                <p className="text-stone-400 text-sm mt-1">Start your shortlist — 320+ clubs across 38 states</p>
               </Link>
               <Link href="/blog/padel-patterns-beginners" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">7 Patterns Every Beginner Should Know</div>

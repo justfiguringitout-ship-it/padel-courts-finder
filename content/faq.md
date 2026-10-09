@@ -483,7 +483,7 @@ They're not interchangeable. But the good news? Padel rackets start at $50 and c
 
 ### Where can I find padel courts?
 
-Use our [comprehensive directory](/search)! We list **340+ clubs** across the United States:
+Use our [comprehensive directory](/search)! We list **320+ clubs** across the United States:
 
 **Search by:**
 - State or city

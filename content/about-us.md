@@ -4,7 +4,7 @@
 
 We're obsessed with padel. And we're pretty sure once you try it, you will be too.
 
-Think of us as your personal padel concierge—whether you're looking for courts in your backyard or planning a padel road trip across the country, we've got you covered. We've mapped, verified, and documented **over 340 padel clubs** across **39 states and 200+ cities** in the United States, so you can spend less time searching and more time smashing.
+Think of us as your personal padel concierge—whether you're looking for courts in your backyard or planning a padel road trip across the country, we've got you covered. We've mapped, verified, and documented **over 320 padel clubs** across **38 states and 190 cities** in the United States, so you can spend less time searching and more time smashing.
 
 ## Our Story: From "What's Padel?" to "Where Can I Play?"
 
@@ -51,7 +51,7 @@ We caught mistakes in existing directories (hello, Hialeah vs. Doral confusion w
 ## The Numbers Don't Lie
 
 Since launching our verification project, we've:
-- ✅ Mapped **340+ clubs** across **39 states** and **200+ cities**
+- ✅ Mapped **320+ clubs** across **38 states** and **190 cities**
 - ✅ Verified **every padel facility** from official sources
 - ✅ Documented **23+ multi-location chains** (from Reserve Padel to Padel Haus)
 - ✅ Identified **20+ facilities opening soon** (with actual dates)
@@ -108,6 +108,6 @@ We're always improving, and we'd love to hear from you.
 
 ---
 
-*Last Updated: August 2026 | Verified Clubs: 332 | States: 39 | Cities: 190+*
+*Last Updated: August 2026 | Clubs: 320+ | States: 38 | Cities: 190*
 
 

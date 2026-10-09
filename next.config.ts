@@ -40,6 +40,30 @@ const nextConfig: NextConfig = {
       { source: '/courts/cascades-tennis', destination: '/courts/aspen-meadows-racquet-club', permanent: true }, // renamed 2026-10-08
       { source: '/courts/6-love-sports', destination: '/florida/miami-beach', permanent: true }, // a league organizer, not a venue; audit 2026-10-09
       { source: '/courts/padel-country-club', destination: '/florida/miami', permanent: true }, // no evidence the venue exists; audit 2026-10-09
+      { source: '/courts/the-glendale-lyceum', destination: '/ohio', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/maketewah-country-club', destination: '/ohio/cincinnati', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/swim-and-racquet-club', destination: '/ohio', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/orienta-beach-club', destination: '/new-york', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/lhirondelle-club-of-ruxton', destination: '/maryland', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/englewood-field-club', destination: '/new-jersey', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/brookline-platform-tennis-club-inc', destination: '/massachusetts', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/briarwood-country-club', destination: '/illinois', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/venice-beach-paddle-tennis-courts', destination: '/california/los-angeles', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/forest-lakes-swim-tennis-club', destination: '/virginia/charlottesville', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/mid-coast-recreation-center-inc', destination: '/', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/h-f-racquet-fitness-club', destination: '/illinois', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
+      { source: '/courts/tuxedo-paddle-courts', destination: '/courts/the-tuxedo-club', permanent: true }, // renamed 2026-10-09
+      { source: '/california/venice', destination: '/california', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/illinois/deerfield', destination: '/illinois', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/illinois/homewood', destination: '/illinois', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/massachusetts/brookline', destination: '/massachusetts', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/maryland/towson', destination: '/maryland', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/new-jersey/englewood', destination: '/new-jersey', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/new-york/mamaroneck', destination: '/new-york', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/ohio/columbus', destination: '/ohio', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/ohio/glendale', destination: '/ohio', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/maine/rockport', destination: '/', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/maine', destination: '/', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
       { source: '/courts/padel-greenpoint', destination: '/new-york/brooklyn', permanent: true }, // closed May 31 2026 (building sold)
       { source: '/courts/pepper-padel', destination: '/florida/north-miami', permanent: true }, // closed (last activity 2023), audit 2026-10-08
       { source: '/courts/naoa', destination: '/new-york/east-hampton', permanent: true }, // permanently closed per Google, audit 2026-10-08

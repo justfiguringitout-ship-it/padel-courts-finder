@@ -94,7 +94,7 @@ export default function PadelVsPickleballPage() {
         "name": "Which is more popular, padel or pickleball?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "In the United States, pickleball dominates with approximately 36 million players. Globally, padel has around 35 million players across 150+ countries and is the fastest-growing sport in Europe and Latin America. Padel is growing rapidly in the US, with 300+ clubs now operating across the country."
+          "text": "In the United States, pickleball dominates with approximately 36 million players. Globally, padel has around 35 million players across 150+ countries and is the fastest-growing sport in Europe and Latin America. Padel is growing rapidly in the US, with nearly 300 clubs now operating across the country."
         }
       },
       {
@@ -436,7 +436,7 @@ export default function PadelVsPickleballPage() {
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">Which is more popular, padel or pickleball?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">In the US, pickleball dominates with ~36 million players. Globally, padel has ~35 million players across 150+ countries and is the fastest-growing sport in Europe and Latin America. Padel is growing rapidly in the US with <Link href="/search" className="text-emerald-600 hover:underline">300+ clubs now operating</Link>.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">In the US, pickleball dominates with ~36 million players. Globally, padel has ~35 million players across 150+ countries and is the fastest-growing sport in Europe and Latin America. Padel is growing rapidly in the US with <Link href="/search" className="text-emerald-600 hover:underline">nearly 300 clubs now operating</Link>.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">Can you play padel on a pickleball court?</h3>
@@ -457,7 +457,7 @@ export default function PadelVsPickleballPage() {
           <div className="grid sm:grid-cols-3 gap-4">
             <Link href="/search" className="block border border-stone-700 rounded-lg p-5 hover:border-emerald-500/50 transition-colors text-center">
               <h3 className="font-semibold text-white mb-1">Find Courts Near You</h3>
-              <p className="text-sm text-stone-400">340+ padel clubs across the US &rarr;</p>
+              <p className="text-sm text-stone-400">320+ padel clubs across the US &rarr;</p>
             </Link>
             <Link href="/how-to-play" className="block border border-stone-700 rounded-lg p-5 hover:border-emerald-500/50 transition-colors text-center">
               <h3 className="font-semibold text-white mb-1">How to Play Padel</h3>
