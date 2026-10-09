@@ -147,7 +147,7 @@ const blogPosts: BlogPost[] = [
     slug: 'best-padel-clubs-new-jersey',
     title: 'Best Padel Clubs in New Jersey (2026)',
     category: 'best-clubs',
-    excerpt: 'New Jersey has 8 open padel clubs with 30 courts across 7 cities. We rank the best 7, including Centercourt Morristown, Padel United and Rax NJ.',
+    excerpt: 'New Jersey has 6 open padel clubs with 27 courts across 6 cities. We rank them all, including Centercourt Morristown, Padel United and Rax NJ.',
     date: '2026-03-21',
     readTime: '8 min read',
     imageAlt: 'New Jersey padel facilities',

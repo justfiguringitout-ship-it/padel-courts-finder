@@ -31,12 +31,13 @@ const STATE_CHIP: Record<TonightStatus["state"], string> = {
 
 function FactChips({ club }: { club: TonightClub }) {
   const setting = SETTING_LABEL[club.setting];
-  const chip = "inline-flex items-center h-6 px-2 rounded-full border border-stone-200 bg-white text-xs text-stone-700";
+  const chipBase = "inline-flex items-center h-6 px-2 rounded-full border text-xs";
+  const chip = `${chipBase} border-stone-200 bg-white text-stone-700`;
   return (
     <ul className="flex flex-wrap gap-1.5 mt-1.5" aria-label="Details">
       {setting && <li className={chip}>{setting}</li>}
       {club.lit && (
-        <li className={`${chip} border-amber-200 bg-amber-50 text-amber-900`}>
+        <li className={`${chipBase} border-amber-200 bg-amber-50 text-amber-900`}>
           <Moon className="w-3 h-3 mr-1" aria-hidden />
           Lit for night play
         </li>
@@ -59,7 +60,7 @@ function ActionLink({ club, city }: { club: TonightClub; city: string }) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackPlausibleEvent("Tonight book click", { club: club.name, city, kind: club.action!.label })}
-      className="shrink-0 inline-flex items-center justify-center h-9 px-3.5 rounded-lg bg-[#15803D] text-white text-sm font-semibold hover:bg-[#166534] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#15803D]"
+      className="shrink-0 inline-flex items-center justify-center h-10 px-3.5 rounded-lg bg-[#15803D] text-white text-sm font-semibold hover:bg-[#166534] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#15803D]"
     >
       {club.action.label}
       <span className="sr-only"> at {club.name} (opens in a new tab)</span>
@@ -262,6 +263,13 @@ export function PlayTonight({ data, city }: { data: TonightData; city: string })
 
   return (
     <div>
+      <p className="min-h-[1.75rem] text-lg font-semibold text-stone-900" aria-live="polite">
+        {ready
+          ? counts.now === 0 && counts.late === 0
+            ? "Nothing open right now or late tonight. Check the hours below for tomorrow."
+            : `${counts.now} ${counts.now === 1 ? "club" : "clubs"} open now, ${counts.late} open past 9 PM tonight.`
+          : ""}
+      </p>
       <p className="text-sm text-muted-foreground max-w-2xl">
         Live status for {counts.all} open {counts.all === 1 ? "club" : "clubs"}, worked out from each club&apos;s
         published hours{tzLabel ? ` in ${tzLabel}` : ""}.
@@ -281,7 +289,7 @@ export function PlayTonight({ data, city }: { data: TonightData; city: string })
                       <button
                         type="button"
                         onClick={() => setFilter("indoor")}
-                        className="font-semibold text-[#15803D] underline underline-offset-2"
+                        className="inline-flex items-center min-h-10 font-semibold text-[#15803D] underline underline-offset-2"
                       >
                         Show indoor courts
                       </button>
@@ -301,7 +309,7 @@ export function PlayTonight({ data, city }: { data: TonightData; city: string })
             type="button"
             aria-pressed={filter === f.key}
             onClick={() => setFilter(f.key)}
-            className={`inline-flex items-center gap-1.5 h-9 px-3 rounded-full border text-sm font-medium transition-colors ${
+            className={`inline-flex items-center gap-1.5 h-10 px-3 rounded-full border text-sm font-medium transition-colors ${
               filter === f.key
                 ? "bg-[#0f1b2d] border-[#0f1b2d] text-white"
                 : "bg-white border-stone-300 text-stone-800 hover:border-stone-500"

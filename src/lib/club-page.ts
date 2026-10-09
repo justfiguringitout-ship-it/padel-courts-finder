@@ -55,7 +55,8 @@ const RANGE_RE =
   /^~?\s*(\d{1,2})(?:(?::|h)(\d{2})?)?\s*(am|pm)?\s*[-–]\s*(\d{1,2})(?:(?::|h)(\d{2})?)?\s*(am|pm)?\s*$/i;
 
 export function parseDayHours(day: string, raw: string | undefined): DayHours {
-  const value = (raw ?? "").trim();
+  // "7h-midnight" and "noon" are written that way in some listings; read them as clock times.
+  const value = (raw ?? "").trim().replace(/\bmidnight\b/i, "0h").replace(/\bnoon\b/i, "12h");
   if (!value || /^(tba|tbd|n\/a|unknown)$/i.test(value)) return { day, kind: "unknown", label: "" };
   if (/^closed$/i.test(value)) return { day, kind: "closed", label: "Closed" };
   if (/^(24h|24\/7|0h-24h|00:00-24:00|open 24 hours)$/i.test(value)) {

@@ -347,7 +347,7 @@ export default function NewJerseyBestClubsPage() {
             The Garden State&apos;s Padel Boom
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            New Jersey has 8 open padel clubs with 30 courts across 7 cities, from Bergen County down to Monmouth County, all within reach of the NYC metro area. Two more are listed: Vamos Racquets in East Hanover is temporarily closed, and The Club at Marlboro is coming soon to Morganville.
+            New Jersey has 6 open padel clubs with 27 courts across 6 cities, from Bergen County down to Monmouth County, all within reach of the NYC metro area. Two more are listed: Vamos Racquets in East Hanover is temporarily closed, and The Club at Marlboro is coming soon to Morganville.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             Some private clubs listed in earlier versions of this guide have platform tennis courts rather than padel, so we removed them.

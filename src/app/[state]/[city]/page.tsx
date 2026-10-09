@@ -253,6 +253,14 @@ export default async function CityPage({ params }: CityPageProps) {
             {priceSummary && (
               <PlayerPriceSummaryLine summary={priceSummary} place={city.name} tone="dark" className="mb-6" />
             )}
+            {tonight.clubs.length + tonight.noHours.length > 0 && (
+              <a
+                href="#tonight-heading"
+                className="inline-flex items-center min-h-10 mb-5 px-4 rounded-full bg-turf/90 hover:bg-turf text-court font-semibold text-sm"
+              >
+                Can I play tonight? See who&apos;s open &darr;
+              </a>
+            )}
             <div className="flex flex-wrap gap-2">
               <Badge className="text-base px-4 py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
                 <Navigation className="w-4 h-4 mr-2 text-turf" />

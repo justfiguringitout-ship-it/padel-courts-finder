@@ -64,6 +64,9 @@ const nextConfig: NextConfig = {
       { source: '/ohio/glendale', destination: '/ohio', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
       { source: '/maine/rockport', destination: '/', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
       { source: '/maine', destination: '/', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
+      { source: '/courts/kotofit-brunswick-st', destination: '/new-jersey', permanent: true }, // badminton hall, no padel; audit 2026-10-09
+      { source: '/courts/kotofit-3rd-st-badminton', destination: '/new-jersey', permanent: true }, // badminton hall, no padel; audit 2026-10-09
+      { source: '/new-jersey/jersey-city', destination: '/new-jersey', permanent: false }, // no padel clubs left after 2026-10-09 audit
       { source: '/courts/padel-greenpoint', destination: '/new-york/brooklyn', permanent: true }, // closed May 31 2026 (building sold)
       { source: '/courts/pepper-padel', destination: '/florida/north-miami', permanent: true }, // closed (last activity 2023), audit 2026-10-08
       { source: '/courts/naoa', destination: '/new-york/east-hampton', permanent: true }, // permanently closed per Google, audit 2026-10-08

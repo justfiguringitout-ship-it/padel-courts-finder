@@ -43,11 +43,11 @@ export const changelog: ChangelogEntry[] = [
   {
     date: "2026-10-09",
     type: "removed",
-    title: "12 listings removed that are not padel",
+    title: "14 listings removed that are not padel",
     note:
-      "A sport check found that several private clubs were listed because booking apps file their platform tennis (\"paddle\") courts under padel. Platform tennis is a different game, played on a small raised deck. Removed: The Glendale Lyceum, Maketewah Country Club, Swim and Racquet Club, Orienta Beach Club, L'Hirondelle Club of Ruxton, Englewood Field Club, Brookline Platform Tennis Club and Briarwood Country Club (platform tennis), Venice Beach Paddle Tennis Courts (beach paddle tennis), and Forest Lakes, Mid-Coast Recreation Center and H-F Racquet & Fitness (no padel courts). Tuxedo Paddle Courts is now listed as The Tuxedo Club with its two padel courts.",
-    clubs: ["The Glendale Lyceum", "Maketewah Country Club", "Swim and Racquet Club", "Orienta Beach Club", "L'Hirondelle Club of Ruxton", "Englewood Field Club", "Brookline Platform Tennis Club Inc", "Briarwood Country Club", "Venice Beach Paddle Tennis Courts", "Forest Lakes Swim & Tennis Club", "Mid-Coast Recreation Center, Inc.", "H-F Racquet & Fitness Club", "The Tuxedo Club"],
-    count: 13,
+      "A sport check found that several private clubs were listed because booking apps file their platform tennis (\"paddle\") courts under padel. Platform tennis is a different game, played on a small raised deck. Removed: The Glendale Lyceum, Maketewah Country Club, Swim and Racquet Club, Orienta Beach Club, L'Hirondelle Club of Ruxton, Englewood Field Club, Brookline Platform Tennis Club and Briarwood Country Club (platform tennis), Venice Beach Paddle Tennis Courts (beach paddle tennis), Forest Lakes, Mid-Coast Recreation Center and H-F Racquet & Fitness (no padel courts), and two Kotofit badminton halls in Jersey City. Tuxedo Paddle Courts is now listed as The Tuxedo Club with its two padel courts.",
+    clubs: ["The Glendale Lyceum", "Maketewah Country Club", "Swim and Racquet Club", "Orienta Beach Club", "L'Hirondelle Club of Ruxton", "Englewood Field Club", "Brookline Platform Tennis Club Inc", "Briarwood Country Club", "Venice Beach Paddle Tennis Courts", "Forest Lakes Swim & Tennis Club", "Mid-Coast Recreation Center, Inc.", "H-F Racquet & Fitness Club", "Kotofit Brunswick St", "Kotofit 3rd St Badminton", "The Tuxedo Club"],
+    count: 15,
     commit: "3b20c2f",
   },
   {
