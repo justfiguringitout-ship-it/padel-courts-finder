@@ -175,12 +175,21 @@ export interface TrustStamp {
   date: string;
 }
 
-/** Verified stamp only when a person checked the record; otherwise a neutral date. */
+/**
+ * Trust stamp for the club page.
+ * - The owner confirmed the details with us: "Club details confirmed with owner in October 2026".
+ * - We checked the details ourselves: "Club details verified in October 2026".
+ * - Otherwise a neutral "Last updated" date, or nothing.
+ */
 export function getTrustStamp(court: AdaptedCourt): TrustStamp | undefined {
   const raw = court._original;
+  const owner = formatMonthYear(raw?.ownerConfirmedDate);
+  if (owner && raw?.ownerConfirmedDate) {
+    return { kind: "verified", text: `Club details confirmed with owner in ${owner}`, date: raw.ownerConfirmedDate };
+  }
   const when = formatMonthYear(raw?.verificationDate);
   if (!when || !raw?.verificationDate) return undefined;
-  if (raw.verified) return { kind: "verified", text: `Checked by a person · ${when}`, date: raw.verificationDate };
+  if (raw.verified) return { kind: "verified", text: `Club details verified in ${when}`, date: raw.verificationDate };
   return { kind: "updated", text: `Last updated ${when}`, date: raw.verificationDate };
 }
 
