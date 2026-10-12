@@ -124,9 +124,9 @@ const itemListData = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "itemListElement": [
-    product(1, "NOX AT10 Genius 18K", "https://www.padelcourtsfinder.com/blog/nox-at10-genius-18k-review", "272.00", AMZ.nox18k, 7.3),,
-    product(2, "NOX ML10 Pro Cup Rough Surface", "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review", "169.99", AMZ.ml10, 7.3),,
-    product(3, "NOX Pro Cup USPA Edition", "https://www.padelcourtsfinder.com/blog/best-nox-padel-rackets#nox-pro-cup-uspa", "119.00", AMZ.uspa, 7.3),,
+    product(1, "NOX AT10 Genius 18K", "https://www.padelcourtsfinder.com/blog/nox-at10-genius-18k-review", "272.00", AMZ.nox18k, 7.3),
+    product(2, "NOX ML10 Pro Cup Rough Surface", "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review", "169.99", AMZ.ml10, 7.3),
+    product(3, "NOX Pro Cup USPA Edition", "https://www.padelcourtsfinder.com/blog/best-nox-padel-rackets#nox-pro-cup-uspa", "119.00", AMZ.uspa, 7.3),
     product(4, "NOX AT10 Genius Attack 12K", "https://www.padelcourtsfinder.com/blog/nox-at10-genius-attack-review", "229.99", AMZ.attack12k, 6.7)
   ]
 };

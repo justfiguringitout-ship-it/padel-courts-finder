@@ -234,6 +234,10 @@ export default function HeadExtremeEvoReviewPage() {
                 <div className="font-semibold text-white">Best Budget Padel Rackets (2026)</div>
                 <p className="text-stone-400 text-sm mt-1">6 picks from $90 to $170, ranked by value</p>
               </Link>
+              <Link href="/blog/best-lightweight-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Best Lightweight Padel Rackets</div>
+                <p className="text-stone-400 text-sm mt-1">Six light rackets from 340g, ranked by weight</p>
+              </Link>
               <Link href="/blog/best-padel-rackets-beginners" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Beginner Rackets 2026</div>
                 <p className="text-stone-400 text-sm mt-1">Where the Evo ranks against the field</p>
