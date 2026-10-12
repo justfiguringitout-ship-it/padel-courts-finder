@@ -658,6 +658,17 @@ const blogPosts: BlogPost[] = [
     priceRange: '$170\u2013$280'
   },
   {
+    slug: 'best-lightweight-padel-rackets',
+    title: 'Best Lightweight Padel Rackets (2026)',
+    category: 'equipment',
+    excerpt: 'Six light rackets from 340g, ranked by weight: the lightest picks for beginners, women, advanced players and anyone whose arm wants less to swing.',
+    date: '2026-10-12',
+    readTime: '8 min read',
+    imageAlt: 'Best lightweight padel rackets 2026',
+    courtSlug: '',
+    priceRange: '$90\u2013$305'
+  },
+  {
     slug: 'best-nox-padel-rackets',
     title: 'Best NOX Padel Rackets (2026)',
     category: 'equipment',

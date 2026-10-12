@@ -264,6 +264,10 @@ export default function BabolatContactReviewPage() {
                 <div className="font-semibold text-white">Best Budget Padel Rackets (2026)</div>
                 <p className="text-stone-400 text-sm mt-1">6 picks from $90 to $170, ranked by value</p>
               </Link>
+              <Link href="/blog/best-lightweight-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Best Lightweight Padel Rackets</div>
+                <p className="text-stone-400 text-sm mt-1">The lightest racket we rate, with five more light picks</p>
+              </Link>
               <Link href="/blog/best-padel-rackets-beginners" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Beginner Rackets (2026)</div>
                 <p className="text-stone-400 text-sm mt-1">The Contact vs 4 rivals from $90&ndash;$130</p>
