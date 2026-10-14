@@ -39,6 +39,7 @@ import { GearWidget } from "@/components/GearWidget";
 import { CourtDiagram } from "@/components/club-page/court-diagram";
 import { ClubHours } from "@/components/club-page/club-hours";
 import { ClubCorrectionForm } from "@/components/club-page/club-correction-form";
+import { MembershipLeadForm } from "@/components/club-page/membership-lead-form";
 import { MapBoundary } from "@/components/club-page/map-boundary";
 import { cityBlogSlugs } from "@/data/page-content";
 import { getStates } from "@/lib/site-structure";
@@ -142,6 +143,8 @@ export default async function CourtPage({ params }: CourtPageProps) {
   const comingSoon = court.status === "coming_soon";
   const tempClosed = court.status === "temporarily_closed";
   const isOpenClub = court.status === "open";
+  // Members-only clubs get a lead form so players can ask about membership or a guest pass.
+  const showLeadForm = court.membersOnly === true && !tempClosed;
 
   const fullAddress = [court.address.streetAddress, court.address.city, `${court.address.stateCode} ${court.address.zipCode}`.trim()]
     .filter(Boolean)
@@ -411,10 +414,10 @@ export default async function CourtPage({ params }: CourtPageProps) {
               </dl>
 
               {/* Primary actions: only the ones that exist */}
-              {actions.length > 0 && (
+              {(actions.length > 0 || showLeadForm) && (
                 <div
                   className="club-actions"
-                  style={{ ["--club-actions" as string]: actions.length }}
+                  style={{ ["--club-actions" as string]: Math.max(actions.length, 1) }}
                 >
                   {actions.map((a, i) => (
                     <TrackedLink
@@ -429,6 +432,12 @@ export default async function CourtPage({ params }: CourtPageProps) {
                       <span>{a.label}</span>
                     </TrackedLink>
                   ))}
+                  {showLeadForm && (
+                    <a href="#membership" className="club-action is-lead">
+                      <Mail aria-hidden="true" />
+                      <span>Ask about membership</span>
+                    </a>
+                  )}
                 </div>
               )}
               {!court.bookingUrl && platform && !comingSoon && (
@@ -455,6 +464,21 @@ export default async function CourtPage({ params }: CourtPageProps) {
       </section>
 
       <div className="container mx-auto px-4 pb-12">
+        {/* Members-only clubs: ask about membership or a guest pass */}
+        {showLeadForm && (
+          <section id="membership" className="club-card club-lead" aria-labelledby="club-membership">
+            <div className="grid gap-6 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] md:gap-10">
+              <div>
+                <h2 id="club-membership" className="club-h2">Interested in playing at {court.name}?</h2>
+                <p id="lead-intro" className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  This club is members only. Tell us a bit about you and we will pass your note to the club.
+                </p>
+              </div>
+              <MembershipLeadForm slug={court.slug} name={court.name} />
+            </div>
+          </section>
+        )}
+
         <div className="club-layout">
           {/* The courts */}
           <section className="club-area-courts club-card" aria-labelledby="club-courts">

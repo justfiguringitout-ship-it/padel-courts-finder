@@ -35,6 +35,8 @@ export interface PadelCourt {
   instagram?: string;                            // Instagram URL
   facebook?: string;                             // Facebook URL
   membersOnly?: boolean;                         // Members-only / private club
+  membershipEmail?: string;                      // Where membership leads go (falls back to email). Never shown on the page.
+  membershipUrl?: string;                        // Club's own membership / guest pass page
   lessonsAvailable?: boolean;                    // Offers padel lessons
   rentalAvailable?: boolean;                     // Equipment rental available
   socialArea?: boolean;                          // Has social/lounge area
