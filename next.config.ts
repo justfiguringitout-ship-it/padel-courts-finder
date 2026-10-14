@@ -38,6 +38,7 @@ const nextConfig: NextConfig = {
       { source: '/courts/padel-39', destination: '/courts/padel39-north-austin', permanent: true }, // renamed 2026-09-29
       { source: '/courts/the-king-of-padel', destination: '/courts/the-king-of-padel-san-antonio', permanent: true }, // duplicate removed 2026-10-08
       { source: '/courts/cascades-tennis', destination: '/courts/aspen-meadows-racquet-club', permanent: true }, // renamed 2026-10-08
+      { source: '/courts/newport-pickleball-club-padel', destination: '/courts/newport-padel', permanent: true }, // renamed 2026-10-13
       { source: '/courts/6-love-sports', destination: '/florida/miami-beach', permanent: true }, // a league organizer, not a venue; audit 2026-10-09
       { source: '/courts/padel-country-club', destination: '/florida/miami', permanent: true }, // no evidence the venue exists; audit 2026-10-09
       { source: '/courts/the-glendale-lyceum', destination: '/ohio', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
@@ -76,6 +77,7 @@ const nextConfig: NextConfig = {
       { source: '/courts/golden-padel', destination: '/california/palm-desert', permanent: true }, // no evidence of a club, audit 2026-10-08
       { source: '/florida/deerfield-beach', destination: '/florida', permanent: false },
       { source: '/texas/hidalgo', destination: '/texas', permanent: false },
+      { source: '/florida/jacksonville-beach', destination: '/florida/jacksonville', permanent: false }, // Conquer Padel moved to its Jacksonville address 2026-10-13
       { source: '/courts/austin-padel-center-pop-up', destination: '/courts/austin-padel-center', permanent: true }, // permanent club opened 2026-08
       { source: '/courts/woodcourt-padel-and-pickleball', destination: '/courts/wepadel', permanent: true }, // rebranded, 2026-09-29
       { source: '/courts/net-racquet-club', destination: '/texas/farmers-branch', permanent: true }, // club closed, 2026-09-29

@@ -43,6 +43,25 @@ export const changelog: ChangelogEntry[] = [
   {
     date: "2026-10-13",
     type: "added",
+    title: "Pop's Padel added on Long Island, plus four clubs coming soon",
+    note:
+      "Pop's Padel in Freeport, NY opened on October 1 with four doubles courts and a singles court. Coming soon: Oakland Padel (two outdoor courts, soft opening November 1, listed by its owner), Boise Padel Club in Meridian, ID (four indoor courts, January 2027), Mouratoglou Tennis Center Noblesville in Indiana (six indoor padel courts) and Swing Racquet + Paddle in Raleigh (16 padel courts, 2028).",
+    clubs: ["Pop's Padel", "Oakland Padel", "Boise Padel Club", "Mouratoglou Tennis Center Noblesville", "Swing Racquet + Paddle"],
+    commit: "PENDING",
+  },
+  {
+    date: "2026-10-13",
+    type: "updated",
+    title: "Eight clubs that were coming soon are now open",
+    note:
+      "Padel Highway in Tucker, GA, The Padel Collective in Austin, DUS Padel in West Palm Beach, OH! Padel in Malvern, PA, Roslyn Padel on Long Island, Epic Padel Milwaukee, Ballers Boston Seaport and Newport Padel in Middletown, RI (renamed from Newport Pickleball Club) now show as open, with hours and court counts from their own sites and booking pages. We also corrected addresses for Conquer Padel Jacksonville (now Baycenter Road in Jacksonville), Cascadia Padel, Traditions Club and Arenna Denver Padel, court counts for Ace Padel Denver (seven) and DUS Padel (six), Glassbox Padel Club's hours, and dead websites or phone numbers for RxPADEL, Icon Padel Club and Roslyn Padel.",
+    clubs: ["Padel Highway", "The Padel Collective", "DUS Padel", "OH! Padel", "Roslyn Padel", "Epic Padel Milwaukee", "Ballers Boston Seaport", "Newport Padel"],
+    count: 20,
+    commit: "PENDING",
+  },
+  {
+    date: "2026-10-13",
+    type: "added",
     title: "Eight open clubs added, including Iowa's first",
     note:
       "PUDL Padel in Des Moines (Iowa's first padel club), Padel 9 in El Paso (nine courts), Arena SSC Wynwood in Miami, Arenna Denver Padel, Maywood Racquets Club in New Jersey and The Point Racket & Social Club on Johns Island, SC, plus two members-only clubs: Fort Wayne Country Club and the NC State University Club. Each was checked against the club's own site, booking page or posts.",
@@ -475,7 +494,7 @@ export const changelog: ChangelogEntry[] = [
       "Padel X Summer Club (Lincoln Road)",
       "Roslyn Padel",
       "Ace Padel Denver",
-      "Newport Pickleball Club (Padel)",
+      "Newport Padel",
       "NewGen Racquet Club",
       "Conquer Padel Jacksonville",
       "Jam Padel",
