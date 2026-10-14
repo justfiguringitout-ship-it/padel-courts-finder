@@ -751,6 +751,7 @@ export interface AdaptedCourt {
   instagram?: string;
   facebook?: string;
   membersOnly?: boolean;
+  access?: "members_only" | "guests_of_members" | "residents_only" | "resort_guests";
   lessonsAvailable?: boolean;
   rentalAvailable?: boolean;
   socialArea?: boolean;
@@ -971,6 +972,7 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
     instagram: normalizeInstagramUrl(court.instagram),
     facebook: normalizeFacebookUrl(court.facebook),
     membersOnly: court.membersOnly,
+    access: court.access,
     lessonsAvailable: court.lessonsAvailable,
     rentalAvailable: court.rentalAvailable,
     socialArea: court.socialArea,

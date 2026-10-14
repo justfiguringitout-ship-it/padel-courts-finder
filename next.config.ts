@@ -68,6 +68,9 @@ const nextConfig: NextConfig = {
       { source: '/courts/kotofit-brunswick-st', destination: '/new-jersey', permanent: true }, // badminton hall, no padel; audit 2026-10-09
       { source: '/courts/kotofit-3rd-st-badminton', destination: '/new-jersey', permanent: true }, // badminton hall, no padel; audit 2026-10-09
       { source: '/new-jersey/jersey-city', destination: '/new-jersey', permanent: false }, // no padel clubs left after 2026-10-09 audit
+      { source: '/courts/rancho-viejo-resort-country-club', destination: '/texas', permanent: true }, // no padel on the club's own site; audit 2026-10-13
+      { source: '/courts/society-las-olas-padel', destination: '/florida/fort-lauderdale', permanent: true }, // apartment tower, no evidence of a padel court; audit 2026-10-13
+      { source: '/texas/rancho-viejo', destination: '/texas', permanent: false },
       { source: '/courts/padel-greenpoint', destination: '/new-york/brooklyn', permanent: true }, // closed May 31 2026 (building sold)
       { source: '/courts/pepper-padel', destination: '/florida/north-miami', permanent: true }, // closed (last activity 2023), audit 2026-10-08
       { source: '/courts/naoa', destination: '/new-york/east-hampton', permanent: true }, // permanently closed per Google, audit 2026-10-08

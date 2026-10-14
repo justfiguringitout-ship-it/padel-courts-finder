@@ -42,6 +42,24 @@ export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
     date: "2026-10-13",
+    type: "verified",
+    title: "Private clubs checked: who can actually play",
+    note:
+      "We checked every club listed as members only against its own website and booking page. Six turned out to sell court time to the public (Replay Club, The Heights in Mendota Heights, Reserve Padel Solé Mia, Epic Padel Charlotte, Giammalva Padel Club and Columbus Padel Club). Others now say who can play: members only, members and their guests, residents only, or members and hotel guests. Court counts, phone numbers, addresses and prices were corrected where the clubs publish them.",
+    count: 55,
+    commit: "PENDING_MEMBERS",
+  },
+  {
+    date: "2026-10-13",
+    type: "removed",
+    title: "Two listings removed after the private club check",
+    note:
+      "Rancho Viejo Resort & Country Club lists tennis and pickleball but no padel, and we found no evidence of a padel court at the Society Las Olas apartment tower in Fort Lauderdale.",
+    clubs: ["Rancho Viejo Resort & Country Club", "Society Las Olas Padel"],
+    commit: "PENDING_MEMBERS",
+  },
+  {
+    date: "2026-10-13",
     type: "added",
     title: "Pop's Padel added on Long Island, plus four clubs coming soon",
     note:

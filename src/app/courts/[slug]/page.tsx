@@ -144,7 +144,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
   const tempClosed = court.status === "temporarily_closed";
   const isOpenClub = court.status === "open";
   // Members-only clubs get a lead form so players can ask about membership or a guest pass.
-  const showLeadForm = court.membersOnly === true && !tempClosed;
+  const showLeadForm = court.membersOnly === true && !tempClosed && court.access !== "residents_only";
 
   const fullAddress = [court.address.streetAddress, court.address.city, `${court.address.stateCode} ${court.address.zipCode}`.trim()]
     .filter(Boolean)
@@ -205,9 +205,15 @@ export default async function CourtPage({ params }: CourtPageProps) {
       : comingSoon
         ? { value: "Not announced", sub: "no prices yet" }
         : { value: "Not published", sub: "ask the club" };
+  const ACCESS_FACT = {
+    members_only: { value: "Members only", sub: "membership needed" },
+    guests_of_members: { value: "Members and guests", sub: "guests play with a member" },
+    residents_only: { value: "Residents only", sub: "for homeowners and residents" },
+    resort_guests: { value: "Members and hotel guests", sub: "hotel guests can book" },
+  } as const;
   const accessFact =
     court.membersOnly === true
-      ? { value: "Members only", sub: "membership needed" }
+      ? ACCESS_FACT[court.access ?? "members_only"]
       : court.membersOnly === false
         ? { value: "Open to public", sub: comingSoon ? "once it opens" : "no membership needed" }
         : { value: "Not confirmed", sub: "ask about guest play" };
@@ -335,7 +341,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
                 {court.featured && (
                   <Badge className="bg-amber-500 hover:bg-amber-600 text-white">Featured Club</Badge>
                 )}
-                {court.membersOnly && <span className="club-chip club-chip-private">Private club</span>}
+                {court.membersOnly && <span className="club-chip club-chip-private">{court.access === "residents_only" ? "Residents only" : "Private club"}</span>}
                 {stamp && (
                   <span
                     className={`club-stamp ${stamp.kind === "verified" ? "is-verified" : "is-updated"}`}

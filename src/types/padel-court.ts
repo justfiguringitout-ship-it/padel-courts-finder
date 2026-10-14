@@ -36,7 +36,8 @@ export interface PadelCourt {
   facebook?: string;                             // Facebook URL
   membersOnly?: boolean;                         // Members-only / private club
   membershipEmail?: string;                      // Where membership leads go (falls back to email). Never shown on the page.
-  membershipUrl?: string;                        // Club's own membership / guest pass page
+  membershipUrl?: string;
+  access?: "members_only" | "guests_of_members" | "residents_only" | "resort_guests"; // who can play when membersOnly is true (audit 2026-10-13)                        // Club's own membership / guest pass page
   lessonsAvailable?: boolean;                    // Offers padel lessons
   rentalAvailable?: boolean;                     // Equipment rental available
   socialArea?: boolean;                          // Has social/lounge area
