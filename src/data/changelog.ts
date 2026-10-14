@@ -47,7 +47,7 @@ export const changelog: ChangelogEntry[] = [
     note:
       "Pop's Padel in Freeport, NY opened on October 1 with four doubles courts and a singles court. Coming soon: Oakland Padel (two outdoor courts, soft opening November 1, listed by its owner), Boise Padel Club in Meridian, ID (four indoor courts, January 2027), Mouratoglou Tennis Center Noblesville in Indiana (six indoor padel courts) and Swing Racquet + Paddle in Raleigh (16 padel courts, 2028).",
     clubs: ["Pop's Padel", "Oakland Padel", "Boise Padel Club", "Mouratoglou Tennis Center Noblesville", "Swing Racquet + Paddle"],
-    commit: "PENDING",
+    commit: "8d87d34",
   },
   {
     date: "2026-10-13",
@@ -57,7 +57,7 @@ export const changelog: ChangelogEntry[] = [
       "Padel Highway in Tucker, GA, The Padel Collective in Austin, DUS Padel in West Palm Beach, OH! Padel in Malvern, PA, Roslyn Padel on Long Island, Epic Padel Milwaukee, Ballers Boston Seaport and Newport Padel in Middletown, RI (renamed from Newport Pickleball Club) now show as open, with hours and court counts from their own sites and booking pages. We also corrected addresses for Conquer Padel Jacksonville (now Baycenter Road in Jacksonville), Cascadia Padel, Traditions Club and Arenna Denver Padel, court counts for Ace Padel Denver (seven) and DUS Padel (six), Glassbox Padel Club's hours, and dead websites or phone numbers for RxPADEL, Icon Padel Club and Roslyn Padel.",
     clubs: ["Padel Highway", "The Padel Collective", "DUS Padel", "OH! Padel", "Roslyn Padel", "Epic Padel Milwaukee", "Ballers Boston Seaport", "Newport Padel"],
     count: 20,
-    commit: "PENDING",
+    commit: "8d87d34",
   },
   {
     date: "2026-10-13",
