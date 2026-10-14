@@ -47,7 +47,7 @@ export const changelog: ChangelogEntry[] = [
     note:
       "PUDL Padel in Des Moines (Iowa's first padel club), Padel 9 in El Paso (nine courts), Arena SSC Wynwood in Miami, Arenna Denver Padel, Maywood Racquets Club in New Jersey and The Point Racket & Social Club on Johns Island, SC, plus two members-only clubs: Fort Wayne Country Club and the NC State University Club. Each was checked against the club's own site, booking page or posts.",
     clubs: ["PUDL Padel", "Padel 9", "Arena SSC Wynwood", "Arenna Denver Padel", "Maywood Racquets Club", "The Point Racket & Social Club", "Fort Wayne Country Club", "NC State University Club"],
-    commit: "PENDING_FINDER",
+    commit: "3027728",
   },
   {
     date: "2026-10-13",
@@ -56,7 +56,7 @@ export const changelog: ChangelogEntry[] = [
     note:
       "The Arena Club in Chattanooga (two indoor courts, fall 2026), Three Rackets in Broomfield, CO (five indoor courts, opening moved to November) and ACE Padel Coconut Grove in Miami (five outdoor courts, four under a canopy).",
     clubs: ["The Arena Club", "Three Rackets", "Ace Padel Coconut Grove"],
-    commit: "PENDING_FINDER",
+    commit: "3027728",
   },
   {
     date: "2026-10-09",
