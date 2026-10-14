@@ -44,7 +44,7 @@ const blogPosts: BlogPost[] = [
     slug: 'best-padel-clubs-miami',
     title: 'Best Padel Clubs in Miami (2026)',
     category: 'best-clubs',
-    excerpt: 'Miami-Dade has 36 open padel clubs and 198+ courts. Ultra Padel Club\'s 29-court flagship, Urban Padel\'s indoor paradise, and the full South Florida scene.',
+    excerpt: 'Miami-Dade has 35+ open padel clubs and 200+ courts. Ultra Padel Club\'s 29-court flagship, Urban Padel\'s indoor paradise, and the full South Florida scene.',
     date: '2026-03-21',
     readTime: '10 min read',
     imageAlt: 'Miami padel courts with ocean views',

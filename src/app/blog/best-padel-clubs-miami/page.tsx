@@ -4,13 +4,13 @@ import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Miami (2026) | Complete South Florida Guide',
-  description: 'Explore Miami-Dade\'s 36 open padel clubs and 198+ courts in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
+  description: 'Explore Miami-Dade\'s 35+ open padel clubs and 200+ courts in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-miami',
   },
   openGraph: {
     title: 'Best Padel Clubs in Miami (2026) | Complete South Florida Guide',
-    description: 'Explore Miami-Dade\'s 36 open padel clubs and 198+ courts in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
+    description: 'Explore Miami-Dade\'s 35+ open padel clubs and 200+ courts in 2026. Ultra Padel\'s 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-miami',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/images/courts/ultra-padel-club.webp' }],
@@ -366,7 +366,7 @@ export default function MiamiBestClubsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in Miami (2026) | Complete South Florida Guide",
-    "description": "Explore Miami-Dade's 36 open padel clubs and 198+ courts in 2026. Ultra Padel's 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.",
+    "description": "Explore Miami-Dade's 35+ open padel clubs and 200+ courts in 2026. Ultra Padel's 29 courts, Urban Padel, Wynwood & more. Rankings, pricing & guide.",
     "image": "https://www.padelcourtsfinder.com/images/courts/ultra-padel-club.webp",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-10-09T00:00:00Z",
@@ -432,7 +432,7 @@ export default function MiamiBestClubsPage() {
               <div className="text-sm text-stone-600">Open Clubs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-padel-green">198+</div>
+              <div className="text-3xl font-bold text-padel-green">200+</div>
               <div className="text-sm text-stone-600">Courts</div>
             </div>
             <div>
@@ -453,7 +453,7 @@ export default function MiamiBestClubsPage() {
             Miami: America&apos;s Undisputed Padel Capital
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            No city in the United States can match Miami&apos;s padel scene. Miami-Dade County has 36 open padel clubs with at least 198 courts between them (three clubs do not list a court count), and one more club is on the way. Miami itself has 18 of those clubs, and the rest are in Doral, Miami Beach, North Miami, Aventura, Key Biscayne and Hialeah. The Latin American influence, year-round outdoor weather, and a fitness-obsessed culture have made South Florida the epicenter of padel in America.
+            No city in the United States can match Miami&apos;s padel scene. Miami-Dade County has more than 35 open padel clubs with over 200 courts between them, and more are on the way. About half are in the city of Miami, and the rest are in Doral, Miami Beach, North Miami, Aventura, Key Biscayne and Hialeah. The Latin American influence, year-round outdoor weather, and a fitness-obsessed culture have made South Florida the epicenter of padel in America.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             The scale is staggering. <Link href="/courts/ultra-padel-club" className="text-padel-green hover:underline">Ultra Padel Club</Link> alone operates 29 courts in Little Haiti -- the single largest padel facility in the US. <Link href="/courts/urban-padel" className="text-padel-green hover:underline">Urban Padel</Link> in Doral claims the largest indoor padel facility with 12 climate-controlled courts. From luxury members-only clubs like <Link href="/courts/sunset-padel" className="text-padel-green hover:underline">Sunset Padel</Link> in Miami Beach to budget-friendly options at <Link href="/courts/champions-padel-club" className="text-padel-green hover:underline">Champions Padel Club</Link> starting at $25/hour, there is a padel club for every player and every budget.
