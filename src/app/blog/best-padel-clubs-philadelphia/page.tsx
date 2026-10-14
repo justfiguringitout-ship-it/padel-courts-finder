@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { withReferral } from "@/lib/referral";
 import Link from 'next/link';
 import { MapPin, Globe, Clock, Star, Users } from 'lucide-react';
 
@@ -342,7 +343,7 @@ export default function PhiladelphiaBestClubsPage() {
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">{club.website}</a>
+                      <a href={withReferral(`https://${club.website}`, "city_guide")} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">{club.website}</a>
                     </div>
                   )}
                 </div>

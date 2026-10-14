@@ -137,7 +137,7 @@ const blogPosts: BlogPost[] = [
     slug: 'best-padel-clubs-fort-lauderdale',
     title: 'Best Padel Clubs in Fort Lauderdale (2026)',
     category: 'best-clubs',
-    excerpt: 'Broward County\'s padel scene features 6 clubs with 27+ courts. 10by20\'s dual locations, Replay Club\'s luxury wellness experience, and Society Las Olas downtown.',
+    excerpt: 'Broward County\'s padel scene, ranked: 10by20\'s two locations, Replay Club\'s wellness-led club and more, with prices and booking tips.',
     date: '2026-03-21',
     readTime: '8 min read',
     imageAlt: 'Fort Lauderdale padel courts',

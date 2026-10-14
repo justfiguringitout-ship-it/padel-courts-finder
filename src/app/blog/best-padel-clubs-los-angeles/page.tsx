@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { withReferral } from "@/lib/referral";
 import Link from 'next/link';
 import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
@@ -76,7 +77,7 @@ const clubs: Club[] = [
     location: 'Culver City, Los Angeles, CA',
     courts: '3 indoor courts',
     price: '$$$',
-    website: 'padelup.com',
+    website: 'www.padelup.club',
     description: 'Los Angeles\' first indoor padel club features 3 courts with high ceilings, professional coaching, and premium wellness amenities. Padel Up Culver City combines quality indoor play with sauna, cold plunge, and comfortable locker rooms for a complete experience.',
     highlights: [
       '3 indoor courts with high ceilings',
@@ -141,7 +142,7 @@ const clubs: Club[] = [
     location: 'Westfield Century City, Los Angeles, CA',
     courts: 'Outdoor courts',
     price: '$$-$$$',
-    website: 'padelup.com',
+    website: 'www.padelup.club',
     description: 'Premium outdoor padel atop the Westfield Century City mall. Padel Up Century City offers rooftop courts with quality turf, LED lighting for night play, lessons, equipment rentals, and a pro shop. The stunning rooftop views and convenient mall location make it a unique LA padel experience.',
     highlights: [
       'Rooftop courts with views',
@@ -360,7 +361,7 @@ export default function LosAngelesBestClubsPage() {
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
+                      <a href={withReferral(`https://${club.website}`, "city_guide")} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>

@@ -1,16 +1,17 @@
 import { Metadata } from 'next';
+import { withReferral } from "@/lib/referral";
 import Link from 'next/link';
 import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Fort Lauderdale (2026) | Complete Broward County Guide',
-  description: 'Discover Fort Lauderdale\'s 5 best padel clubs in 2026. From 10by20\'s premium courts to Replay Club luxury. Rankings, pricing & Broward County guide.',
+  description: 'Discover Fort Lauderdale\'s 4 best padel clubs in 2026. From 10by20\'s premium courts to Replay Club luxury. Rankings, pricing & Broward County guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-fort-lauderdale',
   },
   openGraph: {
     title: 'Best Padel Clubs in Fort Lauderdale (2026) | Complete Broward County Guide',
-    description: 'Discover Fort Lauderdale\'s 5 best padel clubs in 2026. From 10by20\'s premium courts to Replay Club luxury. Rankings, pricing & Broward County guide.',
+    description: 'Discover Fort Lauderdale\'s 4 best padel clubs in 2026. From 10by20\'s premium courts to Replay Club luxury. Rankings, pricing & Broward County guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-fort-lauderdale',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
@@ -139,37 +140,6 @@ const clubs: Club[] = [
   },
   {
     rank: 4,
-    name: 'Society Las Olas Padel',
-    slug: 'society-las-olas-padel',
-    score: 84,
-    location: 'Society Las Olas, Fort Lauderdale, FL',
-    courts: '4 courts',
-    price: '$$',
-    description: 'Padel meets downtown living at Society Las Olas, Fort Lauderdale\'s trendy apartment complex on iconic Las Olas Boulevard. With 4 courts, racket and ball rentals, and coaching available, this is the most accessible entry point to padel in central Fort Lauderdale.',
-    highlights: [
-      '4 padel courts at Las Olas complex',
-      'Prime downtown Fort Lauderdale location',
-      'Racket & ball rental available',
-      'Coaching sessions offered',
-      'Walkable Las Olas Boulevard setting',
-      'Convenient for downtown residents'
-    ],
-    programs: [
-      'Court bookings',
-      'Equipment rental',
-      'Coaching sessions',
-      'Open play',
-      'Beginner introductions'
-    ],
-    bestFor: [
-      'Downtown Fort Lauderdale residents',
-      'Las Olas Boulevard visitors',
-      'Beginners trying padel',
-      'Casual social players'
-    ]
-  },
-  {
-    rank: 5,
     name: 'RxPADEL',
     slug: 'rxpadel',
     score: 90,
@@ -177,7 +147,7 @@ const clubs: Club[] = [
     courts: '1 indoor court',
     price: '$$',
     email: 'info@rxpadel.com',
-    website: 'rxpadel.com',
+    website: 'kineticracquet.com',
     description: 'RxPADEL is South Florida\'s go-to for professional padel coaching, operating out of the indoor Kinetic Racquet Club in Boynton Beach. While it has just one competition-grade court, the focus here is on quality instruction with private lessons ranging from $40-90/hour.',
     highlights: [
       'Professional coaching-focused facility',
@@ -209,7 +179,7 @@ export default function FortLauderdaleBestClubsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Clubs in Fort Lauderdale (2026) | Complete Broward County Guide",
-    "description": "Discover Fort Lauderdale's 5 best padel clubs in 2026. From 10by20's premium courts to Replay Club luxury.",
+    "description": "Discover Fort Lauderdale's 4 best padel clubs in 2026. From 10by20's premium courts to Replay Club luxury.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-21T00:00:00Z",
     "dateModified": "2026-03-21T00:00:00Z",
@@ -296,7 +266,7 @@ export default function FortLauderdaleBestClubsPage() {
             Fort Lauderdale: Broward County&apos;s Padel Scene Takes Shape
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            While Miami grabs the padel headlines, its northern neighbor has been quietly building an impressive padel infrastructure. Fort Lauderdale and Broward County now count 5 clubs with more than 20 courts, offering everything from luxury indoor facilities with spa amenities to professional coaching academies and downtown courts.
+            While Miami grabs the padel headlines, its northern neighbor has been quietly building an impressive padel infrastructure. Fort Lauderdale and Broward County now have a solid set of padel clubs, offering everything from luxury indoor facilities with spa amenities to professional coaching academies and downtown courts.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             The standout story is the <Link href="/courts/10by20-padel-downtown-fort-lauderdale" className="text-padel-green hover:underline">10by20 chain</Link>, which has planted two locations in Fort Lauderdale alone, including a 7-court downtown flagship with bar and restaurant. Meanwhile, <Link href="/courts/replay-club" className="text-padel-green hover:underline">Replay Club</Link> in nearby Boynton Beach has raised the bar with 10 indoor courts inside a full-service wellness facility.
@@ -312,7 +282,6 @@ export default function FortLauderdaleBestClubsPage() {
             <p><strong>Best Overall:</strong> <Link href="/courts/10by20-padel-downtown-fort-lauderdale" className="text-padel-green hover:underline">10by20 Downtown</Link> (7 courts, bar/restaurant)</p>
             <p><strong>Best Luxury:</strong> <Link href="/courts/replay-club" className="text-padel-green hover:underline">Replay Club</Link> (10 courts, spa, gym)</p>
             <p><strong>Best Value:</strong> <Link href="/courts/10by20-padel-fort-lauderdale" className="text-padel-green hover:underline">10by20 Original</Link> ($199/mo unlimited daytime)</p>
-            <p><strong>Best Downtown:</strong> <Link href="/courts/society-las-olas-padel" className="text-padel-green hover:underline">Society Las Olas</Link> (Las Olas Boulevard)</p>
             <p><strong>Best Coaching:</strong> <Link href="/courts/rxpadel" className="text-padel-green hover:underline">RxPADEL</Link> (professional instruction focus)</p>
           </div>
         </div>
@@ -364,7 +333,7 @@ export default function FortLauderdaleBestClubsPage() {
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
+                      <a href={withReferral(`https://${club.website}`, "city_guide")} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>

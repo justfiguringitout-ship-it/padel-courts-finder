@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { withReferral } from "@/lib/referral";
 import Link from 'next/link';
 import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
@@ -44,7 +45,7 @@ const clubs: Club[] = [
     location: 'Little Haiti, Miami, FL',
     courts: '29 courts (indoor & outdoor)',
     price: '$$-$$$',
-    website: 'ultrapadel.com',
+    website: 'ultrapadelclub.com',
     description: 'The largest padel facility in the United States. Ultra Padel Club\'s Magic City flagship in Little Haiti offers a staggering 29 state-of-the-art courts across indoor and outdoor settings, along with a swimming pool, wellness center, pro shop, and kids courts. Nothing else in Miami -- or the country -- comes close to this scale.',
     highlights: [
       '29 courts: the largest padel facility in the US',
@@ -77,7 +78,7 @@ const clubs: Club[] = [
     location: 'Doral, FL',
     courts: '12 indoor courts',
     price: '$$-$$$',
-    website: 'urbanpadel.com',
+    website: 'urbanpadel.us',
     description: 'The largest indoor padel facility in the US, Urban Padel in Doral features 12 climate-controlled courts with an unlimited membership option at $299/month. The facility partners with UberEats for on-court food delivery and hosts regular tournaments and events, making it a complete padel destination.',
     highlights: [
       '12 climate-controlled indoor courts',
@@ -302,7 +303,7 @@ const clubs: Club[] = [
     location: 'Doral, FL',
     courts: '5 indoor courts',
     price: '$$',
-    website: 'championspadel.com',
+    website: 'www.championspadelclub.com',
     description: 'Miami\'s premier indoor padel destination in Doral features 5 high-quality courts with artificial turf and LED lighting at some of the most affordable rates in the area. Champions Padel Club also offers pickleball courts, kids clinics, big screens, and an active WhatsApp community.',
     highlights: [
       '5 high-quality indoor courts',
@@ -521,7 +522,7 @@ export default function MiamiBestClubsPage() {
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
+                      <a href={withReferral(`https://${club.website}`, "city_guide")} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import { withReferral } from '@/lib/referral';
 import { trackClubWebsiteClick, trackClubPhoneClick, trackSocialClick, trackAffiliateClick, trackFeaturedListingClick } from '@/lib/analytics';
 
 interface TrackedLinkProps {
@@ -41,8 +42,11 @@ export function TrackedLink({ href, type, clubName, productName, platform, child
     }
   };
 
+  // Club links carry a referral tag so clubs see us in their own analytics
+  const outHref = type === 'website' || type === 'featured' ? withReferral(href) : href;
+
   return (
-    <a href={href} onClick={handleClick} rel={resolvedRel} {...props}>
+    <a href={outHref} onClick={handleClick} rel={resolvedRel} {...props}>
       {children}
     </a>
   );

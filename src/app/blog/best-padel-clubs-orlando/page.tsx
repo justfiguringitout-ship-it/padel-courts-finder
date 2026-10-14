@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { withReferral } from "@/lib/referral";
 import Link from 'next/link';
 import { MapPin, Phone, Globe, Mail, Clock, Star, Users } from 'lucide-react';
 
@@ -108,7 +109,7 @@ const clubs: Club[] = [
     location: 'Orlando, FL',
     courts: '2 indoor courts',
     price: '$$-$$$',
-    website: 'orlandopadelclub.com',
+    website: 'playtomic.io/orlando-padel-club/021f6ec2-362b-4604-a697-0ed98e1c2de6',
     description: 'A community-focused indoor padel facility offering year-round play in climate-controlled comfort. Orlando Padel Club Indoor has earned a perfect 5.0 Google rating thanks to excellent coaching clinics, regular social events, and a welcoming atmosphere for all skill levels. The 90-minute court sessions at $110 provide generous play time.',
     highlights: [
       '2 climate-controlled indoor courts',
@@ -359,7 +360,7 @@ export default function OrlandoBestClubsPage() {
                   {club.website && (
                     <div className="flex items-center gap-2 text-stone-700">
                       <Globe className="w-5 h-5 text-padel-green flex-shrink-0" />
-                      <a href={`https://${club.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
+                      <a href={withReferral(`https://${club.website}`, "city_guide")} target="_blank" rel="noopener noreferrer" className="hover:text-padel-green">
                         {club.website}
                       </a>
                     </div>

@@ -1,3 +1,4 @@
+import { withReferral } from "@/lib/referral";
 /**
  * Data for the "Can I play tonight?" block on city pages.
  *
@@ -97,7 +98,7 @@ export function getTonightData(courts: AdaptedCourt[]): TonightData {
     const clock = hasClockHours(hours.days);
     const layout = getCourtLayout(court);
     const price = getClubPlayerPrice(court);
-    const href = court.bookingUrl || court.website;
+    const href = withReferral(court.bookingUrl || court.website, "play_tonight");
     return {
       slug: court.slug,
       name: court.name,
