@@ -300,7 +300,7 @@ const blogPosts: BlogPost[] = [
     slug: 'padel-gifts',
     title: 'Padel Gifts (2026): What Players Actually Want, at Every Budget',
     category: 'equipment',
-    excerpt: 'For her, for him, and under $50 — every pick verified and recommended on this site, from $14 stocking stuffers to flagship rackets.',
+    excerpt: 'For her, for him, and under $50 — every pick verified and recommended on this site, from $15 stocking stuffers to flagship rackets.',
     date: '2026-07-31',
     readTime: '6 min read',
     imageAlt: 'Best padel gifts at every budget',
@@ -310,7 +310,7 @@ const blogPosts: BlogPost[] = [
     slug: 'best-round-padel-rackets',
     title: 'Best Round Padel Rackets (2026): Control & Forgiveness Picks',
     category: 'equipment',
-    excerpt: 'The control shape, done right — our tested round picks from $90 to $170, and who the round head shape actually suits.',
+    excerpt: 'The control shape, done right — our tested round picks from $90, and who the round head shape actually suits.',
     date: '2026-07-31',
     readTime: '6 min read',
     imageAlt: 'Best round padel rackets compared',
@@ -320,7 +320,7 @@ const blogPosts: BlogPost[] = [
     slug: 'best-teardrop-padel-rackets',
     title: 'Best Teardrop Padel Rackets (2026): Power Meets Forgiveness',
     category: 'equipment',
-    excerpt: 'The all-rounder shape — tested teardrop picks that add real attacking power without diamond punishment, from $189.',
+    excerpt: 'The all-rounder shape — tested teardrop picks that add real attacking power without diamond punishment, from $209.',
     date: '2026-07-31',
     readTime: '6 min read',
     imageAlt: 'Best teardrop padel rackets compared',
@@ -360,7 +360,7 @@ const blogPosts: BlogPost[] = [
     slug: 'best-diamond-padel-rackets',
     title: 'Best Diamond Padel Rackets (2026): Maximum Power, Ranked',
     category: 'equipment',
-    excerpt: 'Four tested diamond frames ranked from $249 to $399 — with an honest take on who should actually swing one.',
+    excerpt: 'Four tested diamond frames ranked from $230 to $399 — with an honest take on who should actually swing one.',
     date: '2026-07-31',
     readTime: '6 min read',
     imageAlt: 'Best diamond padel rackets compared',
@@ -385,18 +385,18 @@ const blogPosts: BlogPost[] = [
     readTime: '9 min read',
     imageAlt: 'Best power padel rackets 2026',
     courtSlug: '',
-    priceRange: '$230–$320'
+    priceRange: '$230–$399'
   },
   {
     slug: 'best-padel-rackets-control',
     title: 'Best Control Padel Rackets (2026) — Top 5 for Precision & Comfort',
     category: 'equipment',
-    excerpt: 'The 5 most precise, arm-friendly rackets from our testing, ranked by control and comfort scores — from an $89 starter to a $272 flagship.',
+    excerpt: 'The 5 most precise, arm-friendly rackets from our testing, ranked by control and comfort scores — from an $89 starter to a $260 flagship.',
     date: '2026-07-03',
     readTime: '9 min read',
     imageAlt: 'Best control padel rackets 2026',
     courtSlug: '',
-    priceRange: '$89–$272'
+    priceRange: '$89–$260'
   },
   {
     slug: 'best-padel-shoes',
@@ -407,7 +407,7 @@ const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     imageAlt: 'Best padel shoes 2026',
     courtSlug: '',
-    priceRange: '$89–$129'
+    priceRange: '$109–$170'
   },
   {
     slug: 'best-padel-balls',
@@ -418,7 +418,7 @@ const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     imageAlt: 'Best padel balls 2026',
     courtSlug: '',
-    priceRange: '$13–$15'
+    priceRange: '$12–$15'
   },
   {
     slug: 'best-padel-bags',
@@ -429,7 +429,7 @@ const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     imageAlt: 'Best padel bags 2026',
     courtSlug: '',
-    priceRange: '$59–$99'
+    priceRange: '$52–$99'
   },
   {
     slug: 'padel-accessories',
@@ -440,7 +440,7 @@ const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     imageAlt: 'Best padel accessories under $30',
     courtSlug: '',
-    priceRange: '$13–$27'
+    priceRange: '$15–$35'
   },
   {
     slug: 'nox-at10-genius-attack-review',
@@ -484,7 +484,7 @@ const blogPosts: BlogPost[] = [
     readTime: '4 min read',
     imageAlt: 'NOX AT10 Genius 18K padel racket review',
     courtSlug: '',
-    priceRange: '$272'
+    priceRange: '$260'
   },
   {
     slug: 'head-extreme-pro-review',
@@ -495,16 +495,16 @@ const blogPosts: BlogPost[] = [
     readTime: '4 min read',
     imageAlt: 'HEAD Extreme Pro padel racket review',
     courtSlug: '',
-    priceRange: '$320'
+    priceRange: '$300'
   },
   {
     slug: 'wilson-bela-v3-review',
-    title: 'Wilson Bela V3 Review (2026)',
+    title: 'Wilson Bela Pro V3 Review (2026)',
     category: 'equipment',
     excerpt: 'Bela’s 24K carbon flagship reviewed: 9/10 power, premium price, honest verdict.',
     date: '2026-07-05',
     readTime: '4 min read',
-    imageAlt: 'Wilson Bela V3 padel racket review',
+    imageAlt: 'Wilson Bela Pro V3 padel racket review',
     courtSlug: '',
     priceRange: '$399'
   },
@@ -517,7 +517,7 @@ const blogPosts: BlogPost[] = [
     readTime: '4 min read',
     imageAlt: 'Babolat Technical Viper padel racket review',
     courtSlug: '',
-    priceRange: '$249'
+    priceRange: '$230'
   },
   {
     slug: 'nox-ml10-pro-cup-review',
@@ -528,7 +528,7 @@ const blogPosts: BlogPost[] = [
     readTime: '4 min read',
     imageAlt: 'NOX ML10 Pro Cup padel racket review',
     courtSlug: '',
-    priceRange: '$170'
+    priceRange: 'Unavailable'
   },
   {
     slug: 'adidas-metalbone-hrd-review',
@@ -539,7 +539,7 @@ const blogPosts: BlogPost[] = [
     readTime: '4 min read',
     imageAlt: 'Adidas Metalbone HRD+ 3.3 padel racket review',
     courtSlug: '',
-    priceRange: '$280'
+    priceRange: '$260'
   },
   {
     slug: 'babolat-contact-review',
@@ -561,7 +561,7 @@ const blogPosts: BlogPost[] = [
     readTime: '4 min read',
     imageAlt: 'Wilson Blade Elite V2 padel racket review',
     courtSlug: '',
-    priceRange: '$189'
+    priceRange: '$209'
   },
   {
     slug: 'padel-bandeja-explained',
@@ -617,45 +617,45 @@ const blogPosts: BlogPost[] = [
     slug: 'padel-gifts-mothers-day-2026',
     title: 'Best Padel Gifts for Mom (2026) — 12 Ideas She\'ll Actually Use',
     category: 'equipment',
-    excerpt: 'From beginner rackets to premium bags, 12 curated padel gifts at every budget — $14 to $399. Gift guide for the padel-loving mom.',
+    excerpt: 'From beginner rackets to premium bags, 12 curated padel gifts at every budget — $15 to $399. Gift guide for the padel-loving mom.',
     date: '2026-03-25',
     readTime: '8 min read',
     imageAlt: 'Padel gifts for Mother\'s Day 2026',
     courtSlug: '',
-    priceRange: '$14\u2013$399'
+    priceRange: '$15\u2013$399'
   },
   {
     slug: 'padel-gifts-fathers-day-2026',
     title: 'Best Padel Gifts for Dad (2026) — 12 Ideas He\'ll Actually Use',
     category: 'equipment',
-    excerpt: 'From beginner rackets to premium bags, 12 curated padel gifts at every budget — $14 to $399. Gift guide for the padel-loving dad.',
+    excerpt: 'From beginner rackets to premium bags, 12 curated padel gifts at every budget — $15 to $399. Gift guide for the padel-loving dad.',
     date: '2026-03-26',
     readTime: '8 min read',
     imageAlt: 'Padel gifts for Father\'s Day 2026',
     courtSlug: '',
-    priceRange: '$14\u2013$399'
+    priceRange: '$15\u2013$399'
   },
   {
     slug: 'best-padel-rackets-beginners',
     title: 'Best Padel Rackets for Beginners (2026)',
     category: 'equipment',
-    excerpt: 'The 5 best beginner padel rackets from $90\u2013$130. Round shapes, forgiving sweet spots, and lightweight frames to help you learn faster.',
+    excerpt: 'The 5 best beginner padel rackets from $90\u2013$150. Round shapes, forgiving sweet spots, and lightweight frames to help you learn faster.',
     date: '2026-03-24',
     readTime: '9 min read',
     imageAlt: 'Best beginner padel rackets 2026',
     courtSlug: '',
-    priceRange: '$90\u2013$130'
+    priceRange: '$90\u2013$150'
   },
   {
     slug: 'best-padel-rackets-intermediate',
     title: 'Best Padel Rackets for Intermediate Players (2026)',
     category: 'equipment',
-    excerpt: 'Ready to upgrade? The 5 best intermediate padel rackets from $170\u2013$280. Carbon faces, teardrop shapes, and more power for advancing players.',
+    excerpt: 'Ready to upgrade? The 5 best intermediate padel rackets from $209\u2013$260. Carbon faces, teardrop shapes, and more power for advancing players.',
     date: '2026-03-24',
     readTime: '9 min read',
     imageAlt: 'Best intermediate padel rackets 2026',
     courtSlug: '',
-    priceRange: '$170\u2013$280'
+    priceRange: '$209\u2013$260'
   },
   {
     slug: 'best-lightweight-padel-rackets',
@@ -666,51 +666,51 @@ const blogPosts: BlogPost[] = [
     readTime: '8 min read',
     imageAlt: 'Best lightweight padel rackets 2026',
     courtSlug: '',
-    priceRange: '$90\u2013$305'
+    priceRange: '$90\u2013$263'
   },
   {
     slug: 'best-nox-padel-rackets',
     title: 'Best NOX Padel Rackets (2026)',
     category: 'equipment',
-    excerpt: 'Four NOX rackets from $119 to $272, matched to your level: the best NOX for beginners, intermediate players, control and power.',
+    excerpt: 'Four NOX rackets matched to your level: the best NOX for beginners, intermediate players, control and power.',
     date: '2026-10-05',
     readTime: '7 min read',
     imageAlt: 'Best NOX padel rackets 2026',
     courtSlug: '',
-    priceRange: '$119\u2013$272'
+    priceRange: '$230\u2013$260'
   },
   {
     slug: 'best-budget-padel-rackets',
     title: 'Best Budget Padel Rackets (2026)',
     category: 'equipment',
-    excerpt: 'Six rackets from $89.95 to $169.99, ranked by what you get per dollar \u2014 with the best cheap picks for beginners and for intermediate players.',
+    excerpt: 'Six rackets under $170, ranked by what you get per dollar, with the best cheap picks for beginners and for intermediate players.',
     date: '2026-09-28',
     readTime: '8 min read',
     imageAlt: 'Best budget padel rackets 2026',
     courtSlug: '',
-    priceRange: '$90\u2013$170'
+    priceRange: '$90\u2013$149'
   },
   {
     slug: 'best-padel-rackets-advanced',
     title: 'Best Padel Rackets for Advanced Players (2026)',
     category: 'equipment',
-    excerpt: 'Five tested frames for players who have outgrown forgiveness, from $249\u2013$399 \u2014 ranked by what an advanced game actually needs, not raw power.',
+    excerpt: 'Five tested frames for players who have outgrown forgiveness, from $230\u2013$399 \u2014 ranked by what an advanced game actually needs, not raw power.',
     date: '2026-09-14',
     readTime: '9 min read',
     imageAlt: 'Best padel rackets for advanced players 2026',
     courtSlug: '',
-    priceRange: '$249\u2013$399'
+    priceRange: '$230\u2013$399'
   },
   {
     slug: 'best-padel-rackets-2026',
     title: 'Best Padel Rackets 2026 \u2014 Top 5 Pro Picks',
     category: 'equipment',
-    excerpt: 'The 5 best pro-level padel rackets from $250\u2013$400. Flagship editions with 18K carbon, Kevlar cores, and tour-proven performance.',
+    excerpt: 'The 5 best pro-level padel rackets from $230\u2013$400. Flagship editions with 18K carbon, Kevlar cores, and tour-proven performance.',
     date: '2026-03-24',
     readTime: '10 min read',
     imageAlt: 'Best pro padel rackets 2026',
     courtSlug: '',
-    priceRange: '$250\u2013$400'
+    priceRange: '$230\u2013$400'
   }
 ];
 

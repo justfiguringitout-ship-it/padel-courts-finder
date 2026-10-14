@@ -4,23 +4,23 @@ import { TrackedLink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Best Diamond Padel Rackets (2026): Maximum Power, Ranked",
-  description: "The best diamond head shape padel rackets in 2026, tested: four power frames ranked from $249 to $399 — and an honest take on who should actually swing one.",
+  description: "The best diamond head shape padel rackets in 2026, tested: four power frames ranked from $230 to $399 — and an honest take on who should actually swing one.",
   alternates: { canonical: "https://www.padelcourtsfinder.com/blog/best-diamond-padel-rackets" },
   openGraph: {
     title: "Best Diamond Padel Rackets (2026): Maximum Power, Ranked",
-    description: "The best diamond head shape padel rackets in 2026, tested: four power frames ranked from $249 to $399 — and an honest take on who should actually swing one.",
+    description: "The best diamond head shape padel rackets in 2026, tested: four power frames ranked from $230 to $399 — and an honest take on who should actually swing one.",
     url: "https://www.padelcourtsfinder.com/blog/best-diamond-padel-rackets",
     siteName: "Padel Courts Finder",
     type: "article",
   },
-  twitter: { card: "summary_large_image", title: "Best Diamond Padel Rackets (2026): Maximum Power, Ranked", description: "The best diamond head shape padel rackets in 2026, tested: four power frames ranked from $249 to $399 — and an honest take on who should actually swing one." },
+  twitter: { card: "summary_large_image", title: "Best Diamond Padel Rackets (2026): Maximum Power, Ranked", description: "The best diamond head shape padel rackets in 2026, tested: four power frames ranked from $230 to $399 — and an honest take on who should actually swing one." },
 };
 
 const articleData = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Best Diamond Padel Rackets (2026): Maximum Power, Ranked",
-  "description": "The best diamond head shape padel rackets in 2026, tested: four power frames ranked from $249 to $399 — and an honest take on who should actually swing one.",
+  "description": "The best diamond head shape padel rackets in 2026, tested: four power frames ranked from $230 to $399 — and an honest take on who should actually swing one.",
   "datePublished": "2026-07-31T00:00:00Z",
   "dateModified": "2026-07-31T00:00:00Z",
   "author": {
@@ -51,7 +51,7 @@ const faqData = {
       "name": "What is the best diamond padel racket in 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Babolat Technical Viper is our top diamond for 2026 — Lebrón-level power at $249 with slightly more manageable balance than its rivals. The HEAD Extreme Pro hits hardest outright; the Wilson Bela V3 is the premium build; the Adidas Metalbone HRD+ is the tinkerer's choice."
+        "text": "The Babolat Technical Viper is our top diamond for 2026 — Lebrón-level power at $229.99 with slightly more manageable balance than its rivals. The HEAD Extreme Pro hits hardest outright; the Wilson Bela Pro V3 is the premium build; the Adidas Metalbone HRD+ is the tinkerer's choice."
       }
     },
     {
@@ -95,7 +95,7 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/babolat-technical-viper-review",
         "offers": {
           "@type": "Offer",
-          "price": "249.00",
+          "price": "229.99",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20"
@@ -119,7 +119,7 @@ const itemListData = {
       "position": 2,
       "item": {
         "@type": "Product",
-        "name": "Wilson Bela V3",
+        "name": "Wilson Bela Pro V3",
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "url": "https://www.padelcourtsfinder.com/blog/wilson-bela-v3-review",
         "offers": {
@@ -153,10 +153,10 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/head-extreme-pro-review",
         "offers": {
           "@type": "Offer",
-          "price": "319.95",
+          "price": "299.95",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20"
+          "url": "https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20"
         },
         "review": {
           "@type": "Review",
@@ -182,7 +182,7 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/adidas-metalbone-hrd-review",
         "offers": {
           "@type": "Offer",
-          "price": "279.99",
+          "price": "259.99",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20"
@@ -252,12 +252,12 @@ export default function BestDiamondRacketsPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">6.7<span className="text-sm text-stone-400">/10</span></div>
-                  <div className="text-sm text-stone-500">$249.00</div>
+                  <div className="text-sm text-stone-500">$229.99</div>
                 </div>
               </div>
               <p className="text-stone-700 leading-relaxed text-sm">Juan Lebrón&apos;s weapon at a non-flagship price. Full diamond power with slightly more manageable balance than the nuclear options — the diamond we&apos;d point most attacking players to first.</p>
               <div className="grid sm:grid-cols-2 gap-3 mt-4 text-sm">
-                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">Pro diamond power at $249; more manageable than rivals; proven mold</span></div>
+                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">Pro diamond power at $229.99; more manageable than rivals; proven mold</span></div>
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Still punishes off-center contact like any diamond</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
@@ -269,7 +269,7 @@ export default function BestDiamondRacketsPage() {
               <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                 <div>
                   <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Premium pick</span>
-                  <h3 className="text-xl font-bold text-foreground">2. Wilson Bela V3</h3>
+                  <h3 className="text-xl font-bold text-foreground">2. Wilson Bela Pro V3</h3>
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">6.7<span className="text-sm text-stone-400">/10</span></div>
@@ -282,7 +282,7 @@ export default function BestDiamondRacketsPage() {
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">$399; diminishing returns unless you&apos;re advanced</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
-                <TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela V3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela Pro V3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
                 <Link href="/blog/wilson-bela-v3-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
               </div>
             </div>
@@ -294,7 +294,7 @@ export default function BestDiamondRacketsPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">6.3<span className="text-sm text-stone-400">/10</span></div>
-                  <div className="text-sm text-stone-500">$319.95</div>
+                  <div className="text-sm text-stone-500">$299.95</div>
                 </div>
               </div>
               <p className="text-stone-700 leading-relaxed text-sm">The most powerful racket in our 2026 lineup, full stop. Brutal smash speed from a head-heavy diamond mold — and zero apologies when you miss the small, high sweet spot.</p>
@@ -303,7 +303,7 @@ export default function BestDiamondRacketsPage() {
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Small sweet spot; tiring head-heavy balance; hard on the arm</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
-                <TrackedLink href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <TrackedLink href="https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
                 <Link href="/blog/head-extreme-pro-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
               </div>
             </div>
@@ -315,7 +315,7 @@ export default function BestDiamondRacketsPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">6.3<span className="text-sm text-stone-400">/10</span></div>
-                  <div className="text-sm text-stone-500">$279.99</div>
+                  <div className="text-sm text-stone-500">$259.99</div>
                 </div>
               </div>
               <p className="text-stone-700 leading-relaxed text-sm">Ale Galán&apos;s frame with adjustable weight screws — tune the balance from aggressive to unhinged. Huge smashes and a distinctive hard feel for advanced attackers who like to tinker.</p>
@@ -341,7 +341,7 @@ export default function BestDiamondRacketsPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What is the best diamond padel racket in 2026?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">The Babolat Technical Viper is our top diamond for 2026 — Lebrón-level power at $249 with slightly more manageable balance than its rivals. The HEAD Extreme Pro hits hardest outright; the Wilson Bela V3 is the premium build; the Adidas Metalbone HRD+ is the tinkerer&apos;s choice.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">The Babolat Technical Viper is our top diamond for 2026 — Lebrón-level power at $229.99 with slightly more manageable balance than its rivals. The HEAD Extreme Pro hits hardest outright; the Wilson Bela Pro V3 is the premium build; the Adidas Metalbone HRD+ is the tinkerer&apos;s choice.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Are diamond padel rackets hard to play with?</h3>

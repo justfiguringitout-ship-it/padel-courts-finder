@@ -240,7 +240,7 @@ export default function WilsonOptixV1ReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives Worth Considering</h2>
             <p className="text-stone-600 leading-[1.75]">
-              If you want the Optix&apos;s control but with more spin bite, the NOX ML10 Pro Cup ($169.99) matches its 9/10 control on a gritty sand-textured face &mdash; read our <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup review</Link>. If $109 is more than you want to spend on a first racket, the <Link href="/blog/babolat-contact-review" className="text-padel-green hover:underline">Babolat Contact</Link> at $89.95 is the round racket we recommend to nearly every new player. And if you like the round shape but want to see the full field, our <Link href="/blog/best-round-padel-rackets" className="text-padel-green hover:underline">best round padel rackets guide</Link> ranks them all.
+              If you want the Optix&apos;s control but with more spin bite, the NOX ML10 Pro Cup (currently unavailable on Amazon) matches its 9/10 control on a gritty sand-textured face &mdash; read our <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup review</Link>. If $109 is more than you want to spend on a first racket, the <Link href="/blog/babolat-contact-review" className="text-padel-green hover:underline">Babolat Contact</Link> at $89.95 is the round racket we recommend to nearly every new player. And if you like the round shape but want to see the full field, our <Link href="/blog/best-round-padel-rackets" className="text-padel-green hover:underline">best round padel rackets guide</Link> ranks them all.
             </p>
           </section>
 
@@ -275,7 +275,7 @@ export default function WilsonOptixV1ReviewPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Link href="/blog/best-budget-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Budget Padel Rackets (2026)</div>
-                <p className="text-stone-400 text-sm mt-1">6 picks from $90 to $170, ranked by value</p>
+                <p className="text-stone-400 text-sm mt-1">6 picks under $170, ranked by value</p>
               </Link>
               <Link href="/blog/best-lightweight-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Lightweight Padel Rackets</div>

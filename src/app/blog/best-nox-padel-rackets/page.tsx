@@ -6,7 +6,7 @@ import { HeroVideo } from '@/components/hero-video';
 import type { ReactNode } from 'react';
 
 const TITLE = 'Best NOX Padel Rackets (2026): 4 Picks by Playing Level';
-const DESCRIPTION = 'The best NOX padel rackets of 2026 for beginners, intermediate players, control and power. Four NOX rackets from $119 to $272, each scored for power, control and comfort.';
+const DESCRIPTION = 'The best NOX padel rackets of 2026 for beginners, intermediate players, control and power. Four NOX rackets from beginner to advanced, each scored for power, control and comfort.';
 const URL = 'https://www.padelcourtsfinder.com/blog/best-nox-padel-rackets';
 
 export const metadata: Metadata = {
@@ -26,8 +26,6 @@ export const metadata: Metadata = {
 
 const AMZ = {
   nox18k: 'https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20',
-  ml10: 'https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20',
-  uspa: 'https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20',
   attack12k: 'https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20',
 };
 
@@ -53,7 +51,7 @@ const faqData = {
       "name": "What is the best NOX padel racket in 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The NOX AT10 Genius 18K at $272.00. It scores 7.3/10 in our ratings with 8/10 for control and 7/10 for power, and it is our top pick for advanced players. It is a lot of racket for someone still learning, though. For an intermediate player the NOX ML10 Pro Cup Rough Surface at $169.99 is the better choice, and for a beginner the NOX Pro Cup USPA Edition at $119.00."
+        "text": "The NOX AT10 Genius 18K at $259.99. It scores 7.3/10 in our ratings with 8/10 for control and 7/10 for power, and it is our top pick for advanced players. It is a lot of racket for someone still learning, though. For an intermediate player the NOX ML10 Pro Cup Rough Surface is the better choice, and for a beginner the NOX Pro Cup USPA Edition, though both are currently unavailable on Amazon."
       }
     },
     {
@@ -61,7 +59,7 @@ const faqData = {
       "name": "What is the best NOX padel racket for beginners?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The NOX Pro Cup USPA Edition at $119.00. It is a round racket with a fiberglass face, NOX's HR3 core and a carbon frame, and it scores 8/10 for both control and comfort. At 360 to 365g it is a little heavier than most first rackets, so smaller players may prefer a lighter frame from our beginner guide."
+        "text": "The NOX Pro Cup USPA Edition, though it is currently unavailable on Amazon. It is a round racket with a fiberglass face, NOX's HR3 core and a carbon frame, and it scores 8/10 for both control and comfort. At 360 to 365g it is a little heavier than most first rackets, so smaller players may prefer a lighter frame from our beginner guide."
       }
     },
     {
@@ -69,7 +67,7 @@ const faqData = {
       "name": "What is the best NOX padel racket for intermediate players?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The NOX ML10 Pro Cup Rough Surface at $169.99. It scores 9/10 for control, has a rough surface for topspin and a low balance point that makes it quick at the net. Intermediate players with clean technique who want more power can look at the NOX AT10 Genius Attack 12K at $229.99, a diamond that scores 8/10 for power."
+        "text": "The NOX ML10 Pro Cup Rough Surface, though it is currently unavailable on Amazon. It scores 9/10 for control, has a rough surface for topspin and a low balance point that makes it quick at the net. Intermediate players with clean technique who want more power can look at the NOX AT10 Genius Attack 12K at $229.99, a diamond that scores 8/10 for power."
       }
     },
     {
@@ -101,7 +99,7 @@ const faqData = {
       "name": "What is the difference between the NOX AT10 Genius 18K and the AT10 Genius Attack 12K?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "They are different rackets in the same line. The Genius 18K is a teardrop at $272.00 that scores 7.3/10, with 8/10 for control. The Genius Attack 12K is a diamond at $229.99 that scores 6.7/10, with more power (8/10) and less forgiveness. Choose the Attack only if your game is built around the smash."
+        "text": "They are different rackets in the same line. The Genius 18K is a teardrop at $259.99 that scores 7.3/10, with 8/10 for control. The Genius Attack 12K is a diamond at $229.99 that scores 6.7/10, with more power (8/10) and less forgiveness. Choose the Attack only if your game is built around the smash."
       }
     }
   ]
@@ -115,7 +113,7 @@ const product = (position: number, name: string, url: string, price: string, off
     "name": name,
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "url": url,
-    "offers": { "@type": "Offer", "price": price, "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": offerUrl },
+    ...(offerUrl ? { "offers": { "@type": "Offer", "price": price, "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": offerUrl } } : {}),
     "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": rating, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
   }
 });
@@ -124,9 +122,9 @@ const itemListData = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "itemListElement": [
-    product(1, "NOX AT10 Genius 18K", "https://www.padelcourtsfinder.com/blog/nox-at10-genius-18k-review", "272.00", AMZ.nox18k, 7.3),
-    product(2, "NOX ML10 Pro Cup Rough Surface", "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review", "169.99", AMZ.ml10, 7.3),
-    product(3, "NOX Pro Cup USPA Edition", "https://www.padelcourtsfinder.com/blog/best-nox-padel-rackets#nox-pro-cup-uspa", "119.00", AMZ.uspa, 7.3),
+    product(1, "NOX AT10 Genius 18K", "https://www.padelcourtsfinder.com/blog/nox-at10-genius-18k-review", "259.99", AMZ.nox18k, 7.3),
+    product(2, "NOX ML10 Pro Cup Rough Surface", "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review", "", "", 7.3),
+    product(3, "NOX Pro Cup USPA Edition", "https://www.padelcourtsfinder.com/blog/best-nox-padel-rackets#nox-pro-cup-uspa", "", "", 7.3),
     product(4, "NOX AT10 Genius Attack 12K", "https://www.padelcourtsfinder.com/blog/nox-at10-genius-attack-review", "229.99", AMZ.attack12k, 6.7)
   ]
 };
@@ -153,7 +151,7 @@ function Tag({ children }: { children: ReactNode }) {
 export default function NoxRacketsPage() {
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Best NOX racket" productName="NOX AT10 Genius 18K" price="$272.00" href={AMZ.nox18k} />
+      <StickyPickBar label="Best NOX racket" productName="NOX AT10 Genius 18K" price="$259.99" href={AMZ.nox18k} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListData) }} />
@@ -170,7 +168,7 @@ export default function NoxRacketsPage() {
           </div>
           <span className="inline-block bg-padel-green text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Equipment</span>
           <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Best NOX Padel Rackets (2026)</h1>
-          <p className="text-lg text-stone-400 mt-3">Four NOX rackets from $119 to $272, matched to how you play</p>
+          <p className="text-lg text-stone-400 mt-3">Four NOX rackets, matched to how you play</p>
           <div className="text-sm text-stone-500 mt-4 flex items-center gap-3">
             <span>Updated October 5, 2026 &middot; 7 min read</span>
           </div>
@@ -202,15 +200,15 @@ export default function NoxRacketsPage() {
               <div className="space-y-2.5">
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Overall:</span>
-                  <span className="text-sm"><TrackedLink href={AMZ.nox18k} type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">NOX AT10 Genius 18K</TrackedLink> <span className="text-stone-500">&mdash; $272.00</span></span>
+                  <span className="text-sm"><TrackedLink href={AMZ.nox18k} type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">NOX AT10 Genius 18K</TrackedLink> <span className="text-stone-500">&mdash; $259.99</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best for Intermediates:</span>
-                  <span className="text-sm"><TrackedLink href={AMZ.ml10} type="affiliate" productName="NOX ML10 Pro Cup Rough Surface" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">NOX ML10 Pro Cup Rough Surface</TrackedLink> <span className="text-stone-500">&mdash; $169.99</span></span>
+                  <span className="text-sm"><a href="#nox-ml10-pro-cup" className="text-padel-green hover:underline font-medium">NOX ML10 Pro Cup Rough Surface</a> <span className="text-stone-500">(currently unavailable on Amazon)</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best for Beginners:</span>
-                  <span className="text-sm"><TrackedLink href={AMZ.uspa} type="affiliate" productName="NOX Pro Cup USPA Edition" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">NOX Pro Cup USPA Edition</TrackedLink> <span className="text-stone-500">&mdash; $119.00</span></span>
+                  <span className="text-sm"><a href="#nox-pro-cup-uspa" className="text-padel-green hover:underline font-medium">NOX Pro Cup USPA Edition</a> <span className="text-stone-500">(currently unavailable on Amazon)</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best for Power:</span>
@@ -246,7 +244,7 @@ export default function NoxRacketsPage() {
                       <td className="px-3 py-2.5">360&ndash;375g</td>
                       <td className="px-3 py-2.5">18K Aluminized Carbon</td>
                       <td className="px-3 py-2.5 whitespace-nowrap">7.3/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$272.00</td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">$259.99</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="px-3 py-2.5 font-medium text-foreground">NOX ML10 Pro Cup Rough Surface</td>
@@ -254,7 +252,7 @@ export default function NoxRacketsPage() {
                       <td className="px-3 py-2.5">360&ndash;375g</td>
                       <td className="px-3 py-2.5">FG 3K Rough</td>
                       <td className="px-3 py-2.5 whitespace-nowrap">7.3/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$169.99</td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">Unavailable</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="px-3 py-2.5 font-medium text-foreground">NOX Pro Cup USPA Edition</td>
@@ -262,7 +260,7 @@ export default function NoxRacketsPage() {
                       <td className="px-3 py-2.5">360&ndash;365g</td>
                       <td className="px-3 py-2.5">FG 3K Silver</td>
                       <td className="px-3 py-2.5 whitespace-nowrap">7.3/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$119.00</td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">Unavailable</td>
                     </tr>
                     <tr>
                       <td className="px-3 py-2.5 font-medium text-foreground">NOX AT10 Genius Attack 12K</td>
@@ -275,20 +273,20 @@ export default function NoxRacketsPage() {
                   </tbody>
                 </table>
               </div>
-              <p className="text-xs text-stone-500 mt-3">Prices are the Amazon prices at the time of our reviews and can change.</p>
+              <p className="text-xs text-stone-500 mt-3">Prices are the Amazon prices checked in October 2026 and can change.</p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold text-foreground mb-5">Which NOX racket for your level</h2>
               <div className="space-y-3">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Beginner.</strong> The <a href="#nox-pro-cup-uspa" className="text-padel-green hover:underline">NOX Pro Cup USPA Edition</a> ($119.00). Round shape, fiberglass face, 8/10 for control and for comfort.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Beginner.</strong> The <a href="#nox-pro-cup-uspa" className="text-padel-green hover:underline">NOX Pro Cup USPA Edition</a>. Round shape, fiberglass face, 8/10 for control and for comfort. It is currently unavailable on Amazon.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Intermediate.</strong> The <a href="#nox-ml10-pro-cup" className="text-padel-green hover:underline">NOX ML10 Pro Cup Rough Surface</a> ($169.99) for control and spin. If your technique is clean and you want to attack, the <a href="#nox-at10-genius-attack-12k" className="text-padel-green hover:underline">AT10 Genius Attack 12K</a> ($229.99).</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Intermediate.</strong> The <a href="#nox-ml10-pro-cup" className="text-padel-green hover:underline">NOX ML10 Pro Cup Rough Surface</a> for control and spin, though it is currently unavailable on Amazon. If your technique is clean and you want to attack, the <a href="#nox-at10-genius-attack-12k" className="text-padel-green hover:underline">AT10 Genius Attack 12K</a> ($229.99).</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Advanced.</strong> The <a href="#nox-at10-genius-18k" className="text-padel-green hover:underline">NOX AT10 Genius 18K</a> ($272.00). The best mix of control and power in the range, with a weight system you can adjust.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Advanced.</strong> The <a href="#nox-at10-genius-18k" className="text-padel-green hover:underline">NOX AT10 Genius 18K</a> ($259.99). The best mix of control and power in the range, with a weight system you can adjust.</p>
                 </div>
               </div>
               <div className="prose prose-lg prose-stone max-w-none mt-6">
@@ -305,7 +303,7 @@ export default function NoxRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mt-2 mb-1">#1 &mdash; Best NOX Racket Overall</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX AT10 Genius 18K</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$272.00</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$259.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Advanced and strong intermediate players who win with placement first</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -327,7 +325,7 @@ export default function NoxRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 &mdash; Best NOX Racket for Intermediate Players</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX ML10 Pro Cup Rough Surface</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$169.99</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Improving players who want control and spin without paying $200+</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -341,7 +339,7 @@ export default function NoxRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> 9/10 control, rough surface for topspin, quick at the net, 8/10 comfort</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face caps power at 5/10</p>
                 </div>
-                <TrackedLink href={AMZ.ml10} type="affiliate" productName="NOX ML10 Pro Cup Rough Surface" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
               </div>
 
               {/* 3. NOX Pro Cup USPA Edition */}
@@ -349,9 +347,9 @@ export default function NoxRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#3 &mdash; Best NOX Racket for Beginners</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX Pro Cup USPA Edition</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$119.00</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
                 </div>
-                <p className="text-sm italic text-stone-500 mb-4">Best for: New players who want a NOX with a carbon frame for about $120</p>
+                <p className="text-sm italic text-stone-500 mb-4">Best for: New players who want a NOX with a carbon frame</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <Tag>Round</Tag><Tag>360&ndash;365g</Tag><Tag>HR3 EVA</Tag><Tag>FG 3K Silver</Tag><Tag>Carbon Frame</Tag>
                 </div>
@@ -360,10 +358,10 @@ export default function NoxRacketsPage() {
                 </div>
                 <p className="text-stone-600 leading-[1.75] mb-5">The official racket of the NOX USPA Circuit and the least expensive NOX we recommend. The HR3 core gives a consistent bounce across the face, the FG 3K Silver surface keeps the forgiveness of fiberglass, and the carbon frame adds the stability you start to want as your shots get harder. It scores 6/10 for power with 8/10 for control, which is more pace than a pure fiberglass first racket like the Wilson Optix V1 (4/10). At 360&ndash;365g it is on the heavier side for a complete beginner. It is one of the picks in our <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">beginner guide</Link> and our <Link href="/blog/best-budget-padel-rackets" className="text-padel-green hover:underline">budget guide</Link>.</p>
                 <div className="space-y-2 mb-5">
-                  <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Carbon frame and HR3 core at $119, 6/10 power with 8/10 control</p>
+                  <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Carbon frame and HR3 core, 6/10 power with 8/10 control</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Heavier than most first rackets at 360&ndash;365g</p>
                 </div>
-                <TrackedLink href={AMZ.uspa} type="affiliate" productName="NOX Pro Cup USPA Edition" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
               </div>
 
               {/* 4. NOX AT10 Genius Attack 12K */}
@@ -380,7 +378,7 @@ export default function NoxRacketsPage() {
                 <div className="grid grid-cols-3 gap-3 mb-5 py-3 px-4 bg-stone-100/50 rounded-lg">
                   <Bar label="Power" score={8} /><Bar label="Control" score={6} /><Bar label="Comfort" score={6} />
                 </div>
-                <p className="text-stone-600 leading-[1.75] mb-5">The diamond sibling of the Genius 18K and the most powerful NOX we have reviewed, at 8/10. The 12K carbon face has a SPIN 3D texture that puts real topspin on the bandeja and the vibora, and the MLD Black EVA core is the same one used in the 18K. The trade is forgiveness. A diamond with a head-heavy balance is demanding, and control and comfort both drop to 6/10. If your contact is consistent, this rewards an attacking game for about $40 less than the 18K. If it is not, the ML10 above is the better buy. Read our full <Link href="/blog/nox-at10-genius-attack-review" className="text-padel-green hover:underline">NOX AT10 Genius Attack 12K review</Link>, which compares it head to head with the 18K.</p>
+                <p className="text-stone-600 leading-[1.75] mb-5">The diamond sibling of the Genius 18K and the most powerful NOX we have reviewed, at 8/10. The 12K carbon face has a SPIN 3D texture that puts real topspin on the bandeja and the vibora, and the MLD Black EVA core is the same one used in the 18K. The trade is forgiveness. A diamond with a head-heavy balance is demanding, and control and comfort both drop to 6/10. If your contact is consistent, this rewards an attacking game for about $30 less than the 18K. If it is not, the ML10 above is the better buy. Read our full <Link href="/blog/nox-at10-genius-attack-review" className="text-padel-green hover:underline">NOX AT10 Genius Attack 12K review</Link>, which compares it head to head with the 18K.</p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> 8/10 power, 12K carbon face with SPIN 3D texture, cheaper than the 18K</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Diamond shape and head-heavy balance punish inconsistent contact</p>
@@ -409,17 +407,17 @@ export default function NoxRacketsPage() {
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best NOX Racket Overall</td>
                       <td className="py-3 pr-4"><TrackedLink href={AMZ.nox18k} type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline">NOX AT10 Genius 18K</TrackedLink></td>
-                      <td className="py-3 text-stone-600">$272.00</td>
+                      <td className="py-3 text-stone-600">$259.99</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best NOX Racket for Intermediate Players</td>
-                      <td className="py-3 pr-4"><TrackedLink href={AMZ.ml10} type="affiliate" productName="NOX ML10 Pro Cup Rough Surface" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline">NOX ML10 Pro Cup Rough Surface</TrackedLink></td>
-                      <td className="py-3 text-stone-600">$169.99</td>
+                      <td className="py-3 pr-4"><span className="text-stone-700">NOX ML10 Pro Cup Rough Surface</span></td>
+                      <td className="py-3 text-stone-600">Currently unavailable on Amazon</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best NOX Racket for Beginners</td>
-                      <td className="py-3 pr-4"><TrackedLink href={AMZ.uspa} type="affiliate" productName="NOX Pro Cup USPA Edition" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline">NOX Pro Cup USPA Edition</TrackedLink></td>
-                      <td className="py-3 text-stone-600">$119.00</td>
+                      <td className="py-3 pr-4"><span className="text-stone-700">NOX Pro Cup USPA Edition</span></td>
+                      <td className="py-3 text-stone-600">Currently unavailable on Amazon</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best NOX Racket for Power</td>
@@ -441,15 +439,15 @@ export default function NoxRacketsPage() {
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What is the best NOX padel racket in 2026?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">The NOX AT10 Genius 18K at $272.00. It scores 7.3/10 in our ratings with 8/10 for control and 7/10 for power, and it is our top pick for advanced players. It is a lot of racket for someone still learning, though. For an intermediate player the NOX ML10 Pro Cup Rough Surface at $169.99 is the better choice, and for a beginner the NOX Pro Cup USPA Edition at $119.00.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">The NOX AT10 Genius 18K at $259.99. It scores 7.3/10 in our ratings with 8/10 for control and 7/10 for power, and it is our top pick for advanced players. It is a lot of racket for someone still learning, though. For an intermediate player the NOX ML10 Pro Cup Rough Surface is the better choice, and for a beginner the NOX Pro Cup USPA Edition, though both are currently unavailable on Amazon.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What is the best NOX padel racket for beginners?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">The NOX Pro Cup USPA Edition at $119.00. It is a round racket with a fiberglass face, NOX&apos;s HR3 core and a carbon frame, and it scores 8/10 for both control and comfort. At 360 to 365g it is a little heavier than most first rackets, so smaller players may prefer a lighter frame from our beginner guide.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">The NOX Pro Cup USPA Edition, though it is currently unavailable on Amazon. It is a round racket with a fiberglass face, NOX&apos;s HR3 core and a carbon frame, and it scores 8/10 for both control and comfort. At 360 to 365g it is a little heavier than most first rackets, so smaller players may prefer a lighter frame from our beginner guide.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What is the best NOX padel racket for intermediate players?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">The NOX ML10 Pro Cup Rough Surface at $169.99. It scores 9/10 for control, has a rough surface for topspin and a low balance point that makes it quick at the net. Intermediate players with clean technique who want more power can look at the NOX AT10 Genius Attack 12K at $229.99, a diamond that scores 8/10 for power.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">The NOX ML10 Pro Cup Rough Surface, though it is currently unavailable on Amazon. It scores 9/10 for control, has a rough surface for topspin and a low balance point that makes it quick at the net. Intermediate players with clean technique who want more power can look at the NOX AT10 Genius Attack 12K at $229.99, a diamond that scores 8/10 for power.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What is the best NOX padel racket for control?</h3>
@@ -465,7 +463,7 @@ export default function NoxRacketsPage() {
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What is the difference between the NOX AT10 Genius 18K and the AT10 Genius Attack 12K?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">They are different rackets in the same line. The Genius 18K is a teardrop at $272.00 that scores 7.3/10, with 8/10 for control. The Genius Attack 12K is a diamond at $229.99 that scores 6.7/10, with more power (8/10) and less forgiveness. Choose the Attack only if your game is built around the smash.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">They are different rackets in the same line. The Genius 18K is a teardrop at $259.99 that scores 7.3/10, with 8/10 for control. The Genius Attack 12K is a diamond at $229.99 that scores 6.7/10, with more power (8/10) and less forgiveness. Choose the Attack only if your game is built around the smash.</p>
                 </div>
               </div>
             </section>
@@ -496,7 +494,7 @@ export default function NoxRacketsPage() {
             <Link href="/blog/best-budget-padel-rackets" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Budget Padel Rackets</h3>
-              <p className="text-sm text-stone-400 mt-1">6 picks from $90 to $170, any brand &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">6 picks under $170, any brand &rarr;</p>
             </Link>
             <Link href="/blog/padel-racket-shapes-explained" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>

@@ -6,7 +6,7 @@ import { TrackedLink } from "@/components/TrackedLink";
 export const metadata: Metadata = {
   title: "HEAD Extreme Pro Review (2026): Maximum Power, No Apologies",
   description:
-    "HEAD Extreme Pro tested: 6.3/10. $319.95. The most powerful racket in our 2026 lineup — brutal smash speed, punishing on mishits. Who this diamond frame actually suits (and who should skip it).",
+    "HEAD Extreme Pro tested: 6.3/10. $299.95. The most powerful racket in our 2026 lineup — brutal smash speed, punishing on mishits. Who this diamond frame actually suits (and who should skip it).",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/head-extreme-pro-review",
   },
@@ -36,9 +36,9 @@ export default function HeadExtremeProReviewPage() {
       "Diamond-shaped power racket with a UD Carbon HS face, Power Foam core, Auxetic 2.0 frame technology, and Extreme Spin rough surface — built for left-side attackers and tournament competitors.",
     "offers": {
       "@type": "Offer",
-      "price": "319.95",
+      "price": "299.95",
       "priceCurrency": "USD",
-      "url": "https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20"
+      "url": "https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20"
     },
     "review": {
       "@type": "Review",
@@ -73,7 +73,7 @@ export default function HeadExtremeProReviewPage() {
         "name": "Is the HEAD Extreme Pro worth the price?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At $319.95, yes — if you are a left-side attacker or tournament competitor with the conditioning to swing it. If you want a more versatile all-court racket, the NOX AT10 Genius 18K costs less and scores higher overall. Note the Amazon listing has multiple variants — select the Pro variant at checkout."
+          "text": "At $299.95, yes — if you are a left-side attacker or tournament competitor with the conditioning to swing it. If you want a more versatile all-court racket, the NOX AT10 Genius 18K costs less and scores higher overall. The Amazon listing we link is the 2025 Extreme Pro."
         }
       }
     ]
@@ -87,7 +87,7 @@ export default function HeadExtremeProReviewPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Our verdict" productName="HEAD Extreme Pro" price="$319.95" href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" />
+      <StickyPickBar label="Our verdict" productName="HEAD Extreme Pro" price="$299.95" href="https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
 
@@ -129,10 +129,10 @@ export default function HeadExtremeProReviewPage() {
               <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-2">Our Verdict</span>
               <div className="flex items-start justify-between gap-4 mb-2">
                 <div className="text-3xl font-bold text-foreground">6.3<span className="text-lg text-stone-400 font-medium">/10</span></div>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$319.95</span>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$299.95</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-5">Best for: left-side attackers and tournament competitors who want maximum smash power.</p>
-              <TrackedLink href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+              <TrackedLink href="https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
             </div>
           </section>
 
@@ -193,7 +193,7 @@ export default function HeadExtremeProReviewPage() {
               <strong>Buy it if</strong> you&apos;re a left-side attacker or tournament competitor whose game is built around finishing overhead. The explosive UD Carbon HS face and Auxetic 2.0 power amplification are exactly the tools that job requires, and the Extreme Spin surface adds heavy topspin to keep opponents pinned. It&apos;s a popular sight at competitive clubs — including <Link href="/blog/best-padel-clubs-nyc" className="text-padel-green hover:underline">NYC&apos;s padel scene</Link> — for a reason.
             </p>
             <p className="text-stone-700 leading-relaxed mt-4">
-              <strong>Skip it if</strong> you value forgiveness, play a defensive or all-court game, or have any doubt about your conditioning. The 370g weight and high balance are non-negotiable physical demands, and the 4/10 comfort score is not a typo. One buying note from our testing: the Amazon page is a multi-variant listing, so make sure you select the <strong>Pro</strong> variant at checkout.
+              <strong>Skip it if</strong> you value forgiveness, play a defensive or all-court game, or have any doubt about your conditioning. The 370g weight and high balance are non-negotiable physical demands, and the 4/10 comfort score is not a typo. The Amazon listing we link is the 2025 Extreme Pro.
             </p>
           </section>
 
@@ -201,7 +201,7 @@ export default function HeadExtremeProReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives worth considering</h2>
             <p className="text-stone-700 leading-relaxed">
-              If the Extreme Pro sounds like more racket than you need, the <Link href="/blog/nox-at10-genius-18k-review" className="text-padel-green hover:underline">NOX AT10 Genius 18K</Link> ($272.00) is our top overall pick for 2026 — a teardrop with far better control and comfort scores, an adjustable weight system, and less raw smash power. The rest of the field, including the Babolat Technical Viper and Wilson Bela V3, is covered in our full <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets of 2026</Link> guide.
+              If the Extreme Pro sounds like more racket than you need, the <Link href="/blog/nox-at10-genius-18k-review" className="text-padel-green hover:underline">NOX AT10 Genius 18K</Link> ($259.99) is our top overall pick for 2026 — a teardrop with far better control and comfort scores, an adjustable weight system, and less raw smash power. The rest of the field, including the Babolat Technical Viper and Wilson Bela Pro V3, is covered in our full <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets of 2026</Link> guide.
             </p>
           </section>
 
@@ -219,7 +219,7 @@ export default function HeadExtremeProReviewPage() {
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Is the HEAD Extreme Pro worth the price?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">At $319.95, yes — if you&apos;re a left-side attacker or tournament competitor with the conditioning to swing it. If you want versatility instead, the NOX AT10 Genius 18K costs less and scores higher overall. And remember to select the Pro variant on the multi-variant Amazon listing.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">At $299.95, yes — if you&apos;re a left-side attacker or tournament competitor with the conditioning to swing it. If you want versatility instead, the NOX AT10 Genius 18K costs less and scores higher overall. The Amazon listing we link is the 2025 Extreme Pro.</p>
               </div>
             </div>
           </section>

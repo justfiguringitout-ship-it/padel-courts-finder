@@ -295,11 +295,11 @@ export default function RacketShapesPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Link href="/blog/best-padel-rackets-beginners" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Beginner Rackets</div>
-                <p className="text-stone-400 text-sm mt-1">5 round-shaped picks from $90–$130</p>
+                <p className="text-stone-400 text-sm mt-1">5 round-shaped picks from $90–$150</p>
               </Link>
               <Link href="/blog/best-padel-rackets-intermediate" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Intermediate Rackets</div>
-                <p className="text-stone-400 text-sm mt-1">Teardrop upgrades from $170–$280</p>
+                <p className="text-stone-400 text-sm mt-1">Teardrop upgrades from $209–$260</p>
               </Link>
               <Link href="/blog/best-padel-rackets-2026" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Pro Rackets 2026</div>

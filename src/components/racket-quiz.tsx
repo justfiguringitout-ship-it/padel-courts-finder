@@ -34,16 +34,14 @@ const R = {
   contact: { name: "Babolat Contact", price: "$89.95", href: "https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20" },
   extremeEvo: { name: "HEAD Extreme Evo", price: "$99.95", href: "https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20" },
   optix: { name: "Wilson Optix V1", price: "$109.00", href: "https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20" },
-  proCup: { name: "NOX Pro Cup USPA Edition", price: "$119.00", href: "https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20" },
-  adipower: { name: "Adidas Adipower", price: "$129.00", href: "https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" },
-  ml10: { name: "NOX ML10 Pro Cup", price: "$169.99", href: "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" },
-  blade: { name: "Wilson Blade Elite V2", price: "$189.00", href: "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" },
+  adipower: { name: "Adidas Adipower", price: "$149.00", href: "https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" },
+  blade: { name: "Wilson Blade Elite V2", price: "$208.58", href: "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" },
   at10Attack: { name: "NOX AT10 Genius Attack 12K", price: "$229.99", href: "https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20" },
   neuron: { name: "Bullpadel Neuron 2025", price: "$236.00", href: "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" },
-  viper: { name: "Babolat Technical Viper", price: "$249.00", href: "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" },
-  at10: { name: "NOX AT10 Genius 18K", price: "$272.00", href: "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" },
-  metalbone: { name: "Adidas Metalbone HRD+ 3.3", price: "$279.99", href: "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" },
-  extremePro: { name: "HEAD Extreme Pro", price: "$319.95", href: "https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" },
+  viper: { name: "Babolat Technical Viper", price: "$229.99", href: "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" },
+  at10: { name: "NOX AT10 Genius 18K", price: "$259.99", href: "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" },
+  metalbone: { name: "Adidas Metalbone HRD+ 3.3", price: "$259.99", href: "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" },
+  extremePro: { name: "HEAD Extreme Pro", price: "$299.95", href: "https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20" },
 } as const;
 
 function recommend(level: Level, style: Style, budget: Budget): Pick {
@@ -59,17 +57,17 @@ function recommend(level: Level, style: Style, budget: Budget): Pick {
     }
     if (style === "control") return { ...R.optix, why: "The most comfortable racket we've rated (10/10) with 9/10 control — your arm will thank you while you learn.", guide: GUIDES.control, note: overspendNote };
     if (style === "power") return { ...R.adipower, why: "Still round and forgiving, but with the most power of our beginner picks for when you want the ball to jump.", guide: GUIDES.beginners, note: overspendNote };
-    return { ...R.proCup, why: "The official USPA edition — a balanced, confidence-building round racket you won't outgrow in a season.", guide: GUIDES.beginners, note: overspendNote };
+    return { ...R.contact, why: "Our beginner top pick: round, forgiving and easy to learn on, so you can put the rest of the budget toward shoes and balls.", guide: GUIDES.beginners, note: overspendNote };
   }
 
   if (level === "improving") {
     if (budget === "low") {
-      return { ...R.ml10, why: "Slightly over your budget, but it's the cheapest racket we'd honestly recommend for an improving player — 9/10 control and a real step up.", guide: GUIDES.intermediate, note: "Under $120 at this level usually means buying twice. The ML10 is the value pick worth stretching for." };
+      return { ...R.optix, why: "The best racket we rate under $120 for an improving player: 9/10 control and 10/10 comfort in a forgiving round frame.", guide: GUIDES.control, note: "Our usual value pick at this level, the NOX ML10 Pro Cup, is currently unavailable on Amazon." };
     }
     if (budget === "mid") {
-      if (style === "control") return { ...R.ml10, why: "Our best-value upgrade — 9/10 control with a rough spin surface, and the friendliest price in its class.", guide: GUIDES.intermediate };
+      if (style === "control") return { ...R.neuron, why: "8/10 control from a hybrid shape with a tungsten-weighted neck, and still under $250.", guide: GUIDES.intermediate };
       if (style === "power") return { ...R.at10Attack, why: "Agustín Tapia's shape in a 12K layup — 8/10 power that stays manageable for an improving player.", guide: GUIDES.intermediate };
-      return { ...R.blade, why: "The all-rounder of our intermediate picks — 7/7/7 across the board, so nothing in your game gets punished.", guide: GUIDES.intermediate };
+      return { ...R.blade, why: "The all-rounder of our intermediate picks — 7/7/7 across the board, so nothing in your game gets punished.", guide: GUIDES.intermediate, note: "The only Amazon listing we found ships from Amazon Japan as an import." };
     }
     if (style === "control") return { ...R.neuron, why: "Chingotto's racket — 8/10 control with a tungsten-weighted neck for stability on fast exchanges.", guide: GUIDES.control };
     if (style === "power") return { ...R.metalbone, why: "9/10 power with Adidas' adjustable weight system — the hardest hitter we rate below pro flagships.", guide: GUIDES.power };

@@ -28,13 +28,13 @@ export const metadata: Metadata = {
 /** Presentation data for the compare table and sole diagrams. Every value is
  *  copied from this page; outsole patterns are drawn only where the page states one. */
 const SHOES: GearShoe[] = [
-  { id: "head-sprint-pro-4-mens", name: "HEAD Men's Sprint Pro 4.0", productName: "HEAD Sprint Pro 4.0 Mens", price: "$129.00", href: "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20", pattern: "herringbone", patternLabel: "Omni-style", bestFor: "Our men's pick for padel turf", standout: "Lightweight, breathable mesh, reinforced toe" },
-  { id: "head-sprint-pro-4-womens", name: "HEAD Women's Sprint Pro 4.0", productName: "HEAD Sprint Pro 4.0 Womens", price: "$89.00", href: "https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20", pattern: "herringbone", patternLabel: "Omni-style", bestFor: "Our women's pick for padel turf", standout: "Lightweight, breathable mesh, women's last" },
+  { id: "head-sprint-pro-4-mens", name: "HEAD Men's Sprint Pro 4.0", productName: "HEAD Sprint Pro 4.0 Mens", price: "$109.00", href: "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20", pattern: "herringbone", patternLabel: "Omni-style", bestFor: "Our men's pick for padel turf", standout: "Lightweight, breathable mesh, reinforced toe" },
+  { id: "head-sprint-pro-4-womens", name: "HEAD Women's Sprint Pro 4.0", productName: "HEAD Sprint Pro 4.0 Womens", price: "$109.00", href: "https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20", pattern: "herringbone", patternLabel: "Omni-style", bestFor: "Our women's pick for padel turf", standout: "Lightweight, breathable mesh, women's last" },
   { id: "nox-at10-pro-shoes", name: "NOX AT10 PRO Padel Shoes", productName: "NOX AT10 PRO Padel Shoes", price: "~$135", href: "https://www.amazon.com/dp/B0GRWHSVGW?tag=padel02-20", pattern: "herringbone-studs", patternLabel: "Herringbone with micro studs", bestFor: "Best padel-specific all-rounder", standout: "Reinforced toe and heel, strong lateral support" },
   { id: "wilson-rush-pro-5", name: "Wilson Rush Pro 5 Padel", productName: "Wilson Rush Pro 5 Padel", price: "~$170", href: "https://www.amazon.com/dp/B0GVKRS59Q?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Premium stability pick", standout: "EndoFit midfoot wrap, TPU stability chassis, Duralast high-abrasion rubber" },
   { id: "wilson-hurakn-lite", name: "Wilson Hurakn Lite Padel", productName: "Wilson Hurakn Lite Padel", price: "~$110", href: "https://www.amazon.com/dp/B0FC8SDHK5?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Lightweight speed pick", standout: "Padel-specific rubber in a stripped-down build" },
-  { id: "asics-gel-challenger-15", name: "ASICS Gel-Challenger 15 Padel", productName: "ASICS Gel-Challenger 15 Padel", price: "~$130", href: "https://www.amazon.com/dp/B0GZRD83KR?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Durability pick", standout: "AHARPLUS outsole rubber, WINGWALL lateral support" },
-  { id: "asics-gel-dedicate-8", name: "ASICS Gel-Dedicate 8 Padel", productName: "ASICS Gel-Dedicate 8 Padel", price: "~$150", href: "https://www.amazon.com/dp/B0GLV3J2BH?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Cushioned comfort pick", standout: "GEL cushioning, Trusstic midfoot stability" },
+  { id: "asics-gel-challenger-15", name: "ASICS Gel-Challenger 15 Padel", productName: "ASICS Gel-Challenger 15 Padel", price: "$109.95", href: "https://www.amazon.com/dp/B0GZRD83KR?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Durability pick", standout: "AHARPLUS outsole rubber, WINGWALL lateral support" },
+  { id: "asics-gel-dedicate-8", name: "ASICS Gel-Dedicate 8 Padel", productName: "ASICS Gel-Dedicate 8 Padel", price: "Unavailable", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Cushioned comfort pick", standout: "GEL cushioning, Trusstic midfoot stability" },
 ];
 
 /** The three outsole types this guide describes, drawn for comparison. */
@@ -149,7 +149,7 @@ export default function BestPadelShoesPage() {
           "@type": "Product",
           "name": "ASICS Gel-Challenger 15 Padel",
           "image": "https://www.padelcourtsfinder.com/og/default.png",
-          "offers": { "@type": "Offer", "price": "130", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0GZRD83KR?tag=padel02-20" }
+          "offers": { "@type": "Offer", "price": "109.95", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0GZRD83KR?tag=padel02-20" }
         }
       },
       {
@@ -159,7 +159,7 @@ export default function BestPadelShoesPage() {
           "@type": "Product",
           "name": "ASICS Gel-Dedicate 8 Padel",
           "image": "https://www.padelcourtsfinder.com/og/default.png",
-          "offers": { "@type": "Offer", "price": "150", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0GLV3J2BH?tag=padel02-20" }
+          "offers": { "@type": "Offer", "price": "150", "priceCurrency": "USD", "availability": "https://schema.org/OutOfStock" }
         }
       },
       {
@@ -170,7 +170,7 @@ export default function BestPadelShoesPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Men's Sprint Pro 4.0",
           "description": "Light, breathable court shoe with omni-style grip for padel turf",
-          "offers": { "@type": "Offer", "price": "129.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" }
+          "offers": { "@type": "Offer", "price": "109.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" }
         }
       },
       {
@@ -181,7 +181,7 @@ export default function BestPadelShoesPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Women's Sprint Pro 4.0",
           "description": "Light, breathable court shoe with omni-style grip for padel turf",
-          "offers": { "@type": "Offer", "price": "89.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20" }
+          "offers": { "@type": "Offer", "price": "109.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20" }
         }
       }
     ]
@@ -336,7 +336,7 @@ export default function BestPadelShoesPage() {
             <div id="head-sprint-pro-4-mens" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
               <div className="flex items-start justify-between gap-4 mb-1">
                 <h3 className="text-xl font-bold text-foreground">HEAD Men&apos;s Sprint Pro 4.0</h3>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$129.00</span>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$109.00</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Our men&apos;s pick for padel turf</p>
               <SolePlate shoe={SHOES[0]} uidPrefix="shoe" />
@@ -370,7 +370,7 @@ export default function BestPadelShoesPage() {
             <div id="head-sprint-pro-4-womens" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-6 md:p-8">
               <div className="flex items-start justify-between gap-4 mb-1">
                 <h3 className="text-xl font-bold text-foreground">HEAD Women&apos;s Sprint Pro 4.0</h3>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$89.00</span>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$109.00</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Our women&apos;s pick for padel turf</p>
               <SolePlate shoe={SHOES[1]} uidPrefix="shoe" />
@@ -381,16 +381,16 @@ export default function BestPadelShoesPage() {
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Women&apos;s last</span>
               </div>
               <p className="text-stone-600 leading-[1.75] mb-5">
-                Same shoe, women&apos;s fit, better price. The women&apos;s Sprint Pro 4.0 carries the same omni-style
+                Same shoe, women&apos;s fit. The women&apos;s Sprint Pro 4.0 carries the same omni-style
                 outsole and low, stable platform as the men&apos;s version, built on a women&apos;s last with a narrower
                 heel. It&apos;s light and airy enough for long social sessions, and the grip pattern is exactly what
                 sand-dressed turf rewards — controlled slides into wide balls instead of sudden, ankle-jarring stops.
-                At $89 it undercuts most dedicated padel shoes by a comfortable margin, which is why it&apos;s the
+                At $109 it is among the least expensive pairs on this page, which is why it&apos;s the
                 women&apos;s pair we recommend across our gift guides. Sizing runs true; go up half a size if you like
                 thick socks.
               </p>
               <TrackedLink
-                href="https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20"
+                href="https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20"
                 type="affiliate"
                 productName="HEAD Sprint Pro 4.0 Womens"
                 target="_blank"
@@ -406,7 +406,7 @@ export default function BestPadelShoesPage() {
           {/* 2026 verified picks by feature */}
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-2">More 2026 Picks, by What You Need</h2>
-            <p className="text-stone-600 text-sm leading-relaxed mb-5">Beyond our HEAD Sprint Pro default, these five are the padel-specific shoes we&apos;ve verified available in the US right now — each the best at one thing.</p>
+            <p className="text-stone-600 text-sm leading-relaxed mb-5">Beyond our HEAD Sprint Pro default, these five are the padel-specific shoes we&apos;ve verified, each the best at one thing. One of them, the ASICS Gel-Dedicate 8, is not currently available from a US seller on Amazon.</p>
             <div className="space-y-5">
             <div id="nox-at10-pro-shoes" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-5">
               <div className="flex flex-wrap items-start justify-between gap-3">
@@ -456,7 +456,7 @@ export default function BestPadelShoesPage() {
                   <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Durability pick</span>
                   <h3 className="font-bold text-foreground">ASICS Gel-Challenger 15 Padel</h3>
                 </div>
-                <div className="text-padel-green font-bold whitespace-nowrap">~$130</div>
+                <div className="text-padel-green font-bold whitespace-nowrap">$109.95</div>
               </div>
               <div className="mt-3 -mb-2"><SolePlate shoe={SHOES[5]} uidPrefix="shoe" /></div>
               <p className="text-stone-600 text-sm leading-relaxed mt-2">AHARPLUS outsole rubber (~3x more abrasion-resistant) plus WINGWALL lateral support. The pick for toe-draggers and daily players who kill shoes at the toe box — this one is built to take it.</p>
@@ -470,12 +470,12 @@ export default function BestPadelShoesPage() {
                   <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Cushioned comfort pick</span>
                   <h3 className="font-bold text-foreground">ASICS Gel-Dedicate 8 Padel</h3>
                 </div>
-                <div className="text-padel-green font-bold whitespace-nowrap">~$150</div>
+                <div className="text-stone-500 font-semibold whitespace-nowrap">Unavailable</div>
               </div>
               <div className="mt-3 -mb-2"><SolePlate shoe={SHOES[6]} uidPrefix="shoe" /></div>
-              <p className="text-stone-600 text-sm leading-relaxed mt-2">ASICS GEL cushioning and Trusstic midfoot stability in a padel-specific package — the plushest ride of our picks, for players who want comfort across long sessions without giving up court structure.</p>
+              <p className="text-stone-600 text-sm leading-relaxed mt-2">ASICS GEL cushioning and Trusstic midfoot stability in a padel-specific package — the plushest ride of our picks, for players who want comfort across long sessions without giving up court structure. The only Amazon listings we found are imports from Amazon Germany, one quoting a 6 to 7 month ship time, so we are not linking it.</p>
               <div className="mt-4">
-                <TrackedLink href="https://www.amazon.com/dp/B0GLV3J2BH?tag=padel02-20" type="affiliate" productName="ASICS Gel-Dedicate 8 Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <span className="inline-flex items-center font-semibold text-sm px-4 py-2 rounded-lg bg-stone-100 text-stone-500">Not available from a US seller on Amazon</span>
               </div>
             </div>
             </div>
@@ -563,7 +563,7 @@ export default function BestPadelShoesPage() {
               </Link>
               <Link href="/blog/best-padel-rackets-beginners" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Beginner Rackets</div>
-                <p className="text-stone-400 text-sm mt-1">5 round-shaped picks from $90–$130</p>
+                <p className="text-stone-400 text-sm mt-1">5 round-shaped picks from $90–$150</p>
               </Link>
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Find a Court Near You</div>

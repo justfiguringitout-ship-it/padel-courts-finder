@@ -4,23 +4,23 @@ import { TrackedLink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Best Teardrop Padel Rackets (2026): Power Meets Forgiveness",
-  description: "The best teardrop head shape padel rackets in 2026, tested: picks that add real attacking power without diamond-shape punishment, from $189 — and who the teardrop suits.",
+  description: "The best teardrop head shape padel rackets in 2026, tested: picks that add real attacking power without diamond-shape punishment, from $209 — and who the teardrop suits.",
   alternates: { canonical: "https://www.padelcourtsfinder.com/blog/best-teardrop-padel-rackets" },
   openGraph: {
     title: "Best Teardrop Padel Rackets (2026): Power Meets Forgiveness",
-    description: "The best teardrop head shape padel rackets in 2026, tested: picks that add real attacking power without diamond-shape punishment, from $189 — and who the teardrop suits.",
+    description: "The best teardrop head shape padel rackets in 2026, tested: picks that add real attacking power without diamond-shape punishment, from $209 — and who the teardrop suits.",
     url: "https://www.padelcourtsfinder.com/blog/best-teardrop-padel-rackets",
     siteName: "Padel Courts Finder",
     type: "article",
   },
-  twitter: { card: "summary_large_image", title: "Best Teardrop Padel Rackets (2026): Power Meets Forgiveness", description: "The best teardrop head shape padel rackets in 2026, tested: picks that add real attacking power without diamond-shape punishment, from $189 — and who the teardrop suits." },
+  twitter: { card: "summary_large_image", title: "Best Teardrop Padel Rackets (2026): Power Meets Forgiveness", description: "The best teardrop head shape padel rackets in 2026, tested: picks that add real attacking power without diamond-shape punishment, from $209 — and who the teardrop suits." },
 };
 
 const articleData = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Best Teardrop Padel Rackets (2026): Power Meets Forgiveness",
-  "description": "The best teardrop head shape padel rackets in 2026, tested: picks that add real attacking power without diamond-shape punishment, from $189 — and who the teardrop suits.",
+  "description": "The best teardrop head shape padel rackets in 2026, tested: picks that add real attacking power without diamond-shape punishment, from $209 — and who the teardrop suits.",
   "datePublished": "2026-07-31T00:00:00Z",
   "dateModified": "2026-07-31T00:00:00Z",
   "author": {
@@ -51,7 +51,7 @@ const faqData = {
       "name": "What is the best teardrop padel racket in 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The NOX AT10 Genius 18K is the best teardrop we've tested in 2026 — genuine attacking power with far more forgiveness than a diamond. At $189, the Wilson Blade Elite V2 is the value pick and the easiest transition from a beginner frame."
+        "text": "The NOX AT10 Genius 18K is the best teardrop we've tested in 2026 — genuine attacking power with far more forgiveness than a diamond. At $208.58, the Wilson Blade Elite V2 is the value pick and the easiest transition from a beginner frame."
       }
     },
     {
@@ -95,7 +95,7 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/nox-at10-genius-18k-review",
         "offers": {
           "@type": "Offer",
-          "price": "272.00",
+          "price": "259.99",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20"
@@ -124,7 +124,7 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/wilson-blade-elite-v2-review",
         "offers": {
           "@type": "Offer",
-          "price": "189.00",
+          "price": "208.58",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20"
@@ -194,7 +194,7 @@ export default function BestTeardropRacketsPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">7.3<span className="text-sm text-stone-400">/10</span></div>
-                  <div className="text-sm text-stone-500">$272.00</div>
+                  <div className="text-sm text-stone-500">$259.99</div>
                 </div>
               </div>
               <p className="text-stone-700 leading-relaxed text-sm">Agustín Tapia&apos;s racket, and the most versatile pro frame we&apos;ve hit. Real attacking power from the raised sweet spot without diamond-shape punishment — the teardrop promise, delivered.</p>
@@ -215,12 +215,12 @@ export default function BestTeardropRacketsPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">7.0<span className="text-sm text-stone-400">/10</span></div>
-                  <div className="text-sm text-stone-500">$189.00</div>
+                  <div className="text-sm text-stone-500">$208.58</div>
                 </div>
               </div>
-              <p className="text-stone-700 leading-relaxed text-sm">The balanced step-up for improving players. Even power/control split, forgiving for its shape, and priced where an upgrade should be. The teardrop that makes the transition from a round beginner frame painless.</p>
+              <p className="text-stone-700 leading-relaxed text-sm">The balanced step-up for improving players. Even power/control split, forgiving for its shape, The teardrop that makes the transition from a round beginner frame painless. The only Amazon listing we found ships from Amazon Japan as an import.</p>
               <div className="grid sm:grid-cols-2 gap-3 mt-4 text-sm">
-                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">Forgiving for a teardrop; $189 sweet-spot price; easy transition frame</span></div>
+                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">Forgiving for a teardrop; easy transition frame</span></div>
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Outgunned by premium teardrops on raw power</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
@@ -241,7 +241,7 @@ export default function BestTeardropRacketsPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What is the best teardrop padel racket in 2026?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">The NOX AT10 Genius 18K is the best teardrop we&apos;ve tested in 2026 — genuine attacking power with far more forgiveness than a diamond. At $189, the Wilson Blade Elite V2 is the value pick and the easiest transition from a beginner frame.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">The NOX AT10 Genius 18K is the best teardrop we&apos;ve tested in 2026 — genuine attacking power with far more forgiveness than a diamond. At $208.58, the Wilson Blade Elite V2 is the value pick and the easiest transition from a beginner frame.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Is a teardrop padel racket good for intermediate players?</h3>

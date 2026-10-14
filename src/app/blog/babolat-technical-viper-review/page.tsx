@@ -4,14 +4,14 @@ import { TrackedLink } from "@/components/TrackedLink";
 import { StickyPickBar } from "@/components/sticky-pick-bar";
 
 export const metadata: Metadata = {
-  title: "Babolat Technical Viper Review (2026): Pro Power for $249",
+  title: "Babolat Technical Viper Review (2026): Pro Power for $230",
   description:
-    "Babolat Technical Viper tested: 6.7/10. $249. Lebron’s diamond frame brings pro power at a mid price — if your technique can cash the check. Full scores and fit guide.",
+    "Babolat Technical Viper tested: 6.7/10. $229.99. Lebron’s diamond frame brings pro power at a mid price — if your technique can cash the check. Full scores and fit guide.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/babolat-technical-viper-review",
   },
   openGraph: {
-    title: "Babolat Technical Viper Review (2026): Pro Power for $249",
+    title: "Babolat Technical Viper Review (2026): Pro Power for $230",
     description:
       "Full review of the Babolat Technical Viper, Juan Lebrón's signature diamond racket — explosive power scores, honest comfort trade-offs, and who should buy it.",
     url: "https://www.padelcourtsfinder.com/blog/babolat-technical-viper-review",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Babolat Technical Viper Review (2026): Pro Power for $249",
+    title: "Babolat Technical Viper Review (2026): Pro Power for $230",
     description:
       "Juan Lebrón's signature diamond racket reviewed — explosive power, honest comfort trade-offs, and who should actually buy it.",
   },
@@ -36,7 +36,7 @@ export default function BabolatTechnicalViperReviewPage() {
       "Juan Lebrón's signature padel racket with a hard EVA core, 3K carbon face, diamond shape, Dynamic Stability System, and 3D Spin+ texture.",
     "offers": {
       "@type": "Offer",
-      "price": "249.00",
+      "price": "229.99",
       "priceCurrency": "USD",
       "url": "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20",
     },
@@ -73,7 +73,7 @@ export default function BabolatTechnicalViperReviewPage() {
         "name": "Is the Babolat Technical Viper good value?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At $249 it is the most affordable true pro racket in our 2026 flagship guide — the other signature rackets we tested run up to $399. If you have the technique to handle its hard core and high balance, it delivers 9/10 power for significantly less money.",
+          "text": "At $229.99 it is the most affordable true pro racket in our 2026 flagship guide — the other signature rackets we tested run up to $399. If you have the technique to handle its hard core and high balance, it delivers 9/10 power for significantly less money.",
         },
       },
     ],
@@ -81,7 +81,7 @@ export default function BabolatTechnicalViperReviewPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Our verdict" productName="Babolat Technical Viper" price="$249.00" href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" />
+      <StickyPickBar label="Our verdict" productName="Babolat Technical Viper" price="$229.99" href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
 
@@ -123,11 +123,11 @@ export default function BabolatTechnicalViperReviewPage() {
               <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-2">Our Verdict</span>
               <div className="flex items-start justify-between gap-4 mb-2">
                 <h2 className="text-2xl font-bold text-foreground">6.7<span className="text-base font-medium text-stone-400">/10</span></h2>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$249.00</span>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$229.99</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Best for: Aggressive players with strong technique</p>
               <p className="text-stone-600 leading-relaxed mb-5">
-                The Technical Viper is built for one thing — explosive ball exit — and it delivers, provided you have the technique and conditioning to swing a hard-cored, high-balance 370g diamond. At $249 it&apos;s the most affordable true pro racket in our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets of 2026</Link> guide, where it took the #2 spot as best value at pro level.
+                The Technical Viper is built for one thing — explosive ball exit — and it delivers, provided you have the technique and conditioning to swing a hard-cored, high-balance 370g diamond. At $229.99 it&apos;s the most affordable true pro racket in our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets of 2026</Link> guide, where it took the #2 spot as best value at pro level.
               </p>
               <TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
             </div>
@@ -196,7 +196,7 @@ export default function BabolatTechnicalViperReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Who It&apos;s For — and Who Should Skip It</h2>
             <p className="text-stone-700 leading-relaxed">
-              <strong>Buy it if</strong> you&apos;re an aggressive player with strong technique and good physical conditioning who wants pro-tier power without a pro-tier price. If you strike cleanly and attack relentlessly, the Viper is devastating — and at $249 it undercuts every other flagship we&apos;ve tested.
+              <strong>Buy it if</strong> you&apos;re an aggressive player with strong technique and good physical conditioning who wants pro-tier power without a pro-tier price. If you strike cleanly and attack relentlessly, the Viper is devastating — and at $229.99 it undercuts every other flagship we&apos;ve tested.
             </p>
             <p className="text-stone-700 leading-relaxed mt-4">
               <strong>Skip it if</strong> your technique is still developing or your arm complains after long sessions. The hard core, high balance, and smaller-than-teardrop sweet spot punish sloppy contact instead of hiding it, and no discount makes up for a racket you can&apos;t swing comfortably.
@@ -207,7 +207,7 @@ export default function BabolatTechnicalViperReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives Worth Considering</h2>
             <p className="text-stone-700 leading-relaxed">
-              If budget isn&apos;t the constraint and you want the most premium materials in the same aggressive mold, read our <Link href="/blog/wilson-bela-v3-review" className="text-padel-green hover:underline">Wilson Bela V3 review</Link> — Fernando Belasteguín&apos;s 24K carbon flagship matches the Viper&apos;s 9/10 power with an even more refined face, at $399. For the full field, our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">2026 pro racket guide</Link> compares five signature flagships from $249 to $399, including more forgiving teardrop options.
+              If budget isn&apos;t the constraint and you want the most premium materials in the same aggressive mold, read our <Link href="/blog/wilson-bela-v3-review" className="text-padel-green hover:underline">Wilson Bela Pro V3 review</Link> — Fernando Belasteguín&apos;s 24K carbon flagship matches the Viper&apos;s 9/10 power with an even more refined face, at $399. For the full field, our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">2026 pro racket guide</Link> compares five signature flagships from $230 to $399, including more forgiving teardrop options.
             </p>
           </section>
 
@@ -225,7 +225,7 @@ export default function BabolatTechnicalViperReviewPage() {
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Is the Babolat Technical Viper good value?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">At $249 it&apos;s the most affordable true pro racket in our 2026 flagship guide — the other signature rackets we tested run up to $399. If you have the technique to handle its hard core and high balance, it delivers 9/10 power for significantly less money.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">At $229.99 it&apos;s the most affordable true pro racket in our 2026 flagship guide — the other signature rackets we tested run up to $399. If you have the technique to handle its hard core and high balance, it delivers 9/10 power for significantly less money.</p>
               </div>
             </div>
           </section>
@@ -241,7 +241,7 @@ export default function BabolatTechnicalViperReviewPage() {
                 <p className="text-stone-400 text-sm mt-1">The top 5 signature frames reviewed</p>
               </Link>
               <Link href="/blog/wilson-bela-v3-review" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
-                <div className="font-semibold text-white">Wilson Bela V3 Review</div>
+                <div className="font-semibold text-white">Wilson Bela Pro V3 Review</div>
                 <p className="text-stone-400 text-sm mt-1">Bela&apos;s $399 24K carbon flagship, tested</p>
               </Link>
               <Link href="/blog/best-padel-rackets-power" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">

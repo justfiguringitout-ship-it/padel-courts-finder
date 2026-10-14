@@ -44,7 +44,7 @@ export default function BestPadelBallsPage() {
         "name": "What are the best padel balls in 2026?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The HEAD Padel Pro S is the best padel ball for most players in 2026 — it's the ball used at most US clubs and holds pressure consistently. The Dunlop Pro Padel is the slightly livelier alternative. Both cost about $14 for a 3-ball can; buy whichever your club stocks so your practice balls match match play."
+          "text": "The HEAD Padel Pro S+ is the best padel ball for most players in 2026. It is the current version of the HEAD Pro S, the ball used at most US clubs, and HEAD says its new core holds pressure longer. The Dunlop Pro Padel is the main alternative. Both cost $12 to $15 for a 3-ball can; buy whichever your club stocks so your practice balls match match play."
         }
       },
       {
@@ -65,7 +65,7 @@ export default function BestPadelBallsPage() {
       {
         "@type": "Question",
         "name": "What balls do padel clubs use?",
-        "acceptedAnswer": { "@type": "Answer", "text": "In the US, the HEAD Padel Pro S is the ball you will see most often at clubs — durable, consistent, and widely stocked. The Dunlop Pro Padel is the main alternative, with a slightly different feel that some players prefer." }
+        "acceptedAnswer": { "@type": "Answer", "text": "In the US, the HEAD Padel Pro S is the ball you will see most often at clubs: durable, consistent, and widely stocked. HEAD now sells its current version as the Pro S+. The Dunlop Pro Padel is the main alternative, with a slightly different feel that some players prefer." }
       }
     ]
   };
@@ -80,9 +80,9 @@ export default function BestPadelBallsPage() {
         "item": {
           "@type": "Product",
           "image": "https://www.padelcourtsfinder.com/og/default.png",
-          "name": "HEAD Padel Pro S",
-          "description": "The standard US club ball — durable and consistent",
-          "offers": { "@type": "Offer", "price": "13.91", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20" }
+          "name": "HEAD Padel Pro S+",
+          "description": "The current version of HEAD's standard US club ball",
+          "offers": { "@type": "Offer", "price": "14.95", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20" }
         }
       },
       {
@@ -93,7 +93,7 @@ export default function BestPadelBallsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Dunlop Pro Padel",
           "description": "The main alternative, with a slightly different feel",
-          "offers": { "@type": "Offer", "price": "14.74", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B07SBHNKJF?tag=padel02-20" }
+          "offers": { "@type": "Offer", "price": "11.94", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B07SBHNKJF?tag=padel02-20" }
         }
       }
     ]
@@ -211,27 +211,28 @@ export default function BestPadelBallsPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-5">The Best Padel Balls in 2026: Our Picks</h2>
 
-            {/* HEAD Padel Pro S */}
+            {/* HEAD Padel Pro S+ */}
             <div className="relative bg-white border-2 border-padel-green rounded-xl p-6 md:p-8 mb-8 shadow-sm">
               <div className="absolute -top-3 -left-2 bg-padel-green text-white text-xs font-bold px-3 py-1.5 rounded-md -rotate-3 shadow-md z-10">
                 #1 PICK
               </div>
               <div className="flex items-start justify-between gap-4 mb-1 mt-2">
-                <h3 className="text-xl font-bold text-foreground">HEAD Padel Pro S</h3>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$13.91</span>
+                <h3 className="text-xl font-bold text-foreground">HEAD Padel Pro S+</h3>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$14.95</span>
               </div>
-              <p className="text-sm italic text-stone-500 mb-4">Best for: Everyone — the standard US club ball</p>
+              <p className="text-sm italic text-stone-500 mb-4">Best for: Club players who want HEAD&apos;s current Pro S ball</p>
               <p className="text-stone-600 leading-[1.75] mb-5">
-                If you&apos;ve played padel at a US club, you&apos;ve almost certainly hit this ball — the Padel Pro
-                S is the default can behind most front desks, and it earns the spot. The bounce is consistent from
-                the first rally, the felt holds up well on abrasive court surfaces, and it keeps its pressure as well
-                as any pressurized ball can. It&apos;s the ball our gear guides recommend, and the safe answer for
-                practice and matches alike. Buy the same ball your club uses and nothing about your game has to adjust.
+                If you&apos;ve played padel at a US club, you&apos;ve almost certainly hit the HEAD Padel Pro S, the
+                default can behind most front desks. The Pro S+ is HEAD&apos;s current version of it, and the original
+                Pro S is no longer listed on Amazon. HEAD says the S+ is a little harder and faster, with a new core
+                formula meant to hold pressure longer and a felt made for padel courts. If your club still stocks the
+                older Pro S, expect the S+ to feel slightly livelier. Buy the same ball your club uses and nothing
+                about your game has to adjust.
               </p>
               <TrackedLink
-                href="https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20"
+                href="https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20"
                 type="affiliate"
-                productName="HEAD Padel Pro S"
+                productName="HEAD Padel Pro S+"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
@@ -245,7 +246,7 @@ export default function BestPadelBallsPage() {
               <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 — The Alternative</span>
               <div className="flex items-start justify-between gap-4 mb-1">
                 <h3 className="text-xl font-bold text-foreground">Dunlop Pro Padel</h3>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$14.74</span>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$11.94</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want a slightly different feel</p>
               <p className="text-stone-600 leading-[1.75] mb-5">
@@ -285,7 +286,7 @@ export default function BestPadelBallsPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What are the best padel balls in 2026?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">The HEAD Padel Pro S for most players — it&apos;s what most US clubs stock, and it holds pressure consistently. The Dunlop Pro Padel is the slightly livelier alternative. Both run about $14 per can; match whatever your club uses so practice feels like match play.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">The HEAD Padel Pro S+ for most players. It is the current version of the Pro S that most US clubs stock, and HEAD says its new core holds pressure longer. The Dunlop Pro Padel is the main alternative. Both run $12 to $15 per can; match whatever your club uses so practice feels like match play.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Are padel balls the same as tennis balls?</h3>
@@ -301,7 +302,7 @@ export default function BestPadelBallsPage() {
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What balls do padel clubs use?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">In the US, the HEAD Padel Pro S is the ball you&apos;ll see most often at clubs — durable, consistent, and widely stocked. The Dunlop Pro Padel is the main alternative, with a slightly different feel that some players prefer.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">In the US, the HEAD Padel Pro S is the ball you&apos;ll see most often at clubs: durable, consistent, and widely stocked. HEAD now sells its current version as the Pro S+. The Dunlop Pro Padel is the main alternative, with a slightly different feel that some players prefer.</p>
               </div>
             </div>
           </section>
@@ -322,7 +323,7 @@ export default function BestPadelBallsPage() {
               </Link>
               <Link href="/blog/best-padel-rackets-beginners" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Beginner Rackets</div>
-                <p className="text-stone-400 text-sm mt-1">5 round-shaped picks from $90&ndash;$130</p>
+                <p className="text-stone-400 text-sm mt-1">5 round-shaped picks from $90&ndash;$150</p>
               </Link>
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Find a Court Near You</div>

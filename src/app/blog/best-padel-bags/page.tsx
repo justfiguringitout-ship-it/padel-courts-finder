@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Best Padel Bags (2026): Backpack or Tour Bag?",
-    description: "How to pick the right padel bag — backpack vs tour bag, what to look for, and our two tested picks at $59.95 and $99.",
+    description: "How to pick the right padel bag — backpack vs tour bag, what to look for, and our two tested picks at $51.80 and $99.",
     url: "https://www.padelcourtsfinder.com/blog/best-padel-bags",
     siteName: "Padel Courts Finder",
     type: "article",
@@ -76,7 +76,7 @@ export default function BestPadelBagsPage() {
           "description": "Purpose-built padel backpack with a racket compartment, shoe pocket, and room for everything else.",
           "offers": {
             "@type": "Offer",
-            "price": "59.95",
+            "price": "51.80",
             "priceCurrency": "USD",
             "url": "https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20"
           }
@@ -225,7 +225,7 @@ export default function BestPadelBagsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5 sm:p-6">
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <h3 className="font-bold text-foreground text-lg">Babolat Court Lite Padel Backpack &mdash; best backpack</h3>
-                  <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$59.95</span>
+                  <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$51.80</span>
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mb-3">
                   Purpose-built for padel rather than adapted from tennis: a racket compartment that actually fits a

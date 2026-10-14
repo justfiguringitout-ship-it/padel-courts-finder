@@ -57,7 +57,7 @@ export default function NoxAT10GeniusAttackReviewPage() {
         "name": "What is the difference between the NOX AT10 Genius Attack and the AT10 Genius 18K?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "They are different rackets in the same line. The Genius 18K is the teardrop all-rounder and our best-overall pick for 2026 at $272.00, scoring 7.3/10. The Genius Attack is the diamond-shaped finisher at $229.99, scoring 6.7/10 — more mass up top, more power, less forgiveness. Buy the Attack only if your game is built around the smash.",
+          "text": "They are different rackets in the same line. The Genius 18K is the teardrop all-rounder and our best-overall pick for 2026 at $259.99, scoring 7.3/10. The Genius Attack is the diamond-shaped finisher at $229.99, scoring 6.7/10 — more mass up top, more power, less forgiveness. Buy the Attack only if your game is built around the smash.",
         },
       },
       {
@@ -150,7 +150,7 @@ export default function NoxAT10GeniusAttackReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Attack vs Genius 18K &mdash; read this before you buy</h2>
             <p className="text-stone-700 leading-relaxed">
-              These are two different rackets, and the names are close enough that people buy the wrong one. The <Link href="/blog/nox-at10-genius-18k-review" className="text-padel-green hover:underline">AT10 Genius 18K</Link> is the teardrop all-rounder &mdash; our best-overall pick for 2026, scoring 7.3/10 at $272.00. The Attack is the diamond: more mass up top, more power, less forgiveness, and $42 cheaper.
+              These are two different rackets, and the names are close enough that people buy the wrong one. The <Link href="/blog/nox-at10-genius-18k-review" className="text-padel-green hover:underline">AT10 Genius 18K</Link> is the teardrop all-rounder &mdash; our best-overall pick for 2026, scoring 7.3/10 at $259.99. The Attack is the diamond: more mass up top, more power, less forgiveness, and $42 cheaper.
             </p>
             <div className="overflow-x-auto rounded-xl border border-stone-200 mt-5">
               <table className="w-full text-sm bg-white">
@@ -163,7 +163,7 @@ export default function NoxAT10GeniusAttackReviewPage() {
                 </thead>
                 <tbody>
                   <tr className="border-b border-stone-100"><td className="p-3 font-medium text-stone-700">Shape</td><td className="p-3 text-stone-600">Diamond</td><td className="p-3 text-stone-600">Teardrop</td></tr>
-                  <tr className="border-b border-stone-100"><td className="p-3 font-medium text-stone-700">Price</td><td className="p-3 text-stone-600">$229.99</td><td className="p-3 text-stone-600">$272.00</td></tr>
+                  <tr className="border-b border-stone-100"><td className="p-3 font-medium text-stone-700">Price</td><td className="p-3 text-stone-600">$229.99</td><td className="p-3 text-stone-600">$259.99</td></tr>
                   <tr className="border-b border-stone-100"><td className="p-3 font-medium text-stone-700">Our score</td><td className="p-3 text-stone-600">6.7/10</td><td className="p-3 text-stone-600">7.3/10</td></tr>
                   <tr><td className="p-3 font-medium text-stone-700">Buy it if</td><td className="p-3 text-stone-600">You finish points overhead</td><td className="p-3 text-stone-600">You want one racket for everything</td></tr>
                 </tbody>
@@ -229,7 +229,7 @@ export default function NoxAT10GeniusAttackReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives worth considering</h2>
             <p className="text-stone-700 leading-relaxed">
-              If you want maximum power and can handle the demands, the <Link href="/blog/head-extreme-pro-review" className="text-padel-green hover:underline">HEAD Extreme Pro</Link> ($319.95) is the only 10/10 power score we have given. If the diamond shape is the part that worries you, the <Link href="/blog/best-teardrop-padel-rackets" className="text-padel-green hover:underline">teardrop guide</Link> covers the shapes that keep most of the power with a far bigger sweet spot. If your elbow is the constraint, start with our <Link href="/blog/best-padel-rackets-tennis-elbow" className="text-padel-green hover:underline">tennis elbow picks</Link> instead.
+              If you want maximum power and can handle the demands, the <Link href="/blog/head-extreme-pro-review" className="text-padel-green hover:underline">HEAD Extreme Pro</Link> ($299.95) is the only 10/10 power score we have given. If the diamond shape is the part that worries you, the <Link href="/blog/best-teardrop-padel-rackets" className="text-padel-green hover:underline">teardrop guide</Link> covers the shapes that keep most of the power with a far bigger sweet spot. If your elbow is the constraint, start with our <Link href="/blog/best-padel-rackets-tennis-elbow" className="text-padel-green hover:underline">tennis elbow picks</Link> instead.
             </p>
           </section>
 
@@ -239,7 +239,7 @@ export default function NoxAT10GeniusAttackReviewPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What is the difference between the AT10 Genius Attack and the AT10 Genius 18K?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">Different rackets in the same line. The Genius 18K is the teardrop all-rounder, our best-overall 2026 pick at $272.00 and 7.3/10. The Attack is the diamond finisher at $229.99 and 6.7/10 &mdash; more power up top, less forgiveness. Buy the Attack only if your game is built around the smash.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">Different rackets in the same line. The Genius 18K is the teardrop all-rounder, our best-overall 2026 pick at $259.99 and 7.3/10. The Attack is the diamond finisher at $229.99 and 6.7/10 &mdash; more power up top, less forgiveness. Buy the Attack only if your game is built around the smash.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Is the AT10 Genius Attack 12K good for intermediate players?</h3>

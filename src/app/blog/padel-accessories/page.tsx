@@ -74,7 +74,7 @@ export default function PadelAccessoriesPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Wilson Pro Overgrip 12-Pack",
           "description": "Tacky, sweat-absorbing overgrips — the club standard",
-          "offers": { "@type": "Offer", "price": "27.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20" }
+          "offers": { "@type": "Offer", "price": "26.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20" }
         }
       },
       {
@@ -94,9 +94,9 @@ export default function PadelAccessoriesPage() {
         "item": {
           "@type": "Product",
           "image": "https://www.padelcourtsfinder.com/og/default.png",
-          "name": "HEAD Padel Pro S Balls",
+          "name": "HEAD Padel Pro S+ Balls",
           "description": "Fresh pressurized padel balls for consistent bounce",
-          "offers": { "@type": "Offer", "price": "13.91", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20" }
+          "offers": { "@type": "Offer", "price": "14.95", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20" }
         }
       }
     ]
@@ -162,7 +162,7 @@ export default function PadelAccessoriesPage() {
             <div className="bg-white border border-stone-200 rounded-xl p-6 mt-6">
               <div className="flex items-start justify-between gap-4 mb-1">
                 <h3 className="text-lg font-bold text-foreground">Wilson Pro Overgrip 12-Pack</h3>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg font-bold whitespace-nowrap">$27.00</span>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg font-bold whitespace-nowrap">$26.99</span>
               </div>
               <p className="text-stone-600 text-sm leading-relaxed mb-4">
                 The default choice for a reason: a tacky, absorbent feel that&apos;s become the standard grip in
@@ -214,17 +214,17 @@ export default function PadelAccessoriesPage() {
             </p>
             <div className="bg-white border border-stone-200 rounded-xl p-6 mt-6">
               <div className="flex items-start justify-between gap-4 mb-1">
-                <h3 className="text-lg font-bold text-foreground">HEAD Padel Pro S Balls</h3>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg font-bold whitespace-nowrap">$13.91</span>
+                <h3 className="text-lg font-bold text-foreground">HEAD Padel Pro S+ Balls</h3>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg font-bold whitespace-nowrap">$14.95</span>
               </div>
               <p className="text-stone-600 text-sm leading-relaxed mb-4">
                 A widely used tournament-grade ball with a lively, consistent bounce. Grab a can for your bag and
                 rotate it out once the bounce fades.
               </p>
               <TrackedLink
-                href="https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20"
+                href="https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20"
                 type="affiliate"
-                productName="HEAD Padel Pro S Balls"
+                productName="HEAD Padel Pro S+ Balls"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
@@ -316,7 +316,7 @@ export default function PadelAccessoriesPage() {
               </Link>
               <Link href="/blog/best-padel-rackets-beginners" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Beginner Rackets</div>
-                <p className="text-stone-400 text-sm mt-1">5 round-shaped picks from $90–$130</p>
+                <p className="text-stone-400 text-sm mt-1">5 round-shaped picks from $90–$150</p>
               </Link>
             </div>
           </div>

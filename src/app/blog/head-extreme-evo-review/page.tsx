@@ -73,7 +73,7 @@ export default function HeadExtremeEvoReviewPage() {
         "name": "HEAD Extreme Evo vs HEAD Extreme Pro — which should I buy?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "They sit at opposite ends of the line. The Evo is a $99.95 round beginner frame scoring 7.3/10 with 9/10 comfort. The Extreme Pro is a $319.95 diamond that scored a perfect 10/10 for power and just 4/10 for comfort. Unless you are a tournament-level attacker, the Evo is the racket you actually want.",
+          "text": "They sit at opposite ends of the line. The Evo is a $99.95 round beginner frame scoring 7.3/10 with 9/10 comfort. The Extreme Pro is a $299.95 diamond that scored a perfect 10/10 for power and just 4/10 for comfort. Unless you are a tournament-level attacker, the Evo is the racket you actually want.",
         },
       },
     ],
@@ -201,7 +201,7 @@ export default function HeadExtremeEvoReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives worth considering</h2>
             <p className="text-stone-700 leading-relaxed">
-              The <Link href="/blog/babolat-contact-review" className="text-padel-green hover:underline">Babolat Contact</Link> tops our beginner guide outright and costs less, with a softer feel but without Innegra&apos;s shock reduction. If you are already looking one step ahead, the <Link href="/blog/wilson-blade-elite-v2-review" className="text-padel-green hover:underline">Wilson Blade Elite V2</Link> ($189) is our favourite balanced step up. And at the far end of the same HEAD line, the <Link href="/blog/head-extreme-pro-review" className="text-padel-green hover:underline">HEAD Extreme Pro</Link> ($319.95) trades every point of comfort for a perfect 10/10 power score &mdash; the opposite racket in every way.
+              The <Link href="/blog/babolat-contact-review" className="text-padel-green hover:underline">Babolat Contact</Link> tops our beginner guide outright and costs less, with a softer feel but without Innegra&apos;s shock reduction. If you are already looking one step ahead, the <Link href="/blog/wilson-blade-elite-v2-review" className="text-padel-green hover:underline">Wilson Blade Elite V2</Link> ($208.58) is our favourite balanced step up. And at the far end of the same HEAD line, the <Link href="/blog/head-extreme-pro-review" className="text-padel-green hover:underline">HEAD Extreme Pro</Link> ($299.95) trades every point of comfort for a perfect 10/10 power score &mdash; the opposite racket in every way.
             </p>
           </section>
 
@@ -219,7 +219,7 @@ export default function HeadExtremeEvoReviewPage() {
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Extreme Evo or Extreme Pro?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">Opposite ends of the same line. The Evo is a $99.95 round frame at 7.3/10 with 9/10 comfort. The <Link href="/blog/head-extreme-pro-review" className="text-padel-green hover:underline">Extreme Pro</Link> is a $319.95 diamond with a perfect 10/10 power score and 4/10 comfort. Unless you are a tournament-level attacker, the Evo is the one you want.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">Opposite ends of the same line. The Evo is a $99.95 round frame at 7.3/10 with 9/10 comfort. The <Link href="/blog/head-extreme-pro-review" className="text-padel-green hover:underline">Extreme Pro</Link> is a $299.95 diamond with a perfect 10/10 power score and 4/10 comfort. Unless you are a tournament-level attacker, the Evo is the one you want.</p>
               </div>
             </div>
           </section>
@@ -232,7 +232,7 @@ export default function HeadExtremeEvoReviewPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Link href="/blog/best-budget-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Budget Padel Rackets (2026)</div>
-                <p className="text-stone-400 text-sm mt-1">6 picks from $90 to $170, ranked by value</p>
+                <p className="text-stone-400 text-sm mt-1">6 picks under $170, ranked by value</p>
               </Link>
               <Link href="/blog/best-lightweight-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Lightweight Padel Rackets</div>

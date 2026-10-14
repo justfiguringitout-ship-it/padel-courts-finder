@@ -9,13 +9,13 @@ import { HeroVideo } from '@/components/hero-video';
 
 export const metadata: Metadata = {
   title: 'Best Padel Rackets for Intermediate Players (2026) — Top 5 Upgrades',
-  description: 'Ready to upgrade your padel racket? We compare the 5 best intermediate padel rackets in 2026, from $170 to $280. Carbon surfaces, teardrop shapes, and pro-level tech.',
+  description: 'Ready to upgrade your padel racket? We compare the 5 best intermediate padel rackets in 2026, from $209 to $260. Carbon surfaces, teardrop shapes, and pro-level tech.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-rackets-intermediate',
   },
   openGraph: {
     title: 'Best Padel Rackets for Intermediate Players (2026) — Top 5 Upgrades',
-    description: 'Ready to upgrade your padel racket? We compare the 5 best intermediate padel rackets in 2026, from $170 to $280. Carbon surfaces, teardrop shapes, and pro-level tech.',
+    description: 'Ready to upgrade your padel racket? We compare the 5 best intermediate padel rackets in 2026, from $209 to $260. Carbon surfaces, teardrop shapes, and pro-level tech.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-rackets-intermediate',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 /** Presentation data for the compare view and racket drawings. Every value is
  *  copied from this page's own cards; nothing here is new. */
 const RACKETS: GearRacket[] = [
-  { id: "nox-ml10-pro-cup", rank: 1, name: "NOX ML10 Pro Cup Rough Surface", productName: "NOX ML10 Pro Cup", price: "$169.99", href: "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Spin-focused players upgrading from beginner", balance: "Low", level: "Intermediate" },
-  { id: "wilson-blade-elite", rank: 2, name: "Wilson Blade Elite V2", productName: "Wilson Blade Elite V2", price: "$189.00", href: "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20", brand: "wilson", shape: "teardrop", shapeLabel: "Teardrop", weight: "360g", core: "Soft EVA", face: "Carbon/FG Hybrid Textured", bestFor: "All-court players who want balance", level: "Intermediate" },
+  { id: "nox-ml10-pro-cup", rank: 1, name: "NOX ML10 Pro Cup Rough Surface", productName: "NOX ML10 Pro Cup", price: "Unavailable", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Spin-focused players upgrading from beginner", balance: "Low", level: "Intermediate" },
+  { id: "wilson-blade-elite", rank: 2, name: "Wilson Blade Elite V2", productName: "Wilson Blade Elite V2", price: "$208.58", href: "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20", brand: "wilson", shape: "teardrop", shapeLabel: "Teardrop", weight: "360g", core: "Soft EVA", face: "Carbon/FG Hybrid Textured", bestFor: "All-court players who want balance", level: "Intermediate" },
   { id: "nox-at10-attack", rank: 3, name: "NOX AT10 Genius Attack 12K", productName: "NOX AT10 Genius Attack", price: "$229.99", href: "https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20", brand: "nox", shape: "diamond", shapeLabel: "Diamond", weight: "360–370g", core: "MLD Black EVA", face: "12K Carbon Luxury", bestFor: "Aggressive players with clean technique", balance: "Head-heavy", level: "Upper-intermediate" },
   { id: "bullpadel-neuron", rank: 4, name: "Bullpadel Neuron 2025 (Chingotto)", productName: "Bullpadel Neuron", price: "$236.00", href: "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20", brand: "bullpadel", shape: "hybrid", shapeLabel: "Hybrid (Teardrop-Round)", weight: "370g", core: "EVA", face: "Xtend Carbon 3K", bestFor: "Upper-intermediates transitioning to advanced", level: "Upper-intermediate" },
-  { id: "adidas-metalbone-hrd", rank: 5, name: "Adidas Metalbone HRD+ 3.3", productName: "Adidas Metalbone HRD+", price: "$279.99", href: "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20", brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–360g", core: "High Memory EVA (Hard)", face: "Carbon Aluminized 2:1", bestFor: "Left-side attackers who want firepower", balance: "High", level: "Upper-intermediate" },
+  { id: "adidas-metalbone-hrd", rank: 5, name: "Adidas Metalbone HRD+ 3.3", productName: "Adidas Metalbone HRD+", price: "$259.99", href: "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20", brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–360g", core: "High Memory EVA (Hard)", face: "Carbon Aluminized 2:1", bestFor: "Left-side attackers who want firepower", balance: "High", level: "Upper-intermediate" },
 ];
 
 export default function IntermediateRacketsPage() {
@@ -37,7 +37,7 @@ export default function IntermediateRacketsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Rackets for Intermediate Players (2026) — Top 5 Upgrades",
-    "description": "Ready to upgrade your padel racket? We compare the 5 best intermediate padel rackets in 2026, from $170 to $280.",
+    "description": "Ready to upgrade your padel racket? We compare the 5 best intermediate padel rackets in 2026, from $209 to $260.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-24T00:00:00Z",
     "dateModified": "2026-07-31T00:00:00Z",
@@ -55,7 +55,7 @@ export default function IntermediateRacketsPage() {
         "name": "What is the best padel racket for intermediate players in 2026?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The NOX ML10 Pro Cup is our top overall pick for intermediate players in 2026 — a control-first round racket that rewards improving technique without punishing mishits. The Bullpadel Neuron is the pick if you want a hybrid shape as a step toward more aggressive play."
+          "text": "The NOX ML10 Pro Cup is our top overall pick for intermediate players in 2026 — a control-first round racket that rewards improving technique without punishing mishits. It is currently unavailable on Amazon. The Bullpadel Neuron is the pick if you want a hybrid shape as a step toward more aggressive play."
         }
       },
       {
@@ -105,7 +105,6 @@ export default function IntermediateRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX ML10 Pro Cup Rough Surface",
           "description": "Best for: Spin-focused players upgrading from beginner",
-          "offers": { "@type": "Offer", "price": "169.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -117,7 +116,7 @@ export default function IntermediateRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Wilson Blade Elite V2",
           "description": "Best for: All-court players who want balance",
-          "offers": { "@type": "Offer", "price": "189.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" },
+          "offers": { "@type": "Offer", "price": "208.58", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.0, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -153,7 +152,7 @@ export default function IntermediateRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Adidas Metalbone HRD+ 3.3",
           "description": "Best for: Left-side attackers who want firepower",
-          "offers": { "@type": "Offer", "price": "279.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" },
+          "offers": { "@type": "Offer", "price": "259.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 6.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       }
@@ -162,7 +161,7 @@ export default function IntermediateRacketsPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Best value upgrade" productName="NOX ML10 Pro Cup" price="$169.99" href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" />
+      <StickyPickBar label="Hybrid pick" productName="Bullpadel Neuron 2025" price="$236.00" href="https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListData) }} />
@@ -179,7 +178,7 @@ export default function IntermediateRacketsPage() {
           </div>
           <span className="inline-block bg-padel-green text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Equipment</span>
           <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Best Padel Rackets for Intermediate Players (2026)</h1>
-          <p className="text-lg text-stone-400 mt-3">Top 5 upgrade picks from $170 to $280 &mdash; when your beginner racket stops keeping up</p>
+          <p className="text-lg text-stone-400 mt-3">Top 5 upgrade picks from $209 to $260, for when your beginner racket stops keeping up</p>
           <p className="text-stone-500 text-sm mt-1">Expert picks for every budget</p>
           <div className="text-sm text-stone-500 mt-4 flex items-center gap-3">
             <span>Updated July 31, 2026 &middot; 11 min read</span>
@@ -201,7 +200,7 @@ export default function IntermediateRacketsPage() {
 
             <div className="prose prose-lg prose-stone max-w-none mb-0">
               <p className="text-stone-600 leading-[1.75]">You&apos;ve been playing for 6+ months. Your technique is more consistent, you&apos;re reading the game better, and that beginner racket is starting to feel like it&apos;s holding you back. Sound familiar? It&apos;s time to upgrade.</p>
-              <p className="text-stone-600 leading-[1.75]">An intermediate racket gives you more <strong className="text-foreground">power</strong>, better <strong className="text-foreground">spin</strong>, and a more responsive <strong className="text-foreground">feel</strong> &mdash; but it also demands cleaner technique. Look for: a <strong className="text-foreground">carbon or hybrid surface</strong> for ball speed, a <strong className="text-foreground">teardrop or hybrid shape</strong> for balanced power/control, a <strong className="text-foreground">medium EVA core</strong>, and a <strong className="text-foreground">weight of 360&ndash;375g</strong>. Budget $170&ndash;280 for a quality intermediate racket. Ready to test your new racket? <Link href="/search" className="text-padel-green hover:underline">Find a court near you</Link>.</p>
+              <p className="text-stone-600 leading-[1.75]">An intermediate racket gives you more <strong className="text-foreground">power</strong>, better <strong className="text-foreground">spin</strong>, and a more responsive <strong className="text-foreground">feel</strong> &mdash; but it also demands cleaner technique. Look for: a <strong className="text-foreground">carbon or hybrid surface</strong> for ball speed, a <strong className="text-foreground">teardrop or hybrid shape</strong> for balanced power/control, a <strong className="text-foreground">medium EVA core</strong>, and a <strong className="text-foreground">weight of 360&ndash;375g</strong>. Budget $200&ndash;260 for a quality intermediate racket. Ready to test your new racket? <Link href="/search" className="text-padel-green hover:underline">Find a court near you</Link>.</p>
             </div>
 
             {/* Quick Picks Box */}
@@ -212,15 +211,15 @@ export default function IntermediateRacketsPage() {
               <div className="space-y-2.5">
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Value Upgrade:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">NOX ML10 Pro Cup</TrackedLink> <span className="text-stone-500">&mdash; $169.99</span></span>
+                  <span className="text-sm"><a href="#nox-ml10-pro-cup" className="text-padel-green hover:underline font-medium">NOX ML10 Pro Cup</a> <span className="text-stone-500">(currently unavailable on Amazon)</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best All-Around:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" type="affiliate" productName="Wilson Blade Elite V2" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Wilson Blade Elite V2</TrackedLink> <span className="text-stone-500">&mdash; $189.00</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" type="affiliate" productName="Wilson Blade Elite V2" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Wilson Blade Elite V2</TrackedLink> <span className="text-stone-500">&mdash; $208.58</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Most Power Under $300:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" type="affiliate" productName="Adidas Metalbone HRD+" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Adidas Metalbone HRD+</TrackedLink> <span className="text-stone-500">&mdash; $279.99</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" type="affiliate" productName="Adidas Metalbone HRD+" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Adidas Metalbone HRD+</TrackedLink> <span className="text-stone-500">&mdash; $259.99</span></span>
                 </div>
               </div>
               <a href="#top-5-intermediate" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
@@ -274,7 +273,7 @@ export default function IntermediateRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mt-2 mb-1">#1 &mdash; Best Value Upgrade</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX ML10 Pro Cup Rough Surface</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$169.99</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Spin-focused players upgrading from beginner</p>
                 <RacketPlate racket={RACKETS[0]} uidPrefix="int" />
@@ -315,12 +314,12 @@ export default function IntermediateRacketsPage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-stone-600 leading-[1.75] mb-5">The ML10 keeps the safety of a round shape but adds a rough sand-finish surface that bites the ball for serious topspin. The HR3 EVA core provides consistent bounce and rapid memory, while the low balance point makes it exceptionally agile at the net &mdash; where intermediates start spending more time. NOX&apos;s Pulse System dampens vibration in the handle. At $170, this is the most affordable meaningful upgrade from a beginner racket. If you want better spin without giving up forgiveness, start here.</p>
+                <p className="text-stone-600 leading-[1.75] mb-5">The ML10 keeps the safety of a round shape but adds a rough sand-finish surface that bites the ball for serious topspin. The HR3 EVA core provides consistent bounce and rapid memory, while the low balance point makes it exceptionally agile at the net &mdash; where intermediates start spending more time. NOX&apos;s Pulse System dampens vibration in the handle. When we tested it at $170, it was the most affordable meaningful upgrade from a beginner racket. It is currently unavailable on Amazon.</p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Rough sand finish for topspin, low balance = great at net</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face limits raw power</p>
                 </div>
-                <TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <span className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-stone-100 text-stone-500 font-medium rounded-lg">Currently unavailable on Amazon</span>
               </div>
 
               {/* 2. Wilson Blade Elite V2 */}
@@ -328,7 +327,7 @@ export default function IntermediateRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 &mdash; Best All-Around</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">Wilson Blade Elite V2</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$189.00</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$208.58</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: All-court players who want balance</p>
                 <RacketPlate racket={RACKETS[1]} uidPrefix="int" />
@@ -369,7 +368,7 @@ export default function IntermediateRacketsPage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-stone-600 leading-[1.75] mb-5">The Blade Elite V2 is a teardrop that balances power and control beautifully. Wilson&apos;s carbon/fiberglass hybrid surface gives you more ball speed than pure fiberglass while retaining some comfort, and the textured finish helps with spin. The Soft EVA core keeps it forgiving enough for intermediates who still mishit occasionally. Sharp Hole Technology modifies the drilling pattern for extra ball bite. It&apos;s a 2022 model &mdash; older but battle-tested and proven. At $189 for this much Wilson build quality, it&apos;s a steal for the all-court player who wants a bit of everything.</p>
+                <p className="text-stone-600 leading-[1.75] mb-5">The Blade Elite V2 is a teardrop that balances power and control beautifully. Wilson&apos;s carbon/fiberglass hybrid surface gives you more ball speed than pure fiberglass while retaining some comfort, and the textured finish helps with spin. The Soft EVA core keeps it forgiving enough for intermediates who still mishit occasionally. Sharp Hole Technology modifies the drilling pattern for extra ball bite. It&apos;s a 2022 model, older but battle-tested and proven, and it suits the all-court player who wants a bit of everything. It is getting harder to buy: the only Amazon listing we found, at $208.58, ships from Amazon Japan as an import.</p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Proven Wilson build quality, teardrop balances power/control</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> 2022 model (older but battle-tested)</p>
@@ -493,7 +492,7 @@ export default function IntermediateRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#5 &mdash; Most Power Under $300</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">Adidas Metalbone HRD+ 3.3</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$279.99</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$259.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Left-side attackers who want firepower</p>
                 <RacketPlate racket={RACKETS[4]} uidPrefix="int" />
@@ -562,13 +561,13 @@ export default function IntermediateRacketsPage() {
                   <tbody>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Value Upgrade</td>
-                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">NOX ML10 Pro Cup</TrackedLink></td>
-                      <td className="py-3 text-stone-600">$169.99</td>
+                      <td className="py-3 pr-4 text-stone-700">NOX ML10 Pro Cup</td>
+                      <td className="py-3 text-stone-600">Currently unavailable on Amazon</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best All-Around</td>
                       <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" type="affiliate" productName="Wilson Blade Elite V2" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Wilson Blade Elite V2</TrackedLink></td>
-                      <td className="py-3 text-stone-600">$189.00</td>
+                      <td className="py-3 text-stone-600">$208.58</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best for Future Growth</td>
@@ -578,7 +577,7 @@ export default function IntermediateRacketsPage() {
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Most Power Under $300</td>
                       <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0CNWHR78K?tag=padel02-20" type="affiliate" productName="Adidas Metalbone HRD+" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Adidas Metalbone HRD+</TrackedLink></td>
-                      <td className="py-3 text-stone-600">$279.99</td>
+                      <td className="py-3 text-stone-600">$259.99</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Spin Generation</td>
@@ -600,7 +599,7 @@ export default function IntermediateRacketsPage() {
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What is the best padel racket for intermediate players in 2026?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Our top overall pick is the <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup</Link> — a control-first round racket that rewards improving technique without punishing mishits. If you want a step toward more aggressive play, the Bullpadel Neuron&apos;s hybrid shape is the better fit. Full reasoning for all five picks above.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">Our top overall pick is the <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup</Link> — a control-first round racket that rewards improving technique without punishing mishits. It is currently unavailable on Amazon. If you want a step toward more aggressive play, the Bullpadel Neuron&apos;s hybrid shape is the better fit. Full reasoning for all five picks above.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">How do I know I&apos;m ready to upgrade from a beginner racket?</h3>
@@ -632,17 +631,17 @@ export default function IntermediateRacketsPage() {
             <Link href="/blog/best-padel-rackets-beginners" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Beginner Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">Just starting out? 5 rackets from $90&ndash;$130 &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">Just starting out? 5 rackets from $90&ndash;$150 &rarr;</p>
             </Link>
             <Link href="/blog/best-padel-rackets-advanced" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Advanced Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">Outgrown forgiveness? 5 frames from $249&ndash;$399 &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">Outgrown forgiveness? 5 frames from $230&ndash;$399 &rarr;</p>
             </Link>
             <Link href="/blog/best-padel-rackets-2026" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Pro Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">Top 5 flagship rackets from $250&ndash;$400 &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">Top 5 flagship rackets from $230&ndash;$400 &rarr;</p>
             </Link>
             <Link href="/blog/padel-racket-shapes-explained" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>

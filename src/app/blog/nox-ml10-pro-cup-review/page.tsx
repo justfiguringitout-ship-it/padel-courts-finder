@@ -1,19 +1,17 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { TrackedLink } from '@/components/TrackedLink';
-import { StickyPickBar } from '@/components/sticky-pick-bar';
 
 export const metadata: Metadata = {
   title: 'NOX ML10 Pro Cup Review (2026): The Smartest $170 Upgrade in Padel',
   description:
-    'NOX ML10 Pro Cup tested: 7.3/10. $169.99. The smartest upgrade in padel — pro-level control at a mid-range price. Why it beats rackets twice its price, and who should buy it.',
+    'NOX ML10 Pro Cup tested: 7.3/10. Pro-level control at a mid-range price, but currently unavailable on Amazon. Why it beats rackets twice its price, and who it suits.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review',
   },
   openGraph: {
     title: 'NOX ML10 Pro Cup Review (2026): The Smartest $170 Upgrade in Padel',
     description:
-      'Rough 3K surface for topspin, HR3 EVA core, round-shape forgiveness. Who this $169.99 racket is for — and who should skip it.',
+      'Rough 3K surface for topspin, HR3 EVA core, round-shape forgiveness. Who this racket is for, and who should skip it. Currently unavailable on Amazon.',
     url: 'https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review',
     siteName: 'Padel Courts Finder',
     type: 'article',
@@ -22,11 +20,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NOX ML10 Pro Cup Review (2026)',
     description:
-      'Rough 3K surface for topspin, HR3 EVA core, round-shape forgiveness. Who this $169.99 racket is for.',
+      'Rough 3K surface for topspin, HR3 EVA core, round-shape forgiveness. Who this racket is for.',
   },
 };
 
-const AMAZON_URL = 'https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20';
 
 export default function NoxMl10ProCupReviewPage() {
   const productData = {
@@ -35,7 +32,6 @@ export default function NoxMl10ProCupReviewPage() {
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "NOX ML10 Pro Cup Rough Surface",
     "description": "Round-shape intermediate padel racket with a rough 3K fiberglass surface, HR3 EVA core, and carbon frame. Best for spin-focused players upgrading from a beginner racket.",
-    "offers": { "@type": "Offer", "price": "169.99", "priceCurrency": "USD", "url": AMAZON_URL },
     "review": {
       "@type": "Review",
       "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 },
@@ -53,7 +49,7 @@ export default function NoxMl10ProCupReviewPage() {
         "name": "Is the NOX ML10 Pro Cup good for intermediate players?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes — it is our best-value upgrade pick for intermediates. The round shape keeps a large, forgiving sweet spot while the rough sand-finish surface adds topspin a beginner racket can't produce. At $169.99 it is the most affordable meaningful step up from a beginner frame."
+          "text": "Yes — it is our best-value upgrade pick for intermediates. The round shape keeps a large, forgiving sweet spot while the rough sand-finish surface adds topspin a beginner racket can't produce. It was the most affordable meaningful step up from a beginner frame that we tested, but it is currently unavailable on Amazon."
         }
       },
       {
@@ -83,7 +79,6 @@ export default function NoxMl10ProCupReviewPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Our verdict" productName="NOX ML10 Pro Cup" price="$169.99" href={AMAZON_URL} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
 
@@ -127,11 +122,11 @@ export default function NoxMl10ProCupReviewPage() {
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Best for: Spin-focused players upgrading from beginner</p>
               <p className="text-stone-600 leading-[1.75] mb-5">
-                The ML10 Pro Cup is our #1 value pick for intermediates: round-shape forgiveness, a rough surface that bites the ball for topspin, and a $169.99 price that undercuts every serious rival. Its one real limit is raw power &mdash; the fiberglass face caps your smash ceiling.
+                The ML10 Pro Cup is our #1 value pick for intermediates: round-shape forgiveness, a rough surface that bites the ball for topspin, and a price that undercut every serious rival when we tested it. Its one real limit is raw power &mdash; the fiberglass face caps your smash ceiling.
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                <TrackedLink href={AMAZON_URL} type="affiliate" productName="NOX ML10 Pro Cup" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
-                <span className="text-stone-500 text-sm">$169.99 at time of writing</span>
+                <span className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-stone-100 text-stone-500 font-medium rounded-lg">Currently unavailable on Amazon</span>
+                <span className="text-stone-500 text-sm">$169.99 when we reviewed it in July 2026</span>
               </div>
             </div>
           </section>
@@ -174,7 +169,7 @@ export default function NoxMl10ProCupReviewPage() {
                   </tr>
                   <tr className="border-t border-stone-100">
                     <td className="p-3 font-medium text-foreground">Price</td>
-                    <td className="p-3 text-stone-600">$169.99</td>
+                    <td className="p-3 text-stone-600">Currently unavailable on Amazon</td>
                   </tr>
                 </tbody>
               </table>
@@ -206,7 +201,7 @@ export default function NoxMl10ProCupReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Who It&apos;s For &mdash; and Who Should Skip It</h2>
             <p className="text-stone-700 leading-relaxed">
-              <strong className="text-foreground">Buy it if</strong> you&apos;re coming off a beginner racket and want better spin without giving up forgiveness. The rough sand finish rewards players learning to shape the ball, the round head keeps mishits in play, and the low balance keeps your hands fast at the net. At $170, it&apos;s the most affordable meaningful upgrade from a beginner frame &mdash; nothing else at this price does as much.
+              <strong className="text-foreground">Buy it if</strong> you&apos;re coming off a beginner racket and want better spin without giving up forgiveness. The rough sand finish rewards players learning to shape the ball, the round head keeps mishits in play, and the low balance keeps your hands fast at the net. At $170 when we reviewed it, it was the most affordable meaningful upgrade from a beginner frame. It is currently unavailable on Amazon.
             </p>
             <p className="text-stone-700 leading-relaxed mt-4">
               <strong className="text-foreground">Skip it if</strong> your game is built on finishing points overhead. The fiberglass face and handle-heavy balance mean you supply the pace yourself, and no amount of technique changes that. Aggressive left-side attackers should look at a diamond frame instead &mdash; more on that below.
@@ -221,7 +216,7 @@ export default function NoxMl10ProCupReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives Worth Considering</h2>
             <p className="text-stone-700 leading-relaxed">
-              If power is what your game is missing, the <Link href="/blog/adidas-metalbone-hrd-review" className="text-padel-green hover:underline">Adidas Metalbone HRD+ 3.3</Link> sits at the opposite end of the spectrum &mdash; a $279.99 diamond racket that scores 9/10 on power but demands cleaner technique. And if you want to see how the ML10 stacks up against the whole field, our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best intermediate padel rackets guide</Link> compares five upgrades from $170 to $280, where the ML10 took the #1 value spot.
+              If power is what your game is missing, the <Link href="/blog/adidas-metalbone-hrd-review" className="text-padel-green hover:underline">Adidas Metalbone HRD+ 3.3</Link> sits at the opposite end of the spectrum &mdash; a $259.99 diamond racket that scores 9/10 on power but demands cleaner technique. And if you want to see how the ML10 stacks up against the whole field, our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best intermediate padel rackets guide</Link> compares five upgrades from $209 to $260, where the ML10 took the #1 value spot.
             </p>
           </section>
 
@@ -231,7 +226,7 @@ export default function NoxMl10ProCupReviewPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Is the NOX ML10 Pro Cup good for intermediate players?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">Yes &mdash; it&apos;s our best-value upgrade pick for intermediates. The round shape keeps a large, forgiving sweet spot while the rough sand-finish surface adds topspin a beginner racket can&apos;t produce. At $169.99 it&apos;s the most affordable meaningful step up from a beginner frame.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">Yes &mdash; it&apos;s our best-value upgrade pick for intermediates. The round shape keeps a large, forgiving sweet spot while the rough sand-finish surface adds topspin a beginner racket can&apos;t produce. It was the most affordable meaningful step up from a beginner frame that we tested, but it is currently unavailable on Amazon.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Does the NOX ML10 Pro Cup have enough power?</h3>
@@ -252,7 +247,7 @@ export default function NoxMl10ProCupReviewPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Link href="/blog/best-padel-rackets-intermediate" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Intermediate Rackets</div>
-                <p className="text-stone-400 text-sm mt-1">Top 5 upgrades from $170&ndash;$280 compared</p>
+                <p className="text-stone-400 text-sm mt-1">Top 5 intermediate rackets compared</p>
               </Link>
               <Link href="/blog/adidas-metalbone-hrd-review" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Adidas Metalbone HRD+ 3.3 Review</div>

@@ -5,13 +5,13 @@ import { StickyPickBar } from '@/components/sticky-pick-bar';
 
 export const metadata: Metadata = {
   title: 'Best Control Padel Rackets (2026) — Top 5 for Precision & Comfort',
-  description: 'The 5 best control padel rackets of 2026, ranked by our control and comfort scores. Precision-first, arm-friendly picks for every level, from $89 to $272.',
+  description: 'The 5 best control padel rackets of 2026, ranked by our control and comfort scores. Precision-first, arm-friendly picks for every level, from $89 to $260.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-rackets-control',
   },
   openGraph: {
     title: 'Best Control Padel Rackets (2026) — Top 5 for Precision & Comfort',
-    description: 'The 5 best control padel rackets of 2026, ranked by our control and comfort scores. Precision-first, arm-friendly picks for every level, from $89 to $272.',
+    description: 'The 5 best control padel rackets of 2026, ranked by our control and comfort scores. Precision-first, arm-friendly picks for every level, from $89 to $260.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-rackets-control',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best Control Padel Rackets (2026) — Top 5 for Precision & Comfort',
-    description: 'The 5 best control padel rackets of 2026, ranked by our control and comfort scores — from $89 to $272.',
+    description: 'The 5 best control padel rackets of 2026, ranked by our control and comfort scores — from $89 to $260.',
   },
 };
 
@@ -28,7 +28,7 @@ export default function ControlRacketsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Control Padel Rackets (2026) — Top 5 for Precision & Comfort",
-    "description": "The 5 best control padel rackets of 2026, ranked by our control and comfort scores. Precision-first, arm-friendly picks from $89 to $272.",
+    "description": "The 5 best control padel rackets of 2026, ranked by our control and comfort scores. Precision-first, arm-friendly picks from $89 to $260.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-07-03T00:00:00Z",
     "dateModified": "2026-07-03T00:00:00Z",
@@ -100,7 +100,6 @@ export default function ControlRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX ML10 Pro Cup Rough Surface",
           "description": "Best for: Control players who want spin on top of placement",
-          "offers": { "@type": "Offer", "price": "169.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -112,7 +111,7 @@ export default function ControlRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX AT10 Genius 18K Alum",
           "description": "Best for: Advanced players who refuse to trade away control",
-          "offers": { "@type": "Offer", "price": "272.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" },
+          "offers": { "@type": "Offer", "price": "259.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -191,7 +190,7 @@ export default function ControlRacketsPage() {
                 Not everyone wins points with the smash. If your game is built on placement — steering lobs into corners, absorbing pace at the net, making one more ball than your opponent — you want a control racket: precision over raw speed, a predictable face, and a build that&apos;s gentle on the elbow. Defensive and all-court players live here, and so does anyone whose arm has ever complained after a long session. Most of these picks use the round shape we break down in our <Link href="/blog/padel-racket-shapes-explained" className="text-padel-green hover:underline">racket shapes guide</Link>.
               </p>
               <p className="text-stone-600 leading-[1.75]">
-                A quick word on methodology: these five are ranked by the control and comfort scores from our testing across our beginner, intermediate, and pro racket guides — the same numbers you&apos;ll see on the rating bars below. That&apos;s also why control rackets turn out to span every level and price point: this list runs from <strong>$89 to $272</strong>, from a first-year racket to a World Padel Tour signature frame.
+                A quick word on methodology: these five are ranked by the control and comfort scores from our testing across our beginner, intermediate, and pro racket guides — the same numbers you&apos;ll see on the rating bars below. That&apos;s also why control rackets turn out to span every level and price point: this list runs from <strong>$89 to $260</strong>, from a first-year racket to a World Padel Tour signature frame.
               </p>
             </div>
 
@@ -211,7 +210,7 @@ export default function ControlRacketsPage() {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Advanced Option:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">NOX AT10 Genius 18K</TrackedLink> <span className="text-stone-500">&mdash; $272.00</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">NOX AT10 Genius 18K</TrackedLink> <span className="text-stone-500">&mdash; $259.99</span></span>
                 </div>
               </div>
               <a href="#top-5-control" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
@@ -303,7 +302,7 @@ export default function ControlRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 &mdash; Best Control + Spin</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX ML10 Pro Cup Rough Surface</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$169.99</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Control players who want spin on top of placement</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -344,7 +343,7 @@ export default function ControlRacketsPage() {
                   </div>
                 </div>
                 <p className="text-stone-600 leading-[1.75] mb-5">
-                  The ML10 matches the Optix&apos;s 9/10 control score while adding two things the Wilson can&apos;t: a gritty sand-textured face that grabs the ball for topspin, and a carbon frame that keeps the head steady when you&apos;re blocking hard drives. The balance point sits low, which makes it one of the quickest rackets through the hands at the net — exactly where a control player earns a living. Inside, NOX&apos;s HR3 EVA core keeps the response even across the face, and the Pulse System in the handle takes the sting out of impact, backing up its 8/10 comfort score. The fiberglass face caps outright power, but that is precisely the character a placement-first player is shopping for.
+                  The ML10 matches the Optix&apos;s 9/10 control score while adding two things the Wilson can&apos;t: a gritty sand-textured face that grabs the ball for topspin, and a carbon frame that keeps the head steady when you&apos;re blocking hard drives. The balance point sits low, which makes it one of the quickest rackets through the hands at the net — exactly where a control player earns a living. Inside, NOX&apos;s HR3 EVA core keeps the response even across the face, and the Pulse System in the handle takes the sting out of impact, backing up its 8/10 comfort score. The fiberglass face caps outright power, but that is precisely the character a placement-first player is shopping for. It is currently unavailable on Amazon.
                 </p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Sand-rough surface turns clean placement into biting topspin</p>
@@ -353,16 +352,7 @@ export default function ControlRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face means modest raw power (5/10)</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> At up to 375g, heavier than the other budget-tier picks here</p>
                 </div>
-                <TrackedLink
-                  href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20"
-                  type="affiliate"
-                  productName="NOX ML10 Pro Cup"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                >
-                  Check Price on Amazon &rarr;
-                </TrackedLink>
+                <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
               </div>
 
               {/* 3. NOX AT10 Genius 18K Alum */}
@@ -370,7 +360,7 @@ export default function ControlRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#3 &mdash; Best Advanced Control</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX AT10 Genius 18K Alum</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$272.00</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$259.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Advanced players who refuse to trade away control</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -417,7 +407,7 @@ export default function ControlRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Temperature-stable 18K face keeps feel consistent year-round</p>
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Adjustable weight system can be tuned toward a control balance</p>
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Best control-to-power ratio of any flagship we&apos;ve scored</p>
-                  <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> At $272, a serious investment for a control racket</p>
+                  <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> At $259.99, a serious investment for a control racket</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Firmer than the fiberglass picks — comfort is good, not plush</p>
                 </div>
                 <TrackedLink
@@ -597,15 +587,15 @@ export default function ControlRacketsPage() {
                       <td className="py-3 text-stone-600">Comfort-first precision</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
-                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">NOX ML10 Pro Cup</TrackedLink></td>
-                      <td className="py-3 pr-4 text-stone-600">$169.99</td>
+                      <td className="py-3 pr-4"><span className="text-stone-700">NOX ML10 Pro Cup</span></td>
+                      <td className="py-3 pr-4 text-stone-600">Currently unavailable on Amazon</td>
                       <td className="py-3 pr-4 text-stone-600">Round</td>
                       <td className="py-3 pr-4 text-stone-600">9/10</td>
                       <td className="py-3 text-stone-600">Control plus topspin</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">NOX AT10 Genius 18K</TrackedLink></td>
-                      <td className="py-3 pr-4 text-stone-600">$272.00</td>
+                      <td className="py-3 pr-4 text-stone-600">$259.99</td>
                       <td className="py-3 pr-4 text-stone-600">Teardrop</td>
                       <td className="py-3 pr-4 text-stone-600">8/10</td>
                       <td className="py-3 text-stone-600">Advanced all-courters</td>
@@ -667,7 +657,7 @@ export default function ControlRacketsPage() {
             <Link href="/blog/best-budget-padel-rackets" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Budget Padel Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">6 picks from $90 to $170, ranked by value &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">6 picks under $170, ranked by value &rarr;</p>
             </Link>
             <Link href="/blog/padel-racket-shapes-explained" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
@@ -682,12 +672,12 @@ export default function ControlRacketsPage() {
             <Link href="/blog/best-padel-rackets-beginners" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Beginner Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">Just starting out? 5 rackets from $90&ndash;$130 &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">Just starting out? 5 rackets from $90&ndash;$150 &rarr;</p>
             </Link>
             <Link href="/blog/best-padel-rackets-intermediate" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Intermediate Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">5 upgrade picks from $170&ndash;$280 &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">5 upgrade picks from $209&ndash;$260 &rarr;</p>
             </Link>
             <Link href="/search" className="block border border-stone-700 rounded-lg p-4 hover:border-padel-green/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-stone-500">DIRECTORY</span>

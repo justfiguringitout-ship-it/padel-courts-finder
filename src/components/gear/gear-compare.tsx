@@ -19,7 +19,14 @@ function Missing() {
   return <span className="italic text-stone-500">{NOT_STATED}</span>;
 }
 
-function AmazonButton({ href, productName, compact }: { href: string; productName: string; compact?: boolean }) {
+function AmazonButton({ href, productName, compact }: { href?: string; productName: string; compact?: boolean }) {
+  if (!href) {
+    return (
+      <span className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-stone-100 px-3 py-2 text-xs font-medium text-stone-500 min-h-10">
+        Currently unavailable on Amazon
+      </span>
+    );
+  }
   return (
     <TrackedLink
       href={href}

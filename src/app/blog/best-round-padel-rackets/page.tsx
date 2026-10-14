@@ -4,23 +4,23 @@ import { TrackedLink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Best Round Padel Rackets (2026): Control & Forgiveness Picks",
-  description: "The best round head shape padel rackets in 2026, tested: top picks for control, forgiveness, and arm comfort from $90 to $170 — and who the round shape actually suits.",
+  description: "The best round head shape padel rackets in 2026, tested: top picks for control, forgiveness, and arm comfort from $90, and who the round shape actually suits.",
   alternates: { canonical: "https://www.padelcourtsfinder.com/blog/best-round-padel-rackets" },
   openGraph: {
     title: "Best Round Padel Rackets (2026): Control & Forgiveness Picks",
-    description: "The best round head shape padel rackets in 2026, tested: top picks for control, forgiveness, and arm comfort from $90 to $170 — and who the round shape actually suits.",
+    description: "The best round head shape padel rackets in 2026, tested: top picks for control, forgiveness, and arm comfort from $90, and who the round shape actually suits.",
     url: "https://www.padelcourtsfinder.com/blog/best-round-padel-rackets",
     siteName: "Padel Courts Finder",
     type: "article",
   },
-  twitter: { card: "summary_large_image", title: "Best Round Padel Rackets (2026): Control & Forgiveness Picks", description: "The best round head shape padel rackets in 2026, tested: top picks for control, forgiveness, and arm comfort from $90 to $170 — and who the round shape actually suits." },
+  twitter: { card: "summary_large_image", title: "Best Round Padel Rackets (2026): Control & Forgiveness Picks", description: "The best round head shape padel rackets in 2026, tested: top picks for control, forgiveness, and arm comfort from $90, and who the round shape actually suits." },
 };
 
 const articleData = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Best Round Padel Rackets (2026): Control & Forgiveness Picks",
-  "description": "The best round head shape padel rackets in 2026, tested: top picks for control, forgiveness, and arm comfort from $90 to $170 — and who the round shape actually suits.",
+  "description": "The best round head shape padel rackets in 2026, tested: top picks for control, forgiveness, and arm comfort from $90, and who the round shape actually suits.",
   "datePublished": "2026-07-31T00:00:00Z",
   "dateModified": "2026-07-31T00:00:00Z",
   "author": {
@@ -51,7 +51,7 @@ const faqData = {
       "name": "What is the best round padel racket in 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The NOX ML10 Pro Cup is the best round padel racket we've tested in 2026 — pro-level control and a plush, forgiving feel at $170. If you're brand new to the sport, start with the Babolat Contact instead: nearly as forgiving, under $100."
+        "text": "The NOX ML10 Pro Cup is the best round padel racket we've tested in 2026 — pro-level control and a plush, forgiving feel, though it is currently unavailable on Amazon. If you're brand new to the sport, start with the Babolat Contact instead: nearly as forgiving, under $100."
       }
     },
     {
@@ -93,13 +93,6 @@ const itemListData = {
         "name": "NOX ML10 Pro Cup",
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "url": "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review",
-        "offers": {
-          "@type": "Offer",
-          "price": "169.99",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20"
-        },
         "review": {
           "@type": "Review",
           "reviewRating": {
@@ -194,16 +187,16 @@ export default function BestRoundRacketsPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">7.3<span className="text-sm text-stone-400">/10</span></div>
-                  <div className="text-sm text-stone-500">$169.99</div>
+                  <div className="text-sm text-stone-500">Unavailable on Amazon</div>
                 </div>
               </div>
-              <p className="text-stone-700 leading-relaxed text-sm">Miguel Lamperti&apos;s legendary frame — the rare round racket that advanced players keep in the bag. Pro-level control and a plush feel at a mid-range price. If you want one round racket to grow with, this is it.</p>
+              <p className="text-stone-700 leading-relaxed text-sm">Miguel Lamperti&apos;s legendary frame — the rare round racket that advanced players keep in the bag. Pro-level control and a plush feel at a mid-range price. If you want one round racket to grow with, this is it. It is currently unavailable on Amazon.</p>
               <div className="grid sm:grid-cols-2 gap-3 mt-4 text-sm">
-                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">Pro-grade control at $170; huge sweet spot; classic proven mold</span></div>
+                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">Pro-grade control; huge sweet spot; classic proven mold</span></div>
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Power depends on your own swing speed</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
-                <TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <span className="inline-flex items-center font-semibold text-sm px-5 py-2.5 rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
                 <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
               </div>
             </div>
@@ -241,7 +234,7 @@ export default function BestRoundRacketsPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What is the best round padel racket in 2026?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">The NOX ML10 Pro Cup is the best round padel racket we&apos;ve tested in 2026 — pro-level control and a plush, forgiving feel at $170. If you&apos;re brand new to the sport, start with the Babolat Contact instead: nearly as forgiving, under $100.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">The NOX ML10 Pro Cup is the best round padel racket we&apos;ve tested in 2026 — pro-level control and a plush, forgiving feel, though it is currently unavailable on Amazon. If you&apos;re brand new to the sport, start with the Babolat Contact instead: nearly as forgiving, under $100.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Are round padel rackets only for beginners?</h3>
@@ -265,7 +258,7 @@ export default function BestRoundRacketsPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Link href="/blog/best-budget-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Budget Padel Rackets (2026)</div>
-                <p className="text-stone-400 text-sm mt-1">6 picks from $90 to $170, ranked by value</p>
+                <p className="text-stone-400 text-sm mt-1">6 picks under $170, ranked by value</p>
               </Link>
               <Link href="/blog/padel-racket-shapes-explained" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Padel Racket Shapes Explained</div>

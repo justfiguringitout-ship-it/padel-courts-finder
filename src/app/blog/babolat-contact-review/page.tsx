@@ -231,7 +231,7 @@ export default function BabolatContactReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives Worth Considering</h2>
             <p className="text-stone-600 leading-[1.75]">
-              The Contact tops our <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">best beginner padel rackets guide</Link>, but it isn&apos;t the only good first racket: the HEAD Extreme Evo ($99.95) adds Innegra shock reduction and an oversized 511cm&sup2; head, while the Adidas Adipower ($129.00) lets you adjust weight as you improve. And if you&apos;re already outgrowing beginner gear, look at the <Link href="/blog/wilson-blade-elite-v2-review" className="text-padel-green hover:underline">Wilson Blade Elite V2</Link> &mdash; a $189 teardrop that&apos;s our favorite balanced step up.
+              The Contact tops our <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">best beginner padel rackets guide</Link>, but it isn&apos;t the only good first racket: the HEAD Extreme Evo ($99.95) adds Innegra shock reduction and an oversized 511cm&sup2; head, while the Adidas Adipower ($149.00) lets you adjust weight as you improve. And if you&apos;re already outgrowing beginner gear, look at the <Link href="/blog/wilson-blade-elite-v2-review" className="text-padel-green hover:underline">Wilson Blade Elite V2</Link> &mdash; a $208.58 teardrop that&apos;s our favorite balanced step up.
             </p>
           </section>
 
@@ -262,7 +262,7 @@ export default function BabolatContactReviewPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Link href="/blog/best-budget-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Budget Padel Rackets (2026)</div>
-                <p className="text-stone-400 text-sm mt-1">6 picks from $90 to $170, ranked by value</p>
+                <p className="text-stone-400 text-sm mt-1">6 picks under $170, ranked by value</p>
               </Link>
               <Link href="/blog/best-lightweight-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Lightweight Padel Rackets</div>
@@ -270,11 +270,11 @@ export default function BabolatContactReviewPage() {
               </Link>
               <Link href="/blog/best-padel-rackets-beginners" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Beginner Rackets (2026)</div>
-                <p className="text-stone-400 text-sm mt-1">The Contact vs 4 rivals from $90&ndash;$130</p>
+                <p className="text-stone-400 text-sm mt-1">The Contact vs 4 rivals from $90&ndash;$150</p>
               </Link>
               <Link href="/blog/wilson-blade-elite-v2-review" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Wilson Blade Elite V2 Review</div>
-                <p className="text-stone-400 text-sm mt-1">Our favorite balanced upgrade at $189</p>
+                <p className="text-stone-400 text-sm mt-1">Our favorite balanced upgrade at $208.58</p>
               </Link>
               <Link href="/blog/best-padel-rackets-control" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Control Rackets</div>

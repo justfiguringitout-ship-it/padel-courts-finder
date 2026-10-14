@@ -4,23 +4,23 @@ import { TrackedLink } from "@/components/TrackedLink";
 import { StickyPickBar } from "@/components/sticky-pick-bar";
 
 export const metadata: Metadata = {
-  title: "Wilson Bela V3 Review (2026): Is 24K Carbon Worth $399?",
+  title: "Wilson Bela Pro V3 Review (2026): Is 24K Carbon Worth $399?",
   description:
-    "Wilson Bela V3 tested: 6.7/10. $399. Bela’s 24K carbon flagship — is it worth double a mid-range frame? Full scores, who it suits, and the cheaper alternative to consider.",
+    "Wilson Bela Pro V3 tested: 6.7/10. $399. Bela’s 24K carbon flagship — is it worth double a mid-range frame? Full scores, who it suits, and the cheaper alternative to consider.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/wilson-bela-v3-review",
   },
   openGraph: {
-    title: "Wilson Bela V3 Review (2026): Is 24K Carbon Worth $399?",
+    title: "Wilson Bela Pro V3 Review (2026): Is 24K Carbon Worth $399?",
     description:
-      "Hands-on review of the Wilson Bela V3, Fernando Belasteguín's 24K carbon signature racket — power, control, and comfort scores, plus who should buy it.",
+      "Hands-on review of the Wilson Bela Pro V3, Fernando Belasteguín's 24K carbon signature racket — power, control, and comfort scores, plus who should buy it.",
     url: "https://www.padelcourtsfinder.com/blog/wilson-bela-v3-review",
     siteName: "Padel Courts Finder",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wilson Bela V3 Review (2026): Is 24K Carbon Worth $399?",
+    title: "Wilson Bela Pro V3 Review (2026): Is 24K Carbon Worth $399?",
     description:
       "Fernando Belasteguín's 24K carbon signature racket reviewed — power, control, comfort, and who should actually buy it.",
   },
@@ -31,9 +31,9 @@ export default function WilsonBelaV3ReviewPage() {
     "@context": "https://schema.org",
     "@type": "Product",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
-    "name": "Wilson Bela V3",
+    "name": "Wilson Bela Pro V3",
     "description":
-      "Fernando Belasteguín's signature padel racket with 24K carbon face, C2 tubular carbon frame, diamond shape, and firm EVA / Power Foam core.",
+      "Fernando Belasteguín's signature padel racket with a 24K carbon face, tubular carbon frame, diamond shape and a firm high-density foam core.",
     "offers": {
       "@type": "Offer",
       "price": "399.00",
@@ -54,7 +54,7 @@ export default function WilsonBelaV3ReviewPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What does 24K carbon mean on the Wilson Bela V3?",
+        "name": "What does 24K carbon mean on the Wilson Bela Pro V3?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "24K carbon means 24,000 filaments per strand in the carbon weave — the finest weave used in commercial padel. The result is an extremely precise, responsive hitting surface where small adjustments in your swing translate directly to the ball.",
@@ -62,18 +62,18 @@ export default function WilsonBelaV3ReviewPage() {
       },
       {
         "@type": "Question",
-        "name": "Is the Wilson Bela V3 good for intermediate players?",
+        "name": "Is the Wilson Bela Pro V3 good for intermediate players?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Generally no. It is a head-heavy diamond racket at 366–370g with a firm EVA / Power Foam core, which makes it unforgiving on off-center hits. It scores just 4/10 for comfort in our testing, so it suits advanced and pro-level players with clean technique.",
+          "text": "Generally no. It is a head-heavy diamond racket at 370g with a firm high-density foam core, which makes it unforgiving on off-center hits. It scores just 4/10 for comfort in our testing, so it suits advanced and pro-level players with clean technique.",
         },
       },
       {
         "@type": "Question",
-        "name": "Why does the Wilson Bela V3 cost $399?",
+        "name": "Why does the Wilson Bela Pro V3 cost $399?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You are paying for the finest materials available in commercial padel: a 24K carbon face, a C2 tubular carbon frame, a dual-texture surface with separate power and spin zones, and SpinEffect drilling. It is the most expensive racket in our 2026 pro guide by a significant margin.",
+          "text": "You are paying for the finest materials available in commercial padel: a 24K carbon face, a tubular carbon frame, Wilson's Spin2 texture and a DuoGrid hole pattern with separate power and spin zones. It is the most expensive racket in our 2026 pro guide by a significant margin.",
         },
       },
     ],
@@ -81,7 +81,7 @@ export default function WilsonBelaV3ReviewPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Our verdict" productName="Wilson Bela V3" price="$399.00" href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" />
+      <StickyPickBar label="Our verdict" productName="Wilson Bela Pro V3" price="$399.00" href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
 
@@ -95,7 +95,7 @@ export default function WilsonBelaV3ReviewPage() {
           </div>
           <span className="inline-block bg-padel-green text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Equipment</span>
           <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-            Wilson Bela V3 Review (2026)
+            Wilson Bela Pro V3 Review (2026)
           </h1>
           <p className="text-lg text-stone-400 mt-3">Fernando Belasteguín&apos;s 24K carbon flagship — the most premium racket we&apos;ve tested, and the least forgiving</p>
           <div className="text-sm text-stone-500 mt-4">
@@ -127,23 +127,23 @@ export default function WilsonBelaV3ReviewPage() {
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Best for: Advanced players who want the finest materials</p>
               <p className="text-stone-600 leading-relaxed mb-5">
-                The Bela V3 is the pinnacle of material engineering in commercial padel — a 24K carbon face on a C2 tubular carbon frame. It rewards clean, advanced technique with remarkable precision and power, but its firm core and head-heavy diamond shape make it one of the most demanding rackets you can buy. Ranked #5 in our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets of 2026</Link>.
+                The Bela Pro V3 is the pinnacle of material engineering in commercial padel — a 24K carbon face on a tubular carbon frame. It rewards clean, advanced technique with remarkable precision and power, but its firm core and head-heavy diamond shape make it one of the most demanding rackets you can buy. Ranked #5 in our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets of 2026</Link>. This review covers the Bela Pro V3. Wilson also sells a plain Bela V3 ($349 at Wilson) with a 3K carbon face, which is a different racket.
               </p>
-              <TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela V3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+              <TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela Pro V3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
             </div>
           </section>
 
           {/* Specs */}
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-5">Wilson Bela V3 Specs</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-5">Wilson Bela Pro V3 Specs</h2>
             <div className="overflow-x-auto rounded-xl border border-stone-200">
               <table className="w-full text-sm bg-white">
                 <tbody>
                   <tr className="border-b border-stone-100"><td className="p-3 font-medium text-stone-700 w-1/3">Shape</td><td className="p-3 text-stone-600">Diamond</td></tr>
-                  <tr className="border-b border-stone-100"><td className="p-3 font-medium text-stone-700">Weight</td><td className="p-3 text-stone-600">366&ndash;370g</td></tr>
-                  <tr className="border-b border-stone-100"><td className="p-3 font-medium text-stone-700">Core</td><td className="p-3 text-stone-600">EVA Firm / Power Foam</td></tr>
+                  <tr className="border-b border-stone-100"><td className="p-3 font-medium text-stone-700">Weight</td><td className="p-3 text-stone-600">370g</td></tr>
+                  <tr className="border-b border-stone-100"><td className="p-3 font-medium text-stone-700">Core</td><td className="p-3 text-stone-600">High-density foam</td></tr>
                   <tr className="border-b border-stone-100"><td className="p-3 font-medium text-stone-700">Face</td><td className="p-3 text-stone-600">24K Carbon</td></tr>
-                  <tr><td className="p-3 font-medium text-stone-700">Frame</td><td className="p-3 text-stone-600">C2 Tubular Carbon</td></tr>
+                  <tr><td className="p-3 font-medium text-stone-700">Frame</td><td className="p-3 text-stone-600">Tubular carbon</td></tr>
                 </tbody>
               </table>
             </div>
@@ -182,13 +182,13 @@ export default function WilsonBelaV3ReviewPage() {
               </div>
             </div>
             <p className="text-stone-700 leading-relaxed mt-6">
-              The story here is the face. 24K carbon means 24,000 filaments per strand — the finest weave in commercial padel — and it produces the most precise, responsive hitting surface money can buy. Every micro-adjustment in your swing shows up in the ball&apos;s flight. Paired with the firm EVA / Power Foam core and head-heavy diamond geometry, that translates into a 9/10 power score: full smashes come off this racket with serious pace.
+              The story here is the face. 24K carbon means 24,000 filaments per strand — the finest weave in commercial padel — and it produces the most precise, responsive hitting surface money can buy. Every micro-adjustment in your swing shows up in the ball&apos;s flight. Paired with the firm high-density foam core and head-heavy diamond geometry, that translates into a 9/10 power score: full smashes come off this racket with serious pace.
             </p>
             <p className="text-stone-700 leading-relaxed mt-4">
-              Control lands at a strong 7/10 for a diamond racket, and Wilson&apos;s dual-texture surface is a big reason why — the face has distinct zones, with the center tuned for power and the edges tuned for spin. SpinEffect technology in the drilling pattern optimizes airflow and ball grip on top of that. The C2 tubular carbon frame keeps the structure rigid without piling on excess weight.
+              Control lands at a strong 7/10 for a diamond racket, and the face layout is a big reason why. Wilson&apos;s DuoGrid hole pattern uses larger holes up top for power on overheads and tighter holes lower down for bite on the ball, and the Spin2 texture grips the ball longer for spin. The tubular carbon frame, V-Bridge throat and Stability Channel keep the structure rigid and the sweet spot steady.
             </p>
             <p className="text-stone-700 leading-relaxed mt-4">
-              Comfort is where the bill comes due: 4/10. A firm core, 366&ndash;370g of mass, and head-heavy balance mean off-center hits are punished and long sessions load your arm. This is by design — it&apos;s a pro-spec tool, not a plush club racket.
+              Comfort is where the bill comes due: 4/10. A firm core, 370g of mass, and head-heavy balance mean off-center hits are punished and long sessions load your arm. This is by design — it&apos;s a pro-spec tool, not a plush club racket.
             </p>
           </section>
 
@@ -196,7 +196,7 @@ export default function WilsonBelaV3ReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Who It&apos;s For — and Who Should Skip It</h2>
             <p className="text-stone-700 leading-relaxed">
-              <strong>Buy it if</strong> you&apos;re an advanced or pro-level player with clean, consistent technique who wants the absolute best materials available. If you generate your own control and finish points overhead, the Bela V3&apos;s precision and ball speed are the pinnacle of what a commercial racket offers.
+              <strong>Buy it if</strong> you&apos;re an advanced or pro-level player with clean, consistent technique who wants the absolute best materials available. If you generate your own control and finish points overhead, the Bela Pro V3&apos;s precision and ball speed are the pinnacle of what a commercial racket offers.
             </p>
             <p className="text-stone-700 leading-relaxed mt-4">
               <strong>Skip it if</strong> you&apos;re still developing your game or you&apos;re sensitive to arm strain. The firm core and head-heavy diamond shape are unforgiving, and at $399 this is the most expensive racket in our pro lineup by a significant margin — money that buys frustration, not improvement, if your technique isn&apos;t ready for it.
@@ -207,7 +207,7 @@ export default function WilsonBelaV3ReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives Worth Considering</h2>
             <p className="text-stone-700 leading-relaxed">
-              If you want a similar aggressive, diamond-shaped profile for $150 less, read our <Link href="/blog/babolat-technical-viper-review" className="text-padel-green hover:underline">Babolat Technical Viper review</Link> — Juan Lebr&oacute;n&apos;s racket delivers the same 9/10 power at $249, making it the most affordable true pro racket we&apos;ve tested. And if you&apos;re not sold on a diamond shape at all, our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">full 2026 pro racket guide</Link> covers five flagships across shapes and price points, including a more versatile teardrop as our overall top pick.
+              If you want a similar aggressive, diamond-shaped profile for about $170 less, read our <Link href="/blog/babolat-technical-viper-review" className="text-padel-green hover:underline">Babolat Technical Viper review</Link> — Juan Lebr&oacute;n&apos;s racket delivers the same 9/10 power at $229.99, making it the most affordable true pro racket we&apos;ve tested. And if you&apos;re not sold on a diamond shape at all, our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">full 2026 pro racket guide</Link> covers five flagships across shapes and price points, including a more versatile teardrop as our overall top pick.
             </p>
           </section>
 
@@ -216,16 +216,16 @@ export default function WilsonBelaV3ReviewPage() {
             <h2 className="text-2xl font-bold text-foreground mb-5">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
-                <h3 className="font-semibold text-foreground mb-2">What does 24K carbon mean on the Wilson Bela V3?</h3>
+                <h3 className="font-semibold text-foreground mb-2">What does 24K carbon mean on the Wilson Bela Pro V3?</h3>
                 <p className="text-stone-600 text-sm leading-relaxed">24K carbon means 24,000 filaments per strand in the carbon weave — the finest weave used in commercial padel. The result is an extremely precise, responsive hitting surface where small adjustments in your swing translate directly to the ball.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
-                <h3 className="font-semibold text-foreground mb-2">Is the Wilson Bela V3 good for intermediate players?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">Generally no. It&apos;s a head-heavy diamond racket at 366&ndash;370g with a firm EVA / Power Foam core, which makes it unforgiving on off-center hits. It scores just 4/10 for comfort in our testing, so it suits advanced and pro-level players with clean technique.</p>
+                <h3 className="font-semibold text-foreground mb-2">Is the Wilson Bela Pro V3 good for intermediate players?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">Generally no. It&apos;s a head-heavy diamond racket at 370g with a firm high-density foam core, which makes it unforgiving on off-center hits. It scores just 4/10 for comfort in our testing, so it suits advanced and pro-level players with clean technique.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
-                <h3 className="font-semibold text-foreground mb-2">Why does the Wilson Bela V3 cost $399?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">You&apos;re paying for the finest materials available in commercial padel: a 24K carbon face, a C2 tubular carbon frame, a dual-texture surface with separate power and spin zones, and SpinEffect drilling. It&apos;s the most expensive racket in our 2026 pro guide by a significant margin.</p>
+                <h3 className="font-semibold text-foreground mb-2">Why does the Wilson Bela Pro V3 cost $399?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">You&apos;re paying for the finest materials available in commercial padel: a 24K carbon face, a tubular carbon frame, Wilson&apos;s Spin2 texture and a DuoGrid hole pattern with separate power and spin zones. It&apos;s the most expensive racket in our 2026 pro guide by a significant margin.</p>
               </div>
             </div>
           </section>
@@ -242,7 +242,7 @@ export default function WilsonBelaV3ReviewPage() {
               </Link>
               <Link href="/blog/babolat-technical-viper-review" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Babolat Technical Viper Review</div>
-                <p className="text-stone-400 text-sm mt-1">Juan Lebr&oacute;n&apos;s $249 power racket, tested</p>
+                <p className="text-stone-400 text-sm mt-1">Juan Lebr&oacute;n&apos;s $229.99 power racket, tested</p>
               </Link>
               <Link href="/blog/best-padel-rackets-power" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Power Rackets</div>

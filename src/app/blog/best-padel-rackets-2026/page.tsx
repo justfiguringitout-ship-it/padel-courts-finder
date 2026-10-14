@@ -9,13 +9,13 @@ import { HeroVideo } from '@/components/hero-video';
 
 export const metadata: Metadata = {
   title: 'Best Padel Rackets 2026 — Top 5 Pro Picks Reviewed',
-  description: 'The 5 best padel rackets money can buy in 2026. From the NOX AT10 18K to the Wilson Bela V3 24K Carbon. Expert reviews for advanced and competitive players.',
+  description: 'The 5 best padel rackets money can buy in 2026. From the NOX AT10 18K to the Wilson Bela Pro V3 24K Carbon. Expert reviews for advanced and competitive players.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-rackets-2026',
   },
   openGraph: {
     title: 'Best Padel Rackets 2026 — Top 5 Pro Picks Reviewed',
-    description: 'The 5 best padel rackets money can buy in 2026. From the NOX AT10 18K to the Wilson Bela V3 24K Carbon. Expert reviews for advanced and competitive players.',
+    description: 'The 5 best padel rackets money can buy in 2026. From the NOX AT10 18K to the Wilson Bela Pro V3 24K Carbon. Expert reviews for advanced and competitive players.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-rackets-2026',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 /** Presentation data for the compare view and racket drawings. Every value is
  *  copied from this page's own cards; nothing here is new. */
 const RACKETS: GearRacket[] = [
-  { id: "nox-at10-18k", rank: 1, name: "NOX AT10 Genius 18K Alum", productName: "NOX AT10 Genius 18K", price: "$272.00", href: "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20", brand: "nox", shape: "teardrop", shapeLabel: "Teardrop", weight: "360–375g", core: "MLD Black EVA", face: "18K Aluminized Carbon", bestFor: "All-court advanced players who want versatility", balance: "Adjustable", level: "Advanced" },
-  { id: "babolat-viper", rank: 2, name: "Babolat Technical Viper Juan Lebrón", productName: "Babolat Technical Viper", price: "$249.00", href: "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20", brand: "babolat", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "Hard EVA", face: "3K Carbon", bestFor: "Aggressive players with strong technique", balance: "High", level: "Advanced" },
-  { id: "adidas-metalbone", rank: 3, name: "Adidas Metalbone 3.4 (Ale Galán)", productName: "Adidas Metalbone 3.4", price: "$304.50", href: "https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20", brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–360g (+12g adjustable)", core: "EVA Soft Performance", face: "Carbon Aluminized 16K", bestFor: "Players who want tunable weight and balance", balance: "Adjustable", level: "Advanced" },
-  { id: "head-extreme-pro", rank: 4, name: "HEAD Extreme Pro", productName: "HEAD Extreme Pro", price: "$319.95", href: "https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20", brand: "head", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "Power Foam", face: "UD Carbon HS", bestFor: "Left-side attackers and tournament competitors", balance: "High", level: "Advanced" },
-  { id: "wilson-bela-v3", rank: 5, name: "Wilson Bela V3", productName: "Wilson Bela V3", price: "$399.00", href: "https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20", brand: "wilson", shape: "diamond", shapeLabel: "Diamond", weight: "366–370g", core: "EVA Firm / Power Foam", face: "24K Carbon", bestFor: "Advanced players who want the finest materials", balance: "Head-heavy", level: "Advanced" },
+  { id: "nox-at10-18k", rank: 1, name: "NOX AT10 Genius 18K Alum", productName: "NOX AT10 Genius 18K", price: "$259.99", href: "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20", brand: "nox", shape: "teardrop", shapeLabel: "Teardrop", weight: "360–375g", core: "MLD Black EVA", face: "18K Aluminized Carbon", bestFor: "All-court advanced players who want versatility", balance: "Adjustable", level: "Advanced" },
+  { id: "babolat-viper", rank: 2, name: "Babolat Technical Viper Juan Lebrón", productName: "Babolat Technical Viper", price: "$229.99", href: "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20", brand: "babolat", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "Hard EVA", face: "3K Carbon", bestFor: "Aggressive players with strong technique", balance: "High", level: "Advanced" },
+  { id: "adidas-metalbone", rank: 3, name: "Adidas Metalbone 3.4 (Ale Galán)", productName: "Adidas Metalbone 3.4", price: "$263.00", href: "https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20", brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–360g (+12g adjustable)", core: "EVA Soft Performance", face: "Carbon Aluminized 16K", bestFor: "Players who want tunable weight and balance", balance: "Adjustable", level: "Advanced" },
+  { id: "head-extreme-pro", rank: 4, name: "HEAD Extreme Pro", productName: "HEAD Extreme Pro", price: "$299.95", href: "https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20", brand: "head", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "Power Foam", face: "UD Carbon HS", bestFor: "Left-side attackers and tournament competitors", balance: "High", level: "Advanced" },
+  { id: "wilson-bela-v3", rank: 5, name: "Wilson Bela Pro V3", productName: "Wilson Bela Pro V3", price: "$399.00", href: "https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20", brand: "wilson", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "High-density foam", face: "24K Carbon", bestFor: "Advanced players who want the finest materials", balance: "Head-heavy", level: "Advanced" },
 ];
 
 export default function ProRacketsPage() {
@@ -63,7 +63,7 @@ export default function ProRacketsPage() {
         "name": "What's the difference between a player signature racket and the regular model?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A signature edition like the NOX AT10 (Agustín Tapia) or Wilson Bela V3 (Fernando Belasteguín) is the flagship spec built with the brand's finest materials — 18K or 24K carbon, premium cores, adjustable weight systems. Lower models in the same line share the shape and cosmetics but use simpler carbon layups and cores, which is why they cost less and play softer."
+          "text": "A signature edition like the NOX AT10 (Agustín Tapia) or Wilson Bela Pro V3 (Fernando Belasteguín) is the flagship spec built with the brand's finest materials — 18K or 24K carbon, premium cores, adjustable weight systems. Lower models in the same line share the shape and cosmetics but use simpler carbon layups and cores, which is why they cost less and play softer."
         }
       },
       {
@@ -97,7 +97,7 @@ export default function ProRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX AT10 Genius 18K Alum",
           "description": "Best for: All-court advanced players who want versatility",
-          "offers": { "@type": "Offer", "price": "272.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" },
+          "offers": { "@type": "Offer", "price": "259.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -109,7 +109,7 @@ export default function ProRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Babolat Technical Viper Juan Lebrón",
           "description": "Best for: Aggressive players with strong technique",
-          "offers": { "@type": "Offer", "price": "249.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" },
+          "offers": { "@type": "Offer", "price": "229.99", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 6.7, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -121,7 +121,7 @@ export default function ProRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Adidas Metalbone 3.4 (Ale Galán)",
           "description": "Best for: Players who want tunable weight and balance",
-          "offers": { "@type": "Offer", "price": "304.50", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" },
+          "offers": { "@type": "Offer", "price": "263.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.0, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -133,7 +133,7 @@ export default function ProRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Extreme Pro",
           "description": "Best for: Left-side attackers and tournament competitors",
-          "offers": { "@type": "Offer", "price": "319.95", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" },
+          "offers": { "@type": "Offer", "price": "299.95", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 6.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -143,7 +143,7 @@ export default function ProRacketsPage() {
         "item": {
           "@type": "Product",
           "image": "https://www.padelcourtsfinder.com/og/default.png",
-          "name": "Wilson Bela V3",
+          "name": "Wilson Bela Pro V3",
           "description": "Best for: Advanced players who want the finest materials",
           "offers": { "@type": "Offer", "price": "399.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 6.7, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
@@ -154,7 +154,7 @@ export default function ProRacketsPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Best overall" productName="NOX AT10 Genius 18K" price="$272.00" href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" />
+      <StickyPickBar label="Best overall" productName="NOX AT10 Genius 18K" price="$259.99" href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListData) }} />
@@ -191,7 +191,7 @@ export default function ProRacketsPage() {
 
             <div className="prose prose-lg prose-stone max-w-none mb-0">
               <p>These are the flagships — signature editions from the world&apos;s top players, built with the finest materials available in commercial padel. 18K carbon, 24K carbon, aluminized weaves, adjustable weight systems. If your technique is solid and you want the best tool for your game, these are it.</p>
-              <p>Price range: <strong>$250&ndash;400</strong>. At this level, every racket is excellent — the differences come down to your play style, position preference (left vs right side), and how you like the ball to feel off the face. If you&apos;re still developing your game, our guide to the <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best padel rackets for intermediate players</Link> is a better starting point; if you want these same frames ranked for an advanced club game rather than as flagships, see <Link href="/blog/best-padel-rackets-advanced" className="text-padel-green hover:underline">best padel rackets for advanced players</Link>. Find a club to test these rackets at with our <Link href="/search" className="text-padel-green hover:underline">court finder</Link>.</p>
+              <p>Price range: <strong>$230&ndash;400</strong>. At this level, every racket is excellent — the differences come down to your play style, position preference (left vs right side), and how you like the ball to feel off the face. If you&apos;re still developing your game, our guide to the <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best padel rackets for intermediate players</Link> is a better starting point; if you want these same frames ranked for an advanced club game rather than as flagships, see <Link href="/blog/best-padel-rackets-advanced" className="text-padel-green hover:underline">best padel rackets for advanced players</Link>. Find a club to test these rackets at with our <Link href="/search" className="text-padel-green hover:underline">court finder</Link>.</p>
             </div>
 
             {/* Quick Picks Box */}
@@ -202,15 +202,15 @@ export default function ProRacketsPage() {
               <div className="space-y-2.5">
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Overall:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">NOX AT10 Genius 18K</TrackedLink> <span className="text-stone-500">&mdash; $272.00</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">NOX AT10 Genius 18K</TrackedLink> <span className="text-stone-500">&mdash; $259.99</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Pure Power:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">HEAD Extreme Pro</TrackedLink> <span className="text-stone-500">&mdash; $319.95</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">HEAD Extreme Pro</TrackedLink> <span className="text-stone-500">&mdash; $299.95</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Value at Pro Level:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Babolat Technical Viper</TrackedLink> <span className="text-stone-500">&mdash; $249.00</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Babolat Technical Viper</TrackedLink> <span className="text-stone-500">&mdash; $229.99</span></span>
                 </div>
               </div>
               <a href="#top-5-pro" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
@@ -240,7 +240,7 @@ export default function ProRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1 mt-2">#1 — Best Overall</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX AT10 Genius 18K Alum</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$272.00</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$259.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: All-court advanced players who want versatility</p>
                 <RacketPlate racket={RACKETS[0]} uidPrefix="pro" />
@@ -294,7 +294,7 @@ export default function ProRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 — Best Value at Pro Level</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">Babolat Technical Viper Juan Lebr&oacute;n</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$249.00</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$229.99</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Aggressive players with strong technique</p>
                 <RacketPlate racket={RACKETS[1]} uidPrefix="pro" />
@@ -335,7 +335,7 @@ export default function ProRacketsPage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-stone-600 leading-[1.75] mb-5">Juan Lebr&oacute;n&apos;s weapon of choice. The Technical Viper is built for one thing: explosive ball exit. The hard EVA core combined with a 3K carbon face and diamond shape creates a racket that accelerates through every shot. The Dynamic Stability System reduces frame twisting, and the 3D Spin+ texture on the face adds top and side spin to your arsenal. Babolat&apos;s Holes Pattern System optimizes airflow through the face. Let&apos;s be honest about the trade-offs though: hard core + high balance + 370g means this racket is extremely demanding. The sweet spot is smaller than a teardrop. You need strong technique and good physical conditioning. But if you have those, this is devastating — and at $249, it&apos;s the most affordable true pro racket on this list.</p>
+                <p className="text-stone-600 leading-[1.75] mb-5">Juan Lebr&oacute;n&apos;s weapon of choice. The Technical Viper is built for one thing: explosive ball exit. The hard EVA core combined with a 3K carbon face and diamond shape creates a racket that accelerates through every shot. The Dynamic Stability System reduces frame twisting, and the 3D Spin+ texture on the face adds top and side spin to your arsenal. Babolat&apos;s Holes Pattern System optimizes airflow through the face. Let&apos;s be honest about the trade-offs though: hard core + high balance + 370g means this racket is extremely demanding. The sweet spot is smaller than a teardrop. You need strong technique and good physical conditioning. But if you have those, this is devastating — and at $229.99, it&apos;s the most affordable true pro racket on this list.</p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Explosive ball exit, Dynamic Stability System, 3D Spin+ texture</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Extremely demanding — hard core + high balance + 370g requires strong technique</p>
@@ -348,7 +348,7 @@ export default function ProRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#3 — Best Customization</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">Adidas Metalbone 3.4 (Ale Gal&aacute;n)</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$304.50</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$263.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want tunable weight and balance</p>
                 <RacketPlate racket={RACKETS[2]} uidPrefix="pro" />
@@ -405,7 +405,7 @@ export default function ProRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#4 — Best Pure Power</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">HEAD Extreme Pro</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$319.95</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$299.95</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Left-side attackers and tournament competitors</p>
                 <RacketPlate racket={RACKETS[3]} uidPrefix="pro" />
@@ -446,29 +446,29 @@ export default function ProRacketsPage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-stone-600 leading-[1.75] mb-5">The HEAD Extreme Pro is built for left-side attackers and tournament competitors &mdash; popular at <Link href="/blog/best-padel-clubs-nyc" className="text-padel-green hover:underline">NYC&apos;s padel clubs</Link> and beyond &mdash; who want dominant overheads and explosive volleys. The UD Carbon HS (High Speed) surface creates an immediate, explosive feel on contact — the ball jumps off the face faster than almost any other racket on this list. Auxetic 2.0 technology in the frame amplifies power at the point of impact, while the Extreme Spin rough surface generates heavy topspin on defensive lobs and attacking shots alike. Graphene Inside distributes weight for optimal balance. The raw numbers are intimidating: 370g, high balance, diamond shape. This racket demands serious physical conditioning and clean technique. But if you have both, it&apos;s the most powerful racket here. <strong>Note:</strong> this is a multi-variant listing on Amazon — make sure to select the &quot;Pro&quot; variant at checkout.</p>
+                <p className="text-stone-600 leading-[1.75] mb-5">The HEAD Extreme Pro is built for left-side attackers and tournament competitors &mdash; popular at <Link href="/blog/best-padel-clubs-nyc" className="text-padel-green hover:underline">NYC&apos;s padel clubs</Link> and beyond &mdash; who want dominant overheads and explosive volleys. The UD Carbon HS (High Speed) surface creates an immediate, explosive feel on contact — the ball jumps off the face faster than almost any other racket on this list. Auxetic 2.0 technology in the frame amplifies power at the point of impact, while the Extreme Spin rough surface generates heavy topspin on defensive lobs and attacking shots alike. Graphene Inside distributes weight for optimal balance. The raw numbers are intimidating: 370g, high balance, diamond shape. This racket demands serious physical conditioning and clean technique. But if you have both, it&apos;s the most powerful racket here. <strong>Note:</strong> the Amazon listing we link is the 2025 Extreme Pro.</p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> UD Carbon HS = immediate explosive feel, Auxetic 2.0 amplifies power</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> 370g + high balance demands serious physical conditioning</p>
                 </div>
-                <TrackedLink href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <TrackedLink href="https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
 
-              {/* 5. Wilson Bela V3 */}
+              {/* 5. Wilson Bela Pro V3 */}
               <div id="wilson-bela-v3" className="bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#5 — Best Premium Material</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-xl font-bold text-foreground">Wilson Bela V3</h3>
+                  <h3 className="text-xl font-bold text-foreground">Wilson Bela Pro V3</h3>
                   <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$399.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Advanced players who want the finest materials</p>
                 <RacketPlate racket={RACKETS[4]} uidPrefix="pro" />
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Diamond</span>
-                  <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">366&ndash;370g</span>
-                  <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">EVA Firm / Power Foam</span>
+                  <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">370g</span>
+                  <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">High-density foam</span>
                   <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">24K Carbon</span>
-                  <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">C2 Tubular Carbon Frame</span>
+                  <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Tubular Carbon Frame</span>
                 </div>
                 {/* Rating Bars */}
                 <div className="grid grid-cols-3 gap-3 mb-5 py-3 px-4 bg-stone-100/50 rounded-lg">
@@ -500,12 +500,12 @@ export default function ProRacketsPage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-stone-600 leading-[1.75] mb-5">Fernando Belastegu&iacute;n&apos;s signature racket features the finest carbon weave in commercial padel: 24K carbon, meaning 24,000 filaments per strand. The result is the most precise, responsive surface you can buy — every micro-adjustment in your swing translates directly to the ball. The C2 tubular carbon frame provides structural integrity without excess weight, and Wilson&apos;s dual-texture surface creates distinct zones for power (center) and spin (edges). SpinEffect technology in the drilling pattern optimizes airflow and ball grip. At $399, this is the most expensive racket on our list by a significant margin. The firm core and head-heavy diamond shape are unforgiving. But if you&apos;re an advanced or pro-level player who wants the absolute best materials available, this is the pinnacle.</p>
+                <p className="text-stone-600 leading-[1.75] mb-5">Fernando Belastegu&iacute;n&apos;s signature racket features the finest carbon weave in commercial padel: 24K carbon, meaning 24,000 filaments per strand. The result is the most precise, responsive surface you can buy — every micro-adjustment in your swing translates directly to the ball. The tubular carbon frame and V-Bridge throat provide structural integrity, and Wilson&apos;s Spin2 texture and DuoGrid hole pattern split the job: larger holes up top for power, tighter holes lower down for spin. At $399, this is the most expensive racket on our list by a significant margin. The firm core and head-heavy diamond shape are unforgiving. But if you&apos;re an advanced or pro-level player who wants the absolute best materials available, this is the pinnacle.</p>
                 <div className="space-y-2 mb-5">
-                  <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> 24K carbon = most precise surface available, C2 tubular frame</p>
+                  <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> 24K carbon = most precise surface available, tubular carbon frame</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> $399 price tag, head-heavy + firm core demands strong technique</p>
                 </div>
-                <TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela V3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela Pro V3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
               </div>
             </section>
           </div>
@@ -526,11 +526,11 @@ export default function ProRacketsPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Overall</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">NOX AT10 Genius 18K</TrackedLink></td><td className="py-3 text-stone-600">$272.00</td></tr>
-                    <tr className="border-b border-stone-100 bg-stone-50/50"><td className="py-3 pr-4 font-medium text-stone-700">Best Pure Power</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0G59YX8H5?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">HEAD Extreme Pro</TrackedLink></td><td className="py-3 text-stone-600">$319.95</td></tr>
-                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Customization</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" type="affiliate" productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Adidas Metalbone 3.4</TrackedLink></td><td className="py-3 text-stone-600">$304.50</td></tr>
-                    <tr className="border-b border-stone-100 bg-stone-50/50"><td className="py-3 pr-4 font-medium text-stone-700">Best Premium Material</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela V3" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Wilson Bela V3 (24K)</TrackedLink></td><td className="py-3 text-stone-600">$399.00</td></tr>
-                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Value at Pro Level</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Babolat Technical Viper</TrackedLink></td><td className="py-3 text-stone-600">$249.00</td></tr>
+                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Overall</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">NOX AT10 Genius 18K</TrackedLink></td><td className="py-3 text-stone-600">$259.99</td></tr>
+                    <tr className="border-b border-stone-100 bg-stone-50/50"><td className="py-3 pr-4 font-medium text-stone-700">Best Pure Power</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">HEAD Extreme Pro</TrackedLink></td><td className="py-3 text-stone-600">$299.95</td></tr>
+                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Customization</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" type="affiliate" productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Adidas Metalbone 3.4</TrackedLink></td><td className="py-3 text-stone-600">$263.00</td></tr>
+                    <tr className="border-b border-stone-100 bg-stone-50/50"><td className="py-3 pr-4 font-medium text-stone-700">Best Premium Material</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela Pro V3" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Wilson Bela Pro V3 (24K)</TrackedLink></td><td className="py-3 text-stone-600">$399.00</td></tr>
+                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Value at Pro Level</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Babolat Technical Viper</TrackedLink></td><td className="py-3 text-stone-600">$229.99</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -550,7 +550,7 @@ export default function ProRacketsPage() {
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What&apos;s the difference between a player signature racket and the regular model?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">A signature edition like the NOX AT10 (Agust&iacute;n Tapia) or Wilson Bela V3 (Fernando Belastegu&iacute;n) is the flagship spec built with the brand&apos;s finest materials — 18K or 24K carbon, premium cores, adjustable weight systems. Lower models in the same line share the shape and cosmetics but use simpler carbon layups and cores, which is why they cost less and play softer.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">A signature edition like the NOX AT10 (Agust&iacute;n Tapia) or Wilson Bela Pro V3 (Fernando Belastegu&iacute;n) is the flagship spec built with the brand&apos;s finest materials — 18K or 24K carbon, premium cores, adjustable weight systems. Lower models in the same line share the shape and cosmetics but use simpler carbon layups and cores, which is why they cost less and play softer.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">How long does a premium carbon racket last?</h3>
@@ -574,17 +574,17 @@ export default function ProRacketsPage() {
             <Link href="/blog/best-budget-padel-rackets" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Budget Padel Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">6 picks from $90 to $170, ranked by value &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">6 picks under $170, ranked by value &rarr;</p>
             </Link>
             <Link href="/blog/best-padel-rackets-beginners" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Beginner Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">Just starting out? 5 rackets from $90&ndash;$130 &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">Just starting out? 5 rackets from $90&ndash;$150 &rarr;</p>
             </Link>
             <Link href="/blog/best-padel-rackets-intermediate" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Intermediate Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">5 upgrade picks from $170&ndash;$280 &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">5 upgrade picks from $209&ndash;$260 &rarr;</p>
             </Link>
             <Link href="/blog/padel-racket-shapes-explained" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>

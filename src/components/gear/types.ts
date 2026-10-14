@@ -21,8 +21,8 @@ export interface GearRacket {
   productName: string;
   /** Exact price string as shown on the page, e.g. "$89.95" */
   price: string;
-  /** Existing affiliate URL, unchanged */
-  href: string;
+  /** Affiliate URL. Undefined when the product has no live Amazon listing. */
+  href?: string;
   brand: BrandFamily;
   shape: RacketShape;
   /** Shape wording as the page states it, e.g. "Round (511cm²)" */
@@ -46,7 +46,8 @@ export interface GearShoe {
   name: string;
   productName: string;
   price: string;
-  href: string;
+  /** Affiliate URL. Undefined when the product has no live Amazon listing. */
+  href?: string;
   pattern: SolePattern;
   /** Plain label for the outsole as the page states it */
   patternLabel: string;

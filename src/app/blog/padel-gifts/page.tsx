@@ -4,17 +4,17 @@ import { TrackedLink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Padel Gifts (2026): What Players Actually Want, at Every Budget",
-  description: "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $14 stocking stuffers to flagship rackets.",
+  description: "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $15 stocking stuffers to flagship rackets.",
   alternates: { canonical: "https://www.padelcourtsfinder.com/blog/padel-gifts" },
-  openGraph: { title: "Padel Gifts (2026): What Players Actually Want, at Every Budget", description: "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $14 stocking stuffers to flagship rackets.", url: "https://www.padelcourtsfinder.com/blog/padel-gifts", siteName: "Padel Courts Finder", type: "article" },
-  twitter: { card: "summary_large_image", title: "Padel Gifts (2026): What Players Actually Want, at Every Budget", description: "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $14 stocking stuffers to flagship rackets." },
+  openGraph: { title: "Padel Gifts (2026): What Players Actually Want, at Every Budget", description: "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $15 stocking stuffers to flagship rackets.", url: "https://www.padelcourtsfinder.com/blog/padel-gifts", siteName: "Padel Courts Finder", type: "article" },
+  twitter: { card: "summary_large_image", title: "Padel Gifts (2026): What Players Actually Want, at Every Budget", description: "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $15 stocking stuffers to flagship rackets." },
 };
 
 const articleData = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Padel Gifts (2026): What Players Actually Want, at Every Budget",
-  "description": "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $14 stocking stuffers to flagship rackets.",
+  "description": "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $15 stocking stuffers to flagship rackets.",
   "datePublished": "2026-07-31T00:00:00Z",
   "dateModified": "2026-07-31T00:00:00Z",
   "author": {
@@ -45,7 +45,7 @@ const faqData = {
       "name": "What is a good padel gift for her?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Court shoes are the sleeper pick — most players never upgrade their own footwear, and the HEAD Women's Sprint Pro 4.0 ($89) is the shoe we recommend in our buying guide. The Babolat Court Lite backpack ($60) is the safe stylish option, and a fresh-strung round racket like the Wilson Optix V1 ($109) fits a newer player."
+        "text": "Court shoes are the sleeper pick — most players never upgrade their own footwear, and the HEAD Women's Sprint Pro 4.0 ($109) is the shoe we recommend in our buying guide. The Babolat Court Lite backpack ($52) is the safe stylish option, and a fresh-strung round racket like the Wilson Optix V1 ($109) fits a newer player."
       }
     },
     {
@@ -53,7 +53,7 @@ const faqData = {
       "name": "What are the best padel gifts under $50?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A sleeve of HEAD Padel Pro S balls (~$14) — the ball most US clubs play — or a 12-pack of overgrips ($27-35). Unglamorous, guaranteed used. Every padel player burns through both."
+        "text": "A sleeve of HEAD Padel Pro S+ balls (~$15), the current version of the ball most US clubs play, or a 12-pack of overgrips ($27-35). Unglamorous, guaranteed used. Every padel player burns through both."
       }
     },
     {
@@ -61,7 +61,7 @@ const faqData = {
       "name": "Should I gift a padel racket if I don't know their level?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Stick to forgiving round-shaped rackets (Wilson Optix V1, NOX ML10 Pro Cup) — they suit the widest range of players. Avoid diamond-shaped 'pro' rackets as gifts; they punish anyone who isn't advanced. When in doubt, shoes or a bag are safer."
+        "text": "Stick to forgiving round-shaped rackets (Wilson Optix V1, Babolat Contact) — they suit the widest range of players. Avoid diamond-shaped 'pro' rackets as gifts; they punish anyone who isn't advanced. When in doubt, shoes or a bag are safer."
       }
     },
     {
@@ -88,10 +88,10 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "89.00",
+          "price": "109.00",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20"
+          "url": "https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20"
         }
       }
     },
@@ -104,7 +104,7 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "59.95",
+          "price": "51.80",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20"
@@ -136,7 +136,7 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "129.00",
+          "price": "109.00",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20"
@@ -170,8 +170,7 @@ const itemListData = {
           "@type": "Offer",
           "price": "119.00",
           "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20"
+          "availability": "https://schema.org/OutOfStock"
         }
       }
     },
@@ -180,14 +179,14 @@ const itemListData = {
       "position": 7,
       "item": {
         "@type": "Product",
-        "name": "HEAD Padel Pro S Balls (3-can)",
+        "name": "HEAD Padel Pro S+ Balls (3-can)",
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "13.91",
+          "price": "14.95",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20"
+          "url": "https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20"
         }
       }
     },
@@ -200,7 +199,7 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "27.00",
+          "price": "26.99",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20"
@@ -234,8 +233,7 @@ const itemListData = {
           "@type": "Offer",
           "price": "169.99",
           "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20"
+          "availability": "https://schema.org/OutOfStock"
         }
       }
     },
@@ -248,7 +246,7 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "272.00",
+          "price": "259.99",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20"
@@ -295,17 +293,17 @@ export default function PadelGiftsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">HEAD Women's Sprint Pro 4.0 Shoes</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$89.00</div>
+                  <div className="text-padel-green font-bold whitespace-nowrap">$109.00</div>
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">Proper padel footwear is the upgrade most players never buy themselves — herringbone grip, lateral support, reinforced toe. If she plays weekly, this beats any accessory.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <TrackedLink href="https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20" type="affiliate" productName="HEAD Women's Sprint Pro 4.0 Shoes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                  <TrackedLink href="https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20" type="affiliate" productName="HEAD Women's Sprint Pro 4.0 Shoes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
                 </div>
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">Babolat Court Lite Padel Backpack</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$59.95</div>
+                  <div className="text-padel-green font-bold whitespace-nowrap">$51.80</div>
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">Racket-ready backpack that doesn&apos;t look like gym kit — dedicated racket sleeve, shoe compartment, and clean styling she can carry to work and the court.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
@@ -331,7 +329,7 @@ export default function PadelGiftsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">HEAD Men's Sprint Pro 4.0 Shoes</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$129.00</div>
+                  <div className="text-padel-green font-bold whitespace-nowrap">$109.00</div>
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">The court shoe we recommend in our shoes guide — grip for sand-dressed turf, wrapped toe for drag, lateral cage for hard cuts. The gift that prevents the twisted ankle.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
@@ -351,11 +349,11 @@ export default function PadelGiftsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">NOX Pro Cup USPA Edition</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$119.00</div>
+                  <div className="text-stone-500 font-semibold whitespace-nowrap">Unavailable</div>
                 </div>
-                <p className="text-stone-600 text-sm leading-relaxed mt-2">The US Padel Association edition of NOX&apos;s beloved Pro Cup mold — a serious step-up racket at a giftable price.</p>
+                <p className="text-stone-600 text-sm leading-relaxed mt-2">The US Padel Association edition of NOX&apos;s beloved Pro Cup mold — a serious step-up racket. It is currently unavailable on Amazon.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <TrackedLink href="https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20" type="affiliate" productName="NOX Pro Cup USPA Edition" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                  <span className="inline-flex items-center font-semibold text-sm px-4 py-2 rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
                 </div>
               </div>
             </div>
@@ -366,18 +364,18 @@ export default function PadelGiftsPage() {
             <div className="space-y-5">
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-bold text-foreground">HEAD Padel Pro S Balls (3-can)</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$13.91</div>
+                  <h3 className="font-bold text-foreground">HEAD Padel Pro S+ Balls (3-can)</h3>
+                  <div className="text-padel-green font-bold whitespace-nowrap">$14.95</div>
                 </div>
-                <p className="text-stone-600 text-sm leading-relaxed mt-2">The ball most US clubs play. A sleeve of fresh cans is the stocking-stuffer every padel player actually uses.</p>
+                <p className="text-stone-600 text-sm leading-relaxed mt-2">The current version of the HEAD Pro S, the ball most US clubs play. A sleeve of fresh cans is the stocking-stuffer every padel player actually uses.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <TrackedLink href="https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20" type="affiliate" productName="HEAD Padel Pro S Balls (3-can)" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                  <TrackedLink href="https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20" type="affiliate" productName="HEAD Padel Pro S+ Balls (3-can)" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
                 </div>
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">Wilson Pro Overgrip 12-Pack</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$27.00</div>
+                  <div className="text-padel-green font-bold whitespace-nowrap">$26.99</div>
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">The most replaced item in padel. Twelve fresh grips is months of tack — unglamorous, guaranteed useful.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
@@ -403,18 +401,18 @@ export default function PadelGiftsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">NOX ML10 Pro Cup Rough Surface</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$169.99</div>
+                  <div className="text-stone-500 font-semibold whitespace-nowrap">Unavailable</div>
                 </div>
-                <p className="text-stone-600 text-sm leading-relaxed mt-2">Our highest-rated racket under $200 — pro-level control in a forgiving round shape. The safe premium racket gift for any improving player.</p>
+                <p className="text-stone-600 text-sm leading-relaxed mt-2">Our highest-rated racket under $200 — pro-level control in a forgiving round shape. The safe premium racket gift for any improving player, but it is currently unavailable on Amazon.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <TrackedLink href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20" type="affiliate" productName="NOX ML10 Pro Cup Rough Surface" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                  <span className="inline-flex items-center font-semibold text-sm px-4 py-2 rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
                 <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-4 py-2 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our review</Link>
                 </div>
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">NOX AT10 Genius 18K</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$272.00</div>
+                  <div className="text-padel-green font-bold whitespace-nowrap">$259.99</div>
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">Tapia&apos;s flagship and the most versatile pro frame we&apos;ve tested. For the player who&apos;s earned it.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
@@ -430,15 +428,15 @@ export default function PadelGiftsPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What is a good padel gift for her?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">Court shoes are the sleeper pick — most players never upgrade their own footwear, and the HEAD Women&apos;s Sprint Pro 4.0 ($89) is the shoe we recommend in our buying guide. The Babolat Court Lite backpack ($60) is the safe stylish option, and a fresh-strung round racket like the Wilson Optix V1 ($109) fits a newer player.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">Court shoes are the sleeper pick — most players never upgrade their own footwear, and the HEAD Women&apos;s Sprint Pro 4.0 ($109) is the shoe we recommend in our buying guide. The Babolat Court Lite backpack ($52) is the safe stylish option, and a fresh-strung round racket like the Wilson Optix V1 ($109) fits a newer player.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What are the best padel gifts under $50?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">A sleeve of HEAD Padel Pro S balls (~$14) — the ball most US clubs play — or a 12-pack of overgrips ($27-35). Unglamorous, guaranteed used. Every padel player burns through both.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">A sleeve of HEAD Padel Pro S+ balls (~$15), the current version of the ball most US clubs play, or a 12-pack of overgrips ($27-35). Unglamorous, guaranteed used. Every padel player burns through both.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Should I gift a padel racket if I don&apos;t know their level?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">Stick to forgiving round-shaped rackets (Wilson Optix V1, NOX ML10 Pro Cup) — they suit the widest range of players. Avoid diamond-shaped &apos;pro&apos; rackets as gifts; they punish anyone who isn&apos;t advanced. When in doubt, shoes or a bag are safer.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">Stick to forgiving round-shaped rackets (Wilson Optix V1, Babolat Contact) — they suit the widest range of players. Avoid diamond-shaped &apos;pro&apos; rackets as gifts; they punish anyone who isn&apos;t advanced. When in doubt, shoes or a bag are safer.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What do you get a padel player who has everything?</h3>

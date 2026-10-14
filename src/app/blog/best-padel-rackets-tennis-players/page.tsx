@@ -4,23 +4,23 @@ import { TrackedLink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Best Padel Rackets for Tennis Players (2026): Tested Picks",
-  description: "Coming to padel from tennis? Your instincts will push you toward the wrong racket. The frames that suit a tennis swing, tested — from $189, and the one shape to avoid.",
+  description: "Coming to padel from tennis? Your instincts will push you toward the wrong racket. The frames that suit a tennis swing, tested — from $209, and the one shape to avoid.",
   alternates: { canonical: "https://www.padelcourtsfinder.com/blog/best-padel-rackets-tennis-players" },
   openGraph: {
     title: "Best Padel Rackets for Tennis Players (2026): Tested Picks",
-    description: "Coming to padel from tennis? Your instincts will push you toward the wrong racket. The frames that suit a tennis swing, tested — from $189, and the one shape to avoid.",
+    description: "Coming to padel from tennis? Your instincts will push you toward the wrong racket. The frames that suit a tennis swing, tested — from $209, and the one shape to avoid.",
     url: "https://www.padelcourtsfinder.com/blog/best-padel-rackets-tennis-players",
     siteName: "Padel Courts Finder",
     type: "article",
   },
-  twitter: { card: "summary_large_image", title: "Best Padel Rackets for Tennis Players (2026): Tested Picks", description: "Coming to padel from tennis? Your instincts will push you toward the wrong racket. The frames that suit a tennis swing, tested — from $189, and the one shape to avoid." },
+  twitter: { card: "summary_large_image", title: "Best Padel Rackets for Tennis Players (2026): Tested Picks", description: "Coming to padel from tennis? Your instincts will push you toward the wrong racket. The frames that suit a tennis swing, tested — from $209, and the one shape to avoid." },
 };
 
 const articleData = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Best Padel Rackets for Tennis Players (2026): Tested Picks",
-  "description": "Coming to padel from tennis? Your instincts will push you toward the wrong racket. The frames that suit a tennis swing, tested — from $189, and the one shape to avoid.",
+  "description": "Coming to padel from tennis? Your instincts will push you toward the wrong racket. The frames that suit a tennis swing, tested — from $209, and the one shape to avoid.",
   "datePublished": "2026-08-18T00:00:00Z",
   "dateModified": "2026-08-18T00:00:00Z",
   "author": {
@@ -51,7 +51,7 @@ const faqData = {
       "name": "What is the best padel racket for a tennis player?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A teardrop, not a diamond. The Wilson Blade Elite V2 at $189 is the best starting point for most players coming from tennis — enough power to reward a full swing, with a sweet spot forgiving enough to survive the mishits of your first season. If you already play at a high level and want a frame you won't outgrow, the NOX AT10 Genius 18K at $272 is the upgrade."
+        "text": "A teardrop, not a diamond. The Wilson Blade Elite V2 at $208.58 is the best starting point for most players coming from tennis — enough power to reward a full swing, with a sweet spot forgiving enough to survive the mishits of your first season. If you already play at a high level and want a frame you won't outgrow, the NOX AT10 Genius 18K at $259.99 is the upgrade."
       }
     },
     {
@@ -103,7 +103,7 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/wilson-blade-elite-v2-review",
         "offers": {
           "@type": "Offer",
-          "price": "189.00",
+          "price": "208.58",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20"
@@ -120,7 +120,7 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/nox-at10-genius-18k-review",
         "offers": {
           "@type": "Offer",
-          "price": "272.00",
+          "price": "259.99",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20"
@@ -154,7 +154,7 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/babolat-technical-viper-review",
         "offers": {
           "@type": "Offer",
-          "price": "249.00",
+          "price": "229.99",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20"
@@ -214,17 +214,17 @@ export default function BestPadelRacketsTennisPlayers() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">7.0<span className="text-sm text-stone-400">/10</span></div>
-                  <div className="text-sm text-stone-500">$189.00</div>
+                  <div className="text-sm text-stone-500">$208.58</div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-1.5 mb-4">
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Teardrop</span>
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Balanced power/control</span>
               </div>
-              <p className="text-stone-700 leading-relaxed text-sm">The right amount of racket for someone who can already hit a ball but has never played off a wall. The teardrop shape rewards a full swing the way your tennis instincts expect, but the sweet spot is forgiving enough that a season of learning the glass will not be miserable. If you recognise the Blade name from tennis, the family resemblance is real — this is the frame that makes the crossover feel natural without flattering you into bad habits.</p>
+              <p className="text-stone-700 leading-relaxed text-sm">The right amount of racket for someone who can already hit a ball but has never played off a wall. The teardrop shape rewards a full swing the way your tennis instincts expect, but the sweet spot is forgiving enough that a season of learning the glass will not be miserable. If you recognise the Blade name from tennis, the family resemblance is real — this is the frame that makes the crossover feel natural without flattering you into bad habits. The only Amazon listing we found ships from Amazon Japan as an import.</p>
               <div className="grid sm:grid-cols-2 gap-3 mt-4 text-sm">
-                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">Forgiving for a teardrop; $189 is the right first spend; familiar feel</span></div>
-                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Strong players may want more ceiling within a year</span></div>
+                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">Forgiving for a teardrop; familiar feel</span></div>
+                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Strong players may want more ceiling within a year; only sold on Amazon as a Japan import</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
                 <TrackedLink href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" type="affiliate" productName="Wilson Blade Elite V2" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
@@ -240,7 +240,7 @@ export default function BestPadelRacketsTennisPlayers() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">7.3<span className="text-sm text-stone-400">/10</span></div>
-                  <div className="text-sm text-stone-500">$272.00</div>
+                  <div className="text-sm text-stone-500">$259.99</div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-1.5 mb-4">
@@ -253,7 +253,7 @@ export default function BestPadelRacketsTennisPlayers() {
               <p className="text-stone-700 leading-relaxed text-sm">The highest-rated racket in our testing and the one to buy if your tennis is genuinely competitive — a 4.0 NTRP and up, with contact you can trust. It scores 7 for power and 8 for control, which is the combination a strong player needs: enough attack to finish overheads, enough control that a compact padel swing still goes where you point it. Agustín Tapia&apos;s frame, and it will not be the limiting factor in your game for a long time.</p>
               <div className="grid sm:grid-cols-2 gap-3 mt-4 text-sm">
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">7/10 power with 8/10 control; a frame you will not outgrow; pro pedigree</span></div>
-                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">$272; rewards consistent contact rather than creating it</span></div>
+                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">$259.99; rewards consistent contact rather than creating it</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
                 <TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
@@ -298,14 +298,14 @@ export default function BestPadelRacketsTennisPlayers() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">6.7<span className="text-sm text-stone-400">/10</span></div>
-                  <div className="text-sm text-stone-500">$249.00</div>
+                  <div className="text-sm text-stone-500">$229.99</div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-1.5 mb-4">
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Diamond</span>
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Maximum power</span>
               </div>
-              <p className="text-stone-700 leading-relaxed text-sm">We are including one diamond because some tennis players will buy one regardless, and if you are going to, buy the best-value one rather than the most expensive. The Viper is the strongest diamond in our testing at $249 and it does deliver the put-away power the shape promises. Just go in clear-eyed: the sweet spot is small and sits high, off-centre hits sting, and the head-heavy balance loads your forearm on every swing. Wait a season if you can.</p>
+              <p className="text-stone-700 leading-relaxed text-sm">We are including one diamond because some tennis players will buy one regardless, and if you are going to, buy the best-value one rather than the most expensive. The Viper is the strongest diamond in our testing at $229.99 and it does deliver the put-away power the shape promises. Just go in clear-eyed: the sweet spot is small and sits high, off-centre hits sting, and the head-heavy balance loads your forearm on every swing. Wait a season if you can.</p>
               <div className="grid sm:grid-cols-2 gap-3 mt-4 text-sm">
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">Best-value diamond we have tested; genuine finishing power</span></div>
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Small high sweet spot punishes learners; head-heavy load on the arm</span></div>
@@ -333,7 +333,7 @@ export default function BestPadelRacketsTennisPlayers() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">How much racket should you actually buy</h2>
             <p className="text-stone-700 leading-relaxed">Stay between 360g and 375g. Tennis players generally have the arm strength for something heavier and assume mass equals power, but padel involves far more swings per hour than tennis and each one is shorter, so a head-heavy frame compounds load at the elbow quickly. Let the teardrop shape supply the power instead of the weight.</p>
-            <p className="text-stone-700 leading-relaxed mt-4">On budget: $189 to $272 covers everything worth owning here. Below that you are into round beginner frames that will frustrate a competent hitter; above it you are paying for marginal gains you cannot yet use. If you are unsure between the Blade Elite V2 and the AT10 Genius, the honest tiebreaker is your tennis level — recreational, take the Wilson; competitive club player and up, take the NOX.</p>
+            <p className="text-stone-700 leading-relaxed mt-4">On budget: $208.58 to $259.99 covers everything worth owning here. Below that you are into round beginner frames that will frustrate a competent hitter; above it you are paying for marginal gains you cannot yet use. If you are unsure between the Blade Elite V2 and the AT10 Genius, the honest tiebreaker is your tennis level — recreational, take the Wilson; competitive club player and up, take the NOX.</p>
           </section>
 
           <section>
@@ -341,7 +341,7 @@ export default function BestPadelRacketsTennisPlayers() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What is the best padel racket for a tennis player?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">A teardrop, not a diamond. The Wilson Blade Elite V2 at $189 is the best starting point for most players coming from tennis &mdash; enough power to reward a full swing, with a sweet spot forgiving enough to survive the mishits of your first season. If you already play at a high level and want a frame you won&apos;t outgrow, the NOX AT10 Genius 18K at $272 is the upgrade.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">A teardrop, not a diamond. The Wilson Blade Elite V2 at $208.58 is the best starting point for most players coming from tennis &mdash; enough power to reward a full swing, with a sweet spot forgiving enough to survive the mishits of your first season. If you already play at a high level and want a frame you won&apos;t outgrow, the NOX AT10 Genius 18K at $259.99 is the upgrade.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What racket shape should a tennis player use in padel?</h3>

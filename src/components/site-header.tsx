@@ -104,7 +104,7 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                             className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
                             <div className="text-sm font-medium leading-none">Best Beginner Rackets</div>
-                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">Top 5 picks from $90–$130</p>
+                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">Top 5 picks from $90–$150</p>
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -115,7 +115,7 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                             className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
                             <div className="text-sm font-medium leading-none">Best Intermediate Rackets</div>
-                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">5 rackets from $170–$280</p>
+                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">5 rackets from $209–$260</p>
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -126,7 +126,7 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                             className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
                             <div className="text-sm font-medium leading-none">Best Pro Rackets</div>
-                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">Top 5 flagship rackets from $250–$400</p>
+                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">Top 5 flagship rackets from $230–$400</p>
                           </Link>
                         </NavigationMenuLink>
                       </li>

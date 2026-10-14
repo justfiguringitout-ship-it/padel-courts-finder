@@ -5,13 +5,13 @@ import { HeroVideo } from '@/components/hero-video';
 
 export const metadata: Metadata = {
   title: 'Best Padel Gifts for Mom (2026) — 12 Ideas She\'ll Actually Use',
-  description: 'The best padel gifts for Mother\'s Day 2026. From beginner rackets to premium bags, 12 curated picks at every budget — $14 to $399. Gift guide for the padel-loving mom.',
+  description: 'The best padel gifts for Mother\'s Day 2026. From beginner rackets to premium bags, 12 curated picks at every budget — $15 to $399. Gift guide for the padel-loving mom.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/padel-gifts-mothers-day-2026',
   },
   openGraph: {
     title: 'Best Padel Gifts for Mom (2026) — 12 Ideas She\'ll Actually Use',
-    description: 'The best padel gifts for Mother\'s Day 2026. From beginner rackets to premium bags, 12 curated picks at every budget — $14 to $399.',
+    description: 'The best padel gifts for Mother\'s Day 2026. From beginner rackets to premium bags, 12 curated picks at every budget — $15 to $399.',
     url: 'https://www.padelcourtsfinder.com/blog/padel-gifts-mothers-day-2026',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
@@ -23,7 +23,7 @@ export default function MothersDay2026GiftGuidePage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Gifts for Mom (2026) — 12 Ideas She'll Actually Use",
-    "description": "The best padel gifts for Mother's Day 2026. From beginner rackets to premium bags, 12 curated picks at every budget — $14 to $399.",
+    "description": "The best padel gifts for Mother's Day 2026. From beginner rackets to premium bags, 12 curated picks at every budget — $15 to $399.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-25T00:00:00Z",
     "dateModified": "2026-07-04T00:00:00Z",
@@ -55,7 +55,7 @@ export default function MothersDay2026GiftGuidePage() {
         "name": "What's a good padel gift for a beginner?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A round-shape beginner racket like the Babolat Contact ($90) plus a can of HEAD Padel Pro balls ($14) and a Wilson Pro Overgrip 12-pack ($27) — total around $130. This covers everything she needs for her first session on court."
+          "text": "A round-shape beginner racket like the Babolat Contact ($90) plus a can of HEAD Padel Pro S+ balls ($15) and a Wilson Pro Overgrip 12-pack ($27) — total around $130. This covers everything she needs for her first session on court."
         }
       },
       {
@@ -87,13 +87,13 @@ export default function MothersDay2026GiftGuidePage() {
         "item": {
           "@type": "Product",
           "image": "https://www.padelcourtsfinder.com/og/default.png",
-          "name": "HEAD Padel Pro S Balls",
-          "description": "The most popular padel ball in the US — consistent bounce, good durability.",
+          "name": "HEAD Padel Pro S+ Balls",
+          "description": "The current version of the HEAD Pro S, the most popular padel ball in the US.",
           "offers": {
             "@type": "Offer",
-            "price": "13.91",
+            "price": "14.95",
             "priceCurrency": "USD",
-            "url": "https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20"
+            "url": "https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20"
           }
         }
       },
@@ -107,7 +107,7 @@ export default function MothersDay2026GiftGuidePage() {
           "description": "Tacky, absorbent, and the industry standard — a 12-pack lasts months.",
           "offers": {
             "@type": "Offer",
-            "price": "27.00",
+            "price": "26.99",
             "priceCurrency": "USD",
             "url": "https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20"
           }
@@ -123,7 +123,7 @@ export default function MothersDay2026GiftGuidePage() {
           "description": "Purpose-built for padel with a racket compartment, shoe pocket, and room for everything else.",
           "offers": {
             "@type": "Offer",
-            "price": "59.95",
+            "price": "51.80",
             "priceCurrency": "USD",
             "url": "https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20"
           }
@@ -155,9 +155,9 @@ export default function MothersDay2026GiftGuidePage() {
           "description": "Non-marking padel-approved court shoes — lightweight, breathable, with herringbone tread.",
           "offers": {
             "@type": "Offer",
-            "price": "89.00",
+            "price": "109.00",
             "priceCurrency": "USD",
-            "url": "https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20"
+            "url": "https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20"
           }
         }
       },
@@ -220,8 +220,7 @@ export default function MothersDay2026GiftGuidePage() {
           "offers": {
             "@type": "Offer",
             "price": "119.00",
-            "priceCurrency": "USD",
-            "url": "https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20"
+            "priceCurrency": "USD", "availability": "https://schema.org/OutOfStock"
           }
         }
       },
@@ -236,8 +235,7 @@ export default function MothersDay2026GiftGuidePage() {
           "offers": {
             "@type": "Offer",
             "price": "169.99",
-            "priceCurrency": "USD",
-            "url": "https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20"
+            "priceCurrency": "USD", "availability": "https://schema.org/OutOfStock"
           }
         }
       },
@@ -263,7 +261,7 @@ export default function MothersDay2026GiftGuidePage() {
         "item": {
           "@type": "Product",
           "image": "https://www.padelcourtsfinder.com/og/default.png",
-          "name": "Wilson Bela V3",
+          "name": "Wilson Bela Pro V3",
           "description": "Fernando Belasteguín's signature racket with a 24K carbon face — the finest weave in commercial padel.",
           "offers": {
             "@type": "Offer",
@@ -345,15 +343,15 @@ export default function MothersDay2026GiftGuidePage() {
               <div className="space-y-2.5">
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Splurge:</span>
-                  <span className="text-sm"><a href="#wilson-bela-v3" className="text-padel-green hover:underline font-medium">Wilson Bela V3</a> <span className="text-stone-500">&mdash; $399</span></span>
+                  <span className="text-sm"><a href="#wilson-bela-v3" className="text-padel-green hover:underline font-medium">Wilson Bela Pro V3</a> <span className="text-stone-500">&mdash; $399</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Starter Set:</span>
-                  <span className="text-sm"><a href="#starter-set" className="text-padel-green hover:underline font-medium">Babolat Contact + balls + overgrip</a> <span className="text-stone-500">&mdash; ~$131 total</span></span>
+                  <span className="text-sm"><a href="#starter-set" className="text-padel-green hover:underline font-medium">Babolat Contact + balls + overgrip</a> <span className="text-stone-500">&mdash; ~$132 total</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Under $60:</span>
-                  <span className="text-sm"><a href="#babolat-backpack" className="text-padel-green hover:underline font-medium">Babolat Court Lite Backpack</a> <span className="text-stone-500">&mdash; $59.95</span></span>
+                  <span className="text-sm"><a href="#babolat-backpack" className="text-padel-green hover:underline font-medium">Babolat Court Lite Backpack</a> <span className="text-stone-500">&mdash; $51.80</span></span>
                 </div>
               </div>
               <a href="#under-25" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Browse all 12 picks &darr;</a>
@@ -374,17 +372,17 @@ export default function MothersDay2026GiftGuidePage() {
                 {/* 1. HEAD Balls */}
                 <div className="bg-white border border-stone-200 rounded-xl p-5">
                   <div className="flex items-start justify-between gap-3 mb-2">
-                    <h3 className="font-bold text-foreground text-base">HEAD Padel Pro S Balls</h3>
-                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$13.91</span>
+                    <h3 className="font-bold text-foreground text-base">HEAD Padel Pro S+ Balls</h3>
+                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$14.95</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
-                    Every padel player goes through balls. She&apos;ll always need more. The HEAD Pro S is the most popular padel ball in the US &mdash; consistent bounce, good durability.
+                    Every padel player goes through balls. She&apos;ll always need more. The HEAD Pro S+ is the current version of the Pro S, the most popular padel ball in the US.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: any padel mom, any level</p>
                   <TrackedLink
-                    href="https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20"
+                    href="https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20"
                     type="affiliate"
-                    productName="HEAD Padel Pro S Balls"
+                    productName="HEAD Padel Pro S+ Balls"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
@@ -397,7 +395,7 @@ export default function MothersDay2026GiftGuidePage() {
                 <div className="bg-white border border-stone-200 rounded-xl p-5">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="font-bold text-foreground text-base">Wilson Pro Overgrip 12-Pack</h3>
-                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$27.00</span>
+                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$26.99</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
                     The grip she&apos;ll actually replace every few weeks. Tacky, absorbent, and the industry standard. A 12-pack lasts months.
@@ -427,7 +425,7 @@ export default function MothersDay2026GiftGuidePage() {
                 <div id="babolat-backpack" className="bg-white border border-stone-200 rounded-xl p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="font-bold text-foreground text-lg">Babolat Court Lite Padel Backpack</h3>
-                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$59.95</span>
+                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$51.80</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
                     Purpose-built for padel with a racket compartment, shoe pocket, and room for everything else. Sleek black design that works on and off the court. If she&apos;s still using a gym bag, this is a major upgrade.
@@ -471,14 +469,14 @@ export default function MothersDay2026GiftGuidePage() {
                 <div className="bg-white border border-stone-200 rounded-xl p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="font-bold text-foreground text-lg">HEAD Women&apos;s Sprint Pro 4.0 Shoes</h3>
-                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$89.00</span>
+                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$109.00</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
                     Non-marking padel-approved court shoes. Lightweight, breathable, herringbone tread for grip on all court surfaces. Currently 31% off regular price.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the mom still wearing running shoes on court</p>
                   <TrackedLink
-                    href="https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20"
+                    href="https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20"
                     type="affiliate"
                     productName="HEAD Sprint Pro 4.0 Shoes"
                     target="_blank"
@@ -504,17 +502,17 @@ export default function MothersDay2026GiftGuidePage() {
                   <span className="text-stone-500 text-sm">$89.95</span>
                 </div>
                 <div className="flex justify-between items-baseline">
-                  <span className="text-stone-700 text-sm">+ HEAD Padel Pro S Balls</span>
-                  <span className="text-stone-500 text-sm">$13.91</span>
+                  <span className="text-stone-700 text-sm">+ HEAD Padel Pro S+ Balls</span>
+                  <span className="text-stone-500 text-sm">$14.95</span>
                 </div>
                 <div className="flex justify-between items-baseline">
                   <span className="text-stone-700 text-sm">+ Wilson Pro Overgrip 12-pack</span>
-                  <span className="text-stone-500 text-sm">$27.00</span>
+                  <span className="text-stone-500 text-sm">$26.99</span>
                 </div>
                 <div className="border-t border-padel-green/20 pt-2 mt-2">
                   <div className="flex justify-between items-baseline">
                     <span className="text-foreground font-bold text-sm">Total</span>
-                    <span className="text-foreground font-bold">~$131</span>
+                    <span className="text-foreground font-bold">~$132</span>
                   </div>
                 </div>
               </div>
@@ -613,22 +611,13 @@ export default function MothersDay2026GiftGuidePage() {
                 <div className="bg-white border border-stone-200 rounded-xl p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="font-bold text-foreground text-lg">NOX Pro Cup USPA Edition</h3>
-                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$119.00</span>
+                    <span className="bg-stone-200 text-stone-600 px-2.5 py-1 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
-                    Official USPA circuit racket. NOX&apos;s signature HR3 core delivers consistent feel across the face. A step up from basic beginner rackets &mdash; ideal for the mom who&apos;s been playing 6+ months and wants something with pedigree.
+                    Official USPA circuit racket. NOX&apos;s signature HR3 core delivers consistent feel across the face. A step up from basic beginner rackets &mdash; ideal for the mom who&apos;s been playing 6+ months and wants something with pedigree. It is currently unavailable on Amazon.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the competitive mom who follows the tour</p>
-                  <TrackedLink
-                    href="https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20"
-                    type="affiliate"
-                    productName="NOX Pro Cup USPA Edition"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                  >
-                    Shop on Amazon &rarr;
-                  </TrackedLink>
+                  <span className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
                 </div>
               </div>
             </section>
@@ -647,22 +636,13 @@ export default function MothersDay2026GiftGuidePage() {
                 <div className="bg-white border border-stone-200 rounded-xl p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="font-bold text-foreground text-lg">NOX ML10 Pro Cup Rough Surface</h3>
-                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$169.99</span>
+                    <span className="bg-stone-200 text-stone-600 px-2.5 py-1 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
-                    For the <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate player</Link>. Rough sand finish for topspin, low balance for net play. Miguel Lamperti signature model &mdash; one of the most popular rackets in professional padel.
+                    For the <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate player</Link>. Rough sand finish for topspin, low balance for net play. Miguel Lamperti signature model &mdash; one of the most popular rackets in professional padel. It is currently unavailable on Amazon.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the intermediate mom who wants more spin</p>
-                  <TrackedLink
-                    href="https://www.amazon.com/dp/B0DWTCG1PL?tag=padel02-20"
-                    type="affiliate"
-                    productName="NOX ML10 Pro Cup"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                  >
-                    Shop on Amazon &rarr;
-                  </TrackedLink>
+                  <span className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
                 </div>
 
                 {/* 11. Bullpadel Neuron */}
@@ -687,14 +667,14 @@ export default function MothersDay2026GiftGuidePage() {
                   </TrackedLink>
                 </div>
 
-                {/* 12. Wilson Bela V3 */}
+                {/* 12. Wilson Bela Pro V3 */}
                 <div id="wilson-bela-v3" className="relative bg-white border-2 border-padel-green rounded-xl p-6 md:p-8 shadow-sm">
                   <div className="absolute -top-3 -left-2 bg-padel-green text-white text-xs font-bold px-3 py-1.5 rounded-md -rotate-3 shadow-md z-10">
                     TOP PICK
                   </div>
 
                   <div className="flex items-start justify-between gap-3 mb-2 mt-2">
-                    <h3 className="text-xl font-bold text-foreground">Wilson Bela V3</h3>
+                    <h3 className="text-xl font-bold text-foreground">Wilson Bela Pro V3</h3>
                     <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$399.00</span>
                   </div>
                   <p className="text-stone-600 leading-relaxed mb-3">
@@ -704,7 +684,7 @@ export default function MothersDay2026GiftGuidePage() {
                   <TrackedLink
                     href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20"
                     type="affiliate"
-                    productName="Wilson Bela V3"
+                    productName="Wilson Bela Pro V3"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"

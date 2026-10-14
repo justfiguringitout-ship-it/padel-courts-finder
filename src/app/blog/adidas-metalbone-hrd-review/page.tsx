@@ -6,7 +6,7 @@ import { StickyPickBar } from '@/components/sticky-pick-bar';
 export const metadata: Metadata = {
   title: 'Adidas Metalbone HRD+ 3.3 Review (2026): Maximum Power, Zero Apologies',
   description:
-    'Adidas Metalbone HRD+ 3.3 tested: 6.3/10. $279.99. Galan’s power weapon with adjustable weights — huge smashes, unforgiving sweet spot. Who should (and shouldn’t) buy it.',
+    'Adidas Metalbone HRD+ 3.3 tested: 6.3/10. $259.99. Galan’s power weapon with adjustable weights — huge smashes, unforgiving sweet spot. Who should (and shouldn’t) buy it.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/adidas-metalbone-hrd-review',
   },
@@ -35,7 +35,7 @@ export default function AdidasMetalboneHrdReviewPage() {
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "Adidas Metalbone HRD+ 3.3",
     "description": "Ale Galán-designed diamond padel racket with a Carbon Aluminized 2:1 surface, hard High Memory EVA core, and carbon frame. Best for left-side attackers who want firepower.",
-    "offers": { "@type": "Offer", "price": "279.99", "priceCurrency": "USD", "url": AMAZON_URL },
+    "offers": { "@type": "Offer", "price": "259.99", "priceCurrency": "USD", "url": AMAZON_URL },
     "review": {
       "@type": "Review",
       "reviewRating": { "@type": "Rating", "ratingValue": 6.3, "bestRating": 10 },
@@ -83,7 +83,7 @@ export default function AdidasMetalboneHrdReviewPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Our verdict" productName="Adidas Metalbone HRD+ 3.3" price="$279.99" href={AMAZON_URL} />
+      <StickyPickBar label="Our verdict" productName="Adidas Metalbone HRD+ 3.3" price="$259.99" href={AMAZON_URL} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
 
@@ -131,7 +131,7 @@ export default function AdidasMetalboneHrdReviewPage() {
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                 <TrackedLink href={AMAZON_URL} type="affiliate" productName="Adidas Metalbone HRD+" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
-                <span className="text-stone-500 text-sm">$279.99 at time of writing</span>
+                <span className="text-stone-500 text-sm">$259.99 at time of writing</span>
               </div>
             </div>
           </section>
@@ -174,7 +174,7 @@ export default function AdidasMetalboneHrdReviewPage() {
                   </tr>
                   <tr className="border-t border-stone-100">
                     <td className="p-3 font-medium text-foreground">Price</td>
-                    <td className="p-3 text-stone-600">$279.99</td>
+                    <td className="p-3 text-stone-600">$259.99</td>
                   </tr>
                 </tbody>
               </table>
@@ -221,7 +221,7 @@ export default function AdidasMetalboneHrdReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives Worth Considering</h2>
             <p className="text-stone-700 leading-relaxed">
-              If you read the &quot;skip it&quot; paragraph and felt seen, the <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup</Link> is the mirror-image pick &mdash; a $169.99 round racket scoring 9/10 on control that trades smash power for forgiveness and topspin. For the full field between those two extremes, our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best intermediate padel rackets guide</Link> compares five upgrades from $170 to $280, where the Metalbone took the &quot;most power under $300&quot; slot.
+              If you read the &quot;skip it&quot; paragraph and felt seen, the <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup</Link> is the mirror-image pick &mdash; a round racket scoring 9/10 on control, currently unavailable on Amazon, that trades smash power for forgiveness and topspin. For the full field between those two extremes, our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best intermediate padel rackets guide</Link> compares five upgrades from $209 to $260, where the Metalbone took the &quot;most power under $300&quot; slot.
             </p>
           </section>
 
@@ -252,11 +252,11 @@ export default function AdidasMetalboneHrdReviewPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Link href="/blog/best-padel-rackets-intermediate" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Intermediate Rackets</div>
-                <p className="text-stone-400 text-sm mt-1">Top 5 upgrades from $170&ndash;$280 compared</p>
+                <p className="text-stone-400 text-sm mt-1">Top 5 upgrades from $209&ndash;$260 compared</p>
               </Link>
               <Link href="/blog/nox-ml10-pro-cup-review" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">NOX ML10 Pro Cup Review</div>
-                <p className="text-stone-400 text-sm mt-1">The control pick &mdash; 9/10 control at $169.99</p>
+                <p className="text-stone-400 text-sm mt-1">The control pick: 9/10 control</p>
               </Link>
               <Link href="/blog/padel-racket-shapes-explained" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Racket Shapes Explained</div>

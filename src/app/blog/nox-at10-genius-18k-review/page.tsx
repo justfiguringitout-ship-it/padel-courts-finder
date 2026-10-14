@@ -6,7 +6,7 @@ import { TrackedLink } from "@/components/TrackedLink";
 export const metadata: Metadata = {
   title: "NOX AT10 Genius 18K Review (2026): The Most Versatile Pro Racket",
   description:
-    "NOX AT10 Genius 18K tested: 7.3/10. ~$272. Tapia’s racket is the most versatile pro frame we’ve hit — real power without diamond-shape punishment. Full scores, specs, and who it’s for.",
+    "NOX AT10 Genius 18K tested: 7.3/10. ~$260. Tapia’s racket is the most versatile pro frame we’ve hit — real power without diamond-shape punishment. Full scores, specs, and who it’s for.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/nox-at10-genius-18k-review",
   },
@@ -36,7 +36,7 @@ export default function NoxAt10ReviewPage() {
       "Agustín Tapia's flagship padel racket — teardrop shape, 18K aluminized carbon face, MLD Black EVA core, and an adjustable Weight Balance system.",
     "offers": {
       "@type": "Offer",
-      "price": "272.00",
+      "price": "259.99",
       "priceCurrency": "USD",
       "url": "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20"
     },
@@ -73,7 +73,7 @@ export default function NoxAt10ReviewPage() {
         "name": "Is the NOX AT10 Genius 18K worth the price?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At $272.00 it's our top overall pro pick for 2026. The temperature-stable 18K aluminized carbon face, adjustable Weight Balance system, and Dual Spin surface make it the most versatile single racket in its class — if your technique is solid."
+          "text": "At $259.99 it's our top overall pro pick for 2026. The temperature-stable 18K aluminized carbon face, adjustable Weight Balance system, and Dual Spin surface make it the most versatile single racket in its class — if your technique is solid."
         }
       }
     ]
@@ -87,7 +87,7 @@ export default function NoxAt10ReviewPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Our verdict" productName="NOX AT10 Genius 18K" price="$272.00" href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" />
+      <StickyPickBar label="Our verdict" productName="NOX AT10 Genius 18K" price="$259.99" href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
 
@@ -129,7 +129,7 @@ export default function NoxAt10ReviewPage() {
               <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-2">Our Verdict</span>
               <div className="flex items-start justify-between gap-4 mb-2">
                 <div className="text-3xl font-bold text-foreground">7.3<span className="text-lg text-stone-400 font-medium">/10</span></div>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$272.00</span>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$259.99</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-5">Best for: all-court advanced players who want one racket that does everything well.</p>
               <TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
@@ -201,7 +201,7 @@ export default function NoxAt10ReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives worth considering</h2>
             <p className="text-stone-700 leading-relaxed">
-              If maximum power matters more to you than versatility, the <Link href="/blog/head-extreme-pro-review" className="text-padel-green hover:underline">HEAD Extreme Pro</Link> ($319.95) is the opposite philosophy: a diamond-shaped frame that scored a perfect 10/10 for power in our testing, at the cost of control and comfort. For the full field — including the Babolat Technical Viper and Wilson Bela V3 — see our complete <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets of 2026</Link> roundup.
+              If maximum power matters more to you than versatility, the <Link href="/blog/head-extreme-pro-review" className="text-padel-green hover:underline">HEAD Extreme Pro</Link> ($299.95) is the opposite philosophy: a diamond-shaped frame that scored a perfect 10/10 for power in our testing, at the cost of control and comfort. For the full field — including the Babolat Technical Viper and Wilson Bela Pro V3 — see our complete <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets of 2026</Link> roundup.
             </p>
           </section>
 
@@ -219,7 +219,7 @@ export default function NoxAt10ReviewPage() {
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Is the NOX AT10 Genius 18K worth the price?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">At $272.00 it&apos;s our top overall pro pick for 2026. The temperature-stable 18K aluminized carbon, adjustable Weight Balance system, and Dual Spin surface make it the most versatile racket in its class — if your technique is solid.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">At $259.99 it&apos;s our top overall pro pick for 2026. The temperature-stable 18K aluminized carbon, adjustable Weight Balance system, and Dual Spin surface make it the most versatile racket in its class — if your technique is solid.</p>
               </div>
             </div>
           </section>

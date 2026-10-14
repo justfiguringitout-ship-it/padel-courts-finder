@@ -154,7 +154,7 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/best-padel-rackets-women",
         "offers": {
           "@type": "Offer",
-          "price": "129.00",
+          "price": "149.00",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20"
@@ -194,7 +194,7 @@ export default function BestPadelRacketsWomen() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
           <section>
             <p className="text-stone-700 leading-relaxed">Let&apos;s be straight about the premise: padel rackets are not built differently for women. Brands release women&apos;s colourways, and a handful of frames are marketed at women, but the specifications come from the same moulds as everything else. What genuinely differs from player to player is arm strength, hand size and how fast you swing — and those are the things worth buying on.</p>
-            <p className="text-stone-700 leading-relaxed mt-4">In practice that usually means a lighter frame with a round head and a manageable swingweight, which is what most people are really searching for. Every pick below is between 340g and 365g, scores at least 8/10 for comfort in our testing, and costs under $130. If you want the full theory first, our{" "}
+            <p className="text-stone-700 leading-relaxed mt-4">In practice that usually means a lighter frame with a round head and a manageable swingweight, which is what most people are really searching for. Every pick below is between 340g and 365g, scores at least 8/10 for comfort in our testing, and costs under $150. If you want the full theory first, our{" "}
               <Link href="/blog/padel-racket-shapes-explained" className="text-padel-green hover:underline">racket shapes guide</Link>{" "}
               explains why round frames sit head-light and swing easier than teardrops.</p>
           </section>
@@ -299,7 +299,7 @@ export default function BestPadelRacketsWomen() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">8<span className="text-sm text-stone-400">/10 comfort</span></div>
-                  <div className="text-sm text-stone-500">$129.00</div>
+                  <div className="text-sm text-stone-500">$149.00</div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-1.5 mb-4">

@@ -6,14 +6,14 @@ import { StickyPickBar } from "@/components/sticky-pick-bar";
 export const metadata: Metadata = {
   title: "Wilson Blade Elite V2 Review (2026): The Balanced Upgrade",
   description:
-    "Wilson Blade Elite V2 tested: 7/10. $189. The balanced step-up for improving players — even power/control split, forgiving feel. Full scores, specs, and how it compares.",
+    "Wilson Blade Elite V2 tested: 7/10. $208.58. The balanced step-up for improving players — even power/control split, forgiving feel. Full scores, specs, and how it compares.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/wilson-blade-elite-v2-review",
   },
   openGraph: {
     title: "Wilson Blade Elite V2 Review (2026): The Balanced Upgrade",
     description:
-      "Wilson Blade Elite V2 tested: 7/10. $189. The balanced step-up for improving players — even power/control split, forgiving feel. Full scores, specs, and how it compares.",
+      "Wilson Blade Elite V2 tested: 7/10. $208.58. The balanced step-up for improving players — even power/control split, forgiving feel. Full scores, specs, and how it compares.",
     url: "https://www.padelcourtsfinder.com/blog/wilson-blade-elite-v2-review",
     siteName: "Padel Courts Finder",
     type: "article",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Wilson Blade Elite V2 Review (2026): The Balanced Upgrade",
     description:
-      "Wilson Blade Elite V2 tested: 7/10. $189. The balanced step-up for improving players — even power/control split, forgiving feel. Full scores, specs, and how it compares.",
+      "Wilson Blade Elite V2 tested: 7/10. $208.58. The balanced step-up for improving players — even power/control split, forgiving feel. Full scores, specs, and how it compares.",
   },
 };
 
@@ -35,7 +35,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
     "description": "A 360g teardrop padel racket with a soft EVA core, textured carbon/fiberglass hybrid surface, and carbon frame, aimed at all-court intermediate players.",
     "offers": {
       "@type": "Offer",
-      "price": "189.00",
+      "price": "208.58",
       "priceCurrency": "USD",
       "url": "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20"
     },
@@ -64,7 +64,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
         "name": "Is the Wilson Blade Elite V2 outdated in 2026?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "It's a 2022 model, so it's older than most rivals — but that means it's battle-tested and proven, and at $189 you're getting Wilson build quality that would cost more in a current-year release."
+          "text": "It's a 2022 model, so it's older than most rivals, but it is battle-tested and proven. It is getting harder to buy: the only Amazon listing we found, at $208.58, ships from Amazon Japan as an import."
         }
       },
       {
@@ -80,7 +80,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Our verdict" productName="Wilson Blade Elite V2" price="$189.00" href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" />
+      <StickyPickBar label="Our verdict" productName="Wilson Blade Elite V2" price="$208.58" href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
 
@@ -126,7 +126,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Best for: All-court players who want balance</p>
               <p className="text-stone-600 leading-[1.75] mb-5">
-                The Blade Elite V2 is the racket we point to when an intermediate asks for &quot;a bit of everything.&quot; It&apos;s a 360g teardrop that adds real ball speed over a beginner frame without turning punishing: the carbon/fiberglass hybrid face brings the pace, the Soft EVA core keeps the landing gentle, and the textured surface plus Sharp Hole Technology handle the spin. Yes, it&apos;s a 2022 model &mdash; but that cuts both ways, because at $189 you&apos;re getting proven Wilson build quality at a price newer releases can&apos;t touch.
+                The Blade Elite V2 is the racket we point to when an intermediate asks for &quot;a bit of everything.&quot; It&apos;s a 360g teardrop that adds real ball speed over a beginner frame without turning punishing: the carbon/fiberglass hybrid face brings the pace, the Soft EVA core keeps the landing gentle, and the textured surface plus Sharp Hole Technology handle the spin. Yes, it&apos;s a 2022 model, and that now shows in how hard it is to buy: the only Amazon listing we found, at $208.58, ships from Amazon Japan as an import.
               </p>
               <TrackedLink
                 href="https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20"
@@ -169,7 +169,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
                   </tr>
                   <tr>
                     <td className="p-3 font-medium text-stone-700">Price</td>
-                    <td className="p-3 text-stone-600">$189.00</td>
+                    <td className="p-3 text-stone-600">$208.58</td>
                   </tr>
                 </tbody>
               </table>
@@ -220,7 +220,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Who It&apos;s For &mdash; and Who Should Skip It</h2>
             <p className="text-stone-600 leading-[1.75]">
-              Buy the Blade Elite V2 if you&apos;re an intermediate all-court player making your first serious upgrade. It rewards a more consistent swing with real power and spin, but the Soft EVA core means the occasional mishit &mdash; and at this level there will be occasional mishits &mdash; doesn&apos;t sting or sail. It&apos;s also the value play of the intermediate tier: $189 for this much Wilson build quality is, frankly, a steal.
+              Buy the Blade Elite V2 if you&apos;re an intermediate all-court player making your first serious upgrade. It rewards a more consistent swing with real power and spin, but the Soft EVA core means the occasional mishit &mdash; and at this level there will be occasional mishits &mdash; doesn&apos;t sting or sail. The catch in 2026 is availability: the only Amazon listing left is an import from Amazon Japan, at $208.58.
             </p>
             <p className="text-stone-600 leading-[1.75] mt-4">
               Skip it if you want a specialist. Aggressive attackers chasing maximum smash power will find the balanced setup tame compared with a dedicated power frame, and buyers who need the newest gear should know this is a 2022 release &mdash; battle-tested and proven, but not this season&apos;s launch. If your game already leans hard in one direction, a racket that refuses to pick a side may feel like a compromise rather than a feature.
@@ -231,7 +231,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives Worth Considering</h2>
             <p className="text-stone-600 leading-[1.75]">
-              The Blade Elite V2 is the all-around pick in our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best intermediate padel rackets guide</Link>, where it sits alongside the spin-focused NOX ML10 Pro Cup ($169.99) and the power-first Adidas Metalbone HRD+ ($279.99) if you want to lean one way or the other. Not ready for an intermediate frame yet? Read our <Link href="/blog/babolat-contact-review" className="text-padel-green hover:underline">Babolat Contact review</Link> &mdash; the $89.95 round racket we recommend to nearly every new player.
+              The Blade Elite V2 is the all-around pick in our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best intermediate padel rackets guide</Link>, where it sits alongside the spin-focused NOX ML10 Pro Cup (currently unavailable on Amazon) and the power-first Adidas Metalbone HRD+ ($259.99) if you want to lean one way or the other. Not ready for an intermediate frame yet? Read our <Link href="/blog/babolat-contact-review" className="text-padel-green hover:underline">Babolat Contact review</Link> &mdash; the $89.95 round racket we recommend to nearly every new player.
             </p>
           </section>
 
@@ -245,7 +245,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Is the Wilson Blade Elite V2 outdated in 2026?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">It&apos;s a 2022 model, so it&apos;s older than most rivals &mdash; but that means it&apos;s battle-tested and proven, and at $189 you&apos;re getting Wilson build quality that would cost more in a current-year release.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">It&apos;s a 2022 model, so it&apos;s older than most rivals, but it is battle-tested and proven. It is getting harder to buy: the only Amazon listing we found, at $208.58, ships from Amazon Japan as an import.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What is Sharp Hole Technology on the Blade Elite V2?</h3>
@@ -262,7 +262,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               <Link href="/blog/best-padel-rackets-intermediate" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Best Intermediate Rackets (2026)</div>
-                <p className="text-stone-400 text-sm mt-1">The Blade Elite V2 vs 4 upgrades from $170&ndash;$280</p>
+                <p className="text-stone-400 text-sm mt-1">The Blade Elite V2 vs 4 other intermediate picks</p>
               </Link>
               <Link href="/blog/babolat-contact-review" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Babolat Contact Review</div>

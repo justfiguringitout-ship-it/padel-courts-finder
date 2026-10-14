@@ -465,7 +465,7 @@ export default function PadelVsPickleballPage() {
             </Link>
             <Link href="/blog/best-padel-rackets-beginners" className="block border border-stone-700 rounded-lg p-5 hover:border-amber-500/50 transition-colors text-center">
               <h3 className="font-semibold text-white mb-1">Best Beginner Rackets</h3>
-              <p className="text-sm text-stone-400">Top 5 picks from $90&ndash;$130 &rarr;</p>
+              <p className="text-sm text-stone-400">Top 5 picks from $90&ndash;$150 &rarr;</p>
             </Link>
           </div>
 

@@ -9,13 +9,13 @@ import { HeroVideo } from '@/components/hero-video';
 
 export const metadata: Metadata = {
   title: 'Best Padel Rackets for Beginners (2026) — Top 5 Picks',
-  description: 'Looking for your first padel racket? We compare the 5 best beginner padel rackets available in 2026, from $90 to $130. Round shapes, forgiving sweet spots, and trusted brands.',
+  description: 'Looking for your first padel racket? We compare the 5 best beginner padel rackets available in 2026, from $90 to $150. Round shapes, forgiving sweet spots, and trusted brands.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-rackets-beginners',
   },
   openGraph: {
     title: 'Best Padel Rackets for Beginners (2026) — Top 5 Picks',
-    description: 'Looking for your first padel racket? We compare the 5 best beginner padel rackets available in 2026, from $90 to $130. Round shapes, forgiving sweet spots, and trusted brands.',
+    description: 'Looking for your first padel racket? We compare the 5 best beginner padel rackets available in 2026, from $90 to $150. Round shapes, forgiving sweet spots, and trusted brands.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-rackets-beginners',
     type: 'article',
     images: [{ url: 'https://www.padelcourtsfinder.com/og/default.png' }],
@@ -28,8 +28,8 @@ const RACKETS: GearRacket[] = [
   { id: "babolat-contact", rank: 1, name: "Babolat Contact", productName: "Babolat Contact", price: "$89.95", href: "https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20", brand: "babolat", shape: "round", shapeLabel: "Round", weight: "340g", core: "Soft EVA", face: "Fiberglass", bestFor: "Complete beginners and smaller players", level: "Beginner" },
   { id: "head-extreme-evo", rank: 2, name: "HEAD Extreme Evo", productName: "HEAD Extreme Evo", price: "$99.95", href: "https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20", brand: "head", shape: "round", shapeLabel: "Round (511cm²)", weight: "355–365g", core: "Power Foam", face: "FG/Carbon Hybrid", bestFor: "Players who want arm protection", level: "Beginner" },
   { id: "wilson-optix-v1", rank: 3, name: "Wilson Optix V1", productName: "Wilson Optix V1", price: "$109.00", href: "https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20", brand: "wilson", shape: "round", shapeLabel: "Round", weight: "355–360g", core: "Soft EVA", face: "Fiberglass Weave", bestFor: "Comfort-first players", level: "Beginner" },
-  { id: "nox-pro-cup-uspa", rank: 4, name: "NOX Pro Cup USPA Edition", productName: "NOX Pro Cup USPA Edition", price: "$119.00", href: "https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–365g", core: "HR3 EVA", face: "FG 3K Silver", bestFor: "Players who want tour pedigree", level: "Beginner" },
-  { id: "adidas-adipower", rank: 5, name: "Adidas Adipower", productName: "Adidas Adipower", price: "$129.00", href: "https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20", brand: "adidas", shape: "round", shapeLabel: "Round", weight: "360–365g (Adjustable)", core: "EVA Soft Performance", face: "FG 3K", bestFor: "Players who want customizable weight", balance: "Adjustable", level: "Beginner" },
+  { id: "nox-pro-cup-uspa", rank: 4, name: "NOX Pro Cup USPA Edition", productName: "NOX Pro Cup USPA Edition", price: "Unavailable", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–365g", core: "HR3 EVA", face: "FG 3K Silver", bestFor: "Players who want tour pedigree", level: "Beginner" },
+  { id: "adidas-adipower", rank: 5, name: "Adidas Adipower", productName: "Adidas Adipower", price: "$149.00", href: "https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20", brand: "adidas", shape: "round", shapeLabel: "Round", weight: "360–365g (Adjustable)", core: "EVA Soft Performance", face: "FG 3K", bestFor: "Players who want customizable weight", balance: "Adjustable", level: "Beginner" },
 ];
 
 export default function BeginnerRacketsPage() {
@@ -37,7 +37,7 @@ export default function BeginnerRacketsPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Best Padel Rackets for Beginners (2026) — Top 5 Picks",
-    "description": "Looking for your first padel racket? We compare the 5 best beginner padel rackets available in 2026, from $90 to $130.",
+    "description": "Looking for your first padel racket? We compare the 5 best beginner padel rackets available in 2026, from $90 to $150.",
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "datePublished": "2026-03-24T00:00:00Z",
     "dateModified": "2026-07-31T00:00:00Z",
@@ -171,8 +171,7 @@ export default function BeginnerRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX Pro Cup USPA Edition",
           "description": "Best for: Players who want tour pedigree",
-          "offers": { "@type": "Offer", "price": "119.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20" },
-          "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
+                   "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
       {
@@ -183,7 +182,7 @@ export default function BeginnerRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Adidas Adipower",
           "description": "Best for: Players who want customizable weight",
-          "offers": { "@type": "Offer", "price": "129.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" },
+          "offers": { "@type": "Offer", "price": "149.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.0, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       }
@@ -268,7 +267,7 @@ export default function BeginnerRacketsPage() {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best to Grow With:</span>
-                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" type="affiliate" productName="Adidas Adipower" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Adidas Adipower</TrackedLink> <span className="text-stone-500">&mdash; $129.00</span></span>
+                  <span className="text-sm"><TrackedLink href="https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" type="affiliate" productName="Adidas Adipower" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Adidas Adipower</TrackedLink> <span className="text-stone-500">&mdash; $149.00</span></span>
                 </div>
               </div>
               <a href="#top-5-beginner" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
@@ -548,7 +547,7 @@ export default function BeginnerRacketsPage() {
 
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX Pro Cup USPA Edition</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$119.00</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want tour pedigree</p>
@@ -594,7 +593,7 @@ export default function BeginnerRacketsPage() {
                 </div>
 
                 <p className="text-stone-600 leading-[1.75] mb-5">
-                  This is the official racket of the NOX USPA Circuit — the largest padel tour in the US. NOX&apos;s signature HR3 core offers consistent bounce and rapid memory return, meaning the feel stays uniform across the face. The FG 3K Silver surface provides fiberglass forgiveness with a premium finish, while the carbon frame adds durability and stability that you&apos;ll appreciate as your shots get harder. It&apos;s on the heavier side for beginners at 360–365g, but if you want the racket that US tour players compete with, this is it. The Smartstrap system is a nice safety touch too.
+                  This is the official racket of the NOX USPA Circuit — the largest padel tour in the US. NOX&apos;s signature HR3 core offers consistent bounce and rapid memory return, meaning the feel stays uniform across the face. The FG 3K Silver surface provides fiberglass forgiveness with a premium finish, while the carbon frame adds durability and stability that you&apos;ll appreciate as your shots get harder. It&apos;s on the heavier side for beginners at 360–365g, but if you want the racket that US tour players compete with, this is it. The Smartstrap system is a nice safety touch too. It is currently unavailable on Amazon.
                 </p>
 
                 <div className="space-y-2 mb-5">
@@ -602,16 +601,7 @@ export default function BeginnerRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Slightly heavier than other beginner options</p>
                 </div>
 
-                <TrackedLink
-                  href="https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20"
-                  type="affiliate"
-                  productName="NOX Pro Cup USPA Edition"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
-                >
-                  Check Price on Amazon &rarr;
-                </TrackedLink>
+                <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
               </div>
 
               {/* 5. Adidas Adipower */}
@@ -620,7 +610,7 @@ export default function BeginnerRacketsPage() {
 
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">Adidas Adipower</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$129.00</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$149.00</span>
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want customizable weight</p>
@@ -666,7 +656,7 @@ export default function BeginnerRacketsPage() {
                 </div>
 
                 <p className="text-stone-600 leading-[1.75] mb-5">
-                  The Adipower stands out with Adidas&apos;s Multiweight system — removable weight inserts that let you adjust the balance and total weight as you improve. Start lighter while you&apos;re learning, then add weight for more power as your technique develops. The EVA Soft Performance core and FG 3K fiberglass face provide the forgiveness beginners need, while Spin Blade technology and Smart Holes Curve enhance spin potential. It&apos;s the priciest on our list at $129, but the customization means you won&apos;t need to replace it as quickly. <strong>Note:</strong> the listing has multiple variants — select the $129 fiberglass base model, not the carbon upgrade.
+                  The Adipower stands out with Adidas&apos;s Multiweight system — removable weight inserts that let you adjust the balance and total weight as you improve. Start lighter while you&apos;re learning, then add weight for more power as your technique develops. The EVA Soft Performance core and FG 3K fiberglass face provide the forgiveness beginners need, while Spin Blade technology and Smart Holes Curve enhance spin potential. It&apos;s the priciest on our list at $149, but the customization means you won&apos;t need to replace it as quickly. <strong>Note:</strong> the listing has several variants. The $149 price is for the CTRL Multiweight 3.3, so check the variant before you check out.
                 </p>
 
                 <div className="space-y-2 mb-5">
@@ -718,7 +708,7 @@ export default function BeginnerRacketsPage() {
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best to Grow With</td>
                       <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20" type="affiliate" productName="Adidas Adipower" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Adidas Adipower</TrackedLink></td>
-                      <td className="py-3 text-stone-600">$129.00</td>
+                      <td className="py-3 text-stone-600">$149.00</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Lightest / Most Forgiving</td>
@@ -727,8 +717,8 @@ export default function BeginnerRacketsPage() {
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Brand Pedigree</td>
-                      <td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0F1ZVM7Y5?tag=padel02-20" type="affiliate" productName="NOX Pro Cup USPA Edition" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">NOX Pro Cup USPA</TrackedLink></td>
-                      <td className="py-3 text-stone-600">$119.00</td>
+                      <td className="py-3 pr-4"><span className="text-stone-700">NOX Pro Cup USPA</span></td>
+                      <td className="py-3 text-stone-600">Currently unavailable on Amazon</td>
                     </tr>
                   </tbody>
                 </table>
@@ -744,15 +734,15 @@ export default function BeginnerRacketsPage() {
                   <h3 className="font-semibold text-foreground mb-1">Padel Balls</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Padel balls look like tennis balls but have slightly less pressure. Most clubs provide them, but having your own is handy for practice.</p>
                   <div className="flex flex-col gap-1.5">
-                    <TrackedLink href="https://www.amazon.com/dp/B07D56XDNL?tag=padel02-20" type="affiliate" productName="HEAD Padel Pro S" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">HEAD Padel Pro S — $13.91</TrackedLink>
-                    <TrackedLink href="https://www.amazon.com/dp/B07SBHNKJF?tag=padel02-20" type="affiliate" productName="Dunlop Pro Padel" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">Dunlop Pro Padel — $14.74</TrackedLink>
+                    <TrackedLink href="https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20" type="affiliate" productName="HEAD Padel Pro S+" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">HEAD Padel Pro S+ — $14.95</TrackedLink>
+                    <TrackedLink href="https://www.amazon.com/dp/B07SBHNKJF?tag=padel02-20" type="affiliate" productName="Dunlop Pro Padel" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">Dunlop Pro Padel — $11.94</TrackedLink>
                   </div>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-1">Overgrips</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Replace your overgrip every few sessions to maintain tackiness and sweat absorption. Buy in bulk — you&apos;ll go through them.</p>
                   <div className="flex flex-col gap-1.5">
-                    <TrackedLink href="https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20" type="affiliate" productName="Wilson Pro Overgrip 12-pack" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">Wilson Pro Overgrip 12-pack — $27</TrackedLink>
+                    <TrackedLink href="https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20" type="affiliate" productName="Wilson Pro Overgrip 12-pack" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">Wilson Pro Overgrip 12-pack — $26.99</TrackedLink>
                     <TrackedLink href="https://www.amazon.com/dp/B018SC9APW?tag=padel02-20" type="affiliate" productName="Babolat VS 12-pack" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">Babolat VS 12-pack — $35</TrackedLink>
                   </div>
                 </div>
@@ -760,8 +750,8 @@ export default function BeginnerRacketsPage() {
                   <h3 className="font-semibold text-foreground mb-1">Court Shoes</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Don&apos;t wear running shoes on court. Padel requires lateral movement — get shoes with herringbone soles designed for court sports.</p>
                   <div className="flex flex-col sm:flex-row gap-1.5 sm:gap-4">
-                    <TrackedLink href="https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" type="affiliate" productName="HEAD Sprint Pro 4.0 Mens" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">HEAD Sprint Pro 4.0 Men&apos;s — $129</TrackedLink>
-                    <TrackedLink href="https://www.amazon.com/dp/B0DQKHSSZB?tag=padel02-20" type="affiliate" productName="HEAD Sprint Pro 4.0 Womens" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">HEAD Sprint Pro 4.0 Women&apos;s — $89</TrackedLink>
+                    <TrackedLink href="https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" type="affiliate" productName="HEAD Sprint Pro 4.0 Mens" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">HEAD Sprint Pro 4.0 Men&apos;s — $109</TrackedLink>
+                    <TrackedLink href="https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20" type="affiliate" productName="HEAD Sprint Pro 4.0 Womens" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">HEAD Sprint Pro 4.0 Women&apos;s — $109</TrackedLink>
                   </div>
                 </div>
               </div>
@@ -813,22 +803,22 @@ export default function BeginnerRacketsPage() {
             <Link href="/blog/best-budget-padel-rackets" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Budget Padel Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">6 picks from $90 to $170, ranked by value &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">6 picks under $170, ranked by value &rarr;</p>
             </Link>
             <Link href="/blog/best-padel-rackets-intermediate" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Intermediate Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">Ready to upgrade? 5 rackets from $170–$280 &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">Ready to upgrade? 5 rackets from $209–$260 &rarr;</p>
             </Link>
             <Link href="/blog/best-padel-rackets-advanced" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Advanced Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">Outgrown forgiveness? 5 frames from $249&ndash;$399 &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">Outgrown forgiveness? 5 frames from $230&ndash;$399 &rarr;</p>
             </Link>
             <Link href="/blog/best-padel-rackets-2026" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
               <h3 className="font-semibold text-white mt-1">Best Pro Rackets (2026)</h3>
-              <p className="text-sm text-stone-400 mt-1">Top 5 flagship rackets from $250–$400 &rarr;</p>
+              <p className="text-sm text-stone-400 mt-1">Top 5 flagship rackets from $230–$400 &rarr;</p>
             </Link>
             <Link href="/blog/padel-racket-shapes-explained" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
