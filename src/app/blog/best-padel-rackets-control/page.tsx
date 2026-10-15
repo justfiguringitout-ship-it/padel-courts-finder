@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
 import { StickyPickBar } from '@/components/sticky-pick-bar';
 
 export const metadata: Metadata = {
@@ -100,6 +101,7 @@ export default function ControlRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX ML10 Pro Cup Rough Surface",
           "description": "Best for: Control players who want spin on top of placement",
+          "offers": { "@type": "Offer", "price": ML10.priceValue, "priceCurrency": ML10.priceCurrency, "availability": "https://schema.org/InStock", "url": ML10.url },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -302,7 +304,7 @@ export default function ControlRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 &mdash; Best Control + Spin</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX ML10 Pro Cup Rough Surface</h3>
-                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">{ML10.price}</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Control players who want spin on top of placement</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -343,7 +345,7 @@ export default function ControlRacketsPage() {
                   </div>
                 </div>
                 <p className="text-stone-600 leading-[1.75] mb-5">
-                  The ML10 matches the Optix&apos;s 9/10 control score while adding two things the Wilson can&apos;t: a gritty sand-textured face that grabs the ball for topspin, and a carbon frame that keeps the head steady when you&apos;re blocking hard drives. The balance point sits low, which makes it one of the quickest rackets through the hands at the net — exactly where a control player earns a living. Inside, NOX&apos;s HR3 EVA core keeps the response even across the face, and the Pulse System in the handle takes the sting out of impact, backing up its 8/10 comfort score. The fiberglass face caps outright power, but that is precisely the character a placement-first player is shopping for. It is currently unavailable on Amazon.
+                  The ML10 matches the Optix&apos;s 9/10 control score while adding two things the Wilson can&apos;t: a gritty sand-textured face that grabs the ball for topspin, and a carbon frame that keeps the head steady when you&apos;re blocking hard drives. The balance point sits low, which makes it one of the quickest rackets through the hands at the net — exactly where a control player earns a living. Inside, NOX&apos;s HR3 EVA core keeps the response even across the face, and the Pulse System in the handle takes the sting out of impact, backing up its 8/10 comfort score. The fiberglass face caps outright power, but that is precisely the character a placement-first player is shopping for. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout. Our scores are for the earlier edition we tested.
                 </p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Sand-rough surface turns clean placement into biting topspin</p>
@@ -352,7 +354,7 @@ export default function ControlRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face means modest raw power (5/10)</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> At up to 375g, heavier than the other budget-tier picks here</p>
                 </div>
-                <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
+                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
               </div>
 
               {/* 3. NOX AT10 Genius 18K Alum */}
@@ -587,8 +589,8 @@ export default function ControlRacketsPage() {
                       <td className="py-3 text-stone-600">Comfort-first precision</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
-                      <td className="py-3 pr-4"><span className="text-stone-700">NOX ML10 Pro Cup</span></td>
-                      <td className="py-3 pr-4 text-stone-600">Currently unavailable on Amazon</td>
+                      <td className="py-3 pr-4"><TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="text-padel-green hover:underline">NOX ML10 Pro Cup (2027)</TrackedLink></td>
+                      <td className="py-3 pr-4 text-stone-600">{ML10.price} at NOX</td>
                       <td className="py-3 pr-4 text-stone-600">Round</td>
                       <td className="py-3 pr-4 text-stone-600">9/10</td>
                       <td className="py-3 text-stone-600">Control plus topspin</td>

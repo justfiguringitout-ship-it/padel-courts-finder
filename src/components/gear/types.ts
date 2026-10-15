@@ -23,6 +23,11 @@ export interface GearRacket {
   price: string;
   /** Affiliate URL. Undefined when the product has no live Amazon listing. */
   href?: string;
+  /**
+   * Set when href is a plain (non-affiliate) store link instead of Amazon,
+   * e.g. "NOX". The button then reads "Check price at NOX" and is not sponsored.
+   */
+  store?: string;
   brand: BrandFamily;
   shape: RacketShape;
   /** Shape wording as the page states it, e.g. "Round (511cm²)" */

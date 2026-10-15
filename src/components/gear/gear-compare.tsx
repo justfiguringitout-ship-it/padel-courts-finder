@@ -19,26 +19,26 @@ function Missing() {
   return <span className="italic text-stone-500">{NOT_STATED}</span>;
 }
 
-function AmazonButton({ href, productName, compact }: { href?: string; productName: string; compact?: boolean }) {
+function AmazonButton({ href, store, productName, compact }: { href?: string; store?: string; productName: string; compact?: boolean }) {
   if (!href) {
     return (
       <span className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-stone-100 px-3 py-2 text-xs font-medium text-stone-500 min-h-10">
-        Currently unavailable on Amazon
+        Currently unavailable
       </span>
     );
   }
   return (
     <TrackedLink
       href={href}
-      type="affiliate"
+      type={store ? 'retailer' : 'affiliate'}
       productName={productName}
       target="_blank"
-      rel="noopener noreferrer"
+      rel={store ? 'nofollow noopener noreferrer' : 'noopener noreferrer'}
       className={`pcf-compare-cta inline-flex items-center justify-center whitespace-nowrap rounded-md bg-padel-green font-semibold text-white transition-colors hover:bg-padel-green-dark ${
         compact ? 'min-h-10 px-3 py-2 text-xs' : 'min-h-10 px-3 py-2 text-xs'
       }`}
     >
-      Check price <span aria-hidden="true" className="ml-1">&rarr;</span>
+      {store ? `Check price at ${store}` : 'Check price'} <span aria-hidden="true" className="ml-1">&rarr;</span>
     </TrackedLink>
   );
 }
@@ -143,7 +143,7 @@ export function RacketCompare({ rackets, uidPrefix, caption, showLineup = true, 
                         {r.name}
                       </a>
                       <div className="mt-1.5">
-                        <AmazonButton href={r.href} productName={r.productName} compact />
+                        <AmazonButton href={r.href} store={r.store} productName={r.productName} compact />
                       </div>
                     </div>
                   </div>

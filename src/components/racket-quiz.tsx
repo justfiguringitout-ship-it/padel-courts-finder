@@ -62,7 +62,7 @@ function recommend(level: Level, style: Style, budget: Budget): Pick {
 
   if (level === "improving") {
     if (budget === "low") {
-      return { ...R.optix, why: "The best racket we rate under $120 for an improving player: 9/10 control and 10/10 comfort in a forgiving round frame.", guide: GUIDES.control, note: "Our usual value pick at this level, the NOX ML10 Pro Cup, is currently unavailable on Amazon." };
+      return { ...R.optix, why: "The best racket we rate under $120 for an improving player: 9/10 control and 10/10 comfort in a forgiving round frame.", guide: GUIDES.control, note: "Our usual value pick at this level, the NOX ML10 Pro Cup, is no longer on Amazon. NOX sells the 2027 edition from Spain, with shipping and import duties on top." };
     }
     if (budget === "mid") {
       if (style === "control") return { ...R.neuron, why: "8/10 control from a hybrid shape with a tungsten-weighted neck, and still under $250.", guide: GUIDES.intermediate };

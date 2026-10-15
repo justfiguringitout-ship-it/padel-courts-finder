@@ -231,7 +231,7 @@ export default function WilsonBladeEliteV2ReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives Worth Considering</h2>
             <p className="text-stone-600 leading-[1.75]">
-              The Blade Elite V2 is the all-around pick in our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best intermediate padel rackets guide</Link>, where it sits alongside the spin-focused NOX ML10 Pro Cup (currently unavailable on Amazon) and the power-first Adidas Metalbone HRD+ ($259.99) if you want to lean one way or the other. Not ready for an intermediate frame yet? Read our <Link href="/blog/babolat-contact-review" className="text-padel-green hover:underline">Babolat Contact review</Link> &mdash; the $89.95 round racket we recommend to nearly every new player.
+              The Blade Elite V2 is the all-around pick in our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best intermediate padel rackets guide</Link>, where it sits alongside the spin-focused NOX ML10 Pro Cup (now sold as a 2027 edition by NOX) and the power-first Adidas Metalbone HRD+ ($259.99) if you want to lean one way or the other. Not ready for an intermediate frame yet? Read our <Link href="/blog/babolat-contact-review" className="text-padel-green hover:underline">Babolat Contact review</Link> &mdash; the $89.95 round racket we recommend to nearly every new player.
             </p>
           </section>
 

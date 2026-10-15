@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
+import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Padel Gifts (2026): What Players Actually Want, at Every Budget",
@@ -231,9 +232,10 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "169.99",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/OutOfStock"
+          "price": ML10.priceValue,
+          "priceCurrency": ML10.priceCurrency,
+          "availability": "https://schema.org/InStock",
+          "url": ML10.url
         }
       }
     },
@@ -349,11 +351,12 @@ export default function PadelGiftsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">NOX Pro Cup USPA Edition</h3>
-                  <div className="text-stone-500 font-semibold whitespace-nowrap">Unavailable</div>
+                  <div className="text-stone-500 font-semibold whitespace-nowrap">Sold out</div>
                 </div>
-                <p className="text-stone-600 text-sm leading-relaxed mt-2">The US Padel Association edition of NOX&apos;s beloved Pro Cup mold — a serious step-up racket. It is currently unavailable on Amazon.</p>
+                <p className="text-stone-600 text-sm leading-relaxed mt-2">The US Padel Association edition of NOX&apos;s beloved Pro Cup mold — a serious step-up racket. It is sold out on Amazon and at NOX&apos;s US store, and we have not found a US shop with it in stock.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <span className="inline-flex items-center font-semibold text-sm px-4 py-2 rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
+                  <span className="inline-flex items-center font-semibold text-sm px-4 py-2 rounded-lg bg-stone-100 text-stone-500">Currently unavailable</span>
+                <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center text-sm font-medium text-padel-green hover:underline">Closest model we cover: the NOX ML10 Pro Cup &rarr;</Link>
                 </div>
               </div>
             </div>
@@ -401,11 +404,11 @@ export default function PadelGiftsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">NOX ML10 Pro Cup Rough Surface</h3>
-                  <div className="text-stone-500 font-semibold whitespace-nowrap">Unavailable</div>
+                  <div className="text-stone-500 font-semibold whitespace-nowrap">{ML10.price}</div>
                 </div>
-                <p className="text-stone-600 text-sm leading-relaxed mt-2">Our highest-rated racket under $200 — pro-level control in a forgiving round shape. The safe premium racket gift for any improving player, but it is currently unavailable on Amazon.</p>
+                <p className="text-stone-600 text-sm leading-relaxed mt-2">Our highest-rated racket under $200 — pro-level control in a forgiving round shape. The safe premium racket gift for any improving player. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout. Allow time for delivery if it is a gift.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <span className="inline-flex items-center font-semibold text-sm px-4 py-2 rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
+                  <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center font-semibold text-sm px-4 py-2 rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
                 <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-4 py-2 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our review</Link>
                 </div>
               </div>

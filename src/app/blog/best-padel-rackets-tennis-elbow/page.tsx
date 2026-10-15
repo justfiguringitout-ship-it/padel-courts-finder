@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
+import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Padel Rackets for Tennis Elbow (2026): Ranked by Comfort",
@@ -154,9 +155,10 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review",
         "offers": {
           "@type": "Offer",
-          "price": "169.99",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/OutOfStock"
+          "price": ML10.priceValue,
+          "priceCurrency": ML10.priceCurrency,
+          "availability": "https://schema.org/InStock",
+          "url": ML10.url
         }
       }
     }
@@ -298,7 +300,7 @@ export default function BestPadelRacketsTennisElbow() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">8<span className="text-sm text-stone-400">/10 comfort</span></div>
-                  <div className="text-sm text-stone-500">Unavailable on Amazon</div>
+                  <div className="text-sm text-stone-500">{ML10.price} at NOX</div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-1.5 mb-4">
@@ -308,13 +310,13 @@ export default function BestPadelRacketsTennisElbow() {
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">FG 3K Rough</span>
                 <span className="px-2.5 py-1 bg-stone-100 text-stone-600 text-xs rounded-full">Carbon Frame</span>
               </div>
-              <p className="text-stone-700 leading-relaxed text-sm">The compromise pick. An 8 for comfort is a step down from the Optix, and the carbon frame is why — but you get a 9 for control and real spin grip from the rough 3K face in exchange. Choose it if you play seriously, your elbow is manageable rather than acute, and dropping to a $109 fiberglass frame would cost you more in performance than you are willing to pay. The round head still keeps the sweet spot generous. It is currently unavailable on Amazon.</p>
+              <p className="text-stone-700 leading-relaxed text-sm">The compromise pick. An 8 for comfort is a step down from the Optix, and the carbon frame is why — but you get a 9 for control and real spin grip from the rough 3K face in exchange. Choose it if you play seriously, your elbow is manageable rather than acute, and dropping to a $109 fiberglass frame would cost you more in performance than you are willing to pay. The round head still keeps the sweet spot generous. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout.</p>
               <div className="grid sm:grid-cols-2 gap-3 mt-4 text-sm">
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">9/10 control with 8/10 comfort; rough face adds spin; round sweet spot</span></div>
-                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Carbon frame is firmer; heaviest pick here; currently unavailable on Amazon</span></div>
+                <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Carbon frame is firmer; heaviest pick here; ships from Spain, so shipping and import duties are extra</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
-                <span className="inline-flex items-center font-semibold text-sm px-5 py-2.5 rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
+                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center font-semibold text-sm px-5 py-2.5 rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
                 <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
               </div>
             </div>
@@ -333,7 +335,7 @@ export default function BestPadelRacketsTennisElbow() {
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Who should buy which</h2>
-            <p className="text-stone-700 leading-relaxed">If the elbow is actively sore, take the <strong>Wilson Optix V1</strong> — it is the softest frame we have measured and the decision is not close. If you want to spend as little as possible or you are a smaller player who finds most rackets heavy, the <strong>Babolat Contact</strong> at 340g does the same job for $89.95. If your pain arrives after sessions where you shanked a lot of volleys, the <strong>HEAD Extreme Evo</strong> and its 511cm&sup2; face is the targeted answer. And if you are a competitive player unwilling to trade control for comfort, the <strong>NOX ML10 Pro Cup</strong> is the most racket you can hold while still scoring an 8, though it is currently unavailable on Amazon.</p>
+            <p className="text-stone-700 leading-relaxed">If the elbow is actively sore, take the <strong>Wilson Optix V1</strong> — it is the softest frame we have measured and the decision is not close. If you want to spend as little as possible or you are a smaller player who finds most rackets heavy, the <strong>Babolat Contact</strong> at 340g does the same job for $89.95. If your pain arrives after sessions where you shanked a lot of volleys, the <strong>HEAD Extreme Evo</strong> and its 511cm&sup2; face is the targeted answer. And if you are a competitive player unwilling to trade control for comfort, the <strong>NOX ML10 Pro Cup</strong> is the most racket you can hold while still scoring an 8. Amazon no longer sells it; NOX sells the 2027 edition from Spain.</p>
             <p className="text-stone-700 leading-relaxed mt-4">Whichever you pick, add an overgrip before your first session and see whether a slightly thicker handle settles things. It costs about $10 and it is the single change most likely to help.</p>
           </section>
 

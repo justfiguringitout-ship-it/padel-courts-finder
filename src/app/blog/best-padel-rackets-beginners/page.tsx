@@ -28,7 +28,7 @@ const RACKETS: GearRacket[] = [
   { id: "babolat-contact", rank: 1, name: "Babolat Contact", productName: "Babolat Contact", price: "$89.95", href: "https://www.amazon.com/dp/B0BBPZLRVP?tag=padel02-20", brand: "babolat", shape: "round", shapeLabel: "Round", weight: "340g", core: "Soft EVA", face: "Fiberglass", bestFor: "Complete beginners and smaller players", level: "Beginner" },
   { id: "head-extreme-evo", rank: 2, name: "HEAD Extreme Evo", productName: "HEAD Extreme Evo", price: "$99.95", href: "https://www.amazon.com/dp/B0CGRV795T?tag=padel02-20", brand: "head", shape: "round", shapeLabel: "Round (511cm²)", weight: "355–365g", core: "Power Foam", face: "FG/Carbon Hybrid", bestFor: "Players who want arm protection", level: "Beginner" },
   { id: "wilson-optix-v1", rank: 3, name: "Wilson Optix V1", productName: "Wilson Optix V1", price: "$109.00", href: "https://www.amazon.com/dp/B0DX2M3JYY?tag=padel02-20", brand: "wilson", shape: "round", shapeLabel: "Round", weight: "355–360g", core: "Soft EVA", face: "Fiberglass Weave", bestFor: "Comfort-first players", level: "Beginner" },
-  { id: "nox-pro-cup-uspa", rank: 4, name: "NOX Pro Cup USPA Edition", productName: "NOX Pro Cup USPA Edition", price: "Unavailable", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–365g", core: "HR3 EVA", face: "FG 3K Silver", bestFor: "Players who want tour pedigree", level: "Beginner" },
+  { id: "nox-pro-cup-uspa", rank: 4, name: "NOX Pro Cup USPA Edition", productName: "NOX Pro Cup USPA Edition", price: "Sold out", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–365g", core: "HR3 EVA", face: "FG 3K Silver", bestFor: "Players who want tour pedigree", level: "Beginner" },
   { id: "adidas-adipower", rank: 5, name: "Adidas Adipower", productName: "Adidas Adipower", price: "$149.00", href: "https://www.amazon.com/dp/B0CNWGJP2N?tag=padel02-20", brand: "adidas", shape: "round", shapeLabel: "Round", weight: "360–365g (Adjustable)", core: "EVA Soft Performance", face: "FG 3K", bestFor: "Players who want customizable weight", balance: "Adjustable", level: "Beginner" },
 ];
 
@@ -547,7 +547,7 @@ export default function BeginnerRacketsPage() {
 
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX Pro Cup USPA Edition</h3>
-                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Sold out</span>
                 </div>
 
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want tour pedigree</p>
@@ -593,7 +593,7 @@ export default function BeginnerRacketsPage() {
                 </div>
 
                 <p className="text-stone-600 leading-[1.75] mb-5">
-                  This is the official racket of the NOX USPA Circuit — the largest padel tour in the US. NOX&apos;s signature HR3 core offers consistent bounce and rapid memory return, meaning the feel stays uniform across the face. The FG 3K Silver surface provides fiberglass forgiveness with a premium finish, while the carbon frame adds durability and stability that you&apos;ll appreciate as your shots get harder. It&apos;s on the heavier side for beginners at 360–365g, but if you want the racket that US tour players compete with, this is it. The Smartstrap system is a nice safety touch too. It is currently unavailable on Amazon.
+                  This is the official racket of the NOX USPA Circuit — the largest padel tour in the US. NOX&apos;s signature HR3 core offers consistent bounce and rapid memory return, meaning the feel stays uniform across the face. The FG 3K Silver surface provides fiberglass forgiveness with a premium finish, while the carbon frame adds durability and stability that you&apos;ll appreciate as your shots get harder. It&apos;s on the heavier side for beginners at 360–365g, but if you want the racket that US tour players compete with, this is it. The Smartstrap system is a nice safety touch too. It is sold out on Amazon and at NOX&apos;s US store, and we have not found a US shop with it in stock.
                 </p>
 
                 <div className="space-y-2 mb-5">
@@ -601,7 +601,10 @@ export default function BeginnerRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Slightly heavier than other beginner options</p>
                 </div>
 
-                <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                  <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable</span>
+                  <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center text-sm font-medium text-padel-green hover:underline">Closest model we cover: the NOX ML10 Pro Cup, an intermediate racket &rarr;</Link>
+                </div>
               </div>
 
               {/* 5. Adidas Adipower */}
@@ -718,7 +721,7 @@ export default function BeginnerRacketsPage() {
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Brand Pedigree</td>
                       <td className="py-3 pr-4"><span className="text-stone-700">NOX Pro Cup USPA</span></td>
-                      <td className="py-3 text-stone-600">Currently unavailable on Amazon</td>
+                      <td className="py-3 text-stone-600">Sold out in the US</td>
                     </tr>
                   </tbody>
                 </table>

@@ -1,11 +1,11 @@
 'use client';
 
 import { withReferral } from '@/lib/referral';
-import { trackClubWebsiteClick, trackClubPhoneClick, trackSocialClick, trackAffiliateClick, trackFeaturedListingClick } from '@/lib/analytics';
+import { trackClubWebsiteClick, trackClubPhoneClick, trackSocialClick, trackAffiliateClick, trackRetailerClick, trackFeaturedListingClick } from '@/lib/analytics';
 
 interface TrackedLinkProps {
   href: string;
-  type: 'website' | 'phone' | 'social' | 'affiliate' | 'featured';
+  type: 'website' | 'phone' | 'social' | 'affiliate' | 'retailer' | 'featured';
   clubName?: string;
   productName?: string;
   platform?: string;
@@ -17,10 +17,13 @@ interface TrackedLinkProps {
 
 export function TrackedLink({ href, type, clubName, productName, platform, children, rel, ...props }: TrackedLinkProps) {
   // Affiliate links must carry rel="sponsored" (Google) — enforce it centrally
+  // Plain store links (no affiliate program) are nofollow but not sponsored
   const resolvedRel =
     type === 'affiliate'
       ? 'sponsored nofollow noopener noreferrer'
-      : rel;
+      : type === 'retailer'
+        ? rel ?? 'nofollow noopener noreferrer'
+        : rel;
 
   const handleClick = () => {
     switch (type) {
@@ -35,6 +38,9 @@ export function TrackedLink({ href, type, clubName, productName, platform, child
         break;
       case 'affiliate':
         if (productName) trackAffiliateClick(productName, href);
+        break;
+      case 'retailer':
+        if (productName) trackRetailerClick(productName, href);
         break;
       case 'featured':
         if (clubName) trackFeaturedListingClick(clubName);

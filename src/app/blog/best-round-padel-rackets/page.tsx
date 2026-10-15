@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
+import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Round Padel Rackets (2026): Control & Forgiveness Picks",
@@ -51,7 +52,7 @@ const faqData = {
       "name": "What is the best round padel racket in 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The NOX ML10 Pro Cup is the best round padel racket we've tested in 2026 — pro-level control and a plush, forgiving feel, though it is currently unavailable on Amazon. If you're brand new to the sport, start with the Babolat Contact instead: nearly as forgiving, under $100."
+        "text": "The NOX ML10 Pro Cup is the best round padel racket we've tested in 2026 — pro-level control and a plush, forgiving feel. Amazon no longer sells it; NOX sells the 2027 edition on its own store, shipped from Spain. If you're brand new to the sport, start with the Babolat Contact instead: nearly as forgiving, under $100."
       }
     },
     {
@@ -93,6 +94,7 @@ const itemListData = {
         "name": "NOX ML10 Pro Cup",
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "url": "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review",
+        "offers": { "@type": "Offer", "price": ML10.priceValue, "priceCurrency": ML10.priceCurrency, "availability": "https://schema.org/InStock", "url": ML10.url },
         "review": {
           "@type": "Review",
           "reviewRating": {
@@ -187,16 +189,16 @@ export default function BestRoundRacketsPage() {
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-bold text-padel-green">7.3<span className="text-sm text-stone-400">/10</span></div>
-                  <div className="text-sm text-stone-500">Unavailable on Amazon</div>
+                  <div className="text-sm text-stone-500">{ML10.price} at NOX</div>
                 </div>
               </div>
-              <p className="text-stone-700 leading-relaxed text-sm">Miguel Lamperti&apos;s legendary frame — the rare round racket that advanced players keep in the bag. Pro-level control and a plush feel at a mid-range price. If you want one round racket to grow with, this is it. It is currently unavailable on Amazon.</p>
+              <p className="text-stone-700 leading-relaxed text-sm">Miguel Lamperti&apos;s legendary frame — the rare round racket that advanced players keep in the bag. Pro-level control and a plush feel at a mid-range price. If you want one round racket to grow with, this is it. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout.</p>
               <div className="grid sm:grid-cols-2 gap-3 mt-4 text-sm">
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-padel-green">Pros:</strong> <span className="text-stone-600">Pro-grade control; huge sweet spot; classic proven mold</span></div>
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Power depends on your own swing speed</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
-                <span className="inline-flex items-center font-semibold text-sm px-5 py-2.5 rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
+                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center font-semibold text-sm px-5 py-2.5 rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
                 <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
               </div>
             </div>
@@ -234,7 +236,7 @@ export default function BestRoundRacketsPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What is the best round padel racket in 2026?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">The NOX ML10 Pro Cup is the best round padel racket we&apos;ve tested in 2026 — pro-level control and a plush, forgiving feel, though it is currently unavailable on Amazon. If you&apos;re brand new to the sport, start with the Babolat Contact instead: nearly as forgiving, under $100.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">The NOX ML10 Pro Cup is the best round padel racket we&apos;ve tested in 2026 — pro-level control and a plush, forgiving feel. Amazon no longer sells it; NOX sells the 2027 edition on its own store, shipped from Spain. If you&apos;re brand new to the sport, start with the Babolat Contact instead: nearly as forgiving, under $100.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Are round padel rackets only for beginners?</h3>

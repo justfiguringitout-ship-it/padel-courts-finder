@@ -94,7 +94,7 @@ const faqData = {
       "name": "Is there a lightweight padel racket for intermediate players?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not a dedicated one among the rackets we have rated. Our intermediate picks run heavier: the NOX ML10 Pro Cup Rough Surface, our first intermediate pick, is 360 to 375g, and the Wilson Blade Elite V2 is 360g. The closest options are the NOX Pro Cup USPA Edition at 360 to 365g, which adds a carbon frame and 6/10 power but is currently unavailable on Amazon, and the Adidas Adipower, which lets you add weight as you improve."
+        "text": "Not a dedicated one among the rackets we have rated. Our intermediate picks run heavier: the NOX ML10 Pro Cup Rough Surface, our first intermediate pick, is 360 to 375g, and the Wilson Blade Elite V2 is 360g. The closest options are the NOX Pro Cup USPA Edition at 360 to 365g, which adds a carbon frame and 6/10 power but is sold out in the US, and the Adidas Adipower, which lets you add weight as you improve."
       }
     },
     {
@@ -217,7 +217,7 @@ export default function LightweightRacketsPage() {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Lightest with a Carbon Frame:</span>
-                  <span className="text-sm"><a href="#nox-pro-cup-uspa" className="text-padel-green hover:underline font-medium">NOX Pro Cup USPA Edition</a> <span className="text-stone-500">(360&ndash;365g, currently unavailable on Amazon)</span></span>
+                  <span className="text-sm"><a href="#nox-pro-cup-uspa" className="text-padel-green hover:underline font-medium">NOX Pro Cup USPA Edition</a> <span className="text-stone-500">(360&ndash;365g, sold out in the US)</span></span>
                 </div>
               </div>
               <a href="#top-lightweight-rackets" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
@@ -281,7 +281,7 @@ export default function LightweightRacketsPage() {
                       <td className="px-3 py-2.5">Round</td>
                       <td className="px-3 py-2.5">FG 3K Silver</td>
                       <td className="px-3 py-2.5 whitespace-nowrap">7.3/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">Unavailable</td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">Sold out</td>
                     </tr>
                     <tr>
                       <td className="px-3 py-2.5 font-medium text-foreground">Adidas Adipower</td>
@@ -415,7 +415,7 @@ export default function LightweightRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#5 &mdash; Lightest Racket With a Carbon Frame</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX Pro Cup USPA Edition</h3>
-                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Sold out</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want a light racket that still adds some pace to the ball</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -424,12 +424,15 @@ export default function LightweightRacketsPage() {
                 <div className="grid grid-cols-3 gap-3 mb-5 py-3 px-4 bg-stone-100/50 rounded-lg">
                   <Bar label="Power" score={6} /><Bar label="Control" score={8} /><Bar label="Comfort" score={8} />
                 </div>
-                <p className="text-stone-600 leading-[1.75] mb-5">The official racket of the NOX USPA Circuit, and with the Adipower one of only two round rackets on this page that we rate at 6/10 for power. NOX&apos;s HR3 core gives a consistent bounce across the face, the FG 3K Silver surface keeps the forgiveness of fiberglass, and the carbon frame adds the stability you start to want as your shots get harder. That carbon frame is also why it sits at 360&ndash;365g rather than 340: it is the lightest carbon-framed racket we rate, not the lightest racket outright. If you know you like to hit through the ball, it is the better racket than the Contact or Optix, but it is currently unavailable on Amazon. It is a pick in our <Link href="/blog/best-nox-padel-rackets" className="text-padel-green hover:underline">NOX guide</Link>, <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">beginner guide</Link> and <Link href="/blog/best-budget-padel-rackets" className="text-padel-green hover:underline">budget guide</Link>.</p>
+                <p className="text-stone-600 leading-[1.75] mb-5">The official racket of the NOX USPA Circuit, and with the Adipower one of only two round rackets on this page that we rate at 6/10 for power. NOX&apos;s HR3 core gives a consistent bounce across the face, the FG 3K Silver surface keeps the forgiveness of fiberglass, and the carbon frame adds the stability you start to want as your shots get harder. That carbon frame is also why it sits at 360&ndash;365g rather than 340: it is the lightest carbon-framed racket we rate, not the lightest racket outright. If you know you like to hit through the ball, it is the better racket than the Contact or Optix, but it is sold out on Amazon and at NOX&apos;s US store. It is a pick in our <Link href="/blog/best-nox-padel-rackets" className="text-padel-green hover:underline">NOX guide</Link>, <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green hover:underline">beginner guide</Link> and <Link href="/blog/best-budget-padel-rackets" className="text-padel-green hover:underline">budget guide</Link>.</p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Carbon frame and 6/10 power, with 8/10 control and comfort</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> At 360&ndash;365g it is light only by comparison with carbon rackets, not with the Contact</p>
                 </div>
-                <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                  <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable</span>
+                  <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center text-sm font-medium text-padel-green hover:underline">Closest model we cover: the NOX ML10 Pro Cup (360&ndash;375g) &rarr;</Link>
+                </div>
               </div>
 
               {/* 6. Adidas Adipower */}
@@ -501,7 +504,7 @@ export default function LightweightRacketsPage() {
                       <td className="py-3 pr-4 font-medium text-stone-700">Lightest With a Carbon Frame</td>
                       <td className="py-3 pr-4"><span className="text-stone-700">NOX Pro Cup USPA Edition</span></td>
                       <td className="py-3 pr-4 text-stone-600">360&ndash;365g</td>
-                      <td className="py-3 text-stone-600">Currently unavailable on Amazon</td>
+                      <td className="py-3 text-stone-600">Sold out in the US</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Adjustable Weight Under $150</td>
@@ -544,7 +547,7 @@ export default function LightweightRacketsPage() {
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">Is there a lightweight padel racket for intermediate players?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Not a dedicated one among the rackets we have rated. The picks in our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate guide</Link> run heavier: the NOX ML10 Pro Cup Rough Surface, our first intermediate pick, is 360 to 375g, and the Wilson Blade Elite V2 is 360g. The closest options are the NOX Pro Cup USPA Edition at 360 to 365g, which adds a carbon frame and 6/10 power but is currently unavailable on Amazon, and the Adidas Adipower, which lets you add weight as you improve.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">Not a dedicated one among the rackets we have rated. The picks in our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate guide</Link> run heavier: the NOX ML10 Pro Cup Rough Surface, our first intermediate pick, is 360 to 375g, and the Wilson Blade Elite V2 is 360g. The closest options are the NOX Pro Cup USPA Edition at 360 to 365g, which adds a carbon frame and 6/10 power but is sold out in the US, and the Adidas Adipower, which lets you add weight as you improve.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">Is a lighter padel racket better for tennis elbow?</h3>

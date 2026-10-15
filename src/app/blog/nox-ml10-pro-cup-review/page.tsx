@@ -1,17 +1,19 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { TrackedLink } from '@/components/TrackedLink';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
 
 export const metadata: Metadata = {
   title: 'NOX ML10 Pro Cup Review (2026): The Smartest $170 Upgrade in Padel',
   description:
-    'NOX ML10 Pro Cup tested: 7.3/10. Pro-level control at a mid-range price, but currently unavailable on Amazon. Why it beats rackets twice its price, and who it suits.',
+    'NOX ML10 Pro Cup tested: 7.3/10. Pro-level control at a mid-range price. Amazon no longer sells it; NOX sells the 2027 edition. Why it beats rackets twice its price, and who it suits.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review',
   },
   openGraph: {
     title: 'NOX ML10 Pro Cup Review (2026): The Smartest $170 Upgrade in Padel',
     description:
-      'Rough 3K surface for topspin, HR3 EVA core, round-shape forgiveness. Who this racket is for, and who should skip it. Currently unavailable on Amazon.',
+      'Rough 3K surface for topspin, HR3 EVA core, round-shape forgiveness. Who this racket is for, and who should skip it. Now sold as the 2027 edition by NOX.',
     url: 'https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review',
     siteName: 'Padel Courts Finder',
     type: 'article',
@@ -32,6 +34,14 @@ export default function NoxMl10ProCupReviewPage() {
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "NOX ML10 Pro Cup Rough Surface",
     "description": "Round-shape intermediate padel racket with a rough 3K fiberglass surface, HR3 EVA core, and carbon frame. Best for spin-focused players upgrading from a beginner racket.",
+    "offers": {
+      "@type": "Offer",
+      "name": "NOX ML10 Pro Cup Rough 2027 edition",
+      "price": ML10.priceValue,
+      "priceCurrency": ML10.priceCurrency,
+      "availability": "https://schema.org/InStock",
+      "url": ML10.url
+    },
     "review": {
       "@type": "Review",
       "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 },
@@ -49,7 +59,7 @@ export default function NoxMl10ProCupReviewPage() {
         "name": "Is the NOX ML10 Pro Cup good for intermediate players?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes — it is our best-value upgrade pick for intermediates. The round shape keeps a large, forgiving sweet spot while the rough sand-finish surface adds topspin a beginner racket can't produce. It was the most affordable meaningful step up from a beginner frame that we tested, but it is currently unavailable on Amazon."
+          "text": "Yes — it is our best-value upgrade pick for intermediates. The round shape keeps a large, forgiving sweet spot while the rough sand-finish surface adds topspin a beginner racket can't produce. It was the most affordable meaningful step up from a beginner frame that we tested. Amazon no longer sells it; NOX sells the 2027 edition on its own store, which ships from Spain."
         }
       },
       {
@@ -124,9 +134,12 @@ export default function NoxMl10ProCupReviewPage() {
               <p className="text-stone-600 leading-[1.75] mb-5">
                 The ML10 Pro Cup is our #1 value pick for intermediates: round-shape forgiveness, a rough surface that bites the ball for topspin, and a price that undercut every serious rival when we tested it. Its one real limit is raw power &mdash; the fiberglass face caps your smash ceiling.
               </p>
+              <p className="text-stone-600 leading-[1.75] mb-5">
+                We tested the earlier edition with the FG 3K rough face, and the scores on this page are for that racket. NOX now sells the 2027 edition, which keeps the round shape, HR3 EVA core, carbon frame and rough surface on a silver fiberglass face.
+              </p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                <span className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-stone-100 text-stone-500 font-medium rounded-lg">Currently unavailable on Amazon</span>
-                <span className="text-stone-500 text-sm">$169.99 when we reviewed it in July 2026</span>
+                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-semibold rounded-lg hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
+                <span className="text-stone-500 text-sm">2027 edition: {ML10.price} at NOX, which ships from Spain (shipping and import duties added at checkout). The edition we reviewed was $169.99 in July 2026. Price checked October 2026.</span>
               </div>
             </div>
           </section>
@@ -169,7 +182,7 @@ export default function NoxMl10ProCupReviewPage() {
                   </tr>
                   <tr className="border-t border-stone-100">
                     <td className="p-3 font-medium text-foreground">Price</td>
-                    <td className="p-3 text-stone-600">Currently unavailable on Amazon</td>
+                    <td className="p-3 text-stone-600">{ML10.price} for the 2027 edition at NOX (ships from Spain)</td>
                   </tr>
                 </tbody>
               </table>
@@ -201,7 +214,7 @@ export default function NoxMl10ProCupReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Who It&apos;s For &mdash; and Who Should Skip It</h2>
             <p className="text-stone-700 leading-relaxed">
-              <strong className="text-foreground">Buy it if</strong> you&apos;re coming off a beginner racket and want better spin without giving up forgiveness. The rough sand finish rewards players learning to shape the ball, the round head keeps mishits in play, and the low balance keeps your hands fast at the net. At $170 when we reviewed it, it was the most affordable meaningful upgrade from a beginner frame. It is currently unavailable on Amazon.
+              <strong className="text-foreground">Buy it if</strong> you&apos;re coming off a beginner racket and want better spin without giving up forgiveness. The rough sand finish rewards players learning to shape the ball, the round head keeps mishits in play, and the low balance keeps your hands fast at the net. At $170 when we reviewed it, it was the most affordable meaningful upgrade from a beginner frame. Amazon no longer sells it; NOX sells the 2027 edition on its own store, which ships from Spain.
             </p>
             <p className="text-stone-700 leading-relaxed mt-4">
               <strong className="text-foreground">Skip it if</strong> your game is built on finishing points overhead. The fiberglass face and handle-heavy balance mean you supply the pace yourself, and no amount of technique changes that. Aggressive left-side attackers should look at a diamond frame instead &mdash; more on that below.
@@ -226,7 +239,7 @@ export default function NoxMl10ProCupReviewPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Is the NOX ML10 Pro Cup good for intermediate players?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">Yes &mdash; it&apos;s our best-value upgrade pick for intermediates. The round shape keeps a large, forgiving sweet spot while the rough sand-finish surface adds topspin a beginner racket can&apos;t produce. It was the most affordable meaningful step up from a beginner frame that we tested, but it is currently unavailable on Amazon.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">Yes &mdash; it&apos;s our best-value upgrade pick for intermediates. The round shape keeps a large, forgiving sweet spot while the rough sand-finish surface adds topspin a beginner racket can&apos;t produce. It was the most affordable meaningful step up from a beginner frame that we tested. Amazon no longer sells it; NOX sells the 2027 edition on its own store, which ships from Spain.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Does the NOX ML10 Pro Cup have enough power?</h3>

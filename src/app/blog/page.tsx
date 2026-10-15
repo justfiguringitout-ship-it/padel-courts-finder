@@ -528,7 +528,7 @@ const blogPosts: BlogPost[] = [
     readTime: '4 min read',
     imageAlt: 'NOX ML10 Pro Cup padel racket review',
     courtSlug: '',
-    priceRange: 'Unavailable'
+    priceRange: '€149.99 (2027 edition)'
   },
   {
     slug: 'adidas-metalbone-hrd-review',

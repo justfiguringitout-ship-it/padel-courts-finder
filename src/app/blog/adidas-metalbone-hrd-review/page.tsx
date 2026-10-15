@@ -221,7 +221,7 @@ export default function AdidasMetalboneHrdReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Alternatives Worth Considering</h2>
             <p className="text-stone-700 leading-relaxed">
-              If you read the &quot;skip it&quot; paragraph and felt seen, the <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup</Link> is the mirror-image pick &mdash; a round racket scoring 9/10 on control, currently unavailable on Amazon, that trades smash power for forgiveness and topspin. For the full field between those two extremes, our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best intermediate padel rackets guide</Link> compares five upgrades from $209 to $260, where the Metalbone took the &quot;most power under $300&quot; slot.
+              If you read the &quot;skip it&quot; paragraph and felt seen, the <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup</Link> is the mirror-image pick &mdash; a round racket scoring 9/10 on control, now sold as a 2027 edition by NOX, that trades smash power for forgiveness and topspin. For the full field between those two extremes, our <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">best intermediate padel rackets guide</Link> compares five upgrades from $209 to $260, where the Metalbone took the &quot;most power under $300&quot; slot.
             </p>
           </section>
 

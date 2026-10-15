@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
 import { RacketCompare } from '@/components/gear/gear-compare';
 import { RacketPlate } from '@/components/gear/racket-plate';
 import type { GearRacket } from '@/components/gear/types';
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 /** Presentation data for the compare view and racket drawings. Every value is
  *  copied from this page's own cards; nothing here is new. */
 const RACKETS: GearRacket[] = [
-  { id: "nox-ml10-pro-cup", rank: 1, name: "NOX ML10 Pro Cup Rough Surface", productName: "NOX ML10 Pro Cup", price: "Unavailable", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Spin-focused players upgrading from beginner", balance: "Low", level: "Intermediate" },
+  { id: "nox-ml10-pro-cup", rank: 1, name: "NOX ML10 Pro Cup Rough Surface", productName: ML10.productName, price: ML10.price, href: ML10.url, store: ML10.store, brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Spin-focused players upgrading from beginner", balance: "Low", level: "Intermediate" },
   { id: "wilson-blade-elite", rank: 2, name: "Wilson Blade Elite V2", productName: "Wilson Blade Elite V2", price: "$208.58", href: "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20", brand: "wilson", shape: "teardrop", shapeLabel: "Teardrop", weight: "360g", core: "Soft EVA", face: "Carbon/FG Hybrid Textured", bestFor: "All-court players who want balance", level: "Intermediate" },
   { id: "nox-at10-attack", rank: 3, name: "NOX AT10 Genius Attack 12K", productName: "NOX AT10 Genius Attack", price: "$229.99", href: "https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20", brand: "nox", shape: "diamond", shapeLabel: "Diamond", weight: "360–370g", core: "MLD Black EVA", face: "12K Carbon Luxury", bestFor: "Aggressive players with clean technique", balance: "Head-heavy", level: "Upper-intermediate" },
   { id: "bullpadel-neuron", rank: 4, name: "Bullpadel Neuron 2025 (Chingotto)", productName: "Bullpadel Neuron", price: "$236.00", href: "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20", brand: "bullpadel", shape: "hybrid", shapeLabel: "Hybrid (Teardrop-Round)", weight: "370g", core: "EVA", face: "Xtend Carbon 3K", bestFor: "Upper-intermediates transitioning to advanced", level: "Upper-intermediate" },
@@ -55,7 +56,7 @@ export default function IntermediateRacketsPage() {
         "name": "What is the best padel racket for intermediate players in 2026?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The NOX ML10 Pro Cup is our top overall pick for intermediate players in 2026 — a control-first round racket that rewards improving technique without punishing mishits. It is currently unavailable on Amazon. The Bullpadel Neuron is the pick if you want a hybrid shape as a step toward more aggressive play."
+          "text": "The NOX ML10 Pro Cup is our top overall pick for intermediate players in 2026 — a control-first round racket that rewards improving technique without punishing mishits. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout. The Bullpadel Neuron is the pick if you want a hybrid shape as a step toward more aggressive play."
         }
       },
       {
@@ -105,6 +106,7 @@ export default function IntermediateRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX ML10 Pro Cup Rough Surface",
           "description": "Best for: Spin-focused players upgrading from beginner",
+          "offers": { "@type": "Offer", "price": ML10.priceValue, "priceCurrency": ML10.priceCurrency, "availability": "https://schema.org/InStock", "url": ML10.url },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -211,7 +213,7 @@ export default function IntermediateRacketsPage() {
               <div className="space-y-2.5">
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Value Upgrade:</span>
-                  <span className="text-sm"><a href="#nox-ml10-pro-cup" className="text-padel-green hover:underline font-medium">NOX ML10 Pro Cup</a> <span className="text-stone-500">(currently unavailable on Amazon)</span></span>
+                  <span className="text-sm"><a href="#nox-ml10-pro-cup" className="text-padel-green hover:underline font-medium">NOX ML10 Pro Cup</a> <span className="text-stone-500">(2027 edition, {ML10.price} at NOX)</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best All-Around:</span>
@@ -273,7 +275,7 @@ export default function IntermediateRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mt-2 mb-1">#1 &mdash; Best Value Upgrade</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX ML10 Pro Cup Rough Surface</h3>
-                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">{ML10.price}</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Spin-focused players upgrading from beginner</p>
                 <RacketPlate racket={RACKETS[0]} uidPrefix="int" />
@@ -314,12 +316,12 @@ export default function IntermediateRacketsPage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-stone-600 leading-[1.75] mb-5">The ML10 keeps the safety of a round shape but adds a rough sand-finish surface that bites the ball for serious topspin. The HR3 EVA core provides consistent bounce and rapid memory, while the low balance point makes it exceptionally agile at the net &mdash; where intermediates start spending more time. NOX&apos;s Pulse System dampens vibration in the handle. When we tested it at $170, it was the most affordable meaningful upgrade from a beginner racket. It is currently unavailable on Amazon.</p>
+                <p className="text-stone-600 leading-[1.75] mb-5">The ML10 keeps the safety of a round shape but adds a rough sand-finish surface that bites the ball for serious topspin. The HR3 EVA core provides consistent bounce and rapid memory, while the low balance point makes it exceptionally agile at the net &mdash; where intermediates start spending more time. NOX&apos;s Pulse System dampens vibration in the handle. When we tested it at $170, it was the most affordable meaningful upgrade from a beginner racket. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout. Our scores are for the earlier edition we tested.</p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Rough sand finish for topspin, low balance = great at net</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face limits raw power</p>
                 </div>
-                <span className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-stone-100 text-stone-500 font-medium rounded-lg">Currently unavailable on Amazon</span>
+                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white hover:bg-padel-green-dark transition-colors font-medium rounded-lg">Check price at NOX &rarr;</TrackedLink>
               </div>
 
               {/* 2. Wilson Blade Elite V2 */}
@@ -561,8 +563,8 @@ export default function IntermediateRacketsPage() {
                   <tbody>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Value Upgrade</td>
-                      <td className="py-3 pr-4 text-stone-700">NOX ML10 Pro Cup</td>
-                      <td className="py-3 text-stone-600">Currently unavailable on Amazon</td>
+                      <td className="py-3 pr-4"><TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="text-padel-green hover:underline">NOX ML10 Pro Cup (2027)</TrackedLink></td>
+                      <td className="py-3 text-stone-600">{ML10.price} at NOX</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best All-Around</td>
@@ -599,7 +601,7 @@ export default function IntermediateRacketsPage() {
               <div className="space-y-4">
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What is the best padel racket for intermediate players in 2026?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Our top overall pick is the <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup</Link> — a control-first round racket that rewards improving technique without punishing mishits. It is currently unavailable on Amazon. If you want a step toward more aggressive play, the Bullpadel Neuron&apos;s hybrid shape is the better fit. Full reasoning for all five picks above.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">Our top overall pick is the <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup</Link> — a control-first round racket that rewards improving technique without punishing mishits. Amazon no longer sells it; NOX sells the 2027 edition on its own store, shipped from Spain. If you want a step toward more aggressive play, the Bullpadel Neuron&apos;s hybrid shape is the better fit. Full reasoning for all five picks above.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">How do I know I&apos;m ready to upgrade from a beginner racket?</h3>

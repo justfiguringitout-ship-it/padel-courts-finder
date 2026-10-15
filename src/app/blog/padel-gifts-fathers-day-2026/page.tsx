@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
 import { HeroVideo } from '@/components/hero-video';
 
 export const metadata: Metadata = {
@@ -242,8 +243,9 @@ export default function FathersDay2026GiftGuidePage() {
           "description": "Miguel Lamperti signature model — rough sand finish for topspin, low balance for net play.",
           "offers": {
             "@type": "Offer",
-            "price": "169.99",
-            "priceCurrency": "USD", "availability": "https://schema.org/OutOfStock"
+            "price": ML10.priceValue,
+            "priceCurrency": ML10.priceCurrency, "availability": "https://schema.org/InStock",
+            "url": ML10.url
           }
         }
       },
@@ -621,13 +623,16 @@ export default function FathersDay2026GiftGuidePage() {
                 <div className="bg-white border border-stone-200 rounded-xl p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="font-bold text-foreground text-lg">NOX Pro Cup USPA Edition</h3>
-                    <span className="bg-stone-200 text-stone-600 px-2.5 py-1 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
+                    <span className="bg-stone-200 text-stone-600 px-2.5 py-1 rounded-lg text-sm font-semibold whitespace-nowrap">Sold out</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
-                    Official USPA circuit racket. NOX&apos;s signature HR3 core delivers consistent feel across the face. A step up from basic beginner rackets &mdash; ideal for the dad who&apos;s been playing 6+ months and wants something with pedigree. It is currently unavailable on Amazon.
+                    Official USPA circuit racket. NOX&apos;s signature HR3 core delivers consistent feel across the face. A step up from basic beginner rackets &mdash; ideal for the dad who&apos;s been playing 6+ months and wants something with pedigree. It is sold out on Amazon and at NOX&apos;s US store, and we have not found a US shop with it in stock.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the competitive dad who follows the tour</p>
-                  <span className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                    <span className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable</span>
+                    <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center text-sm font-medium text-padel-green hover:underline">Closest model we cover: the NOX ML10 Pro Cup &rarr;</Link>
+                  </div>
                 </div>
               </div>
             </section>
@@ -646,13 +651,13 @@ export default function FathersDay2026GiftGuidePage() {
                 <div className="bg-white border border-stone-200 rounded-xl p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="font-bold text-foreground text-lg">NOX ML10 Pro Cup Rough Surface</h3>
-                    <span className="bg-stone-200 text-stone-600 px-2.5 py-1 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
+                    <span className="bg-stone-200 text-stone-600 px-2.5 py-1 rounded-lg text-sm font-semibold whitespace-nowrap">{ML10.price}</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
-                    For the <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate player</Link>. Rough sand finish for topspin, low balance for net play. Miguel Lamperti signature model &mdash; one of the most popular rackets in professional padel. It is currently unavailable on Amazon.
+                    For the <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate player</Link>. Rough sand finish for topspin, low balance for net play. Miguel Lamperti signature model &mdash; one of the most popular rackets in professional padel. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the intermediate dad who wants more spin</p>
-                  <span className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 font-medium text-sm rounded-lg bg-stone-100 text-stone-500">Currently unavailable on Amazon</span>
+                  <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 font-medium text-sm rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
                 </div>
 
                 {/* 11. Bullpadel Neuron */}

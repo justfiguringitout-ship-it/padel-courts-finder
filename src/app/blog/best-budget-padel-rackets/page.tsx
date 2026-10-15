@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
 import { RacketCompare } from '@/components/gear/gear-compare';
 import { RacketPlate } from '@/components/gear/racket-plate';
 import type { GearRacket } from '@/components/gear/types';
@@ -74,7 +75,7 @@ const faqData = {
       "name": "What is the best budget padel racket for intermediate players?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The NOX ML10 Pro Cup Rough Surface. It is the least expensive racket we recommend for an intermediate game: 9/10 control, a rough surface for topspin and a low balance point that makes it quick at the net. It is currently unavailable on Amazon. If you want more power and can stretch the budget, the Wilson Blade Elite V2 at $208.58 is the next step."
+        "text": "The NOX ML10 Pro Cup Rough Surface. It is the least expensive racket we recommend for an intermediate game: 9/10 control, a rough surface for topspin and a low balance point that makes it quick at the net. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout. If you want more power and can stretch the budget, the Wilson Blade Elite V2 at $208.58 is the next step."
       }
     },
     {
@@ -96,7 +97,7 @@ const faqData = {
   ]
 };
 
-const product = (position: number, name: string, url: string, price: string, offerUrl: string, rating: number) => ({
+const product = (position: number, name: string, url: string, price: string, offerUrl: string, rating: number, currency: string = "USD") => ({
   "@type": "ListItem",
   "position": position,
   "item": {
@@ -104,7 +105,7 @@ const product = (position: number, name: string, url: string, price: string, off
     "name": name,
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "url": url,
-    ...(offerUrl ? { "offers": { "@type": "Offer", "price": price, "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": offerUrl } } : {}),
+    ...(offerUrl ? { "offers": { "@type": "Offer", "price": price, "priceCurrency": currency, "availability": "https://schema.org/InStock", "url": offerUrl } } : {}),
     "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": rating, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
   }
 });
@@ -117,7 +118,7 @@ const itemListData = {
     product(2, "HEAD Extreme Evo", "https://www.padelcourtsfinder.com/blog/head-extreme-evo-review", "99.95", AMZ.evo, 7.3),
     product(3, "Babolat Contact", "https://www.padelcourtsfinder.com/blog/babolat-contact-review", "89.95", AMZ.contact, 7.0),
     product(4, "NOX Pro Cup USPA Edition", "https://www.padelcourtsfinder.com/blog/best-budget-padel-rackets#nox-pro-cup-uspa", "", "", 7.3),
-    product(5, "NOX ML10 Pro Cup Rough Surface", "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review", "", "", 7.3),
+    product(5, "NOX ML10 Pro Cup Rough Surface", "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review", ML10.priceValue, ML10.url, 7.3, ML10.priceCurrency),
     product(6, "Adidas Adipower", "https://www.padelcourtsfinder.com/blog/best-budget-padel-rackets#adidas-adipower", "149.00", AMZ.adipower, 7.0),
   ]
 };
@@ -147,8 +148,8 @@ const RACKETS: GearRacket[] = [
   { id: "wilson-optix-v1", rank: 1, name: "Wilson Optix V1", productName: "Wilson Optix V1", price: "$109.00", href: AMZ.optix, brand: "wilson", shape: "round", shapeLabel: "Round", weight: "355–360g", core: "Soft EVA", face: "Fiberglass Weave", bestFor: "Anyone who wants the most comfortable, most forgiving racket for about $110", level: "Beginner", score: "7.7/10" },
   { id: "head-extreme-evo", rank: 2, name: "HEAD Extreme Evo", productName: "HEAD Extreme Evo", price: "$99.95", href: AMZ.evo, brand: "head", shape: "round", shapeLabel: "Round (511cm²)", weight: "355–365g", core: "Power Foam", face: "FG/Carbon Hybrid", bestFor: "Players who want arm protection and a huge sweet spot for under $100", level: "Beginner", score: "7.3/10" },
   { id: "babolat-contact", rank: 3, name: "Babolat Contact", productName: "Babolat Contact", price: "$89.95", href: AMZ.contact, brand: "babolat", shape: "round", shapeLabel: "Round", weight: "340g", core: "Soft EVA", face: "Fiberglass", bestFor: "Complete beginners, smaller players and anyone spending as little as possible", level: "Beginner", score: "7.0/10" },
-  { id: "nox-pro-cup-uspa", rank: 4, name: "NOX Pro Cup USPA Edition", productName: "NOX Pro Cup USPA Edition", price: "Unavailable", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–365g", core: "HR3 EVA", face: "FG 3K Silver", bestFor: "Budget buyers who want a carbon frame and a bit more pace", level: "Beginner", score: "7.3/10" },
-  { id: "nox-ml10-pro-cup", rank: 5, name: "NOX ML10 Pro Cup Rough Surface", productName: "NOX ML10 Pro Cup Rough Surface", price: "Unavailable", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Improving players who want a real upgrade without paying $200+", balance: "Low", level: "Intermediate", score: "7.3/10" },
+  { id: "nox-pro-cup-uspa", rank: 4, name: "NOX Pro Cup USPA Edition", productName: "NOX Pro Cup USPA Edition", price: "Sold out", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–365g", core: "HR3 EVA", face: "FG 3K Silver", bestFor: "Budget buyers who want a carbon frame and a bit more pace", level: "Beginner", score: "7.3/10" },
+  { id: "nox-ml10-pro-cup", rank: 5, name: "NOX ML10 Pro Cup Rough Surface", productName: ML10.productName, price: ML10.price, href: ML10.url, store: ML10.store, brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Improving players who want a real upgrade without paying $200+", balance: "Low", level: "Intermediate", score: "7.3/10" },
   { id: "adidas-adipower", rank: 6, name: "Adidas Adipower", productName: "Adidas Adipower", price: "$149.00", href: AMZ.adipower, brand: "adidas", shape: "round", shapeLabel: "Round", weight: "360–365g (Adjustable)", core: "EVA Soft Performance", face: "FG 3K", bestFor: "Players who want one racket they can re-weight as they improve", level: "Beginner", score: "7.0/10" },
 ];
 
@@ -216,7 +217,7 @@ export default function BudgetRacketsPage() {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best for Intermediates:</span>
-                  <span className="text-sm"><a href="#nox-ml10-pro-cup" className="text-padel-green hover:underline font-medium">NOX ML10 Pro Cup Rough Surface</a> <span className="text-stone-500">(currently unavailable on Amazon)</span></span>
+                  <span className="text-sm"><a href="#nox-ml10-pro-cup" className="text-padel-green hover:underline font-medium">NOX ML10 Pro Cup Rough Surface</a> <span className="text-stone-500">(2027 edition, {ML10.price} at NOX)</span></span>
                 </div>
               </div>
               <a href="#top-budget-rackets" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
@@ -231,7 +232,7 @@ export default function BudgetRacketsPage() {
               <h2 className="text-2xl font-bold text-foreground mb-5">Budget Padel Rackets Compared</h2>
               <p className="text-sm text-stone-500 mb-5 -mt-2">Each racket is drawn as a simple outline of its shape, not to scale, so the shapes are easy to compare. The green glow shows where our shapes guide places the sweet spot. Tap a racket to jump to its review.</p>
               <RacketCompare rackets={RACKETS} uidPrefix="bud" caption="Budget padel rackets compared" />
-              <p className="text-xs text-stone-500 mt-3">All six are round rackets. Prices are the Amazon prices checked in October 2026 and can change.</p>
+              <p className="text-xs text-stone-500 mt-3">All six are round rackets. Prices are the Amazon prices checked in October 2026, except the NOX ML10 Pro Cup, which is the NOX store price (in euros) checked in October 2026. Prices can change.</p>
             </section>
 
             <section className="mb-12">
@@ -249,10 +250,10 @@ export default function BudgetRacketsPage() {
                   <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Under $100.</strong> Two choices: the <a href="#head-extreme-evo" className="text-padel-green hover:underline">HEAD Extreme Evo</a> ($99.95) for the bigger sweet spot and arm protection, or the <a href="#babolat-contact" className="text-padel-green hover:underline">Babolat Contact</a> ($89.95) if you want the lightest and cheapest.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">$100 to $150.</strong> The <a href="#wilson-optix-v1" className="text-padel-green hover:underline">Wilson Optix V1</a> ($109.00) is our overall pick. Choose the <a href="#adidas-adipower" className="text-padel-green hover:underline">Adidas Adipower</a> ($149.00) if adjustable weight matters to you. The <a href="#nox-pro-cup-uspa" className="text-padel-green hover:underline">NOX Pro Cup USPA</a> would be the pick for more pace and a carbon frame, but it is currently unavailable on Amazon.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">$100 to $150.</strong> The <a href="#wilson-optix-v1" className="text-padel-green hover:underline">Wilson Optix V1</a> ($109.00) is our overall pick. Choose the <a href="#adidas-adipower" className="text-padel-green hover:underline">Adidas Adipower</a> ($149.00) if adjustable weight matters to you. The <a href="#nox-pro-cup-uspa" className="text-padel-green hover:underline">NOX Pro Cup USPA</a> would be the pick for more pace and a carbon frame, but it is sold out in the US.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Up to $170.</strong> Only worth it if you are past the beginner stage. The <a href="#nox-ml10-pro-cup" className="text-padel-green hover:underline">NOX ML10 Pro Cup</a> is the best budget padel racket for intermediate players we have reviewed, but it is currently unavailable on Amazon.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Up to $170.</strong> Only worth it if you are past the beginner stage. The <a href="#nox-ml10-pro-cup" className="text-padel-green hover:underline">NOX ML10 Pro Cup</a> is the best budget padel racket for intermediate players we have reviewed. Amazon no longer sells it; NOX sells the 2027 edition for {ML10.price} on its own store, shipped from Spain.</p>
                 </div>
               </div>
             </section>
@@ -335,7 +336,7 @@ export default function BudgetRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#4 &mdash; Most Power for the Money</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX Pro Cup USPA Edition</h3>
-                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Sold out</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Budget buyers who want a carbon frame and a bit more pace</p>
                 <RacketPlate racket={RACKETS[3]} uidPrefix="bud" />
@@ -345,12 +346,15 @@ export default function BudgetRacketsPage() {
                 <div className="grid grid-cols-3 gap-3 mb-5 py-3 px-4 bg-stone-100/50 rounded-lg">
                   <Bar label="Power" score={6} /><Bar label="Control" score={8} /><Bar label="Comfort" score={8} />
                 </div>
-                <p className="text-stone-600 leading-[1.75] mb-5">The official racket of the NOX USPA Circuit, and the cheapest frame here to score 6/10 for power while keeping control at 8/10. NOX&apos;s HR3 core gives a consistent bounce across the face, the FG 3K Silver surface keeps fiberglass forgiveness, and the carbon frame adds the stability you start to want as your shots get harder. At 360&ndash;365g it is on the heavier side for a first racket. If you already know you like to hit through the ball, it was worth the extra $10 over the Optix. It is currently unavailable on Amazon.</p>
+                <p className="text-stone-600 leading-[1.75] mb-5">The official racket of the NOX USPA Circuit, and the cheapest frame here to score 6/10 for power while keeping control at 8/10. NOX&apos;s HR3 core gives a consistent bounce across the face, the FG 3K Silver surface keeps fiberglass forgiveness, and the carbon frame adds the stability you start to want as your shots get harder. At 360&ndash;365g it is on the heavier side for a first racket. If you already know you like to hit through the ball, it was worth the extra $10 over the Optix. It is sold out on Amazon and at NOX&apos;s US store, and we have not found a US shop with it in stock.</p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Carbon frame and HR3 core, 6/10 power with 8/10 control</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Heavier than the other sub-$120 options</p>
                 </div>
-                <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-stone-100 text-stone-500 font-medium text-sm rounded-lg">Currently unavailable on Amazon</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-stone-100 text-stone-500 font-medium text-sm rounded-lg">Currently unavailable</span>
+                <a href="#nox-ml10-pro-cup" className="inline-flex items-center text-sm font-medium text-padel-green hover:underline">Closest model we cover: the NOX ML10 Pro Cup &rarr;</a>
+                </div>
               </div>
 
               {/* 5. NOX ML10 Pro Cup Rough Surface */}
@@ -358,7 +362,7 @@ export default function BudgetRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#5 &mdash; Best Budget Racket for Intermediate Players</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">NOX ML10 Pro Cup Rough Surface</h3>
-                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">Unavailable</span>
+                  <span className="bg-stone-200 text-stone-600 px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap">{ML10.price}</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Improving players who want a real upgrade without paying $200+</p>
                 <RacketPlate racket={RACKETS[4]} uidPrefix="bud" />
@@ -368,12 +372,12 @@ export default function BudgetRacketsPage() {
                 <div className="grid grid-cols-3 gap-3 mb-5 py-3 px-4 bg-stone-100/50 rounded-lg">
                   <Bar label="Power" score={5} /><Bar label="Control" score={9} /><Bar label="Comfort" score={8} />
                 </div>
-                <p className="text-stone-600 leading-[1.75] mb-5">The top of our budget range, and the least expensive racket we recommend to an intermediate player. The ML10 keeps the safety of a round shape but adds a rough sand-finish surface that bites the ball for topspin, a low balance point that makes it quick at the net, and NOX&apos;s Pulse System to damp vibration in the handle. Control is 9/10. The fiberglass face limits raw power to 5/10, so this is an upgrade in spin and precision rather than pace. If you have played for a year and your first racket is holding you back, this is the most affordable step up that is actually a step up. It is currently unavailable on Amazon. Read our full <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup review</Link>.</p>
+                <p className="text-stone-600 leading-[1.75] mb-5">The top of our budget range, and the least expensive racket we recommend to an intermediate player. The ML10 keeps the safety of a round shape but adds a rough sand-finish surface that bites the ball for topspin, a low balance point that makes it quick at the net, and NOX&apos;s Pulse System to damp vibration in the handle. Control is 9/10. The fiberglass face limits raw power to 5/10, so this is an upgrade in spin and precision rather than pace. If you have played for a year and your first racket is holding you back, this is the most affordable step up that is actually a step up. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout. Our scores are for the earlier edition we tested. Read our full <Link href="/blog/nox-ml10-pro-cup-review" className="text-padel-green hover:underline">NOX ML10 Pro Cup review</Link>.</p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> 9/10 control, rough surface for topspin, quick at the net</p>
-                  <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face limits raw power; currently unavailable on Amazon</p>
+                  <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face limits raw power; ships from Spain, so shipping and import duties are extra</p>
                 </div>
-                <span className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-stone-100 text-stone-500 font-medium text-sm rounded-lg">Currently unavailable on Amazon</span>
+                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white hover:bg-padel-green-dark transition-colors font-medium text-sm rounded-lg">Check price at NOX &rarr;</TrackedLink>
               </div>
 
               {/* 6. Adidas Adipower */}
@@ -447,12 +451,12 @@ export default function BudgetRacketsPage() {
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Most Power for the Money</td>
                       <td className="py-3 pr-4 text-stone-700">NOX Pro Cup USPA Edition</td>
-                      <td className="py-3 text-stone-600">Currently unavailable on Amazon</td>
+                      <td className="py-3 text-stone-600">Sold out in the US</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Budget Racket for Intermediate Players</td>
-                      <td className="py-3 pr-4 text-stone-700">NOX ML10 Pro Cup Rough Surface</td>
-                      <td className="py-3 text-stone-600">Currently unavailable on Amazon</td>
+                      <td className="py-3 pr-4"><TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="text-padel-green hover:underline">NOX ML10 Pro Cup Rough (2027)</TrackedLink></td>
+                      <td className="py-3 text-stone-600">{ML10.price} at NOX</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best to Grow Into</td>
@@ -482,7 +486,7 @@ export default function BudgetRacketsPage() {
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What is the best budget padel racket for intermediate players?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">The NOX ML10 Pro Cup Rough Surface. It is the least expensive racket we recommend for an intermediate game: 9/10 control, a rough surface for topspin and a low balance point that makes it quick at the net. It is currently unavailable on Amazon. If you want more power and can stretch the budget, the Wilson Blade Elite V2 at $208.58 is the next step.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">The NOX ML10 Pro Cup Rough Surface. It is the least expensive racket we recommend for an intermediate game: 9/10 control, a rough surface for topspin and a low balance point that makes it quick at the net. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout. If you want more power and can stretch the budget, the Wilson Blade Elite V2 at $208.58 is the next step.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What is the best padel racket under $100?</h3>

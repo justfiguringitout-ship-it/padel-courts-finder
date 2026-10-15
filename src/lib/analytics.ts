@@ -27,6 +27,11 @@ export function trackAffiliateClick(productName: string, url: string) {
   trackOutboundClick('affiliate', productName, url);
 }
 
+/** Buy-button click to a store link that is not an affiliate link */
+export function trackRetailerClick(productName: string, url: string) {
+  trackOutboundClick('retailer', productName, url);
+}
+
 export function trackSocialClick(clubName: string, platform: string, url: string) {
   trackOutboundClick('club_social', `${clubName}_${platform}`, url);
 }
