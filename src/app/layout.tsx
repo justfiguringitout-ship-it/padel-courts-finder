@@ -135,7 +135,7 @@ export default function RootLayout({
               </div>
             </div>
             <p className="text-xs text-white/30 mt-10">
-              As an Amazon Associate, Padel Courts Finder earns from qualifying purchases.
+              As an Amazon Associate and a Padel USA partner, Padel Courts Finder earns from qualifying purchases.
             </p>
             <div className="border-t border-white/10 mt-4 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
               <span>© {new Date().getFullYear()} Padel Courts Finder. All rights reserved.</span>

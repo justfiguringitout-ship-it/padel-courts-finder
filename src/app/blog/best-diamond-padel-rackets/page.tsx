@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Diamond Padel Rackets (2026): Maximum Power, Ranked",
@@ -124,10 +126,10 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/wilson-bela-v3-review",
         "offers": {
           "@type": "Offer",
-          "price": "399.00",
+          "price": PADEL_USA.B0F2WMRTYB.priceValue,
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20"
+          "url": padelUsaHref("B0F2WMRTYB")
         },
         "review": {
           "@type": "Review",
@@ -153,10 +155,10 @@ const itemListData = {
         "url": "https://www.padelcourtsfinder.com/blog/head-extreme-pro-review",
         "offers": {
           "@type": "Offer",
-          "price": "299.95",
+          "price": PADEL_USA.B0FNRQ839K.priceValue,
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20"
+          "url": padelUsaHref("B0FNRQ839K")
         },
         "review": {
           "@type": "Review",
@@ -232,6 +234,13 @@ export default function BestDiamondRacketsPage() {
 
       <article>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+          {/* Affiliate disclosure */}
+          <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
+            <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
+            <p className="text-xs text-stone-500 italic leading-relaxed">
+              {GEAR_DISCLOSURE}
+            </p>
+          </div>
           <section>
             <p className="text-stone-700 leading-relaxed">A diamond head shape padel racket stacks its mass high, putting a small, explosive sweet spot exactly where you strike a full smash. Hit clean and the ball detonates; hit low and the frame twists. It&apos;s the pro shape — and the most-returned shape in padel, because buyers skip the honesty check. We&apos;ve tested four diamonds worth owning in 2026; here they are, ranked, with who each one actually suits.</p>
             <p className="text-stone-600 text-sm leading-relaxed mt-4 bg-white border border-stone-200 rounded-lg p-4">
@@ -261,7 +270,7 @@ export default function BestDiamondRacketsPage() {
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Still punishes off-center contact like any diamond</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
-                <TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <BuyButtons wrapperClassName="contents" href={amazonLink("B0DPH3GZGN")} productName="Babolat Technical Viper" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
                 <Link href="/blog/babolat-technical-viper-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
               </div>
             </div>
@@ -282,7 +291,7 @@ export default function BestDiamondRacketsPage() {
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">$399; diminishing returns unless you&apos;re advanced</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
-                <TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela Pro V3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <BuyButtons wrapperClassName="contents" href={amazonLink("B0F2WMRTYB")} productName="Wilson Bela Pro V3" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
                 <Link href="/blog/wilson-bela-v3-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
               </div>
             </div>
@@ -303,7 +312,7 @@ export default function BestDiamondRacketsPage() {
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Small sweet spot; tiring head-heavy balance; hard on the arm</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
-                <TrackedLink href="https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <BuyButtons wrapperClassName="contents" href={amazonLink("B0FNRQ839K")} productName="HEAD Extreme Pro" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
                 <Link href="/blog/head-extreme-pro-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
               </div>
             </div>

@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { BuyButtons, StoreTextLink } from '@/components/gear/buy-buttons';
 import { StickyPickBar } from '@/components/sticky-pick-bar';
 import { HeroVideo } from '@/components/hero-video';
 import type { ReactNode } from 'react';
+import { GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 const TITLE = 'Best Lightweight Padel Rackets (2026): 6 Picks From 340g';
 const DESCRIPTION = 'The best lightweight padel rackets of 2026, from the 340g Babolat Contact to the adjustable Adidas Metalbone 3.4. Six light rackets for beginners, women, advanced players and anyone whose arm wants less weight.';
@@ -86,7 +88,7 @@ const faqData = {
       "name": "What is the best lightweight padel racket for advanced players?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Adidas Metalbone 3.4 at $263.00. Its Weight and Balance system uses up to 12g of removable inserts, so with the inserts out you swing a 345g diamond racket that scores 8/10 for power. No other racket in our advanced guide can be set up that light."
+        "text": "The Adidas Metalbone 3.4 at $283.00. Its Weight and Balance system uses up to 12g of removable inserts, so with the inserts out you swing a 345g diamond racket that scores 8/10 for power. No other racket in our advanced guide can be set up that light."
       }
     },
     {
@@ -126,7 +128,7 @@ const itemListData = {
   "@type": "ItemList",
   "itemListElement": [
     product(1, "Babolat Contact", "https://www.padelcourtsfinder.com/blog/babolat-contact-review", "89.95", AMZ.contact, 7.0),
-    product(2, "Adidas Metalbone 3.4", "https://www.padelcourtsfinder.com/blog/adidas-metalbone-3-4-review", "263.00", AMZ.metalbone34, 7.0),
+    product(2, "Adidas Metalbone 3.4", "https://www.padelcourtsfinder.com/blog/adidas-metalbone-3-4-review", "283.00", AMZ.metalbone34, 7.0),
     product(3, "Wilson Optix V1", "https://www.padelcourtsfinder.com/blog/wilson-optix-v1-review", "109.00", AMZ.optix, 7.7),
     product(4, "HEAD Extreme Evo", "https://www.padelcourtsfinder.com/blog/head-extreme-evo-review", "99.95", AMZ.evo, 7.3),
     product(5, "NOX Pro Cup USPA Edition", "https://www.padelcourtsfinder.com/blog/best-lightweight-padel-rackets#nox-pro-cup-uspa", "", "", 7.3),
@@ -188,7 +190,7 @@ export default function LightweightRacketsPage() {
             <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 mb-10 flex items-start gap-2">
               <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
               <p className="text-xs text-stone-500 italic leading-relaxed">
-                This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+                {GEAR_DISCLOSURE}
               </p>
             </div>
 
@@ -213,7 +215,7 @@ export default function LightweightRacketsPage() {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best for Advanced Players:</span>
-                  <span className="text-sm"><TrackedLink href={AMZ.metalbone34} type="affiliate" productName="Adidas Metalbone 3.4" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Adidas Metalbone 3.4</TrackedLink> <span className="text-stone-500">&mdash; 345g with inserts out, $263.00</span></span>
+                  <span className="text-sm"><StoreTextLink href={AMZ.metalbone34} productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline font-medium">Adidas Metalbone 3.4</StoreTextLink> <span className="text-stone-500">&mdash; 345g with inserts out, $283.00</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Lightest with a Carbon Frame:</span>
@@ -257,7 +259,7 @@ export default function LightweightRacketsPage() {
                       <td className="px-3 py-2.5">Diamond</td>
                       <td className="px-3 py-2.5">16K Aluminized Carbon</td>
                       <td className="px-3 py-2.5 whitespace-nowrap">7.0/10</td>
-                      <td className="px-3 py-2.5 whitespace-nowrap">$263.00</td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">$283.00</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="px-3 py-2.5 font-medium text-foreground">Wilson Optix V1</td>
@@ -310,11 +312,11 @@ export default function LightweightRacketsPage() {
                   <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Smaller players and many women.</strong> The <a href="#babolat-contact" className="text-padel-green hover:underline">Babolat Contact</a> is the first pick in our <Link href="/blog/best-padel-rackets-women" className="text-padel-green hover:underline">women&apos;s racket guide</Link> for exactly this reason: at 340g it is the lightest frame we recommend.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
-                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Advanced players who want speed at the net.</strong> The <a href="#adidas-metalbone-3-4" className="text-padel-green hover:underline">Adidas Metalbone 3.4</a> ($263.00) is the only racket in our advanced guide that can be set up at 345g, and you can add the weight back for match days.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed"><strong className="text-foreground">Advanced players who want speed at the net.</strong> The <a href="#adidas-metalbone-3-4" className="text-padel-green hover:underline">Adidas Metalbone 3.4</a> ($283.00) is the only racket in our advanced guide that can be set up at 345g, and you can add the weight back for match days.</p>
                 </div>
               </div>
               <div className="prose prose-lg prose-stone max-w-none mt-6">
-                <p className="text-stone-600 leading-[1.75]">The trade-off is stability. A 340g racket can feel twitchy against a hard-hit ball, and none of the round rackets here scores above 6/10 for power; the Metalbone 3.4 is the exception, and it costs $263.00. If you already drive the ball hard and want the racket to add pace, you are better served by our <Link href="/blog/best-padel-rackets-power" className="text-padel-green hover:underline">power rackets guide</Link>, which ranks frames for the smash rather than for swing weight. Weight is also only half the feel: a head-heavy 360g diamond swings heavier than a 365g round racket with a low balance point. Our <Link href="/blog/padel-racket-shapes-explained" className="text-padel-green hover:underline">racket shapes guide</Link> explains why.</p>
+                <p className="text-stone-600 leading-[1.75]">The trade-off is stability. A 340g racket can feel twitchy against a hard-hit ball, and none of the round rackets here scores above 6/10 for power; the Metalbone 3.4 is the exception, and it costs $283.00. If you already drive the ball hard and want the racket to add pace, you are better served by our <Link href="/blog/best-padel-rackets-power" className="text-padel-green hover:underline">power rackets guide</Link>, which ranks frames for the smash rather than for swing weight. Weight is also only half the feel: a head-heavy 360g diamond swings heavier than a 365g round racket with a low balance point. Our <Link href="/blog/padel-racket-shapes-explained" className="text-padel-green hover:underline">racket shapes guide</Link> explains why.</p>
               </div>
             </section>
 
@@ -349,7 +351,7 @@ export default function LightweightRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 &mdash; Best Lightweight Racket for Advanced Players</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">Adidas Metalbone 3.4</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$263.00</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$283.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Advanced attackers who want a 345g racket on practice days and a 372g one in matches</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -361,9 +363,9 @@ export default function LightweightRacketsPage() {
                 <p className="text-stone-600 leading-[1.75] mb-5">The only racket on this page built for advanced players, and it earns its place through Adidas&apos;s Weight and Balance system. Up to 12g of removable inserts seat inside the frame: with them out you are swinging a 345g diamond that moves quickly at the net, and fully loaded you are at 372g with real mass behind the smash. Same frame, different balance. The 16K aluminized carbon face and EVA Soft Performance core keep it firmer than the name suggests, 7/10 control is strong for a diamond, and 8/10 power is the highest of anything here by a wide margin. It is a pick in our <Link href="/blog/best-padel-rackets-advanced" className="text-padel-green hover:underline">advanced guide</Link>. Read our full <Link href="/blog/adidas-metalbone-3-4-review" className="text-padel-green hover:underline">Adidas Metalbone 3.4 review</Link>.</p>
                 <div className="space-y-2 mb-5">
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Tunable from 345g to 372g, 8/10 power, the most balanced diamond we have tested</p>
-                  <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> $263.00, a diamond shape that punishes off-centre contact, and 6/10 comfort</p>
+                  <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> $283.00, a diamond shape that punishes off-centre contact, and 6/10 comfort</p>
                 </div>
-                <TrackedLink href={AMZ.metalbone34} type="affiliate" productName="Adidas Metalbone 3.4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <BuyButtons href={AMZ.metalbone34} productName="Adidas Metalbone 3.4" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
               </div>
 
               {/* 3. Wilson Optix V1 */}
@@ -490,9 +492,9 @@ export default function LightweightRacketsPage() {
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Lightweight Racket for Advanced Players</td>
-                      <td className="py-3 pr-4"><TrackedLink href={AMZ.metalbone34} type="affiliate" productName="Adidas Metalbone 3.4" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline">Adidas Metalbone 3.4</TrackedLink></td>
+                      <td className="py-3 pr-4"><StoreTextLink href={AMZ.metalbone34} productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline">Adidas Metalbone 3.4</StoreTextLink></td>
                       <td className="py-3 pr-4 text-stone-600">345&ndash;372g</td>
-                      <td className="py-3 text-stone-600">$263.00</td>
+                      <td className="py-3 text-stone-600">$283.00</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Biggest Sweet Spot Under $100</td>
@@ -543,7 +545,7 @@ export default function LightweightRacketsPage() {
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">What is the best lightweight padel racket for advanced players?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">The Adidas Metalbone 3.4 at $263.00. Its Weight and Balance system uses up to 12g of removable inserts, so with the inserts out you swing a 345g diamond racket that scores 8/10 for power. No other racket in our advanced guide can be set up that light.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">The Adidas Metalbone 3.4 at $283.00. Its Weight and Balance system uses up to 12g of removable inserts, so with the inserts out you swing a 345g diamond racket that scores 8/10 for power. No other racket in our advanced guide can be set up that light.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">Is there a lightweight padel racket for intermediate players?</h3>

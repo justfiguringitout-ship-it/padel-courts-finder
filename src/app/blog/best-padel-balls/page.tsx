@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Padel Balls (2026): How to Choose + Our Picks",
@@ -133,7 +135,7 @@ export default function BestPadelBallsPage() {
           <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
             <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
             <p className="text-xs text-stone-500 italic leading-relaxed">
-              This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+              {GEAR_DISCLOSURE}
             </p>
           </div>
 
@@ -229,16 +231,7 @@ export default function BestPadelBallsPage() {
                 older Pro S, expect the S+ to feel slightly livelier. Buy the same ball your club uses and nothing
                 about your game has to adjust.
               </p>
-              <TrackedLink
-                href="https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20"
-                type="affiliate"
-                productName="HEAD Padel Pro S+"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
-              >
-                Check Price on Amazon &rarr;
-              </TrackedLink>
+              <BuyButtons href={amazonLink("B0DHWHX9SG")} productName="HEAD Padel Pro S+" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200" />
             </div>
 
             {/* Dunlop Pro Padel */}

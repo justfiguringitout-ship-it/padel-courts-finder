@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Padel Rackets for Tennis Players (2026): Tested Picks",
@@ -192,6 +194,13 @@ export default function BestPadelRacketsTennisPlayers() {
 
       <article>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+          {/* Affiliate disclosure */}
+          <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
+            <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
+            <p className="text-xs text-stone-500 italic leading-relaxed">
+              {GEAR_DISCLOSURE}
+            </p>
+          </div>
           <section>
             <p className="text-stone-700 leading-relaxed">Tennis players arrive at padel with more transferable skill than anyone else on the court — and then buy the wrong racket almost every time. The logic is understandable: you already have the arm speed, you are not a beginner, so you skip the forgiving frames and reach for the most powerful thing on the shelf, which in padel means a diamond. It is the wrong call, and the reason is specific to how padel differs from the sport you already play.</p>
             <p className="text-stone-700 leading-relaxed mt-4">A padel racket has no strings. All the power comes from a foam core and a stiff face, and a diamond concentrates that into a small sweet spot near the top of the head. In tennis your string bed forgives contact a couple of inches off centre; in padel a diamond does not. And in your first season you <em>will</em> hit off centre constantly, because balls come off the back glass at angles and speeds no tennis court produces. The right frame for a tennis player is a teardrop: most of the power, far more margin.</p>
@@ -311,7 +320,7 @@ export default function BestPadelRacketsTennisPlayers() {
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Small high sweet spot punishes learners; head-heavy load on the arm</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
-                <TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <BuyButtons wrapperClassName="contents" href={amazonLink("B0DPH3GZGN")} productName="Babolat Technical Viper" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
                 <Link href="/blog/babolat-technical-viper-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
               </div>
             </div>

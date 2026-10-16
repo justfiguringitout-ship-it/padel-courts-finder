@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "The Best Padel Accessories Under $30 (2026)",
@@ -136,7 +138,7 @@ export default function PadelAccessoriesPage() {
           <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
             <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
             <p className="text-xs text-stone-500 italic leading-relaxed">
-              This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+              {GEAR_DISCLOSURE}
             </p>
           </div>
 
@@ -169,16 +171,7 @@ export default function PadelAccessoriesPage() {
                 racket sports. Slightly cushioned, easy to wrap, and consistent from grip to grip. If you don&apos;t
                 have a strong preference, start here.
               </p>
-              <TrackedLink
-                href="https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20"
-                type="affiliate"
-                productName="Wilson Pro Overgrip 12-Pack"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
-              >
-                Check Price on Amazon &rarr;
-              </TrackedLink>
+              <BuyButtons href={amazonLink("B002GUEXTQ")} productName="Wilson Pro Overgrip 12-Pack" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200" />
             </div>
             <div className="bg-white border border-stone-200 rounded-xl p-6 mt-4">
               <div className="flex items-start justify-between gap-4 mb-1">
@@ -221,16 +214,7 @@ export default function PadelAccessoriesPage() {
                 A widely used tournament-grade ball with a lively, consistent bounce. Grab a can for your bag and
                 rotate it out once the bounce fades.
               </p>
-              <TrackedLink
-                href="https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20"
-                type="affiliate"
-                productName="HEAD Padel Pro S+ Balls"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
-              >
-                Check Price on Amazon &rarr;
-              </TrackedLink>
+              <BuyButtons href={amazonLink("B0DHWHX9SG")} productName="HEAD Padel Pro S+ Balls" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200" />
             </div>
           </section>
 

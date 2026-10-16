@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { StickyPickBar } from "@/components/sticky-pick-bar";
 import { TrackedLink } from "@/components/TrackedLink";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "HEAD Extreme Pro Review (2026): Maximum Power, No Apologies",
@@ -36,9 +38,9 @@ export default function HeadExtremeProReviewPage() {
       "Diamond-shaped power racket with a UD Carbon HS face, Power Foam core, Auxetic 2.0 frame technology, and Extreme Spin rough surface — built for left-side attackers and tournament competitors.",
     "offers": {
       "@type": "Offer",
-      "price": "299.95",
+      "price": PADEL_USA.B0FNRQ839K.priceValue,
       "priceCurrency": "USD",
-      "url": "https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20"
+      "url": padelUsaHref("B0FNRQ839K")
     },
     "review": {
       "@type": "Review",
@@ -119,7 +121,7 @@ export default function HeadExtremeProReviewPage() {
           <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
             <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
             <p className="text-xs text-stone-500 italic leading-relaxed">
-              This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+              {GEAR_DISCLOSURE}
             </p>
           </div>
 
@@ -132,7 +134,7 @@ export default function HeadExtremeProReviewPage() {
                 <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$299.95</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-5">Best for: left-side attackers and tournament competitors who want maximum smash power.</p>
-              <TrackedLink href="https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20" type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+              <BuyButtons href={amazonLink("B0FNRQ839K")} productName="HEAD Extreme Pro" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
             </div>
           </section>
 

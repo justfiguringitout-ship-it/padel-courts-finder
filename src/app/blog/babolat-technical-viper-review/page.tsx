@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
 import { StickyPickBar } from "@/components/sticky-pick-bar";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Babolat Technical Viper Review (2026): Pro Power for $230",
@@ -113,7 +115,7 @@ export default function BabolatTechnicalViperReviewPage() {
           <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
             <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
             <p className="text-xs text-stone-500 italic leading-relaxed">
-              This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+              {GEAR_DISCLOSURE}
             </p>
           </div>
 
@@ -129,7 +131,7 @@ export default function BabolatTechnicalViperReviewPage() {
               <p className="text-stone-600 leading-relaxed mb-5">
                 The Technical Viper is built for one thing — explosive ball exit — and it delivers, provided you have the technique and conditioning to swing a hard-cored, high-balance 370g diamond. At $229.99 it&apos;s the most affordable true pro racket in our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets of 2026</Link> guide, where it took the #2 spot as best value at pro level.
               </p>
-              <TrackedLink href="https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20" type="affiliate" productName="Babolat Technical Viper" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+              <BuyButtons href={amazonLink("B0DPH3GZGN")} productName="Babolat Technical Viper" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
             </div>
           </section>
 

@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
-import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, amazonLink, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from '@/lib/retailer-links';
 import { HeroVideo } from '@/components/hero-video';
+import { BuyButtons } from "@/components/gear/buy-buttons";
 
 export const metadata: Metadata = {
   title: 'Best Padel Gifts for Mom (2026) — 12 Ideas She\'ll Actually Use',
@@ -267,9 +268,9 @@ export default function MothersDay2026GiftGuidePage() {
           "description": "Fernando Belasteguín's signature racket with a 24K carbon face — the finest weave in commercial padel.",
           "offers": {
             "@type": "Offer",
-            "price": "399.00",
+            "price": PADEL_USA.B0F2WMRTYB.priceValue,
             "priceCurrency": "USD",
-            "url": "https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20"
+            "url": padelUsaHref("B0F2WMRTYB")
           }
         }
       }
@@ -323,7 +324,7 @@ export default function MothersDay2026GiftGuidePage() {
             <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 mb-10 flex items-start gap-2">
               <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
               <p className="text-xs text-stone-500 italic leading-relaxed">
-                This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+                {GEAR_DISCLOSURE}
               </p>
             </div>
 
@@ -381,16 +382,7 @@ export default function MothersDay2026GiftGuidePage() {
                     Every padel player goes through balls. She&apos;ll always need more. The HEAD Pro S+ is the current version of the Pro S, the most popular padel ball in the US.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: any padel mom, any level</p>
-                  <TrackedLink
-                    href="https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20"
-                    type="affiliate"
-                    productName="HEAD Padel Pro S+ Balls"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                  >
-                    Shop on Amazon &rarr;
-                  </TrackedLink>
+                  <BuyButtons href={amazonLink("B0DHWHX9SG")} productName="HEAD Padel Pro S+ Balls" className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
                 </div>
 
                 {/* 2. Wilson Overgrip */}
@@ -403,16 +395,7 @@ export default function MothersDay2026GiftGuidePage() {
                     The grip she&apos;ll actually replace every few weeks. Tacky, absorbent, and the industry standard. A 12-pack lasts months.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: any padel mom who plays regularly</p>
-                  <TrackedLink
-                    href="https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20"
-                    type="affiliate"
-                    productName="Wilson Pro Overgrip 12-Pack"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                  >
-                    Shop on Amazon &rarr;
-                  </TrackedLink>
+                  <BuyButtons href={amazonLink("B002GUEXTQ")} productName="Wilson Pro Overgrip 12-Pack" className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
                 </div>
               </div>
             </section>
@@ -686,16 +669,7 @@ export default function MothersDay2026GiftGuidePage() {
                     The ultimate. 24K carbon face &mdash; the finest weave in commercial padel. Fernando Belastegu&iacute;n&apos;s signature racket, designed with the greatest player in the sport&apos;s history. This is the gift she&apos;d never buy herself but would absolutely love. Featured in our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets guide</Link>.
                   </p>
                   <p className="text-xs text-stone-500 mb-4">Great for: the mom who wants the absolute best</p>
-                  <TrackedLink
-                    href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20"
-                    type="affiliate"
-                    productName="Wilson Bela Pro V3"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                  >
-                    Shop on Amazon &rarr;
-                  </TrackedLink>
+                  <BuyButtons href={amazonLink("B0F2WMRTYB")} productName="Wilson Bela Pro V3" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
                 </div>
               </div>
             </section>
