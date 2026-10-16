@@ -42,6 +42,14 @@ export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
     date: "2026-10-15",
+    type: "added",
+    title: "EVO Padel added as coming soon in Las Vegas",
+    note: "Submitted by the club: an indoor club planned around 8 courts, coming late 2026. Its address is not announced yet, so the map shows Las Vegas until it is.",
+    clubs: ["EVO Padel"],
+    commit: "PENDING_EVO",
+  },
+  {
+    date: "2026-10-15",
     type: "updated",
     title: "Jam Padel closed for the off-season",
     note: "The Bellevue club runs outdoors from June through September, so it is marked temporarily closed until it announces next season.",
