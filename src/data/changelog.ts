@@ -46,7 +46,7 @@ export const changelog: ChangelogEntry[] = [
     title: "Wakit Rakit Spring hours confirmed by the club",
     note: "The club's operations lead confirmed it is open 8 AM to 10 PM every day, Central time, which matches its Google listing.",
     clubs: ["Wakit Rakit Spring"],
-    commit: "PENDING_WAKIT",
+    commit: "34fb210",
   },
   {
     date: "2026-10-13",
