@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { CloudSun, Moon } from "lucide-react";
 import { nowInTimeZone, timeZoneLabel, tonightStatus, type TonightStatus } from "@/lib/club-page";
 import type { TonightClub, TonightData } from "@/lib/play-tonight";
-import { trackPlausibleEvent } from "@/lib/analytics";
+import { trackPlausibleEvent, trackClubWebsiteClick } from "@/lib/analytics";
 
 type Filter = "all" | "now" | "tonight" | "late" | "indoor";
 
@@ -59,7 +59,7 @@ function ActionLink({ club, city }: { club: TonightClub; city: string }) {
       href={club.action.href}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => trackPlausibleEvent("Tonight book click", { club: club.name, city, kind: club.action!.label })}
+      onClick={() => { trackPlausibleEvent("Tonight book click", { club: club.name, city, kind: club.action!.label }); trackClubWebsiteClick(club.name, club.action!.href); }}
       className="shrink-0 inline-flex items-center justify-center h-10 px-3.5 rounded-lg bg-[#15803D] text-white text-sm font-semibold hover:bg-[#166534] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#15803D]"
     >
       {club.action.label}
