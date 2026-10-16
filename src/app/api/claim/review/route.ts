@@ -7,16 +7,18 @@ import { NextResponse } from "next/server";
 import { applyEditViaGitHub, autoApplyEnabled } from "@/lib/owner/apply";
 import { findCourtBySlug } from "@/lib/owner/club-lookup";
 import { RateLimiter, clientIp, linkBase, requestOrigin } from "@/lib/owner/http";
+import { changedFieldWords, sanitizeChanges } from "@/lib/owner/listing-fields";
 import {
   NOTIFY_TO,
   claimRejectedEmail,
   editApprovedEmail,
   editRejectedEmail,
+  publishedEmail,
   sendMessage,
   signinLinkEmail,
 } from "@/lib/owner/mail";
 import { getStore } from "@/lib/owner/store";
-import { getClaimSecret, makeSigninToken, verifyToken } from "@/lib/owner/tokens";
+import { getClaimSecret, makeAdminToken, makeSigninToken, verifyToken } from "@/lib/owner/tokens";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -76,6 +78,9 @@ export async function POST(req: Request) {
   if (!claim) return back(origin, "missing", "edit");
   const clubPage = `${base}/courts/${edit.club_slug}`;
 
+  // An owner whose access was removed cannot get an edit published.
+  if (action === "approve" && claim.status !== "verified") return back(origin, "revoked", "edit");
+
   if (action === "reject") {
     const updated = await store.updateEdit(edit.id, { status: "rejected", reviewed_at: now }, "pending");
     if (!updated) return back(origin, "already", "edit");
@@ -94,9 +99,29 @@ export async function POST(req: Request) {
     const result = court ? await applyEditViaGitHub(approved, court.name, store) : { applied: false, error: "club not found" };
     if (result.applied) {
       live = true;
-      await store.updateEdit(edit.id, { status: "applied", applied_at: new Date().toISOString() }, "approved");
+      const appliedRow = await store.updateEdit(
+        edit.id,
+        {
+          status: "applied",
+          applied_at: new Date().toISOString(),
+          commit_sha: result.sha ?? null,
+          previous_values: result.previous ?? null,
+          applied_values: result.appliedValues ?? null,
+        },
+        "approved"
+      );
       note = `&commit=${encodeURIComponent(result.commit ?? "")}`;
       console.log(`claim/review: edit ${edit.id} applied in ${result.commit}`);
+      const canUndo = !!appliedRow?.previous_values && !!appliedRow?.applied_values;
+      await sendMessage(
+        publishedEmail(claim, {
+          words: changedFieldWords(sanitizeChanges(edit.changes), edit.photo_paths.length),
+          commit: result.commit ?? "",
+          clubPage,
+          undoUrl: canUndo ? `${base}/claim/admin?token=${makeAdminToken("undo", edit.id, secret)}` : null,
+          revokeUrl: `${base}/claim/admin?token=${makeAdminToken("revoke", claim.id, secret)}`,
+        })
+      ).catch((err) => console.error(`claim/review: published email failed for edit ${edit.id}`, err));
     } else {
       console.error(`claim/review: auto-apply failed for edit ${edit.id}: ${result.error}`);
       note = "&apply=failed";

@@ -339,3 +339,252 @@ test("describeChanges and changedFieldWords read plainly", () => {
   assert.ok(lines.some((l) => l.label === "Hours, Sunday" && l.before === "8 AM to 10 PM" && l.after === "9 AM to 9 PM"));
   assert.equal(changedFieldWords(ch, 1), "hours, phone number, booking link, court count, pricing, amenities and a photo");
 });
+
+// ------------------------------------------------------------------ hardening: second claims, club email, revoke, risky fields, undo
+
+import { decideClaim, clubPublicEmail, riskyChanges, safeName } from "@/lib/owner/verification";
+import { makeAdminToken, makeClubConfirmToken } from "@/lib/owner/tokens";
+import { sessionFromClaim } from "@/lib/owner/session-check";
+import { DryRunClient, applyEditViaGitHub, undoEditViaGitHub, undoAvailable } from "@/lib/owner/apply";
+import { buildUndoPatch, readEntryValues } from "@/lib/owner/apply-core";
+import type { ClaimRow, EditRow, OwnerStore } from "@/lib/owner/store";
+
+function claimRow(p: Partial<ClaimRow>): ClaimRow {
+  return {
+    id: "11111111-1111-4111-8111-111111111111",
+    club_slug: "wakit-rakit-spring",
+    club_name: "Wakit Rakit Spring",
+    email: "a@wakitrakit.com",
+    name: "A Person",
+    role: "Owner",
+    status: "verified",
+    verified_via: "domain",
+    created_at: "2026-10-15T00:00:00.000Z",
+    verified_at: "2026-10-15T00:00:00.000Z",
+    ...p,
+  };
+}
+
+test("second-claim rule: first claim on the club domain is instant, a second one is manual", () => {
+  const court = findCourtBySlug("wakit-rakit-spring")!;
+  const first = decideClaim("ryan@wakitrakit.com", court, []);
+  assert.equal(first.verified, true);
+  assert.equal(first.reason, "domain_match");
+  assert.equal(first.secondClaim, false);
+
+  const ryan = claimRow({ email: "ryan@wakitrakit.com", name: "Ryan Higgins" });
+  const second = decideClaim("coach@wakitrakit.com", court, [ryan]);
+  assert.equal(second.verified, false);
+  assert.equal(second.reason, "second_claim");
+  assert.equal(second.secondClaim, true);
+  assert.deepEqual(second.existingOwners.map((c) => c.email), ["ryan@wakitrakit.com"]);
+
+  // the same person again is not a "second" claim
+  assert.equal(decideClaim("Ryan@WakitRakit.com", court, [ryan]).verified, true);
+  // pending, rejected claims by others do not block the first verified owner
+  assert.equal(decideClaim("ryan@wakitrakit.com", court, [claimRow({ email: "x@gmail.com", status: "pending_manual" }), claimRow({ email: "y@gmail.com", status: "rejected" })]).verified, true);
+  // someone Dito removed still counts as a previous owner, but is not emailed
+  const afterRevoke = decideClaim("new@wakitrakit.com", court, [claimRow({ email: "old@wakitrakit.com", status: "revoked" })]);
+  assert.equal(afterRevoke.verified, false);
+  assert.equal(afterRevoke.reason, "second_claim");
+  assert.deepEqual(afterRevoke.existingOwners, []);
+  // a free-mail second claim keeps its own reason and still lists the owner
+  const gmail = decideClaim("ryan.h@gmail.com", court, [ryan, ryan]);
+  assert.equal(gmail.reason, "free_mail");
+  assert.equal(gmail.secondClaim, true);
+  assert.equal(gmail.existingOwners.length, 1);
+});
+
+test("club public email: published address, or a membership address on the club's own domain", () => {
+  assert.equal(clubPublicEmail(findCourtBySlug("wakit-rakit-spring")!), "spring@wakitrakit.com");
+  assert.equal(clubPublicEmail({ email: "Club@Gmail.com" }), "club@gmail.com");
+  assert.equal(clubPublicEmail({ membershipEmail: "join@club.com", website: "https://www.club.com" }), "join@club.com");
+  assert.equal(clubPublicEmail({ membershipEmail: "join@gmail.com", website: "https://www.club.com" }), null);
+  assert.equal(clubPublicEmail({ membershipEmail: "join@club.com", website: "https://playtomic.com/club" }), null);
+  assert.equal(clubPublicEmail({ website: "https://club.com", phone: "1" }), null);
+  assert.equal(clubPublicEmail({ email: "not an email" }), null);
+});
+
+test("club confirmation token: 7 days, its own kind", () => {
+  const now = Date.now();
+  const t = makeClubConfirmToken("c1", SECRET, now);
+  assert.equal(verifyToken(t, "clubconfirm", SECRET, now + 6.9 * 24 * 3600 * 1000)?.c, "c1");
+  assert.equal(verifyToken(t, "clubconfirm", SECRET, now + 7.1 * 24 * 3600 * 1000), null);
+  for (const k of ["signin", "session", "review", "admin"] as const) assert.equal(verifyToken(t, k, SECRET), null, k);
+  // a review link or a sign-in link cannot confirm a claim
+  assert.equal(verifyToken(makeReviewToken("claim", "c1", SECRET), "clubconfirm", SECRET), null);
+  assert.equal(verifyToken(makeSigninToken("c1", SECRET), "clubconfirm", SECRET), null);
+  // admin links are separate too
+  const a = makeAdminToken("revoke", "c1", SECRET, now);
+  assert.equal(verifyToken(a, "admin", SECRET)?.a, "revoke");
+  assert.equal(verifyToken(a, "review", SECRET), null);
+  assert.equal(verifyToken(a, "clubconfirm", SECRET), null);
+  assert.equal(verifyToken(makeReviewToken("edit", "e1", SECRET), "admin", SECRET), null);
+});
+
+test("club emails never carry a link through the claimant's name", () => {
+  assert.equal(safeName("Ryan Higgins"), "Ryan Higgins");
+  assert.equal(safeName("José O'Neil-Ruiz"), "José O'Neil-Ruiz");
+  assert.ok(!/https?:|\/\/|\w\.\w/.test(safeName("Win cash https://evil.example/x now")));
+  assert.ok(!/\w\.\w/.test(safeName("visit evil.com")));
+  assert.equal(safeName("<>"), "Someone");
+});
+
+test("revoked session: a valid cookie stops working the moment the claim is revoked", () => {
+  const live = claimRow({});
+  assert.equal(sessionFromClaim(live, "wakit-rakit-spring").ok, true);
+  const revoked = sessionFromClaim({ ...live, status: "revoked" }, "wakit-rakit-spring");
+  assert.equal(revoked.ok, false);
+  assert.equal(!revoked.ok && revoked.reason, "revoked");
+  assert.equal(sessionFromClaim({ ...live, status: "pending_manual" }, "wakit-rakit-spring").ok, false);
+  assert.equal(sessionFromClaim(live, "other-club").ok, false);
+  assert.equal(sessionFromClaim(null, "wakit-rakit-spring").ok, false);
+});
+
+test("risky fields: website, booking, phone and membership email come first, new domains flagged", () => {
+  const court = findCourtBySlug("wakit-rakit-spring")!;
+  const cur = { ...currentListing(court), email: court.email };
+  const lines = riskyChanges(cur, {
+    phone: "832-304-4419",
+    website: "https://wakitrakit-spring.com",
+    bookingUrl: "https://wakitrakit.com/spring/book",
+    membershipEmail: "join@elsewhere.com",
+    pricingText: "x",
+  });
+  assert.deepEqual(lines.map((l) => l.field), ["website", "bookingUrl", "phone", "membershipEmail"]);
+  const byField = Object.fromEntries(lines.map((l) => [l.field, l]));
+  assert.equal(byField.website.differentDomain, true);
+  assert.equal(byField.website.before, "https://wakitrakit.com/spring");
+  assert.equal(byField.website.after, "https://wakitrakit-spring.com");
+  assert.equal(byField.phone.differentDomain, false);
+  assert.equal(riskyChanges(cur, { website: "https://www.wakitrakit.com/spring-new" })[0].differentDomain, false);
+  assert.equal(riskyChanges(cur, { website: null })[0].after, "Removed");
+  assert.deepEqual(riskyChanges(cur, { pricingText: "x", openingHours: { monday: "Closed" } }), []);
+  // no booking link on file: compared with the domains the club already uses
+  const noBooking = { ...cur, bookingUrl: undefined };
+  assert.equal(riskyChanges(noBooking, { bookingUrl: "https://wakitrakit.com/book" })[0].differentDomain, false);
+  assert.equal(riskyChanges(noBooking, { bookingUrl: "https://playtomic.com/clubs/x" })[0].differentDomain, true);
+});
+
+test("undo plan refuses when a field changed again", () => {
+  const prev = { phone: "1", website: null, ownerConfirmedDate: "2026-10-01" };
+  const applied = { phone: "2", website: "https://x.com", ownerConfirmedDate: "2026-10-16" };
+  const ok = buildUndoPatch(prev, applied, { phone: "2", website: "https://x.com", ownerConfirmedDate: "2026-10-16" });
+  assert.deepEqual(ok, { patch: { set: { phone: "1", website: null, ownerConfirmedDate: "2026-10-01" } }, conflicts: [] });
+  const moved = buildUndoPatch(prev, applied, { phone: "3", website: "https://x.com", ownerConfirmedDate: "2026-10-20" });
+  assert.deepEqual(moved.conflicts, ["phone"]);
+});
+
+test("undo: apply then undo through the dry-run client puts the copy of padel-courts.ts back", async () => {
+  const dir = mkdtempSync(path.join(os.tmpdir(), "pcf-dry-"));
+  try {
+    mkdirSync(path.join(dir, "src/data"), { recursive: true });
+    const original = readFileSync(path.join(ROOT, "src/data/padel-courts.ts"), "utf8");
+    const changelogSrc = readFileSync(path.join(ROOT, "src/data/changelog.ts"), "utf8");
+    writeFileSync(path.join(dir, "src/data/padel-courts.ts"), original);
+    writeFileSync(path.join(dir, "src/data/changelog.ts"), changelogSrc);
+
+    const name = "Wakit Rakit Spring";
+    const court = findCourtBySlug("wakit-rakit-spring")!;
+    const cur = currentListing(court);
+    const check = validateForm(SAMPLE_FORM_PATCH(formFromListing(cur)));
+    assert.ok(check.ok);
+    const changes = buildChanges(cur, check.form);
+    const edit: EditRow = {
+      id: "22222222-2222-4222-8222-222222222222",
+      claim_id: "11111111-1111-4111-8111-111111111111",
+      club_slug: "wakit-rakit-spring",
+      email: "ryan@wakitrakit.com",
+      changes: changes as Record<string, unknown>,
+      current: {},
+      photo_paths: [],
+      note: null,
+      status: "approved",
+      created_at: "2026-10-16T00:00:00.000Z",
+      reviewed_at: null,
+      applied_at: null,
+    };
+    const store = { getPhoto: async () => null } as unknown as OwnerStore;
+    const client = new DryRunClient(dir);
+    const res = await applyEditViaGitHub(edit, name, store, client);
+    assert.equal(res.applied, true, res.error);
+    assert.ok(res.previous && res.appliedValues);
+    const afterApply = readFileSync(path.join(dir, "src/data/padel-courts.ts"), "utf8");
+    assert.notEqual(afterApply, original);
+    assert.equal((res.previous as Record<string, unknown>).phone, "(832) 304-4418");
+    assert.equal((res.appliedValues as Record<string, unknown>).phone, "832-304-4419");
+
+    const appliedEdit: EditRow = {
+      ...edit,
+      status: "applied",
+      applied_at: "2026-10-16T12:00:00.000Z",
+      commit_sha: res.sha,
+      previous_values: res.previous,
+      applied_values: res.appliedValues,
+    };
+    assert.equal(undoAvailable(appliedEdit), true);
+    const undo = await undoEditViaGitHub(appliedEdit, name, new DryRunClient(dir));
+    assert.equal(undo.applied, true, undo.error);
+    const afterUndo = readFileSync(path.join(dir, "src/data/padel-courts.ts"), "utf8");
+
+    // every club, including this one, has the same data as before the edit
+    const a = (await evalDataFile(original, "padelCourts")) as Array<Record<string, unknown>>;
+    const c = (await evalDataFile(afterUndo, "padelCourts")) as Array<Record<string, unknown>>;
+    assert.deepEqual(c, a);
+    // and nothing outside the entry moved
+    const before = locateCourt(original, name);
+    const after = locateCourt(afterUndo, name);
+    assert.equal(afterUndo.slice(0, after.start), original.slice(0, before.start));
+    assert.equal(afterUndo.slice(after.end), original.slice(before.end));
+
+    const log = JSON.parse(readFileSync(path.join(dir, ".dry-git/log.json"), "utf8")) as Array<{ message: string }>;
+    assert.deepEqual(
+      log.map((l) => l.message.split("\n")[0]),
+      [
+        `Owner edit: ${name} (hours, phone number, booking link, court count, pricing and amenities), submitted by the club and approved by Dito`,
+        `Changelog: ${name} (${res.commit})`,
+        `Undo owner edit: ${name}`,
+        `Changelog: ${name} (${undo.commit})`,
+      ]
+    );
+    const list = (await evalDataFile(readFileSync(path.join(dir, "src/data/changelog.ts"), "utf8"), "changelog")) as Array<Record<string, unknown>>;
+    assert.equal(list[0].title, `${name} owner update reverted`);
+    assert.equal(list[0].commit, undo.commit);
+    assert.ok(!/—/.test(String(list[0].note)));
+    assert.equal(list[1].title, `${name} details updated by the club`);
+
+    // a second undo is refused: the fields no longer hold the edit's values
+    const again = await undoEditViaGitHub(appliedEdit, name, new DryRunClient(dir));
+    assert.equal(again.applied, false);
+    assert.ok(again.conflicts && again.conflicts.includes("phone"));
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test("readEntryValues reads every kind of field an edit can write", () => {
+  const src = readFileSync(path.join(ROOT, "src/data/padel-courts.ts"), "utf8");
+  const v = readEntryValues(src, "Wakit Rakit Spring", ["phone", "numberOfCourts", "amenities", "openingHours", "membersOnly", "nope"]);
+  assert.equal(v.phone, "(832) 304-4418");
+  assert.equal(typeof v.numberOfCourts, "number");
+  assert.ok(Array.isArray(v.amenities));
+  assert.equal((v.openingHours as Record<string, string>).tuesday, "8h-22h");
+  assert.equal(v.nope, null);
+});
+
+test("undo data can be recorded for every club in the directory", () => {
+  const src = readFileSync(path.join(ROOT, "src/data/padel-courts.ts"), "utf8");
+  const keys = ["openingHours", "phone", "website", "bookingUrl", "membershipEmail", "numberOfCourts", "indoorCourts", "outdoorCourts", "courtType", "pricingText", "amenities", "description", "membersOnly", "access", "ogImageUrl", "galleryImages", "ownerConfirmedDate"];
+  const counts = new Map<string, number>();
+  for (const c of padelCourts) counts.set(c.name, (counts.get(c.name) ?? 0) + 1);
+  const failed: string[] = [];
+  for (const [name, n] of counts) {
+    if (n !== 1) continue;
+    try {
+      readEntryValues(src, name, keys);
+    } catch (err) {
+      failed.push(`${name}: ${err instanceof Error ? err.message : err}`);
+    }
+  }
+  assert.deepEqual(failed, []);
+});

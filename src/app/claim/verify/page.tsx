@@ -4,11 +4,12 @@
  */
 import type { Metadata } from "next";
 import Link from "next/link";
-import { autoApplyEnabled } from "@/lib/owner/apply";
+import { autoApplyEnabled, undoAvailable } from "@/lib/owner/apply";
 import { currentListing, findCourtBySlug } from "@/lib/owner/club-lookup";
 import { describeChanges, sanitizeChanges, type CurrentListing } from "@/lib/owner/listing-fields";
 import { getStore } from "@/lib/owner/store";
-import { getClaimSecret, verifyToken } from "@/lib/owner/tokens";
+import { getClaimSecret, makeAdminToken, verifyToken } from "@/lib/owner/tokens";
+import { RISKY_NOTE, riskyChanges } from "@/lib/owner/verification";
 import { ScrubToken } from "@/components/owner/scrub-token";
 
 export const dynamic = "force-dynamic";
@@ -26,6 +27,13 @@ const DONE_TEXT: Record<string, string> = {
   already: "This was already reviewed, so nothing changed.",
   expired: "This link has expired or is not valid.",
   missing: "We could not find that item.",
+  revoked: "This owner's access was removed, so the update cannot be approved.",
+};
+
+const CHANNEL_TEXT: Record<string, string> = {
+  domain: "Email matches the club domain",
+  club_email: "Confirmation email sent to the club's public address",
+  dito: "Only you can verify this one",
 };
 
 function Shell({ children }: { children: React.ReactNode }) {
@@ -102,9 +110,22 @@ export default async function VerifyPage({ searchParams }: { searchParams: SP })
     const claim = await store.getClaim(p.id);
     if (!claim) return <Shell><p>{DONE_TEXT.missing}</p></Shell>;
     const court = findCourtBySlug(claim.club_slug);
+    const others = (await store.listClaimsForClub(claim.club_slug)).filter(
+      (c) => c.id !== claim.id && c.email !== claim.email && c.status === "verified"
+    );
+    const revokeHref = `/claim/admin?token=${makeAdminToken("revoke", claim.id, secret!)}`;
     return (
       <Shell>
         <h1 className="text-2xl font-bold">Claim for {claim.club_name}</h1>
+        {others.length > 0 && (
+          <div className="mt-4 rounded-xl border-2 border-amber-500 bg-amber-50 p-4 text-sm text-amber-950">
+            <p className="font-semibold">Second claim</p>
+            <p className="mt-1">
+              This club already has a verified owner: {others.map((o) => `${o.name} (${o.email})`).join(", ")}. They were
+              emailed about this request.
+            </p>
+          </div>
+        )}
         <dl className="mt-5 club-card grid grid-cols-[8rem_1fr] gap-x-4 gap-y-2 text-sm">
           <dt className="text-muted-foreground">Name</dt>
           <dd>{claim.name}</dd>
@@ -114,8 +135,18 @@ export default async function VerifyPage({ searchParams }: { searchParams: SP })
           <dd className="break-all">{claim.email}</dd>
           <dt className="text-muted-foreground">Club website</dt>
           <dd className="break-all">{court?.website || "none on file"}</dd>
+          <dt className="text-muted-foreground">Club phone</dt>
+          <dd>{court?.phone || "none on file"}</dd>
           <dt className="text-muted-foreground">Status</dt>
           <dd>{claim.status}</dd>
+          <dt className="text-muted-foreground">Verification</dt>
+          <dd className="break-all">
+            {claim.verify_channel ? CHANNEL_TEXT[claim.verify_channel] ?? claim.verify_channel : "not recorded"}
+            {claim.verify_target ? ` (${claim.verify_target})` : ""}
+            {claim.verify_channel === "dito" && !court?.email
+              ? `. No public club email on file: call ${court?.phone || "the club"} before approving.`
+              : ""}
+          </dd>
           <dt className="text-muted-foreground">Requested</dt>
           <dd>{new Date(claim.created_at).toLocaleString("en-US", { timeZone: "America/New_York" })}</dd>
         </dl>
@@ -134,6 +165,13 @@ export default async function VerifyPage({ searchParams }: { searchParams: SP })
         ) : (
           <p className="mt-5">{DONE_TEXT.already}</p>
         )}
+        {claim.status !== "revoked" && claim.status !== "rejected" && (
+          <p className="mt-6 text-sm">
+            <Link href={revokeHref} className="text-red-700 hover:underline">
+              Remove access
+            </Link>
+          </p>
+        )}
       </Shell>
     );
   }
@@ -148,6 +186,7 @@ export default async function VerifyPage({ searchParams }: { searchParams: SP })
     ? currentListing(court)
     : ({ name: edit.club_slug, city: "", state: "", ...(edit.current as object) } as CurrentListing);
   const lines = describeChanges(now, changes, { privateEmail: "show" });
+  const risky = riskyChanges({ ...now, email: court?.email }, changes);
   const photoUrls = await Promise.all(edit.photo_paths.map((ph) => store.photoUrl(ph, 3600)));
 
   return (
@@ -158,7 +197,33 @@ export default async function VerifyPage({ searchParams }: { searchParams: SP })
         {new Date(edit.created_at).toLocaleString("en-US", { timeZone: "America/New_York" })}. Status: {edit.status}.
       </p>
 
-      <div className="mt-5 club-card">
+      {risky.length > 0 && (
+        <div className="mt-5 rounded-xl border-2 border-amber-500 bg-amber-50 p-4 text-amber-950">
+          <p className="text-sm font-bold uppercase tracking-wide">Check these</p>
+          <ul className="mt-2 divide-y divide-amber-300">
+            {risky.map((r) => (
+              <li key={r.field} className="py-3 first:pt-1 last:pb-0">
+                <p className="text-sm font-semibold">
+                  {r.label}
+                  {r.differentDomain && (
+                    <span className="ml-2 rounded-full bg-red-700 px-2 py-0.5 text-xs font-semibold text-white">Different domain</span>
+                  )}
+                </p>
+                <p className="mt-1 text-sm break-words">
+                  <span className="text-amber-800">Current:</span> {r.before}
+                </p>
+                <p className="mt-0.5 text-sm break-words">
+                  <span className="text-amber-800">New:</span> {r.after}
+                </p>
+                <p className="mt-1 text-xs">{RISKY_NOTE}.</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {risky.length > 0 && <h2 className="mt-6 text-sm font-semibold text-muted-foreground">All changes</h2>}
+      <div className={`${risky.length > 0 ? "mt-2" : "mt-5"} club-card`}>
         {lines.length === 0 ? (
           <p className="text-sm">No field changes.</p>
         ) : (
@@ -205,7 +270,9 @@ export default async function VerifyPage({ searchParams }: { searchParams: SP })
         </Link>
       </p>
 
-      {edit.status === "pending" ? (
+      {edit.status === "pending" && claim && claim.status !== "verified" ? (
+        <p className="mt-5">{DONE_TEXT.revoked}</p>
+      ) : edit.status === "pending" ? (
         <>
           <p className="mt-5 text-sm text-muted-foreground">
             {autoApplyEnabled()
@@ -217,6 +284,19 @@ export default async function VerifyPage({ searchParams }: { searchParams: SP })
       ) : (
         <p className="mt-5">{DONE_TEXT.already}</p>
       )}
+
+      <p className="mt-6 flex flex-wrap gap-4 text-sm">
+        {undoAvailable(edit) && (
+          <Link href={`/claim/admin?token=${makeAdminToken("undo", edit.id, secret!)}`} className="text-red-700 hover:underline">
+            Undo this change
+          </Link>
+        )}
+        {claim && claim.status === "verified" && (
+          <Link href={`/claim/admin?token=${makeAdminToken("revoke", claim.id, secret!)}`} className="text-red-700 hover:underline">
+            Remove {claim.name}&apos;s access
+          </Link>
+        )}
+      </p>
     </Shell>
   );
 }

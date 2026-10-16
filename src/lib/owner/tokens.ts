@@ -7,7 +7,7 @@
  */
 import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 
-export type TokenKind = "signin" | "session" | "review";
+export type TokenKind = "signin" | "session" | "review" | "clubconfirm" | "admin";
 
 export interface SigninPayload {
   k: "signin";
@@ -34,11 +34,31 @@ export interface ReviewPayload {
   exp: number;
 }
 
-export type TokenPayload = SigninPayload | SessionPayload | ReviewPayload;
+/** Sent to the club's public address: "is this person from your club?" */
+export interface ClubConfirmPayload {
+  k: "clubconfirm";
+  /** claim id */
+  c: string;
+  exp: number;
+}
+
+/** Dito-only actions: remove an owner's access, or undo a published edit. */
+export interface AdminPayload {
+  k: "admin";
+  a: "revoke" | "undo";
+  /** claim id for revoke, edit id for undo */
+  id: string;
+  exp: number;
+}
+
+export type TokenPayload = SigninPayload | SessionPayload | ReviewPayload | ClubConfirmPayload | AdminPayload;
 
 export const SIGNIN_TTL_MS = 30 * 60 * 1000;
 export const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 export const REVIEW_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+export const CLUB_CONFIRM_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+/** Remove access / Undo links stay useful for a while after the email. */
+export const ADMIN_TTL_MS = 90 * 24 * 60 * 60 * 1000;
 
 const MIN_SECRET_LENGTH = 32;
 
@@ -109,6 +129,14 @@ export function makeSessionToken(claimId: string, slug: string, secret: string, 
 
 export function makeReviewToken(t: "claim" | "edit", id: string, secret: string, now = Date.now()): string {
   return signToken({ k: "review", t, id, exp: now + REVIEW_TTL_MS }, secret);
+}
+
+export function makeClubConfirmToken(claimId: string, secret: string, now = Date.now()): string {
+  return signToken({ k: "clubconfirm", c: claimId, exp: now + CLUB_CONFIRM_TTL_MS }, secret);
+}
+
+export function makeAdminToken(a: "revoke" | "undo", id: string, secret: string, now = Date.now()): string {
+  return signToken({ k: "admin", a, id, exp: now + ADMIN_TTL_MS }, secret);
 }
 
 /** Used sign-in nonces. Per instance only, so links are single use "ish"; they also expire in 30 minutes. */

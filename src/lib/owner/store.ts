@@ -14,8 +14,10 @@ import { randomUUID } from "node:crypto";
 
 export const PHOTO_BUCKET = "pcf-owner-photos";
 
-export type ClaimStatus = "pending_manual" | "verified" | "rejected";
-export type EditStatus = "pending" | "approved" | "rejected" | "applied";
+export type ClaimStatus = "pending_manual" | "verified" | "rejected" | "revoked";
+export type EditStatus = "pending" | "approved" | "rejected" | "applied" | "reverted";
+/** How a claim was (or is being) checked: domain match, the club's public email, or Dito only. */
+export type VerifyChannel = "domain" | "club_email" | "dito";
 export type ClaimRole = "Owner" | "Manager" | "Staff";
 
 export interface ClaimRow {
@@ -26,9 +28,14 @@ export interface ClaimRow {
   name: string;
   role: ClaimRole;
   status: ClaimStatus;
-  verified_via: "domain" | "manual" | null;
+  verified_via: "domain" | "manual" | "club_email" | null;
   created_at: string;
   verified_at: string | null;
+  verify_channel?: VerifyChannel | null;
+  /** the club address a confirmation was sent to (never shown to the claimant) */
+  verify_target?: string | null;
+  verify_sent_at?: string | null;
+  revoked_at?: string | null;
 }
 
 export interface EditRow {
@@ -44,26 +51,54 @@ export interface EditRow {
   created_at: string;
   reviewed_at: string | null;
   applied_at: string | null;
+  /** full sha of the "Owner edit" commit */
+  commit_sha?: string | null;
+  /** padel-courts.ts values before the edit was applied (null = property was absent) */
+  previous_values?: Record<string, unknown> | null;
+  /** the values the edit wrote */
+  applied_values?: Record<string, unknown> | null;
+  reverted_at?: string | null;
+  revert_commit?: string | null;
 }
 
 export type NewClaim = Omit<ClaimRow, "id" | "created_at">;
-export type NewEdit = Omit<EditRow, "id" | "created_at" | "reviewed_at" | "applied_at">;
+export type NewEdit = Omit<
+  EditRow,
+  "id" | "created_at" | "reviewed_at" | "applied_at" | "commit_sha" | "previous_values" | "applied_values" | "reverted_at" | "revert_commit"
+>;
+
+type StatusFilter<S extends string> = S | S[];
+
+function statusList<S extends string>(f: StatusFilter<S> | undefined): S[] {
+  return f === undefined ? [] : Array.isArray(f) ? f : [f];
+}
+
+function statusQuery(f: StatusFilter<string> | undefined): string {
+  const l = statusList(f);
+  if (!l.length) return "";
+  l.forEach((s) => {
+    if (!/^[a-z_]+$/.test(s)) throw new Error("bad status");
+  });
+  return l.length === 1 ? `&status=eq.${l[0]}` : `&status=in.(${l.join(",")})`;
+}
 
 export interface OwnerStore {
   readonly kind: "supabase" | "dev";
   insertClaim(row: NewClaim): Promise<ClaimRow>;
   getClaim(id: string): Promise<ClaimRow | null>;
   findClaims(email: string, slug: string): Promise<ClaimRow[]>;
+  /** Every claim for one club, newest first. */
+  listClaimsForClub(slug: string): Promise<ClaimRow[]>;
   countClaimsSince(email: string, sinceIso: string): Promise<number>;
   /** Updates only when the row still has `onlyIfStatus` (when given). Returns null when nothing matched. */
-  updateClaim(id: string, patch: Partial<ClaimRow>, onlyIfStatus?: ClaimStatus): Promise<ClaimRow | null>;
+  updateClaim(id: string, patch: Partial<ClaimRow>, onlyIfStatus?: StatusFilter<ClaimStatus>): Promise<ClaimRow | null>;
   deleteClaim(id: string): Promise<void>;
   insertEdit(row: NewEdit): Promise<EditRow>;
   getEdit(id: string): Promise<EditRow | null>;
   listEditsForClaim(claimId: string): Promise<EditRow[]>;
   listEditsByStatus(status: EditStatus): Promise<EditRow[]>;
   countEditsSince(claimId: string, sinceIso: string): Promise<number>;
-  updateEdit(id: string, patch: Partial<EditRow>, onlyIfStatus?: EditStatus): Promise<EditRow | null>;
+  updateEdit(id: string, patch: Partial<EditRow>, onlyIfStatus?: StatusFilter<EditStatus>): Promise<EditRow | null>;
   putPhoto(objectPath: string, bytes: Buffer, contentType: string): Promise<void>;
   getPhoto(objectPath: string): Promise<Buffer | null>;
   /** A short-lived URL Dito can open (signed URL in production, data URL locally). */
@@ -140,12 +175,18 @@ class SupabaseStore implements OwnerStore {
       `pcf_owner_claims?email=eq.${encodeURIComponent(email)}&club_slug=eq.${encodeURIComponent(slug)}&select=*&order=created_at.desc`
     );
   }
+  async listClaimsForClub(slug: string): Promise<ClaimRow[]> {
+    return this.rest<ClaimRow[]>(
+      "GET",
+      `pcf_owner_claims?club_slug=eq.${encodeURIComponent(slug)}&select=*&order=created_at.desc&limit=200`
+    );
+  }
   async countClaimsSince(email: string, sinceIso: string): Promise<number> {
     return this.count("pcf_owner_claims", `email=eq.${encodeURIComponent(email)}&created_at=gte.${encodeURIComponent(sinceIso)}`);
   }
-  async updateClaim(id: string, patch: Partial<ClaimRow>, onlyIfStatus?: ClaimStatus): Promise<ClaimRow | null> {
+  async updateClaim(id: string, patch: Partial<ClaimRow>, onlyIfStatus?: StatusFilter<ClaimStatus>): Promise<ClaimRow | null> {
     assertId(id);
-    const cond = onlyIfStatus ? `&status=eq.${onlyIfStatus}` : "";
+    const cond = statusQuery(onlyIfStatus);
     const rows = await this.rest<ClaimRow[]>("PATCH", `pcf_owner_claims?id=eq.${id}${cond}`, patch, "return=representation");
     return rows[0] ?? null;
   }
@@ -173,9 +214,9 @@ class SupabaseStore implements OwnerStore {
     assertId(claimId);
     return this.count("pcf_listing_edits", `claim_id=eq.${claimId}&created_at=gte.${encodeURIComponent(sinceIso)}`);
   }
-  async updateEdit(id: string, patch: Partial<EditRow>, onlyIfStatus?: EditStatus): Promise<EditRow | null> {
+  async updateEdit(id: string, patch: Partial<EditRow>, onlyIfStatus?: StatusFilter<EditStatus>): Promise<EditRow | null> {
     assertId(id);
-    const cond = onlyIfStatus ? `&status=eq.${onlyIfStatus}` : "";
+    const cond = statusQuery(onlyIfStatus);
     const rows = await this.rest<EditRow[]>("PATCH", `pcf_listing_edits?id=eq.${id}${cond}`, patch, "return=representation");
     return rows[0] ?? null;
   }
@@ -265,12 +306,18 @@ class DevFileStore implements OwnerStore {
       .filter((c) => c.email === email && c.club_slug === slug)
       .sort((a, b) => b.created_at.localeCompare(a.created_at));
   }
+  async listClaimsForClub(slug: string) {
+    return (await this.read()).claims
+      .filter((c) => c.club_slug === slug)
+      .sort((a, b) => b.created_at.localeCompare(a.created_at));
+  }
   async countClaimsSince(email: string, sinceIso: string) {
     return (await this.read()).claims.filter((c) => c.email === email && c.created_at >= sinceIso).length;
   }
-  async updateClaim(id: string, patch: Partial<ClaimRow>, onlyIfStatus?: ClaimStatus) {
+  async updateClaim(id: string, patch: Partial<ClaimRow>, onlyIfStatus?: StatusFilter<ClaimStatus>) {
     const db = await this.read();
-    const row = db.claims.find((c) => c.id === id && (!onlyIfStatus || c.status === onlyIfStatus));
+    const allowed = statusList(onlyIfStatus);
+    const row = db.claims.find((c) => c.id === id && (!allowed.length || allowed.includes(c.status)));
     if (!row) return null;
     Object.assign(row, patch, { id: row.id });
     await this.write(db);
@@ -309,9 +356,10 @@ class DevFileStore implements OwnerStore {
   async countEditsSince(claimId: string, sinceIso: string) {
     return (await this.read()).edits.filter((e) => e.claim_id === claimId && e.created_at >= sinceIso).length;
   }
-  async updateEdit(id: string, patch: Partial<EditRow>, onlyIfStatus?: EditStatus) {
+  async updateEdit(id: string, patch: Partial<EditRow>, onlyIfStatus?: StatusFilter<EditStatus>) {
     const db = await this.read();
-    const row = db.edits.find((e) => e.id === id && (!onlyIfStatus || e.status === onlyIfStatus));
+    const allowed = statusList(onlyIfStatus);
+    const row = db.edits.find((e) => e.id === id && (!allowed.length || allowed.includes(e.status)));
     if (!row) return null;
     Object.assign(row, patch, { id: row.id });
     await this.write(db);

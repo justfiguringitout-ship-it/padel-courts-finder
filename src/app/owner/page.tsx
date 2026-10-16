@@ -11,7 +11,7 @@ import {
   sanitizeChanges,
 } from "@/lib/owner/listing-fields";
 import { firstName } from "@/lib/owner/mail";
-import { getOwnerSession } from "@/lib/owner/session";
+import { checkOwnerSession } from "@/lib/owner/session";
 import { getStore } from "@/lib/owner/store";
 
 export const dynamic = "force-dynamic";
@@ -27,15 +27,26 @@ function Row({ label, value }: { label: string; value?: string | number | null }
 
 export default async function OwnerDashboard({ searchParams }: { searchParams: Promise<{ signedout?: string }> }) {
   const { signedout } = await searchParams;
-  const session = await getOwnerSession();
+  const check = await checkOwnerSession();
+  const session = check.ok ? check.session : null;
 
   if (!session) {
+    const removed = !check.ok && check.reason === "revoked";
     return (
       <div className="container mx-auto max-w-lg px-4 py-12 md:py-16">
         <h1 className="text-2xl md:text-3xl font-bold tracking-tight">Club owner dashboard</h1>
         <p className="mt-3 text-muted-foreground">
-          {signedout ? "You are signed out. " : ""}
-          To update your club&apos;s listing, sign in with the link we email you.
+          {removed ? (
+            <>
+              Your access to {!check.ok && check.clubName ? check.clubName : "this listing"} was removed. If you think this is a
+              mistake, email info@padelcourtsfinder.com.
+            </>
+          ) : (
+            <>
+              {signedout ? "You are signed out. " : ""}
+              To update your club&apos;s listing, sign in with the link we email you.
+            </>
+          )}
         </p>
         <p className="mt-4">
           <Link href="/claim" className="text-primary hover:underline">

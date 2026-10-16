@@ -8,6 +8,8 @@ Disallow: /api/
 # Club owner dashboard and claim review links (private, token-gated)
 Disallow: /owner
 Disallow: /claim/verify
+Disallow: /claim/confirm
+Disallow: /claim/admin
 
 # Block the email-gated reader edition of the State of US Padel report
 Disallow: /report/

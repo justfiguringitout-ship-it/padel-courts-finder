@@ -8,8 +8,8 @@
 import { randomUUID } from "node:crypto";
 import { NextResponse } from "next/server";
 import sharp from "sharp";
-import { RateLimiter, clientIp, requestOrigin } from "@/lib/owner/http";
-import { getOwnerSession } from "@/lib/owner/session";
+import { RateLimiter, clientIp, isLocalOrigin, requestOrigin } from "@/lib/owner/http";
+import { checkOwnerSession, signedOutResponse } from "@/lib/owner/session";
 import { getStore } from "@/lib/owner/store";
 
 export const runtime = "nodejs";
@@ -31,10 +31,12 @@ function sniff(b: Buffer): "jpeg" | "png" | "webp" | null {
 }
 
 export async function POST(req: Request) {
-  if (!requestOrigin(req)) return json({ ok: false, error: "forbidden" }, 403);
+  const origin = requestOrigin(req);
+  if (!origin) return json({ ok: false, error: "forbidden" }, 403);
   if (!perIp.take(clientIp(req))) return json({ ok: false, error: "too many requests" }, 429);
-  const session = await getOwnerSession();
-  if (!session) return json({ ok: false, error: "signed out" }, 401);
+  const check = await checkOwnerSession();
+  if (!check.ok) return signedOutResponse(check, !isLocalOrigin(origin));
+  const session = check.session;
   if (!perClaim.take(session.claim.id)) return json({ ok: false, error: "too many photos, try again later" }, 429);
 
   const store = getStore();

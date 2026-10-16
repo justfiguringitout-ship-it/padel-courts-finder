@@ -1,15 +1,14 @@
 /** The owner session cookie: signed, httpOnly, SameSite=Lax, 30 days, holds claim id + club slug. */
 import { cookies } from "next/headers";
-import type { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { getClaimSecret, makeSessionToken, verifyToken, SESSION_TTL_MS } from "@/lib/owner/tokens";
 import { getStore, type ClaimRow } from "@/lib/owner/store";
+import { sessionFromClaim, type OwnerSession, type SessionCheck } from "@/lib/owner/session-check";
+
+export { sessionFromClaim, type OwnerSession, type SessionCheck };
 
 export const SESSION_COOKIE = "pcf_owner";
 
-export interface OwnerSession {
-  claim: ClaimRow;
-  slug: string;
-}
 
 function readToken(raw: string | undefined): { c: string; s: string } | null {
   const secret = getClaimSecret();
@@ -18,16 +17,32 @@ function readToken(raw: string | undefined): { c: string; s: string } | null {
   return p ? { c: p.c, s: p.s } : null;
 }
 
+/** Reads the cookie and re-checks the claim in the database on every call. */
+export async function checkOwnerSession(): Promise<SessionCheck> {
+  const jar = await cookies();
+  const raw = jar.get(SESSION_COOKIE)?.value;
+  if (!raw) return { ok: false, reason: "none" };
+  const t = readToken(raw);
+  if (!t) return { ok: false, reason: "invalid" };
+  const store = getStore();
+  if (!store) return { ok: false, reason: "unavailable" };
+  return sessionFromClaim(await store.getClaim(t.c), t.s);
+}
+
 /** For server components and route handlers. Re-checks the claim is still verified on every call. */
 export async function getOwnerSession(): Promise<OwnerSession | null> {
-  const jar = await cookies();
-  const t = readToken(jar.get(SESSION_COOKIE)?.value);
-  if (!t) return null;
-  const store = getStore();
-  if (!store) return null;
-  const claim = await store.getClaim(t.c);
-  if (!claim || claim.status !== "verified" || claim.club_slug !== t.s) return null;
-  return { claim, slug: t.s };
+  const r = await checkOwnerSession();
+  return r.ok ? r.session : null;
+}
+
+/** 401 for an owner API call without a live session; a dead cookie is cleared on the way out. */
+export function signedOutResponse(check: Exclude<SessionCheck, { ok: true }>, secure: boolean): NextResponse {
+  const res = NextResponse.json(
+    { ok: false, error: check.reason === "revoked" ? "access removed" : "signed out" },
+    { status: 401, headers: { "Cache-Control": "no-store" } }
+  );
+  if (check.reason === "revoked" || check.reason === "invalid") clearSessionCookie(res, secure);
+  return res;
 }
 
 export function setSessionCookie(res: NextResponse, claim: ClaimRow, secure: boolean): void {

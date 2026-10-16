@@ -27,6 +27,7 @@ import {
   patchCourtEntry,
   planPhotos,
   readEntryFields,
+  readEntryValues,
   todayEastern,
 } from "@/lib/owner/apply-core";
 import { changedFieldWords, describeChanges, sanitizeChanges, type CurrentListing } from "@/lib/owner/listing-fields";
@@ -112,19 +113,36 @@ async function main() {
       written.push(f.to);
     }
     const patch = buildCourtPatch(edit.changes, current.openingHours, photos, today);
+    let previous: Record<string, unknown> | null = null;
+    try {
+      previous = readEntryValues(courtsSrc, name, Object.keys(patch.set));
+    } catch (err) {
+      console.error(`  (could not record previous values, so one-click undo will not be offered: ${err instanceof Error ? err.message : err})`);
+    }
     writeFileSync(courtsPath, patchCourtEntry(courtsSrc, name, patch, today));
 
     const words = changedFieldWords(sanitizeChanges(edit.changes), photos.files.length);
     git("add", "--", ...written);
     git("commit", "-m", `Owner edit: ${name} (${words}), submitted by the club and approved by Dito`, "-m", `Edit ${edit.id}`, "--", ...written);
     const hash = git("rev-parse", "--short=7", "HEAD");
+    const fullSha = git("rev-parse", "HEAD");
 
     const changelogPath = path.join(ROOT, CHANGELOG);
     writeFileSync(changelogPath, addChangelogEntry(readFileSync(changelogPath, "utf8"), changelogEntryFor(name, edit.changes, photos.files.length, today, hash)));
     git("add", "--", CHANGELOG);
     git("commit", "-m", `Changelog: ${name} (${hash})`, "--", CHANGELOG);
 
-    await store.updateEdit(edit.id, { status: "applied", applied_at: new Date().toISOString() }, "approved");
+    await store.updateEdit(
+      edit.id,
+      {
+        status: "applied",
+        applied_at: new Date().toISOString(),
+        commit_sha: fullSha,
+        previous_values: previous,
+        applied_values: patch.set,
+      },
+      "approved"
+    );
     console.log(`\nApplied ${name} in ${hash} (+ changelog commit). Edit ${edit.id} marked applied.`);
   }
   console.log("\nDone. Run `npm run build`, then push or merge so Vercel deploys.");

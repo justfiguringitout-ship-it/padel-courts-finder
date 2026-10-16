@@ -258,7 +258,91 @@ export function readEntryFields(source: string, clubName: string) {
   };
 }
 
-export function patchCourtEntry(source: string, clubName: string, patch: CourtPatch, today: string): string {
+/** Read one property value as data (strings, numbers, booleans, string arrays, the hours object). */
+function readValue(src: string, p: Prop): Value {
+  const raw = src.slice(p.valueStart, p.valueEnd).trim();
+  const str = readStringValue(src, p);
+  if (str !== undefined) return str;
+  if (/^-?\d+(\.\d+)?$/.test(raw)) return Number(raw);
+  if (raw === "true" || raw === "false") return raw === "true";
+  if (p.key === "openingHours" && raw.startsWith("{")) return readHours(src, p) as Record<string, string>;
+  if (raw.startsWith("[")) {
+    const arr = readStringArray(src, p);
+    // only arrays made of plain double-quoted strings round-trip safely
+    const rest = raw.replace(/"(?:[^"\\]|\\.)*"/g, "").replace(/[\s,]/g, "");
+    if (rest !== "[]") throw new Error(`cannot read ${p.key} as a list of strings`);
+    return arr;
+  }
+  throw new Error(`cannot read ${p.key}`);
+}
+
+/**
+ * Current values of `keys` in one club's entry, as data. A missing property is
+ * null. Used to record what an edit replaced, so it can be undone.
+ */
+export function readEntryValues(source: string, clubName: string, keys: string[]): Record<string, Value | null> {
+  const e = locateCourt(source, clubName);
+  const out: Record<string, Value | null> = {};
+  for (const k of keys) {
+    const p = e.props.find((x) => x.key === k);
+    out[k] = p ? readValue(source, p) : null;
+  }
+  return out;
+}
+
+function canonical(v: unknown): string {
+  if (v === null || v === undefined) return "null";
+  if (Array.isArray(v)) return JSON.stringify(v);
+  if (typeof v === "object") {
+    const o = v as Record<string, unknown>;
+    return JSON.stringify(Object.keys(o).sort().map((k) => [k, o[k]]));
+  }
+  return JSON.stringify(v);
+}
+
+export function sameValue(a: unknown, b: unknown): boolean {
+  return canonical(a) === canonical(b);
+}
+
+export interface UndoPlan {
+  patch: CourtPatch;
+  /** fields that changed again after the edit was published */
+  conflicts: string[];
+}
+
+/**
+ * The patch that puts back what an applied edit replaced. Refuses (conflicts)
+ * when any field it wrote has changed since, except ownerConfirmedDate, which
+ * is then left alone.
+ */
+export function buildUndoPatch(
+  previous: Record<string, unknown>,
+  applied: Record<string, unknown>,
+  currentValues: Record<string, unknown>
+): UndoPlan {
+  const set: CourtPatch["set"] = {};
+  const conflicts: string[] = [];
+  for (const key of Object.keys(applied)) {
+    if (!/^[A-Za-z_$][\w$]*$/.test(key)) throw new Error(`bad key ${key}`);
+    const same = sameValue(currentValues[key], applied[key]);
+    if (!same) {
+      if (key !== "ownerConfirmedDate") conflicts.push(key);
+      continue;
+    }
+    const prev = key in previous ? previous[key] : null;
+    set[key] = (prev ?? null) as Value | null;
+  }
+  return { patch: { set }, conflicts };
+}
+
+export function patchCourtEntry(
+  source: string,
+  clubName: string,
+  patch: CourtPatch,
+  today: string,
+  opts: { note?: string } = {}
+): string {
+  const note = opts.note ?? `updated by the club, approved ${today}`;
   const entry = locateCourt(source, clubName);
   const { props } = entry;
   const first = props[0];
@@ -286,14 +370,14 @@ export function patchCourtEntry(source: string, clubName: string, patch: CourtPa
       edits.push({ start: p.valueStart, end: p.valueEnd, text });
       if (p.comma === -1) edits.push({ start: p.valueEnd, end: p.valueEnd, text: "," });
       if (p.comment && key !== "ownerConfirmedDate") {
-        edits.push({ start: p.comment[0], end: p.comment[1], text: `// updated by the club, approved ${today}` });
+        edits.push({ start: p.comment[0], end: p.comment[1], text: `// ${note}` });
       }
       // A source note on the line above the hours ("// hours: google_business ...") no longer applies.
       if (key === "openingHours" && p.lineStart > 0) {
         const prevStart = source.lastIndexOf("\n", p.lineStart - 2) + 1;
         const prevLine = source.slice(prevStart, p.lineStart - 1);
         const cm = /^([ \t]*)\/\/\s*hours:/.exec(prevLine);
-        if (cm) edits.push({ start: prevStart, end: p.lineStart - 1, text: `${cm[1]}// hours: updated by the club, approved ${today}` });
+        if (cm) edits.push({ start: prevStart, end: p.lineStart - 1, text: `${cm[1]}// hours: ${note}` });
       }
     } else {
       toInsert.push(`${indent}${key}: ${text},`);
@@ -412,6 +496,16 @@ export function changelogEntryFor(clubName: string, changesRaw: unknown, photoCo
     date: today,
     title: `${clubName} details updated by the club`,
     note: `The club sent new ${words} through its owner account. We checked the change before publishing it.`,
+    clubs: [clubName],
+    commit,
+  };
+}
+
+export function revertChangelogEntryFor(clubName: string, appliedOn: string, today: string, commit: string): NewChangelogEntry {
+  return {
+    date: today,
+    title: `${clubName} owner update reverted`,
+    note: `A change the club sent${appliedOn ? ` on ${appliedOn}` : ""} was reverted, so the listing is back to the details it had before.`,
     clubs: [clubName],
     commit,
   };

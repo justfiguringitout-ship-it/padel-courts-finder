@@ -25,7 +25,7 @@ import {
 export interface PastEdit {
   id: string;
   createdAt: string;
-  status: "pending" | "approved" | "rejected" | "applied";
+  status: "pending" | "approved" | "rejected" | "applied" | "reverted";
   summary: string;
   hasNote: boolean;
 }
@@ -35,6 +35,7 @@ const STATUS_LABEL: Record<PastEdit["status"], string> = {
   approved: "Approved, going live soon",
   applied: "Live",
   rejected: "Not published",
+  reverted: "Undone",
 };
 
 const SUGGESTED_AMENITIES = [
@@ -181,9 +182,15 @@ export function OwnerEditForm({ current, past }: { current: CurrentListing; past
           rightsConfirmed: rights,
         }),
       });
-      const j = (await res.json().catch(() => ({}))) as { ok?: boolean; id?: string; errors?: string[] };
+      const j = (await res.json().catch(() => ({}))) as { ok?: boolean; id?: string; errors?: string[]; error?: string };
       if (!res.ok || !j.ok) {
-        setErrors(j.errors?.length ? j.errors : res.status === 401 ? ["You were signed out. Please sign in again."] : ["That did not go through. Please try again."]);
+        setErrors(
+          j.errors?.length
+            ? j.errors
+            : res.status === 401
+              ? [j.error === "access removed" ? "Your access to this listing was removed. Email info@padelcourtsfinder.com if you think this is a mistake." : "You were signed out. Please sign in again."]
+              : ["That did not go through. Please try again."]
+        );
         setStep("review");
         return;
       }

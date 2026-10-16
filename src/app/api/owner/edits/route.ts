@@ -5,7 +5,7 @@
  */
 import { NextResponse } from "next/server";
 import { currentListing, findCourtBySlug } from "@/lib/owner/club-lookup";
-import { RateLimiter, clientIp, linkBase, requestOrigin } from "@/lib/owner/http";
+import { RateLimiter, clientIp, isLocalOrigin, linkBase, requestOrigin } from "@/lib/owner/http";
 import {
   LIMITS,
   buildChanges,
@@ -16,9 +16,10 @@ import {
   type CurrentListing,
 } from "@/lib/owner/listing-fields";
 import { editReviewEmail, mailConfigured, sendMessage } from "@/lib/owner/mail";
-import { getOwnerSession } from "@/lib/owner/session";
+import { checkOwnerSession, signedOutResponse } from "@/lib/owner/session";
 import { getStore } from "@/lib/owner/store";
-import { getClaimSecret, makeReviewToken } from "@/lib/owner/tokens";
+import { getClaimSecret, makeAdminToken, makeReviewToken } from "@/lib/owner/tokens";
+import { riskyChanges } from "@/lib/owner/verification";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -36,8 +37,9 @@ export async function POST(req: Request) {
   if (!origin) return json({ ok: false, error: "forbidden" }, 403);
   if (!perIp.take(clientIp(req))) return json({ ok: false, error: "too many requests" }, 429);
 
-  const session = await getOwnerSession();
-  if (!session) return json({ ok: false, error: "signed out" }, 401);
+  const auth = await checkOwnerSession();
+  if (!auth.ok) return signedOutResponse(auth, !isLocalOrigin(origin));
+  const session = auth.session;
   const store = getStore();
   const secret = getClaimSecret();
   if (!store || !secret || !mailConfigured()) return json({ ok: false, error: "unavailable" }, 503);
@@ -110,10 +112,12 @@ export async function POST(req: Request) {
     await sendMessage(
       editReviewEmail(edit, session.claim, {
         lines: describeChanges(current, changes, { privateEmail: "show" }),
+        risky: riskyChanges({ ...current, email: court.email }, changes),
         clubPage: `${base}/courts/${session.slug}`,
         reviewUrl,
         approveUrl: `${reviewUrl}&action=approve`,
         rejectUrl: `${reviewUrl}&action=reject`,
+        revokeUrl: `${base}/claim/admin?token=${makeAdminToken("revoke", session.claim.id, secret)}`,
       })
     ).catch((err) => console.error(`owner/edits: notification failed for ${edit.id}`, err instanceof Error ? err.message : err));
     console.log(`owner/edits: edit ${edit.id} club=${session.slug} fields=${Object.keys(changes).join(",") || "none"} photos=${photos.length}`);
