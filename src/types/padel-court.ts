@@ -8,6 +8,7 @@ export interface PadelCourt {
   phone?: string;
   email?: string;
   website?: string;
+  bookingUrl?: string;                          // Club's own court booking page (set from owner edits)
   rating?: number;
   reviewCount: number;
   openingHours: OpeningHours;
