@@ -13140,17 +13140,16 @@ export const padelCourts: PadelCourt[] = [
   {
     id: 464,
     name: "Wakit Rakit Spring",
-    // hours: google_business https://www.google.com/maps/search/Wakit+Rakit+Spring+510+Hassler+Rd+Spring+TX, checked 2026-10-09
     openingHours: {
-      monday: "7h-22h",
-      tuesday: "7h-22h",
-      wednesday: "7h-22h",
-      thursday: "7h-22h",
-      friday: "7h-22h",
-      saturday: "8h-21h",
-      sunday: "8h-21h",
-    },
-    ownerConfirmedDate: "2026-08-28",
+      monday: "8h-22h",
+      tuesday: "8h-22h",
+      wednesday: "8h-22h",
+      thursday: "8h-22h",
+      friday: "8h-22h",
+      saturday: "8h-22h",
+      sunday: "8h-22h",
+    }, // owner confirmed 2026-10-15 (Ryan Higgins); matches Google Maps
+    ownerConfirmedDate: "2026-10-15",
     address: "510 Hassler Rd",
     city: "Spring",
     state: "TX",
