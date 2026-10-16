@@ -35,7 +35,7 @@ Sections:
 - [ ] Add entry to `src/app/blog/page.tsx` blogPosts array (category `how-to`, honest excerpt)
 - [ ] Update the PREVIOUS edition with a link to the new one ("Read the <month> edition")
 - [ ] `npm run build` must pass
-- [ ] Note the edition date here for the next run: **Last edition: July 2026** (`new-padel-clubs-july-2026`)
+- [ ] Note the edition date here for the next run: **Last edition: October 2026** (`new-padel-clubs-october-2026`, published 2026-10-15; covered everything since July because August and September were skipped)
 
 ## Rules
 

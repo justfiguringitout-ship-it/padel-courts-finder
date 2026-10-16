@@ -92,6 +92,15 @@ export default function NewPadelClubsJuly2026Page() {
 
       <article>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+          {/* Newer edition */}
+          <p className="text-stone-600 text-sm leading-relaxed bg-white border border-stone-200 rounded-lg p-4">
+            <strong className="text-foreground">Newer edition:</strong>{" "}
+            <Link href="/blog/new-padel-clubs-october-2026" className="text-padel-green hover:underline font-medium">
+              Read the October 2026 edition
+            </Link>{" "}
+            for every club that opened or was announced since this one.
+          </p>
+
           {/* Intro */}
           <section>
             <p className="text-stone-700 leading-relaxed">

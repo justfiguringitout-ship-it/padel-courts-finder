@@ -286,6 +286,16 @@ const blogPosts: BlogPost[] = [
     courtSlug: ''
   },
   {
+    slug: 'new-padel-clubs-october-2026',
+    title: 'New Padel Clubs in the US: October 2026 Roundup',
+    category: 'how-to',
+    excerpt: 'Everything since our July roundup: 36 clubs that opened or joined the directory, 29 newly announced clubs, and the 33 listings we removed for accuracy.',
+    date: '2026-10-15',
+    readTime: '8 min read',
+    imageAlt: 'New US padel clubs October 2026',
+    courtSlug: ''
+  },
+  {
     slug: 'new-padel-clubs-july-2026',
     title: 'New & Upcoming US Padel Clubs — July 2026',
     category: 'how-to',
