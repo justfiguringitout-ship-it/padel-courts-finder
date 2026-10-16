@@ -13004,7 +13004,7 @@ export const padelCourts: PadelCourt[] = [
     lessonsAvailable: true,
     rentalAvailable: true,
     pricingText: "Drop-in from $25/hr; founding memberships $1,200/4 months (3x weekly) or $2,200/4 months (5x weekly)",
-    status: "open",
+    status: "temporarily_closed", // seasonal: open June through September 2026; closed for the off-season
     verified: false,
   },
   {

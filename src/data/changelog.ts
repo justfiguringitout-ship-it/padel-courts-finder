@@ -41,6 +41,14 @@ export interface ChangelogEntry {
 export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
+    date: "2026-10-15",
+    type: "updated",
+    title: "Jam Padel closed for the off-season",
+    note: "The Bellevue club runs outdoors from June through September, so it is marked temporarily closed until it announces next season.",
+    clubs: ["Jam Padel"],
+    commit: "PENDING_JAM",
+  },
+  {
     date: "2026-10-13",
     type: "verified",
     title: "Private clubs checked: who can actually play",
