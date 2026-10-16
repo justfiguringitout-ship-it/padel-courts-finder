@@ -41,6 +41,14 @@ export interface ChangelogEntry {
 export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
+    date: "2026-10-16",
+    type: "updated",
+    title: "Wakit Rakit Spring details updated by the club",
+    note: "The club sent new phone number through its owner account. We checked the change before publishing it.",
+    clubs: ["Wakit Rakit Spring"],
+    commit: "087085b",
+  },
+  {
     date: "2026-10-15",
     type: "added",
     title: "EVO Padel added as coming soon in Las Vegas",
