@@ -46,7 +46,7 @@ export const changelog: ChangelogEntry[] = [
     title: "Jam Padel closed for the off-season",
     note: "The Bellevue club runs outdoors from June through September, so it is marked temporarily closed until it announces next season.",
     clubs: ["Jam Padel"],
-    commit: "PENDING_JAM",
+    commit: "8092bbb",
   },
   {
     date: "2026-10-13",
