@@ -41,6 +41,14 @@ export interface ChangelogEntry {
 export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
+    date: "2026-10-15",
+    type: "verified",
+    title: "Wakit Rakit Spring hours confirmed by the club",
+    note: "The club's operations lead confirmed it is open 8 AM to 10 PM every day, Central time, which matches its Google listing.",
+    clubs: ["Wakit Rakit Spring"],
+    commit: "PENDING_WAKIT",
+  },
+  {
     date: "2026-10-13",
     type: "verified",
     title: "Private clubs checked: who can actually play",
