@@ -5660,6 +5660,7 @@ export const padelCourts: PadelCourt[] = [
     status: "open",
     verified: false,
     ogImageUrl: "/images/courts/smash-padel.webp",
+    imageKind: "logo", // brand graphic, not a photo of the courts
   },
   {
     id: 195,
@@ -5791,6 +5792,7 @@ export const padelCourts: PadelCourt[] = [
     status: "open",
     verified: false,
     ogImageUrl: "/images/courts/serve-smash-pickleball-padel-club.webp",
+    imageKind: "logo", // brand graphic, not a photo of the courts
   },
   {
     id: 198,
@@ -7077,6 +7079,7 @@ export const padelCourts: PadelCourt[] = [
     status: "open",
     verified: false,
     ogImageUrl: "/images/courts/padel-united-sports-club.webp",
+    imageKind: "logo", // brand graphic, not a photo of the courts
   },
   {
     id: 267,

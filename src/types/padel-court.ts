@@ -48,6 +48,9 @@ export interface PadelCourt {
   status?: "open" | "coming_soon" | "temporarily_closed"; // Facility status
   ogImageUrl?: string;                                    // OG image URL from club website
   galleryImages?: string[];                                // Additional club-approved photos (hero excluded)
+  imageKind?: "photo" | "logo";                            // What ogImageUrl is. Unset = decided by src/data/club-image-kinds.json (npm run images:classify)
+  photos?: string[];                                       // The club's own court/venue photos for the gallery under the hero. Never stock images.
+  photoCredit?: string;                                    // Who took or supplied the photos, shown under the gallery
   googleMapsPlaceId?: string;                              // Google Maps place_id
   featured?: boolean;                                      // true = featured listing, shows badge + priority placement
 }

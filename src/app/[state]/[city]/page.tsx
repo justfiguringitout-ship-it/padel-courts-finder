@@ -227,48 +227,39 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </div>
 
-      {/* Header */}
-      <section className="grain bg-court relative overflow-hidden py-14 md:py-24">
+      {/* Header: compact, so "Can I play tonight?" and the clubs start on the first screen */}
+      <section className="grain bg-court relative overflow-hidden py-5 md:py-9">
         <HeroVideo />
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl">
-            <div className="flex items-center gap-3 mb-4">
-              <MapPin className="w-8 h-8 text-turf" />
-              <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-                Padel Clubs in {city.name}
-              </h1>
-            </div>
-            <p className="text-xl text-stone-300 mb-6">
-              {customIntro || (
-                <>
-                  {city.name} is home to {openClubs.length} padel {openClubs.length === 1 ? 'club' : 'clubs'}
-                  {totalCourts > 0 ? ` with ${totalCourts}+ courts` : ''}
-                  {state.cities.length > 1 ? `, making it one of ${state.name}'s top destinations for padel` : ` in ${state.name}`}.
-                  {facilityMix ? ` From ${facilityMix} facilities` : ' From modern facilities'}
-                  {lessonsCount > 0 ? ' offering lessons, leagues, and equipment rental' : ''}, {city.name} has options for players of all levels.
-                  Browse all {city.name} padel clubs below to compare pricing, hours, amenities, and player reviews.
-                </>
-              )}
+            <h1 className="flex items-center gap-2.5 text-[1.75rem] leading-tight md:text-5xl font-bold text-white tracking-tight">
+              <MapPin className="w-6 h-6 md:w-8 md:h-8 shrink-0 text-turf" aria-hidden="true" />
+              Padel Clubs in {city.name}
+            </h1>
+            <p className="mt-2 text-[15px] md:text-lg leading-snug text-stone-300 max-w-3xl">
+              {openClubs.length} open {openClubs.length === 1 ? "club" : "clubs"}
+              {totalCourts > 0 ? ` and ${totalCourts}+ courts` : ""}. Compare price per player, hours and
+              courts, then book.
             </p>
             {priceSummary && (
-              <PlayerPriceSummaryLine summary={priceSummary} place={city.name} tone="dark" className="mb-6" />
+              <PlayerPriceSummaryLine summary={priceSummary} place={city.name} tone="dark" className="mt-3 text-sm md:text-base" />
             )}
-            {tonight.clubs.length + tonight.noHours.length > 0 && (
-              <a
-                href="#tonight-heading"
-                className="inline-flex items-center min-h-10 mb-5 px-4 rounded-full bg-turf/90 hover:bg-turf text-court font-semibold text-sm"
-              >
-                Can I play tonight? See who&apos;s open &darr;
-              </a>
-            )}
-            <div className="flex flex-wrap gap-2">
-              <Badge className="text-base px-4 py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
-                <Navigation className="w-4 h-4 mr-2 text-turf" />
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              <Badge className="text-[13px] md:text-base px-2.5 py-0.5 md:px-4 md:py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
+                <Navigation className="w-4 h-4 mr-1.5 text-turf" aria-hidden="true" />
                 {city.courtCount} {city.courtCount === 1 ? 'Club' : 'Clubs'}
               </Badge>
-              <Badge className="text-base px-4 py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
+              <Badge className="text-[13px] md:text-base px-2.5 py-0.5 md:px-4 md:py-2 bg-white/10 text-white border border-white/25 hover:bg-white/15">
                 {city.name}, {state.code}
               </Badge>
+              {tonight.clubs.length + tonight.noHours.length > 0 && (
+                <a
+                  href="#tonight-heading"
+                  className="inline-flex items-center min-h-8 md:min-h-10 px-3 md:px-4 rounded-full bg-turf/90 hover:bg-turf text-court font-semibold text-[13px] md:text-sm"
+                >
+                  Who&apos;s open tonight &darr;
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -276,7 +267,7 @@ export default async function CityPage({ params }: CityPageProps) {
 
       {/* Can I play tonight? */}
       {tonight.clubs.length + tonight.noHours.length > 0 && (
-        <section className="container mx-auto px-4 pt-10 md:pt-12" aria-labelledby="tonight-heading">
+        <section className="container mx-auto px-4 pt-5 md:pt-12" aria-labelledby="tonight-heading">
           <div className="max-w-4xl mx-auto">
             <h2 id="tonight-heading" className="text-2xl font-bold mb-1">
               Can I play tonight in {city.name}?
@@ -434,6 +425,25 @@ export default async function CityPage({ params }: CityPageProps) {
               </Card>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* About padel in the city: the long intro, moved below the club list */}
+      <section className="container mx-auto px-4 py-12" aria-labelledby="about-city">
+        <div className="max-w-4xl mx-auto">
+          <h2 id="about-city" className="text-2xl font-bold mb-3">About padel in {city.name}</h2>
+          <p className="text-base md:text-lg leading-relaxed text-foreground/80">
+            {customIntro || (
+              <>
+                {city.name} is home to {openClubs.length} padel {openClubs.length === 1 ? 'club' : 'clubs'}
+                {totalCourts > 0 ? ` with ${totalCourts}+ courts` : ''}
+                {state.cities.length > 1 ? `, making it one of ${state.name}'s top destinations for padel` : ` in ${state.name}`}.
+                {facilityMix ? ` From ${facilityMix} facilities` : ' From modern facilities'}
+                {lessonsCount > 0 ? ' offering lessons, leagues, and equipment rental' : ''}, {city.name} has options for players of all levels.
+                Browse all {city.name} padel clubs above to compare pricing, hours, amenities, and player reviews.
+              </>
+            )}
+          </p>
         </div>
       </section>
 

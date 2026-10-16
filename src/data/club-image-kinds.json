@@ -1,0 +1,1443 @@
+{
+  "/images/courts/10by20-padel-downtown-fort-lauderdale.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1600
+  },
+  "/images/courts/10by20-padel-fort-lauderdale.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1600
+  },
+  "/images/courts/40forty-padel-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 746
+  },
+  "/images/courts/9co-padel-at-cloud-9-park.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 180,
+      "y": 269,
+      "w": 840,
+      "h": 138
+    },
+    "bg": "#f5f5f5"
+  },
+  "/images/courts/access-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/alma-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 794
+  },
+  "/images/courts/amarillo-national-tennis-center.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/arena-sports-usa.jpg": {
+    "kind": "photo",
+    "width": 900,
+    "height": 1600
+  },
+  "/images/courts/arena-ssc-wynwood.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 630
+  },
+  "/images/courts/aspen-padel-club.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 180,
+      "y": 269,
+      "w": 840,
+      "h": 138
+    },
+    "bg": "#f5f5f5"
+  },
+  "/images/courts/austin-padel-center-pop-up.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 827
+  },
+  "/images/courts/ballers-boston-seaport.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 630
+  },
+  "/images/courts/ballers-philly.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 630
+  },
+  "/images/courts/banner-house-at-t-bar-m.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 544
+  },
+  "/images/courts/bay-padel-dogpatch.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/bay-padel-sunnyvale.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1600
+  },
+  "/images/courts/bay-padel-treasure-island.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/bmorepadel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/boulevard-tennis-padel-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/brisas-east-hampton.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 628
+  },
+  "/images/courts/brisas.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/brook-bound-inn.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/bush-tennis-center-texas-padel.jpg": {
+    "kind": "photo",
+    "width": 862,
+    "height": 485
+  },
+  "/images/courts/camelback-padel-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/canas-racket-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/casas-padel-club-aventura.jpg": {
+    "kind": "photo",
+    "width": 1152,
+    "height": 1326
+  },
+  "/images/courts/cascades-tennis.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 371,
+      "y": 152,
+      "w": 458,
+      "h": 371
+    },
+    "bg": "#f5f5f5"
+  },
+  "/images/courts/centercourt-morristown.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/champions-padel-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/charlotte-padel-club-matthews.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 220,
+      "y": 237,
+      "w": 775,
+      "h": 187
+    },
+    "bg": "#0f1827"
+  },
+  "/images/courts/charlotte-padel-club-south-charlotte.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 220,
+      "y": 237,
+      "w": 775,
+      "h": 187
+    },
+    "bg": "#0f1827"
+  },
+  "/images/courts/cincinnati-open-sporting-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/cityview-racquet-club.jpg": {
+    "kind": "photo",
+    "width": 1086,
+    "height": 1600
+  },
+  "/images/courts/cleveland-premier-pickleball-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/club-padel-newtown.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/club-pickle-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 904
+  },
+  "/images/courts/columbus-padel-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/cube-padel-chicago-bridgeport.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 628
+  },
+  "/images/courts/cube-padel-chicago.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 628
+  },
+  "/images/courts/cube-padel-houston.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 628
+  },
+  "/images/courts/dallas-padel-club.jpg": {
+    "kind": "photo",
+    "width": 720,
+    "height": 720
+  },
+  "/images/courts/denver-racquets-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/dorado-beach-sports-hub.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 801
+  },
+  "/images/courts/dus-padel.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 630,
+    "why": "small and flat",
+    "mark": {
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 630
+    },
+    "bg": "#010101"
+  },
+  "/images/courts/ecos-sports-park.jpg": {
+    "kind": "photo",
+    "width": 1180,
+    "height": 780
+  },
+  "/images/courts/elite-sports-club-at-111-west-57th-street.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/emerald-padel-club.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 630,
+    "why": "small and flat",
+    "mark": {
+      "x": 277,
+      "y": 200,
+      "w": 607,
+      "h": 213
+    },
+    "bg": "#faf8e9"
+  },
+  "/images/courts/esl-padel.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 485,
+      "y": 172,
+      "w": 207,
+      "h": 336
+    },
+    "bg": "#ffffff"
+  },
+  "/images/courts/flyte-racquet-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/fort-wayne-country-club.webp": {
+    "kind": "photo",
+    "width": 600,
+    "height": 360
+  },
+  "/images/courts/foundry-padel.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 630,
+    "why": "small and flat",
+    "mark": {
+      "x": 340,
+      "y": 130,
+      "w": 520,
+      "h": 370
+    },
+    "bg": "#2f3e39"
+  },
+  "/images/courts/giammalva-padel-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/glassbox-padel-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1600
+  },
+  "/images/courts/i95-padel-club-miami.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1600
+  },
+  "/images/courts/icon-padel-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/imgn-park.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 554
+  },
+  "/images/courts/incredibowl-pickle-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/ipadel-houston.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/isleworth-golf-country-club.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 180,
+      "y": 264,
+      "w": 840,
+      "h": 148
+    },
+    "bg": "#fefefe"
+  },
+  "/images/courts/itp-training-academy.jpg": {
+    "kind": "photo",
+    "width": 1179,
+    "height": 664
+  },
+  "/images/courts/kinetic-indoor-racquet-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/kraken-padel-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 652
+  },
+  "/images/courts/la-casa-del-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/la-valle-coastal-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/lake-padel-orlando.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/legio-gp-padel-world.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/lets-go-pickleball-padel.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 422,
+      "y": 159,
+      "w": 357,
+      "h": 357
+    },
+    "bg": "#f5f5f5"
+  },
+  "/images/courts/lobbs-padel.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 630
+  },
+  "/images/courts/los-angeles-padel-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/mainland-sports-complex.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/marcos-del-pilar-padel-usa.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/matrix-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 758
+  },
+  "/images/courts/matts-pickle-and-padel.jpg": {
+    "kind": "photo",
+    "width": 851,
+    "height": 315
+  },
+  "/images/courts/mesa-padel-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/mink-padel.jpg": {
+    "kind": "photo",
+    "width": 979,
+    "height": 559
+  },
+  "/images/courts/mondo-padel.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 372,
+      "y": 269,
+      "w": 456,
+      "h": 136
+    },
+    "bg": "#0e1a23"
+  },
+  "/images/courts/new-canaan-field-club.webp": {
+    "kind": "photo",
+    "width": 800,
+    "height": 1067
+  },
+  "/images/courts/new-rochelle-indoor-sports.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/nicol-rackets.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/north-hills-club-inc.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/north-texas-racquet-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/northpoint-padel.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 377,
+      "y": 208,
+      "w": 446,
+      "h": 261
+    },
+    "bg": "#ffffff"
+  },
+  "/images/courts/one-indoor-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/open-padel-club-by-lasaigues.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/orlando-padel-club-indoor.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 300,
+      "y": 272,
+      "w": 598,
+      "h": 251
+    },
+    "bg": "#ffffff"
+  },
+  "/images/courts/p1-padel-las-vegas.jpg": {
+    "kind": "photo",
+    "width": 1024,
+    "height": 683
+  },
+  "/images/courts/paddles-up-east-setauket.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 420,
+      "y": 159,
+      "w": 352,
+      "h": 345
+    },
+    "bg": "#f5f5f5"
+  },
+  "/images/courts/padel-9.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 649
+  },
+  "/images/courts/padel-956.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/padel-alley.jpg": {
+    "kind": "photo",
+    "width": 479,
+    "height": 770
+  },
+  "/images/courts/padel-az.jpg": {
+    "kind": "photo",
+    "width": 1024,
+    "height": 477
+  },
+  "/images/courts/padel-boston.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 221,
+      "y": 233,
+      "w": 736,
+      "h": 209
+    },
+    "bg": "#20272b"
+  },
+  "/images/courts/padel-break-point.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/padel-california-whittier.webp": {
+    "kind": "photo",
+    "width": 715,
+    "height": 953
+  },
+  "/images/courts/padel-california.webp": {
+    "kind": "photo",
+    "width": 715,
+    "height": 953
+  },
+  "/images/courts/padel-club-austin.jpg": {
+    "kind": "photo",
+    "width": 1067,
+    "height": 1600
+  },
+  "/images/courts/padel-club-ct-padel-smash-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/padel-club-el-paso.jpg": {
+    "kind": "photo",
+    "width": 1179,
+    "height": 664
+  },
+  "/images/courts/padel-club-palm-beach.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/padel-clube.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 195,
+      "y": 195,
+      "w": 805,
+      "h": 281
+    },
+    "bg": "#f5f5f5"
+  },
+  "/images/courts/padel-country-club-memorial.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/padel-haus-atlanta.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 625
+  },
+  "/images/courts/padel-haus-dumbo.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 625
+  },
+  "/images/courts/padel-haus-greenpoint.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 625
+  },
+  "/images/courts/padel-haus-nashville.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 625
+  },
+  "/images/courts/padel-highway.webp": {
+    "kind": "photo",
+    "width": 800,
+    "height": 1067
+  },
+  "/images/courts/padel-in-orlando.jpg": {
+    "kind": "photo",
+    "width": 1030,
+    "height": 1408
+  },
+  "/images/courts/padel-life-soccer.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/padel-mke.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 877
+  },
+  "/images/courts/padel-n9ne.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/padel-pals.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/padel-park-inc.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 672,
+    "why": "small and flat",
+    "mark": {
+      "x": 327,
+      "y": 275,
+      "w": 544,
+      "h": 121
+    },
+    "bg": "#f5f3ef"
+  },
+  "/images/courts/padel-paso.jpg": {
+    "kind": "photo",
+    "width": 1179,
+    "height": 664
+  },
+  "/images/courts/padel-pickle.jpg": {
+    "kind": "photo",
+    "width": 600,
+    "height": 800
+  },
+  "/images/courts/padel-plant.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/padel-plus-indoor-racquet-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1500
+  },
+  "/images/courts/padel-point-miami.jpg": {
+    "kind": "photo",
+    "width": 1057,
+    "height": 1600
+  },
+  "/images/courts/padel-quattro.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 630,
+    "why": "small and flat",
+    "mark": {
+      "x": 457,
+      "y": 133,
+      "w": 290,
+      "h": 366
+    },
+    "bg": "#0083bd"
+  },
+  "/images/courts/padel-ranch.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/padel-social-bethesda.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 554
+  },
+  "/images/courts/padel-society.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/padel-square.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/padel-united-sports-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 950
+  },
+  "/images/courts/padel-up-century-city.jpg": {
+    "kind": "photo",
+    "width": 827,
+    "height": 827
+  },
+  "/images/courts/padel-up-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 464
+  },
+  "/images/courts/padel-up-culver-city.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 464
+  },
+  "/images/courts/padel-up-sterling.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/padel-world-play.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/padel-x-boca-raton.webp": {
+    "kind": "photo",
+    "width": 800,
+    "height": 1200
+  },
+  "/images/courts/padel-x-miami.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/padel39-east-austin.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1200
+  },
+  "/images/courts/padel39-north-austin.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 630
+  },
+  "/images/courts/padelhub.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 474
+  },
+  "/images/courts/padelphia.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/palm-beach-padel.webp": {
+    "kind": "photo",
+    "width": 800,
+    "height": 1142
+  },
+  "/images/courts/park-padel-embarcadero.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/park-padel-oyster-point.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 802
+  },
+  "/images/courts/park-padel-west-sacramento.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 577
+  },
+  "/images/courts/patl-louisville.jpg": {
+    "kind": "photo",
+    "width": 960,
+    "height": 540
+  },
+  "/images/courts/pick-and-padel-san-antonio.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/pickle-n-pins.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 785,
+    "why": "small and flat",
+    "mark": {
+      "x": 197,
+      "y": 312,
+      "w": 811,
+      "h": 162
+    },
+    "bg": "#191e2a"
+  },
+  "/images/courts/piedmont-driving-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1600
+  },
+  "/images/courts/pine-hollow-club.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 406,
+      "y": 203,
+      "w": 388,
+      "h": 269
+    },
+    "bg": "#0e1a23"
+  },
+  "/images/courts/pine-valley-swim-tennis-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/platinum-padel-club.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 421,
+      "y": 154,
+      "w": 359,
+      "h": 367
+    },
+    "bg": "#0f1827"
+  },
+  "/images/courts/playpadel-coral-gables.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/pops-padel.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/portres-sports-club.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 404,
+      "y": 178,
+      "w": 371,
+      "h": 316
+    },
+    "bg": "#f5f5f5"
+  },
+  "/images/courts/proximo-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 701
+  },
+  "/images/courts/pudl-padel.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 691
+  },
+  "/images/courts/pulse-padel-hub.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 801
+  },
+  "/images/courts/pura-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/pure-pickleball-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/racket-social-club-alpharetta.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/racket-social-club-denver.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/racket-social-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1600
+  },
+  "/images/courts/rad-padel.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 630,
+    "why": "flat graphic",
+    "mark": {
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 630
+    },
+    "bg": "#000000"
+  },
+  "/images/courts/rax-new-jersey.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/rcw-athletic-club.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 448,
+      "y": 283,
+      "w": 305,
+      "h": 109
+    },
+    "bg": "#ffffff"
+  },
+  "/images/courts/real-padel-miami.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 595,
+    "why": "small and flat",
+    "mark": {
+      "x": 394,
+      "y": 249,
+      "w": 407,
+      "h": 103
+    },
+    "bg": "#212d44"
+  },
+  "/images/courts/regency-padel-miami.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 648,
+    "why": "small and flat",
+    "mark": {
+      "x": 192,
+      "y": 210,
+      "w": 829,
+      "h": 214
+    },
+    "bg": "#09144e"
+  },
+  "/images/courts/reserve-padel-design-district.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 899
+  },
+  "/images/courts/reserve-padel-hudson-yards.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 902
+  },
+  "/images/courts/reserve-padel-seaplane-base.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 899
+  },
+  "/images/courts/reserve-padel-sol-mia.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 899
+  },
+  "/images/courts/reserve-padel-upper-east-side.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 899
+  },
+  "/images/courts/rgv-padel-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/rgv-padel-pickleball-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/riviera-tennis-center.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 899
+  },
+  "/images/courts/rock-creek-tennis-center.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1600
+  },
+  "/images/courts/roy-barth-tennis-center.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/rxpadel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/santa-monica-pickleball-and-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/sb-padel-houston.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/sensa-padel-boston.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1064
+  },
+  "/images/courts/sensa-padel-nashville.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 682
+  },
+  "/images/courts/serve-el-paso.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 630
+  },
+  "/images/courts/serve-smash-pickleball-padel-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 630
+  },
+  "/images/courts/slc-padel-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1600
+  },
+  "/images/courts/slice-padel-co.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/smart-padel-house.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/smash-padel.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 630
+  },
+  "/images/courts/sodo-padel.webp": {
+    "kind": "photo",
+    "width": 997,
+    "height": 1330
+  },
+  "/images/courts/southpadel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/stadio-soccer.webp": {
+    "kind": "photo",
+    "width": 957,
+    "height": 954
+  },
+  "/images/courts/sunset-padel.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/svb-tennis-wellness-center.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/taktika-padel-fairmont-grand-del-mar.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/taktika-padel-la-galaxy.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/taktika-padel-palm-desert.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 904
+  },
+  "/images/courts/taktika-padel-san-diego.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/taktika-padel-stockton.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 802
+  },
+  "/images/courts/tempo-padel-pickleball-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 674
+  },
+  "/images/courts/the-cliffs-at-mountain-park.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/the-club-at-monroe.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/the-courthouse.webp": {
+    "kind": "photo",
+    "width": 820,
+    "height": 510
+  },
+  "/images/courts/the-courts-at-montauk-yacht-club-2.webp": {
+    "kind": "photo",
+    "width": 933,
+    "height": 1400
+  },
+  "/images/courts/the-courts-at-montauk-yacht-club-3.webp": {
+    "kind": "photo",
+    "width": 933,
+    "height": 1400
+  },
+  "/images/courts/the-courts-at-montauk-yacht-club-4.webp": {
+    "kind": "photo",
+    "width": 933,
+    "height": 1400
+  },
+  "/images/courts/the-courts-at-montauk-yacht-club-5.webp": {
+    "kind": "photo",
+    "width": 933,
+    "height": 1400
+  },
+  "/images/courts/the-courts-at-montauk-yacht-club-6.webp": {
+    "kind": "photo",
+    "width": 933,
+    "height": 1400
+  },
+  "/images/courts/the-courts-at-montauk-yacht-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/the-drop-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/the-gables-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/the-greens-country-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/the-heights-racquet-and-social-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/the-houstonian-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/the-king-of-padel-san-antonio.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/the-one-padel-club.webp": {
+    "kind": "photo",
+    "width": 612,
+    "height": 408
+  },
+  "/images/courts/the-pad-sarasota.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/the-pad-tucson.jpg": {
+    "kind": "photo",
+    "width": 720,
+    "height": 809
+  },
+  "/images/courts/the-padel-club.webp": {
+    "kind": "photo",
+    "width": 800,
+    "height": 1200
+  },
+  "/images/courts/the-padel-courts.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/the-padel-nomads.jpg": {
+    "kind": "photo",
+    "width": 1024,
+    "height": 683
+  },
+  "/images/courts/the-parker-racquet-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 630
+  },
+  "/images/courts/the-racquet-lounge.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 630
+  },
+  "/images/courts/the-seawane-club.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 180,
+      "y": 276,
+      "w": 841,
+      "h": 124
+    },
+    "bg": "#f5f5f5"
+  },
+  "/images/courts/the-set-padel-haus.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 674
+  },
+  "/images/courts/the-sports-haus.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 904
+  },
+  "/images/courts/three-rackets.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/tucson-racquet-fitness-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/courts/u-padel-club-san-antonio.webp": {
+    "kind": "photo",
+    "width": 800,
+    "height": 1067
+  },
+  "/images/courts/u-padel-club-the-woodlands.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 1600
+  },
+  "/images/courts/ultra-padel-club-aventura.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 630,
+    "why": "small and flat",
+    "mark": {
+      "x": 226,
+      "y": 51,
+      "w": 748,
+      "h": 527
+    },
+    "bg": "#ffffff"
+  },
+  "/images/courts/ultra-padel-club.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 630,
+    "why": "small and flat",
+    "mark": {
+      "x": 226,
+      "y": 51,
+      "w": 748,
+      "h": 527
+    },
+    "bg": "#ffffff"
+  },
+  "/images/courts/union-padel-club.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  },
+  "/images/courts/usta-national-campus.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/vamos-racquets.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 630,
+    "why": "small and flat",
+    "mark": {
+      "x": 198,
+      "y": 233,
+      "w": 804,
+      "h": 164
+    },
+    "bg": "#2f2924"
+  },
+  "/images/courts/viva-padel-flourtown.jpg": {
+    "kind": "photo",
+    "width": 900,
+    "height": 1600
+  },
+  "/images/courts/wakit-rakit-space-coast.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/wakit-rakit-spring.webp": {
+    "kind": "photo",
+    "width": 896,
+    "height": 1200
+  },
+  "/images/courts/wepadel.webp": {
+    "kind": "logo",
+    "width": 1200,
+    "height": 675,
+    "why": "small and flat",
+    "mark": {
+      "x": 389,
+      "y": 289,
+      "w": 422,
+      "h": 98
+    },
+    "bg": "#f5f5f5"
+  },
+  "/images/courts/west43-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/wynwood-padel-club.webp": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/xcel-padel-westlake.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 900
+  },
+  "/images/courts/xcel-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 590
+  },
+  "/images/courts/zmash-padel.jpg": {
+    "kind": "photo",
+    "width": 1200,
+    "height": 800
+  }
+}

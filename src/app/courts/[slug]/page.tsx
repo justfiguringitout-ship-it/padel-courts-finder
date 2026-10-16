@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,7 +10,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import {
   MapPin, Star, Phone, Globe, Mail, Calendar, CheckCircle, UtensilsCrossed, Dumbbell, Armchair,
-  GraduationCap, Navigation, BadgeCheck, History, Hourglass, ArrowRight,
+  GraduationCap, Navigation, Hourglass, ArrowRight, LayoutGrid, Warehouse, Sun, Users, KeyRound,
 } from "lucide-react";
 import {
   getAllAdaptedCourtSlugs,
@@ -41,6 +40,10 @@ import { ClubHours } from "@/components/club-page/club-hours";
 import { ClubCorrectionForm } from "@/components/club-page/club-correction-form";
 import { MembershipLeadForm } from "@/components/club-page/membership-lead-form";
 import { MapBoundary } from "@/components/club-page/map-boundary";
+import { ClubHero, type HeroAction, type HeroFact } from "@/components/club-page/club-hero";
+import { ClubGallery } from "@/components/club-page/club-gallery";
+import { ClubMobileBar } from "@/components/club-page/club-mobile-bar";
+import { getClubMedia } from "@/lib/club-media";
 import { cityBlogSlugs } from "@/data/page-content";
 import { getStates } from "@/lib/site-structure";
 import type { Metadata } from "next";
@@ -172,12 +175,25 @@ export default async function CourtPage({ params }: CourtPageProps) {
     return [];
   });
 
-  type Action = { key: string; label: string; href: string; icon: React.ReactNode; kind: "website" | "phone"; external: boolean };
-  const actions: Action[] = [];
-  if (court.bookingUrl) actions.push({ key: "book", label: "Book", href: court.bookingUrl, icon: <Calendar />, kind: "website", external: true });
-  if (court.website) actions.push({ key: "web", label: "Website", href: court.website, icon: <Globe />, kind: "website", external: true });
-  if (directionsUrl) actions.push({ key: "dir", label: "Directions", href: directionsUrl, icon: <Navigation />, kind: "website", external: true });
-  if (court.phone) actions.push({ key: "call", label: "Call", href: `tel:${court.phone}`, icon: <Phone />, kind: "phone", external: false });
+  const media = getClubMedia(court);
+
+  const bookAction: HeroAction | undefined = court.bookingUrl
+    ? { key: "book", label: "Book", href: court.bookingUrl, icon: <Calendar aria-hidden="true" />, kind: "website", external: true }
+    : undefined;
+  const webAction: HeroAction | undefined = court.website
+    ? { key: "web", label: "Website", href: court.website, icon: <Globe aria-hidden="true" />, kind: "website", external: true }
+    : undefined;
+  const dirAction: HeroAction | undefined = directionsUrl
+    ? { key: "dir", label: "Directions", href: directionsUrl, icon: <Navigation aria-hidden="true" />, kind: "website", external: true }
+    : undefined;
+  const callAction: HeroAction | undefined = court.phone
+    ? { key: "call", label: "Call", href: `tel:${court.phone}`, icon: <Phone aria-hidden="true" />, kind: "phone", external: false }
+    : undefined;
+  const isAction = (a: HeroAction | undefined): a is HeroAction => !!a;
+  // Hero: Book (or Website when there is no booking link), Directions, Call.
+  const heroActions = [bookAction ?? webAction, dirAction, callAction].filter(isAction);
+  // Phone bar: Directions, then the primary action on the right under the thumb.
+  const barActions = [dirAction, bookAction ?? webAction].filter(isAction);
 
   const onSite: Array<{ label: string; icon: React.ReactNode }> = [];
   if (court.lessonsAvailable) onSite.push({ label: "Lessons", icon: <GraduationCap /> });
@@ -199,7 +215,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
             ? "under a roof"
             : "open air";
   const priceFact = price
-    ? { value: price.perCourtHour, sub: price.basisNote ? "per court hour, peak" : "per court hour", sub2: `${price.perPlayer} per player` }
+    ? { value: price.perPlayer, sub: price.basisNote ? "per player, peak hour" : "per player, per hour", sub2: `${price.perCourtHour} per court hour` }
     : court.pricingText
       ? { value: "See prices", sub: court.membersOnly ? "membership details below" : "details below" }
       : comingSoon
@@ -217,16 +233,25 @@ export default async function CourtPage({ params }: CourtPageProps) {
       : court.membersOnly === false
         ? { value: "Open to public", sub: comingSoon ? "once it opens" : "no membership needed" }
         : { value: "Not confirmed", sub: "ask about guest play" };
-  const facts = [
+  const facts: HeroFact[] = [
     {
       label: "Courts",
+      icon: <LayoutGrid />,
       value: layout.total > 0 ? String(layout.total) : "Not confirmed",
       sub: layout.total > 0 ? `${layout.total === 1 ? "court" : "courts"}${comingSoon ? " planned" : ""}` : "court count",
       mono: layout.total > 0,
     },
-    { label: "Setting", value: settingValue, sub: settingSub, mono: false },
-    { label: "Price", value: priceFact.value, sub: priceFact.sub, sub2: "sub2" in priceFact ? priceFact.sub2 : undefined, mono: !!price, href: court.pricingText ? "#prices" : undefined },
-    { label: "Access", value: accessFact.value, sub: accessFact.sub, mono: false },
+    { label: "Setting", icon: layout.setting === "outdoor" ? <Sun /> : <Warehouse />, value: settingValue, sub: settingSub },
+    {
+      label: "Price per player",
+      icon: <Users />,
+      value: priceFact.value,
+      sub: priceFact.sub,
+      sub2: "sub2" in priceFact ? priceFact.sub2 : undefined,
+      mono: !!price,
+      href: court.pricingText ? "#prices" : undefined,
+    },
+    { label: "Access", icon: <KeyRound />, value: accessFact.value, sub: accessFact.sub },
   ];
 
   const hasReviews = court.rating.ratingValue > 0 && court.rating.reviewCount > 0;
@@ -258,8 +283,8 @@ export default async function CourtPage({ params }: CourtPageProps) {
             telephone: court.phone,
             email: court.email,
             url: court.website || `https://www.padelcourtsfinder.com/courts/${court.slug}`,
-            image: court.images.map((img) =>
-              img.url.startsWith("/") ? `https://www.padelcourtsfinder.com${img.url}` : img.url
+            image: [...new Set([...court.images.map((img) => img.url), ...media.gallery.map((p) => p.src)])].map((url) =>
+              url.startsWith("/") ? `https://www.padelcourtsfinder.com${url}` : url
             ),
             ...(court.rating.ratingValue > 0 && court.rating.reviewCount > 0 ? {
               aggregateRating: {
@@ -320,154 +345,53 @@ export default async function CourtPage({ params }: CourtPageProps) {
       </div>
 
       {/* Hero: who, where, can I play, how much, how to book */}
-      <section className="club-hero">
-        <div className="container mx-auto px-4 pt-6 pb-8 lg:pt-10 lg:pb-12">
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-10 lg:items-start">
-            <div className="min-w-0">
-              <div className="flex flex-wrap items-center gap-2 mb-3">
-                {isOpenClub && (
-                  <span className="club-chip club-chip-open">
-                    <span className="club-chip-dot" aria-hidden="true" />
-                    Open for play
-                  </span>
-                )}
-                {comingSoon && (
-                  <span className="club-chip club-chip-soon">
-                    <Hourglass aria-hidden="true" />
-                    Coming soon
-                  </span>
-                )}
-                {tempClosed && <span className="club-chip club-chip-closed">Temporarily closed</span>}
-                {court.featured && (
-                  <Badge className="bg-amber-500 hover:bg-amber-600 text-white">Featured Club</Badge>
-                )}
-                {court.membersOnly && <span className="club-chip club-chip-private">{court.access === "residents_only" ? "Residents only" : "Private club"}</span>}
-                {stamp && (
-                  <span
-                    className={`club-stamp ${stamp.kind === "verified" ? "is-verified" : "is-updated"}`}
-                    title={stamp.kind === "verified" ? "A person checked these details against the club's own sources" : undefined}
-                  >
-                    {stamp.kind === "verified" ? <BadgeCheck aria-hidden="true" /> : <History aria-hidden="true" />}
-                    <span>
-                      {stamp.kind === "verified" && <span className="sr-only">Verified. </span>}
-                      <time dateTime={stamp.date}>{stamp.text}</time>
-                    </span>
-                  </span>
-                )}
-              </div>
+      <ClubHero
+        name={court.name}
+        media={media}
+        street={court.address.streetAddress || undefined}
+        cityLabel={`${court.address.city}, ${court.address.stateCode}`}
+        cityHref={stateInfo ? `/${stateInfo.slug}/${citySlug}` : undefined}
+        rating={hasReviews ? { value: court.rating.ratingValue, count: court.rating.reviewCount } : undefined}
+        status={court.status}
+        hours={{ published: hours.published, days: hours.days }}
+        timeZone={timeZone}
+        featured={court.featured}
+        privateLabel={court.membersOnly ? (court.access === "residents_only" ? "Residents only" : "Private club") : undefined}
+        stamp={stamp}
+        actions={heroActions}
+        leadHref={showLeadForm ? "#membership" : undefined}
+        facts={facts}
+        courts={court.facility.totalCourts}
+        note={
+          !court.bookingUrl && platform && !comingSoon ? (
+            <>
+              Courts are booked on <span className="font-medium text-white">{platform}</span>. Search for the club in the
+              app, or start from its website.
+            </>
+          ) : undefined
+        }
+      />
 
-              <h1 className="font-display text-[2rem] leading-[1.08] sm:text-4xl lg:text-5xl font-bold tracking-tight">
-                {court.name}
-              </h1>
-
-              <p className="mt-2.5 flex items-start gap-1.5 text-[15px] text-muted-foreground">
-                <MapPin className="w-4 h-4 mt-[3px] shrink-0 text-padel-green" aria-hidden="true" />
-                <span>
-                  {court.address.streetAddress ? `${court.address.streetAddress}, ` : ""}
-                  {stateInfo ? (
-                    <Link href={`/${stateInfo.slug}/${citySlug}`} className="text-foreground/80 underline decoration-border underline-offset-4 hover:text-padel-green-dark hover:decoration-padel-green">
-                      {court.address.city}, {court.address.stateCode}
-                    </Link>
-                  ) : (
-                    <>{court.address.city}, {court.address.stateCode}</>
-                  )}
-                </span>
-              </p>
-
-              {hasReviews && (
-                <p className="mt-2 flex items-center gap-1.5 text-sm">
-                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" aria-hidden="true" />
-                  <span className="font-semibold">{court.rating.ratingValue}</span>
-                  <span className="text-muted-foreground">({court.rating.reviewCount} reviews)</span>
-                </p>
-              )}
-
-              {comingSoon && (
-                <div className="club-soon-note" role="note">
-                  <Hourglass aria-hidden="true" />
-                  <p>
-                    <strong>Not open yet.</strong> You cannot book courts here today. What follows is what the club
-                    has announced so far, and we update it as opening gets closer.
-                  </p>
-                </div>
-              )}
-              {tempClosed && (
-                <div className="club-soon-note is-closed" role="note">
-                  <p>
-                    <strong>Temporarily closed.</strong> Check with the club before you go.
-                  </p>
-                </div>
-              )}
-
-              {/* Key facts */}
-              <dl className="club-facts">
-                {facts.map((f) => (
-                  <div key={f.label} className="club-fact">
-                    <dt>{f.label}</dt>
-                    <dd>
-                      {f.href ? (
-                        <a href={f.href} className={`club-fact-value hover:text-padel-green-dark ${f.mono ? "font-mono tracking-tight" : ""}`}>
-                          {f.value}
-                        </a>
-                      ) : (
-                        <span className={`club-fact-value ${f.mono ? "font-mono tracking-tight" : ""}`}>{f.value}</span>
-                      )}
-                      <span className="club-fact-sub">{f.sub}</span>
-                      {"sub2" in f && f.sub2 ? <span className="club-fact-sub font-medium text-foreground/70">{f.sub2}</span> : null}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-
-              {/* Primary actions: only the ones that exist */}
-              {(actions.length > 0 || showLeadForm) && (
-                <div
-                  className="club-actions"
-                  style={{ ["--club-actions" as string]: Math.max(actions.length, 1) }}
-                >
-                  {actions.map((a, i) => (
-                    <TrackedLink
-                      key={a.key}
-                      href={a.href}
-                      type={a.kind}
-                      clubName={court.name}
-                      className={`club-action ${i === 0 ? "is-primary" : ""}`}
-                      {...(a.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    >
-                      {a.icon}
-                      <span>{a.label}</span>
-                    </TrackedLink>
-                  ))}
-                  {showLeadForm && (
-                    <a href="#membership" className="club-action is-lead">
-                      <Mail aria-hidden="true" />
-                      <span>Ask about membership</span>
-                    </a>
-                  )}
-                </div>
-              )}
-              {!court.bookingUrl && platform && !comingSoon && (
-                <p className="mt-3 text-sm text-muted-foreground">
-                  Courts are booked on <span className="font-medium text-foreground">{platform}</span>. Search
-                  for the club in the app, or start from its website.
-                </p>
-              )}
-            </div>
-
-            {/* Photo, or the designed court placeholder when there is none */}
-            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border bg-court shadow-sm">
-              <ClubImage
-                src={court.heroImage || court.images[0]?.url}
-                alt={court.name}
-                courts={court.facility.totalCourts}
-                className="object-cover"
-                sizes="(min-width: 1024px) 45vw, 100vw"
-                priority
-              />
-            </div>
+      <div className="container mx-auto px-4">
+        {comingSoon && (
+          <div className="club-soon-note" role="note">
+            <Hourglass aria-hidden="true" />
+            <p>
+              <strong>Not open yet.</strong> You cannot book courts here today. What follows is what the club
+              has announced so far, and we update it as opening gets closer.
+            </p>
           </div>
-        </div>
-      </section>
+        )}
+        {tempClosed && (
+          <div className="club-soon-note is-closed" role="note">
+            <p>
+              <strong>Temporarily closed.</strong> Check with the club before you go.
+            </p>
+          </div>
+        )}
+        {/* The club's own photos, only when it has supplied them */}
+        {media.gallery.length > 0 && <ClubGallery name={court.name} photos={media.gallery} credit={media.photoCredit} />}
+      </div>
 
       <div className="container mx-auto px-4 pb-12">
         {/* Members-only clubs: ask about membership or a guest pass */}
@@ -743,22 +667,6 @@ export default async function CourtPage({ params }: CourtPageProps) {
               </section>
             )}
 
-            {/* Photo gallery — only when the club has supplied more than one real photo */}
-            {court.images.length > 1 && (
-              <section className="club-card" aria-labelledby="club-photos">
-                <div className="club-section-head">
-                  <h2 id="club-photos" className="club-h2">Photos</h2>
-                </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                  {court.images.slice(1).map((img) => (
-                    <div key={img.url} className="relative aspect-[3/4] rounded-lg overflow-hidden border">
-                      <ClubImage src={img.url} alt={img.alt} className="object-cover" sizes="(min-width: 768px) 22vw, 50vw" />
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )}
-
             {/* Map */}
             <MapBoundary address={fullAddress} mapsUrl={court.googleMapsUrl}>
               <ClubMapClient
@@ -879,6 +787,9 @@ export default async function CourtPage({ params }: CourtPageProps) {
         {/* Gear Widget */}
         <GearWidget />
       </div>
+
+      {/* Phones: Directions + Book/Website stay in reach while scrolling */}
+      <ClubMobileBar name={court.name} actions={barActions} />
     </div>
   );
 }
