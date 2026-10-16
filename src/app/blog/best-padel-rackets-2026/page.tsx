@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const RACKETS: GearRacket[] = [
   { id: "nox-at10-18k", rank: 1, name: "NOX AT10 Genius 18K Alum", productName: "NOX AT10 Genius 18K", price: "$259.99", href: "https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20", brand: "nox", shape: "teardrop", shapeLabel: "Teardrop", weight: "360–375g", core: "MLD Black EVA", face: "18K Aluminized Carbon", bestFor: "All-court advanced players who want versatility", balance: "Adjustable", level: "Advanced" },
   { id: "babolat-viper", rank: 2, name: "Babolat Technical Viper Juan Lebrón", productName: "Babolat Technical Viper", price: "$229.99", href: "https://www.amazon.com/dp/B0DPH3GZGN?tag=padel02-20", brand: "babolat", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "Hard EVA", face: "3K Carbon", bestFor: "Aggressive players with strong technique", balance: "High", level: "Advanced" },
-  { id: "adidas-metalbone", rank: 3, name: "Adidas Metalbone 3.4 (Ale Galán)", productName: "Adidas Metalbone 3.4", price: "$263.00", href: "https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20", brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–360g (+12g adjustable)", core: "EVA Soft Performance", face: "Carbon Aluminized 16K", bestFor: "Players who want tunable weight and balance", balance: "Adjustable", level: "Advanced" },
+  { id: "adidas-metalbone", rank: 3, name: "Adidas Metalbone 3.4 (Ale Galán)", productName: "Adidas Metalbone 3.4", price: "$283.00", href: "https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20", brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–360g (+12g adjustable)", core: "EVA Soft Performance", face: "Carbon Aluminized 16K", bestFor: "Players who want tunable weight and balance", balance: "Adjustable", level: "Advanced" },
   { id: "head-extreme-pro", rank: 4, name: "HEAD Extreme Pro", productName: "HEAD Extreme Pro", price: "$299.95", href: "https://www.amazon.com/dp/B0FNRQ839K?tag=padel02-20", brand: "head", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "Power Foam", face: "UD Carbon HS", bestFor: "Left-side attackers and tournament competitors", balance: "High", level: "Advanced" },
   { id: "wilson-bela-v3", rank: 5, name: "Wilson Bela Pro V3", productName: "Wilson Bela Pro V3", price: "$399.00", href: "https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20", brand: "wilson", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "High-density foam", face: "24K Carbon", bestFor: "Advanced players who want the finest materials", balance: "Head-heavy", level: "Advanced" },
 ];
@@ -123,7 +123,7 @@ export default function ProRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "Adidas Metalbone 3.4 (Ale Galán)",
           "description": "Best for: Players who want tunable weight and balance",
-          "offers": { "@type": "Offer", "price": "263.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" },
+          "offers": { "@type": "Offer", "price": "283.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" },
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.0, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -350,7 +350,7 @@ export default function ProRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#3 — Best Customization</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">Adidas Metalbone 3.4 (Ale Gal&aacute;n)</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$263.00</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$283.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Players who want tunable weight and balance</p>
                 <RacketPlate racket={RACKETS[2]} uidPrefix="pro" />
@@ -530,7 +530,7 @@ export default function ProRacketsPage() {
                   <tbody>
                     <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Overall</td><td className="py-3 pr-4"><TrackedLink href="https://www.amazon.com/dp/B0DHT1DVW1?tag=padel02-20" type="affiliate" productName="NOX AT10 Genius 18K" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">NOX AT10 Genius 18K</TrackedLink></td><td className="py-3 text-stone-600">$259.99</td></tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50"><td className="py-3 pr-4 font-medium text-stone-700">Best Pure Power</td><td className="py-3 pr-4"><StoreTextLink href={amazonLink("B0FNRQ839K")} productName="HEAD Extreme Pro" className="text-padel-green hover:underline">HEAD Extreme Pro</StoreTextLink></td><td className="py-3 text-stone-600">$299.95</td></tr>
-                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Customization</td><td className="py-3 pr-4"><StoreTextLink href={amazonLink("B0DMCZWNPV")} productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline">Adidas Metalbone 3.4</StoreTextLink></td><td className="py-3 text-stone-600">$263.00</td></tr>
+                    <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Customization</td><td className="py-3 pr-4"><StoreTextLink href={amazonLink("B0DMCZWNPV")} productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline">Adidas Metalbone 3.4</StoreTextLink></td><td className="py-3 text-stone-600">$283.00</td></tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50"><td className="py-3 pr-4 font-medium text-stone-700">Best Premium Material</td><td className="py-3 pr-4"><StoreTextLink href={amazonLink("B0F2WMRTYB")} productName="Wilson Bela Pro V3" className="text-padel-green hover:underline">Wilson Bela Pro V3 (24K)</StoreTextLink></td><td className="py-3 text-stone-600">$399.00</td></tr>
                     <tr className="border-b border-stone-100"><td className="py-3 pr-4 font-medium text-stone-700">Best Value at Pro Level</td><td className="py-3 pr-4"><StoreTextLink href={amazonLink("B0DPH3GZGN")} productName="Babolat Technical Viper" className="text-padel-green hover:underline">Babolat Technical Viper</StoreTextLink></td><td className="py-3 text-stone-600">$229.99</td></tr>
                   </tbody>

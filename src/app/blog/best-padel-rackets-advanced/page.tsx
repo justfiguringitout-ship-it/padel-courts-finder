@@ -85,7 +85,7 @@ const faqData = {
       "name": "Is a $399 padel racket worth it for a club player?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only if you already play at a level where the racket is the limiting factor. The Wilson Bela Pro V3 at $399 is a superb 24K carbon frame, but it scores the same 6.7/10 overall as the $229.99 Babolat Technical Viper in our testing. The extra money buys refinement — a 24K carbon face with Spin2 texture and a more rigid frame — not a different tier of performance. Most advanced club players are better served spending $230–$263."
+        "text": "Only if you already play at a level where the racket is the limiting factor. The Wilson Bela Pro V3 at $399 is a superb 24K carbon frame, but it scores the same 6.7/10 overall as the $229.99 Babolat Technical Viper in our testing. The extra money buys refinement — a 24K carbon face with Spin2 texture and a more rigid frame — not a different tier of performance. Most advanced club players are better served spending $230–$283."
       }
     },
     {
@@ -122,7 +122,7 @@ const itemListData = {
   "@type": "ItemList",
   "itemListElement": [
     product(1, "NOX AT10 Genius 18K", "https://www.padelcourtsfinder.com/blog/nox-at10-genius-18k-review", "259.99", AMZ.nox18k, 7.3),
-    product(2, "Adidas Metalbone 3.4", "https://www.padelcourtsfinder.com/blog/adidas-metalbone-3-4-review", "263.00", AMZ.metalbone34, 7.0),
+    product(2, "Adidas Metalbone 3.4", "https://www.padelcourtsfinder.com/blog/adidas-metalbone-3-4-review", "283.00", AMZ.metalbone34, 7.0),
     product(3, "Babolat Technical Viper", "https://www.padelcourtsfinder.com/blog/babolat-technical-viper-review", "229.99", AMZ.viper, 6.7),
     product(4, "Wilson Bela Pro V3", "https://www.padelcourtsfinder.com/blog/wilson-bela-v3-review", "399.00", AMZ.bela, 6.7),
     product(5, "HEAD Extreme Pro", "https://www.padelcourtsfinder.com/blog/head-extreme-pro-review", "299.95", AMZ.extremePro, 6.3),
@@ -152,7 +152,7 @@ function Tag({ children }: { children: ReactNode }) {
  *  copied from this page's own cards; nothing here is new. */
 const RACKETS: GearRacket[] = [
   { id: "nox-at10-genius-18k", rank: 1, name: "NOX AT10 Genius 18K", productName: "NOX AT10 Genius 18K", price: "$259.99", href: AMZ.nox18k, brand: "nox", shape: "teardrop", shapeLabel: "Teardrop", weight: "360–375g", core: "MLD Black EVA", face: "18K Aluminized Carbon", bestFor: "Advanced all-court players who win with placement first", balance: "Adjustable", score: "7.3/10", level: "Advanced" },
-  { id: "adidas-metalbone-3-4", rank: 2, name: "Adidas Metalbone 3.4", productName: "Adidas Metalbone 3.4", price: "$263.00", href: AMZ.metalbone34, brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–372g", core: "EVA Soft Performance", face: "16K Aluminized Carbon", bestFor: "Left-side attackers who want to tune weight and balance between matches", balance: "Adjustable", score: "7.0/10", level: "Advanced" },
+  { id: "adidas-metalbone-3-4", rank: 2, name: "Adidas Metalbone 3.4", productName: "Adidas Metalbone 3.4", price: "$283.00", href: AMZ.metalbone34, brand: "adidas", shape: "diamond", shapeLabel: "Diamond", weight: "345–372g", core: "EVA Soft Performance", face: "16K Aluminized Carbon", bestFor: "Left-side attackers who want to tune weight and balance between matches", balance: "Adjustable", score: "7.0/10", level: "Advanced" },
   { id: "babolat-technical-viper", rank: 3, name: "Babolat Technical Viper", productName: "Babolat Technical Viper", price: "$229.99", href: AMZ.viper, brand: "babolat", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "Hard EVA", face: "3K Carbon", bestFor: "Strong, well-conditioned attackers who want pro power without the flagship price", balance: "High", score: "6.7/10", level: "Advanced" },
   { id: "wilson-bela-v3", rank: 4, name: "Wilson Bela Pro V3", productName: "Wilson Bela Pro V3", price: "$399.00", href: AMZ.bela, brand: "wilson", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "High-density foam", face: "24K Carbon", bestFor: "Advanced attackers who want the most refined diamond and are not price-sensitive", balance: "Head-heavy", score: "6.7/10", level: "Advanced" },
   { id: "head-extreme-pro", rank: 5, name: "HEAD Extreme Pro", productName: "HEAD Extreme Pro", price: "$299.95", href: AMZ.extremePro, brand: "head", shape: "diamond", shapeLabel: "Diamond", weight: "370g", core: "Power Foam", face: "UD Carbon HS", bestFor: "Pure power players who finish every point overhead and accept the trade-offs", balance: "Head-heavy", score: "6.3/10", level: "Advanced" },
@@ -215,7 +215,7 @@ export default function AdvancedRacketsPage() {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Diamond:</span>
-                  <span className="text-sm"><StoreTextLink href={AMZ.metalbone34} productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline font-medium">Adidas Metalbone 3.4</StoreTextLink> <span className="text-stone-500">&mdash; $263.00</span></span>
+                  <span className="text-sm"><StoreTextLink href={AMZ.metalbone34} productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline font-medium">Adidas Metalbone 3.4</StoreTextLink> <span className="text-stone-500">&mdash; $283.00</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Value:</span>
@@ -291,7 +291,7 @@ export default function AdvancedRacketsPage() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-400 block mb-1">#2 &mdash; Best Diamond</span>
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <h3 className="text-xl font-bold text-foreground">Adidas Metalbone 3.4</h3>
-                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$263.00</span>
+                  <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$283.00</span>
                 </div>
                 <p className="text-sm italic text-stone-500 mb-4">Best for: Left-side attackers who want to tune weight and balance between matches</p>
                 <RacketPlate racket={RACKETS[1]} uidPrefix="adv" />
@@ -416,7 +416,7 @@ export default function AdvancedRacketsPage() {
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Diamond</td>
                       <td className="py-3 pr-4"><StoreTextLink href={AMZ.metalbone34} productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline">Adidas Metalbone 3.4</StoreTextLink></td>
-                      <td className="py-3 text-stone-600">$263.00</td>
+                      <td className="py-3 text-stone-600">$283.00</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Value</td>
@@ -460,7 +460,7 @@ export default function AdvancedRacketsPage() {
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">Is a $399 padel racket worth it for a club player?</h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">Only if you already play at a level where the racket is the limiting factor. The Wilson Bela Pro V3 at $399 is a superb 24K carbon frame, but it scores the same 6.7/10 overall as the $229.99 Babolat Technical Viper in our testing. The extra money buys refinement &mdash; a 24K carbon face with Spin2 texture and a more rigid frame &mdash; not a different tier of performance. Most advanced club players are better served spending $230&ndash;$263.</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">Only if you already play at a level where the racket is the limiting factor. The Wilson Bela Pro V3 at $399 is a superb 24K carbon frame, but it scores the same 6.7/10 overall as the $229.99 Babolat Technical Viper in our testing. The extra money buys refinement &mdash; a 24K carbon face with Spin2 texture and a more rigid frame &mdash; not a different tier of performance. Most advanced club players are better served spending $230&ndash;$283.</p>
                 </div>
                 <div className="bg-white border border-stone-200 rounded-lg p-5">
                   <h3 className="font-semibold text-foreground mb-2">Which racket is best for the left side versus the right side?</h3>
