@@ -46,7 +46,7 @@ export const changelog: ChangelogEntry[] = [
     title: "EVO Padel added as coming soon in Las Vegas",
     note: "Submitted by the club: an indoor club planned around 8 courts, coming late 2026. Its address is not announced yet, so the map shows Las Vegas until it is.",
     clubs: ["EVO Padel"],
-    commit: "PENDING_EVO",
+    commit: "eb0d4c7",
   },
   {
     date: "2026-10-15",
