@@ -971,6 +971,7 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
     // Normalize social media URLs from messy data
     instagram: normalizeInstagramUrl(court.instagram),
     facebook: normalizeFacebookUrl(court.facebook),
+    bookingUrl: court.bookingUrl,
     membersOnly: court.membersOnly,
     access: court.access,
     lessonsAvailable: court.lessonsAvailable,

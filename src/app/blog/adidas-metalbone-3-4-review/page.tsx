@@ -2,18 +2,20 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
 import { StickyPickBar } from "@/components/sticky-pick-bar";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Adidas Metalbone 3.4 Review (2026): Galán's Tunable Diamond",
   description:
-    "Adidas Metalbone 3.4 tested: 7.0/10 at $263.00. Ale Galán's frame with 12g of adjustable inserts — 345g to 372g in one racket. Full scores, specs, and who should skip it.",
+    "Adidas Metalbone 3.4 tested: 7.0/10 at $283.00. Ale Galán's frame with 12g of adjustable inserts — 345g to 372g in one racket. Full scores, specs, and who should skip it.",
   alternates: {
     canonical: "https://www.padelcourtsfinder.com/blog/adidas-metalbone-3-4-review",
   },
   openGraph: {
     title: "Adidas Metalbone 3.4 Review (2026): Galán's Tunable Diamond",
     description:
-      "Adidas Metalbone 3.4 tested: 7.0/10 at $263.00 — the Weight & Balance system, 16K aluminized carbon face, and who it's actually for.",
+      "Adidas Metalbone 3.4 tested: 7.0/10 at $283.00 — the Weight & Balance system, 16K aluminized carbon face, and who it's actually for.",
     url: "https://www.padelcourtsfinder.com/blog/adidas-metalbone-3-4-review",
     siteName: "Padel Courts Finder",
     type: "article",
@@ -36,7 +38,7 @@ export default function AdidasMetalbone34ReviewPage() {
       "Ale Galán's diamond-shape padel racket with a Carbon Aluminized 16K face, EVA Soft Performance core, Low Poly frame structure and a Weight & Balance system offering up to 12g of removable inserts.",
     "offers": {
       "@type": "Offer",
-      "price": "263.00",
+      "price": "283.00",
       "priceCurrency": "USD",
       "url": "https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20"
     },
@@ -73,7 +75,7 @@ export default function AdidasMetalbone34ReviewPage() {
         "name": "What is the difference between the Metalbone 3.4 and the Metalbone HRD+?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The 3.4 is the Ale Galán signature edition with the Weight & Balance insert system and a Carbon Aluminized 16K face at $263.00. The HRD+ is the harder-feeling sibling in the same family at $259.99. The 3.4 is the one to buy if the adjustability matters to you; if it does not, the HRD+ gives a similar power profile for about the same money."
+          "text": "The 3.4 is the Ale Galán signature edition with the Weight & Balance insert system and a Carbon Aluminized 16K face at $283.00. The HRD+ is the harder-feeling sibling in the same family at $259.99. The 3.4 is the one to buy if the adjustability matters to you; if it does not, the HRD+ gives a similar power profile for about the same money."
         }
       },
       {
@@ -89,7 +91,7 @@ export default function AdidasMetalbone34ReviewPage() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <StickyPickBar label="Our verdict" productName="Adidas Metalbone 3.4" price="$263.00" href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" />
+      <StickyPickBar label="Our verdict" productName="Adidas Metalbone 3.4" price="$283.00" href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
 
@@ -122,7 +124,7 @@ export default function AdidasMetalbone34ReviewPage() {
           <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
             <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
             <p className="text-xs text-stone-500 italic leading-relaxed">
-              This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+              {GEAR_DISCLOSURE}
             </p>
           </div>
 
@@ -137,16 +139,7 @@ export default function AdidasMetalbone34ReviewPage() {
               <p className="text-stone-600 leading-[1.75] mb-5">
                 Ale Gal&aacute;n&apos;s latest edition earns its score on one feature rather than an all-round profile. The Weight &amp; Balance system gives you up to 12g of removable inserts, so the same frame plays at 345g for quick doubles or 372g for power singles &mdash; genuinely three rackets in one. Around that, the Carbon Aluminized 16K surface holds stiffness through temperature swings, the Low Poly polyhedral frame adds rigidity at the impact points, and Spin Blade 3D grips the ball on cuts. The honest caveats: the base weight is light without inserts, and the soft EVA core does soften in the cold.
               </p>
-              <TrackedLink
-                href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20"
-                type="affiliate"
-                productName="Adidas Metalbone 3.4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
-              >
-                Check Price on Amazon &rarr;
-              </TrackedLink>
+              <BuyButtons href={amazonLink("B0DMCZWNPV")} productName="Adidas Metalbone 3.4" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200" />
             </div>
           </section>
 
@@ -178,7 +171,7 @@ export default function AdidasMetalbone34ReviewPage() {
                   </tr>
                   <tr>
                     <td className="p-3 font-medium text-stone-700">Price</td>
-                    <td className="p-3 text-stone-600">$263.00</td>
+                    <td className="p-3 text-stone-600">$283.00</td>
                   </tr>
                 </tbody>
               </table>
@@ -232,7 +225,7 @@ export default function AdidasMetalbone34ReviewPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">Who It&apos;s For &mdash; and Who Should Skip It</h2>
             <p className="text-stone-600 leading-[1.75]">
-              Buy the Metalbone 3.4 if you are an advanced player who finishes points overhead and genuinely wants to tune the frame &mdash; if the insert system is just a spec sheet line to you, you are paying $263.00 for a feature you will not use. It also suits anyone playing outdoors year-round, where the aluminized face earns its keep.
+              Buy the Metalbone 3.4 if you are an advanced player who finishes points overhead and genuinely wants to tune the frame &mdash; if the insert system is just a spec sheet line to you, you are paying $283.00 for a feature you will not use. It also suits anyone playing outdoors year-round, where the aluminized face earns its keep.
             </p>
             <p className="text-stone-600 leading-[1.75] mt-4">
               Skip it if you are still developing consistency. A 6/10 comfort score on a high-balance diamond frame is unforgiving, and there are better ways to spend $300 while your contact point is still moving. Skip it too if you want maximum power for the money: the <Link href="/blog/best-padel-rackets-power" className="text-padel-green hover:underline">power rackets guide</Link> has cheaper frames that hit as hard, they just will not let you re-weight them.
@@ -261,7 +254,7 @@ export default function AdidasMetalbone34ReviewPage() {
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Metalbone 3.4 vs Metalbone HRD+ &mdash; which one?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">The 3.4 is the Ale Gal&aacute;n signature edition with the Weight &amp; Balance inserts and a Carbon Aluminized 16K face at $263.00. The <Link href="/blog/adidas-metalbone-hrd-review" className="text-padel-green hover:underline">HRD+</Link> is the harder-feeling sibling at $259.99. Buy the 3.4 if the adjustability matters to you; if it doesn&apos;t, the HRD+ gives a similar power profile for about the same money.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">The 3.4 is the Ale Gal&aacute;n signature edition with the Weight &amp; Balance inserts and a Carbon Aluminized 16K face at $283.00. The <Link href="/blog/adidas-metalbone-hrd-review" className="text-padel-green hover:underline">HRD+</Link> is the harder-feeling sibling at $259.99. Buy the 3.4 if the adjustability matters to you; if it doesn&apos;t, the HRD+ gives a similar power profile for about the same money.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Does it play differently in cold weather?</h3>

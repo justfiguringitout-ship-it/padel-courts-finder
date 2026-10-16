@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
 import { StickyPickBar } from "@/components/sticky-pick-bar";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Wilson Bela Pro V3 Review (2026): Is 24K Carbon Worth $399?",
@@ -36,9 +38,9 @@ export default function WilsonBelaV3ReviewPage() {
       "Fernando Belasteguín's signature padel racket with a 24K carbon face, tubular carbon frame, diamond shape and a firm high-density foam core.",
     "offers": {
       "@type": "Offer",
-      "price": "399.00",
+      "price": PADEL_USA.B0F2WMRTYB.priceValue,
       "priceCurrency": "USD",
-      "url": "https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20",
+      "url": padelUsaHref("B0F2WMRTYB"),
     },
     "review": {
       "@type": "Review",
@@ -113,7 +115,7 @@ export default function WilsonBelaV3ReviewPage() {
           <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
             <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
             <p className="text-xs text-stone-500 italic leading-relaxed">
-              This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+              {GEAR_DISCLOSURE}
             </p>
           </div>
 
@@ -129,7 +131,7 @@ export default function WilsonBelaV3ReviewPage() {
               <p className="text-stone-600 leading-relaxed mb-5">
                 The Bela Pro V3 is the pinnacle of material engineering in commercial padel — a 24K carbon face on a tubular carbon frame. It rewards clean, advanced technique with remarkable precision and power, but its firm core and head-heavy diamond shape make it one of the most demanding rackets you can buy. Ranked #5 in our <Link href="/blog/best-padel-rackets-2026" className="text-padel-green hover:underline">best pro rackets of 2026</Link>. This review covers the Bela Pro V3. Wilson also sells a plain Bela V3 ($349 at Wilson) with a 3K carbon face, which is a different racket.
               </p>
-              <TrackedLink href="https://www.amazon.com/dp/B0F2WMRTYB?tag=padel02-20" type="affiliate" productName="Wilson Bela Pro V3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+              <BuyButtons href={amazonLink("B0F2WMRTYB")} productName="Wilson Bela Pro V3" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
             </div>
           </section>
 

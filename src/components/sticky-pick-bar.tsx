@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { TrackedLink } from "@/components/TrackedLink";
+import { primaryOffer } from "@/lib/retailer-links";
 
 interface StickyPickBarProps {
   /** e.g. "Our top pick" or "Best overall" */
@@ -14,8 +15,13 @@ interface StickyPickBarProps {
 /**
  * Floating top-pick bar for affiliate guides. Slides in after the reader
  * scrolls past the intro, stays out of the way, dismissible.
+ *
+ * Pass the Amazon link and price; when Padel USA is the main store for the
+ * product (PADEL_USA in src/lib/retailer-links.ts) the bar links there instead,
+ * with Padel USA's price.
  */
-export function StickyPickBar({ label = "Our top pick", productName, price, href }: StickyPickBarProps) {
+export function StickyPickBar({ label = "Our top pick", productName, price: amazonPrice, href: amazonHref }: StickyPickBarProps) {
+  const { href, price, store } = primaryOffer(amazonHref, amazonPrice);
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
 
@@ -40,6 +46,17 @@ export function StickyPickBar({ label = "Our top pick", productName, price, href
           <div className="text-sm font-semibold truncate">
             {productName} <span className="text-white/50 font-normal">· {price}</span>
           </div>
+          {store === "Padel USA" && (
+            <TrackedLink
+              href={amazonHref}
+              type="affiliate"
+              productName={productName}
+              target="_blank"
+              className="text-[11px] text-white/60 underline hover:text-white"
+            >
+              Check price at Amazon
+            </TrackedLink>
+          )}
         </div>
         <TrackedLink
           href={href}
@@ -48,7 +65,7 @@ export function StickyPickBar({ label = "Our top pick", productName, price, href
           target="_blank"
           className="shrink-0 rounded-lg bg-padel-green hover:bg-padel-green-dark active:scale-[0.98] text-white text-sm font-semibold px-4 py-2 transition-all whitespace-nowrap"
         >
-          Check price
+          {store === "Padel USA" ? "Check price at Padel USA" : "Check price"}
         </TrackedLink>
         <button
           onClick={() => setDismissed(true)}

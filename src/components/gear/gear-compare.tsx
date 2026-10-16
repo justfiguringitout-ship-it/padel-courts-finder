@@ -1,4 +1,6 @@
 import { TrackedLink } from '@/components/TrackedLink';
+import { padelUsaFor, padelUsaLink } from '@/lib/retailer-links';
+import { AMAZON_LABEL, PADEL_USA_LABEL } from './buy-buttons';
 import { RacketFigure } from './racket-figure';
 import { NOT_STATED } from './racket-plate';
 import { ShoeSole } from './shoe-sole';
@@ -10,7 +12,7 @@ import type { GearRacket, GearShoe } from './types';
  * Racket guides get a to-scale "line-up" (every racket drawn the same size,
  * so the shape difference is obvious at a glance) and a compact spec table.
  * The table scrolls sideways inside its own container on phones, keeps the
- * product column (with its Amazon button) pinned, and reuses TrackedLink so
+ * product column (with its buy buttons) pinned, and reuses TrackedLink so
  * every outbound click carries the same tracking and rel="sponsored" as the
  * rest of the page.
  */
@@ -19,7 +21,10 @@ function Missing() {
   return <span className="italic text-stone-500">{NOT_STATED}</span>;
 }
 
-function AmazonButton({ href, store, productName, compact }: { href?: string; store?: string; productName: string; compact?: boolean }) {
+const CTA_BASE = 'pcf-compare-cta inline-flex items-center justify-center rounded-md font-semibold transition-colors min-h-10 px-3 py-2 text-xs';
+const CTA_SOLID = `${CTA_BASE} whitespace-nowrap bg-padel-green text-white hover:bg-padel-green-dark`;
+
+function AmazonButton({ href, store, productName }: { href?: string; store?: string; productName: string; compact?: boolean }) {
   if (!href) {
     return (
       <span className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-stone-100 px-3 py-2 text-xs font-medium text-stone-500 min-h-10">
@@ -27,6 +32,29 @@ function AmazonButton({ href, store, productName, compact }: { href?: string; st
       </span>
     );
   }
+
+  // Also sold at Padel USA: two buttons, main store solid, the other outline
+  const pu = store ? undefined : padelUsaFor(href);
+  if (pu) {
+    const solid = `${CTA_BASE} text-center bg-padel-green text-white hover:bg-padel-green-dark`;
+    const outline = `${CTA_BASE} text-center bg-white text-padel-green ring-2 ring-inset ring-padel-green hover:bg-padel-green/10`;
+    const puButton = (cls: string) => (
+      <TrackedLink href={padelUsaLink(pu.url)} type="affiliate" productName={productName} target="_blank" className={cls}>
+        {pu.label ?? PADEL_USA_LABEL}
+      </TrackedLink>
+    );
+    const amazonButton = (cls: string) => (
+      <TrackedLink href={href} type="affiliate" productName={productName} target="_blank" className={cls}>
+        {AMAZON_LABEL}
+      </TrackedLink>
+    );
+    return (
+      <div className="flex flex-col gap-1.5">
+        {pu.primary ? <>{puButton(solid)}{amazonButton(outline)}</> : <>{amazonButton(solid)}{puButton(outline)}</>}
+      </div>
+    );
+  }
+
   return (
     <TrackedLink
       href={href}
@@ -34,13 +62,17 @@ function AmazonButton({ href, store, productName, compact }: { href?: string; st
       productName={productName}
       target="_blank"
       rel={store ? 'nofollow noopener noreferrer' : 'noopener noreferrer'}
-      className={`pcf-compare-cta inline-flex items-center justify-center whitespace-nowrap rounded-md bg-padel-green font-semibold text-white transition-colors hover:bg-padel-green-dark ${
-        compact ? 'min-h-10 px-3 py-2 text-xs' : 'min-h-10 px-3 py-2 text-xs'
-      }`}
+      className={CTA_SOLID}
     >
       {store ? `Check price at ${store}` : 'Check price'} <span aria-hidden="true" className="ml-1">&rarr;</span>
     </TrackedLink>
   );
+}
+
+/** The price to show: Padel USA's when it is the main store, else the page's */
+function shownPrice(href: string | undefined, price: string): string {
+  const pu = padelUsaFor(href);
+  return pu?.primary ? pu.price : price;
 }
 
 const TH = 'px-3 py-2.5 text-left font-mono text-[10px] font-semibold uppercase tracking-wider text-stone-500 whitespace-nowrap';
@@ -75,7 +107,7 @@ export function RacketCompare({ rackets, uidPrefix, caption, showLineup = true, 
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[11px] font-semibold text-stone-500">#{r.rank}</span>
-                  <span className="text-xs font-bold tabular-nums text-foreground">{r.price}</span>
+                  <span className="text-xs font-bold tabular-nums text-foreground">{shownPrice(r.href, r.price)}</span>
                 </div>
                 <div className="pcf-gear-lineup-art relative my-2 flex justify-center">
                   <RacketFigure
@@ -148,7 +180,7 @@ export function RacketCompare({ rackets, uidPrefix, caption, showLineup = true, 
                     </div>
                   </div>
                 </th>
-                <td className={`${TD} whitespace-nowrap font-semibold tabular-nums text-foreground`}>{r.price}</td>
+                <td className={`${TD} whitespace-nowrap font-semibold tabular-nums text-foreground`}>{shownPrice(r.href, r.price)}</td>
                 <td className={`${TD} whitespace-nowrap`}>{r.shapeLabel}</td>
                 <td className={`${TD} whitespace-nowrap tabular-nums`}>{r.weight}</td>
                 <td className={`${TD} whitespace-nowrap`}>{r.balance ?? <Missing />}</td>
@@ -198,7 +230,7 @@ export function ShoeCompare({ shoes, uidPrefix, caption }: ShoeCompareProps) {
                     <AmazonButton href={s.href} productName={s.productName} compact />
                   </div>
                 </th>
-                <td className={`${TD} whitespace-nowrap font-semibold tabular-nums text-foreground`}>{s.price}</td>
+                <td className={`${TD} whitespace-nowrap font-semibold tabular-nums text-foreground`}>{shownPrice(s.href, s.price)}</td>
                 <td className={TD}>
                   <div className="flex items-center gap-2">
                     <ShoeSole uid={`${uidPrefix}-row-${s.id}`} pattern={s.pattern} className="h-10 w-auto shrink-0" />

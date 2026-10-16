@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { TrackedLink } from "@/components/TrackedLink";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { primaryOffer } from "@/lib/retailer-links";
 
 /**
  * 3-question racket finder. Every recommendation is a racket reviewed in
@@ -219,7 +220,7 @@ export function RacketQuiz() {
                 <div>
                   <div className="font-mono text-[11px] text-turf mb-2">our pick for you</div>
                   <div className="font-display text-2xl font-bold">
-                    {pick.name} <span className="text-white/50 font-normal text-xl">· {pick.price}</span>
+                    {pick.name} <span className="text-white/50 font-normal text-xl">· {primaryOffer(pick.href, pick.price).price}</span>
                   </div>
                   <p className="text-white/60 mt-3 max-w-lg leading-relaxed">{pick.why}</p>
                   {pick.note && (
@@ -227,15 +228,13 @@ export function RacketQuiz() {
                   )}
                 </div>
                 <div className="flex flex-col gap-3 shrink-0">
-                  <TrackedLink
+                  <BuyButtons
                     href={pick.href}
-                    type="affiliate"
                     productName={pick.name}
-                    target="_blank"
+                    arrow={false}
+                    wrapperClassName="flex flex-col gap-3"
                     className="rounded-xl bg-padel-green hover:bg-padel-green-dark active:scale-[0.98] text-white text-center font-semibold px-6 py-3 transition-all shadow-lg shadow-padel-green/25 whitespace-nowrap"
-                  >
-                    Check price on Amazon
-                  </TrackedLink>
+                  />
                   <Link
                     href={pick.guide.href}
                     className="text-center text-sm text-turf hover:underline"
@@ -256,7 +255,7 @@ export function RacketQuiz() {
 
         <p className="text-[11px] text-white/30 mt-8">
           Recommendations come from the rackets we&apos;ve rated in our buying guides. Links are
-          affiliate links — purchases support the site at no extra cost to you.
+          affiliate links: we may earn a commission from Amazon or Padel USA, at no extra cost to you.
         </p>
       </div>
     </div>

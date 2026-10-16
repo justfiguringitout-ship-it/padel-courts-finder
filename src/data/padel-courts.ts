@@ -14081,6 +14081,28 @@ export const padelCourts: PadelCourt[] = [
     verified: true, // playatswing.com (opens 2028), Hoodline 2026-08-21 (16 padel courts, 6121 Mt Herman Rd), checked 2026-10-13
     verificationDate: "2026-10-13",
   },
+  {
+    id: 504,
+    name: "EVO Padel",
+    address: "",
+    city: "Las Vegas",
+    state: "NV",
+    zipCode: "",
+    website: "https://evopadel.com/",
+    email: "info@evopadel.com",
+    instagram: "@evopadelclub",
+    reviewCount: 0,
+    description: "EVO Padel is an indoor padel club being built in Las Vegas, planned around 8 indoor courts, two of them championship courts. Alongside padel it plans fitness and Pilates classes, a cold plunge, an infrared sauna, a bar and lounge and coworking space. The club has not announced its address yet and says it is coming late 2026.",
+    numberOfCourts: 8,
+    courtType: "indoor",
+    indoorCourts: 8,
+    amenities: ["cold plunge", "infrared sauna", "fitness and Pilates classes", "bar and lounge", "coworking space"],
+    coordinates: { lat: 36.1699, lng: -115.1398 }, // approximate: Las Vegas city center until the club announces its address
+    status: "coming_soon",
+    verified: false,
+    verificationDate: "2026-10-15",
+    ownerConfirmedDate: "2026-10-15", // owner submitted the intake form (Giovanni Letellier)
+  },
 ];
 
 

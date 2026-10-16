@@ -6,6 +6,8 @@ import { RacketPlate } from '@/components/gear/racket-plate';
 import type { GearRacket } from '@/components/gear/types';
 import { StickyPickBar } from '@/components/sticky-pick-bar';
 import { HeroVideo } from '@/components/hero-video';
+import { StoreTextLink } from "@/components/gear/buy-buttons";
+import { amazonLink, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: 'Best Padel Rackets for Beginners (2026) — Top 5 Picks',
@@ -237,7 +239,7 @@ export default function BeginnerRacketsPage() {
             <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 mb-10 flex items-start gap-2">
               <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
               <p className="text-xs text-stone-500 italic leading-relaxed">
-                This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+                {GEAR_DISCLOSURE}
               </p>
             </div>
 
@@ -737,7 +739,7 @@ export default function BeginnerRacketsPage() {
                   <h3 className="font-semibold text-foreground mb-1">Padel Balls</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Padel balls look like tennis balls but have slightly less pressure. Most clubs provide them, but having your own is handy for practice.</p>
                   <div className="flex flex-col gap-1.5">
-                    <TrackedLink href="https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20" type="affiliate" productName="HEAD Padel Pro S+" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">HEAD Padel Pro S+ — $14.95</TrackedLink>
+                    <StoreTextLink href={amazonLink("B0DHWHX9SG")} productName="HEAD Padel Pro S+" className="text-padel-green hover:underline text-sm">HEAD Padel Pro S+ — $14.95</StoreTextLink>
                     <TrackedLink href="https://www.amazon.com/dp/B07SBHNKJF?tag=padel02-20" type="affiliate" productName="Dunlop Pro Padel" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">Dunlop Pro Padel — $11.94</TrackedLink>
                   </div>
                 </div>
@@ -745,7 +747,7 @@ export default function BeginnerRacketsPage() {
                   <h3 className="font-semibold text-foreground mb-1">Overgrips</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Replace your overgrip every few sessions to maintain tackiness and sweat absorption. Buy in bulk — you&apos;ll go through them.</p>
                   <div className="flex flex-col gap-1.5">
-                    <TrackedLink href="https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20" type="affiliate" productName="Wilson Pro Overgrip 12-pack" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">Wilson Pro Overgrip 12-pack — $26.99</TrackedLink>
+                    <StoreTextLink href={amazonLink("B002GUEXTQ")} productName="Wilson Pro Overgrip 12-pack" className="text-padel-green hover:underline text-sm">Wilson Pro Overgrip 12-pack — $26.99</StoreTextLink>
                     <TrackedLink href="https://www.amazon.com/dp/B018SC9APW?tag=padel02-20" type="affiliate" productName="Babolat VS 12-pack" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">Babolat VS 12-pack — $35</TrackedLink>
                   </div>
                 </div>

@@ -779,6 +779,11 @@ export default async function CourtPage({ params }: CourtPageProps) {
                 Clubs change prices, hours and courts all the time. If you play at {court.name} or run it and something
                 here is out of date, tell us and we will fix it. No account needed.
               </p>
+              <p className="mt-4 text-sm">
+                <Link href={`/claim?club=${court.slug}`} className="font-medium text-primary hover:underline" rel="nofollow">
+                  Own or manage this club? Claim this listing
+                </Link>
+              </p>
             </div>
             <ClubCorrectionForm slug={court.slug} name={court.name} />
           </div>

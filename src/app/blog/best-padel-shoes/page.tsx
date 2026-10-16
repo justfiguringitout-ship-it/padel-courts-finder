@@ -4,6 +4,8 @@ import { TrackedLink } from "@/components/TrackedLink";
 import { ShoeCompare, SolePlate } from "@/components/gear/gear-compare";
 import { ShoeSole } from "@/components/gear/shoe-sole";
 import type { GearShoe } from "@/components/gear/types";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Padel Shoes (2026): What to Look For + Our Picks",
@@ -129,7 +131,7 @@ export default function BestPadelShoesPage() {
           "@type": "Product",
           "name": "Wilson Rush Pro 5 Padel",
           "image": "https://www.padelcourtsfinder.com/og/default.png",
-          "offers": { "@type": "Offer", "price": "170", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0GVKRS59Q?tag=padel02-20" }
+          "offers": { "@type": "Offer", "price": PADEL_USA.B0GVKRS59Q.priceValue, "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": padelUsaHref("B0GVKRS59Q") }
         }
       },
       {
@@ -221,7 +223,7 @@ export default function BestPadelShoesPage() {
           <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
             <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
             <p className="text-xs text-stone-500 italic leading-relaxed">
-              This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+              {GEAR_DISCLOSURE}
             </p>
           </div>
 
@@ -428,12 +430,12 @@ export default function BestPadelShoesPage() {
                   <span className="inline-block bg-padel-green/10 text-padel-green text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1">Premium stability pick</span>
                   <h3 className="font-bold text-foreground">Wilson Rush Pro 5 Padel</h3>
                 </div>
-                <div className="text-padel-green font-bold whitespace-nowrap">~$170</div>
+                <div className="text-padel-green font-bold whitespace-nowrap">{PADEL_USA.B0GVKRS59Q.price}</div>
               </div>
               <div className="mt-3 -mb-2"><SolePlate shoe={SHOES[3]} uidPrefix="shoe" /></div>
               <p className="text-stone-600 text-sm leading-relaxed mt-2">The premium option: EndoFit midfoot wrap, a TPU stability chassis, and Duralast high-abrasion rubber. The most locked-in lateral feel of anything we&apos;ve verified — for aggressive movers who never want to think about their footing.</p>
               <div className="mt-4">
-                <TrackedLink href="https://www.amazon.com/dp/B0GVKRS59Q?tag=padel02-20" type="affiliate" productName="Wilson Rush Pro 5 Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <BuyButtons href={amazonLink("B0GVKRS59Q")} productName="Wilson Rush Pro 5 Padel" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
               </div>
             </div>
             <div id="wilson-hurakn-lite" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-5">
@@ -447,7 +449,7 @@ export default function BestPadelShoesPage() {
               <div className="mt-3 -mb-2"><SolePlate shoe={SHOES[4]} uidPrefix="shoe" /></div>
               <p className="text-stone-600 text-sm leading-relaxed mt-2">The light, fast option for competitive players who prioritize reaction quickness — padel-specific rubber in a stripped-down build at a mid-range price. The answer to &apos;lightest shoe that won&apos;t tip on hard cuts.&apos;</p>
               <div className="mt-4">
-                <TrackedLink href="https://www.amazon.com/dp/B0FC8SDHK5?tag=padel02-20" type="affiliate" productName="Wilson Hurakn Lite Padel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                <BuyButtons href={amazonLink("B0FC8SDHK5")} productName="Wilson Hurakn Lite Padel" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
               </div>
             </div>
             <div id="asics-gel-challenger-15" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-5">
