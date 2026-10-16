@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
 import { StickyPickBar } from "@/components/sticky-pick-bar";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Adidas Metalbone 3.4 Review (2026): Galán's Tunable Diamond",
@@ -122,7 +124,7 @@ export default function AdidasMetalbone34ReviewPage() {
           <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
             <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
             <p className="text-xs text-stone-500 italic leading-relaxed">
-              This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+              {GEAR_DISCLOSURE}
             </p>
           </div>
 
@@ -137,16 +139,7 @@ export default function AdidasMetalbone34ReviewPage() {
               <p className="text-stone-600 leading-[1.75] mb-5">
                 Ale Gal&aacute;n&apos;s latest edition earns its score on one feature rather than an all-round profile. The Weight &amp; Balance system gives you up to 12g of removable inserts, so the same frame plays at 345g for quick doubles or 372g for power singles &mdash; genuinely three rackets in one. Around that, the Carbon Aluminized 16K surface holds stiffness through temperature swings, the Low Poly polyhedral frame adds rigidity at the impact points, and Spin Blade 3D grips the ball on cuts. The honest caveats: the base weight is light without inserts, and the soft EVA core does soften in the cold.
               </p>
-              <TrackedLink
-                href="https://www.amazon.com/dp/B0DMCZWNPV?tag=padel02-20"
-                type="affiliate"
-                productName="Adidas Metalbone 3.4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
-              >
-                Check Price on Amazon &rarr;
-              </TrackedLink>
+              <BuyButtons href={amazonLink("B0DMCZWNPV")} productName="Adidas Metalbone 3.4" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-medium rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200" />
             </div>
           </section>
 

@@ -1,12 +1,14 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
+import { BuyButtons, StoreTextLink } from '@/components/gear/buy-buttons';
 import { RacketCompare } from '@/components/gear/gear-compare';
 import { RacketPlate } from '@/components/gear/racket-plate';
 import type { GearRacket } from '@/components/gear/types';
 import { StickyPickBar } from '@/components/sticky-pick-bar';
 import { HeroVideo } from '@/components/hero-video';
 import type { ReactNode } from 'react';
+import { GEAR_DISCLOSURE, padelUsaFor, padelUsaLink } from "@/lib/retailer-links";
 
 const TITLE = 'Best Padel Rackets for Advanced Players (2026): Tested Picks';
 const DESCRIPTION = 'The 5 best padel rackets for advanced players in 2026, tested: frames from $230 to $399 ranked by control under pressure, not just smash power — and how to tell you are ready for one.';
@@ -97,7 +99,11 @@ const faqData = {
   ]
 };
 
-const product = (position: number, name: string, url: string, price: string, offerUrl: string, rating: number) => ({
+const product = (position: number, name: string, url: string, price: string, offerUrl: string, rating: number) => {
+  // One offer per product: Padel USA's link and price where it is the main store
+  const pu = padelUsaFor(offerUrl);
+  const offer = pu?.primary ? { price: pu.priceValue, url: padelUsaLink(pu.url) } : { price, url: offerUrl };
+  return {
   "@type": "ListItem",
   "position": position,
   "item": {
@@ -105,10 +111,11 @@ const product = (position: number, name: string, url: string, price: string, off
     "name": name,
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "url": url,
-    "offers": { "@type": "Offer", "price": price, "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": offerUrl },
+    "offers": { "@type": "Offer", "price": offer.price, "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": offer.url },
     "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": rating, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
   }
-});
+  };
+};
 
 const itemListData = {
   "@context": "https://schema.org",
@@ -187,7 +194,7 @@ export default function AdvancedRacketsPage() {
             <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 mb-10 flex items-start gap-2">
               <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
               <p className="text-xs text-stone-500 italic leading-relaxed">
-                This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+                {GEAR_DISCLOSURE}
               </p>
             </div>
 
@@ -208,11 +215,11 @@ export default function AdvancedRacketsPage() {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Diamond:</span>
-                  <span className="text-sm"><TrackedLink href={AMZ.metalbone34} type="affiliate" productName="Adidas Metalbone 3.4" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Adidas Metalbone 3.4</TrackedLink> <span className="text-stone-500">&mdash; $263.00</span></span>
+                  <span className="text-sm"><StoreTextLink href={AMZ.metalbone34} productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline font-medium">Adidas Metalbone 3.4</StoreTextLink> <span className="text-stone-500">&mdash; $263.00</span></span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Value:</span>
-                  <span className="text-sm"><TrackedLink href={AMZ.viper} type="affiliate" productName="Babolat Technical Viper" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline font-medium">Babolat Technical Viper</TrackedLink> <span className="text-stone-500">&mdash; $229.99</span></span>
+                  <span className="text-sm"><StoreTextLink href={AMZ.viper} productName="Babolat Technical Viper" className="text-padel-green hover:underline font-medium">Babolat Technical Viper</StoreTextLink> <span className="text-stone-500">&mdash; $229.99</span></span>
                 </div>
               </div>
               <a href="#top-5-advanced" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Jump to full reviews &darr;</a>
@@ -299,7 +306,7 @@ export default function AdvancedRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Tunable 345&ndash;372g, the most balanced diamond we have tested</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> If you will not use the insert system, the HRD+ 3.3 gives a similar power profile for $259.99</p>
                 </div>
-                <TrackedLink href={AMZ.metalbone34} type="affiliate" productName="Adidas Metalbone 3.4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <BuyButtons href={AMZ.metalbone34} productName="Adidas Metalbone 3.4" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
               </div>
 
               {/* 3. Babolat Technical Viper */}
@@ -322,7 +329,7 @@ export default function AdvancedRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> 9/10 power and 7/10 control at $229.99 &mdash; flagship performance, mid-range price</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> 4/10 comfort; needs a strong arm and clean technique every ball</p>
                 </div>
-                <TrackedLink href={AMZ.viper} type="affiliate" productName="Babolat Technical Viper" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <BuyButtons href={AMZ.viper} productName="Babolat Technical Viper" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
               </div>
 
               {/* 4. Wilson Bela Pro V3 */}
@@ -345,7 +352,7 @@ export default function AdvancedRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Spin2 texture on the 24K face gives real spin control on a 9/10 power frame</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> $150 more than the Viper for the same overall score</p>
                 </div>
-                <TrackedLink href={AMZ.bela} type="affiliate" productName="Wilson Bela Pro V3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <BuyButtons href={AMZ.bela} productName="Wilson Bela Pro V3" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
               </div>
 
               {/* 5. HEAD Extreme Pro */}
@@ -368,7 +375,7 @@ export default function AdvancedRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> The most explosive face we have tested, heavy spin from the rough surface</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> 5/10 control and 4/10 comfort &mdash; a specialist&apos;s racket, not an all-rounder</p>
                 </div>
-                <TrackedLink href={AMZ.extremePro} type="affiliate" productName="HEAD Extreme Pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200">Check Price on Amazon &rarr;</TrackedLink>
+                <BuyButtons href={AMZ.extremePro} productName="HEAD Extreme Pro" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200" />
               </div>
             </section>
 
@@ -408,22 +415,22 @@ export default function AdvancedRacketsPage() {
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Diamond</td>
-                      <td className="py-3 pr-4"><TrackedLink href={AMZ.metalbone34} type="affiliate" productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Adidas Metalbone 3.4</TrackedLink></td>
+                      <td className="py-3 pr-4"><StoreTextLink href={AMZ.metalbone34} productName="Adidas Metalbone 3.4" className="text-padel-green hover:underline">Adidas Metalbone 3.4</StoreTextLink></td>
                       <td className="py-3 text-stone-600">$263.00</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Value</td>
-                      <td className="py-3 pr-4"><TrackedLink href={AMZ.viper} type="affiliate" productName="Babolat Technical Viper" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Babolat Technical Viper</TrackedLink></td>
+                      <td className="py-3 pr-4"><StoreTextLink href={AMZ.viper} productName="Babolat Technical Viper" className="text-padel-green hover:underline">Babolat Technical Viper</StoreTextLink></td>
                       <td className="py-3 text-stone-600">$229.99</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Premium Pick</td>
-                      <td className="py-3 pr-4"><TrackedLink href={AMZ.bela} type="affiliate" productName="Wilson Bela Pro V3" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">Wilson Bela Pro V3</TrackedLink></td>
+                      <td className="py-3 pr-4"><StoreTextLink href={AMZ.bela} productName="Wilson Bela Pro V3" className="text-padel-green hover:underline">Wilson Bela Pro V3</StoreTextLink></td>
                       <td className="py-3 text-stone-600">$399.00</td>
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Maximum Power</td>
-                      <td className="py-3 pr-4"><TrackedLink href={AMZ.extremePro} type="affiliate" productName="HEAD Extreme Pro" className="text-padel-green hover:underline" target="_blank" rel="noopener noreferrer">HEAD Extreme Pro</TrackedLink></td>
+                      <td className="py-3 pr-4"><StoreTextLink href={AMZ.extremePro} productName="HEAD Extreme Pro" className="text-padel-green hover:underline">HEAD Extreme Pro</StoreTextLink></td>
                       <td className="py-3 text-stone-600">$299.95</td>
                     </tr>
                   </tbody>

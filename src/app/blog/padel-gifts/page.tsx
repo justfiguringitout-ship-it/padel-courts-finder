@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
-import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from "@/lib/retailer-links";
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, GEAR_DISCLOSURE, amazonLink } from "@/lib/retailer-links";
+import { BuyButtons } from "@/components/gear/buy-buttons";
 
 export const metadata: Metadata = {
   title: "Padel Gifts (2026): What Players Actually Want, at Every Budget",
@@ -277,6 +278,13 @@ export default function PadelGiftsPage() {
       </header>
       <article>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+          {/* Affiliate disclosure */}
+          <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
+            <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
+            <p className="text-xs text-stone-500 italic leading-relaxed">
+              {GEAR_DISCLOSURE}
+            </p>
+          </div>
           <section>
             <p className="text-stone-700 leading-relaxed">
               Every pick here is gear we already recommend elsewhere on this site — the same rackets, shoes, and
@@ -372,7 +380,7 @@ export default function PadelGiftsPage() {
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">The current version of the HEAD Pro S, the ball most US clubs play. A sleeve of fresh cans is the stocking-stuffer every padel player actually uses.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <TrackedLink href="https://www.amazon.com/dp/B0DHWHX9SG?tag=padel02-20" type="affiliate" productName="HEAD Padel Pro S+ Balls (3-can)" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                  <BuyButtons wrapperClassName="contents" href={amazonLink("B0DHWHX9SG")} productName="HEAD Padel Pro S+ Balls (3-can)" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
                 </div>
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-5">
@@ -382,7 +390,7 @@ export default function PadelGiftsPage() {
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">The most replaced item in padel. Twelve fresh grips is months of tack — unglamorous, guaranteed useful.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <TrackedLink href="https://www.amazon.com/dp/B002GUEXTQ?tag=padel02-20" type="affiliate" productName="Wilson Pro Overgrip 12-Pack" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                  <BuyButtons wrapperClassName="contents" href={amazonLink("B002GUEXTQ")} productName="Wilson Pro Overgrip 12-Pack" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
                 </div>
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-5">
