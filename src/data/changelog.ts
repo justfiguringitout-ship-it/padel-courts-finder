@@ -41,6 +41,22 @@ export interface ChangelogEntry {
 export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
+    date: "2026-10-19",
+    type: "added",
+    title: "Five clubs added as coming soon",
+    note: "Capital City Padel Club in Washington, DC (3 outdoor courts, spring 2027), M Padel Malden (6 indoor) and M Padel Cincinnati (8 indoor), Mouratoglou Tennis Center San Antonio (12 padel courts) and Open Play Pickleball and Padel Club in Hopkinton (8 courts, members). Each address and court count comes from the club or operator's own site.",
+    clubs: ["Capital City Padel Club", "M Padel Malden", "M Padel Cincinnati", "Mouratoglou Tennis Center San Antonio", "Open Play Pickleball and Padel Club"],
+    commit: "ad34ee7",
+  },
+  {
+    date: "2026-10-19",
+    type: "updated",
+    title: "Padel Society is open, and six listings corrected",
+    note: "Padel Society in Southeast Austin now takes public bookings on Playtomic with 6 indoor courts. Racket Social Club in Alpharetta now goes by Racket Social Club at Windward Lake. 10by20 Padel Wellington published its address. Padel Life & Soccer hours, the Legacy Padel booking link and map pin, and The ONE Padel Club and Padel Foundry websites were updated.",
+    clubs: ["Padel Society", "Racket Social Club at Windward Lake", "10by20 Padel Wellington", "Padel Life & Soccer", "Legacy Padel & Pickleball", "The ONE Padel Club", "Padel Foundry"],
+    commit: "ad34ee7",
+  },
+  {
     date: "2026-10-15",
     type: "added",
     title: "EVO Padel added as coming soon in Las Vegas",
