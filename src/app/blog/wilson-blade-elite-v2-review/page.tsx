@@ -272,6 +272,10 @@ export default function WilsonBladeEliteV2ReviewPage() {
                 <div className="font-semibold text-white">Best Control Rackets</div>
                 <p className="text-stone-400 text-sm mt-1">Precision-first picks for steady players</p>
               </Link>
+              <Link href="/blog/best-wilson-padel-rackets" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Best Wilson Padel Rackets (2026)</div>
+                <p className="text-stone-400 text-sm mt-1">Optix V1, Blade Elite V2 and Bela Pro V3, matched to your level</p>
+              </Link>
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Find a Court Near You</div>
                 <p className="text-stone-400 text-sm mt-1">Search padel clubs across the US</p>
