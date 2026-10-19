@@ -668,6 +668,17 @@ const blogPosts: BlogPost[] = [
     priceRange: '$209\u2013$260'
   },
   {
+    slug: 'best-wilson-padel-rackets',
+    title: 'Best Wilson Padel Rackets (2026)',
+    category: 'equipment',
+    excerpt: 'Three Wilson rackets matched to your level: the Optix V1, Blade Elite V2 and Bela Pro V3 for beginners, intermediate players, control and power.',
+    date: '2026-10-19',
+    readTime: '7 min read',
+    imageAlt: 'Best Wilson padel rackets 2026',
+    courtSlug: '',
+    priceRange: '$109\u2013$399'
+  },
+  {
     slug: 'best-lightweight-padel-rackets',
     title: 'Best Lightweight Padel Rackets (2026)',
     category: 'equipment',
