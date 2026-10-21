@@ -10,7 +10,8 @@
     "sitemap:dates": "node scripts/generate-page-dates.mjs",
     "images:classify": "node scripts/classify-club-images.mjs",
     "test:owner": "node --import ./scripts/owner/register.mjs --test scripts/owner/owner.test.ts",
-    "owner:apply": "node --import ./scripts/owner/register.mjs scripts/apply-owner-edits.ts"
+    "owner:apply": "node --import ./scripts/owner/register.mjs scripts/apply-owner-edits.ts",
+    "spotlight:report": "node --import ./scripts/owner/register.mjs scripts/spotlight-report.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

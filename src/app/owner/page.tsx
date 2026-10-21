@@ -13,6 +13,10 @@ import {
 import { firstName } from "@/lib/owner/mail";
 import { checkOwnerSession } from "@/lib/owner/session";
 import { getStore } from "@/lib/owner/store";
+import { getLiveSpotlightForClub } from "@/lib/spotlight";
+import { formatSpotlightDay, isSpotlightPinned } from "@/lib/spotlight-dates";
+import { getSpotlightStore } from "@/lib/spotlight-store";
+import { KIND_WORDS, OUTBOUND_KINDS, summarizeSpotlightEvents, type SpotlightStats } from "@/lib/spotlight-stats";
 
 export const dynamic = "force-dynamic";
 
@@ -22,6 +26,67 @@ function Row({ label, value }: { label: string; value?: string | number | null }
       <dt className="text-muted-foreground">{label}</dt>
       <dd className="break-words">{value === undefined || value === null || value === "" ? "Not listed" : value}</dd>
     </div>
+  );
+}
+
+/** "Your Club Spotlight": views, visitors and clicks, read server side from pcf_spotlight_events. */
+function SpotlightPanel({ title, slug, publishDate, pinnedUntil, stats }: {
+  title: string;
+  slug: string;
+  publishDate: string;
+  pinnedUntil: string;
+  stats: SpotlightStats | null;
+}) {
+  const pinned = isSpotlightPinned({ status: "live", publishDate, pinnedUntil });
+  const kinds = stats ? stats.clicksByKind.filter((c) => OUTBOUND_KINDS.has(c.key)) : [];
+  return (
+    <section className="mt-8 club-card" aria-labelledby="owner-spotlight">
+      <h2 id="owner-spotlight" className="club-h2">
+        Your Club Spotlight
+      </h2>
+      <p className="mt-1 text-sm text-muted-foreground">
+        <Link href={`/spotlight/${slug}`} className="text-primary hover:underline">
+          {title}
+        </Link>
+        . Published {formatSpotlightDay(publishDate)}
+        {pinned ? `, pinned on your state and city pages until ${formatSpotlightDay(pinnedUntil)}.` : "."}
+      </p>
+      {stats ? (
+        <>
+          <dl className="mt-4 grid grid-cols-3 gap-3">
+            {[
+              ["Views", stats.articleViews],
+              ["Visitors", stats.uniqueVisitors],
+              ["Clicks to you", stats.outboundClicks],
+            ].map(([label, v]) => (
+              <div key={label} className="rounded-lg border border-border px-3 py-2">
+                <dt className="text-xs text-muted-foreground">{label}</dt>
+                <dd className="font-mono text-xl font-semibold">{Number(v).toLocaleString("en-US")}</dd>
+              </div>
+            ))}
+          </dl>
+          {kinds.length > 0 && (
+            <ul className="mt-4 divide-y divide-border text-sm">
+              {kinds.map((c) => (
+                <li key={c.key} className="flex justify-between py-1.5">
+                  <span>{KIND_WORDS[c.key] ?? c.key}</span>
+                  <span className="font-mono">{c.count}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          <p className="mt-3 text-xs text-muted-foreground">
+            Visitors are counted once per day. The pinned cards were seen{" "}
+            {stats.cardImpressions.toLocaleString("en-US")} {stats.cardImpressions === 1 ? "time" : "times"} and sent{" "}
+            {stats.cardClicks.toLocaleString("en-US")} {stats.cardClicks === 1 ? "reader" : "readers"} to the Spotlight, and your
+            club page here was viewed {stats.clubPageViews.toLocaleString("en-US")}{" "}
+            {stats.clubPageViews === 1 ? "time" : "times"} during the pinned weeks.
+          </p>
+        </>
+      ) : (
+        <p className="mt-3 text-sm text-muted-foreground">The numbers are not available right now. Please try again later.</p>
+      )}
+    </section>
   );
 }
 
@@ -86,6 +151,16 @@ export default async function OwnerDashboard({ searchParams }: { searchParams: P
             : ""
         }`
       : undefined;
+  const spotlight = getLiveSpotlightForClub(session.slug);
+  let spotlightStats: SpotlightStats | null = null;
+  if (spotlight) {
+    try {
+      const spotStore = getSpotlightStore();
+      if (spotStore) spotlightStats = summarizeSpotlightEvents(await spotStore.listEvents(spotlight.slug, `${spotlight.publishDate}T00:00:00-05:00`));
+    } catch {
+      spotlightStats = null;
+    }
+  }
   const photos = [current.ogImageUrl, ...(current.galleryImages ?? [])].filter((u): u is string => !!u && u.startsWith("/"));
 
   return (
@@ -107,6 +182,16 @@ export default async function OwnerDashboard({ searchParams }: { searchParams: P
           </button>
         </form>
       </div>
+
+      {spotlight && (
+        <SpotlightPanel
+          title={spotlight.title}
+          slug={spotlight.slug}
+          publishDate={spotlight.publishDate}
+          pinnedUntil={spotlight.pinnedUntil}
+          stats={spotlightStats}
+        />
+      )}
 
       <section className="mt-8 club-card" aria-labelledby="owner-current">
         <h2 id="owner-current" className="club-h2">

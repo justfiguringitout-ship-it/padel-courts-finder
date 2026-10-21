@@ -22,6 +22,8 @@ import type { Metadata } from "next";
 import { HeroVideo } from "@/components/hero-video";
 import { PlayerPriceInline, PlayerPriceSummaryLine, PlayerPriceTag } from "@/components/player-price";
 import { getClubPlayerPrice, summarizePlayerPrices } from "@/lib/player-price";
+import { getPinnedSpotlightsForState } from "@/lib/spotlight";
+import { PinnedSpotlights } from "@/components/spotlight/pinned-spotlights";
 
 interface StatePageProps {
   params: Promise<{
@@ -257,6 +259,13 @@ export default async function StatePage({ params }: StatePageProps) {
           </div>
         </div>
       </section>
+
+      {/* Paid Club Spotlight, pinned for 30 days. A labeled card above the listings; it never changes their order. */}
+      <PinnedSpotlights
+        spotlights={getPinnedSpotlightsForState(state.code)}
+        placement="state-card"
+        className="container mx-auto px-4 pt-8 md:pt-10"
+      />
 
       {/* Metro block: the state page is the metro page for "padel nyc" (see page-content.ts) */}
       {metro && metroClubCount > 0 && (

@@ -24,6 +24,8 @@ import { PlayerPriceSummaryLine, PlayerPriceTag } from "@/components/player-pric
 import { getClubPlayerPrice, summarizePlayerPrices } from "@/lib/player-price";
 import { getTonightData } from "@/lib/play-tonight";
 import { PlayTonight } from "@/components/play-tonight";
+import { getPinnedSpotlightsForCity } from "@/lib/spotlight";
+import { PinnedSpotlights } from "@/components/spotlight/pinned-spotlights";
 
 interface CityPageProps {
   params: Promise<{
@@ -264,6 +266,13 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Paid Club Spotlight, pinned for 30 days. A labeled card above the listings; it never changes their order. */}
+      <PinnedSpotlights
+        spotlights={getPinnedSpotlightsForCity(state.code, city.name)}
+        placement="city-card"
+        className="container mx-auto px-4 pt-5 md:pt-8"
+      />
 
       {/* Can I play tonight? */}
       {tonight.clubs.length + tonight.noHours.length > 0 && (

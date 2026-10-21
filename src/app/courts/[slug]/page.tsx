@@ -44,6 +44,8 @@ import { ClubHero, type HeroAction, type HeroFact } from "@/components/club-page
 import { ClubGallery } from "@/components/club-page/club-gallery";
 import { ClubMobileBar } from "@/components/club-page/club-mobile-bar";
 import { getClubMedia } from "@/lib/club-media";
+import { getPinnedSpotlightForClub } from "@/lib/spotlight";
+import { PinnedSpotlights } from "@/components/spotlight/pinned-spotlights";
 import { cityBlogSlugs } from "@/data/page-content";
 import { getStates } from "@/lib/site-structure";
 import type { Metadata } from "next";
@@ -176,6 +178,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
   });
 
   const media = getClubMedia(court);
+  const spotlight = getPinnedSpotlightForClub(court.slug);
 
   const bookAction: HeroAction | undefined = court.bookingUrl
     ? { key: "book", label: "Book", href: court.bookingUrl, icon: <Calendar aria-hidden="true" />, kind: "website", external: true }
@@ -392,6 +395,9 @@ export default async function CourtPage({ params }: CourtPageProps) {
         {/* The club's own photos, only when it has supplied them */}
         {media.gallery.length > 0 && <ClubGallery name={court.name} photos={media.gallery} credit={media.photoCredit} />}
       </div>
+
+      {/* This club's paid Club Spotlight, while it is pinned (30 days). Logs club-page views in that window. */}
+      <PinnedSpotlights spotlights={spotlight ? [spotlight] : []} placement="club-page" className="container mx-auto px-4 pt-5" />
 
       <div className="container mx-auto px-4 pb-12">
         {/* Members-only clubs: ask about membership or a guest pass */}

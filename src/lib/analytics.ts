@@ -98,3 +98,30 @@ export function trackPlausibleEvent(name: string, props?: Record<string, string>
   const plausible = (window as unknown as { plausible?: (event: string, options?: { props?: Record<string, string> }) => void }).plausible;
   if (typeof plausible === 'function') plausible(name, props ? { props } : undefined);
 }
+
+/**
+ * Club Spotlight (paid lane) events for Plausible. "Spotlight click" carries
+ * the club, the kind of link (book, website, instagram, phone, directions,
+ * membership, directory, article), the destination host and where on the site
+ * the click happened (article, state-card, city-card, club-page).
+ * "Spotlight impression" fires once per page view when a pinned card scrolls
+ * into view. The first-party log in Supabase (src/lib/spotlight-track.ts)
+ * records the same events for the club's report.
+ */
+export function trackSpotlightClick(club: string, kind: string, url: string, placement: string) {
+  if (typeof window === 'undefined') return;
+  let to = url.startsWith('tel:') ? 'phone' : hostOf(url);
+  if (!to && url.startsWith('/')) to = 'padelcourtsfinder.com';
+  trackPlausibleEvent('Spotlight click', {
+    club: club.slice(0, 120),
+    kind,
+    to,
+    placement,
+    page: window.location.pathname,
+  });
+}
+
+export function trackSpotlightImpression(club: string, placement: string) {
+  if (typeof window === 'undefined') return;
+  trackPlausibleEvent('Spotlight impression', { club: club.slice(0, 120), placement, page: window.location.pathname });
+}

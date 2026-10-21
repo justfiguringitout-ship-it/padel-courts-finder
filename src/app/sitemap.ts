@@ -5,6 +5,7 @@ import { getPadelNearMetros } from '@/lib/metros';
 import pageDatesRaw from '@/data/page-dates.json';
 import blogSlugs from '@/data/blog-slugs.json';
 import { changelog } from '@/data/changelog';
+import { getLiveSpotlights } from '@/lib/spotlight';
 
 /**
  * <lastmod> comes from git history via src/data/page-dates.json, NOT from
@@ -230,11 +231,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Club Spotlights: live ones only (drafts are noindex and never listed).
+  // lastmod = the day the facts were last checked, so it moves only with an edit.
+  const spotlightPages: MetadataRoute.Sitemap = getLiveSpotlights().map((s) => ({
+    url: `${baseUrl}/spotlight/${s.slug}`,
+    lastModified: new Date(s.factsCheckedDate > s.publishDate ? s.factsCheckedDate : s.publishDate),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+
   return [
     ...staticPages,
     ...statePages,
     ...cityPages,
     ...courtPages,
     ...blogPages,
+    ...spotlightPages,
   ];
 }
