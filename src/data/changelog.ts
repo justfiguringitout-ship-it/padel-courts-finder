@@ -41,6 +41,14 @@ export interface ChangelogEntry {
 export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
+    date: "2026-10-21",
+    type: "updated",
+    title: "The Club at Marlboro confirmed its hours and opening date",
+    note: "The club told us its padel courts open for play on November 2, with a grand opening planned for December or January. Hours are 7am to 11pm on weekdays and 8am to 8pm on weekends.",
+    clubs: ["The Club at Marlboro"],
+    commit: "5e51f3b",
+  },
+  {
     date: "2026-10-19",
     type: "added",
     title: "Five clubs added as coming soon",
