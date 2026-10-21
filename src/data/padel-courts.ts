@@ -13660,7 +13660,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Morganville",
     state: "NJ",
     zipCode: "07751",
-    description: "The Club at Marlboro is a padel and pickleball venue planned for Morganville in Marlboro Township, the second New Jersey location from the team behind The Club at Monroe. The building is planned with two regulation padel courts, nine pickleball courts and three golf simulators, plus a recovery suite with red light therapy, cryotherapy, compression therapy and an infrared sauna. The club is taking pre-registrations for founding memberships and grand-opening events, with court booking through CourtReserve. The club says it opens in November 2026.",
+    description: "The Club at Marlboro is a padel and pickleball venue planned for Morganville in Marlboro Township, the second New Jersey location from the team behind The Club at Monroe. The building is planned with two regulation padel courts, nine pickleball courts and three golf simulators, plus a recovery suite with red light therapy, cryotherapy, compression therapy and an infrared sauna. The building is 35,000 square feet. The club is taking pre-registrations for founding memberships and grand-opening events, with court booking through CourtReserve. The club told us the courts open for play on November 2, 2026, with a grand opening planned for December or January.",
     numberOfCourts: 2,
     courtType: "indoor",
     amenities: ["recovery suite", "cryotherapy", "infrared sauna", "free parking", "equipment rental", "event rooms"],
@@ -13668,7 +13668,16 @@ export const padelCourts: PadelCourt[] = [
     membersOnly: false,
     coordinates: { lat: 40.3765, lng: -74.2443 }, // from theclubnj.com/marlboro schema
     website: "https://theclubnj.com/marlboro/",
-    openingHours: { monday: "TBA", tuesday: "TBA", wednesday: "TBA", thursday: "TBA", friday: "TBA", saturday: "TBA", sunday: "TBA" },
+    openingHours: {
+      monday: "7h-23h",
+      tuesday: "7h-23h",
+      wednesday: "7h-23h",
+      thursday: "7h-23h",
+      friday: "7h-23h",
+      saturday: "8h-20h",
+      sunday: "8h-20h",
+    },
+    ownerConfirmedDate: "2026-10-20", // Jessica Gordimer (The Club NJ) by email: hours, Nov 2 courts, 35,000 sq ft
     rating: 0,
     reviewCount: 0,
     status: "coming_soon",

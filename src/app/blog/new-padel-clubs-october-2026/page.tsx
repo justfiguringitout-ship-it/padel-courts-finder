@@ -125,7 +125,7 @@ const NEW_COMING_SOON: Entry[] = [
   { id: 501, courts: "4 indoor courts", note: "On East Watertower Street, serving Boise and the Treasure Valley. The club says it opens in January 2027, and it is the first Idaho club on our list." },
   { id: 502, courts: "6 indoor courts", note: "M Padel Noblesville, inside the tennis center on Olio Road next to indoor tennis and pickleball. No opening date yet." },
   { id: 460, courts: "6 courts (4 indoor, 2 outdoor)", note: "Under construction in downtown Overland Park, about 20,000 square feet with a small restaurant upstairs." },
-  { id: 486, courts: "2 indoor courts", note: "From the team behind The Club at Monroe, with nine pickleball courts and golf simulators in the same building. The club says it opens in November 2026." },
+  { id: 486, courts: "2 indoor courts", note: "From the team behind The Club at Monroe, with nine pickleball courts and golf simulators in the same building. The club told us its courts open for play on November 2, with a grand opening planned for December or January." },
   { id: 503, courts: "16 courts", note: "A 44-acre racquet campus under construction in Brier Creek on city-owned land. The club says it opens in 2028." },
   { id: 453, courts: "5 courts", note: "An established tennis, pickleball and badminton facility north of Columbus that is adding padel." },
   { id: 488, courts: "2 indoor courts", note: "A members-only club under construction on the Southside, with 12 pickleball courts and a pool. Planned for fall 2026." },
