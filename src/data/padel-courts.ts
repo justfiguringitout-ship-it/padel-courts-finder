@@ -7204,7 +7204,7 @@ export const padelCourts: PadelCourt[] = [
       "events",
     ],
     courtSurface: "premium turf",
-    coordinates: { lat: 40.3280, lng: -74.4282 }, // city-center estimate
+    coordinates: { lat: 40.2656, lng: -74.4364 }, // Farrington Blvd, Monroe Twp (OSM street; Census had no match for no. 4), 2026-10-21
     instagram: "@theclubatmonroe",
     facebook: "https://www.facebook.com/theclubatmonroe",
     membersOnly: false,
@@ -13666,7 +13666,7 @@ export const padelCourts: PadelCourt[] = [
     amenities: ["recovery suite", "cryotherapy", "infrared sauna", "free parking", "equipment rental", "event rooms"],
     rentalAvailable: true,
     membersOnly: false,
-    coordinates: { lat: 40.3765, lng: -74.2443 }, // from theclubnj.com/marlboro schema
+    coordinates: { lat: 40.3753, lng: -74.2697 }, // Census geocoder, 414 Texas Rd (2026-10-21)
     website: "https://theclubnj.com/marlboro/",
     openingHours: {
       monday: "7h-23h",
