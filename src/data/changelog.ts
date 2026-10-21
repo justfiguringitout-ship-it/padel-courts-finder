@@ -43,6 +43,14 @@ export const changelog: ChangelogEntry[] = [
   {
     date: "2026-10-21",
     type: "updated",
+    title: "Map pins fixed for two New Jersey clubs",
+    note: "The Club at Marlboro's pin was about 2 km from its Texas Road address, and The Club at Monroe's pin sat at the township center instead of Farrington Boulevard.",
+    clubs: ["The Club at Marlboro", "The Club at Monroe"],
+    commit: "38477d8",
+  },
+  {
+    date: "2026-10-21",
+    type: "updated",
     title: "The Club at Marlboro confirmed its hours and opening date",
     note: "The club told us its padel courts open for play on November 2, with a grand opening planned for December or January. Hours are 7am to 11pm on weekdays and 8am to 8pm on weekends.",
     clubs: ["The Club at Marlboro"],
