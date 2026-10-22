@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { getSiteStats } from "@/lib/site-structure";
 import type { Metadata } from "next";
+import { SpotlightCheckoutButton } from "@/components/spotlight/spotlight-checkout-button";
 
 export const metadata: Metadata = {
   title: "Partner With Us | Padel Courts Finder",
@@ -134,6 +135,46 @@ export default async function AdvertisePage({
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Club Spotlight: the paid editorial lane. Never changes listing order. */}
+      <section id="club-spotlight" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 scroll-mt-24">
+        <p className="font-mono text-sm text-padel-green mb-2">for clubs</p>
+        <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">Club Spotlight</h2>
+        <p className="text-stone-600 max-w-2xl mb-8">
+          A sponsored article about your club, written by us from facts we check with you. We run one
+          Spotlight a month, so each club gets the full 30 days to itself.
+        </p>
+        <div className="bg-white border border-stone-200 rounded-2xl p-7 grid md:grid-cols-[1fr_auto] gap-8 items-start">
+          <ul className="space-y-2.5 text-sm text-stone-600 min-w-0">
+            <li className="flex gap-2.5"><Check className="w-4 h-4 text-padel-green shrink-0 mt-0.5" /> A dedicated article about your club, clearly labeled Sponsored</li>
+            <li className="flex gap-2.5"><Check className="w-4 h-4 text-padel-green shrink-0 mt-0.5" /> A pinned card linking to it on your state page, your city page and your listing for 30 days</li>
+            <li className="flex gap-2.5"><Check className="w-4 h-4 text-padel-green shrink-0 mt-0.5" /> Your court photos added to your listing</li>
+            <li className="flex gap-2.5"><Check className="w-4 h-4 text-padel-green shrink-0 mt-0.5" /> A report after 30 days with page views, visitors, clicks to your website, booking page and Instagram, and how the article does in Google search</li>
+            <li className="flex gap-2.5"><Check className="w-4 h-4 text-padel-green shrink-0 mt-0.5" /> Every link we send you is tagged, so the visits show up in your own analytics too</li>
+          </ul>
+          <div className="md:w-60 flex flex-col">
+            <div className="mb-1">
+              <span className="font-display text-4xl font-bold">$179</span>
+              <span className="text-stone-500 text-sm ml-1">one time</span>
+            </div>
+            <p className="text-xs text-stone-500 mb-5">Paying reserves your month. We email you within one business day to set the date.</p>
+            <SpotlightCheckoutButton
+              source="advertise"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-padel-green hover:bg-padel-green-dark text-white font-semibold px-6 py-3 transition-all shadow-lg shadow-padel-green/25"
+            >
+              Book a Spotlight
+              <ArrowRight className="w-4 h-4" />
+            </SpotlightCheckoutButton>
+            <a href="#partner-form" className="text-sm text-padel-green hover:underline mt-3 text-center">
+              Questions first? Ask us below
+            </a>
+          </div>
+        </div>
+        <p className="text-xs text-stone-500 mt-4 max-w-2xl">
+          Paying for a Spotlight does not change where your club appears in our directory. We send you the
+          draft to check the facts before it goes live, and the article and its links are marked as sponsored.
+        </p>
       </section>
 
       {/* Brand & Commercial Partnerships */}
