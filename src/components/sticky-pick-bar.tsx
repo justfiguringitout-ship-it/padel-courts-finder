@@ -16,9 +16,9 @@ interface StickyPickBarProps {
  * Floating top-pick bar for affiliate guides. Slides in after the reader
  * scrolls past the intro, stays out of the way, dismissible.
  *
- * Pass the Amazon link and price; when Padel USA is the main store for the
- * product (PADEL_USA in src/lib/retailer-links.ts) the bar links there instead,
- * with Padel USA's price.
+ * Pass the Amazon link and price; when Padel USA or HEAD is the main store for
+ * the product (PADEL_USA or HEAD in src/lib/retailer-links.ts) the bar links
+ * there instead, with that store's price.
  */
 export function StickyPickBar({ label = "Our top pick", productName, price: amazonPrice, href: amazonHref }: StickyPickBarProps) {
   const { href, price, store } = primaryOffer(amazonHref, amazonPrice);
@@ -46,7 +46,7 @@ export function StickyPickBar({ label = "Our top pick", productName, price: amaz
           <div className="text-sm font-semibold truncate">
             {productName} <span className="text-white/50 font-normal">· {price}</span>
           </div>
-          {store === "Padel USA" && (
+          {store !== "Amazon" && (
             <TrackedLink
               href={amazonHref}
               type="affiliate"
@@ -65,7 +65,7 @@ export function StickyPickBar({ label = "Our top pick", productName, price: amaz
           target="_blank"
           className="shrink-0 rounded-lg bg-padel-green hover:bg-padel-green-dark active:scale-[0.98] text-white text-sm font-semibold px-4 py-2 transition-all whitespace-nowrap"
         >
-          {store === "Padel USA" ? "Check price at Padel USA" : "Check price"}
+          {store === "Amazon" ? "Check price" : `Check price at ${store}`}
         </TrackedLink>
         <button
           onClick={() => setDismissed(true)}

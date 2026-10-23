@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
-import { NOX_ML10_PRO_CUP_ROUGH as ML10, amazonLink, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from '@/lib/retailer-links';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, amazonLink, HEAD, headHref, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from '@/lib/retailer-links';
 import { HeroVideo } from '@/components/hero-video';
 import { BuyButtons } from "@/components/gear/buy-buttons";
 
@@ -189,9 +189,9 @@ export default function MothersDay2026GiftGuidePage() {
           "description": "Holds up to 6 rackets with padded compartments, a shoe compartment, and an insulated drinks pocket.",
           "offers": {
             "@type": "Offer",
-            "price": "99.00",
+            "price": HEAD.B0G8RX2824.priceValue,
             "priceCurrency": "USD",
-            "url": "https://www.amazon.com/dp/B0G8RX2824?tag=padel02-20"
+            "url": headHref("B0G8RX2824")
           }
         }
       },
@@ -558,16 +558,11 @@ export default function MothersDay2026GiftGuidePage() {
                     Holds up to 6 rackets with padded compartments. Separate shoe compartment, insulated pocket for drinks, and adjustable shoulder straps. For the mom who plays multiple times a week and carries gear for friends.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the serious player who carries everything</p>
-                  <TrackedLink
-                    href="https://www.amazon.com/dp/B0G8RX2824?tag=padel02-20"
-                    type="affiliate"
+                  <BuyButtons
+                    href={amazonLink("B0G8RX2824")}
                     productName="HEAD Tour Bag M"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                  >
-                    Shop on Amazon &rarr;
-                  </TrackedLink>
+                  />
                 </div>
 
                 {/* 8. Wilson Optix V1 */}

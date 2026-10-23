@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
+import { BuyButtons } from "@/components/gear/buy-buttons";
+import { amazonLink, HEAD, headHref } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Padel Bags (2026): Backpack or Tour Bag?",
@@ -92,9 +94,9 @@ export default function BestPadelBagsPage() {
           "description": "Holds up to 6 rackets with padded compartments, a separate shoe compartment, and an insulated drinks pocket.",
           "offers": {
             "@type": "Offer",
-            "price": "99.00",
+            "price": HEAD.B0G8RX2824.priceValue,
             "priceCurrency": "USD",
-            "url": "https://www.amazon.com/dp/B0G8RX2824?tag=padel02-20"
+            "url": headHref("B0G8RX2824")
           }
         }
       }
@@ -262,16 +264,11 @@ export default function BestPadelBagsPage() {
                   who shows up with gear for the whole group, this is the bag that makes that job easy.
                 </p>
                 <p className="text-xs text-stone-500 mb-3">Best for: the club regular who carries two rackets and the group&apos;s gear</p>
-                <TrackedLink
-                  href="https://www.amazon.com/dp/B0G8RX2824?tag=padel02-20"
-                  type="affiliate"
+                <BuyButtons
+                  href={amazonLink("B0G8RX2824")}
                   productName="HEAD Tour Bag M"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                >
-                  Shop on Amazon &rarr;
-                </TrackedLink>
+                />
               </div>
             </div>
           </section>

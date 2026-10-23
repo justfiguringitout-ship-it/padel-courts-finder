@@ -5,7 +5,7 @@ import { ShoeCompare, SolePlate } from "@/components/gear/gear-compare";
 import { ShoeSole } from "@/components/gear/shoe-sole";
 import type { GearShoe } from "@/components/gear/types";
 import { BuyButtons } from "@/components/gear/buy-buttons";
-import { amazonLink, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from "@/lib/retailer-links";
+import { amazonLink, HEAD, headHref, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Padel Shoes (2026): What to Look For + Our Picks",
@@ -172,7 +172,7 @@ export default function BestPadelShoesPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Men's Sprint Pro 4.0",
           "description": "Light, breathable court shoe with omni-style grip for padel turf",
-          "offers": { "@type": "Offer", "price": "109.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" }
+          "offers": { "@type": "Offer", "price": HEAD.B0G2TH1X7V.priceValue, "priceCurrency": "USD", "url": headHref("B0G2TH1X7V") }
         }
       },
       {
@@ -356,16 +356,11 @@ export default function BestPadelShoesPage() {
                 toe-drag that kills softer shoes. It&apos;s not the plushest shoe on the market — it&apos;s built for
                 quick feet and stability, which is exactly what padel asks for.
               </p>
-              <TrackedLink
-                href="https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20"
-                type="affiliate"
+              <BuyButtons
+                href={amazonLink("B0G2TH1X7V")}
                 productName="HEAD Sprint Pro 4.0 Mens"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 hover:shadow-md transition-all duration-200"
-              >
-                Check Price on Amazon &rarr;
-              </TrackedLink>
+              />
             </div>
 
             {/* Women's */}

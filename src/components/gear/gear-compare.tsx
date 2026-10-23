@@ -1,6 +1,6 @@
 import { TrackedLink } from '@/components/TrackedLink';
-import { padelUsaFor, padelUsaLink } from '@/lib/retailer-links';
-import { AMAZON_LABEL, PADEL_USA_LABEL } from './buy-buttons';
+import { otherStoreFor } from '@/lib/retailer-links';
+import { AMAZON_LABEL } from './buy-buttons';
 import { RacketFigure } from './racket-figure';
 import { NOT_STATED } from './racket-plate';
 import { ShoeSole } from './shoe-sole';
@@ -33,14 +33,14 @@ function AmazonButton({ href, store, productName }: { href?: string; store?: str
     );
   }
 
-  // Also sold at Padel USA: two buttons, main store solid, the other outline
-  const pu = store ? undefined : padelUsaFor(href);
-  if (pu) {
+  // Also sold at Padel USA or HEAD: two buttons, main store solid, the other outline
+  const other = store ? undefined : otherStoreFor(href);
+  if (other) {
     const solid = `${CTA_BASE} text-center bg-padel-green text-white hover:bg-padel-green-dark`;
     const outline = `${CTA_BASE} text-center bg-white text-padel-green ring-2 ring-inset ring-padel-green hover:bg-padel-green/10`;
-    const puButton = (cls: string) => (
-      <TrackedLink href={padelUsaLink(pu.url)} type="affiliate" productName={productName} target="_blank" className={cls}>
-        {pu.label ?? PADEL_USA_LABEL}
+    const otherButton = (cls: string) => (
+      <TrackedLink href={other.href} type="affiliate" productName={productName} target="_blank" className={cls}>
+        {other.label}
       </TrackedLink>
     );
     const amazonButton = (cls: string) => (
@@ -50,7 +50,7 @@ function AmazonButton({ href, store, productName }: { href?: string; store?: str
     );
     return (
       <div className="flex flex-col gap-1.5">
-        {pu.primary ? <>{puButton(solid)}{amazonButton(outline)}</> : <>{amazonButton(solid)}{puButton(outline)}</>}
+        {other.primary ? <>{otherButton(solid)}{amazonButton(outline)}</> : <>{amazonButton(solid)}{otherButton(outline)}</>}
       </div>
     );
   }
@@ -69,10 +69,10 @@ function AmazonButton({ href, store, productName }: { href?: string; store?: str
   );
 }
 
-/** The price to show: Padel USA's when it is the main store, else the page's */
+/** The price to show: Padel USA's or HEAD's when it is the main store, else the page's */
 function shownPrice(href: string | undefined, price: string): string {
-  const pu = padelUsaFor(href);
-  return pu?.primary ? pu.price : price;
+  const other = otherStoreFor(href);
+  return other?.primary ? other.price : price;
 }
 
 const TH = 'px-3 py-2.5 text-left font-mono text-[10px] font-semibold uppercase tracking-wider text-stone-500 whitespace-nowrap';

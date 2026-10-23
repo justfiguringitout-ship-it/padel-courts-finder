@@ -7,6 +7,9 @@
  *
  * Padel USA links are affiliate links (Creator program): render them with
  * <TrackedLink type="affiliate">. See PADEL_USA further down.
+ *
+ * HEAD US links are affiliate links through Awin: render them with
+ * <TrackedLink type="affiliate">. See HEAD further down.
  */
 
 /**
@@ -147,16 +150,160 @@ export function padelUsaHref(asin: string): string {
   return padelUsaLink(PADEL_USA[asin].url);
 }
 
+/* -------------------------------------------------------------------------- */
+/* HEAD US store (head.com/en_US) affiliate links via Awin                    */
+/* -------------------------------------------------------------------------- */
+
 /**
- * The main buy link for a product: Padel USA when it is the primary store,
- * otherwise the Amazon link passed in. Use it for sticky bars and JSON-LD.
+ * HEAD US on Awin: 6% commission. Publisher 3125008, HEAD merchant 27978.
+ * An Awin deep link sends the buyer through awin1.com to the exact head.com
+ * page in `ued`. Render these with <TrackedLink type="affiliate">: the click is
+ * recorded in Plausible as "Gear click" with to=head.com (analytics.ts reads
+ * the real store out of `ued`) and the link gets rel="sponsored nofollow
+ * noopener noreferrer".
  */
-export function primaryOffer(amazonUrl: string, amazonPrice: string): { href: string; price: string; store: 'Padel USA' | 'Amazon' } {
-  const pu = padelUsaFor(amazonUrl);
-  if (pu?.primary) return { href: padelUsaLink(pu.url), price: pu.price, store: 'Padel USA' };
+export const AWIN_PUBLISHER_ID = '3125008';
+export const HEAD_AWIN_MERCHANT_ID = '27978';
+
+/** Awin deep link to any page of an Awin merchant's store */
+export function awinLink(merchantId: string, productUrl: string, clickref?: string): string {
+  let out = `https://www.awin1.com/cread.php?awinmid=${merchantId}&awinaffid=${AWIN_PUBLISHER_ID}&ued=${encodeURIComponent(productUrl)}`;
+  if (clickref) out += `&clickref=${encodeURIComponent(clickref)}`;
+  return out;
+}
+
+/** Awin deep link to a head.com page (product, category or the padel hub) */
+export function headLink(productUrl: string, clickref?: string): string {
+  return awinLink(HEAD_AWIN_MERCHANT_ID, productUrl, clickref);
+}
+
+export interface HeadProduct {
+  /** head.com/en_US product page, without Awin wrapping */
+  url: string;
+  /** Product name as HEAD's US store lists it */
+  storeName: string;
+  /** HEAD's live price on the checked date, for display */
+  price: string;
+  /** Same price as a plain number string, for Product JSON-LD */
+  priceValue: string;
+  /** Date we last checked the HEAD page (price and in stock) */
+  checked: string;
+  /**
+   * true: HEAD is the main button and Amazon the outline one.
+   * false: Amazon stays the main button and HEAD is the outline one.
+   */
+  primary: boolean;
+  /** Awin clickref, so Awin reports show which product sold */
+  clickref: string;
+  /** Button label when it is not the standard "Check price at HEAD" */
+  label?: string;
+  /** Short text for the small "also at" link in tables */
+  alsoLabel?: string;
+}
+
+/**
+ * Products we link at HEAD's US store, keyed by the Amazon ASIN the pages
+ * already use. Link priority is Padel USA (8%), then HEAD (6%), then Amazon
+ * (3%), and a product never gets more than two buttons, so a product in
+ * PADEL_USA never shows a HEAD button (Amazon always stays available).
+ * HEAD is the main button only when HEAD's price is within about 10% of
+ * Amazon's; otherwise it is the outline button.
+ *
+ * Checked 2026-10-23 on head.com/en_US and not linked:
+ * - HEAD Extreme Pro 2025 (B0FNRQ839K): HEAD sells it, $299.95 in stock, but
+ *   Padel USA has it at the same price and stays the main store.
+ * - HEAD Padel Pro S+ balls (B0DHWHX9SG): HEAD's single-can page has no price
+ *   and no Add to Bag (the 24-can box shows $164.95 but no Add to Bag either);
+ *   Padel USA stays at $7.49 a can.
+ * - HEAD Sprint Pro 4.0 Women (B0G3RVSK4J): HEAD lists one colorway (Light
+ *   Blue/Dark Blue, $109), out of stock in every size.
+ * - HEAD Extreme Evo (B0CGRV795T): not sold on HEAD's US store.
+ */
+export const HEAD: Record<string, HeadProduct> = {
+  // HEAD Sprint Pro 4.0 Men, Blueberry/Teal (the same colorway as the Amazon
+  // listing), $109 at both; HEAD in stock in sizes 7 to 12.5 except 9, Amazon
+  // down to 1 left from a third-party seller
+  B0G2TH1X7V: { url: 'https://www.head.com/en_US/product/sprint-pro-4-0-men-273126', storeName: 'HEAD Sprint Pro 4.0 Men Court Shoes', price: '$109.00', priceValue: '109.00', checked: '2026-10-23', primary: true, clickref: 'sprint-pro-4-men' },
+  // HEAD Tour Racquet Bag M: $99 at both. HEAD has blue (the Amazon colorway),
+  // sage and pink in stock; its page opens on black, which is out of stock.
+  // Amazon down to 1 left from a third-party seller
+  B0G8RX2824: { url: 'https://www.head.com/en_US/product/tour-racquet-bag-m-bk-260226-cp', storeName: 'HEAD Tour Racquet Tennis Bag M', price: '$99.00', priceValue: '99.00', checked: '2026-10-23', primary: true, clickref: 'tour-racquet-bag-m' },
+};
+
+/** The HEAD entry for an Amazon link or ASIN, if we link one */
+export function headFor(amazonUrlOrAsin: string | undefined): HeadProduct | undefined {
+  if (!amazonUrlOrAsin) return undefined;
+  const asin = /^[A-Z0-9]{10}$/.test(amazonUrlOrAsin) ? amazonUrlOrAsin : asinFromUrl(amazonUrlOrAsin);
+  return asin ? HEAD[asin] : undefined;
+}
+
+/** HEAD (Awin) affiliate link for an ASIN in the map above */
+export function headHref(asin: string): string {
+  return headLink(HEAD[asin].url, HEAD[asin].clickref);
+}
+
+/* -------------------------------------------------------------------------- */
+/* The store shown next to Amazon                                             */
+/* -------------------------------------------------------------------------- */
+
+export type OtherStore = 'Padel USA' | 'HEAD';
+
+export interface OtherStoreOffer {
+  store: OtherStore;
+  /** Affiliate link to the store's product page */
+  href: string;
+  price: string;
+  priceValue: string;
+  primary: boolean;
+  /** Button label */
+  label: string;
+  /** Short text for the small "also at" link in tables */
+  alsoLabel: string;
+}
+
+/**
+ * The one store we show next to Amazon for a product: Padel USA when it is in
+ * PADEL_USA, otherwise HEAD when it is in HEAD, otherwise none.
+ */
+export function otherStoreFor(amazonUrlOrAsin: string | undefined): OtherStoreOffer | undefined {
+  const pu = padelUsaFor(amazonUrlOrAsin);
+  if (pu) {
+    return {
+      store: 'Padel USA',
+      href: padelUsaLink(pu.url),
+      price: pu.price,
+      priceValue: pu.priceValue,
+      primary: pu.primary,
+      label: pu.label ?? 'Check price at Padel USA',
+      alsoLabel: pu.alsoLabel ?? 'also at Padel USA',
+    };
+  }
+  const head = headFor(amazonUrlOrAsin);
+  if (head) {
+    return {
+      store: 'HEAD',
+      href: headLink(head.url, head.clickref),
+      price: head.price,
+      priceValue: head.priceValue,
+      primary: head.primary,
+      label: head.label ?? 'Check price at HEAD',
+      alsoLabel: head.alsoLabel ?? 'also at HEAD',
+    };
+  }
+  return undefined;
+}
+
+/**
+ * The main buy link for a product: Padel USA or HEAD when it is the primary
+ * store, otherwise the Amazon link passed in. Use it for sticky bars and
+ * JSON-LD.
+ */
+export function primaryOffer(amazonUrl: string, amazonPrice: string): { href: string; price: string; store: OtherStore | 'Amazon' } {
+  const other = otherStoreFor(amazonUrl);
+  if (other?.primary) return { href: other.href, price: other.price, store: other.store };
   return { href: amazonUrl, price: amazonPrice, store: 'Amazon' };
 }
 
-/** Disclosure for gear pages that link both Amazon and Padel USA */
+/** Disclosure for gear pages that link Amazon, Padel USA and HEAD */
 export const GEAR_DISCLOSURE =
-  'This guide contains affiliate links to Amazon and Padel USA. If you buy through them, we may earn a commission from Amazon or Padel USA at no extra cost to you. We only recommend products we believe in.';
+  'This guide contains affiliate links to Amazon, Padel USA and HEAD (via Awin). If you buy through them, we may earn a commission from Amazon, Padel USA or HEAD at no extra cost to you. We only recommend products we believe in.';

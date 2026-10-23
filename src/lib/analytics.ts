@@ -22,7 +22,11 @@ const PLAUSIBLE_EVENT: Record<string, { event: string; kind: string; key: 'club'
 
 function hostOf(url: string): string {
   try {
-    return new URL(url).hostname.replace(/^www\./, '');
+    const u = new URL(url);
+    // Awin deep links go through awin1.com; record the store in `ued` instead
+    const ued = u.hostname.endsWith('awin1.com') ? u.searchParams.get('ued') : null;
+    if (ued) return new URL(ued).hostname.replace(/^www\./, '');
+    return u.hostname.replace(/^www\./, '');
   } catch {
     return url.startsWith('tel:') ? 'phone' : '';
   }

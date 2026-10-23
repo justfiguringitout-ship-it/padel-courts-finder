@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
-import { NOX_ML10_PRO_CUP_ROUGH as ML10, GEAR_DISCLOSURE, amazonLink } from "@/lib/retailer-links";
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, GEAR_DISCLOSURE, amazonLink, HEAD, headHref } from "@/lib/retailer-links";
 import { BuyButtons } from "@/components/gear/buy-buttons";
 
 export const metadata: Metadata = {
@@ -138,10 +138,10 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "109.00",
+          "price": HEAD.B0G2TH1X7V.priceValue,
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20"
+          "url": headHref("B0G2TH1X7V")
         }
       }
     },
@@ -154,10 +154,10 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "99.00",
+          "price": HEAD.B0G8RX2824.priceValue,
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B0G8RX2824?tag=padel02-20"
+          "url": headHref("B0G8RX2824")
         }
       }
     },
@@ -343,7 +343,7 @@ export default function PadelGiftsPage() {
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">The court shoe we recommend in our shoes guide — grip for sand-dressed turf, wrapped toe for drag, lateral cage for hard cuts. The gift that prevents the twisted ankle.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <TrackedLink href="https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" type="affiliate" productName="HEAD Men's Sprint Pro 4.0 Shoes" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                  <BuyButtons wrapperClassName="contents" href={amazonLink("B0G2TH1X7V")} productName="HEAD Men's Sprint Pro 4.0 Shoes" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
                 </div>
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-5">
@@ -353,7 +353,7 @@ export default function PadelGiftsPage() {
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">Fits rackets, shoes, and kit with room to spare — the bag for the guy still stuffing a racket into a gym duffel.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <TrackedLink href="https://www.amazon.com/dp/B0G8RX2824?tag=padel02-20" type="affiliate" productName="HEAD Tour Racquet Bag M" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                  <BuyButtons wrapperClassName="contents" href={amazonLink("B0G8RX2824")} productName="HEAD Tour Racquet Bag M" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
                 </div>
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-5">

@@ -755,7 +755,7 @@ export default function BeginnerRacketsPage() {
                   <h3 className="font-semibold text-foreground mb-1">Court Shoes</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">Don&apos;t wear running shoes on court. Padel requires lateral movement — get shoes with herringbone soles designed for court sports.</p>
                   <div className="flex flex-col sm:flex-row gap-1.5 sm:gap-4">
-                    <TrackedLink href="https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20" type="affiliate" productName="HEAD Sprint Pro 4.0 Mens" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">HEAD Sprint Pro 4.0 Men&apos;s — $109</TrackedLink>
+                    <StoreTextLink href={amazonLink("B0G2TH1X7V")} productName="HEAD Sprint Pro 4.0 Mens" className="text-padel-green hover:underline text-sm">HEAD Sprint Pro 4.0 Men&apos;s — $109</StoreTextLink>
                     <TrackedLink href="https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20" type="affiliate" productName="HEAD Sprint Pro 4.0 Womens" target="_blank" rel="noopener noreferrer" className="text-padel-green hover:underline text-sm">HEAD Sprint Pro 4.0 Women&apos;s — $109</TrackedLink>
                   </div>
                 </div>

@@ -1,16 +1,17 @@
 import type { ReactNode } from 'react';
 import { TrackedLink } from '@/components/TrackedLink';
-import { padelUsaFor, padelUsaLink } from '@/lib/retailer-links';
+import { otherStoreFor } from '@/lib/retailer-links';
 
 /**
- * Buy buttons for a product we link at Amazon and, when it is in PADEL_USA
- * (src/lib/retailer-links.ts), also at Padel USA.
+ * Buy buttons for a product we link at Amazon and, when it is in PADEL_USA or
+ * HEAD (src/lib/retailer-links.ts), also at Padel USA or HEAD's US store.
+ * Padel USA wins over HEAD, so there are never more than two buttons.
  *
  * The main store gets the page's solid button style; the other store gets the
  * same size as an outline button so the main one stays clear. Which store is
- * main comes from the PADEL_USA map, never from the page. Both links are
+ * main comes from those maps, never from the page. Both links are
  * TrackedLink type="affiliate": rel="sponsored nofollow noopener noreferrer"
- * and a Plausible "Gear click" with to=amazon.com or to=padelusa.com.
+ * and a Plausible "Gear click" with to=amazon.com, padelusa.com or head.com.
  */
 
 const SOLID_ONLY = new Set([
@@ -31,7 +32,6 @@ export function toOutline(className: string): string {
   return [...kept, 'bg-white', 'text-padel-green', 'ring-2', 'ring-inset', 'ring-padel-green', 'hover:bg-padel-green/10'].join(' ');
 }
 
-export const PADEL_USA_LABEL = 'Check price at Padel USA';
 export const AMAZON_LABEL = 'Check price at Amazon';
 
 interface BuyButtonsProps {
@@ -55,7 +55,7 @@ export function BuyButtons({
   outlineClassName,
   arrow = true,
 }: BuyButtonsProps) {
-  const pu = padelUsaFor(href);
+  const other = otherStoreFor(href);
   const outline = outlineClassName ?? toOutline(className);
   const arr = arrow ? <> &rarr;</> : null;
 
@@ -65,26 +65,26 @@ export function BuyButtons({
       {arr}
     </TrackedLink>
   );
-  if (!pu) return amazon(className);
+  if (!other) return amazon(className);
 
-  const padelUsa = (cls: string) => (
-    <TrackedLink href={padelUsaLink(pu.url)} type="affiliate" productName={productName} target="_blank" className={cls}>
-      {pu.label ?? PADEL_USA_LABEL}
+  const store = (cls: string) => (
+    <TrackedLink href={other.href} type="affiliate" productName={productName} target="_blank" className={cls}>
+      {other.label}
       {arr}
     </TrackedLink>
   );
 
   return (
     <div className={wrapperClassName}>
-      {pu.primary ? (
+      {other.primary ? (
         <>
-          {padelUsa(className)}
+          {store(className)}
           {amazon(outline)}
         </>
       ) : (
         <>
           {amazon(className)}
-          {padelUsa(outline)}
+          {store(outline)}
         </>
       )}
     </div>
@@ -104,18 +104,17 @@ interface StoreTextLinkProps {
  * store, followed by a small "also at" link to the other one.
  */
 export function StoreTextLink({ href, productName, className, children }: StoreTextLinkProps) {
-  const pu = padelUsaFor(href);
-  if (!pu) {
+  const other = otherStoreFor(href);
+  if (!other) {
     return (
       <TrackedLink href={href} type="affiliate" productName={productName} target="_blank" className={className}>
         {children}
       </TrackedLink>
     );
   }
-  const puHref = padelUsaLink(pu.url);
-  const main = pu.primary ? puHref : href;
-  const other = pu.primary ? href : puHref;
-  const otherLabel = pu.primary ? 'also at Amazon' : pu.alsoLabel ?? 'also at Padel USA';
+  const main = other.primary ? other.href : href;
+  const second = other.primary ? href : other.href;
+  const secondLabel = other.primary ? 'also at Amazon' : other.alsoLabel;
   return (
     <span>
       <TrackedLink href={main} type="affiliate" productName={productName} target="_blank" className={className}>
@@ -124,8 +123,8 @@ export function StoreTextLink({ href, productName, className, children }: StoreT
       <span className="text-xs font-normal text-stone-500">
         {' '}
         (
-        <TrackedLink href={other} type="affiliate" productName={productName} target="_blank" className="underline hover:text-padel-green">
-          {otherLabel}
+        <TrackedLink href={second} type="affiliate" productName={productName} target="_blank" className="underline hover:text-padel-green">
+          {secondLabel}
         </TrackedLink>
         )
       </span>

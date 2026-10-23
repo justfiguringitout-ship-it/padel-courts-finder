@@ -8,7 +8,7 @@ import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
 import { BuyButtons, StoreTextLink } from '@/components/gear/buy-buttons';
-import { amazonLink, asinFromUrl, GEAR_DISCLOSURE, PADEL_USA, padelUsaLink } from '@/lib/retailer-links';
+import { amazonLink, asinFromUrl, GEAR_DISCLOSURE, headLink, PADEL_USA, padelUsaLink } from '@/lib/retailer-links';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -64,7 +64,8 @@ function textOf(node: ReactNode): string {
  * - amazon.com links are affiliate links (tag forced to padel02-20); a product
  *   we also link at Padel USA gets the same "also at" link the gear guides use
  * - padelusa.com links get the Padel USA referral parameters
- * - any other store (HEAD, Holabird, Padel Market USA, NOX) is a plain
+ * - head.com links become HEAD affiliate links through Awin
+ * - any other store (Holabird, Padel Market USA, NOX) is a plain
  *   retailer link: rel="nofollow noopener noreferrer", no "sponsored"
  * TrackedLink sets rel="sponsored nofollow noopener noreferrer" on affiliates.
  */
@@ -99,6 +100,13 @@ function MarkdownLink({ href = '', children }: { href?: string; children?: React
       </TrackedLink>
     );
   }
+  if (host === 'head.com') {
+    return (
+      <TrackedLink href={headLink(href, 'equipment-guide')} type="affiliate" productName={name} target="_blank">
+        {children}
+      </TrackedLink>
+    );
+  }
   return (
     <TrackedLink href={href} type="retailer" productName={name} target="_blank">
       {children}
@@ -113,7 +121,8 @@ const markdownComponents: Components = {
 /**
  * One pick per category, each the pick its gear guide recommends, at the
  * price that guide shows (checked October 2026). BuyButtons adds the Padel
- * USA button when the product is in PADEL_USA (src/lib/retailer-links.ts).
+ * USA or HEAD button when the product is in PADEL_USA or HEAD
+ * (src/lib/retailer-links.ts).
  */
 const TOP_PICKS = [
   { label: 'Beginner racket', name: 'Babolat Contact', price: '$89.95', asin: 'B0BBPZLRVP', note: 'A round, 340 g fiberglass racket and our top pick for complete beginners.', guide: '/blog/best-padel-rackets-beginners', guideLabel: 'Beginner racket guide' },
