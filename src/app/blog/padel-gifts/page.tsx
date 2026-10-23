@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
-import { NOX_ML10_PRO_CUP_ROUGH as ML10, GEAR_DISCLOSURE, amazonLink, HEAD, headHref } from "@/lib/retailer-links";
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER, GEAR_DISCLOSURE, amazonLink, HEAD, headHref } from "@/lib/retailer-links";
 import { BuyButtons } from "@/components/gear/buy-buttons";
 
 export const metadata: Metadata = {
@@ -231,13 +231,7 @@ const itemListData = {
         "@type": "Product",
         "name": "NOX ML10 Pro Cup Rough Surface",
         "image": "https://www.padelcourtsfinder.com/og/default.png",
-        "offers": {
-          "@type": "Offer",
-          "price": ML10.priceValue,
-          "priceCurrency": ML10.priceCurrency,
-          "availability": "https://schema.org/InStock",
-          "url": ML10.url
-        }
+        "offers": NOX_ML10_OFFER
       }
     },
     {
@@ -416,8 +410,7 @@ export default function PadelGiftsPage() {
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">Our highest-rated racket under $200 — pro-level control in a forgiving round shape. The safe premium racket gift for any improving player. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout. Allow time for delivery if it is a gift.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center font-semibold text-sm px-4 py-2 rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
-                <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-4 py-2 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our review</Link>
+                  <Link href={ML10.reviewHref} className="inline-flex items-center font-semibold text-sm px-4 py-2 rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Read our full review &rarr;</Link>
                 </div>
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-5">

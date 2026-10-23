@@ -8,7 +8,7 @@ import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
 import { BuyButtons, StoreTextLink } from '@/components/gear/buy-buttons';
-import { amazonLink, asinFromUrl, GEAR_DISCLOSURE, headLink, PADEL_USA, padelUsaLink } from '@/lib/retailer-links';
+import { amazonLink, asinFromUrl, headLink, PADEL_USA, padelUsaLink, usPadelMarketLink } from '@/lib/retailer-links';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -65,10 +65,15 @@ function textOf(node: ReactNode): string {
  *   we also link at Padel USA gets the same "also at" link the gear guides use
  * - padelusa.com links get the Padel USA referral parameters
  * - head.com links become HEAD affiliate links through Awin
- * - any other store (Holabird, Padel Market USA, NOX) is a plain
- *   retailer link: rel="nofollow noopener noreferrer", no "sponsored"
+ * - us.padelmarket.com links become US Padel Market affiliate links through Awin
+ * - anything else is a plain link: rel="nofollow noopener noreferrer", no
+ *   "sponsored". Do not link a store that does not pay us (name it as plain
+ *   text instead); `npm run links:audit` fails on one.
  * TrackedLink sets rel="sponsored nofollow noopener noreferrer" on affiliates.
  */
+const EQUIPMENT_DISCLOSURE =
+  'This guide contains affiliate links to Amazon, Padel USA, HEAD and US Padel Market (HEAD and US Padel Market via Awin). If you buy through them, we may earn a commission at no extra cost to you. We only recommend products we believe in.';
+
 function MarkdownLink({ href = '', children }: { href?: string; children?: ReactNode }) {
   if (href.startsWith('/') || href.startsWith('#')) {
     return <Link href={href}>{children}</Link>;
@@ -103,6 +108,13 @@ function MarkdownLink({ href = '', children }: { href?: string; children?: React
   if (host === 'head.com') {
     return (
       <TrackedLink href={headLink(href, 'equipment-guide')} type="affiliate" productName={name} target="_blank">
+        {children}
+      </TrackedLink>
+    );
+  }
+  if (host === 'us.padelmarket.com') {
+    return (
+      <TrackedLink href={usPadelMarketLink(href, 'equipment-guide')} type="affiliate" productName={name} target="_blank">
         {children}
       </TrackedLink>
     );
@@ -193,7 +205,7 @@ export default function EquipmentPage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 mb-8 flex items-start gap-2">
             <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
-            <p className="text-xs text-stone-500 italic leading-relaxed">{GEAR_DISCLOSURE}</p>
+            <p className="text-xs text-stone-500 italic leading-relaxed">{EQUIPMENT_DISCLOSURE}</p>
           </div>
           <h2 className="text-2xl font-bold tracking-tight mb-2">Top picks from our gear guides</h2>
           <p className="text-sm text-stone-600 mb-5">

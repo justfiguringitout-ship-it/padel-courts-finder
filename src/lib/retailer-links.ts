@@ -1,40 +1,53 @@
 /**
- * Buy links at stores other than Amazon, plus the Amazon link builder.
+ * Buy links: Amazon, plus Padel USA, HEAD and US Padel Market when they sell
+ * the exact model a page recommends.
  *
- * NOX (below) is a plain retailer link, not an affiliate link: render it with
- * <TrackedLink type="retailer">, which tracks the click and uses
- * rel="nofollow noopener noreferrer" (no "sponsored").
+ * House rule (2026-10-23): every product or shopping link on the site goes to
+ * a store that pays us. Paid stores, best first: Padel USA (8%), HEAD US via
+ * Awin (6%), Amazon (3%), US Padel Market via Awin (3%, only when none of the
+ * others sells the model). When no paid store sells a product, the page names
+ * it without a store link (or links our own review). `npm run links:audit`
+ * fails the build check on any unpaid store link.
  *
- * Padel USA links are affiliate links (Creator program): render them with
- * <TrackedLink type="affiliate">. See PADEL_USA further down.
- *
- * HEAD US links are affiliate links through Awin: render them with
- * <TrackedLink type="affiliate">. See HEAD further down.
+ * Every link built here is an affiliate link: render it with
+ * <TrackedLink type="affiliate">, which tracks the click as "Gear click" and
+ * sets rel="sponsored nofollow noopener noreferrer".
  */
 
 /**
- * NOX ML10 Pro Cup Rough, 2027 edition, on NOX's own store (noxsport.com,
- * Barcelona). Checked 2026-10-15: 149.99 euros, listed "In stock" as a
- * pre-order shipping from October 19. It ships to the US; shipping and import
- * duties are added at checkout.
+ * NOX ML10 Pro Cup Rough, 2027 edition. No store that pays us sells it, so
+ * pages name it, quote NOX's own price as plain text and link our review, with
+ * no store link.
  *
- * Why NOX Spain: no US store stocks any edition of the ML10 Pro Cup Rough
- * (checked NOX USA noxsportusa.com, Padel USA, Racket Central, Tennis
- * Warehouse, Holabird, PDH Sports, Padel Padel, Casas Padel). NOX has no
- * public affiliate program that we could find.
+ * Checked 2026-10-23: NOX's own store (noxsport.com, Barcelona) has it at
+ * 149.99 euros, in stock, shipping to the US with shipping and import duties
+ * added at checkout. Not sold at Padel USA (it has the ML10 Ventus Control 3K
+ * and the sold-out ML10 Quantum 3K, different rackets), US Padel Market (no
+ * NOX rackets at all), Amazon (no edition of the ML10 Pro Cup) or HEAD.
+ * NOX has no affiliate program we could find.
  *
- * TODO affiliate: add it to PADEL_USA below if Padel USA starts stocking the
- * ML10 Pro Cup Rough (not stocked on 2026-10-15); otherwise Holabird (5% via
- * Partnerize) if it does.
+ * TODO affiliate: add it to PADEL_USA below if Padel USA starts stocking it.
  */
 export const NOX_ML10_PRO_CUP_ROUGH = {
-  url: 'https://noxsport.com/en/products/ml10-pro-cup-rough-miguel-lamperti-2027',
   store: 'NOX',
   productName: 'NOX ML10 Pro Cup Rough 2027',
   /** Display price, in euros because NOX's store only charges in euros */
   price: '€149.99',
   priceValue: '149.99',
   priceCurrency: 'EUR',
+  /** Date we last checked NOX's price and stock */
+  checked: '2026-10-23',
+  /** Our review, the link pages use instead of a store link */
+  reviewHref: '/blog/nox-ml10-pro-cup-review',
+} as const;
+
+/** JSON-LD Offer for the ML10: NOX's price, seller named, no store URL */
+export const NOX_ML10_OFFER = {
+  '@type': 'Offer',
+  price: NOX_ML10_PRO_CUP_ROUGH.priceValue,
+  priceCurrency: NOX_ML10_PRO_CUP_ROUGH.priceCurrency,
+  availability: 'https://schema.org/InStock',
+  seller: { '@type': 'Organization', name: 'NOX' },
 } as const;
 
 /* -------------------------------------------------------------------------- */
@@ -302,6 +315,22 @@ export function primaryOffer(amazonUrl: string, amazonPrice: string): { href: st
   const other = otherStoreFor(amazonUrl);
   if (other?.primary) return { href: other.href, price: other.price, store: other.store };
   return { href: amazonUrl, price: amazonPrice, store: 'Amazon' };
+}
+
+/* -------------------------------------------------------------------------- */
+/* US Padel Market (us.padelmarket.com) affiliate links via Awin              */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * US Padel Market on Awin: 3%. Merchant 129063, same publisher as HEAD. Use it
+ * only when Padel USA, HEAD and Amazon do not sell the model, since it pays
+ * the least. analytics.ts records the click with to=us.padelmarket.com.
+ */
+export const US_PADEL_MARKET_AWIN_MERCHANT_ID = '129063';
+
+/** Awin deep link to a us.padelmarket.com page */
+export function usPadelMarketLink(productUrl: string, clickref?: string): string {
+  return awinLink(US_PADEL_MARKET_AWIN_MERCHANT_ID, productUrl, clickref);
 }
 
 /** Disclosure for gear pages that link Amazon, Padel USA and HEAD */

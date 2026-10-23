@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
-import { NOX_ML10_PRO_CUP_ROUGH as ML10, amazonLink, HEAD, headHref, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from '@/lib/retailer-links';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER, amazonLink, HEAD, headHref, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from '@/lib/retailer-links';
 import { HeroVideo } from '@/components/hero-video';
 import { BuyButtons } from "@/components/gear/buy-buttons";
 
@@ -234,12 +234,7 @@ export default function MothersDay2026GiftGuidePage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX ML10 Pro Cup Rough Surface",
           "description": "Miguel Lamperti signature model — rough sand finish for topspin, low balance for net play.",
-          "offers": {
-            "@type": "Offer",
-            "price": ML10.priceValue,
-            "priceCurrency": ML10.priceCurrency, "availability": "https://schema.org/InStock",
-            "url": ML10.url
-          }
+          "offers": NOX_ML10_OFFER
         }
       },
       {
@@ -622,10 +617,10 @@ export default function MothersDay2026GiftGuidePage() {
                     <span className="bg-stone-200 text-stone-600 px-2.5 py-1 rounded-lg text-sm font-semibold whitespace-nowrap">{ML10.price}</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
-                    For the <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate player</Link>. Rough sand finish for topspin, low balance for net play. Miguel Lamperti signature model &mdash; one of the most popular rackets in professional padel. Amazon no longer sells it. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout.
+                    For the <Link href="/blog/best-padel-rackets-intermediate" className="text-padel-green hover:underline">intermediate player</Link>. Rough sand finish for topspin, low balance for net play. Miguel Lamperti signature model &mdash; one of the most popular rackets in professional padel. Amazon no longer sells it. NOX sells the 2027 edition for {ML10.price} on its own store, shipped from Spain with shipping and import duties added at checkout. NOX sells the 2027 edition on its own store, shipped from Spain with shipping and import duties added at checkout.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the intermediate mom who wants more spin</p>
-                  <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 font-medium text-sm rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
+                  <Link href={ML10.reviewHref} className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 font-medium text-sm rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Read our ML10 review &rarr;</Link>
                 </div>
 
                 {/* 11. Bullpadel Neuron */}

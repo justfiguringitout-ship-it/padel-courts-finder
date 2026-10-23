@@ -14,7 +14,7 @@ export default function TermsPage() {
       <header className="grain bg-court text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="font-display text-3xl md:text-4xl font-bold">Terms of Service</h1>
-          <p className="text-white/50 mt-2 text-sm">Last updated: July 5, 2026</p>
+          <p className="text-white/50 mt-2 text-sm">Last updated: October 23, 2026</p>
         </div>
       </header>
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-stone-700 leading-relaxed">
@@ -39,10 +39,16 @@ export default function TermsPage() {
         <section>
           <h2 className="font-display text-xl font-bold mb-2">Editorial content &amp; affiliate links</h2>
           <p>
-            Our gear guides reflect our honest editorial assessment. Some links are
-            affiliate links — as an Amazon Associate, we earn from qualifying purchases at
-            no extra cost to you. Sponsorships and partnerships are always disclosed;
-            editorial ratings are never for sale.
+            Our gear guides reflect our honest editorial assessment. Some links on the site
+            are affiliate links. If you buy through one, we may earn a small commission, at no
+            extra cost to you. As an Amazon Associate, Padel Courts Finder earns from
+            qualifying purchases.
+          </p>
+          <p className="mt-3">
+            Our editorial picks, rankings and ratings are not paid placements. No brand or
+            store pays to be included in a guide or to rank higher, and a commission never
+            decides which product we recommend. Club Spotlights are paid: a club pays for the
+            feature, and every Spotlight is labeled Sponsored.
           </p>
         </section>
         <section>

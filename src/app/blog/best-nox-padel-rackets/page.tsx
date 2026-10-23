@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
-import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER } from '@/lib/retailer-links';
 import { StickyPickBar } from '@/components/sticky-pick-bar';
 import { HeroVideo } from '@/components/hero-video';
 import type { ReactNode } from 'react';
@@ -106,7 +106,7 @@ const faqData = {
   ]
 };
 
-const product = (position: number, name: string, url: string, price: string, offerUrl: string, rating: number, currency: string = "USD") => ({
+const product = (position: number, name: string, url: string, price: string, offerUrl: string, rating: number, currency: string = "USD", offer?: object) => ({
   "@type": "ListItem",
   "position": position,
   "item": {
@@ -114,7 +114,7 @@ const product = (position: number, name: string, url: string, price: string, off
     "name": name,
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "url": url,
-    ...(offerUrl ? { "offers": { "@type": "Offer", "price": price, "priceCurrency": currency, "availability": "https://schema.org/InStock", "url": offerUrl } } : {}),
+    ...(offer ? { "offers": offer } : offerUrl ? { "offers": { "@type": "Offer", "price": price, "priceCurrency": currency, "availability": "https://schema.org/InStock", "url": offerUrl } } : {}),
     "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": rating, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
   }
 });
@@ -124,7 +124,7 @@ const itemListData = {
   "@type": "ItemList",
   "itemListElement": [
     product(1, "NOX AT10 Genius 18K", "https://www.padelcourtsfinder.com/blog/nox-at10-genius-18k-review", "259.99", AMZ.nox18k, 7.3),
-    product(2, "NOX ML10 Pro Cup Rough Surface", "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review", ML10.priceValue, ML10.url, 7.3, ML10.priceCurrency),
+    product(2, "NOX ML10 Pro Cup Rough Surface", "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review", ML10.priceValue, "", 7.3, ML10.priceCurrency, NOX_ML10_OFFER),
     product(3, "NOX Pro Cup USPA Edition", "https://www.padelcourtsfinder.com/blog/best-nox-padel-rackets#nox-pro-cup-uspa", "", "", 7.3),
     product(4, "NOX AT10 Genius Attack 12K", "https://www.padelcourtsfinder.com/blog/nox-at10-genius-attack-review", "229.99", AMZ.attack12k, 6.7)
   ]
@@ -340,7 +340,7 @@ export default function NoxRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> 9/10 control, rough surface for topspin, quick at the net, 8/10 comfort</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face caps power at 5/10</p>
                 </div>
-                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
+                <Link href={ML10.reviewHref} className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Read our ML10 review &rarr;</Link>
               </div>
 
               {/* 3. NOX Pro Cup USPA Edition */}
@@ -415,7 +415,7 @@ export default function NoxRacketsPage() {
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best NOX Racket for Intermediate Players</td>
-                      <td className="py-3 pr-4"><TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="text-padel-green hover:underline">NOX ML10 Pro Cup Rough (2027)</TrackedLink></td>
+                      <td className="py-3 pr-4"><Link href={ML10.reviewHref} className="text-padel-green hover:underline">NOX ML10 Pro Cup Rough (2027)</Link></td>
                       <td className="py-3 text-stone-600">{ML10.price} at NOX</td>
                     </tr>
                     <tr className="border-b border-stone-100">

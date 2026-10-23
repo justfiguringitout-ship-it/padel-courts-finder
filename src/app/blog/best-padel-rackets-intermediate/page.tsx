@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
-import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER } from '@/lib/retailer-links';
 import { RacketCompare } from '@/components/gear/gear-compare';
 import { RacketPlate } from '@/components/gear/racket-plate';
 import type { GearRacket } from '@/components/gear/types';
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 /** Presentation data for the compare view and racket drawings. Every value is
  *  copied from this page's own cards; nothing here is new. */
 const RACKETS: GearRacket[] = [
-  { id: "nox-ml10-pro-cup", rank: 1, name: "NOX ML10 Pro Cup Rough Surface", productName: ML10.productName, price: ML10.price, href: ML10.url, store: ML10.store, brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Spin-focused players upgrading from beginner", balance: "Low", level: "Intermediate" },
+  { id: "nox-ml10-pro-cup", rank: 1, name: "NOX ML10 Pro Cup Rough Surface", productName: ML10.productName, price: ML10.price, reviewHref: ML10.reviewHref, brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Spin-focused players upgrading from beginner", balance: "Low", level: "Intermediate" },
   { id: "wilson-blade-elite", rank: 2, name: "Wilson Blade Elite V2", productName: "Wilson Blade Elite V2", price: "$208.58", href: "https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20", brand: "wilson", shape: "teardrop", shapeLabel: "Teardrop", weight: "360g", core: "Soft EVA", face: "Carbon/FG Hybrid Textured", bestFor: "All-court players who want balance", level: "Intermediate" },
   { id: "nox-at10-attack", rank: 3, name: "NOX AT10 Genius Attack 12K", productName: "NOX AT10 Genius Attack", price: "$229.99", href: "https://www.amazon.com/dp/B0DHSVNSRK?tag=padel02-20", brand: "nox", shape: "diamond", shapeLabel: "Diamond", weight: "360–370g", core: "MLD Black EVA", face: "12K Carbon Luxury", bestFor: "Aggressive players with clean technique", balance: "Head-heavy", level: "Upper-intermediate" },
   { id: "bullpadel-neuron", rank: 4, name: "Bullpadel Neuron 2025 (Chingotto)", productName: "Bullpadel Neuron", price: "$236.00", href: "https://www.amazon.com/dp/B0DHZL5ZFF?tag=padel02-20", brand: "bullpadel", shape: "hybrid", shapeLabel: "Hybrid (Teardrop-Round)", weight: "370g", core: "EVA", face: "Xtend Carbon 3K", bestFor: "Upper-intermediates transitioning to advanced", level: "Upper-intermediate" },
@@ -106,7 +106,7 @@ export default function IntermediateRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX ML10 Pro Cup Rough Surface",
           "description": "Best for: Spin-focused players upgrading from beginner",
-          "offers": { "@type": "Offer", "price": ML10.priceValue, "priceCurrency": ML10.priceCurrency, "availability": "https://schema.org/InStock", "url": ML10.url },
+          "offers": NOX_ML10_OFFER,
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -321,7 +321,7 @@ export default function IntermediateRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> Rough sand finish for topspin, low balance = great at net</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face limits raw power</p>
                 </div>
-                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white hover:bg-padel-green-dark transition-colors font-medium rounded-lg">Check price at NOX &rarr;</TrackedLink>
+                <Link href={ML10.reviewHref} className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white hover:bg-padel-green-dark transition-colors font-medium rounded-lg">Read our ML10 review &rarr;</Link>
               </div>
 
               {/* 2. Wilson Blade Elite V2 */}
@@ -563,7 +563,7 @@ export default function IntermediateRacketsPage() {
                   <tbody>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Value Upgrade</td>
-                      <td className="py-3 pr-4"><TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="text-padel-green hover:underline">NOX ML10 Pro Cup (2027)</TrackedLink></td>
+                      <td className="py-3 pr-4"><Link href={ML10.reviewHref} className="text-padel-green hover:underline">NOX ML10 Pro Cup (2027)</Link></td>
                       <td className="py-3 text-stone-600">{ML10.price} at NOX</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">

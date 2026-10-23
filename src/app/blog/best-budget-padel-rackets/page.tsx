@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
-import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER } from '@/lib/retailer-links';
 import { RacketCompare } from '@/components/gear/gear-compare';
 import { RacketPlate } from '@/components/gear/racket-plate';
 import type { GearRacket } from '@/components/gear/types';
@@ -97,7 +97,7 @@ const faqData = {
   ]
 };
 
-const product = (position: number, name: string, url: string, price: string, offerUrl: string, rating: number, currency: string = "USD") => ({
+const product = (position: number, name: string, url: string, price: string, offerUrl: string, rating: number, currency: string = "USD", offer?: object) => ({
   "@type": "ListItem",
   "position": position,
   "item": {
@@ -105,7 +105,7 @@ const product = (position: number, name: string, url: string, price: string, off
     "name": name,
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "url": url,
-    ...(offerUrl ? { "offers": { "@type": "Offer", "price": price, "priceCurrency": currency, "availability": "https://schema.org/InStock", "url": offerUrl } } : {}),
+    ...(offer ? { "offers": offer } : offerUrl ? { "offers": { "@type": "Offer", "price": price, "priceCurrency": currency, "availability": "https://schema.org/InStock", "url": offerUrl } } : {}),
     "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": rating, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
   }
 });
@@ -118,7 +118,7 @@ const itemListData = {
     product(2, "HEAD Extreme Evo", "https://www.padelcourtsfinder.com/blog/head-extreme-evo-review", "99.95", AMZ.evo, 7.3),
     product(3, "Babolat Contact", "https://www.padelcourtsfinder.com/blog/babolat-contact-review", "89.95", AMZ.contact, 7.0),
     product(4, "NOX Pro Cup USPA Edition", "https://www.padelcourtsfinder.com/blog/best-budget-padel-rackets#nox-pro-cup-uspa", "", "", 7.3),
-    product(5, "NOX ML10 Pro Cup Rough Surface", "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review", ML10.priceValue, ML10.url, 7.3, ML10.priceCurrency),
+    product(5, "NOX ML10 Pro Cup Rough Surface", "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review", ML10.priceValue, "", 7.3, ML10.priceCurrency, NOX_ML10_OFFER),
     product(6, "Adidas Adipower", "https://www.padelcourtsfinder.com/blog/best-budget-padel-rackets#adidas-adipower", "149.00", AMZ.adipower, 7.0),
   ]
 };
@@ -149,7 +149,7 @@ const RACKETS: GearRacket[] = [
   { id: "head-extreme-evo", rank: 2, name: "HEAD Extreme Evo", productName: "HEAD Extreme Evo", price: "$99.95", href: AMZ.evo, brand: "head", shape: "round", shapeLabel: "Round (511cm²)", weight: "355–365g", core: "Power Foam", face: "FG/Carbon Hybrid", bestFor: "Players who want arm protection and a huge sweet spot for under $100", level: "Beginner", score: "7.3/10" },
   { id: "babolat-contact", rank: 3, name: "Babolat Contact", productName: "Babolat Contact", price: "$89.95", href: AMZ.contact, brand: "babolat", shape: "round", shapeLabel: "Round", weight: "340g", core: "Soft EVA", face: "Fiberglass", bestFor: "Complete beginners, smaller players and anyone spending as little as possible", level: "Beginner", score: "7.0/10" },
   { id: "nox-pro-cup-uspa", rank: 4, name: "NOX Pro Cup USPA Edition", productName: "NOX Pro Cup USPA Edition", price: "Sold out", brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–365g", core: "HR3 EVA", face: "FG 3K Silver", bestFor: "Budget buyers who want a carbon frame and a bit more pace", level: "Beginner", score: "7.3/10" },
-  { id: "nox-ml10-pro-cup", rank: 5, name: "NOX ML10 Pro Cup Rough Surface", productName: ML10.productName, price: ML10.price, href: ML10.url, store: ML10.store, brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Improving players who want a real upgrade without paying $200+", balance: "Low", level: "Intermediate", score: "7.3/10" },
+  { id: "nox-ml10-pro-cup", rank: 5, name: "NOX ML10 Pro Cup Rough Surface", productName: ML10.productName, price: ML10.price, reviewHref: ML10.reviewHref, brand: "nox", shape: "round", shapeLabel: "Round", weight: "360–375g", core: "HR3 EVA", face: "FG 3K Rough", bestFor: "Improving players who want a real upgrade without paying $200+", balance: "Low", level: "Intermediate", score: "7.3/10" },
   { id: "adidas-adipower", rank: 6, name: "Adidas Adipower", productName: "Adidas Adipower", price: "$149.00", href: AMZ.adipower, brand: "adidas", shape: "round", shapeLabel: "Round", weight: "360–365g (Adjustable)", core: "EVA Soft Performance", face: "FG 3K", bestFor: "Players who want one racket they can re-weight as they improve", level: "Beginner", score: "7.0/10" },
 ];
 
@@ -377,7 +377,7 @@ export default function BudgetRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-padel-green mr-1.5">&#10003;</span> 9/10 control, rough surface for topspin, quick at the net</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face limits raw power; ships from Spain, so shipping and import duties are extra</p>
                 </div>
-                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white hover:bg-padel-green-dark transition-colors font-medium text-sm rounded-lg">Check price at NOX &rarr;</TrackedLink>
+                <Link href={ML10.reviewHref} className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 bg-padel-green text-white hover:bg-padel-green-dark transition-colors font-medium text-sm rounded-lg">Read our ML10 review &rarr;</Link>
               </div>
 
               {/* 6. Adidas Adipower */}
@@ -455,7 +455,7 @@ export default function BudgetRacketsPage() {
                     </tr>
                     <tr className="border-b border-stone-100">
                       <td className="py-3 pr-4 font-medium text-stone-700">Best Budget Racket for Intermediate Players</td>
-                      <td className="py-3 pr-4"><TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="text-padel-green hover:underline">NOX ML10 Pro Cup Rough (2027)</TrackedLink></td>
+                      <td className="py-3 pr-4"><Link href={ML10.reviewHref} className="text-padel-green hover:underline">NOX ML10 Pro Cup Rough (2027)</Link></td>
                       <td className="py-3 text-stone-600">{ML10.price} at NOX</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">

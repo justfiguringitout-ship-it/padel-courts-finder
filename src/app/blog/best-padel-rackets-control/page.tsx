@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
-import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER } from '@/lib/retailer-links';
 import { StickyPickBar } from '@/components/sticky-pick-bar';
 
 export const metadata: Metadata = {
@@ -101,7 +101,7 @@ export default function ControlRacketsPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "NOX ML10 Pro Cup Rough Surface",
           "description": "Best for: Control players who want spin on top of placement",
-          "offers": { "@type": "Offer", "price": ML10.priceValue, "priceCurrency": ML10.priceCurrency, "availability": "https://schema.org/InStock", "url": ML10.url },
+          "offers": NOX_ML10_OFFER,
           "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 }, "author": { "@type": "Organization", "name": "Padel Courts Finder" } }
         }
       },
@@ -354,7 +354,7 @@ export default function ControlRacketsPage() {
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> Fiberglass face means modest raw power (5/10)</p>
                   <p className="text-sm text-stone-700"><span className="text-stone-400 mr-1.5">&#10007;</span> At up to 375g, heavier than the other budget-tier picks here</p>
                 </div>
-                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
+                <Link href={ML10.reviewHref} className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-2.5 font-medium text-sm rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Read our ML10 review &rarr;</Link>
               </div>
 
               {/* 3. NOX AT10 Genius 18K Alum */}
@@ -589,7 +589,7 @@ export default function ControlRacketsPage() {
                       <td className="py-3 text-stone-600">Comfort-first precision</td>
                     </tr>
                     <tr className="border-b border-stone-100 bg-stone-50/50">
-                      <td className="py-3 pr-4"><TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="text-padel-green hover:underline">NOX ML10 Pro Cup (2027)</TrackedLink></td>
+                      <td className="py-3 pr-4"><Link href={ML10.reviewHref} className="text-padel-green hover:underline">NOX ML10 Pro Cup (2027)</Link></td>
                       <td className="py-3 pr-4 text-stone-600">{ML10.price} at NOX</td>
                       <td className="py-3 pr-4 text-stone-600">Round</td>
                       <td className="py-3 pr-4 text-stone-600">9/10</td>

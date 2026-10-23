@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
-import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from "@/lib/retailer-links";
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Round Padel Rackets (2026): Control & Forgiveness Picks",
@@ -94,7 +94,7 @@ const itemListData = {
         "name": "NOX ML10 Pro Cup",
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "url": "https://www.padelcourtsfinder.com/blog/nox-ml10-pro-cup-review",
-        "offers": { "@type": "Offer", "price": ML10.priceValue, "priceCurrency": ML10.priceCurrency, "availability": "https://schema.org/InStock", "url": ML10.url },
+        "offers": NOX_ML10_OFFER,
         "review": {
           "@type": "Review",
           "reviewRating": {
@@ -198,8 +198,7 @@ export default function BestRoundRacketsPage() {
                 <div className="bg-stone-50 rounded-lg p-3"><strong className="text-stone-500">Cons:</strong> <span className="text-stone-600">Power depends on your own swing speed</span></div>
               </div>
               <div className="flex flex-wrap gap-3 mt-5">
-                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center font-semibold text-sm px-5 py-2.5 rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
-                <Link href="/blog/nox-ml10-pro-cup-review" className="inline-flex items-center border border-stone-300 text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-padel-green hover:text-padel-green transition-colors">Read our full review</Link>
+                <Link href={ML10.reviewHref} className="inline-flex items-center font-semibold text-sm px-5 py-2.5 rounded-lg bg-padel-green text-white hover:bg-padel-green-dark transition-colors">Read our full review &rarr;</Link>
               </div>
             </div>
             <div className="bg-white border border-stone-200 rounded-xl p-6">

@@ -54,7 +54,7 @@ Upgrade when you play every week, you know whether you prefer to defend or attac
 
 ### For control and spin
 
-Our top intermediate pick is the [NOX ML10 Pro Cup Rough](https://noxsport.com/en/products/ml10-pro-cup-rough-miguel-lamperti-2027), a round racket with a rough fiberglass face. No US store stocked it when we checked, so it is sold through NOX's own store in Spain at €149.99, with shipping and import duties added at checkout. The [Wilson Blade Elite V2](https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20) at $208.58 is a teardrop for all-court players who want balance. Our [control racket guide](/blog/best-padel-rackets-control) has more options.
+Our top intermediate pick is the [NOX ML10 Pro Cup Rough](/blog/nox-ml10-pro-cup-review), a round racket with a rough fiberglass face. No US store stocked it when we checked on October 23, 2026, so it is sold through NOX's own store in Spain at €149.99, with shipping and import duties added at checkout. The [Wilson Blade Elite V2](https://www.amazon.com/dp/B09TSWCFHD?tag=padel02-20) at $208.58 is a teardrop for all-court players who want balance. Our [control racket guide](/blog/best-padel-rackets-control) has more options.
 
 ### For all-court players
 
@@ -135,11 +135,11 @@ General sporting goods stores rarely carry much padel gear, so most players buy 
 - [Padel USA](https://padelusa.com/) is a US padel store. It sells several of the rackets, shoes, balls and grips in our guides.
 - [Amazon](https://www.amazon.com/s?k=padel&tag=padel02-20) carries most of the rackets, shoes, balls and bags in our guides.
 - [HEAD's US store](https://www.head.com/en_US/padel) is the place to buy HEAD's own padel gear direct from the brand.
-- [Holabird Sports](https://www.holabirdsports.com/collections/padel), the racket sports retailer, has a padel section.
-- [Padel Market USA](https://us.padelmarket.com/) is a padel retailer with a US store at us.padelmarket.com.
+- Holabird Sports, the racket sports retailer, has a padel section.
+- [US Padel Market](https://us.padelmarket.com/) is a padel retailer with a US store at us.padelmarket.com.
 - Your club's pro shop, if it has one, lets you hold a racket before you buy, and it is worth asking whether they have demo rackets to try. You can find clubs near you in our [directory](/search).
 
-We have not compared prices or stock across these stores beyond the products in our guides, so check more than one before you buy. Our links to Amazon and Padel USA are affiliate links, as the note at the top of this page explains. Our links to HEAD, Holabird Sports, Padel Market USA and NOX are plain links, and we earn nothing from them.
+We have not compared prices or stock across these stores beyond the products in our guides, so check more than one before you buy. Our links to Amazon, Padel USA, HEAD and US Padel Market are affiliate links, as the note at the top of this page explains. Holabird Sports and NOX have no link because we have no affiliate deal with them.
 
 ## For clubs and court builders
 

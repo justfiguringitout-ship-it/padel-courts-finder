@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <header className="grain bg-court text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="font-display text-3xl md:text-4xl font-bold">Privacy Policy</h1>
-          <p className="text-white/50 mt-2 text-sm">Last updated: July 5, 2026</p>
+          <p className="text-white/50 mt-2 text-sm">Last updated: October 23, 2026</p>
         </div>
       </header>
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-stone-700 leading-relaxed">
@@ -41,10 +41,19 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-display text-xl font-bold mb-2">Affiliate links</h2>
           <p>
-            As an Amazon Associate, we earn from qualifying purchases. When you click a
-            product link on our gear guides, Amazon sets cookies that attribute your purchase
-            to us. This never changes the price you pay, and it&apos;s how the site stays free.
-            Affiliate content is always disclosed on the page where it appears.
+            Some links on this site are affiliate links. They go to retailers and affiliate
+            networks such as Amazon, and if you buy something after clicking one, we may earn
+            a commission. As an Amazon Associate, Padel Courts Finder earns from qualifying
+            purchases. Using an affiliate link never changes the price you pay.
+          </p>
+          <p className="mt-3">
+            When you click an affiliate link, the store or the affiliate network that runs the
+            program may set cookies or use similar tracking on its own site to record that you
+            came from us, so the sale can be credited to us. Their privacy policies cover that
+            tracking. We do not get your name, contact details or payment details from the
+            store. The reports we receive show things like clicks, orders and commissions, not
+            who you are. Our own analytics also count clicks on these links, without
+            identifying you. Pages with affiliate links say so where the links appear.
           </p>
         </section>
         <section>

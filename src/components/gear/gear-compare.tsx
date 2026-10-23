@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { TrackedLink } from '@/components/TrackedLink';
 import { otherStoreFor } from '@/lib/retailer-links';
 import { AMAZON_LABEL } from './buy-buttons';
@@ -24,7 +25,15 @@ function Missing() {
 const CTA_BASE = 'pcf-compare-cta inline-flex items-center justify-center rounded-md font-semibold transition-colors min-h-10 px-3 py-2 text-xs';
 const CTA_SOLID = `${CTA_BASE} whitespace-nowrap bg-padel-green text-white hover:bg-padel-green-dark`;
 
-function AmazonButton({ href, store, productName }: { href?: string; store?: string; productName: string; compact?: boolean }) {
+function AmazonButton({ href, reviewHref, productName }: { href?: string; reviewHref?: string; productName: string; compact?: boolean }) {
+  if (!href && reviewHref) {
+    // No store that pays us sells it: link our review instead of a store
+    return (
+      <Link href={reviewHref} className={`${CTA_BASE} whitespace-nowrap bg-white text-padel-green ring-2 ring-inset ring-padel-green hover:bg-padel-green/10`}>
+        Read our review <span aria-hidden="true" className="ml-1">&rarr;</span>
+      </Link>
+    );
+  }
   if (!href) {
     return (
       <span className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-stone-100 px-3 py-2 text-xs font-medium text-stone-500 min-h-10">
@@ -34,7 +43,7 @@ function AmazonButton({ href, store, productName }: { href?: string; store?: str
   }
 
   // Also sold at Padel USA or HEAD: two buttons, main store solid, the other outline
-  const other = store ? undefined : otherStoreFor(href);
+  const other = otherStoreFor(href);
   if (other) {
     const solid = `${CTA_BASE} text-center bg-padel-green text-white hover:bg-padel-green-dark`;
     const outline = `${CTA_BASE} text-center bg-white text-padel-green ring-2 ring-inset ring-padel-green hover:bg-padel-green/10`;
@@ -56,15 +65,8 @@ function AmazonButton({ href, store, productName }: { href?: string; store?: str
   }
 
   return (
-    <TrackedLink
-      href={href}
-      type={store ? 'retailer' : 'affiliate'}
-      productName={productName}
-      target="_blank"
-      rel={store ? 'nofollow noopener noreferrer' : 'noopener noreferrer'}
-      className={CTA_SOLID}
-    >
-      {store ? `Check price at ${store}` : 'Check price'} <span aria-hidden="true" className="ml-1">&rarr;</span>
+    <TrackedLink href={href} type="affiliate" productName={productName} target="_blank" className={CTA_SOLID}>
+      Check price <span aria-hidden="true" className="ml-1">&rarr;</span>
     </TrackedLink>
   );
 }
@@ -175,7 +177,7 @@ export function RacketCompare({ rackets, uidPrefix, caption, showLineup = true, 
                         {r.name}
                       </a>
                       <div className="mt-1.5">
-                        <AmazonButton href={r.href} store={r.store} productName={r.productName} compact />
+                        <AmazonButton href={r.href} reviewHref={r.reviewHref} productName={r.productName} compact />
                       </div>
                     </div>
                   </div>

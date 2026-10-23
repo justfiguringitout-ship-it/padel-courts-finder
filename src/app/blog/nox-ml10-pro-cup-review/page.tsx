@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { TrackedLink } from '@/components/TrackedLink';
-import { NOX_ML10_PRO_CUP_ROUGH as ML10 } from '@/lib/retailer-links';
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER } from '@/lib/retailer-links';
 
 export const metadata: Metadata = {
   title: 'NOX ML10 Pro Cup Review (2026): The Smartest $170 Upgrade in Padel',
@@ -34,14 +33,7 @@ export default function NoxMl10ProCupReviewPage() {
     "image": "https://www.padelcourtsfinder.com/og/default.png",
     "name": "NOX ML10 Pro Cup Rough Surface",
     "description": "Round-shape intermediate padel racket with a rough 3K fiberglass surface, HR3 EVA core, and carbon frame. Best for spin-focused players upgrading from a beginner racket.",
-    "offers": {
-      "@type": "Offer",
-      "name": "NOX ML10 Pro Cup Rough 2027 edition",
-      "price": ML10.priceValue,
-      "priceCurrency": ML10.priceCurrency,
-      "availability": "https://schema.org/InStock",
-      "url": ML10.url
-    },
+    "offers": NOX_ML10_OFFER,
     "review": {
       "@type": "Review",
       "reviewRating": { "@type": "Rating", "ratingValue": 7.3, "bestRating": 10 },
@@ -118,7 +110,7 @@ export default function NoxMl10ProCupReviewPage() {
           <div className="bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 flex items-start gap-2">
             <span className="text-stone-400 mt-0.5 text-sm">&#8505;</span>
             <p className="text-xs text-stone-500 italic leading-relaxed">
-              This guide contains affiliate links. If you purchase through our links, we may earn a small commission at no extra cost to you. We only recommend products we believe in.
+              This review has no store links: no store that pays us sells this racket, so we name the store without linking it. Other pages on our site contain affiliate links, and if you buy through one we may earn a small commission at no extra cost to you.
             </p>
           </div>
 
@@ -137,10 +129,9 @@ export default function NoxMl10ProCupReviewPage() {
               <p className="text-stone-600 leading-[1.75] mb-5">
                 We tested the earlier edition with the FG 3K rough face, and the scores on this page are for that racket. NOX now sells the 2027 edition, which keeps the round shape, HR3 EVA core, carbon frame and rough surface on a silver fiberglass face.
               </p>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                <TrackedLink href={ML10.url} type="retailer" productName={ML10.productName} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto px-7 py-3 bg-padel-green text-white font-semibold rounded-lg hover:bg-padel-green-dark transition-colors">Check price at NOX &rarr;</TrackedLink>
-                <span className="text-stone-500 text-sm">2027 edition: {ML10.price} at NOX, which ships from Spain (shipping and import duties added at checkout). The edition we reviewed was $169.99 in July 2026. Price checked October 2026.</span>
-              </div>
+              <p className="text-stone-600 text-sm leading-relaxed bg-stone-50 border border-stone-200 rounded-lg p-4">
+                <strong className="text-foreground">Where to buy:</strong> no US store we checked sells the ML10 Pro Cup, and Amazon no longer does. NOX sells the 2027 edition on its own store for {ML10.price}, shipped from Spain, with shipping and import duties added at checkout (price checked October 23, 2026). The edition we reviewed was $169.99 in July 2026.
+              </p>
             </div>
           </section>
 

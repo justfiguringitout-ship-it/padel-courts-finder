@@ -1,0 +1,10 @@
+{
+  "_about": "Deliberate external links that are not shopping links, so `npm run links:audit` does not report them. Each entry needs a host or a url (exact, or a prefix ending in *), optionally a page path prefix, and a reason. Never add a store or brand product link here: link a store that pays us, or name the product without a link.",
+  "entries": [
+    {
+      "host": "justmuv.cl",
+      "page": "/blog/padel-injuries-prevention-tips",
+      "reason": "Author bio link for the guest writer (Isabel Rencoret, Just Muv), part of the article swap. Not a product link."
+    }
+  ]
+}
