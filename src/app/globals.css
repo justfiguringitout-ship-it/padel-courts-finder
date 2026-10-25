@@ -801,3 +801,15 @@ html { scroll-padding-top: 5.5rem; }
 .spotlight-cta svg { width: 1rem; height: 1rem; flex-shrink: 0; }
 .spotlight-cta-primary { background: var(--color-padel-green); border-color: var(--color-padel-green); color: #fff; }
 .spotlight-cta-primary:hover { background: var(--color-padel-green-dark); }
+
+/* AI leaderboard (/ai-leaderboard): CSS-only period tabs with bare #anchors.
+   Each period section carries its own tab bar. Without :has() support all
+   three periods simply stack, which is still readable. */
+.lb-period { scroll-margin-top: 5rem; }
+.lb-periods:has(.lb-period:target) .lb-period:not(:target) { display: none; }
+.lb-periods:not(:has(.lb-period:target)) .lb-period:not(.lb-default) { display: none; }
+.lb-medal-1 { --lb-medal: #D4A017; --lb-medal-soft: #FEF6DC; --lb-medal-ring: #F1D27A; }
+.lb-medal-2 { --lb-medal: #8A94A6; --lb-medal-soft: #F2F4F7; --lb-medal-ring: #CBD2DC; }
+.lb-medal-3 { --lb-medal: #B8733A; --lb-medal-soft: #FBEFE4; --lb-medal-ring: #E6BE98; }
+.lb-row-medal { background: var(--lb-medal-soft); box-shadow: inset 0 0 0 1px var(--lb-medal-ring); }
+.lb-bar-medal { background: var(--lb-medal); }

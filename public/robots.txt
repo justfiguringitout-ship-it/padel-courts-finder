@@ -1,4 +1,5 @@
 # robots.txt for padelcourtsfinder.com
+# AI leaderboard (which assistants, search engines and crawlers send or bring traffic): https://www.padelcourtsfinder.com/ai-leaderboard
 User-agent: *
 Allow: /
 

@@ -95,6 +95,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/ai-leaderboard`,
+      lastModified: dateFor('/ai-leaderboard'),
+      changeFrequency: 'daily',
+      priority: 0.4,
+    },
+    {
       url: `${baseUrl}/advertise`,
       lastModified: dateFor('/advertise'),
       changeFrequency: 'monthly',

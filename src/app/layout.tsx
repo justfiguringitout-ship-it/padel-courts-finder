@@ -5,6 +5,7 @@ import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SiteHeader } from "@/components/site-header";
 import { CursorGlow } from "@/components/cursor-glow";
+import { ReferralBeacon } from "@/components/referral-beacon";
 import { getSiteStats, getStates } from "@/lib/site-structure";
 import "./globals.css";
 
@@ -103,6 +104,7 @@ export default function RootLayout({
                   <li><Link href="/list-your-court" className="hover:text-turf transition-colors">List Your Club</Link></li>
                   <li><Link href="/advertise" className="hover:text-turf transition-colors">Advertise</Link></li>
                   <li><Link href="/badge" className="hover:text-turf transition-colors">Club Badge</Link></li>
+                  <li><Link href="/ai-leaderboard" className="hover:text-turf transition-colors">AI Leaderboard</Link></li>
                 </ul>
               </div>
               <div>
@@ -149,6 +151,7 @@ export default function RootLayout({
           </div>
         </footer>
         <GoogleAnalytics gaId={GA_ID} />
+        <ReferralBeacon />
       </body>
     </html>
   );

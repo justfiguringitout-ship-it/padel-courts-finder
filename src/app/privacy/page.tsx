@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <header className="grain bg-court text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="font-display text-3xl md:text-4xl font-bold">Privacy Policy</h1>
-          <p className="text-white/50 mt-2 text-sm">Last updated: October 23, 2026</p>
+          <p className="text-white/50 mt-2 text-sm">Last updated: October 25, 2026</p>
         </div>
       </header>
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-stone-700 leading-relaxed">
@@ -36,6 +36,10 @@ export default function PrivacyPage() {
             pages visited, referral sources, and approximate location. Google Analytics uses
             cookies; Plausible is cookie-free. We don&apos;t sell this data or use it to
             identify individual visitors.
+          </p>
+          <p className="mt-3">
+            For our public <a href="/ai-leaderboard" className="text-padel-green hover:underline">AI leaderboard</a> we also
+            keep aggregate daily counts of which sites and crawlers send or bring traffic to us, with no personal data.
           </p>
         </section>
         <section>
