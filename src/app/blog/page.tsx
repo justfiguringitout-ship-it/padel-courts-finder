@@ -668,6 +668,17 @@ const blogPosts: BlogPost[] = [
     priceRange: '$209\u2013$260'
   },
   {
+    slug: 'best-padel-rackets-spin',
+    title: 'Best Padel Rackets for Spin (2026)',
+    category: 'equipment',
+    excerpt: 'Eight rackets with a rough, textured or drilled face, ranked by surface and playing level: NOX AT10 Genius 18K, HEAD Extreme Pro, Babolat Viper, Wilson Blade Elite V2, Optix V1 and more.',
+    date: '2026-10-26',
+    readTime: '9 min read',
+    imageAlt: 'Best padel rackets for spin 2026',
+    courtSlug: '',
+    priceRange: '$109\u2013$399'
+  },
+  {
     slug: 'best-wilson-padel-rackets',
     title: 'Best Wilson Padel Rackets (2026)',
     category: 'equipment',

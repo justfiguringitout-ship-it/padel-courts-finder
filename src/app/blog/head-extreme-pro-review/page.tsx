@@ -244,6 +244,10 @@ export default function HeadExtremeProReviewPage() {
                 <div className="font-semibold text-white">Racket Shapes Explained</div>
                 <p className="text-stone-400 text-sm mt-1">Round vs teardrop vs diamond</p>
               </Link>
+              <Link href="/blog/best-padel-rackets-spin" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Best Padel Rackets for Spin (2026)</div>
+                <p className="text-stone-400 text-sm mt-1">Eight rough, textured and drilled faces, ranked by surface and playing level</p>
+              </Link>
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Find a Court Near You</div>
                 <p className="text-stone-400 text-sm mt-1">320+ clubs across 39 states</p>

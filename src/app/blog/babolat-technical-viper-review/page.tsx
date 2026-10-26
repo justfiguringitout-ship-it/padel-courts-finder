@@ -250,6 +250,10 @@ export default function BabolatTechnicalViperReviewPage() {
                 <div className="font-semibold text-white">Best Power Rackets</div>
                 <p className="text-stone-400 text-sm mt-1">Diamond-shaped picks for attacking players</p>
               </Link>
+              <Link href="/blog/best-padel-rackets-spin" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Best Padel Rackets for Spin (2026)</div>
+                <p className="text-stone-400 text-sm mt-1">Eight rough, textured and drilled faces, ranked by surface and playing level</p>
+              </Link>
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Find a Court Near You</div>
                 <p className="text-stone-400 text-sm mt-1">Search padel clubs across the US</p>
