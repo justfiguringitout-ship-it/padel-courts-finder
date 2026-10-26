@@ -13789,6 +13789,8 @@ export const padelCourts: PadelCourt[] = [
     verified: true, // soft open: public padel slots bookable for 2026-10-27 on play.threerackets.com, checked 2026-10-26
     verificationDate: "2026-10-26",
     ogImageUrl: "/images/courts/three-rackets.webp",
+    membershipEmail: "play@threerackets.com",
+    ownerConfirmedDate: "2026-10-26",
   },
   {
     id: 491,
