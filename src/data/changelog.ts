@@ -42,6 +42,14 @@ export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
     date: "2026-10-26",
+    type: "updated",
+    title: "The Point Racket & Social Club details updated by the club",
+    note: "The club sent new booking link and amenities through its owner account. We checked the change before publishing it.",
+    clubs: ["The Point Racket & Social Club"],
+    commit: "fb82c93",
+  },
+  {
+    date: "2026-10-26",
     type: "added",
     title: "PDL Sports & Social Club added as coming soon",
     note: "A San Antonio club under construction at 13735 I-10 with 10 padel courts and 6 pickleball courts, per the club's site and a state construction filing. It says it opens in 2026.",
