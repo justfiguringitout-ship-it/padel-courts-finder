@@ -43,6 +43,14 @@ export const changelog: ChangelogEntry[] = [
   {
     date: "2026-10-26",
     type: "updated",
+    title: "Three Rackets details updated by the club",
+    note: "The club sent new private contact details through its owner account. We checked the change before publishing it.",
+    clubs: ["Three Rackets"],
+    commit: "97a732f",
+  },
+  {
+    date: "2026-10-26",
+    type: "updated",
     title: "The Point Racket & Social Club details updated by the club",
     note: "The club sent new booking link and amenities through its owner account. We checked the change before publishing it.",
     clubs: ["The Point Racket & Social Club"],
