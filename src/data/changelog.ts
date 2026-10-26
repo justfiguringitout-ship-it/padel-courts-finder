@@ -46,7 +46,7 @@ export const changelog: ChangelogEntry[] = [
     title: "PDL Sports & Social Club added as coming soon",
     note: "A San Antonio club under construction at 13735 I-10 with 10 padel courts and 6 pickleball courts, per the club's site and a state construction filing. It says it opens in 2026.",
     clubs: ["PDL Sports & Social Club"],
-    commit: "COMMIT",
+    commit: "3ec8798",
   },
   {
     date: "2026-10-26",
@@ -54,7 +54,7 @@ export const changelog: ChangelogEntry[] = [
     title: "Cincinnati Padel Club and Three Rackets are open, and four listings corrected",
     note: "Club Padel Newtown now plays as Cincinnati Padel Club, with 4 outdoor courts open at Wags Park through November. Three Rackets in Broomfield is in its soft opening with public padel bookings. The ONE Padel Club hours and prices, Oakland Padel's opening date and prices, the Legacy Padel website and Padel Country Club Katy's dead website and Instagram links were updated.",
     clubs: ["Cincinnati Padel Club", "Three Rackets", "The ONE Padel Club", "Oakland Padel", "Legacy Padel & Pickleball", "Padel Country Club Katy"],
-    commit: "COMMIT",
+    commit: "3ec8798",
   },
   {
     date: "2026-10-21",
