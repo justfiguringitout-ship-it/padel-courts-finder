@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // === Name changes on keeper entries (14) ===
+      { source: '/courts/club-padel-newtown', destination: '/courts/cincinnati-padel-club', permanent: true },
       { source: '/courts/racket-social-club-alpharetta', destination: '/courts/racket-social-club-at-windward-lake', permanent: true },
       { source: '/courts/replay', destination: '/courts/replay-club', permanent: true },
       { source: '/courts/10by20-ft-lauderdale', destination: '/courts/10by20-padel-downtown-fort-lauderdale', permanent: true },

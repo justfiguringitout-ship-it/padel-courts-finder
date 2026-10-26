@@ -5,13 +5,13 @@ import { MapPin, Globe, Clock, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Padel Clubs in Ohio (2026) | Cleveland, Cincinnati & Columbus Guide',
-  description: 'Ohio\'s 3 open padel clubs ranked for 2026: Padel Square\'s 6 indoor courts near Cleveland, Cleveland Premier and Cincinnati Open Sporting Club. Complete OH padel guide.',
+  description: 'Ohio\'s 4 open padel clubs for 2026: Padel Square\'s 6 indoor courts near Cleveland, Cleveland Premier, Cincinnati Open Sporting Club and Cincinnati Padel Club. Complete OH padel guide.',
   alternates: {
     canonical: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-ohio',
   },
   openGraph: {
     title: 'Best Padel Clubs in Ohio (2026) | Cleveland, Cincinnati & Columbus Guide',
-    description: 'Ohio\'s 3 open padel clubs ranked for 2026: Padel Square\'s 6 indoor courts near Cleveland, Cleveland Premier and Cincinnati Open Sporting Club. Complete OH padel guide.',
+    description: 'Ohio\'s 4 open padel clubs for 2026: Padel Square\'s 6 indoor courts near Cleveland, Cleveland Premier, Cincinnati Open Sporting Club and Cincinnati Padel Club. Complete OH padel guide.',
     url: 'https://www.padelcourtsfinder.com/blog/best-padel-clubs-ohio',
     type: 'article',
     images: [{ url: 'https://padel-square.com/wp-content/uploads/2025/03/padelsquare-sample10-1-e1745460648270.png' }],
@@ -140,7 +140,7 @@ export default function OhioBestClubsPage() {
     "description": "Ohio's best padel clubs ranked for 2026. Complete guide with pricing and programs.",
     "image": "https://padel-square.com/wp-content/uploads/2025/03/padelsquare-sample10-1-e1745460648270.png",
     "datePublished": "2026-03-21T00:00:00Z",
-    "dateModified": "2026-10-09T00:00:00Z",
+    "dateModified": "2026-10-26T00:00:00Z",
     "author": {
       "@type": "Organization",
       "name": "Padel Courts Finder",
@@ -182,7 +182,7 @@ export default function OhioBestClubsPage() {
             </div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5" />
-              <span>3 Open Clubs</span>
+              <span>4 Open Clubs</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
@@ -222,7 +222,7 @@ export default function OhioBestClubsPage() {
             Ohio Enters the Padel Game
           </h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            Ohio has 3 open padel clubs with 9 courts between them, two in Greater Cleveland and one in Greater Cincinnati. <Link href="/courts/newgen-racquet-club" className="text-padel-green hover:underline">NewGen Racquet Club</Link> is adding 5 padel courts in Lewis Center, north of Columbus, and <Link href="/courts/club-padel-newtown" className="text-padel-green hover:underline">Club Padel Newtown</Link> in Cincinnati is listed as temporarily closed.
+            Ohio has 4 open padel clubs with 13 courts between them, two in Greater Cleveland and two in Greater Cincinnati. <Link href="/courts/cincinnati-padel-club" className="text-padel-green hover:underline">Cincinnati Padel Club</Link> opened 4 outdoor courts at Wags Park in Newtown in October 2026 for a season that runs through November, and <Link href="/courts/newgen-racquet-club" className="text-padel-green hover:underline">NewGen Racquet Club</Link> is adding 5 padel courts in Lewis Center, north of Columbus.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
             Some private clubs listed in earlier versions of this guide have platform tennis courts rather than padel, so we removed them.
@@ -337,12 +337,12 @@ export default function OhioBestClubsPage() {
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="bg-stone-200 text-stone-700 px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">Temporarily Closed</div>
+              <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold flex-shrink-0">Open for the Season</div>
               <div>
                 <h4 className="font-bold text-stone-900 text-lg">
-                  <Link href="/courts/club-padel-newtown" className="text-amber-700 hover:underline">Club Padel Newtown</Link> - Cincinnati, OH
+                  <Link href="/courts/cincinnati-padel-club" className="text-amber-700 hover:underline">Cincinnati Padel Club</Link> - Newtown, OH
                 </h4>
-                <p className="text-stone-700 mt-1">A planned outdoor club with 4 courts at 3804 Church St in Newtown. It is listed as temporarily closed, so call (513) 600-2074 before you go.</p>
+                <p className="text-stone-700 mt-1">Four glass-walled outdoor courts with lights at 3804 Church St, announced earlier as Club Padel Newtown. You do not need a membership, courts book on Playtomic, and play runs through November 2026 with the next season expected in March.</p>
               </div>
             </div>
           </div>
