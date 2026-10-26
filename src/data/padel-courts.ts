@@ -13855,13 +13855,16 @@ export const padelCourts: PadelCourt[] = [
     courtType: "outdoor",
     indoorCourts: 0,
     outdoorCourts: 2,
-    amenities: ["LED lighting", "pro shop", "racket rental", "lessons and clinics", "round robins and tournaments", "food and beverages", "shaded viewing areas", "lakefront setting at Trophy Lakes"],
+    amenities: ["LED lighting", "pro shop", "racket rental", "lessons and clinics", "round robins and tournaments", "food and beverages", "shaded viewing areas", "lakefront setting at Trophy Lakes", "free parking", "clinics", "leagues", "junior programs"],
     pricingText: "Non-members: $40 per 1.5-hour court reservation at peak (Mon-Fri 4pm-8pm, all day Sat-Sun), $30 off-peak (Mon-Fri 8am-4pm). Members $20 / $15. Memberships from $149/month",
     membersOnly: false,
     coordinates: { lat: 32.74063, lng: -80.05483 }, // road-level pin (Marlin Rd); refine to the Trophy Lakes entrance when available
     status: "open",
     verified: true, // fact-checked 2026-10-13 against the club's own site, booking page and posts
     verificationDate: "2026-10-13",
+    bookingUrl: "https://play.thepointrsc.com/",
+    membershipEmail: "nick@thepointrsc.com",
+    ownerConfirmedDate: "2026-10-26",
   },
   {
     id: 494,
