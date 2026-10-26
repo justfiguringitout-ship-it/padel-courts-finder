@@ -69,6 +69,7 @@ const staticRoutes = [
   "/", "/search", "/blog", "/advertise", "/indoor-padel-courts", "/padel-lessons",
   "/buy-a-padel-court", "/state-of-us-padel-2026", "/badge", "/how-to-play",
   "/rules", "/equipment", "/faq", "/get-started", "/get-started/glossary", "/about",
+  "/ai-leaderboard",
 ];
 
 // Blog slugs are DERIVED by scanning src/app/blog/*/page.tsx and WRITTEN to

@@ -617,6 +617,11 @@ export default function PowerRacketsPage() {
               <h3 className="font-semibold text-white mt-1">Best Control Rackets</h3>
               <p className="text-sm text-stone-400 mt-1">The other side of the coin &mdash; precision-first picks &rarr;</p>
             </Link>
+            <Link href="/blog/best-padel-rackets-spin" className="block border border-stone-700 rounded-lg p-4 hover:border-turf/50 transition-colors">
+              <span className="text-xs font-medium uppercase tracking-wider text-turf">EQUIPMENT</span>
+              <h3 className="font-semibold text-white mt-1">Best Padel Rackets for Spin (2026)</h3>
+              <p className="text-sm text-stone-400 mt-1">Eight textured faces, ranked by surface and level &rarr;</p>
+            </Link>
             <Link href="/search" className="block border border-stone-700 rounded-lg p-4 hover:border-padel-green/50 transition-colors">
               <span className="text-xs font-medium uppercase tracking-wider text-stone-500">DIRECTORY</span>
               <h3 className="font-semibold text-white mt-1">Find a Court Near You</h3>
