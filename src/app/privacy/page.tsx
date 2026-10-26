@@ -38,7 +38,7 @@ export default function PrivacyPage() {
             identify individual visitors.
           </p>
           <p className="mt-3">
-            For our public <a href="/ai-leaderboard" className="text-padel-green hover:underline">AI leaderboard</a> we also
+            For our public AI leaderboard we also
             keep aggregate daily counts of which sites and crawlers send or bring traffic to us, with no personal data.
           </p>
         </section>

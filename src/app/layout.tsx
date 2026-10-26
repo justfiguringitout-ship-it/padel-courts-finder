@@ -104,7 +104,6 @@ export default function RootLayout({
                   <li><Link href="/list-your-court" className="hover:text-turf transition-colors">List Your Club</Link></li>
                   <li><Link href="/advertise" className="hover:text-turf transition-colors">Advertise</Link></li>
                   <li><Link href="/badge" className="hover:text-turf transition-colors">Club Badge</Link></li>
-                  <li><Link href="/ai-leaderboard" className="hover:text-turf transition-colors">AI Leaderboard</Link></li>
                 </ul>
               </div>
               <div>
