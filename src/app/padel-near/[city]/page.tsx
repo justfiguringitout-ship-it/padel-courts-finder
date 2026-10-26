@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ArrowRight, MapPin } from "lucide-react";
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
 import { getSiteStats } from "@/lib/site-structure";
 import { GearStrip } from "@/components/gear-strip";
 import type { Metadata } from "next";
 
-import { UNIQUE_METROS, getPadelNearMetros } from "@/lib/metros";
+import { UNIQUE_METROS, getMetroCityPagePath } from "@/lib/metros";
 
 /**
  * Long-tail pages for major metros without their own directory city page.
@@ -48,8 +48,10 @@ function getCityData(slug: string) {
   return { metro, local, nearest, pipeline };
 }
 
+// Every metro gets a param: metros that now have a club redirect to their
+// city page (see getMetroCityPagePath) so old /padel-near URLs never 404.
 export function generateStaticParams() {
-  return getPadelNearMetros().map((mm) => ({ city: mm.slug }));
+  return UNIQUE_METROS.map((mm) => ({ city: mm.slug }));
 }
 
 export async function generateMetadata({
@@ -58,6 +60,7 @@ export async function generateMetadata({
   params: Promise<{ city: string }>;
 }): Promise<Metadata> {
   const { city } = await params;
+  if (getMetroCityPagePath(city)) return {};
   const data = getCityData(city);
   if (!data) return {};
   const { metro, local } = data;
@@ -76,6 +79,8 @@ export async function generateMetadata({
 
 export default async function PadelNearPage({ params }: { params: Promise<{ city: string }> }) {
   const { city } = await params;
+  const cityPage = getMetroCityPagePath(city);
+  if (cityPage) permanentRedirect(cityPage);
   const data = getCityData(city);
   if (!data) notFound();
   const { metro, local, nearest, pipeline } = data;

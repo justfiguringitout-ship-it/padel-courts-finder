@@ -1,4 +1,5 @@
 import { getAllAdaptedCourts } from "@/lib/court-adapter";
+import { getAllCities, getStates } from "@/lib/site-structure";
 
 /**
  * Major US cities for the /padel-near/[city] long-tail pages.
@@ -174,4 +175,26 @@ export function getPadelNearMetros(): Metro[] {
     getAllAdaptedCourts().map((c) => c.address.city.toLowerCase().trim())
   );
   return UNIQUE_METROS.filter((mm) => !clubCities.has(mm.name.toLowerCase()));
+}
+
+/**
+ * When a metro gets its first club, its /padel-near page stops being built
+ * (the city now has a real directory page). Google still knows the old URL,
+ * so /padel-near/<metro> 308s to that city page instead of 404ing.
+ */
+export function getMetroCityPagePath(slug: string): string | null {
+  const metro = UNIQUE_METROS.find((mm) => mm.slug === slug);
+  if (!metro) return null;
+  const city = getAllCities().find(
+    (c) => c.stateCode === metro.stateCode && c.name.toLowerCase().trim() === metro.name.toLowerCase()
+  );
+  if (!city) return null;
+  const state = getStates().find((st) => st.code === metro.stateCode);
+  return state ? `/${state.slug}/${city.slug}` : null;
+}
+
+/** Best page for a metro: its /padel-near page if it has one, else its city page. */
+export function getMetroPagePath(slug: string): string | null {
+  if (getPadelNearMetros().some((mm) => mm.slug === slug)) return `/padel-near/${slug}`;
+  return getMetroCityPagePath(slug);
 }

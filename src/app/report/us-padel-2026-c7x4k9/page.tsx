@@ -4,6 +4,7 @@ import { getAllAdaptedCourts } from "@/lib/court-adapter";
 import { getStates, getSiteStats } from "@/lib/site-structure";
 import { CourtsConstellation } from "@/components/courts-constellation";
 import { getStateOfPadelStats } from "@/lib/state-of-padel-stats";
+import { getMetroPagePath } from "@/lib/metros";
 import type { Metadata } from "next";
 
 /**
@@ -120,7 +121,7 @@ export default function FullReportPage() {
     const incoming = pipelineLocated.filter(
       (c) => haversineMiles(m.lat, m.lng, c.coordinates.latitude, c.coordinates.longitude) <= 25
     );
-    return { ...m, nearest, incoming };
+    return { ...m, nearest, incoming, page: getMetroPagePath(m.name.toLowerCase().replace(/[^a-z]+/g, "-")) };
   })
     .filter((m) => m.nearest > 25)
     .sort((a, b) => b.nearest - a.nearest);
@@ -519,12 +520,13 @@ export default function FullReportPage() {
                     {deserts.map((d) => (
                       <tr key={d.name} className="border-t border-stone-100">
                         <td className="p-3 font-medium">
-                          <Link
-                            href={`/padel-near/${d.name.toLowerCase().replace(/[^a-z]+/g, "-")}`}
-                            className="hover:text-padel-green transition-colors"
-                          >
-                            {d.name}
-                          </Link>
+                          {d.page ? (
+                            <Link href={d.page} className="hover:text-padel-green transition-colors">
+                              {d.name}
+                            </Link>
+                          ) : (
+                            d.name
+                          )}
                         </td>
                         <td className="p-3 tabular-nums text-stone-600">
                           {Number.isFinite(d.nearest) ? `~${Math.round(d.nearest)} miles` : "—"}
