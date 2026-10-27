@@ -41,6 +41,14 @@ export interface ChangelogEntry {
 export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
+    date: "2026-10-27",
+    type: "updated",
+    title: "Oakland Padel details updated by the club",
+    note: "The club sent new amenities and description through its owner account. We checked the change before publishing it.",
+    clubs: ["Oakland Padel"],
+    commit: "9290bd2",
+  },
+  {
     date: "2026-10-26",
     type: "updated",
     title: "Three Rackets details updated by the club",
