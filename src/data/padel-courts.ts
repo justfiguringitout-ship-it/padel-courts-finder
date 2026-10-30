@@ -14282,6 +14282,26 @@ export const padelCourts: PadelCourt[] = [
     verified: true, // pdlsportsgroup.com (address, 10 padel courts, "Opening 2026") and TDLR TABS2026006871 "PDL Club", checked 2026-10-26
     verificationDate: "2026-10-26",
   },
+  {
+    id: 511,
+    name: "Diablo Padel",
+    address: "",
+    city: "Oakland",
+    state: "CA",
+    zipCode: "",
+    website: "https://diablopadel.com/?utm_source=padelcourtsfinder&utm_medium=directory",
+    email: "hello@diablopadel.com",
+    reviewCount: 0,
+    description: "Diablo Padel is an indoor padel club planned for Oakland, with six climate-controlled indoor courts. The club says it opens in 2027 and has not announced its address yet. It is taking free waitlist sign-ups on its website.",
+    numberOfCourts: 6,
+    courtType: "indoor",
+    indoorCourts: 6,
+    coordinates: { lat: 37.8044, lng: -122.2712 }, // approximate: Oakland city center until the club announces its address
+    status: "coming_soon",
+    verified: false,
+    verificationDate: "2026-10-30",
+    ownerConfirmedDate: "2026-10-30", // owner submitted the listing request (Angel, hello@diablopadel.com)
+  },
 ];
 
 
