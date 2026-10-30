@@ -41,6 +41,14 @@ export interface ChangelogEntry {
 export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
+    date: "2026-10-30",
+    type: "added",
+    title: "Diablo Padel added as coming soon in Oakland",
+    note: "The club sent us its details: six indoor courts, opening in 2027. It has not announced a street address yet, so the map pin sits at the Oakland city center for now.",
+    clubs: ["Diablo Padel"],
+    commit: "b46b6dd",
+  },
+  {
     date: "2026-10-27",
     type: "updated",
     title: "Oakland Padel details updated by the club",
