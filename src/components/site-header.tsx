@@ -53,22 +53,18 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Browse States</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    <ul className="grid max-h-[min(70vh,560px)] w-[400px] grid-cols-2 gap-1 overflow-y-auto overscroll-contain p-3 md:w-[500px] md:grid-cols-3 lg:w-[600px]">
                       {states.map((state) => (
                         <li key={state.code}>
                           <NavigationMenuLink asChild>
                             <Link
                               href={`/${state.slug}`}
+                              title={`Padel courts in ${state.name}`}
                               className={cn(
-                                "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                "block select-none truncate rounded-md px-3 py-2 text-sm font-medium leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               )}
                             >
-                              <div className="text-sm font-medium leading-none">
-                                {state.name}
-                              </div>
-                              <p className="line-clamp-1 text-sm leading-snug text-muted-foreground">
-                                Padel courts in {state.code}
-                              </p>
+                              {state.name}
                             </Link>
                           </NavigationMenuLink>
                         </li>
