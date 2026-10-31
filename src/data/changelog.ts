@@ -41,6 +41,14 @@ export interface ChangelogEntry {
 export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
+    date: "2026-10-31",
+    type: "updated",
+    title: "Diablo Padel logo and rendering added",
+    note: "The club sent its logo and a rendering of the planned Oakland space. The main image is that rendering, not a photo, since the club has not opened yet.",
+    clubs: ["Diablo Padel"],
+    commit: "849d6ed",
+  },
+  {
     date: "2026-10-30",
     type: "added",
     title: "Diablo Padel added as coming soon in Oakland",
