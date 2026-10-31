@@ -249,6 +249,24 @@
     "width": 1200,
     "height": 675
   },
+  "/images/courts/diablo-padel-logo.png": {
+    "kind": "logo",
+    "width": 900,
+    "height": 900,
+    "why": "filename",
+    "mark": {
+      "x": 120,
+      "y": 194,
+      "w": 660,
+      "h": 512
+    },
+    "bg": "#ffffff"
+  },
+  "/images/courts/diablo-padel-rendering.jpg": {
+    "kind": "photo",
+    "width": 1800,
+    "height": 1004
+  },
   "/images/courts/dorado-beach-sports-hub.webp": {
     "kind": "photo",
     "width": 1200,

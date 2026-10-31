@@ -14292,7 +14292,7 @@ export const padelCourts: PadelCourt[] = [
     website: "https://diablopadel.com/?utm_source=padelcourtsfinder&utm_medium=directory",
     email: "hello@diablopadel.com",
     reviewCount: 0,
-    description: "Diablo Padel is an indoor padel club planned for Oakland, with six climate-controlled indoor courts. The club says it opens in 2027 and has not announced its address yet. It is taking free waitlist sign-ups on its website.",
+    description: "Diablo Padel is an indoor padel club planned for Oakland, with six climate-controlled indoor courts. The club says it opens in 2027 and has not announced its address yet. It is taking free waitlist sign-ups on its website. The image above is the club's own rendering of the planned space, not a photo.",
     numberOfCourts: 6,
     courtType: "indoor",
     indoorCourts: 6,
@@ -14301,6 +14301,10 @@ export const padelCourts: PadelCourt[] = [
     verified: false,
     verificationDate: "2026-10-30",
     ownerConfirmedDate: "2026-10-30", // owner submitted the listing request (Angel, hello@diablopadel.com)
+    ogImageUrl: "/images/courts/diablo-padel-logo.png", // sent by Angel 2026-10-30
+    imageKind: "logo",
+    photos: ["/images/courts/diablo-padel-rendering.jpg"], // architectural rendering sent by the club, not a photo
+    photoCredit: "Rendering of the planned club, supplied by Diablo Padel",
   },
 ];
 
