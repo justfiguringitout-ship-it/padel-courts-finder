@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { TrackedLink } from "@/components/TrackedLink";
 import { RacketQuiz } from "@/components/racket-quiz";
+import { otherStoreFor } from "@/lib/retailer-links";
 
 const products = [
   {
@@ -79,15 +80,39 @@ export function GearWidget() {
                     </Link>
                     <div className="text-xs text-white/40 truncate">{p.tagline}</div>
                   </div>
-                  <TrackedLink
-                    href={p.url}
-                    type="affiliate"
-                    productName={p.name}
-                    target="_blank"
-                    className="shrink-0 rounded-lg border border-turf/40 text-turf text-xs font-semibold px-3 py-1.5 hover:bg-turf/10 transition-colors whitespace-nowrap tabular-nums"
-                  >
-                    {p.price} &rarr;
-                  </TrackedLink>
+                  {(() => {
+                    // Padel USA (or HEAD) is the main link when it is the
+                    // primary store (src/lib/retailer-links.ts); Amazon stays
+                    // as a small second link so readers can pick either.
+                    const other = otherStoreFor(p.url);
+                    const main = other?.primary ? { href: other.href, price: other.price, store: other.store } : { href: p.url, price: p.price, store: "Amazon" };
+                    const chip = (
+                      <TrackedLink
+                        href={main.href}
+                        type="affiliate"
+                        productName={p.name}
+                        target="_blank"
+                        className="shrink-0 rounded-lg border border-turf/40 text-turf text-xs font-semibold px-3 py-1.5 hover:bg-turf/10 transition-colors whitespace-nowrap tabular-nums"
+                      >
+                        {main.store === "Amazon" ? <>{main.price} &rarr;</> : <>{main.price} at {main.store} &rarr;</>}
+                      </TrackedLink>
+                    );
+                    if (main.store === "Amazon") return chip;
+                    return (
+                      <div className="shrink-0 flex flex-col items-end gap-1">
+                        {chip}
+                        <TrackedLink
+                          href={p.url}
+                          type="affiliate"
+                          productName={p.name}
+                          target="_blank"
+                          className="text-[10px] text-white/50 underline hover:text-white whitespace-nowrap tabular-nums"
+                        >
+                          or Amazon {p.price}
+                        </TrackedLink>
+                      </div>
+                    );
+                  })()}
                 </div>
               ))}
             </div>

@@ -9,6 +9,12 @@
  * it without a store link (or links our own review). `npm run links:audit`
  * fails the build check on any unpaid store link.
  *
+ * Button order (2026-10-31, Dito): whenever a product is in PADEL_USA, Padel
+ * USA is the main (solid) button and Amazon the outline one, whatever the two
+ * prices are. Both stay on the page so readers can pick either. The one
+ * exception is an entry marked otherModel (Padel USA sells a different model
+ * from the one reviewed), where Amazon stays the main button.
+ *
  * Every link built here is an affiliate link: render it with
  * <TrackedLink type="affiliate">, which tracks the click as "Gear click" and
  * sets rel="sponsored nofollow noopener noreferrer".
@@ -106,10 +112,14 @@ export interface PadelUsaProduct {
   /** Date we last checked the Padel USA page (price and in stock) */
   checked: string;
   /**
-   * true: Padel USA is the main button and Amazon the outline one.
-   * false: Amazon stays the main button and Padel USA is the outline one.
+   * true only when Padel USA sells a different model from the one the page
+   * reviews (the Babolat Technical Viper, where it has the newer 3.0). Then
+   * Amazon, which sells the reviewed racket, stays the main button and Padel
+   * USA is the outline one. Every other Padel USA product gets Padel USA as
+   * the main button and Amazon as the outline one, whatever the prices
+   * (2026-10-31).
    */
-  primary: boolean;
+  otherModel?: boolean;
   /** Button label when it is not the standard "Check price at Padel USA" */
   label?: string;
   /** Short text for the small "also at" link in tables */
@@ -134,21 +144,21 @@ export interface PadelUsaProduct {
  */
 export const PADEL_USA: Record<string, PadelUsaProduct> = {
   // Wilson Bela Pro V3: same racket, same $399, Amazon down to 1 left
-  B0F2WMRTYB: { url: 'https://padelusa.com/products/wilson-bela-pro-v3-padel-racket', storeName: 'Wilson Bela Pro V3 Padel Racket', price: '$399.00', priceValue: '399.00', checked: '2026-10-15', primary: true },
+  B0F2WMRTYB: { url: 'https://padelusa.com/products/wilson-bela-pro-v3-padel-racket', storeName: 'Wilson Bela Pro V3 Padel Racket', price: '$399.00', priceValue: '399.00', checked: '2026-10-15' },
   // HEAD Extreme Pro 2025: same racket, same $299.95
-  B0FNRQ839K: { url: 'https://padelusa.com/products/head-extreme-pro-2025-padel-racket', storeName: 'Head Extreme Pro 2025', price: '$299.95', priceValue: '299.95', checked: '2026-10-15', primary: true },
+  B0FNRQ839K: { url: 'https://padelusa.com/products/head-extreme-pro-2025-padel-racket', storeName: 'Head Extreme Pro 2025', price: '$299.95', priceValue: '299.95', checked: '2026-10-15' },
   // Wilson Rush Pro 5 men's (Black/Red), sizes 8.5 to 11.5, same $170
-  B0GVKRS59Q: { url: 'https://padelusa.com/products/wilson-rush-pro-5-men-padel-shoes-2026-black-rd', storeName: 'Wilson Rush Pro 5 Men Padel Shoes 2026', price: '$170.00', priceValue: '170.00', checked: '2026-10-15', primary: true },
+  B0GVKRS59Q: { url: 'https://padelusa.com/products/wilson-rush-pro-5-men-padel-shoes-2026-black-rd', storeName: 'Wilson Rush Pro 5 Men Padel Shoes 2026', price: '$170.00', priceValue: '170.00', checked: '2026-10-15' },
   // Adidas Metalbone 3.4: same racket, $326.75 at Padel USA, cheaper on Amazon
-  B0DMCZWNPV: { url: 'https://padelusa.com/products/adidas-metalbone-3-4-padel-racket', storeName: 'Adidas Metalbone 3.4', price: '$326.75', priceValue: '326.75', checked: '2026-10-15', primary: false },
+  B0DMCZWNPV: { url: 'https://padelusa.com/products/adidas-metalbone-3-4-padel-racket', storeName: 'Adidas Metalbone 3.4', price: '$326.75', priceValue: '326.75', checked: '2026-10-15' },
   // Babolat Technical Viper: Padel USA sells the newer 3.0, not the reviewed racket
-  B0DPH3GZGN: { url: 'https://padelusa.com/products/babolat-technical-viper-3-0-padel-racket', storeName: 'Babolat Technical Viper 3.0', price: '$273.00', priceValue: '273.00', checked: '2026-10-15', primary: false, label: 'Newer 3.0 at Padel USA', alsoLabel: 'newer 3.0 at Padel USA' },
+  B0DPH3GZGN: { url: 'https://padelusa.com/products/babolat-technical-viper-3-0-padel-racket', storeName: 'Babolat Technical Viper 3.0', price: '$273.00', priceValue: '273.00', checked: '2026-10-15', otherModel: true, label: 'Newer 3.0 at Padel USA', alsoLabel: 'newer 3.0 at Padel USA' },
   // Wilson Hurakn Lite men's (white colorways), same $110; Amazon.com ships it
-  B0FC8SDHK5: { url: 'https://padelusa.com/products/wilson-hurakn-lite-mens-padel-shoes', storeName: "Wilson Hurakn Lite Men's Padel Shoes", price: '$110.00', priceValue: '110.00', checked: '2026-10-15', primary: false },
+  B0FC8SDHK5: { url: 'https://padelusa.com/products/wilson-hurakn-lite-mens-padel-shoes', storeName: "Wilson Hurakn Lite Men's Padel Shoes", price: '$110.00', priceValue: '110.00', checked: '2026-10-15' },
   // Wilson Pro Overgrip 12-pack (padel-length version), $27.00 vs $26.99
-  B002GUEXTQ: { url: 'https://padelusa.com/products/wilson-pro-padel-overgrip-12-pack', storeName: 'Wilson Pro Padel Overgrip - 12 pack', price: '$27.00', priceValue: '27.00', checked: '2026-10-15', primary: false },
+  B002GUEXTQ: { url: 'https://padelusa.com/products/wilson-pro-padel-overgrip-12-pack', storeName: 'Wilson Pro Padel Overgrip - 12 pack', price: '$27.00', priceValue: '27.00', checked: '2026-10-15' },
   // HEAD Padel Pro S+ balls: $7.49 a can at Padel USA vs $14.95 on Amazon
-  B0DHWHX9SG: { url: 'https://padelusa.com/products/head-padel-pro-s-balls', storeName: 'Head Padel Pro S+ Balls', price: '$7.49', priceValue: '7.49', checked: '2026-10-15', primary: false },
+  B0DHWHX9SG: { url: 'https://padelusa.com/products/head-padel-pro-s-balls', storeName: 'Head Padel Pro S+ Balls', price: '$7.49', priceValue: '7.49', checked: '2026-10-15' },
 };
 
 /** The Padel USA entry for an Amazon link or ASIN, if we link one */
@@ -286,7 +296,8 @@ export function otherStoreFor(amazonUrlOrAsin: string | undefined): OtherStoreOf
       href: padelUsaLink(pu.url),
       price: pu.price,
       priceValue: pu.priceValue,
-      primary: pu.primary,
+      // Padel USA (8%) is the main button whenever it sells the reviewed model
+      primary: !pu.otherModel,
       label: pu.label ?? 'Check price at Padel USA',
       alsoLabel: pu.alsoLabel ?? 'also at Padel USA',
     };

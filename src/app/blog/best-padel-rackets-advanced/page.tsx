@@ -102,7 +102,7 @@ const faqData = {
 const product = (position: number, name: string, url: string, price: string, offerUrl: string, rating: number) => {
   // One offer per product: Padel USA's link and price where it is the main store
   const pu = padelUsaFor(offerUrl);
-  const offer = pu?.primary ? { price: pu.priceValue, url: padelUsaLink(pu.url) } : { price, url: offerUrl };
+  const offer = pu && !pu.otherModel ? { price: pu.priceValue, url: padelUsaLink(pu.url) } : { price, url: offerUrl };
   return {
   "@type": "ListItem",
   "position": position,
