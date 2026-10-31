@@ -8,7 +8,7 @@ import { Search, BookOpen } from 'lucide-react';
 // This would normally be in metadata but we need client component for interactivity
 // export const metadata: Metadata = {
 //   title: 'Padel Glossary: 30+ Terms Defined | Learn the Language of Padel',
-//   description: 'Complete A-Z padel glossary with 30+ terms defined. From bandeja to víbora, learn every padel term with pronunciations, examples, and video tutorials.',
+//   description: 'Complete A-Z padel glossary with 30+ terms defined. From bandeja to víbora, learn every padel term with pronunciations and examples.',
 // };
 
 interface Term {
@@ -21,8 +21,6 @@ interface Term {
   usage?: string;
   difficulty?: string;
   seeAlso?: string[];
-  hasVideo?: boolean;
-  videoId?: string;
   guide?: { href: string; label: string };
 }
 
@@ -89,7 +87,6 @@ const glossaryTerms: Term[] = [
     definition: 'Spanish for "wall descent" or "wall exit." An advanced shot where the ball bounces in your court and goes over the side or back fence/wall, requiring you to exit the court to play it before it bounces a second time.',
     usage: 'That lob was so high, it created a bajada de pared opportunity. She ran around the court and somehow got it back!',
     difficulty: '⭐⭐⭐⭐⭐ (Very hard)',
-    hasVideo: false,
     seeAlso: ['globo', 'salida-de-pared']
   },
   {
@@ -101,8 +98,6 @@ const glossaryTerms: Term[] = [
     definition: 'Spanish for "tray." A controlled overhead hit with slice that answers a lob while keeping your net position. Not as powerful as a smash, but more controlled and less risky.',
     usage: 'She used a perfect bandeja to keep them pinned at the baseline while maintaining her net position.',
     difficulty: '⭐⭐⭐⭐ (Requires practice and timing)',
-    hasVideo: true,
-    videoId: 'dQw4w9WgXcQ', // Placeholder - replace with actual video
     seeAlso: ['vibora', 'smash', 'net-position'],
     guide: { href: '/blog/padel-bandeja-explained', label: 'How to hit a bandeja, step by step' }
   },
@@ -133,8 +128,6 @@ const glossaryTerms: Term[] = [
     definition: 'A soft, low shot hit at the net that lands at the opponents\' feet, forcing them to hit up from a difficult position. Similar to a drop shot but specifically executed from the net position.',
     usage: 'Perfect chiquita! Dropped it right at their feet—now they have to hit up, giving us the smash.',
     difficulty: '⭐⭐⭐⭐ (Requires touch and timing)',
-    hasVideo: true,
-    videoId: 'dQw4w9WgXcQ', // Placeholder
     seeAlso: ['net-position', 'drop-shot', 'por-tres']
   },
   {
@@ -186,8 +179,6 @@ const glossaryTerms: Term[] = [
     definition: 'Spanish for "lob"—a high, arcing shot hit over opponents\' heads to land deep in their court. Used defensively to buy time or offensively to force weak returns.',
     usage: 'Good globo! Pushed them all the way back to the baseline.',
     difficulty: '⭐⭐ (Easy to execute, hard to perfect)',
-    hasVideo: true,
-    videoId: 'dQw4w9WgXcQ', // Placeholder
     seeAlso: ['passing-shot', 'bajada-de-pared']
   },
   {
@@ -278,8 +269,6 @@ const glossaryTerms: Term[] = [
     definition: 'The shot that starts each point, hit underhand from behind the service line to the diagonal service box. Must bounce ball once and contact below waist.',
     usage: 'The serve in padel is about starting the rally, not winning the point. Consistency matters more than power.',
     difficulty: '⭐⭐ (Easy to learn, hard to perfect)',
-    hasVideo: true,
-    videoId: 'dQw4w9WgXcQ', // Placeholder
     seeAlso: ['service-box', 'fault', 'let']
   },
   {
@@ -300,8 +289,6 @@ const glossaryTerms: Term[] = [
     definition: 'A powerful overhead shot aimed at winning the point outright, similar to a tennis smash but with wall considerations.',
     usage: 'Nice smash! Hit it right between them—no chance to return.',
     difficulty: '⭐⭐⭐⭐ (Hard to execute well)',
-    hasVideo: true,
-    videoId: 'dQw4w9WgXcQ', // Placeholder
     seeAlso: ['bandeja', 'vibora', 'net-position'],
     guide: { href: '/blog/padel-bandeja-explained', label: 'When to smash and when to hit a bandeja' }
   },
@@ -343,8 +330,6 @@ const glossaryTerms: Term[] = [
     definition: 'Spanish for "viper"—an aggressive overhead shot with sidespin that hits the side wall at an angle, making it difficult to return. More offensive than bandeja, less risky than smash.',
     usage: 'Beautiful víbora! Hit the side wall at such an angle they couldn\'t get it back.',
     difficulty: '⭐⭐⭐⭐⭐ (Requires spin control)',
-    hasVideo: true,
-    videoId: 'dQw4w9WgXcQ', // Placeholder
     seeAlso: ['bandeja', 'smash', 'side-wall'],
     guide: { href: '/blog/padel-bandeja-explained', label: 'Bandeja vs víbora vs smash compared' }
   },
@@ -357,8 +342,6 @@ const glossaryTerms: Term[] = [
     definition: 'Hitting the ball before it bounces on the ground. The most important shot in padel—teams at net winning points through volleys.',
     usage: 'The team at net dominated with solid volleys—they didn\'t let anything get past them.',
     difficulty: '⭐⭐ (Basic volley easy, mastery hard)',
-    hasVideo: true,
-    videoId: 'dQw4w9WgXcQ', // Placeholder
     seeAlso: ['net-position']
   },
   {
@@ -368,8 +351,6 @@ const glossaryTerms: Term[] = [
     skillLevel: 'All levels',
     definition: 'The use of glass and mesh walls as part of gameplay—the defining characteristic of padel that differentiates it from tennis and pickleball.',
     usage: 'Wall play is what makes padel special. Learning to let the ball come off the back wall is a game-changer for beginners.',
-    hasVideo: true,
-    videoId: 'dQw4w9WgXcQ', // Placeholder
     seeAlso: ['back-wall', 'side-wall', 'contrapared'],
     guide: { href: '/blog/padel-vs-pickleball', label: 'Padel vs pickleball: how the walls change the game' }
   },
@@ -432,7 +413,7 @@ export default function GlossaryPage() {
             </h1>
           </div>
           <p className="text-xl text-blue-100 max-w-3xl">
-            Your complete dictionary of 30+ padel terms. From bandeja to víbora, learn every term with pronunciations, examples, and video tutorials. Looking for the complete rules? See our <Link href="/rules" className="text-white underline hover:text-blue-200">padel rules guide</Link>.
+            Your complete dictionary of 30+ padel terms. From bandeja to víbora, learn every term with pronunciations and examples. Looking for the complete rules? See our <Link href="/rules" className="text-white underline hover:text-blue-200">padel rules guide</Link>.
           </p>
         </div>
       </section>
@@ -498,7 +479,7 @@ export default function GlossaryPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats */}
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-3 gap-4 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600">
                 {filteredTerms.length}
@@ -508,10 +489,6 @@ export default function GlossaryPage() {
             <div>
               <div className="text-3xl font-bold text-blue-600">32</div>
               <div className="text-sm text-blue-700">Total Terms</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600">10</div>
-              <div className="text-sm text-blue-700">Video Tutorials</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600">6</div>
@@ -582,19 +559,6 @@ export default function GlossaryPage() {
                       <p className="text-stone-700 mb-3">
                         <strong>Difficulty:</strong> {term.difficulty}
                       </p>
-                    )}
-
-                    {term.hasVideo && (
-                      <div className="bg-stone-50 border border-stone-200 rounded-lg p-4 mb-3">
-                        <div className="aspect-video bg-stone-200 rounded flex items-center justify-center mb-2">
-                          <div className="text-stone-500 text-center">
-                            <BookOpen className="w-12 h-12 mx-auto mb-2" />
-                            <p className="text-sm">Video Tutorial Available</p>
-                            <p className="text-xs">Watch professional demonstration</p>
-                          </div>
-                        </div>
-                        {/* Actual YouTube embed would go here with term.videoId */}
-                      </div>
                     )}
 
                     {term.seeAlso && term.seeAlso.length > 0 && (
