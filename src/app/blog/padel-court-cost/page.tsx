@@ -358,7 +358,7 @@ export default function PadelCourtCostPage() {
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">How much land do you need for a padel court?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">The playing area is fixed at 20m &times; 10m (about 66ft &times; 33ft), but the total footprint is larger once you add structural clearance, walkways, and access around the enclosure. Plan on a pad meaningfully bigger than the court itself, and multi-court layouts need circulation space between courts.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">The playing area is fixed at 20m &times; 10m (about 66ft &times; 33ft), but the total footprint is larger once you add structural clearance, walkways, and access around the enclosure. Plan on a pad meaningfully bigger than the court itself, and multi-court layouts need circulation space between courts. Our <Link href="/blog/padel-court-dimensions" className="text-padel-green hover:underline">padel court dimensions guide</Link> has minimum areas for 1, 2 and 4 courts.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Is a padel club profitable?</h3>

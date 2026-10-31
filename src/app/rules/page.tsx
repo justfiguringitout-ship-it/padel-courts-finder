@@ -210,7 +210,8 @@ export default function RulesPage() {
                   Padel is played by two pairs, one on each side of the net. Only the server and the receiver have fixed
                   positions; both partners can stand anywhere on their own side, and the server&apos;s partner usually waits
                   near the net. The FIP rules do not cover singles, although some clubs build narrower singles courts about
-                  6 metres wide.
+                  6 metres wide. Every measurement in feet and metres, including ceiling height and the land a court
+                  needs, is in our <Link href="/blog/padel-court-dimensions" className={link}>padel court dimensions guide</Link>.
                 </p>
               </Prose>
               <H3>The court</H3>
@@ -240,7 +241,9 @@ export default function RulesPage() {
           <Prose>
             <p>
               Padel uses tennis scoring. The first point of a game is called 15, the second 30, the third 40, and the
-              fourth wins the game, with the server&apos;s score called first.
+              fourth wins the game, with the server&apos;s score called first. For a full game scored point by point,
+              the tiebreak serving order and club formats like Americano, see{" "}
+              <Link href="/blog/padel-scoring-explained" className={link}>how padel scoring works</Link>.
             </p>
           </Prose>
           <ol aria-label="Points in a game" className="mt-6 flex flex-wrap items-center gap-2">
