@@ -529,6 +529,7 @@ export default function RulesPage() {
               <div className="flex flex-wrap gap-x-6 gap-y-2">
                 <Link href="/how-to-play" className="text-padel-green-dark hover:underline">How to play padel</Link>
                 <Link href="/blog/padel-vs-pickleball" className="text-padel-green-dark hover:underline">Padel vs pickleball</Link>
+                <Link href="/blog/padel-bandeja-explained" className="text-padel-green-dark hover:underline">The bandeja, explained</Link>
                 <Link href="/get-started/glossary" className="text-padel-green-dark hover:underline">Padel glossary</Link>
                 <Link href="/blog/best-padel-rackets-beginners" className="text-padel-green-dark hover:underline">Best beginner rackets (2026)</Link>
                 <Link href="/blog/padel-injuries-prevention-tips" className="text-padel-green-dark hover:underline">Preventing padel injuries</Link>

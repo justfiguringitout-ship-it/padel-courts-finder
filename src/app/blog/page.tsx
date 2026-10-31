@@ -236,11 +236,11 @@ const blogPosts: BlogPost[] = [
   // How-To Guides
   {
     slug: 'padel-vs-pickleball',
-    title: 'Padel vs Pickleball: What\'s the Difference? (2026 Guide)',
+    title: 'Padel vs Pickleball: What\'s the Difference?',
     category: 'how-to',
-    excerpt: 'Courts, rules, equipment, cost, fitness — a side-by-side breakdown of America\'s two fastest-growing racquet sports so you can pick the right one.',
+    excerpt: 'Court size, walls, scoring, gear, cost, players and injuries side by side, plus clubs where you can play both.',
     date: '2026-03-25',
-    readTime: '11 min read',
+    readTime: '12 min read',
     imageAlt: 'Padel vs pickleball comparison',
     courtSlug: '',
     featured: true
@@ -595,11 +595,11 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: 'padel-bandeja-explained',
-    title: 'The Bandeja, Explained: Padel’s Most Important Shot',
+    title: 'Bandeja in Padel: What It Is and How to Hit It',
     category: 'how-to',
-    excerpt: 'The sliced overhead that keeps you at the net — what it is, how to hit it step by step, and how it differs from the víbora and smash.',
+    excerpt: 'The sliced overhead that keeps you at the net: what it is, how to hit it step by step, drills, and how it differs from the víbora and smash.',
     date: '2026-07-04',
-    readTime: '6 min read',
+    readTime: '10 min read',
     imageAlt: 'The bandeja padel shot explained',
     courtSlug: ''
   },

@@ -23,6 +23,7 @@ interface Term {
   seeAlso?: string[];
   hasVideo?: boolean;
   videoId?: string;
+  guide?: { href: string; label: string };
 }
 
 const categories = [
@@ -97,12 +98,13 @@ const glossaryTerms: Term[] = [
     pronunciation: 'ban-DAY-ha',
     category: 'Shots & Techniques',
     skillLevel: 'Intermediate to Advanced',
-    definition: 'A defensive overhead shot hit with slice and topspin that keeps the ball in play while maintaining net position. Not as powerful as a smash, but more controlled and less risky.',
+    definition: 'Spanish for "tray." A controlled overhead hit with slice that answers a lob while keeping your net position. Not as powerful as a smash, but more controlled and less risky.',
     usage: 'She used a perfect bandeja to keep them pinned at the baseline while maintaining her net position.',
     difficulty: '⭐⭐⭐⭐ (Requires practice and timing)',
     hasVideo: true,
     videoId: 'dQw4w9WgXcQ', // Placeholder - replace with actual video
-    seeAlso: ['vibora', 'smash', 'net-position']
+    seeAlso: ['vibora', 'smash', 'net-position'],
+    guide: { href: '/blog/padel-bandeja-explained', label: 'How to hit a bandeja, step by step' }
   },
   {
     id: 'baseline',
@@ -300,7 +302,8 @@ const glossaryTerms: Term[] = [
     difficulty: '⭐⭐⭐⭐ (Hard to execute well)',
     hasVideo: true,
     videoId: 'dQw4w9WgXcQ', // Placeholder
-    seeAlso: ['bandeja', 'vibora', 'net-position']
+    seeAlso: ['bandeja', 'vibora', 'net-position'],
+    guide: { href: '/blog/padel-bandeja-explained', label: 'When to smash and when to hit a bandeja' }
   },
   {
     id: 'sweet-spot',
@@ -342,7 +345,8 @@ const glossaryTerms: Term[] = [
     difficulty: '⭐⭐⭐⭐⭐ (Requires spin control)',
     hasVideo: true,
     videoId: 'dQw4w9WgXcQ', // Placeholder
-    seeAlso: ['bandeja', 'smash', 'side-wall']
+    seeAlso: ['bandeja', 'smash', 'side-wall'],
+    guide: { href: '/blog/padel-bandeja-explained', label: 'Bandeja vs víbora vs smash compared' }
   },
   {
     id: 'volley',
@@ -366,7 +370,8 @@ const glossaryTerms: Term[] = [
     usage: 'Wall play is what makes padel special. Learning to let the ball come off the back wall is a game-changer for beginners.',
     hasVideo: true,
     videoId: 'dQw4w9WgXcQ', // Placeholder
-    seeAlso: ['back-wall', 'side-wall', 'contrapared']
+    seeAlso: ['back-wall', 'side-wall', 'contrapared'],
+    guide: { href: '/blog/padel-vs-pickleball', label: 'Padel vs pickleball: how the walls change the game' }
   },
   {
     id: 'wrist-strap',
@@ -557,6 +562,15 @@ export default function GlossaryPage() {
                     <p className="text-stone-700 mb-3 leading-relaxed">
                       <strong>Definition:</strong> {term.definition}
                     </p>
+
+                    {term.guide && (
+                      <p className="text-stone-700 mb-3">
+                        <strong>Full guide:</strong>{' '}
+                        <Link href={term.guide.href} className="text-blue-600 hover:text-blue-800 hover:underline">
+                          {term.guide.label}
+                        </Link>
+                      </p>
+                    )}
 
                     {term.usage && (
                       <p className="text-stone-600 mb-3 italic">
