@@ -42,6 +42,14 @@ export const changelog: ChangelogEntry[] = [
   // ---------------------------------------------------------------- October 2026
   {
     date: "2026-10-31",
+    type: "added",
+    title: "25 clubs added: 22 open and 3 coming soon",
+    note: "The open clubs are in 11 states and Puerto Rico. Public clubs include Conquer Padel Club Lehi (7 courts), TT4 Padel Center in Brownsville (7), Padel Point El Paso (6), and Cross Court Hawthorne and The Bay in North Bay Village (4 each). Private and resort clubs include Kith Ivy, the West Side Tennis Club, The Breakers Palm Beach and Edgewood Country Club, our first West Virginia listing. Bay Padel - Marina del Rey, Padel N9NE San Marcos and New Orleans Padel Club are coming soon. Each address and court count comes from the club's own site or booking page.",
+    clubs: ["Conquer Padel Club Lehi", "TT4 Padel Center", "Padel Point El Paso", "Cross Court Hawthorne", "The Bay (AFA International Center)", "VIVA Padel Philadelphia", "4PADEL College Station", "Phantom Padel", "Vitesse Padel", "The Grounds Padel & Wellness Center", "Weston Racquet Club", "Nantucket Racquet Sports Association", "Pine Valley Pickleball", "Lake Norman Racquet & Social Club", "Westhampton Beach Tennis & Sport", "The Tennis & Pickleball Club at Newport Beach", "Kith Ivy", "West Side Tennis Club", "The Breakers Palm Beach", "John Newcombe Country Club", "Park Lakes Tennis & Paddle Club", "Edgewood Country Club", "Bay Padel - Marina del Rey", "Padel N9NE San Marcos", "New Orleans Padel Club"],
+    commit: "8e69dd4",
+  },
+  {
+    date: "2026-10-31",
     type: "updated",
     title: "Diablo Padel logo and rendering added",
     note: "The club sent its logo and a rendering of the planned Oakland space. The main image is that rendering, not a photo, since the club has not opened yet.",
