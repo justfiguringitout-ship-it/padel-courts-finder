@@ -87,7 +87,7 @@ export default function StateOfPadelPage() {
             </div>
             <div>
               <dd className="font-display text-4xl font-bold tabular-nums">{stats.totalStates}</dd>
-              <dt className="text-sm text-white/50 mt-1">states with padel</dt>
+              <dt className="text-sm text-white/50 mt-1">states with padel, plus DC and Puerto Rico</dt>
             </div>
             <div>
               <dd className="font-display text-4xl font-bold tabular-nums">{comingSoon.length}</dd>

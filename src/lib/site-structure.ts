@@ -216,7 +216,8 @@ export function getSiteStats() {
 
   return {
     totalCourts: padelCourts.length,
-    totalStates: states.length,
+    // "N states" in copy means states only: DC and Puerto Rico have clubs but are not states
+    totalStates: states.filter((s) => s.code !== "DC" && s.code !== "PR").length,
     totalCities: cities.length,
     topStates: states.slice(0, 5),
     topCities: cities.slice(0, 10),
