@@ -574,6 +574,26 @@ const blogPosts: BlogPost[] = [
     priceRange: '$209'
   },
   {
+    slug: 'padel-scoring-explained',
+    title: 'How Padel Scoring Works: Points, Golden Point, Star Point and Tiebreaks',
+    category: 'how-to',
+    excerpt: 'Padel scoring in plain English: 15-30-40, golden point vs the new star point, sets, tiebreaks, who serves when, and a full game scored point by point.',
+    date: '2026-10-31',
+    readTime: '9 min read',
+    imageAlt: 'How padel scoring works',
+    courtSlug: ''
+  },
+  {
+    slug: 'padel-court-dimensions',
+    title: 'Padel Court Dimensions: Every Measurement in Feet and Meters',
+    category: 'how-to',
+    excerpt: 'A padel court is 65.6 x 32.8 ft (20 x 10 m). Net, walls, ceiling height, singles courts, and how much land 1, 2 or 4 courts need, compared with pickleball and tennis.',
+    date: '2026-10-31',
+    readTime: '8 min read',
+    imageAlt: 'Padel court dimensions diagram',
+    courtSlug: ''
+  },
+  {
     slug: 'padel-bandeja-explained',
     title: 'The Bandeja, Explained: Padel’s Most Important Shot',
     category: 'how-to',
