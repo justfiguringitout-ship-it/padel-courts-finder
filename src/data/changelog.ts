@@ -39,6 +39,15 @@ export interface ChangelogEntry {
 }
 
 export const changelog: ChangelogEntry[] = [
+  // ---------------------------------------------------------------- November 2026
+  {
+    date: "2026-11-01",
+    type: "verified",
+    title: "Programs, facilities and booking links checked against each club's own site",
+    note: "We read every club's website and booking page and recorded only what the club states: open play, lessons, kids programs, leagues, racket rental, lights, parking, wheelchair access, locker rooms and pro shops, with the source and date for each. 168 clubs now have a direct booking link and 17 coming-soon clubs show their announced opening date. The old lessons and rental flags were removed because they were not checked.",
+    count: 279,
+    commit: "f8e56a5",
+  },
   // ---------------------------------------------------------------- October 2026
   {
     date: "2026-10-31",
