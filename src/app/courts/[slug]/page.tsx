@@ -9,8 +9,8 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import {
-  MapPin, Star, Phone, Globe, Mail, Calendar, CheckCircle, UtensilsCrossed, Dumbbell, Armchair,
-  GraduationCap, Navigation, Hourglass, ArrowRight, LayoutGrid, Warehouse, Sun, Users, KeyRound,
+  MapPin, Star, Phone, Globe, Mail, Calendar, CheckCircle, UtensilsCrossed, Armchair,
+  Navigation, Hourglass, ArrowRight, LayoutGrid, Warehouse, Sun, Users, KeyRound, Check, X,
 } from "lucide-react";
 import {
   getAllAdaptedCourtSlugs,
@@ -44,6 +44,7 @@ import { ClubHero, type HeroAction, type HeroFact } from "@/components/club-page
 import { ClubGallery } from "@/components/club-page/club-gallery";
 import { ClubMobileBar } from "@/components/club-page/club-mobile-bar";
 import { getClubMedia } from "@/lib/club-media";
+import { FACT_LABELS, latestCheck } from "@/lib/club-facts";
 import { getPinnedSpotlightForClub } from "@/lib/spotlight";
 import { PinnedSpotlights } from "@/components/spotlight/pinned-spotlights";
 import { cityBlogSlugs } from "@/data/page-content";
@@ -180,8 +181,8 @@ export default async function CourtPage({ params }: CourtPageProps) {
   const media = getClubMedia(court);
   const spotlight = getPinnedSpotlightForClub(court.slug);
 
-  const bookAction: HeroAction | undefined = court.bookingUrl
-    ? { key: "book", label: "Book", href: court.bookingUrl, icon: <Calendar aria-hidden="true" />, kind: "website", external: true }
+  const bookAction: HeroAction | undefined = court.bookingUrl && !comingSoon
+    ? { key: "book", label: "Book", href: court.bookingUrl, icon: <Calendar aria-hidden="true" />, kind: "book", external: true }
     : undefined;
   const webAction: HeroAction | undefined = court.website
     ? { key: "web", label: "Website", href: court.website, icon: <Globe aria-hidden="true" />, kind: "website", external: true }
@@ -198,9 +199,20 @@ export default async function CourtPage({ params }: CourtPageProps) {
   // Phone bar: Directions, then the primary action on the right under the thumb.
   const barActions = [dirAction, bookAction ?? webAction].filter(isAction);
 
+  // Programs and facilities the club itself states (src/data/club-facts.json). Unknown is left out.
+  const factRows = FACT_LABELS.flatMap(({ key, label, no }) => {
+    const f = court.facts[key];
+    if (!f) return [];
+    if (key === "lights" && layout.setting === "indoor") return [];
+    return [{ key, value: f.value, text: f.value ? label : no, note: f.note }];
+  });
+  const factsChecked = latestCheck(court.facts);
+  const factsCheckedLabel = factsChecked
+    ? new Date(`${factsChecked}T12:00:00Z`).toLocaleString("en-US", { month: "long", year: "numeric", timeZone: "UTC" })
+    : undefined;
+  const opening = comingSoon ? court.facts.openingDate : undefined;
+
   const onSite: Array<{ label: string; icon: React.ReactNode }> = [];
-  if (court.lessonsAvailable) onSite.push({ label: "Lessons", icon: <GraduationCap /> });
-  if (court.rentalAvailable) onSite.push({ label: "Equipment rental", icon: <Dumbbell /> });
   if (court.foodAndDrink) onSite.push({ label: "Food & drink", icon: <UtensilsCrossed /> });
   if (court.socialArea) onSite.push({ label: "Social lounge", icon: <Armchair /> });
 
@@ -359,6 +371,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
         hours={{ published: hours.published, days: hours.days }}
         timeZone={timeZone}
         featured={court.featured}
+        openingDate={opening?.value}
         privateLabel={court.membersOnly ? (court.access === "residents_only" ? "Residents only" : "Private club") : undefined}
         stamp={stamp}
         actions={heroActions}
@@ -379,10 +392,21 @@ export default async function CourtPage({ params }: CourtPageProps) {
         {comingSoon && (
           <div className="club-soon-note" role="note">
             <Hourglass aria-hidden="true" />
-            <p>
-              <strong>Not open yet.</strong> You cannot book courts here today. What follows is what the club
-              has announced so far, and we update it as opening gets closer.
-            </p>
+            {opening ? (
+              <p>
+                <strong>Opening {opening.value}</strong>, as announced by{" "}
+                <a href={opening.source} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-2">
+                  the club
+                </a>
+                . You cannot book courts here yet. What follows is what the club has shared so far, and we update it as
+                opening gets closer.
+              </p>
+            ) : (
+              <p>
+                <strong>Not open yet.</strong> You cannot book courts here today, and we do not have a confirmed opening
+                date. What follows is what the club has shared so far, and we update it as opening gets closer.
+              </p>
+            )}
           </div>
         )}
         {tempClosed && (
@@ -522,7 +546,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
                 {!comingSoon && (court.bookingUrl || court.phone) && (
                   <div className="mt-4">
                     {court.bookingUrl ? (
-                      <TrackedLink href={court.bookingUrl} type="website" clubName={court.name} target="_blank" rel="noopener noreferrer" className="club-btn">
+                      <TrackedLink href={court.bookingUrl} type="book" clubName={court.name} target="_blank" rel="noopener noreferrer" className="club-btn">
                         <Calendar aria-hidden="true" />
                         Book Now
                       </TrackedLink>
@@ -617,11 +641,39 @@ export default async function CourtPage({ params }: CourtPageProps) {
               </section>
             )}
 
-            {(court.amenities.length > 0 || onSite.length > 0) && (
+            {(court.amenities.length > 0 || onSite.length > 0 || factRows.length > 0) && (
               <section className="club-card" aria-labelledby="club-amenities">
                 <div className="club-section-head">
-                  <h2 id="club-amenities" className="club-h2">Amenities</h2>
+                  <h2 id="club-amenities" className="club-h2">{factRows.length > 0 ? "Programs and facilities" : "Amenities"}</h2>
                 </div>
+                {factRows.length > 0 && (
+                  <>
+                    <ul className="club-facts">
+                      {factRows.map((r) => (
+                        <li key={r.key} className={r.value ? "is-yes" : "is-no"}>
+                          {r.value ? <Check aria-hidden="true" /> : <X aria-hidden="true" />}
+                          <div>
+                            <span className="club-fact-label">
+                              <span className="sr-only">{r.value ? "Yes: " : "No: "}</span>
+                              {r.text}
+                            </span>
+                            {r.note && <span className="club-fact-note">{noEmDash(r.note)}</span>}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="club-facts-src">
+                      From the club&apos;s own website{factsCheckedLabel ? `, checked ${factsCheckedLabel}` : ""}. Run this club?{" "}
+                      <Link href={`/claim?club=${court.slug}`} rel="nofollow" className="underline underline-offset-2">
+                        Correct these details
+                      </Link>
+                      .
+                    </p>
+                  </>
+                )}
+                {(onSite.length > 0 || court.amenities.length > 0) && factRows.length > 0 && (
+                  <p className="club-kicker mb-2 mt-5">Also listed</p>
+                )}
                 {onSite.length > 0 && (
                   <ul className="club-chips mb-3">
                     {onSite.map((o) => (

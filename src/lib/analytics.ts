@@ -13,6 +13,8 @@ declare global {
  */
 const PLAUSIBLE_EVENT: Record<string, { event: string; kind: string; key: 'club' | 'product' }> = {
   club_website: { event: 'Club click', kind: 'website', key: 'club' },
+  // Click on the club's own court booking page: the number clubs pay for as leads
+  club_book: { event: 'Club click', kind: 'book', key: 'club' },
   club_phone: { event: 'Club click', kind: 'phone', key: 'club' },
   club_social: { event: 'Club click', kind: 'social', key: 'club' },
   featured: { event: 'Club click', kind: 'featured', key: 'club' },
@@ -53,6 +55,10 @@ export function trackOutboundClick(category: string, label: string, url: string)
 
 export function trackClubWebsiteClick(clubName: string, url: string) {
   trackOutboundClick('club_website', clubName, url);
+}
+
+export function trackClubBookingClick(clubName: string, url: string) {
+  trackOutboundClick('club_book', clubName, url);
 }
 
 export function trackClubPhoneClick(clubName: string, phone: string) {

@@ -13,7 +13,7 @@ export type HeroAction = {
   label: string;
   href: string;
   icon: React.ReactNode;
-  kind: "website" | "phone";
+  kind: "website" | "book" | "phone";
   external: boolean;
 };
 
@@ -68,6 +68,7 @@ export function ClubHero({
   hours,
   timeZone,
   featured,
+  openingDate,
   privateLabel,
   stamp,
   actions,
@@ -86,6 +87,8 @@ export function ClubHero({
   hours: { published: boolean; days: DayHours[] };
   timeZone?: string;
   featured?: boolean;
+  /** Coming-soon clubs: announced opening, e.g. "December 2026" */
+  openingDate?: string;
   privateLabel?: string;
   stamp?: TrustStamp;
   actions: HeroAction[];
@@ -137,7 +140,7 @@ export function ClubHero({
               {status === "coming_soon" && (
                 <span className="club-chip club-chip-soon">
                   <Hourglass aria-hidden="true" />
-                  Coming soon
+                  {openingDate ? `Opening ${openingDate}` : "Coming soon"}
                 </span>
               )}
               {status === "temporarily_closed" && <span className="club-chip club-chip-closed">Temporarily closed</span>}

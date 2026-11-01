@@ -505,6 +505,18 @@
   .club-contact-link { font-size: 0.9375rem; font-weight: 500; }
   .club-contact-link:hover { color: var(--color-padel-green-dark); text-decoration: underline; text-underline-offset: 3px; }
 
+  /* programs and facilities: checked yes/no facts */
+  .club-facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: 0.625rem 1.25rem; }
+  .club-facts li { display: flex; gap: 0.5rem; align-items: flex-start; min-width: 0; }
+  .club-facts li > svg { width: 1.125rem; height: 1.125rem; margin-top: 0.1rem; flex-shrink: 0; border-radius: 999px; padding: 0.15rem; }
+  .club-facts li.is-yes > svg { background: var(--color-padel-green-light); color: var(--color-padel-green-dark); }
+  .club-facts li.is-no > svg { background: var(--muted); color: var(--muted-foreground); }
+  .club-facts li > div { display: flex; flex-direction: column; min-width: 0; }
+  .club-fact-label { font-size: 0.9375rem; font-weight: 500; }
+  .club-facts li.is-no .club-fact-label { color: var(--muted-foreground); font-weight: 400; }
+  .club-fact-note { font-size: 0.8125rem; color: var(--muted-foreground); overflow-wrap: anywhere; }
+  .club-facts-src { margin-top: 0.875rem; font-size: 0.75rem; color: var(--muted-foreground); }
+
   /* chips */
   .club-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .club-amenity {

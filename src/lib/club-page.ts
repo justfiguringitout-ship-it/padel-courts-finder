@@ -355,6 +355,7 @@ const PLATFORMS: Array<[RegExp, string]> = [
 
 /** Booking app named in the researched text, if any ("courts booked through Playtomic"). */
 export function getBookingPlatform(court: AdaptedCourt): string | undefined {
+  if (court.bookingPlatform) return court.bookingPlatform;
   const text = `${court.pricingText ?? ""} ${court.description ?? ""}`;
   for (const [re, name] of PLATFORMS) if (re.test(text)) return name;
   return undefined;

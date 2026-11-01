@@ -7,6 +7,7 @@
 import { PadelCourt as ExistingCourt } from "@/types/padel-court";
 import { padelCourts } from "@/data/padel-courts";
 import { parseCourtPricing } from "@/lib/court-pricing";
+import { getClubFacts, type ClubFacts } from "@/lib/club-facts";
 
 /**
  * Normalize an Instagram field value into a valid URL.
@@ -752,8 +753,13 @@ export interface AdaptedCourt {
   facebook?: string;
   membersOnly?: boolean;
   access?: "members_only" | "guests_of_members" | "residents_only" | "resort_guests";
+  /** From checked facts only (src/data/club-facts.json); undefined = not stated by the club */
   lessonsAvailable?: boolean;
   rentalAvailable?: boolean;
+  /** Booking app, from the club's own booking link */
+  bookingPlatform?: string;
+  /** Checked facts: programs, facilities, opening date */
+  facts: ClubFacts;
   socialArea?: boolean;
   foodAndDrink?: boolean;
   positiveReviewThemes?: string[];
@@ -771,6 +777,9 @@ export interface AdaptedCourt {
  */
 export function adaptCourt(court: ExistingCourt): AdaptedCourt {
   const slug = generateSlug(court.name);
+  const facts = getClubFacts(court.id);
+  const lessons = facts.lessons?.value;
+  const rentals = facts.rentals?.value;
   const parsedPricing = parseCourtPricing(court.pricingText);
   const stateCode = getStateCode(court.state);
   const stateName = getStateName(stateCode);
@@ -851,10 +860,20 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
       answer: court.pricingText,
     });
   }
-  if (court.lessonsAvailable) {
+  if (lessons !== undefined) {
     dynamicFaqs.push({
       question: `Does ${court.name} offer padel lessons?`,
-      answer: `Yes, ${court.name} offers padel lessons. Contact them directly for scheduling and rates.`,
+      answer: lessons
+        ? `Yes, ${court.name} offers padel lessons${facts.lessons?.note ? ` (${facts.lessons.note})` : ""}. Contact the club for times and rates.`
+        : `No. ${court.name} says it does not offer padel lessons.`,
+    });
+  }
+  if (facts.openPlay?.value !== undefined) {
+    dynamicFaqs.push({
+      question: `Does ${court.name} have open play?`,
+      answer: facts.openPlay.value
+        ? `Yes, ${court.name} runs open play${facts.openPlay.note ? ` (${facts.openPlay.note})` : ""}. Check the club's schedule before you go.`
+        : `No. ${court.name} says it does not run open play.`,
     });
   }
   if (court.membersOnly) {
@@ -869,10 +888,12 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
       answer: `${court.name} offers: ${court.amenities.join(", ")}.`,
     });
   }
-  if (court.rentalAvailable) {
+  if (rentals !== undefined) {
     dynamicFaqs.push({
-      question: `Can I rent equipment at ${court.name}?`,
-      answer: `Yes, ${court.name} offers equipment rental. Contact them for availability and pricing.`,
+      question: `Can I rent a padel racket at ${court.name}?`,
+      answer: rentals
+        ? `Yes, ${court.name} has rackets you can use${facts.rentals?.note ? ` (${facts.rentals.note})` : ""}.`
+        : `No. ${court.name} says it does not rent rackets, so bring your own.`,
     });
   }
   const faqs = dynamicFaqs.slice(0, 4);
@@ -909,7 +930,12 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
       indoorCourts,
       outdoorCourts,
       courtSurface: court.courtSurface || "",
-      lighting: "",
+      lighting:
+        facts.lights?.value === true
+          ? `Lit for night play${facts.lights.note ? ` (${facts.lights.note})` : ""}`
+          : facts.lights?.value === false
+            ? "No lights, daytime play only"
+            : "",
     },
 
     amenities: court.amenities || [],
@@ -971,11 +997,14 @@ export function adaptCourt(court: ExistingCourt): AdaptedCourt {
     // Normalize social media URLs from messy data
     instagram: normalizeInstagramUrl(court.instagram),
     facebook: normalizeFacebookUrl(court.facebook),
-    bookingUrl: court.bookingUrl,
+    // Owner-supplied link first, then the one checked on the club's site
+    bookingUrl: court.bookingUrl || facts.bookingUrl?.value,
+    bookingPlatform: facts.bookingUrl?.platform,
+    facts,
     membersOnly: court.membersOnly,
     access: court.access,
-    lessonsAvailable: court.lessonsAvailable,
-    rentalAvailable: court.rentalAvailable,
+    lessonsAvailable: lessons,
+    rentalAvailable: rentals,
     socialArea: court.socialArea,
     foodAndDrink: court.foodAndDrink,
     positiveReviewThemes: Array.isArray(court.positiveReviewThemes)

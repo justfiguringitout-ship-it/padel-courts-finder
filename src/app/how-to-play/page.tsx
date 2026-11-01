@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { GearWidget } from '@/components/GearWidget';
 import { getSiteStats, getStates, getAllCities } from '@/lib/site-structure';
 import { padelCourts } from '@/data/padel-courts';
+import { clubOffers } from '@/lib/club-facts';
 import { CourtDiagram } from './_components/court-diagram';
 import { WallSequence } from './_components/wall-sequence';
 import {
@@ -131,7 +132,8 @@ const link = "font-medium text-padel-green-dark underline decoration-padel-green
 
 export default function HowToPlayPage() {
   const stats = getSiteStats();
-  const lessonClubs = padelCourts.filter((c) => c.lessonsAvailable).length;
+  // Only clubs whose own website or booking page says they teach (src/data/club-facts.json)
+  const lessonClubs = padelCourts.filter((c) => clubOffers(c.id, 'lessons') === true).length;
   const states = getStates();
   const stateSlug = new Map(states.map((s) => [s.code, s.slug]));
   const topStates = states.slice(0, 8);
@@ -195,7 +197,7 @@ export default function HowToPlayPage() {
               <>
                 Find a club near you. Search the{" "}
                 <Link href="/search" className={link}>Padel Courts Finder directory</Link> by city or state. {lessonClubs} of
-                the {stats.totalCourts} clubs we list say they offer lessons or clinics.
+                the {stats.totalCourts} clubs we list say on their own websites that they offer lessons or clinics.
               </>,
               <>
                 Book a beginner clinic or an intro lesson for your first visit. A coach

@@ -1,4 +1,5 @@
 import { padelCourts } from "@/data/padel-courts";
+import { clubOffers } from "@/lib/club-facts";
 
 /**
  * Directory-derived aggregates for the State of US Padel report. Everything
@@ -95,11 +96,16 @@ export function getStateOfPadelStats() {
     const known = clubs.filter((c) => typeof c[key] === "boolean");
     return { pct: pct(known.filter((c) => c[key] === true).length, known.length), n: known.length };
   };
+  // Lessons and rentals come from checked facts only; the old flags were research defaults
+  const factShare = (key: "lessons" | "rentals") => {
+    const known = clubs.filter((c) => clubOffers(c.id, key) !== undefined);
+    return { pct: pct(known.filter((c) => clubOffers(c.id, key) === true).length, known.length), n: known.length };
+  };
   const amenities = {
-    lessons: share("lessonsAvailable"),
+    lessons: factShare("lessons"),
     foodAndDrink: share("foodAndDrink"),
     socialArea: share("socialArea"),
-    rentals: share("rentalAvailable"),
+    rentals: factShare("rentals"),
     membersOnly: share("membersOnly"),
   };
 

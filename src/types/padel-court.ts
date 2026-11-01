@@ -39,8 +39,11 @@ export interface PadelCourt {
   membershipEmail?: string;                      // Where membership leads go (falls back to email). Never shown on the page.
   membershipUrl?: string;
   access?: "members_only" | "guests_of_members" | "residents_only" | "resort_guests"; // who can play when membersOnly is true (audit 2026-10-13)                        // Club's own membership / guest pass page
-  lessonsAvailable?: boolean;                    // Offers padel lessons
-  rentalAvailable?: boolean;                     // Equipment rental available
+  // Deprecated 2026-11-01: these were research defaults (nearly all true). Lessons, rentals, open play,
+  // kids, leagues, lights, parking, wheelchair access, booking link and opening date now live in
+  // src/data/club-facts.json, each with the club's own source URL and a checked date. Do not set these.
+  lessonsAvailable?: boolean;
+  rentalAvailable?: boolean;
   socialArea?: boolean;                          // Has social/lounge area
   foodAndDrink?: boolean;                        // Has food & drink on-site
   positiveReviewThemes?: string[];               // Common positive review themes

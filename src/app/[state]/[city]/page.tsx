@@ -547,7 +547,8 @@ export default async function CityPage({ params }: CityPageProps) {
                 {comingSoon.map((c, i) => (
                   <span key={c.id}>
                     {i > 0 && ", "}
-                    {c.name}
+                    <Link href={`/courts/${c.slug}`} className="hover:underline">{c.name}</Link>
+                    {c.facts.openingDate && ` (opening ${c.facts.openingDate.value})`}
                   </span>
                 ))}
               </p>
