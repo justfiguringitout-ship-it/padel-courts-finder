@@ -38,7 +38,7 @@ import { GearWidget } from "@/components/GearWidget";
 import { CourtDiagram } from "@/components/club-page/court-diagram";
 import { ClubHours } from "@/components/club-page/club-hours";
 import { ClubCorrectionForm } from "@/components/club-page/club-correction-form";
-import { MembershipLeadForm } from "@/components/club-page/membership-lead-form";
+import { MembershipLeadCard } from "@/components/club-page/membership-lead-card";
 import { MapBoundary } from "@/components/club-page/map-boundary";
 import { ClubHero, type HeroAction, type HeroFact } from "@/components/club-page/club-hero";
 import { ClubGallery } from "@/components/club-page/club-gallery";
@@ -426,17 +426,7 @@ export default async function CourtPage({ params }: CourtPageProps) {
       <div className="container mx-auto px-4 pb-12">
         {/* Members-only clubs: ask about membership or a guest pass */}
         {showLeadForm && (
-          <section id="membership" className="club-card club-lead" aria-labelledby="club-membership">
-            <div className="grid gap-6 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] md:gap-10">
-              <div>
-                <h2 id="club-membership" className="club-h2">Interested in playing at {court.name}?</h2>
-                <p id="lead-intro" className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  This club is members only. Tell us a bit about you and we will pass your note to the club.
-                </p>
-              </div>
-              <MembershipLeadForm slug={court.slug} name={court.name} />
-            </div>
-          </section>
+          <MembershipLeadCard slug={court.slug} name={court.name} />
         )}
 
         <div className="club-layout">

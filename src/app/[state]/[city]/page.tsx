@@ -144,13 +144,14 @@ export default async function CityPage({ params }: CityPageProps) {
     .slice(0, 6);
 
   // Compute dynamic stats for SEO content
-  const totalCourts = cityCourts.reduce((sum, c) => sum + c.facility.totalCourts, 0);
   const indoorCount = cityCourts.filter((c) => c.features.some(f => f.toLowerCase() === "indoor")).length;
   const outdoorCount = cityCourts.filter((c) => c.features.some(f => f.toLowerCase() === "outdoor")).length;
   const lessonsCount = cityCourts.filter((c) => c.lessonsAvailable).length;
   const rentalCount = cityCourts.filter((c) => c.rentalAvailable).length;
   const comingSoon = cityCourts.filter((c) => c.status === "coming_soon");
   const openClubs = cityCourts.filter((c) => c.status !== "coming_soon" && c.status !== "temporarily_closed");
+  // Courts you can book today, so the header and intro match the open-club count
+  const totalCourts = openClubs.reduce((sum, c) => sum + c.facility.totalCourts, 0);
 
   // Price per player per hour, only where the club's published rate parses
   // with confidence (src/lib/player-price.ts). Unknown stays unknown.
@@ -229,7 +230,7 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </div>
 
-      {/* Header: compact, so "Can I play tonight?" and the clubs start on the first screen */}
+      {/* Header: compact, so the clubs start on the first screen */}
       <section className="grain bg-court relative overflow-hidden py-5 md:py-9">
         <HeroVideo />
         <div className="container mx-auto px-4 relative">
@@ -274,11 +275,98 @@ export default async function CityPage({ params }: CityPageProps) {
         className="container mx-auto px-4 pt-5 md:pt-8"
       />
 
+      {/* The clubs come first: people searching a city want to see its clubs. "Who's open tonight" is a button in the header. */}
+      <section className="container mx-auto px-4 pt-6 pb-10 md:pt-10 md:pb-12">
+        <h2 className="text-2xl font-bold mb-6">
+          All Padel Clubs in {city.name}
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sortedCourts.map((court) => (
+            <Link
+              key={court.id}
+              href={`/courts/${court.slug}`}
+              className="group"
+            >
+              <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
+                <div className="aspect-video relative overflow-hidden">
+                  <ClubImage
+                    src={court.heroImage}
+                    alt={court.name}
+                    courts={court.facility.totalCourts}
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {court.status === "temporarily_closed" && (
+                    <Badge className="absolute top-2 left-2 bg-stone-900/85 text-white hover:bg-stone-900/85">
+                      Closed for now
+                    </Badge>
+                  )}
+                  {court.featured && (
+                    <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600">
+                      Featured
+                    </Badge>
+                  )}
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-1">
+                    {court.name}
+                  </CardTitle>
+                  <CardDescription className="space-y-2">
+                    <div className="flex items-center gap-1 text-sm">
+                      <MapPin className="w-4 h-4" />
+                      {court.address.streetAddress}
+                    </div>
+                    <div className="flex items-center gap-4 text-sm">
+                      {(court.rating.ratingValue > 0 || court.rating.reviewCount > 0) && (
+                        <div className="flex items-center gap-1">
+                          <Star className="w-4 h-4 fill-primary text-primary" />
+                          <span className="font-medium">{court.rating.ratingValue}</span>
+                          {court.rating.reviewCount > 0 && (
+                            <span className="text-muted-foreground">
+                              ({court.rating.reviewCount})
+                            </span>
+                          )}
+                        </div>
+                      )}
+                      {court.facility.totalCourts > 0 && (
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {court.facility.totalCourts} {court.facility.totalCourts === 1 ? 'court' : 'courts'}
+                        </div>
+                      )}
+                    </div>
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="mt-auto space-y-3">
+                  <div className="flex items-center justify-between">
+                    <PlayerPriceTag price={getClubPlayerPrice(court)} comingSoon={court.status === "coming_soon"} hasPriceText={/\$\d/.test(court.pricingText ?? "")} />
+                    <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
+                      View Details
+                    </Button>
+                  </div>
+                  {court.phone && (
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Phone className="w-4 h-4" />
+                      <span>{court.phone}</span>
+                    </div>
+                  )}
+                  {court.website && (
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Globe className="w-4 h-4" />
+                      <span className="truncate">Website</span>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Can I play tonight? */}
       {tonight.clubs.length + tonight.noHours.length > 0 && (
-        <section className="container mx-auto px-4 pt-5 md:pt-12" aria-labelledby="tonight-heading">
+        <section className="container mx-auto px-4 py-10 md:py-12 bg-muted/40" aria-labelledby="tonight-heading">
           <div className="max-w-4xl mx-auto">
-            <h2 id="tonight-heading" className="text-2xl font-bold mb-1">
+            <h2 id="tonight-heading" className="text-2xl font-bold mb-1 scroll-mt-24">
               Can I play tonight in {city.name}?
             </h2>
             <PlayTonight data={tonight} city={city.name} />
@@ -354,88 +442,6 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
         </section>
       )}
-
-      {/* Courts Grid */}
-      <section className="container mx-auto px-4 py-12 bg-muted/40">
-        <h2 className="text-2xl font-bold mb-6">
-          All Padel Clubs in {city.name}
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedCourts.map((court) => (
-            <Link
-              key={court.id}
-              href={`/courts/${court.slug}`}
-              className="group"
-            >
-              <Card className="hover:border-primary hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
-                <div className="aspect-video relative overflow-hidden">
-                  <ClubImage
-                    src={court.heroImage}
-                    alt={court.name}
-                    courts={court.facility.totalCourts}
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  {court.featured && (
-                    <Badge className="absolute top-2 right-2 bg-amber-500 hover:bg-amber-600">
-                      Featured
-                    </Badge>
-                  )}
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-1">
-                    {court.name}
-                  </CardTitle>
-                  <CardDescription className="space-y-2">
-                    <div className="flex items-center gap-1 text-sm">
-                      <MapPin className="w-4 h-4" />
-                      {court.address.streetAddress}
-                    </div>
-                    <div className="flex items-center gap-4 text-sm">
-                      {(court.rating.ratingValue > 0 || court.rating.reviewCount > 0) && (
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 fill-primary text-primary" />
-                          <span className="font-medium">{court.rating.ratingValue}</span>
-                          {court.rating.reviewCount > 0 && (
-                            <span className="text-muted-foreground">
-                              ({court.rating.reviewCount})
-                            </span>
-                          )}
-                        </div>
-                      )}
-                      {court.facility.totalCourts > 0 && (
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {court.facility.totalCourts} {court.facility.totalCourts === 1 ? 'court' : 'courts'}
-                        </div>
-                      )}
-                    </div>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="mt-auto space-y-3">
-                  <div className="flex items-center justify-between">
-                    <PlayerPriceTag price={getClubPlayerPrice(court)} comingSoon={court.status === "coming_soon"} hasPriceText={/\$\d/.test(court.pricingText ?? "")} />
-                    <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
-                      View Details
-                    </Button>
-                  </div>
-                  {court.phone && (
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Phone className="w-4 h-4" />
-                      <span>{court.phone}</span>
-                    </div>
-                  )}
-                  {court.website && (
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Globe className="w-4 h-4" />
-                      <span className="truncate">Website</span>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </section>
 
       {/* About padel in the city: the long intro, moved below the club list */}
       <section className="container mx-auto px-4 py-12" aria-labelledby="about-city">

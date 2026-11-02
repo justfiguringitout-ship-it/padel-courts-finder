@@ -58,6 +58,7 @@ const nextConfig: NextConfig = {
       { source: '/courts/mid-coast-recreation-center-inc', destination: '/', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
       { source: '/courts/h-f-racquet-fitness-club', destination: '/illinois', permanent: true }, // not padel (platform/paddle tennis or none), sport audit 2026-10-09
       { source: '/courts/tuxedo-paddle-courts', destination: '/courts/the-tuxedo-club', permanent: true }, // renamed 2026-10-09
+      { source: '/courts/brisas', destination: '/courts/brisas-east-hampton', permanent: true }, // duplicate removed 2026-11-01 (Brisas has one East Hampton club, 174 Daniels Hole Rd)
       { source: '/california/venice', destination: '/california', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
       { source: '/illinois/deerfield', destination: '/illinois', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
       { source: '/illinois/homewood', destination: '/illinois', permanent: false }, // no padel clubs left here after the 2026-10-09 sport audit
