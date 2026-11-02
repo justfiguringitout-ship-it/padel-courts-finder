@@ -40,6 +40,22 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    date: "2026-11-02",
+    type: "added",
+    title: "2 coming-soon clubs added in Texas and South Carolina",
+    note: "Horseshoe Bay Resort has broken ground on four padel courts next to its tennis center, with summer 2027 as the target. PATL is building a six-court indoor club in Mount Pleasant and has not published the street address yet, so it is listed at city level.",
+    clubs: ["Horseshoe Bay Resort", "PATL Charleston"],
+    commit: "6e5ba88",
+  },
+  {
+    date: "2026-11-02",
+    type: "updated",
+    title: "Rax New Jersey marked temporarily closed",
+    note: "Google Maps lists the club at 17 Van Vooren Dr as temporarily closed and its booking site no longer loads. We will update the listing if it reopens.",
+    clubs: ["Rax New Jersey"],
+    commit: "6e5ba88",
+  },
+  {
     date: "2026-11-01",
     type: "removed",
     title: "Duplicate Brisas listing removed, Brisas East Hampton closed for the off-season",
