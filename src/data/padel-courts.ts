@@ -6941,7 +6941,6 @@ export const padelCourts: PadelCourt[] = [
     state: "NJ",
     zipCode: "07436",
     phone: "201-644-0198",
-    website: "https://book.raxnj.com",
     reviewCount: 2,
     rating: 5,
     openingHours: {
@@ -6966,9 +6965,8 @@ export const padelCourts: PadelCourt[] = [
     instagram: "https://www.instagram.com/raxnj_padel/",
     membersOnly: false,
     pricingText: "Memberships: Individual $220/mo (6hrs free court time/mo, 20% off additional, free rentals), Family $360/mo; Clinics $45, free intros",
-    status: "open",
+    status: "temporarily_closed", // Google Maps lists RaxNJ at 17 Van Vooren Dr as temporarily closed and the "& PADEL" listing there as permanently closed; raxnj.com no longer resolves; checked 2026-11-02
     verified: false,
-  
     courtSurface: "synthetic turf",
     socialArea: true,
     foodAndDrink: true,
@@ -14404,6 +14402,47 @@ export const padelCourts: PadelCourt[] = [
     status: "coming_soon",
     verified: true, // neworleanspadelclub.com (425 First Street, 4 padel courts, "Coming Soon · Opening End of October"), checked 2026-10-31
     verificationDate: "2026-10-31",
+  },
+  {
+    id: 537,
+    name: "Horseshoe Bay Resort",
+    address: "200 Hi Circle N",
+    city: "Horseshoe Bay",
+    state: "TX",
+    zipCode: "78657",
+    phone: "(877) 611-0112",
+    website: "https://www.hsbresort.com/mouratoglou-tennis-center/",
+    reviewCount: 0,
+    description: "Horseshoe Bay Resort on Lake LBJ has broken ground on a racquet sports expansion that adds four padel courts and a new Racquet Sports Clubhouse. The courts will sit next to the resort's Mouratoglou Tennis Center, which has 12 tennis courts and 14 pickleball courts. The resort is targeting summer 2027 and has not said who will be able to book padel.",
+    numberOfCourts: 4,
+    amenities: ["tennis courts", "pickleball courts", "racquet sports clubhouse"],
+    coordinates: { lat: 30.5474, lng: -98.36019 }, // US Census geocoder 2026-11-02 (resort main address; the court site inside the resort is not published)
+    status: "coming_soon",
+    verified: true, // CultureMap Austin 2026-08-27 (groundbreaking, 4 padel courts, summer 2027); hsbresort.com (address, phone); checked 2026-11-02
+    verificationDate: "2026-11-02",
+  },
+  {
+    id: 538,
+    name: "PATL Charleston",
+    address: "",
+    city: "Mount Pleasant",
+    state: "SC",
+    zipCode: "",
+    website: "https://playpatl.com/charleston/",
+    instagram: "https://www.instagram.com/playpatl/",
+    reviewCount: 0,
+    description: "PATL, the Atlanta padel operator, is building an indoor club in Mount Pleasant with six padel courts and four squash courts. The club says no membership is needed and that booking opens in its app when the club opens. It has not published a street address yet.",
+    numberOfCourts: 6,
+    courtType: "indoor",
+    indoorCourts: 6,
+    amenities: ["squash courts"],
+    coordinates: { lat: 32.7941, lng: -79.8626 }, // approximate: Mount Pleasant city center until PATL publishes the address
+    chainName: "PATL",
+    locationName: "Charleston",
+    membersOnly: false,
+    status: "coming_soon",
+    verified: true, // playpatl.com/charleston ("Coming soon", 6 indoor courts, squash, "No membership needed", Mount Pleasant SC); Charleston City Paper 2026-08-28; checked 2026-11-02
+    verificationDate: "2026-11-02",
   },
 ];
 

@@ -7409,5 +7409,21 @@
    "source": "https://neworleanspadelclub.com/",
    "checked": "2026-11-01"
   }
+ },
+ "537": {
+  "openingDate": {
+   "value": "Summer 2027",
+   "note": "Groundbreaking reported Aug 2026; target, not a set date",
+   "source": "https://austin.culturemap.com/news/travel/horseshoe-bay-resort-padel-club/",
+   "checked": "2026-11-02"
+  }
+ },
+ "538": {
+  "openingDate": {
+   "value": "Late 2026",
+   "note": "Club page says coming soon; founder told the Charleston City Paper (Aug 28, 2026) he hopes to open late this year",
+   "source": "https://playpatl.com/charleston/",
+   "checked": "2026-11-02"
+  }
  }
 }
