@@ -39,6 +39,14 @@ export interface ChangelogEntry {
 }
 
 export const changelog: ChangelogEntry[] = [
+  {
+    date: "2026-11-01",
+    type: "removed",
+    title: "Duplicate Brisas listing removed, Brisas East Hampton closed for the off-season",
+    note: "Brisas runs one East Hampton club, at 174 Daniels Hole Rd, from May through September. A second listing at 66 Newtown Ln carried hours the club never published, so it was removed and now redirects to Brisas East Hampton, which is marked temporarily closed until next season.",
+    clubs: ["Brisas East Hampton"],
+    commit: "650bd55",
+  },
   // ---------------------------------------------------------------- November 2026
   {
     date: "2026-11-01",
