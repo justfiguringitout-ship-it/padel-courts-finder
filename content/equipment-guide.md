@@ -46,7 +46,7 @@ Our [accessories guide](/blog/padel-accessories) covers the small things that ma
 
 ### Bags
 
-You do not need a padel bag for your first few sessions. Once you are carrying a racket, shoes, balls, a towel and water twice a week, a bag with a padded racket compartment keeps the frame from rattling around loose. Our [padel bag guide](/blog/best-padel-bags) splits the choice in two. For one racket and a commute, we pick the [Babolat Court Lite backpack](https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20) at $51.80. For the club regular with two or more rackets, we pick the [HEAD Tour Racquet Bag M](https://www.amazon.com/dp/B0G8RX2824?tag=padel02-20) at $99, which holds up to six rackets and has a separate shoe compartment.
+You do not need a padel bag for your first few sessions. Once you are carrying a racket, shoes, balls, a towel and water twice a week, a bag with a padded racket compartment keeps the frame from rattling around loose. Our [padel bag guide](/blog/best-padel-bags) splits the choice in two. For one racket and a commute, we pick the [Babolat Court Lite backpack](https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20) at $64.95. For the club regular with two or more rackets, we pick the [HEAD Tour Racquet Bag M](https://www.amazon.com/dp/B0G8RX2824?tag=padel02-20) at $99, which holds up to six rackets and has a separate shoe compartment.
 
 ## Upgrading to intermediate and advanced gear
 
@@ -112,7 +112,7 @@ These totals use the prices in our gear guides, checked in October 2026. Court t
 | Court shoes | HEAD Sprint Pro 4.0 up to Wilson Rush Pro 5 | $109 to $170 |
 | Balls | One can | $11.94 to $14.95 |
 | Overgrips | Wilson Pro 12-pack | $26.99 |
-| Bag | Babolat Court Lite backpack or HEAD Tour Racquet Bag M | $51.80 to $99 |
+| Bag | Babolat Court Lite backpack or HEAD Tour Racquet Bag M | $64.95 to $99 |
 | **Total** | | **About $290 to $460** |
 
 ### Upgrading as a regular player

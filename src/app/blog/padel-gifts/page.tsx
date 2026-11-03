@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
-import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER, GEAR_DISCLOSURE, amazonLink, HEAD, headHref } from "@/lib/retailer-links";
+import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER, GEAR_DISCLOSURE, amazonLink, HEAD, headHref, PADEL_USA, padelUsaHref } from "@/lib/retailer-links";
 import { BuyButtons } from "@/components/gear/buy-buttons";
 
 export const metadata: Metadata = {
@@ -106,10 +106,10 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "51.80",
+          "price": PADEL_USA.B0F2YBVGMG.priceValue,
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20"
+          "url": padelUsaHref("B0F2YBVGMG")
         }
       }
     },
@@ -307,11 +307,11 @@ export default function PadelGiftsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">Babolat Court Lite Padel Backpack</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$51.80</div>
+                  <div className="text-padel-green font-bold whitespace-nowrap">{PADEL_USA.B0F2YBVGMG.price}</div>
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">Racket-ready backpack that doesn&apos;t look like gym kit — dedicated racket sleeve, shoe compartment, and clean styling she can carry to work and the court.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <TrackedLink href="https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20" type="affiliate" productName="Babolat Court Lite Padel Backpack" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors">Check price on Amazon</TrackedLink>
+                  <BuyButtons wrapperClassName="contents" href={amazonLink("B0F2YBVGMG")} productName="Babolat Court Lite Padel Backpack" className="inline-flex items-center bg-padel-green text-white font-semibold text-sm px-4 py-2 rounded-lg hover:bg-padel-green/90 transition-colors" arrow={false} />
                 </div>
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-5">

@@ -144,7 +144,7 @@ const TOP_PICKS = [
   { label: 'Court shoes', name: "HEAD Men's Sprint Pro 4.0", price: '$109.00', asin: 'B0G2TH1X7V', note: "An omni-style outsole for sand-dressed turf, also made in a women's version.", guide: '/blog/best-padel-shoes', guideLabel: 'Padel shoe guide' },
   { label: 'Balls', name: 'HEAD Padel Pro S+', price: '$14.95', asin: 'B0DHWHX9SG', note: `HEAD's current version of the ball most US clubs stock, listed at ${PADEL_USA.B0DHWHX9SG.price} a can at Padel USA.`, guide: '/blog/best-padel-balls', guideLabel: 'Padel ball guide' },
   { label: 'Overgrips', name: 'Wilson Pro Overgrip 12-Pack', price: '$26.99', asin: 'B002GUEXTQ', note: 'About $2 a grip, with the tacky feel most club players use.', guide: '/blog/padel-accessories', guideLabel: 'Accessories guide' },
-  { label: 'Bag', name: 'Babolat Court Lite Backpack', price: '$51.80', asin: 'B0F2YBVGMG', note: 'A backpack with a racket compartment and shoe pocket for players who carry one racket.', guide: '/blog/best-padel-bags', guideLabel: 'Padel bag guide' },
+  { label: 'Bag', name: 'Babolat Court Lite Backpack', price: PADEL_USA.B0F2YBVGMG.price, asin: 'B0F2YBVGMG', note: 'A backpack with a racket compartment and shoe pocket for players who carry one racket.', guide: '/blog/best-padel-bags', guideLabel: 'Padel bag guide' },
 ] as const;
 
 const BUY_BUTTON =

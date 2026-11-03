@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { TrackedLink } from "@/components/TrackedLink";
 import { BuyButtons } from "@/components/gear/buy-buttons";
-import { amazonLink, HEAD, headHref } from "@/lib/retailer-links";
+import { amazonLink, HEAD, headHref, PADEL_USA, padelUsaHref } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Padel Bags (2026): Backpack or Tour Bag?",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Best Padel Bags (2026): Backpack or Tour Bag?",
-    description: "How to pick the right padel bag — backpack vs tour bag, what to look for, and our two tested picks at $51.80 and $99.",
+    description: "How to pick the right padel bag — backpack vs tour bag, what to look for, and our two tested picks at $64.95 and $99.",
     url: "https://www.padelcourtsfinder.com/blog/best-padel-bags",
     siteName: "Padel Courts Finder",
     type: "article",
@@ -78,9 +78,9 @@ export default function BestPadelBagsPage() {
           "description": "Purpose-built padel backpack with a racket compartment, shoe pocket, and room for everything else.",
           "offers": {
             "@type": "Offer",
-            "price": "51.80",
+            "price": PADEL_USA.B0F2YBVGMG.priceValue,
             "priceCurrency": "USD",
-            "url": "https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20"
+            "url": padelUsaHref("B0F2YBVGMG")
           }
         }
       },
@@ -227,7 +227,7 @@ export default function BestPadelBagsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5 sm:p-6">
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <h3 className="font-bold text-foreground text-lg">Babolat Court Lite Padel Backpack &mdash; best backpack</h3>
-                  <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$51.80</span>
+                  <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">{PADEL_USA.B0F2YBVGMG.price}</span>
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mb-3">
                   Purpose-built for padel rather than adapted from tennis: a racket compartment that actually fits a
@@ -235,19 +235,14 @@ export default function BestPadelBagsPage() {
                   change of shirt. The sleek black design doesn&apos;t scream &quot;sports bag,&quot; so it works on the
                   commute and at the office as well as courtside. If you play a couple of times a week with one racket
                   and you&apos;re still stuffing everything into a gym bag, this is the single biggest quality-of-life
-                  upgrade under $60.
+                  upgrade under $70.
                 </p>
                 <p className="text-xs text-stone-500 mb-3">Best for: the commuter who plays 2+ times a week with one racket</p>
-                <TrackedLink
-                  href="https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20"
-                  type="affiliate"
+                <BuyButtons
+                  href={amazonLink("B0F2YBVGMG")}
                   productName="Babolat Court Lite Backpack"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                >
-                  Shop on Amazon &rarr;
-                </TrackedLink>
+                />
               </div>
 
               {/* HEAD Tour Bag M */}

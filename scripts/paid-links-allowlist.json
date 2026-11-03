@@ -5,6 +5,42 @@
       "host": "justmuv.cl",
       "page": "/blog/padel-injuries-prevention-tips",
       "reason": "Author bio link for the guest writer (Isabel Rencoret, Just Muv), part of the article swap. Not a product link."
+    },
+    {
+      "host": "padelfip.com",
+      "reason": "International Padel Federation: rulebook and press release cited as sources. Governing body, sells nothing."
+    },
+    {
+      "host": "padelusa.org",
+      "reason": "United States Padel Association (the federation, not the padelusa.com store): rulebook cited as a source."
+    },
+    {
+      "host": "usapickleball.org",
+      "reason": "USA Pickleball rulebook cited as a source. Governing body, not a store."
+    },
+    {
+      "host": "itftennis.com",
+      "reason": "International Tennis Federation Rules of Tennis cited as a source. Governing body, not a store."
+    },
+    {
+      "host": "lta.org.uk",
+      "reason": "Lawn Tennis Association padel court construction guidance cited as a source. Governing body, not a store."
+    },
+    {
+      "host": "ncbi.nlm.nih.gov",
+      "reason": "PubMed and PMC research papers cited as sources. Not a store."
+    },
+    {
+      "host": "sfia.org",
+      "reason": "Sports and Fitness Industry Association participation research cited as a source. Not a store."
+    },
+    {
+      "url": "https://www.padeladdict.com/en/the-sizes-of-a-padel-court-how-much-space-do-you-need-to-build-your-padel-club/",
+      "reason": "Court size article cited as a source on /blog/padel-court-dimensions. Not a product link."
+    },
+    {
+      "url": "https://www.pickleheads.com/blog/pickleball-statistics",
+      "reason": "Pickleball statistics article cited as a source on /blog/padel-vs-pickleball. Not a product link."
     }
   ]
 }

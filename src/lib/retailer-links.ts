@@ -139,8 +139,9 @@ export interface PadelUsaProduct {
  * Checked 2026-10-15 and not linked: Babolat Contact, Wilson Optix V1, NOX
  * AT10 Genius 18K 2025, NOX AT10 Attack 12K 2025, Bullpadel Neuron 2025
  * (all sold out at Padel USA); HEAD Extreme Evo (Padel USA has the 2025
- * edition, the page reviews the 2023 one Amazon sells); Babolat Court Lite
- * backpack ($64.95 at Padel USA vs $51.80 on Amazon, more than 10% higher).
+ * edition, the page reviews the 2023 one Amazon sells). Rechecked 2026-11-03:
+ * the Optix V1 is still sold out, and Padel USA's NOX AT10 and Bullpadel
+ * Neuron rackets are newer or different editions from the ones reviewed.
  */
 export const PADEL_USA: Record<string, PadelUsaProduct> = {
   // Wilson Bela Pro V3: same racket, same $399, Amazon down to 1 left
@@ -152,11 +153,14 @@ export const PADEL_USA: Record<string, PadelUsaProduct> = {
   // Adidas Metalbone 3.4: same racket, $326.75 at Padel USA, cheaper on Amazon
   B0DMCZWNPV: { url: 'https://padelusa.com/products/adidas-metalbone-3-4-padel-racket', storeName: 'Adidas Metalbone 3.4', price: '$326.75', priceValue: '326.75', checked: '2026-10-15' },
   // Babolat Technical Viper: Padel USA sells the newer 3.0, not the reviewed racket
-  B0DPH3GZGN: { url: 'https://padelusa.com/products/babolat-technical-viper-3-0-padel-racket', storeName: 'Babolat Technical Viper 3.0', price: '$273.00', priceValue: '273.00', checked: '2026-10-15', otherModel: true, label: 'Newer 3.0 at Padel USA', alsoLabel: 'newer 3.0 at Padel USA' },
+  B0DPH3GZGN: { url: 'https://padelusa.com/products/babolat-technical-viper-3-0-padel-racket', storeName: 'Babolat Technical Viper 3.0', price: '$234.00', priceValue: '234.00', checked: '2026-11-03', otherModel: true, label: 'Newer 3.0 at Padel USA', alsoLabel: 'newer 3.0 at Padel USA' },
   // Wilson Hurakn Lite men's (white colorways), same $110; Amazon.com ships it
   B0FC8SDHK5: { url: 'https://padelusa.com/products/wilson-hurakn-lite-mens-padel-shoes', storeName: "Wilson Hurakn Lite Men's Padel Shoes", price: '$110.00', priceValue: '110.00', checked: '2026-10-15' },
   // Wilson Pro Overgrip 12-pack (padel-length version), $27.00 vs $26.99
   B002GUEXTQ: { url: 'https://padelusa.com/products/wilson-pro-padel-overgrip-12-pack', storeName: 'Wilson Pro Padel Overgrip - 12 pack', price: '$27.00', priceValue: '27.00', checked: '2026-10-15' },
+  // Babolat Court Lite backpack (black, also blue and multicolor), $64.95 in
+  // stock at Padel USA vs $74.00 on Amazon from a third-party seller
+  B0F2YBVGMG: { url: 'https://padelusa.com/products/babolat-court-backpack-lite-black-2025-padel-bag', storeName: 'Babolat COURT Backpack LITE', price: '$64.95', priceValue: '64.95', checked: '2026-11-03' },
   // HEAD Padel Pro S+ balls: $7.49 a can at Padel USA vs $14.95 on Amazon
   B0DHWHX9SG: { url: 'https://padelusa.com/products/head-padel-pro-s-balls', storeName: 'Head Padel Pro S+ Balls', price: '$7.49', priceValue: '7.49', checked: '2026-10-15' },
 };
@@ -247,10 +251,10 @@ export const HEAD: Record<string, HeadProduct> = {
   // listing), $109 at both; HEAD in stock in sizes 7 to 12.5 except 9, Amazon
   // down to 1 left from a third-party seller
   B0G2TH1X7V: { url: 'https://www.head.com/en_US/product/sprint-pro-4-0-men-273126', storeName: 'HEAD Sprint Pro 4.0 Men Court Shoes', price: '$109.00', priceValue: '109.00', checked: '2026-10-23', primary: true, clickref: 'sprint-pro-4-men' },
-  // HEAD Tour Racquet Bag M: $99 at both. HEAD has blue (the Amazon colorway),
-  // sage and pink in stock; its page opens on black, which is out of stock.
-  // Amazon down to 1 left from a third-party seller
-  B0G8RX2824: { url: 'https://www.head.com/en_US/product/tour-racquet-bag-m-bk-260226-cp', storeName: 'HEAD Tour Racquet Tennis Bag M', price: '$99.00', priceValue: '99.00', checked: '2026-10-23', primary: true, clickref: 'tour-racquet-bag-m' },
+  // HEAD Tour Racquet Bag M: $99 at both. On 2026-11-03 HEAD had only blue
+  // (the Amazon colorway) in stock; its page opens on black, which is out of
+  // stock, as are white, green and purple. Amazon has it from a third-party seller
+  B0G8RX2824: { url: 'https://www.head.com/en_US/product/tour-racquet-bag-m-bk-260226-cp', storeName: 'HEAD Tour Racquet Tennis Bag M', price: '$99.00', priceValue: '99.00', checked: '2026-11-03', primary: true, clickref: 'tour-racquet-bag-m' },
 };
 
 /** The HEAD entry for an Amazon link or ASIN, if we link one */

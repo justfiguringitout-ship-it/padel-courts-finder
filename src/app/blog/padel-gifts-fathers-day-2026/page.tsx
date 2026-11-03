@@ -133,9 +133,9 @@ export default function FathersDay2026GiftGuidePage() {
           "description": "Purpose-built padel backpack with a racket compartment, shoe pocket, and room for everything else.",
           "offers": {
             "@type": "Offer",
-            "price": "51.80",
+            "price": PADEL_USA.B0F2YBVGMG.priceValue,
             "priceCurrency": "USD",
-            "url": "https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20"
+            "url": padelUsaHref("B0F2YBVGMG")
           }
         }
       },
@@ -356,7 +356,7 @@ export default function FathersDay2026GiftGuidePage() {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
                   <span className="text-sm font-semibold text-stone-700">Best Under $60:</span>
-                  <span className="text-sm"><a href="#babolat-backpack" className="text-padel-green hover:underline font-medium">Babolat Court Lite Backpack</a> <span className="text-stone-500">&mdash; $51.80</span></span>
+                  <span className="text-sm"><a href="#babolat-backpack" className="text-padel-green hover:underline font-medium">Babolat Court Lite Backpack</a> <span className="text-stone-500">&mdash; {PADEL_USA.B0F2YBVGMG.price}</span></span>
                 </div>
               </div>
               <a href="#under-25" className="text-sm text-stone-500 hover:text-padel-green mt-3 inline-block">Browse all 12 picks &darr;</a>
@@ -415,22 +415,17 @@ export default function FathersDay2026GiftGuidePage() {
                 <div id="babolat-backpack" className="bg-white border border-stone-200 rounded-xl p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="font-bold text-foreground text-lg">Babolat Court Lite Padel Backpack</h3>
-                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$51.80</span>
+                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">{PADEL_USA.B0F2YBVGMG.price}</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
                     Purpose-built for padel with a racket compartment, shoe pocket, and room for everything else. Sleek black design that works on and off the court. If he&apos;s still using a gym bag, this is a major upgrade.
                   </p>
                   <p className="text-xs text-stone-500 mb-3">Great for: the dad who plays 2+ times a week</p>
-                  <TrackedLink
-                    href="https://www.amazon.com/dp/B0F2YBVGMG?tag=padel02-20"
-                    type="affiliate"
+                  <BuyButtons
+                    href={amazonLink("B0F2YBVGMG")}
                     productName="Babolat Court Lite Backpack"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-padel-green text-white font-medium text-sm rounded-lg hover:bg-padel-green-dark shadow-lg shadow-padel-green/25 transition-all duration-200"
-                  >
-                    Shop on Amazon &rarr;
-                  </TrackedLink>
+                  />
                 </div>
 
                 {/* 4. Babolat Contact */}
