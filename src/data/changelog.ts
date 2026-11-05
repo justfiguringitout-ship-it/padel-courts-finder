@@ -40,6 +40,14 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    date: "2026-11-05",
+    type: "added",
+    title: "Moorestown Padel Club added, at the owner's request",
+    note: "Three indoor courts at 605 Glen Ave in Moorestown, New Jersey, with open plays, clinics, coaching and kids camps. Lesson prices are from the club's website; it does not publish court rental prices or hours yet.",
+    clubs: ["Moorestown Padel Club"],
+    commit: "28311e3",
+  },
+  {
     date: "2026-11-02",
     type: "added",
     title: "2 coming-soon clubs added in Texas and South Carolina",
