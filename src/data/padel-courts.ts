@@ -14444,6 +14444,30 @@ export const padelCourts: PadelCourt[] = [
     verified: true, // playpatl.com/charleston ("Coming soon", 6 indoor courts, squash, "No membership needed", Mount Pleasant SC); Charleston City Paper 2026-08-28; checked 2026-11-02
     verificationDate: "2026-11-02",
   },
+  {
+    id: 539,
+    name: "Moorestown Padel Club",
+    address: "605 Glen Ave",
+    city: "Moorestown",
+    state: "NJ",
+    zipCode: "08057",
+    phone: "(856) 259-9936",
+    email: "hello@moorestownpadel.com",
+    website: "https://moorestownpadel.com/",
+    bookingUrl: "https://book.moorestownpadel.com/book/MoorestownPadelClub",
+    instagram: "https://instagram.com/moorestownpadel",
+    reviewCount: 0,
+    description: "Moorestown Padel Club opened in 2026 with three indoor padel courts on Glen Avenue in Moorestown, Burlington County. It runs open plays, beginner clinics, private and group coaching, corporate events and kids camps, and it offers free intro sessions on weekends. Walk-ins are welcome and courts are booked through the club's own booking app.",
+    numberOfCourts: 3,
+    courtType: "indoor",
+    indoorCourts: 3,
+    coordinates: { lat: 39.965466, lng: -74.967235 }, // US Census geocoder 2026-11-05
+    membersOnly: false,
+    pricingText: "Lessons: beginner clinics $25 per session, private coaching $70/hr, group sessions with a pro $20 per player. Court rental prices are not published. Source: moorestownpadel.com/lessons, Nov 2026",
+    status: "open",
+    verified: true, // owner listing request from Baron Snizek 2026-11-04 (3 indoor courts, open, est. 2026); moorestownpadel.com (address, phone, "Come play indoors in Moorestown", lessons and prices); checked 2026-11-05
+    verificationDate: "2026-11-05",
+  },
 ];
 
 

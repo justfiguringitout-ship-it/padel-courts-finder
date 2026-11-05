@@ -7425,5 +7425,30 @@
    "source": "https://playpatl.com/charleston/",
    "checked": "2026-11-02"
   }
+ },
+ "539": {
+  "openPlay": {
+   "value": true,
+   "note": "Mixed-level open plays; free intro sessions every weekend",
+   "source": "https://moorestownpadel.com/events",
+   "checked": "2026-11-05"
+  },
+  "lessons": {
+   "value": true,
+   "note": "Beginner clinics, private coaching and group sessions with a pro",
+   "source": "https://moorestownpadel.com/lessons",
+   "checked": "2026-11-05"
+  },
+  "kidsProgram": {
+   "value": true,
+   "note": "Summer and school-break camps; dates coming soon",
+   "source": "https://moorestownpadel.com/kids-camps",
+   "checked": "2026-11-05"
+  },
+  "bookingUrl": {
+   "value": "https://book.moorestownpadel.com/book/MoorestownPadelClub",
+   "source": "https://book.moorestownpadel.com/",
+   "checked": "2026-11-05"
+  }
  }
 }
