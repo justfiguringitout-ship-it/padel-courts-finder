@@ -10,7 +10,7 @@
   "/badge": "2026-07-05",
   "/how-to-play": "2026-11-01",
   "/rules": "2026-10-31",
-  "/equipment": "2026-10-23",
+  "/equipment": "2026-11-03",
   "/faq": "2026-10-08",
   "/get-started": "2026-10-08",
   "/get-started/glossary": "2026-10-31",
@@ -24,7 +24,7 @@
   "/blog/best-diamond-padel-rackets": "2026-10-15",
   "/blog/best-lightweight-padel-rackets": "2026-10-15",
   "/blog/best-nox-padel-rackets": "2026-10-23",
-  "/blog/best-padel-bags": "2026-11-02",
+  "/blog/best-padel-bags": "2026-11-03",
   "/blog/best-padel-balls": "2026-10-15",
   "/blog/best-padel-clubs-atlanta": "2026-10-13",
   "/blog/best-padel-clubs-austin": "2026-10-13",
@@ -55,7 +55,7 @@
   "/blog/best-padel-rackets-control": "2026-10-26",
   "/blog/best-padel-rackets-intermediate": "2026-10-23",
   "/blog/best-padel-rackets-power": "2026-10-26",
-  "/blog/best-padel-rackets-spin": "2026-10-26",
+  "/blog/best-padel-rackets-spin": "2026-11-03",
   "/blog/best-padel-rackets-tennis-elbow": "2026-10-23",
   "/blog/best-padel-rackets-tennis-players": "2026-10-15",
   "/blog/best-padel-rackets-women": "2026-10-14",
@@ -76,9 +76,9 @@
   "/blog/padel-bandeja-explained": "2026-10-31",
   "/blog/padel-court-cost": "2026-11-02",
   "/blog/padel-court-dimensions": "2026-10-31",
-  "/blog/padel-gifts": "2026-10-23",
-  "/blog/padel-gifts-fathers-day-2026": "2026-10-23",
-  "/blog/padel-gifts-mothers-day-2026": "2026-10-23",
+  "/blog/padel-gifts": "2026-11-03",
+  "/blog/padel-gifts-fathers-day-2026": "2026-11-03",
+  "/blog/padel-gifts-mothers-day-2026": "2026-11-03",
   "/blog/padel-injuries-prevention-tips": "2026-10-01",
   "/blog/padel-patterns-beginners": "2026-07-04",
   "/blog/padel-positioning-guide": "2026-11-02",
@@ -458,11 +458,12 @@
   "/courts/new-orleans-padel-club": "2026-11-01",
   "/courts/horseshoe-bay-resort": "2026-11-02",
   "/courts/patl-charleston": "2026-11-02",
+  "/courts/moorestown-padel-club": "2026-11-05",
   "__templates__": {
     "court": "2026-08-04",
     "state": "2026-10-31",
     "city": "2026-10-31",
     "padelNear": "2026-10-26"
   },
-  "__fallback__": "2026-11-02"
+  "__fallback__": "2026-11-05"
 }
