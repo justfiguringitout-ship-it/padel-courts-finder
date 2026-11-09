@@ -7338,10 +7338,10 @@
  },
  "535": {
   "openingDate": {
-   "value": "November 2026",
-   "note": "Pre-sale open",
-   "source": "https://padeln9ne.com/clubs/",
-   "checked": "2026-11-01"
+   "value": "Late November 2026",
+   "note": "Club page says slated to open late November; founding memberships sold out",
+   "source": "https://padeln9ne.com/san-marcos/",
+   "checked": "2026-11-09"
   },
   "openPlay": {
    "value": true,
