@@ -331,6 +331,11 @@ export default function MothersDay2026GiftGuidePage() {
               <p className="text-stone-600 leading-[1.75]">
                 Every pick links directly to Amazon with Prime shipping, so you&apos;re covered even if you&apos;re shopping last-minute. Happy Mother&apos;s Day.
               </p>
+              <p className="text-stone-600 leading-[1.75]">
+                Shopping for the holidays or a birthday instead? Our year-round{" "}
+                <Link href="/blog/padel-gifts" className="text-padel-green hover:underline">best padel gifts guide</Link>{" "}
+                covers gifts for him, for her and under $50.
+              </p>
             </div>
 
             {/* Quick Picks Box */}

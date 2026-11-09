@@ -308,10 +308,10 @@ const blogPosts: BlogPost[] = [
   // Equipment Buying Guides
   {
     slug: 'padel-gifts',
-    title: 'Padel Gifts (2026): What Players Actually Want, at Every Budget',
+    title: 'Best Padel Gifts 2026: Holiday Ideas for Him, Her & Under $50',
     category: 'equipment',
-    excerpt: 'For her, for him, and under $50 — every pick verified and recommended on this site, from $15 stocking stuffers to flagship rackets.',
-    date: '2026-07-31',
+    excerpt: 'Holiday gift guide for padel players — gifts for him, for her and under $50, every pick verified and recommended on this site, from $15 stocking stuffers to flagship rackets.',
+    date: '2026-11-09',
     readTime: '6 min read',
     imageAlt: 'Best padel gifts at every budget',
     courtSlug: ''
