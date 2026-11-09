@@ -40,6 +40,22 @@ export interface ChangelogEntry {
 
 export const changelog: ChangelogEntry[] = [
   {
+    date: "2026-11-09",
+    type: "added",
+    title: "6 coming-soon clubs added in Georgia, Virginia, Ohio, Illinois and Montana",
+    note: "Proximo Padel is opening a second Chicago club on Division Street in December 2026 and has a third planned in Northbrook. Cincinnati Sports Club lists two covered outdoor courts for members from early November. Epic Padel bought the Midlothian Tennis Club and plans four padel courts by early 2027. PCGA in West Midtown Atlanta lists four padel courts. Bozeman Classic Pickleball Club plans one indoor court for June 2027 at a site it has not announced, so it is listed at city level and is Montana's first listing.",
+    clubs: ["Proximo Padel Goose Island", "Proximo Padel Northbrook", "Cincinnati Sports Club", "Epic Athletic Club Midlothian", "Pickleball Club of Georgia", "Bozeman Classic Pickleball Club"],
+    commit: "6a7523f",
+  },
+  {
+    date: "2026-11-09",
+    type: "updated",
+    title: "Ace Padel Coconut Grove marked members only, Padel N9NE San Marcos opening date",
+    note: "Ace Padel's Playtomic page says the Coconut Grove club is for members only. Padel N9NE now says its San Marcos club is slated to open in late November 2026.",
+    clubs: ["Ace Padel Coconut Grove", "Padel N9NE San Marcos"],
+    commit: "6a7523f",
+  },
+  {
     date: "2026-11-05",
     type: "added",
     title: "Moorestown Padel Club added, at the owner's request",
