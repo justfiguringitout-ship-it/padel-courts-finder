@@ -5,18 +5,18 @@ import { NOX_ML10_PRO_CUP_ROUGH as ML10, NOX_ML10_OFFER, GEAR_DISCLOSURE, amazon
 import { BuyButtons } from "@/components/gear/buy-buttons";
 
 export const metadata: Metadata = {
-  title: "Padel Gifts (2026): What Players Actually Want, at Every Budget",
-  description: "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $15 stocking stuffers to flagship rackets.",
+  title: "Best Padel Gifts 2026: Holiday Ideas for Him, Her & Under $50",
+  description: "Holiday gift guide for padel players: the best padel gifts for men, for women and under $50, from $15 stocking stuffers to flagship rackets. Every pick is gear we've tested and recommend on this site.",
   alternates: { canonical: "https://www.padelcourtsfinder.com/blog/padel-gifts" },
-  openGraph: { title: "Padel Gifts (2026): What Players Actually Want, at Every Budget", description: "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $15 stocking stuffers to flagship rackets.", url: "https://www.padelcourtsfinder.com/blog/padel-gifts", siteName: "Padel Courts Finder", type: "article" },
-  twitter: { card: "summary_large_image", title: "Padel Gifts (2026): What Players Actually Want, at Every Budget", description: "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $15 stocking stuffers to flagship rackets." },
+  openGraph: { title: "Best Padel Gifts 2026: Holiday Ideas for Him, Her & Under $50", description: "Holiday gift guide for padel players: the best padel gifts for men, for women and under $50, from $15 stocking stuffers to flagship rackets. Every pick is gear we've tested and recommend on this site.", url: "https://www.padelcourtsfinder.com/blog/padel-gifts", siteName: "Padel Courts Finder", type: "article" },
+  twitter: { card: "summary_large_image", title: "Best Padel Gifts 2026: Holiday Ideas for Him, Her & Under $50", description: "Holiday gift guide for padel players: the best padel gifts for men, for women and under $50, from $15 stocking stuffers to flagship rackets. Every pick is gear we've tested and recommend on this site." },
 };
 
 const articleData = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Padel Gifts (2026): What Players Actually Want, at Every Budget",
-  "description": "The best padel gifts in 2026 — for her, for him, and under $50. Every pick is gear we've verified and recommend on this site, from $15 stocking stuffers to flagship rackets.",
+  "headline": "Best Padel Gifts 2026: Holiday Ideas for Him, Her & Under $50",
+  "description": "Holiday gift guide for padel players: the best padel gifts for men, for women and under $50, from $15 stocking stuffers to flagship rackets. Every pick is gear we've tested and recommend on this site.",
   "datePublished": "2026-07-31T00:00:00Z",
   "dateModified": "2026-07-31T00:00:00Z",
   "author": {
@@ -264,9 +264,9 @@ export default function PadelGiftsPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 relative">
           <div className="mb-5"><Link href="/blog" className="text-stone-400 hover:text-turf text-sm">&larr; Back to Blog</Link></div>
           <span className="inline-block bg-padel-green text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-4">Equipment</span>
-          <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Padel Gifts: What Players Actually Want</h1>
-          <p className="text-lg text-stone-400 mt-3">For her, for him, and under $50 — every pick verified and recommended on this site</p>
-          <div className="text-sm text-stone-500 mt-4"><span>Updated July 31, 2026</span><span className="mx-2">&bull;</span><span>6 min read</span></div>
+          <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Best Padel Gifts 2026: Holiday Ideas for Every Player</h1>
+          <p className="text-lg text-stone-400 mt-3">Padel gifts for him, for her, and under $50 — updated for the 2026 holidays, every pick verified and recommended on this site</p>
+          <div className="text-sm text-stone-500 mt-4"><span>Updated November 9, 2026</span><span className="mx-2">&bull;</span><span>6 min read</span></div>
           <div className="text-sm text-stone-500 mt-1">By the Padel Courts Finder editorial team</div>
         </div>
       </header>
@@ -292,7 +292,7 @@ export default function PadelGiftsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-5">Padel Gifts for Her</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-5">Padel Gifts for Her: Best Picks for Women Who Play</h2>
             <div className="space-y-5">
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
@@ -328,7 +328,7 @@ export default function PadelGiftsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-5">Padel Gifts for Him</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-5">Padel Gifts for Him: Best Picks for Men Who Play</h2>
             <div className="space-y-5">
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">

@@ -323,9 +323,9 @@ export default function BestPadelBagsPage() {
                 <div className="font-semibold text-white">Best Padel Accessories Under $30</div>
                 <p className="text-stone-400 text-sm mt-1">Grips, balls, and the small stuff worth packing</p>
               </Link>
-              <Link href="/blog/padel-gifts-fathers-day-2026" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
-                <div className="font-semibold text-white">Padel Gifts for Dad</div>
-                <p className="text-stone-400 text-sm mt-1">12 curated picks from $14 to $399</p>
+              <Link href="/blog/padel-gifts" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
+                <div className="font-semibold text-white">Best Padel Gifts 2026</div>
+                <p className="text-stone-400 text-sm mt-1">Holiday ideas for him, for her and under $50</p>
               </Link>
               <Link href="/search" className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 transition-colors">
                 <div className="font-semibold text-white">Find a Court Near You</div>

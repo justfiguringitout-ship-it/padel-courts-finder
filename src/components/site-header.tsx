@@ -129,6 +129,17 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
+                            href="/blog/padel-gifts"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Padel Gifts (Holiday Guide)</div>
+                            <p className="line-clamp-1 text-sm leading-snug text-muted-foreground mt-1">Gifts for him, for her and under $50</p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
                             href="/blog/padel-gifts-mothers-day-2026"
                             className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
@@ -243,6 +254,9 @@ export function SiteHeader({ states }: SiteHeaderProps) {
                       </Link>
                       <Link href="/blog/best-padel-rackets-2026" className="text-sm hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                         Best Pro Rackets
+                      </Link>
+                      <Link href="/blog/padel-gifts" className="text-sm hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
+                        Padel Gifts (Holiday Guide)
                       </Link>
                       <Link href="/blog/padel-gifts-mothers-day-2026" className="text-sm hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>
                         Mother&apos;s Day Guide
