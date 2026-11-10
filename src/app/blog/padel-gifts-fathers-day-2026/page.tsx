@@ -165,9 +165,9 @@ export default function FathersDay2026GiftGuidePage() {
           "description": "Non-marking padel-approved court shoes built for lateral stability.",
           "offers": {
             "@type": "Offer",
-            "price": HEAD.B0G2TH1X7V.priceValue,
+            "price": "89.00",
             "priceCurrency": "USD",
-            "url": headHref("B0G2TH1X7V")
+            "url": amazonLink("B0G2TH1X7V")
           }
         }
       },
@@ -459,7 +459,7 @@ export default function FathersDay2026GiftGuidePage() {
                 <div className="bg-white border border-stone-200 rounded-xl p-5 sm:p-6">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <h3 className="font-bold text-foreground text-lg">HEAD Men&apos;s Sprint Pro 4.0 Shoes</h3>
-                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$109.00</span>
+                    <span className="bg-stone-900 text-white px-2.5 py-1 rounded-lg text-sm font-bold whitespace-nowrap">$89.00</span>
                   </div>
                   <p className="text-stone-600 text-sm leading-relaxed mb-3">
                     Non-marking padel-approved court shoes built for lateral stability. Lightweight, breathable mesh upper with herringbone tread for grip on all court surfaces. Reinforced toe for durability.

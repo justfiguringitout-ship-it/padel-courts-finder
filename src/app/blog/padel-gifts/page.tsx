@@ -47,7 +47,7 @@ const faqData = {
       "name": "What is a good padel gift for her?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Court shoes are the sleeper pick — most players never upgrade their own footwear, and the HEAD Women's Sprint Pro 4.0 ($109) is the shoe we recommend in our buying guide. The Babolat Court Lite backpack ($52) is the safe stylish option, and a fresh-strung round racket like the Wilson Optix V1 ($109) fits a newer player."
+        "text": "Court shoes are the sleeper pick — most players never upgrade their own footwear, and the HEAD Women's Sprint Pro 4.0 ($89) is the shoe we recommend in our buying guide. The Babolat Court Lite backpack ($52) is the safe stylish option, and a fresh-strung round racket like the Wilson Optix V1 ($109) fits a newer player."
       }
     },
     {
@@ -90,7 +90,7 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": "109.00",
+          "price": "89.00",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": "https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20"
@@ -138,10 +138,10 @@ const itemListData = {
         "image": "https://www.padelcourtsfinder.com/og/default.png",
         "offers": {
           "@type": "Offer",
-          "price": HEAD.B0G2TH1X7V.priceValue,
+          "price": "89.00",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": headHref("B0G2TH1X7V")
+          "url": amazonLink("B0G2TH1X7V")
         }
       }
     },
@@ -297,7 +297,7 @@ export default function PadelGiftsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">HEAD Women's Sprint Pro 4.0 Shoes</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$109.00</div>
+                  <div className="text-padel-green font-bold whitespace-nowrap">$89.00</div>
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">Proper padel footwear is the upgrade most players never buy themselves — herringbone grip, lateral support, reinforced toe. If she plays weekly, this beats any accessory.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
@@ -333,7 +333,7 @@ export default function PadelGiftsPage() {
               <div className="bg-white border border-stone-200 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-bold text-foreground">HEAD Men's Sprint Pro 4.0 Shoes</h3>
-                  <div className="text-padel-green font-bold whitespace-nowrap">$109.00</div>
+                  <div className="text-padel-green font-bold whitespace-nowrap">$89.00</div>
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mt-2">The court shoe we recommend in our shoes guide — grip for sand-dressed turf, wrapped toe for drag, lateral cage for hard cuts. The gift that prevents the twisted ankle.</p>
                 <div className="flex flex-wrap gap-3 mt-4">
@@ -432,7 +432,7 @@ export default function PadelGiftsPage() {
             <div className="space-y-4">
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What is a good padel gift for her?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">Court shoes are the sleeper pick — most players never upgrade their own footwear, and the HEAD Women&apos;s Sprint Pro 4.0 ($109) is the shoe we recommend in our buying guide. The Babolat Court Lite backpack ($52) is the safe stylish option, and a fresh-strung round racket like the Wilson Optix V1 ($109) fits a newer player.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">Court shoes are the sleeper pick — most players never upgrade their own footwear, and the HEAD Women&apos;s Sprint Pro 4.0 ($89) is the shoe we recommend in our buying guide. The Babolat Court Lite backpack ($52) is the safe stylish option, and a fresh-strung round racket like the Wilson Optix V1 ($109) fits a newer player.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What are the best padel gifts under $50?</h3>

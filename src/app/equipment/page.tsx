@@ -132,7 +132,7 @@ const markdownComponents: Components = {
 
 /**
  * One pick per category, each the pick its gear guide recommends, at the
- * price that guide shows (checked October 2026). BuyButtons adds the Padel
+ * price that guide shows (checked October to November 2026). BuyButtons adds the Padel
  * USA or HEAD button when the product is in PADEL_USA or HEAD
  * (src/lib/retailer-links.ts).
  */
@@ -141,7 +141,7 @@ const TOP_PICKS = [
   { label: 'Budget racket', name: 'Wilson Optix V1', price: '$109.00', asin: 'B0DX2M3JYY', note: 'A soft round racket and the most comfortable, forgiving pick for about $110.', guide: '/blog/best-budget-padel-rackets', guideLabel: 'Budget racket guide' },
   { label: 'Intermediate racket', name: 'Wilson Blade Elite V2', price: '$208.58', asin: 'B09TSWCFHD', note: 'A teardrop for all-court players who want balance.', guide: '/blog/best-padel-rackets-intermediate', guideLabel: 'Intermediate racket guide' },
   { label: 'Advanced racket', name: 'NOX AT10 Genius 18K', price: '$259.99', asin: 'B0DHT1DVW1', note: 'A teardrop with adjustable balance and our best overall advanced racket.', guide: '/blog/best-padel-rackets-advanced', guideLabel: 'Advanced racket guide' },
-  { label: 'Court shoes', name: "HEAD Men's Sprint Pro 4.0", price: '$109.00', asin: 'B0G2TH1X7V', note: "An omni-style outsole for sand-dressed turf, also made in a women's version.", guide: '/blog/best-padel-shoes', guideLabel: 'Padel shoe guide' },
+  { label: 'Court shoes', name: "HEAD Men's Sprint Pro 4.0", price: '$89.00', asin: 'B0G2TH1X7V', note: "An omni-style outsole for sand-dressed turf, also made in a women's version.", guide: '/blog/best-padel-shoes', guideLabel: 'Padel shoe guide' },
   { label: 'Balls', name: 'HEAD Padel Pro S+', price: '$14.95', asin: 'B0DHWHX9SG', note: `HEAD's current version of the ball most US clubs stock, listed at ${PADEL_USA.B0DHWHX9SG.price} a can at Padel USA.`, guide: '/blog/best-padel-balls', guideLabel: 'Padel ball guide' },
   { label: 'Overgrips', name: 'Wilson Pro Overgrip 12-Pack', price: '$26.99', asin: 'B002GUEXTQ', note: 'About $2 a grip, with the tacky feel most club players use.', guide: '/blog/padel-accessories', guideLabel: 'Accessories guide' },
   { label: 'Bag', name: 'Babolat Court Lite Backpack', price: PADEL_USA.B0F2YBVGMG.price, asin: 'B0F2YBVGMG', note: 'A backpack with a racket compartment and shoe pocket for players who carry one racket.', guide: '/blog/best-padel-bags', guideLabel: 'Padel bag guide' },
@@ -209,7 +209,7 @@ export default function EquipmentPage() {
           </div>
           <h2 className="text-2xl font-bold tracking-tight mb-2">Top picks from our gear guides</h2>
           <p className="text-sm text-stone-600 mb-5">
-            One pick per category, at the price each guide shows (checked October 2026). Prices change, so check the store.
+            One pick per category, at the price each guide shows (checked October to November 2026). Prices change, so check the store.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {TOP_PICKS.map((p) => (

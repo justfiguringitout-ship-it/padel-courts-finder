@@ -34,7 +34,7 @@ Wear court shoes from your first session. Running shoes are built for straight-l
 
 Clay-court tennis shoes are the closest substitute if you already own a pair. Hard-court tennis shoes also work, although their flatter outsoles grip the sand less.
 
-Our [padel shoe guide](/blog/best-padel-shoes) recommends the HEAD Sprint Pro 4.0 at $109 in a [men's](https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20) and a [women's](https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20) version. For more specific needs it covers the [NOX AT10 PRO](https://www.amazon.com/dp/B0GRWHSVGW?tag=padel02-20) at about $135 as the best padel-specific all-rounder, the [Wilson Rush Pro 5](https://www.amazon.com/dp/B0GVKRS59Q?tag=padel02-20) at $170 for stability, the [Wilson Hurakn Lite](https://www.amazon.com/dp/B0FC8SDHK5?tag=padel02-20) at about $110 for speed and the [ASICS Gel-Challenger 15](https://www.amazon.com/dp/B0GZRD83KR?tag=padel02-20) at $109.95 for durability.
+Our [padel shoe guide](/blog/best-padel-shoes) recommends the HEAD Sprint Pro 4.0 at $89 in a [men's](https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20) and a [women's](https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20) version. For more specific needs it covers the [NOX AT10 PRO](https://www.amazon.com/dp/B0GRWHSVGW?tag=padel02-20) at about $135 as the best padel-specific all-rounder, the [Wilson Rush Pro 5](https://www.amazon.com/dp/B0GVKRS59Q?tag=padel02-20) at $170 for stability, the [Wilson Hurakn Lite](https://www.amazon.com/dp/B0FC8SDHK5?tag=padel02-20) at about $110 for speed and the [ASICS Gel-Challenger 15](https://www.amazon.com/dp/B0GZRD83KR?tag=padel02-20) at $109.95 for durability.
 
 ### Clothes, the wrist cord and small accessories
 
@@ -92,39 +92,39 @@ Keep balls in their can somewhere cool, and leave spare cans sealed until you ne
 
 ## Budget guide: what you will spend
 
-These totals use the prices in our gear guides, checked in October 2026. Court time is the other big cost, and it varies a lot from club to club, so check the club's listing in our [directory](/search).
+These totals use the prices in our gear guides, checked in October and November 2026. Court time is the other big cost, and it varies a lot from club to club, so check the club's listing in our [directory](/search).
 
 ### Your first few weeks
 
 | Item | What we would buy | Price |
 |------|-------------------|-------|
 | Racket | A club rental while you learn | Varies by club |
-| Court shoes | HEAD Sprint Pro 4.0 | $109 |
+| Court shoes | HEAD Sprint Pro 4.0 | $89 |
 | Balls | One can of HEAD Padel Pro S+ or Dunlop Pro Padel, if the club does not supply them | $11.94 to $14.95 |
 | Clothes | What you already own | $0 |
-| **Total** | | **About $121 to $124, plus racket rental** |
+| **Total** | | **About $101 to $104, plus racket rental** |
 
 ### Your own kit
 
 | Item | What we would buy | Price |
 |------|-------------------|-------|
 | Racket | A round racket from our beginner guide | $89.95 to $149 |
-| Court shoes | HEAD Sprint Pro 4.0 up to Wilson Rush Pro 5 | $109 to $170 |
+| Court shoes | HEAD Sprint Pro 4.0 up to Wilson Rush Pro 5 | $89 to $170 |
 | Balls | One can | $11.94 to $14.95 |
 | Overgrips | Wilson Pro 12-pack | $26.99 |
 | Bag | Babolat Court Lite backpack or HEAD Tour Racquet Bag M | $64.95 to $99 |
-| **Total** | | **About $290 to $460** |
+| **Total** | | **About $283 to $460** |
 
 ### Upgrading as a regular player
 
 | Item | What we would buy | Price |
 |------|-------------------|-------|
 | Racket | A pick from our intermediate or advanced guide | $208.58 to $399 |
-| Court shoes | HEAD Sprint Pro 4.0 up to Wilson Rush Pro 5 | $109 to $170 |
+| Court shoes | HEAD Sprint Pro 4.0 up to Wilson Rush Pro 5 | $89 to $170 |
 | Bag | HEAD Tour Racquet Bag M | $99 |
 | Overgrips | Wilson Pro 12-pack | $26.99 |
 | Balls | One can | $11.94 to $14.95 |
-| **Total** | | **About $456 to $710** |
+| **Total** | | **About $436 to $710** |
 
 After the first purchases, balls and overgrips are the running costs. A racket, a pair of court shoes and fresh balls are all you really need, and the rest is optional.
 

@@ -5,7 +5,7 @@ import { ShoeCompare, SolePlate } from "@/components/gear/gear-compare";
 import { ShoeSole } from "@/components/gear/shoe-sole";
 import type { GearShoe } from "@/components/gear/types";
 import { BuyButtons } from "@/components/gear/buy-buttons";
-import { amazonLink, HEAD, headHref, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from "@/lib/retailer-links";
+import { amazonLink, PADEL_USA, padelUsaHref, GEAR_DISCLOSURE } from "@/lib/retailer-links";
 
 export const metadata: Metadata = {
   title: "Best Padel Shoes (2026): What to Look For + Our Picks",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
 /** Presentation data for the compare table and sole diagrams. Every value is
  *  copied from this page; outsole patterns are drawn only where the page states one. */
 const SHOES: GearShoe[] = [
-  { id: "head-sprint-pro-4-mens", name: "HEAD Men's Sprint Pro 4.0", productName: "HEAD Sprint Pro 4.0 Mens", price: "$109.00", href: "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20", pattern: "herringbone", patternLabel: "Omni-style", bestFor: "Our men's pick for padel turf", standout: "Lightweight, breathable mesh, reinforced toe" },
-  { id: "head-sprint-pro-4-womens", name: "HEAD Women's Sprint Pro 4.0", productName: "HEAD Sprint Pro 4.0 Womens", price: "$109.00", href: "https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20", pattern: "herringbone", patternLabel: "Omni-style", bestFor: "Our women's pick for padel turf", standout: "Lightweight, breathable mesh, women's last" },
+  { id: "head-sprint-pro-4-mens", name: "HEAD Men's Sprint Pro 4.0", productName: "HEAD Sprint Pro 4.0 Mens", price: "$89.00", href: "https://www.amazon.com/dp/B0G2TH1X7V?tag=padel02-20", pattern: "herringbone", patternLabel: "Omni-style", bestFor: "Our men's pick for padel turf", standout: "Lightweight, breathable mesh, reinforced toe" },
+  { id: "head-sprint-pro-4-womens", name: "HEAD Women's Sprint Pro 4.0", productName: "HEAD Sprint Pro 4.0 Womens", price: "$89.00", href: "https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20", pattern: "herringbone", patternLabel: "Omni-style", bestFor: "Our women's pick for padel turf", standout: "Lightweight, breathable mesh, women's last" },
   { id: "nox-at10-pro-shoes", name: "NOX AT10 PRO Padel Shoes", productName: "NOX AT10 PRO Padel Shoes", price: "~$135", href: "https://www.amazon.com/dp/B0GRWHSVGW?tag=padel02-20", pattern: "herringbone-studs", patternLabel: "Herringbone with micro studs", bestFor: "Best padel-specific all-rounder", standout: "Reinforced toe and heel, strong lateral support" },
   { id: "wilson-rush-pro-5", name: "Wilson Rush Pro 5 Padel", productName: "Wilson Rush Pro 5 Padel", price: "~$170", href: "https://www.amazon.com/dp/B0GVKRS59Q?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Premium stability pick", standout: "EndoFit midfoot wrap, TPU stability chassis, Duralast high-abrasion rubber" },
   { id: "wilson-hurakn-lite", name: "Wilson Hurakn Lite Padel", productName: "Wilson Hurakn Lite Padel", price: "~$110", href: "https://www.amazon.com/dp/B0FC8SDHK5?tag=padel02-20", pattern: "unknown", patternLabel: "Pattern not stated", bestFor: "Lightweight speed pick", standout: "Padel-specific rubber in a stripped-down build" },
@@ -172,7 +172,7 @@ export default function BestPadelShoesPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Men's Sprint Pro 4.0",
           "description": "Light, breathable court shoe with omni-style grip for padel turf",
-          "offers": { "@type": "Offer", "price": HEAD.B0G2TH1X7V.priceValue, "priceCurrency": "USD", "url": headHref("B0G2TH1X7V") }
+          "offers": { "@type": "Offer", "price": "89.00", "priceCurrency": "USD", "url": amazonLink("B0G2TH1X7V") }
         }
       },
       {
@@ -183,7 +183,7 @@ export default function BestPadelShoesPage() {
           "image": "https://www.padelcourtsfinder.com/og/default.png",
           "name": "HEAD Women's Sprint Pro 4.0",
           "description": "Light, breathable court shoe with omni-style grip for padel turf",
-          "offers": { "@type": "Offer", "price": "109.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20" }
+          "offers": { "@type": "Offer", "price": "89.00", "priceCurrency": "USD", "url": "https://www.amazon.com/dp/B0G3RVSK4J?tag=padel02-20" }
         }
       }
     ]
@@ -338,7 +338,7 @@ export default function BestPadelShoesPage() {
             <div id="head-sprint-pro-4-mens" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-6 md:p-8 mb-8">
               <div className="flex items-start justify-between gap-4 mb-1">
                 <h3 className="text-xl font-bold text-foreground">HEAD Men&apos;s Sprint Pro 4.0</h3>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$109.00</span>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$89.00</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Our men&apos;s pick for padel turf</p>
               <SolePlate shoe={SHOES[0]} uidPrefix="shoe" />
@@ -367,7 +367,7 @@ export default function BestPadelShoesPage() {
             <div id="head-sprint-pro-4-womens" className="scroll-mt-24 bg-white border border-stone-200 rounded-xl p-6 md:p-8">
               <div className="flex items-start justify-between gap-4 mb-1">
                 <h3 className="text-xl font-bold text-foreground">HEAD Women&apos;s Sprint Pro 4.0</h3>
-                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$109.00</span>
+                <span className="bg-stone-900 text-white px-3 py-1.5 rounded-lg text-lg font-bold whitespace-nowrap">$89.00</span>
               </div>
               <p className="text-sm italic text-stone-500 mb-4">Our women&apos;s pick for padel turf</p>
               <SolePlate shoe={SHOES[1]} uidPrefix="shoe" />
@@ -382,7 +382,7 @@ export default function BestPadelShoesPage() {
                 outsole and low, stable platform as the men&apos;s version, built on a women&apos;s last with a narrower
                 heel. It&apos;s light and airy enough for long social sessions, and the grip pattern is exactly what
                 sand-dressed turf rewards — controlled slides into wide balls instead of sudden, ankle-jarring stops.
-                At $109 it is among the least expensive pairs on this page, which is why it&apos;s the
+                At $89 it is among the least expensive pairs on this page, which is why it&apos;s the
                 women&apos;s pair we recommend across our gift guides. Sizing runs true; go up half a size if you like
                 thick socks.
               </p>

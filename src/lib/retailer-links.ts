@@ -245,16 +245,16 @@ export interface HeadProduct {
  * - HEAD Sprint Pro 4.0 Women (B0G3RVSK4J): HEAD lists one colorway (Light
  *   Blue/Dark Blue, $109), out of stock in every size.
  * - HEAD Extreme Evo (B0CGRV795T): not sold on HEAD's US store.
+ * - HEAD Sprint Pro 4.0 Men (B0G2TH1X7V): linked from 2026-10-23, removed
+ *   2026-11-10 when HEAD's page ($89) showed every size out of stock. Padel USA
+ *   does not sell it; Amazon had it at $89, 2 left, from a third-party seller.
  */
 export const HEAD: Record<string, HeadProduct> = {
-  // HEAD Sprint Pro 4.0 Men, Blueberry/Teal (the same colorway as the Amazon
-  // listing), $109 at both; HEAD in stock in sizes 7 to 12.5 except 9, Amazon
-  // down to 1 left from a third-party seller
-  B0G2TH1X7V: { url: 'https://www.head.com/en_US/product/sprint-pro-4-0-men-273126', storeName: 'HEAD Sprint Pro 4.0 Men Court Shoes', price: '$109.00', priceValue: '109.00', checked: '2026-10-23', primary: true, clickref: 'sprint-pro-4-men' },
-  // HEAD Tour Racquet Bag M: $99 at both. On 2026-11-03 HEAD had only blue
-  // (the Amazon colorway) in stock; its page opens on black, which is out of
-  // stock, as are white, green and purple. Amazon has it from a third-party seller
-  B0G8RX2824: { url: 'https://www.head.com/en_US/product/tour-racquet-bag-m-bk-260226-cp', storeName: 'HEAD Tour Racquet Tennis Bag M', price: '$99.00', priceValue: '99.00', checked: '2026-11-03', primary: true, clickref: 'tour-racquet-bag-m' },
+  // HEAD Tour Racquet Bag M: $99 at both. On 2026-11-10 HEAD had blue (the
+  // Amazon colorway), sage and pink in stock at $99; its page opens on black,
+  // which is out of stock ($89), as are white, green, orange and purple.
+  // Amazon has it from a third-party seller
+  B0G8RX2824: { url: 'https://www.head.com/en_US/product/tour-racquet-bag-m-bk-260226-cp', storeName: 'HEAD Tour Racquet Tennis Bag M', price: '$99.00', priceValue: '99.00', checked: '2026-11-10', primary: true, clickref: 'tour-racquet-bag-m' },
 };
 
 /** The HEAD entry for an Amazon link or ASIN, if we link one */
