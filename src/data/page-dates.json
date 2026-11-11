@@ -59,7 +59,7 @@
   "/blog/best-padel-rackets-tennis-elbow": "2026-10-23",
   "/blog/best-padel-rackets-tennis-players": "2026-10-15",
   "/blog/best-padel-rackets-women": "2026-10-14",
-  "/blog/best-padel-shoes": "2026-11-10",
+  "/blog/best-padel-shoes": "2026-11-11",
   "/blog/best-round-padel-rackets": "2026-10-23",
   "/blog/best-teardrop-padel-rackets": "2026-10-14",
   "/blog/best-wilson-padel-rackets": "2026-10-19",
@@ -458,7 +458,7 @@
   "/courts/new-orleans-padel-club": "2026-11-01",
   "/courts/horseshoe-bay-resort": "2026-11-02",
   "/courts/patl-charleston": "2026-11-02",
-  "/courts/moorestown-padel-club": "2026-11-05",
+  "/courts/moorestown-padel-club": "2026-11-10",
   "/courts/pickleball-club-of-georgia": "2026-11-09",
   "/courts/epic-athletic-club-midlothian": "2026-11-09",
   "/courts/cincinnati-sports-club": "2026-11-09",
@@ -471,5 +471,5 @@
     "city": "2026-10-31",
     "padelNear": "2026-10-26"
   },
-  "__fallback__": "2026-11-09"
+  "__fallback__": "2026-11-10"
 }
