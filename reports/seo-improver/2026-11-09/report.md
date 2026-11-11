@@ -190,3 +190,13 @@ Keep the title. Add the question to the FAQ schema if the page emits one. **Expe
 8. **`/courts` after the facts pass:** 119 / 0.85% / 9.9, 72 pages with a click. The 25 new clubs: 17 with impressions, 2 with clicks.
 9. **SEO-DECAY-007:** record only until January. SEO-CTR-008: ship only if Dito says so.
 10. **Do not touch:** the four broad racket guides, court-cost, club titles, `/padel-near/*`, the `padel court` theory, the bandeja and padel-vs-pickleball pages (Dito's, beyond the §4 paste), the NOX 18K review (closed).
+
+---
+
+## Addendum, 2026-11-11 — SEO-CTR-008 shipped
+
+Dito approved SEO-CTR-008 ("Yes, ship it"). **PR #26**, https://github.com/justfiguringitout-ship-it/padel-courts-finder/pull/26, merged `15a6fe2`, live 11-11.
+
+Correction to §4: two of the five question queries already had a matching FAQ entry on the page (reinforced toes; lightest for competitive play). The PR added the three that did not — `what are the best padel shoes for intermediate players?`, `what are the most comfortable padel shoes under $150?`, `who makes the most durable padel shoes?` — to the visible FAQ and the FAQPage schema, and named the makers (Wilson, HEAD) in the lightweight answer. Answers use only picks and facts already on the page; no new products or links. Dateline to Nov 11.
+
+Baseline for the 11-16 read: page 9 / 1,064 @ 11.8 (7d to 11-06); `… intermediate players?` 0 / 63 @ 8.7, `… under $150?` 0 / 26 @ 7.3, `… most durable padel shoes?` 0 / 22 @ 9.7, `who makes lightweight shoes …?` 0 / 70 @ 7.8. Judge 11-23. Revert: `git revert -m 1 15a6fe2`.
