@@ -39,6 +39,15 @@ export interface ChangelogEntry {
 }
 
 export const changelog: ChangelogEntry[] = [
+  // ---------------------------------------------------------------- November 2026
+  {
+    date: "2026-11-10",
+    type: "updated",
+    title: "Moorestown Padel Club details updated by the club",
+    note: "The club sent new hours, pricing, amenities and description through its owner account. We checked the change before publishing it.",
+    clubs: ["Moorestown Padel Club"],
+    commit: "fb9fbc9",
+  },
   {
     date: "2026-11-09",
     type: "added",
