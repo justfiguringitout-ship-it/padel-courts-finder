@@ -41,6 +41,16 @@
     {
       "url": "https://www.pickleheads.com/blog/pickleball-statistics",
       "reason": "Pickleball statistics article cited as a source on /blog/padel-vs-pickleball. Not a product link."
+    },
+    {
+      "host": "propadelleague.com",
+      "page": "/blog/padel-gifts",
+      "reason": "Pro Padel League event page for the PPL Finals Miami, an experience gift in the holiday guide. The league sells tickets through Ticketmaster; no paid store sells them."
+    },
+    {
+      "host": "experiencecdt.com",
+      "page": "/blog/padel-gifts",
+      "reason": "Cliff Drysdale Tennis padel weekend at the Ritz-Carlton Key Biscayne (a club we list), an experience gift in the holiday guide. Resort program page, not a gear store."
     }
   ]
 }

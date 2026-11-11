@@ -308,12 +308,12 @@ const blogPosts: BlogPost[] = [
   // Equipment Buying Guides
   {
     slug: 'padel-gifts',
-    title: 'Best Padel Gifts 2026: Holiday Ideas for Him, Her & Under $50',
+    title: 'Best Padel Gifts 2026: The Holiday Gift Guide for Serious Players',
     category: 'equipment',
-    excerpt: 'Holiday gift guide for padel players — gifts for him, for her and under $50, every pick verified and recommended on this site, from $15 stocking stuffers to flagship rackets.',
-    date: '2026-11-09',
-    readTime: '6 min read',
-    imageAlt: 'Best padel gifts at every budget',
+    excerpt: '35 gifts serious padel players actually want: 2027 pro rackets, tour bags, padel shoes for him and her, recovery gear, and experiences from a session with a pro to a Ritz-Carlton padel weekend.',
+    date: '2026-11-11',
+    readTime: '12 min read',
+    imageAlt: 'Best padel gifts for serious players',
     courtSlug: ''
   },
   {
