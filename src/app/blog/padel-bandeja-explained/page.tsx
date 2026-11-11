@@ -115,7 +115,7 @@ export default function BandejaExplainedPage() {
     "headline": TITLE,
     "description": DESC,
     "datePublished": "2026-07-04T00:00:00Z",
-    "dateModified": "2026-10-31T00:00:00Z",
+    "dateModified": "2026-11-11T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },
     "publisher": { "@type": "Organization", "name": "Padel Courts Finder", "logo": { "@type": "ImageObject", "url": "https://www.padelcourtsfinder.com/logo.png" } },
     "mainEntityOfPage": { "@type": "WebPage", "@id": URL },
@@ -152,7 +152,7 @@ export default function BandejaExplainedPage() {
           </h1>
           <p className="text-lg text-stone-400 mt-3">Padel&apos;s most common overhead, step by step, with drills and how it compares to the víbora and the smash</p>
           <div className="text-sm text-stone-500 mt-4">
-            <span>Updated October 31, 2026</span>
+            <span>Updated November 11, 2026</span>
             <span className="mx-2">&bull;</span>
             <span>10 min read</span>
           </div>
@@ -164,6 +164,7 @@ export default function BandejaExplainedPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
           {/* Direct answer */}
           <section>
+            <h2 className="text-2xl font-bold text-foreground mb-4">What is a bandeja in padel?</h2>
             <div className="bg-white border-l-4 border-padel-green rounded-r-xl p-5 md:p-6">
               <p className="text-stone-800 leading-relaxed">
                 <strong>A bandeja is a controlled, sliced overhead in padel.</strong> You hit it at about head height,
