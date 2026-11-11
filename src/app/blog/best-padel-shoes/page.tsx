@@ -53,7 +53,7 @@ export default function BestPadelShoesPage() {
     "headline": "Best Padel Shoes (2026): What to Look For + Our Picks",
     "description": "Running shoes are the #1 gear mistake in padel. What actually makes a padel shoe — outsole, lateral support, durability — plus the two pairs we recommend.",
     "datePublished": "2026-07-04T00:00:00Z",
-    "dateModified": "2026-07-31T00:00:00Z",
+    "dateModified": "2026-11-11T00:00:00Z",
     "author": { "@type": "Organization", "name": "Padel Courts Finder", "url": "https://www.padelcourtsfinder.com" },
     "publisher": { "@type": "Organization", "name": "Padel Courts Finder", "logo": { "@type": "ImageObject", "url": "https://www.padelcourtsfinder.com/logo.png" } },
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.padelcourtsfinder.com/blog/best-padel-shoes" }
@@ -84,8 +84,23 @@ export default function BestPadelShoesPage() {
         "name": "What are the lightest shoes for competitive padel?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The Wilson Hurakn Lite (~$110) is the lightest padel-specific shoe we've verified, and speed-oriented models like the HEAD Sprint line make the same trade: less cushioning, lower and lighter feel. Prioritize lateral stability over minimum weight; an ultra-light shoe that tips on hard cuts costs more points than it saves."
+          "text": "Wilson and HEAD make the lightweight padel shoes we recommend. The Wilson Hurakn Lite (~$110) is the lightest padel-specific shoe we've verified, and speed-oriented models like the HEAD Sprint line make the same trade: less cushioning, lower and lighter feel. Prioritize lateral stability over minimum weight; an ultra-light shoe that tips on hard cuts costs more points than it saves."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the best padel shoes for intermediate players?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For an intermediate playing two or three times a week, the NOX AT10 PRO (~$135) is the one to start with: a herringbone outsole with micro studs for sand-dressed turf, a reinforced toe and heel, and strong lateral support. The HEAD Sprint Pro 4.0 (~$109) is the lighter, cheaper alternative, and the Wilson Rush Pro 5 is the step up for aggressive movers who want the most locked-in lateral feel." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the most comfortable padel shoes under $150?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The plushest shoe we have verified is the ASICS Gel-Dedicate 8, with GEL cushioning and Trusstic midfoot stability, but it is not currently available from a US seller on Amazon. Of the pairs you can buy today under $150, the HEAD Sprint Pro 4.0 (~$109) is the comfortable everyday choice: light, breathable mesh with omni-style grip. The NOX AT10 PRO (~$135) is firmer and more supportive." }
+      },
+      {
+        "@type": "Question",
+        "name": "Who makes the most durable padel shoes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ASICS, on what we have verified. The Gel-Challenger 15 Padel (~$110) uses AHARPLUS outsole rubber, rated about three times more abrasion-resistant, with WINGWALL lateral support, and it is our pick for toe-draggers and daily players. Wilson's Rush Pro 5 uses Duralast high-abrasion rubber, and the NOX AT10 PRO reinforces both toe and heel. Expect 6 to 12 months from any pair at two or three sessions a week." }
       },
       {
         "@type": "Question",
@@ -209,7 +224,7 @@ export default function BestPadelShoesPage() {
           </h1>
           <p className="text-lg text-stone-400 mt-3">Why running shoes are the #1 gear mistake in padel &mdash; and what to wear instead</p>
           <div className="text-sm text-stone-500 mt-4">
-            <span>Updated July 31, 2026</span>
+            <span>Updated November 11, 2026</span>
             <span className="mx-2">&bull;</span>
             <span>6 min read</span>
           </div>
@@ -523,7 +538,19 @@ export default function BestPadelShoesPage() {
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">What are the lightest shoes for competitive padel?</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">The Wilson Hurakn Lite (~$110) is the lightest padel-specific shoe we&apos;ve verified — a stripped-down speed build. The HEAD Sprint line makes the same trade. Just never sacrifice lateral stability for weight; a shoe that tips on hard cuts costs more points than it saves.</p>
+                <p className="text-stone-600 text-sm leading-relaxed">Wilson and HEAD make the lightweight padel shoes we recommend. The Wilson Hurakn Lite (~$110) is the lightest padel-specific shoe we&apos;ve verified — a stripped-down speed build. The HEAD Sprint line makes the same trade. Just never sacrifice lateral stability for weight; a shoe that tips on hard cuts costs more points than it saves.</p>
+              </div>
+              <div className="bg-white border border-stone-200 rounded-lg p-5">
+                <h3 className="font-semibold text-foreground mb-2">What are the best padel shoes for intermediate players?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">For an intermediate playing two or three times a week, the NOX AT10 PRO (~$135) is the one to start with: a herringbone outsole with micro studs for sand-dressed turf, a reinforced toe and heel, and strong lateral support. The HEAD Sprint Pro 4.0 (~$109) is the lighter, cheaper alternative, and the Wilson Rush Pro 5 is the step up for aggressive movers who want the most locked-in lateral feel.</p>
+              </div>
+              <div className="bg-white border border-stone-200 rounded-lg p-5">
+                <h3 className="font-semibold text-foreground mb-2">What are the most comfortable padel shoes under $150?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">The plushest shoe we have verified is the ASICS Gel-Dedicate 8, with GEL cushioning and Trusstic midfoot stability, but it is not currently available from a US seller on Amazon. Of the pairs you can buy today under $150, the HEAD Sprint Pro 4.0 (~$109) is the comfortable everyday choice: light, breathable mesh with omni-style grip. The NOX AT10 PRO (~$135) is firmer and more supportive.</p>
+              </div>
+              <div className="bg-white border border-stone-200 rounded-lg p-5">
+                <h3 className="font-semibold text-foreground mb-2">Who makes the most durable padel shoes?</h3>
+                <p className="text-stone-600 text-sm leading-relaxed">ASICS, on what we have verified. The Gel-Challenger 15 Padel (~$110) uses AHARPLUS outsole rubber, rated about three times more abrasion-resistant, with WINGWALL lateral support, and it is our pick for toe-draggers and daily players. Wilson&apos;s Rush Pro 5 uses Duralast high-abrasion rubber, and the NOX AT10 PRO reinforces both toe and heel. Expect 6 to 12 months from any pair at two or three sessions a week.</p>
               </div>
               <div className="bg-white border border-stone-200 rounded-lg p-5">
                 <h3 className="font-semibold text-foreground mb-2">Can I play padel in running shoes?</h3>
