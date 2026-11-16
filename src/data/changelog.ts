@@ -46,7 +46,7 @@ export const changelog: ChangelogEntry[] = [
     title: "Quail Valley Racquets Complex in Vero Beach added as coming soon",
     note: "The private Vero Beach club is building five padel courts for members at Indian River Boulevard and 41st Street. Its construction update shows the court surfaces in place and lists racquets for 2027. No street address is published yet, so it is listed at city level.",
     clubs: ["Quail Valley Racquets Complex"],
-    commit: "COMMIT_HASH",
+    commit: "a370777",
   },
   {
     date: "2026-11-16",
@@ -54,7 +54,7 @@ export const changelog: ChangelogEntry[] = [
     title: "Padel Spot in Round Rock removed",
     note: "Its website now points to an investor page for a planned two-court club that is still raising money, with no address, permit or opening date. We will list it again if it gets a site.",
     clubs: ["Padel Spot"],
-    commit: "COMMIT_HASH",
+    commit: "a370777",
   },
   {
     date: "2026-11-16",
@@ -62,7 +62,7 @@ export const changelog: ChangelogEntry[] = [
     title: "6 clubs updated after this week's checks",
     note: "Padel Country Club Katy and Padel Country Club Memorial now link to their booking pages because padelcountryclub.net went offline; Katy also gets CatchCorner prices, its court split and a corrected map pin. Oakland Padel now lists three courts, as its site says. New Orleans Padel Club's end-of-October date has passed with no new one, Casa de Padel HTX now says fall 2026, and ACE Padel Coconut Grove says November 2026.",
     clubs: ["Padel Country Club Katy", "Padel Country Club Memorial", "Oakland Padel", "New Orleans Padel Club", "Casa de Padel HTX", "Ace Padel Coconut Grove"],
-    commit: "COMMIT_HASH",
+    commit: "a370777",
   },
   {
     date: "2026-11-10",
