@@ -240,9 +240,17 @@ export default async function CityPage({ params }: CityPageProps) {
               Padel Clubs in {city.name}
             </h1>
             <p className="mt-2 text-[15px] md:text-lg leading-snug text-stone-300 max-w-3xl">
-              {openClubs.length} open {openClubs.length === 1 ? "club" : "clubs"}
-              {totalCourts > 0 ? ` and ${totalCourts}+ courts` : ""}. Compare price per player, hours and
-              courts, then book.
+              {openClubs.length > 0 ? (
+                <>
+                  {city.name} has {openClubs.length} open padel {openClubs.length === 1 ? "club" : "clubs"}
+                  {totalCourts > 0 ? ` with ${totalCourts}+ ${facilityMix ? `${facilityMix} ` : ""}courts` : ""}.
+                </>
+              ) : (
+                <>
+                  {city.name} has {comingSoon.length} padel {comingSoon.length === 1 ? "club" : "clubs"} opening soon.
+                </>
+              )}{" "}
+              Compare price per player, hours and courts, then book.
             </p>
             {priceSummary && (
               <PlayerPriceSummaryLine summary={priceSummary} place={city.name} tone="dark" className="mt-3 text-sm md:text-base" />
