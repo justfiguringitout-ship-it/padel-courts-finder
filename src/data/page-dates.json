@@ -274,9 +274,9 @@
   "/courts/the-houstonian-club": "2026-10-13",
   "/courts/racket-social-club": "2026-10-08",
   "/courts/ipadel-houston": "2026-08-04",
-  "/courts/padel-country-club-memorial": "2026-08-04",
+  "/courts/padel-country-club-memorial": "2026-11-16",
   "/courts/west43-padel": "2026-08-04",
-  "/courts/padel-country-club-katy": "2026-10-26",
+  "/courts/padel-country-club-katy": "2026-11-16",
   "/courts/deuces-padel-club": "2026-08-04",
   "/courts/u-padel-club-the-woodlands": "2026-08-04",
   "/courts/wepadel": "2026-09-29",
@@ -399,7 +399,7 @@
   "/courts/slice-padel-co-downtown-austin": "2026-09-29",
   "/courts/racket-social-club-katy": "2026-10-09",
   "/courts/swip-sportika-woodlands-indoor-padel": "2026-10-09",
-  "/courts/casa-de-padel-htx": "2026-10-09",
+  "/courts/casa-de-padel-htx": "2026-11-16",
   "/courts/terra-padel": "2026-10-13",
   "/courts/bay-padel-san-jose": "2026-10-09",
   "/courts/cali-padel-club": "2026-09-29",
@@ -418,7 +418,7 @@
   "/courts/maywood-racquets-club": "2026-10-13",
   "/courts/nc-state-university-club": "2026-10-13",
   "/courts/pops-padel": "2026-11-01",
-  "/courts/oakland-padel": "2026-10-27",
+  "/courts/oakland-padel": "2026-11-16",
   "/courts/boise-padel-club": "2026-11-01",
   "/courts/mouratoglou-tennis-center-noblesville": "2026-11-01",
   "/courts/swing-racquet-paddle": "2026-10-13",
@@ -454,7 +454,7 @@
   "/courts/the-grounds-padel-wellness-center": "2026-10-31",
   "/courts/bay-padel-marina-del-rey": "2026-10-31",
   "/courts/padel-n9ne-san-marcos": "2026-11-09",
-  "/courts/new-orleans-padel-club": "2026-11-01",
+  "/courts/new-orleans-padel-club": "2026-11-16",
   "/courts/horseshoe-bay-resort": "2026-11-02",
   "/courts/patl-charleston": "2026-11-02",
   "/courts/moorestown-padel-club": "2026-11-10",
@@ -471,5 +471,5 @@
     "city": "2026-10-31",
     "padelNear": "2026-10-26"
   },
-  "__fallback__": "2026-11-10"
+  "__fallback__": "2026-11-16"
 }
