@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
       // === Name changes on keeper entries (14) ===
       // Sandy Springs lost its only club; Google still had the city page (GSC 404, 2026-10-26)
       { source: '/georgia/sandy-springs', destination: '/georgia', permanent: true },
+      // Padel Spot (Round Rock) removed 2026-11-16: an investor concept with no site, permit or date; Round Rock has no other club
+      { source: '/courts/padel-spot', destination: '/texas', permanent: true },
+      { source: '/texas/round-rock', destination: '/texas', permanent: true },
       { source: '/courts/club-padel-newtown', destination: '/courts/cincinnati-padel-club', permanent: true },
       { source: '/courts/racket-social-club-alpharetta', destination: '/courts/racket-social-club-at-windward-lake', permanent: true },
       { source: '/courts/replay', destination: '/courts/replay-club', permanent: true },

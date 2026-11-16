@@ -6274,17 +6274,10 @@
   }
  },
  "481": {
-  "bookingUrl": {
-   "value": "https://app.playtomic.io/tenants/20f60f91-6bc0-484c-a2be-a80fce9b9e65/reservations",
-   "platform": "Playtomic",
-   "source": "https://www.casadepadelhtx.com/",
-   "checked": "2026-11-01"
-  },
   "openingDate": {
-   "value": "June 2026",
-   "note": "Estimated June 1, 2026 on memberships page; fall 2026 leagues listed",
-   "source": "https://www.casadepadelhtx.com/memberships",
-   "checked": "2026-11-01"
+   "value": "Fall 2026",
+   "source": "https://www.casadepadelhtx.com/",
+   "checked": "2026-11-16"
   },
   "openPlay": {
    "value": true,
@@ -7373,12 +7366,6 @@
   }
  },
  "536": {
-  "openingDate": {
-   "value": "October 2026",
-   "note": "Site still says opening end of October 2026 as of Nov 1, 2026",
-   "source": "https://neworleanspadelclub.com/",
-   "checked": "2026-11-01"
-  },
   "openPlay": {
    "value": true,
    "note": "Planned, club not open yet",
@@ -7449,6 +7436,21 @@
    "value": "https://book.moorestownpadel.com/book/MoorestownPadelClub",
    "source": "https://book.moorestownpadel.com/",
    "checked": "2026-11-05"
+  }
+ },
+ "491": {
+  "openingDate": {
+   "value": "November 2026",
+   "source": "https://acepadel.com/coconut-grove",
+   "checked": "2026-11-16"
+  }
+ },
+ "546": {
+  "openingDate": {
+   "value": "2027",
+   "note": "Club menu: Raquets Coming 2027",
+   "source": "https://www.quailvalleygolfclub.com",
+   "checked": "2026-11-16"
   }
  }
 }

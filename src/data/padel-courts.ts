@@ -7988,7 +7988,7 @@ export const padelCourts: PadelCourt[] = [
     state: "TX",
     zipCode: "77043",
     phone: "+1 (832) 920-2711",
-    website: "https://padelcountryclub.net",
+    website: "https://playtomic.com/clubs/padel-country-club-memorial", // padelcountryclub.net shows a GoDaddy parking page since 2026-11-01; Playtomic page live 2026-11-16
     rating: 5,
     reviewCount: 2,
     openingHours: {
@@ -8073,6 +8073,7 @@ export const padelCourts: PadelCourt[] = [
     city: "Katy",
     state: "TX",
     zipCode: "77493",
+    website: "https://www.catchcorner.com/facility-page/padel-country-club-katy/home", // padelcountryclub.net parked since 2026-11-01; club books on CatchCorner
     phone: "346-307-5519",
     rating: 4.6,
     reviewCount: 30,
@@ -8088,6 +8089,8 @@ export const padelCourts: PadelCourt[] = [
     description: "Padel Country Club in Katy, TX is a premium facility featuring indoor and outdoor padel courts, professional coaching, kids entertainment areas, restaurant, bar, pro shop, and soccer fields. It hosts tournaments and social events for players of all levels.",
     numberOfCourts: 5,
     courtType: "both",
+    indoorCourts: 1,
+    outdoorCourts: 4, // CatchCorner 2026-11-16: 1 indoor, 1 outdoor, 3 outdoor covered
     amenities: [
       "pro shop",
       "restaurant/bar",
@@ -8099,13 +8102,13 @@ export const padelCourts: PadelCourt[] = [
       "WiFi",
     ],
     courtSurface: "synthetic turf",
-    coordinates: { lat: 29.7892, lng: -95.821 }, // coordinates estimated
+    coordinates: { lat: 29.788118, lng: -95.807904 }, // US Census geocoder 2026-11-16
     facebook: "https://www.facebook.com/p/Padel-Country-Club-61552917694248/", // padelcountryclub.net parked and Instagram profile gone, 2026-10-26
     membersOnly: false,
     socialArea: true,
     foodAndDrink: true,
     positiveReviewThemes: "excellent coaching, family-friendly atmosphere",
-    pricingText: "Hourly $25–$45; memberships $890-$1344/year",
+    pricingText: "Non-member court rental: $41.57/hour outdoor, $55.42/hour indoor, per court. Source: CatchCorner, Nov 2026",
     status: "open",
     verified: false,
   },
@@ -12923,23 +12926,6 @@ export const padelCourts: PadelCourt[] = [
     verificationDate: "2026-09-29",
   },
   {
-    id: 478,
-    name: "Padel Spot",
-    address: "Round Rock (location TBA)",
-    city: "Round Rock",
-    state: "TX",
-    zipCode: "78664",
-    website: "https://www.padelspot.com",
-    rating: 0,
-    reviewCount: 0,
-    description: "Padel Spot is building its first indoor padel club in Round Rock and is taking founding members. It has not published an address, a court count or an opening date.",
-    courtType: "indoor",
-    coordinates: { lat: 30.5083, lng: -97.6789 }, // approximate
-    status: "coming_soon",
-    verified: false,
-    verificationDate: "2026-09-29",
-  },
-  {
     id: 479,
     name: "Racket Social Club - Katy",
     // hours: playtomic_profile https://playtomic.com/clubs/racket-social-club-katy, checked 2026-10-09
@@ -13010,7 +12996,7 @@ export const padelCourts: PadelCourt[] = [
     website: "https://www.casadepadelhtx.com",
     rating: 0,
     reviewCount: 0,
-    description: "Casa de Padel HTX is a padel club near downtown Houston with indoor and covered outdoor courts and round-the-clock access. USA Padel lists three courts here. The club offers memberships and also takes public reservations through Playtomic.",
+    description: "Casa de Padel HTX is a padel club near downtown Houston with indoor and covered outdoor courts and round-the-clock access. USA Padel lists three courts here. The club sells memberships and says it opens in fall 2026.",
     numberOfCourts: 3,
     courtType: "both",
     phone: "(713) 568-6838",
@@ -13491,10 +13477,10 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "94606",
     website: "https://oaklandpadel.com",
     reviewCount: 0,
-    description: "Oakland Padel is a new padel venue at 2102 Dennison Street near the Oakland waterfront and I-880, with a soft opening planned for early December 2026. The club features two lighted outdoor courts on a fenced lot, with 24/7 player access via booking code. Across from the courts, approximately 3,000 square feet of indoor space includes a lounge, restrooms and work areas, with recovery and massage services planned. Designed as a welcoming place to play and connect, Oakland Padel brings the game closer to home for the East Bay community.",
-    numberOfCourts: 2,
+    description: "Oakland Padel is a new padel venue at 2102 Dennison Street near the Oakland waterfront and I-880, with a soft opening planned for early December 2026. The club features three lighted outdoor courts on a fenced lot, with 24/7 player access via booking code. Across from the courts, approximately 3,000 square feet of indoor space includes a lounge, restrooms and work areas, with recovery and massage services planned. Designed as a welcoming place to play and connect, Oakland Padel brings the game closer to home for the East Bay community.",
+    numberOfCourts: 3, // oaklandpadel.com "Three lighted outdoor courts", checked 2026-11-16
     courtType: "outdoor",
-    outdoorCourts: 2,
+    outdoorCourts: 3,
     amenities: ["lounge", "restrooms", "work areas", "recovery and massage rooms", "free parking", "lights for night play"],
     pricingText: "Non-member court rental: $112.50 per 90 min ($75 per hour), per court ($18.75 per person per hour with four players). Source: oaklandpadel.com, Oct 2026",
     coordinates: { lat: 37.77961, lng: -122.24024 }, // US Census geocoder 2026-10-13
@@ -14394,7 +14380,7 @@ export const padelCourts: PadelCourt[] = [
     zipCode: "70130",
     website: "https://neworleanspadelclub.com",
     reviewCount: 0,
-    description: "New Orleans Padel Club is a new racquet club on First Street in the Lower Garden District with four padel courts, four pickleball courts, a pro shop, a lounge and event spaces. Its website says it opens at the end of October 2026 and is taking waitlist sign-ups.",
+    description: "New Orleans Padel Club is a new racquet club on First Street in the Lower Garden District with four padel courts, four pickleball courts, a pro shop, a lounge and event spaces. Its website still gives an end-of-October 2026 opening, which has passed, and the club has not announced a new date. It is taking waitlist sign-ups.",
     numberOfCourts: 4,
     amenities: ["4 pickleball courts", "pro shop", "lounge", "event spaces"],
     coordinates: { lat: 29.92215, lng: -90.07477 }, // US Census geocoder 2026-10-31
@@ -14605,6 +14591,25 @@ export const padelCourts: PadelCourt[] = [
     status: "coming_soon",
     verified: true, // bozemanpickleballclub.com/about/new-facility ("One indoor padel court is planned to open in June 2027", location to be shared later), checked 2026-11-09
     verificationDate: "2026-11-09",
+  },
+  {
+    id: 546,
+    name: "Quail Valley Racquets Complex",
+    address: "",
+    city: "Vero Beach",
+    state: "FL",
+    zipCode: "",
+    phone: "(772) 299-0093",
+    website: "https://www.quailvalleygolfclub.com",
+    instagram: "https://www.instagram.com/quailvalleygolfclub/",
+    reviewCount: 0,
+    description: "Quail Valley, the private Vero Beach golf club, is building a racquets complex at Indian River Boulevard and 41st Street with five padel courts, eight pickleball courts, bocce and squash. The club's construction update shows the padel court surfaces in place and lists racquets as coming in 2027. It is for Quail Valley members, and the club has not published a street address yet, so this listing is at city level.",
+    numberOfCourts: 5,
+    coordinates: { lat: 27.653, lng: -80.384 }, // approximate: Indian River Blvd near 41st St (Nominatim); no street number published
+    membersOnly: true,
+    status: "coming_soon",
+    verified: true, // quailvalleygolfclub.com construction update ("Padel Courts 35%", "Raquets Coming 2027") + Vero News 2025-09-04 (managing partner Kevin Given: five padel courts), checked 2026-11-16
+    verificationDate: "2026-11-16",
   },
 ];
 

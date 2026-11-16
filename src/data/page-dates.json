@@ -397,7 +397,6 @@
   "/courts/padel-square-dallas": "2026-09-29",
   "/courts/legacy-padel-pickleball": "2026-10-09",
   "/courts/slice-padel-co-downtown-austin": "2026-09-29",
-  "/courts/padel-spot": "2026-09-29",
   "/courts/racket-social-club-katy": "2026-10-09",
   "/courts/swip-sportika-woodlands-indoor-padel": "2026-10-09",
   "/courts/casa-de-padel-htx": "2026-10-09",
@@ -465,6 +464,7 @@
   "/courts/proximo-padel-goose-island": "2026-11-09",
   "/courts/proximo-padel-northbrook": "2026-11-09",
   "/courts/bozeman-classic-pickleball-club": "2026-11-09",
+  "/courts/quail-valley-racquets-complex": "2026-11-16",
   "__templates__": {
     "court": "2026-08-04",
     "state": "2026-10-31",
